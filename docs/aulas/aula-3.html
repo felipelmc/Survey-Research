@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Felipe Lamarca">
+
+<title>3&nbsp; Erros em survey – Pesquisa de Survey</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../aulas/aula-2.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Erros em survey</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Pesquisa de Survey</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Aulas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Erros em survey</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#anotações-das-leituras" id="toc-anotações-das-leituras" class="nav-link active" data-scroll-target="#anotações-das-leituras"><span class="header-section-number">3.1</span> Anotações das leituras</a>
+  <ul class="collapse">
+  <li><a href="#groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-2." id="toc-groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-2." class="nav-link" data-scroll-target="#groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-2."><span class="header-section-number">3.1.1</span> Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., &amp; Tourangeau, R. (2011). <em>Survey methodology</em>. John Wiley &amp; Sons. Cap. 2.</a></li>
+  <li><a href="#berinsky-a.-j.-2017.-measuring-public-opinion-with-surveys.-annual-review-of-political-science-201-309329." id="toc-berinsky-a.-j.-2017.-measuring-public-opinion-with-surveys.-annual-review-of-political-science-201-309329." class="nav-link" data-scroll-target="#berinsky-a.-j.-2017.-measuring-public-opinion-with-surveys.-annual-review-of-political-science-201-309329."><span class="header-section-number">3.1.2</span> Berinsky, A. J. (2017). Measuring public opinion with surveys. Annual review of political science, 20(1), 309–329.</a></li>
+  </ul></li>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">3.2</span> Anotações de aula</a>
+  <ul class="collapse">
+  <li><a href="#notação-básica" id="toc-notação-básica" class="nav-link" data-scroll-target="#notação-básica"><span class="header-section-number">3.2.1</span> Notação básica</a></li>
+  <li><a href="#probabilidade-de-inclusão" id="toc-probabilidade-de-inclusão" class="nav-link" data-scroll-target="#probabilidade-de-inclusão"><span class="header-section-number">3.2.2</span> Probabilidade de inclusão</a></li>
+  <li><a href="#estimador-de-horvitz-thompson" id="toc-estimador-de-horvitz-thompson" class="nav-link" data-scroll-target="#estimador-de-horvitz-thompson"><span class="header-section-number">3.2.3</span> Estimador de Horvitz-Thompson</a></li>
+  <li><a href="#erros" id="toc-erros" class="nav-link" data-scroll-target="#erros"><span class="header-section-number">3.2.4</span> Erros</a></li>
+  <li><a href="#total-survey-error" id="toc-total-survey-error" class="nav-link" data-scroll-target="#total-survey-error"><span class="header-section-number">3.2.5</span> Total Survey Error</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Erros em survey</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Erros em survey</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Felipe Lamarca </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="anotações-das-leituras" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="anotações-das-leituras"><span class="header-section-number">3.1</span> Anotações das leituras</h2>
+<section id="groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-2." class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-2."><span class="header-section-number">3.1.1</span> Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., &amp; Tourangeau, R. (2011). <em>Survey methodology</em>. John Wiley &amp; Sons. Cap. 2.</h3>
+<blockquote class="blockquote">
+<p><em>Sample</em> surveys combine the answers of individual respondents in statistical computing steps to construct statistics describing all persons in the sample. At this point, a survey is one step away from its goal – the description of characteristics of a larger population from which the sample was drawn. (p.&nbsp;40)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>There two inferential steps are central to the two needed characteristics of a survey:</p>
+<ol type="1">
+<li><p>Answers people give must accurately describe characteristics of the respondents.</p></li>
+<li><p>The subset of persons participating in the survey must have characteristics similar to those of a larger population.</p></li>
+</ol>
+<p>When either of these two conditions is not met, the survey statistics are subject to “error”. The use of the term “error” does not imply mistakes in the colloquial sense. Instead, it refers to deviations of what is desired in the survey process from what is attained. “Measurement errors” or “errors of observation” will pertain to deviations from answers given to a survey question and the underlying attribute being measured. “Errors of nonobservation” will pertain to the deviations of a statistic estimated on a sample from that on the full population. (p.&nbsp;40-41)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[About constructs] Some constructs are more abstract than others. The Survey of Consumers (SOC) measures short-term optimism about one’s financial status. This is an attitudinal state of the person, which cannot be directly observed by another person. It is internal to the person, perhaps having aspects that are highly variable within or across persons […]. In contrast, the National Survey on Drug Use and Health (NSDUH) measures consumption of beer in the last month. (p.&nbsp;42)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>However, survey measurements are often questions posed to a respondent, using words […]. The critical task for measurement is to design questions that produce answers reflecting perfectly the constructs we are trying to measure. These questions can be communicated orally […] or visually […]. Sometimes, however, they are observations made by the interviewer. […]. (p.&nbsp;42-43)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Sometimes, the responses are provided as part of the question, and the task of the respondent is to choose from the proffered categories. Other times, only the question is presented, and the respondents must generate an answer in their own words. Sometimes, a respondent fails to provide a response to a measurement attempt. This complicates the computation of statistics involving that measure. (p.&nbsp;43)</p>
+</blockquote>
+<p>O texto comenta sobre detecção de anomalias on the fly, permitindo que o respondente corrija o erro. Por exemplo, se o usuário indica que nasceu em 1890.</p>
+<blockquote class="blockquote">
+<p>The frame population is the set of target population members that has a chance to be selected into the survey sample. In a simple case, the “sampling frame” is a list of all units (e.g., people and employers) in the target population. Sometimes, however, the sampling frame is a set of units imperfectly linked to the population members. FOr example, the SOC has as its target population the U.S. adult household population. It uses as its sampling frame a list of telephone numbers. (p.&nbsp;44)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>A sample is selected from a sampling frame. This sample is the group from which measurements will be sought. In many cases, the sample will be only a very small fraction of the sampling frame (and, therefore, of the target population). (p.&nbsp;44)</p>
+</blockquote>
+<p>Agora, pensando do ponto de vista de qualidade de um survey…:</p>
+<blockquote class="blockquote">
+<p>The job of a survey designer is to minimize error in survey statistics by making design and estimation choices that minimize the gap between two successive stages of the survey process. This framework is sometimes labeled the “total survey error” framework or “total survey error” paradigm. (p.&nbsp;47)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>In short, the underlying target attribute we are attempting to measure is <span class="math inline">\(\mu_i\)</span>, but instead we use an imperfect indicator, <span class="math inline">\(Y_i\)</span>, which departs from the target because of imperfections in the measurement. When we apply the measurement, there are problems of administration. Instead of obtaining the answer <span class="math inline">\(Y_i\)</span>, we obtain instead <span class="math inline">\(y_i\)</span>, the response to the measurement. We attempt to repair the weakness of the measurement through an editing step, and obtain as a result <span class="math inline">\(y_{ip}\)</span>, which we call the edited response (the subscript <span class="math inline">\(p\)</span> stands for “postdata collection”). (p.&nbsp;47)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>In statistical terms, the notion of validity lies at the level of an individual respondent. It notes that the construct (even though it may not be easily observed or observed at all) has some value associated with the <span class="math inline">\(i\)</span>th person in the population, traditionally labeled as <span class="math inline">\(\mu_i\)</span>, implying the “true value” of the construct for the <span class="math inline">\(i\)</span>th person. When a specific measure of <span class="math inline">\(Y\)</span> is administered, simple psychometric measurement theory notes that the result is not <span class="math inline">\(\mu_i\)</span>, but something else:</p>
+<p><span class="math inline">\(Y_i = \mu_i + \epsilon_i\)</span> (p.&nbsp;48)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>For example, the answer to a survey question about how many times one has been victimized in the last six months is viewed as just one incident of the application of that question to a specific respondent. In the language of psychometric measurement theory, each survey is one trial of an infinite number of trials. […]. We do not really administer the test many times; instead, we envision that the one test might have achieved different outcomes from the same person over conceptually independent trials. (p.&nbsp;48)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Validity is the correlation of the measurement, <span class="math inline">\(Y_i\)</span>, and the true value, <span class="math inline">\(\mu_i\)</span>, measured over all possible trials and persons: <span class="math inline">\(\mathbb{E}[Y_{it} - \bar{Y} (\mu_i - \mu)] / [\sqrt{\mathbb{E}(Y_{it} - \bar{Y}]^2)} \sqrt{\mathbb{E}(\mu_i - \mu)^2}]\)</span> (p.&nbsp;48)</p>
+<p>[…] When <span class="math inline">\(y\)</span> and <span class="math inline">\(\mu\)</span> covary, moving up and down in tandem, the measurement has high construct validity. A valid measure of an underlying construct is one that is perfecly correlated to the construct. (p.&nbsp;48)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>To the extent that such response behavior is common and systematic across administrations of the question, there arises a discrepancy between the respondent mean response and the true sample mean. (p.&nbsp;49)</p>
+</blockquote>
+<p>Os autores comentam também sobre fontes de erro na etapa de codificação de respostas abertas. “The processing or editing deviation is simply <span class="math inline">\((y_{ip} - y_{i})\)</span>.” (p.&nbsp;50)</p>
+<p>Alguns detalhes são importantes sobre a <em>sampling frame</em>. Em particular, se os bancos de dados utilizados não são atualizados com frequência, podemos esbarrar em problemas de não observação. Por exemplo, se o banco de dados não é atualizado, podemos acabar ligando para pessoas que já morreram ou mudaram de endereço. (p.&nbsp;51)</p>
+<blockquote class="blockquote">
+<p>In statistical terms for a sample mean, coverage bias can be described as a function of two terms: the proportion of the target population not covered by the sampling frame, and the difference between the covered and noncovered population. […] […] For example, for many statistics on the U.S. household population, telephone frames describe the population well, chiefly because the proportion of nontelephone households is very small, about 5% of the total population. Imagine that we used the Surveys of Consumers, a telephone survey, to measure the mean years of education, and the telephone households had a mean of 14.3 years. Among nontelephone households, which were missed due to this being a telephone survey, the mean education level is 11.2 years. Although the nontelephone households have a much lower mean, the bias in the covered mean is:</p>
+<p><span class="math inline">\(\bar{Y}_C - \bar{Y} = 0.05(14.3 - 11.2) = 0.16\)</span></p>
+<p>or, in other words, we would expect the sampling frame to have a mean years of education of 14.3 years versus the target population mean of 14.1 years. (p.&nbsp;51)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>For example, the National Crime Victimization Survey sample starts with the entire set of 3067 counties within the United States. It separates the counties by population size, region, and correlates of criminal activity, forming separate groups or strata. In each stratum, giving each county a chance of selection, it selects sample counties or groups of counties, totaling 237. All the sample persons in the survey will come from those geographic areas. Each month of the sample selects about 8300 households in the selected areas and attempts interviews with their members. (p.&nbsp;52)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>As with all the other survey errors, there are two types of sampling error: sampling bias and sampling variance. Sampling bias arises when some members of the sampling frame are given no chance (or reduced chance) of selection. […]. Sampling variance arises because, given the design for the sample, by chance many different sets of frame elements could be drawn. (p.&nbsp;52)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The extent of the error due to sampling is a function of four basic principles of the design:</p>
+<ol type="1">
+<li><p>Whether all sampling frame elements have known, nonzero chances of selection into the sample (called “probability sampling”)</p></li>
+<li><p>Whether the sample is designed to control the representation of key sub-populations in the sample (called “stratification”)</p></li>
+<li><p>Whether individual elements are drawn directly and independently or in groups (called “element” or “cluster” samples)</p></li>
+<li><p>How large a sample of elements is selected</p></li>
+</ol>
+</blockquote>
+<p>A variância amostral da média é dada por: <span class="math inline">\(\dfrac{\sum^S_{s=1} (\bar{y_s} - \bar{y_c})^2}{S}\)</span></p>
+<blockquote class="blockquote">
+<p>Nonresponse error arises when the value of statistics computed based only on respondent data differ from those based on the entire sample data. For example, if the students who are absent on the day of the NAEP measurement have lower knowledge in the mathematical or verbal constructs being measured, then NAEP socres suffer nonresponse bias, they systematically overestimate the knowledge of the entire sampling frame. If the nonresponse rate is very high, then the amount of the overestimation could be severe. (p.&nbsp;53)</p>
+</blockquote>
+<p>Em resumo: os componentes de qualidade de survey são provenientes de erros de observação e de não observação. Erros de observação incluem gaps entre construtos, medidas, respostas e respostas editadas. Erros de não observação incluem erros de cobertura, amostrais e não resposta. (p.&nbsp;54)</p>
+<blockquote class="blockquote">
+<p>Sample surveys rely on two types of inference – from the questions to constructs, and from the sample statistics to the population statistics. The inference involves two coordinated sets of steps: obtaining answers to questions constructed to mirror the constructs, and identifying and measuring sample units that form a microcos of the target population.</p>
+<p>Despite all efforts, each of the steps is subject to imperfections, producing statistical errors in survey statistics. The errors involving the gap between the measures and the construct are issues of validity. The errors arising during the application of the measures are called “measurement errors”. Editing and processing errors can arise during efforts to prepare the data for statistical analysis. Coverage errors arise when enumerating the target population using a sampling frame. Sampling errors stem from surveys measuring only a subset of the frame population. The failure to measure all sample persons on all measures creates nonresponse error. “Adjustment errors” arise in the construction of statistical estimators to describe the full target population. All of these error sources can have varying effects on different statistics from the same survey. (p.&nbsp;56)</p>
+</blockquote>
+</section>
+<section id="berinsky-a.-j.-2017.-measuring-public-opinion-with-surveys.-annual-review-of-political-science-201-309329." class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="berinsky-a.-j.-2017.-measuring-public-opinion-with-surveys.-annual-review-of-political-science-201-309329."><span class="header-section-number">3.1.2</span> Berinsky, A. J. (2017). Measuring public opinion with surveys. Annual review of political science, 20(1), 309–329.</h3>
+<p>O artigo enfrenta a seguinte questão: “How can we best gauge the political opinions of citizenry?”, isto é, como podemos medir melhor a opinião pública? Trata-se de uma pergunta fundamental para qualquer sociedade democrática.</p>
+<blockquote class="blockquote">
+<p>There are two basic choices we make when conducting a poll: which people to interview and what questions to ask them. These choices seem simple, but neither is straightforward. The strategies one chooses can greatly affect the answers one gets. Thus, the voice of the people, as reflected in polls, is profoundly shaped by the decisions we make as researchers. (p.&nbsp;16.2)</p>
+</blockquote>
+<section id="whom-to-ask" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="whom-to-ask"><span class="header-section-number">3.1.2.1</span> Whom to ask?</h4>
+<blockquote class="blockquote">
+<p>For most of the twwentieth century, these procedures included face-to-face multi-stage designs and telephone interviewing by random-digit dialing. These methods, though not SRS [simple random sampling], can be conducted in ways that allow researchers to approximate SRS. Statistical methods have been developed to account for the design components of modern survey sampling, such as clustering and stratification (Kish 1965, Lohr 2010). (p.&nbsp;16.3)</p>
+</blockquote>
+<p>Nos Estados Unidos, mais ou menos em meados da década de 1970, mais de 90% das casas tinham telefone, e as taxas de resposta eram altas. No entanto, no fim dos anos 1990 as taxas de resposta começaram a cair de maneira vertiginosa. Além disso, telefones de casa passaram a ser menos utilizados em relação a celulares.</p>
+<blockquote class="blockquote">
+<p>Cell phones are tied to individuals, whereas landlines are attached to households. Blending samples with these two types of points of contact is no easy feat. For instance, many individuals are reachable by both cell phone and landline. People who appear in both frames will have a higher probability of inclusion. (p.&nbsp;16.6).</p>
+<p>It is extremely difficult to define a target population that we would like to represent with our sample. Hillygus (2016) rightly points out that there exists no list of all internet users we can draw upon analogous to the list of telephone numbers. As a result, research over the internet is often conducted using nonprobability samples (although, of course, just as non-online polls are no inherently probability samples, online polls do not necessarily have to be nonprobability samples). (p.&nbsp;16.6)</p>
+</blockquote>
+<p>Há também outras estratégias de amostragem, como a Address-Based Sampling (ABS), que utiliza endereços postais como base para a amostragem.</p>
+<p>Além disso, outro problema envolve o fato de que as pessoas simplesmente estão menos dispostas a responder (cooperar) a pesquisas. Isso pode ser um problema, pois as pessoas que não respondem podem ter características diferentes daquelas que respondem e levar a vieses nas estimativas.</p>
+<blockquote class="blockquote">
+<p>The central challenge of selecting respondents to interview is to minimize the differences between the people we ask our questions and the people we miss. For instance, the fundamental problem with continuing to use landlines to sample survey respondents is that the vast majority of people who should be in our sample are not in out sample – either because we cannot reach them or because they refuse to answer our questions once we contact them. From this perspective, the proper way to fix the problem is to consider how the people we can reach differ from the people we cannot reach – and account for those differences through weighting. We can adjust our samples, but in order to arrive at an accurate picture of the public will, we must measure the differences between respondents and nonrespondents to particular surveys. (p.&nbsp;16.7-16.8)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[…] probability and nonprobability samples are fundamentally different, and a variety of factors need to be considered when comparing methods of gathering responses. It is important to continue to recognize these differences, even in an era when probability response rates are collapsing to the low single digits. (p.&nbsp;16.8)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Probability samples are built on a strong inferential foundation because no matter how low the response rate, all the sampled units are actively recruited and encouraged to participate in the survey. This is not true for nonprobability samples. (p.&nbsp;16.8)</p>
+</blockquote>
+</section>
+<section id="what-to-ask" class="level4" data-number="3.1.2.2">
+<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="what-to-ask"><span class="header-section-number">3.1.2.2</span> What to ask?</h4>
+<p>Que tipo de informação podemos efetivamente extrair de perguntas feitas em surveys?</p>
+<blockquote class="blockquote">
+<p>When choosing the questions we ask, we need to be cognizant of the fact that almost anyone will answer that question, even if they have little basis for their answer. Under such circumstances, how should we think of surveys responses?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Zaller (1992, p.&nbsp;49) argues that individuals answer survey questions off the top of their head by ‘averaging across the considerations that are immediately salient to them’ due to their personal characteristics and political experiences at the time of the survey interview. Survey responses therefore are a summary judgment over the mass of considerations – reasons for favoring one side of a controversity rather than another – that happen to be on their mind when they answer a particular questions. (p.&nbsp;16.9)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Bishop (2008) contends that responses to survey questions do not represent actual opinions about the specific policy issues being probed by pollsters, but are an ‘illusion’ based on public ignorance of politics and aided by vague polling questions and variations in question form, wording, and context. Thus, for Bishop, measuring and aggregating survey responses is a meaningless exercise. (p.&nbsp;16.10)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Survey questions may, as Bishop argues, force most people to ‘make up’ answers on the spot, but there made-up answeres are still meaningful because they reflect individuals’ politically relevant considerations – their underlying distribuion of preferences over the policies of government. (p.&nbsp;16.10)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The argument in the previous section is that, at the individual level, survey responses are meaningful when the measurement instrument is calibrated at a moderate level of specificity: not so general as to be empty of content and not so specific that they risk falling into the trap described by Bishop, creating opinions where none exist. (p.&nbsp;16.11)</p>
+</blockquote>
+<ul>
+<li>Single-question approach: uma única pergunta é feita e trazer questões práticas para que pessoas menos envolvidas com política sejam capazes de responder;</li>
+<li>Aggregation approach: uma série de perguntas que, combinadas, trazer uma única medida de opinião pública.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Although the use of general questions should in theory force respondents to evaluate politics at a broader frame of reference, in practice, such questions might induce noisy survey responses. Research in psychology has shown that people sometimes answer general survey questions with a specific frame of reference in mind – one that can differ both across people and across situations. (p.&nbsp;16.15)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The strategy of achieving generality by aggregating across questions for each individual respondent comes with potential problems as well. The strategy of achieving generality by aggregating across questions for each individual respondent comes with potential problems as well. Broockman (2016) criticizes the use of ideological scales that compute the opinions of individuals by taking their average position on a variety of items—whether a straight average or the weighted average implied by factor analysis or IRT models. He argues that these scales are flawed measures of individual preferences because they inappropriately aggregate items across policy domains. (p.&nbsp;16.15)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>My advice is simple. We should ask general survey questions that demand little specific expertise on the part of survey respondents, and we should combine these questions into measures of opinion in theoretically meaningful ways. Of course, this is not a hard and fast rule. On some issues—those in the public eye—it is possible to gather meaningful data on the public’s specific preferences. But as a general guiding principle, measurement should always go hand in hand with an argument about the validity of that measurement strategy. (p.&nbsp;16.16)</p>
+</blockquote>
+</section>
+</section>
+</section>
+<section id="anotações-de-aula" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">3.2</span> Anotações de aula</h2>
+<p>A coisa talvez mais importante do survey é que o resultado é proveninente de um processo de interação – e, ao criar uma interação, ele deflagra um certo processo cognitivo. Além disso, a maioria das pessoas não tem opiniões estáticas sobre a maioria dos assuntos de opinião pública – daí, a resposta é uma média ponderada das últimas informações que a pessoa se lembra. De fato, pessoas que se interessam e se informam mais sobre política tendem a ter opiniões mais consistentes.</p>
+<p>Agora, do ponto de vista de um curso formal de survey, o outro lado é falar do <strong>Total Survey Error</strong>. As duas grandes famílias de erro são os erros de mensuração (isto é, que diz respeito ao que eu quero saber e como eu extraio a informação), e os erros de amostragem (qual é a população-alvo? Como selecionamos a amostra?).</p>
+<p>O capítulo do Groves dá os conceitos básicos de survey: - população - unidade de análise - amostra - quadro amostral: para eu poder fazer inferência sobre uma população, eu preciso de um jeito de definí-la (até porque eu preciso acessá-la). Trata-se do que eu acesso da população – é a parte objetiva do que eu quero acessar da população.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> - desenho amostral - estimação - inferência</p>
+<p>Teoricamente, o mundo possui um certo processo gerador de dados que a gente desconhece e, com inferência, a gente consegue chegar o mais perto possível de como esse processo funciona. A estatística, por outro lado, tem um trabalho mais fácil porque ela se importa com a população, e não com o processo gerador de dados. Não me importa a fórmula; me importa extrapolar a partir de uma amostra. É claro, mesmo a ideia de “população” é um construto que a gente assume que podemos alcançar, mas isso não é necessariamente verdade.</p>
+<p>É impossível fazer pesquisa amostral sem quadro amostral.</p>
+<p>No caso de pesquisa amostral no Brasil, o estado-da-arte envolve sorteios no nível dos territórios. Usando a Malha de Setores Censitários (bem granular, duas ou três quadras), podemos sortear territórios. O melhor que podemos fazer é ir às residências e procurar as pessoas, porque não temos um banco frequentemente atualizado e claro da população adulta. Outro quadro amostral possível é sortear listas telefônicas, assumindo que a maioria das pessoas tem telefone.</p>
+<p>Datafolha, por outro lado, usa pontos de fluxo. Dividimos a unidade territorial em uma série de partes, e procuramos os lugares onde passam mais pessoas. De fato, o lugar onde as pessoas passam no dia a dia. Então não existe listagem das pessoas, mas há uma listagem dos lugares onde as pessoas passam (então, de certa maneira, existe um componente “aleatório”).</p>
+<p>Agora, sobre desenho amostral, temos uma coisa mais “alto nível”. É a receita do bolo. O plano amostral é algo mais objetivo – sorteei os setores censitários etc. E a inferência, no fim das contas, é o que permite a gente extrapolar os dados da amostra para a população, calculando determinadas estatísticas sob incerteza.</p>
+<section id="notação-básica" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="notação-básica"><span class="header-section-number">3.2.1</span> Notação básica</h3>
+<p>Temos uma população de tamanho <span class="math inline">\(N\)</span> na qual cada pessoa <span class="math inline">\(i\)</span> tem:</p>
+<ul>
+<li>um valor latente <span class="math inline">\(\mu_i\)</span></li>
+<li>um valor passível de observação, “fixo”, <span class="math inline">\(Y_i\)</span></li>
+</ul>
+<p>A média da população é:</p>
+<p><span class="math display">\[
+\bar{\mu} = \frac{1}{N} \sum_{i=1}^{N} Y_i
+\]</span></p>
+<p>Em <em>surveys</em>, extraímos uma amostra <span class="math inline">\(S\)</span> de tamanho <span class="math inline">\(n\)</span>, com <span class="math inline">\(n \leq N\)</span>, para obter respostas de uma amostra (provavelmente com erro de mensuração), <span class="math inline">\(y_i\)</span>. Daí podemos ajustá-las, chegando a <span class="math inline">\(y_{ip}\)</span>, que é a resposta editada. A média amostral é:</p>
+<p><span class="math display">\[
+\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i
+\]</span></p>
+<p>No fim das contas, calculamos uma estatística amostral.</p>
+<p>Podemos ter também um indicador de inclusão da pessoa <span class="math inline">\(i\)</span> na amostra:</p>
+<p><span class="math display">\[
+I_i = I(i \in S)
+\]</span></p>
+<p>Sendo que <span class="math inline">\(\pi_i\)</span> é a probabilidade de inclusão do indivíduo <span class="math inline">\(i\)</span> na amostra. A probabilidade de inclusão é dada por:</p>
+<p><span class="math display">\[
+\pi_i = \text{Pr}(i \in S)
+\]</span></p>
+<p><span class="math inline">\(y_i\)</span> é uma variável aleatória <em>que depende do sorteio da amostra</em>.</p>
+<p>Agora, quando o desenho é não probabilístico, a probabilidade de uma pessoa ser sorteada (isto é, <span class="math inline">\(\pi_i\)</span>) é desconhecida.</p>
+</section>
+<section id="probabilidade-de-inclusão" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="probabilidade-de-inclusão"><span class="header-section-number">3.2.2</span> Probabilidade de inclusão</h3>
+<p>Em populações grandes, a probabilidade de inclusão em uma amostra de qualquer <span class="math inline">\(i\)</span> é geralmente ínfima. Imagine uma pessoa com <span class="math inline">\(\pi_i = 0.25\)</span>:</p>
+<p><span class="math display">\[
+w_i = \frac{1}{\pi_i} = \frac{1}{0.25} = 4
+\]</span></p>
+<p>Ela representa 4 pessoas na população. Se <span class="math inline">\(y_i = 10\)</span>, ela contribui <span class="math inline">\(4 \times 10 = 40\)</span> para a estimativa do total. <span class="math inline">\(w_i\)</span> é frequentemente chamado de <strong>peso</strong> da pessoa <span class="math inline">\(i\)</span>.</p>
+<blockquote class="blockquote">
+<p>A ideia de que conseguimos saber a probabilidade de inclusão de uma pessoa na amostra nos permite dizer quantas pessoas aquela pessoa representa na população.</p>
+</blockquote>
+</section>
+<section id="estimador-de-horvitz-thompson" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="estimador-de-horvitz-thompson"><span class="header-section-number">3.2.3</span> Estimador de Horvitz-Thompson</h3>
+<p>Para estimar um total populacional, somamos os valores observados na amostra ponderados pelos seus pesos, <span class="math inline">\(w_i\)</span>. Se eu sei quantas pessoas cada uma das pessoas na amostra reprensenta, então eu consigo estimar o total populacional. Peso também pode ser chamado de fator de expansão.</p>
+<p><span class="math display">\[
+\hat{T}_{HT} = \sum_{i=1}^{n} w_i y_i = \sum_{i=1}^{n} \frac{y_i}{\pi_i}
+\]</span></p>
+<p>Mesmo usando HT, a estimativa do total pode diferir de <span class="math inline">\(T\)</span> na população; com amostras aleatórias, cada realização é ligeiramente diferente. Isso é a <strong>variância</strong>. Podemos repetir 1000 vezes o sorteio da amostra de <span class="math inline">\(n=3\)</span>, obtendo algo próximo de uma distribuição normal.</p>
+</section>
+<section id="erros" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="erros"><span class="header-section-number">3.2.4</span> Erros</h3>
+<p>Erros nada mais são do que diferenças entre estimativa amostral e parâmetro populacional (assumindo, por ora, amostras aleatórias com sorteios independentes de uma população infinita). A quantidade de uma pesquisa depende da proximidade entre <span class="math inline">\(\bar{y}\)</span> e <span class="math inline">\(\bar{Y}\)</span>.</p>
+<p>Uma forma teórica de quantificar o erro total para uma estatística específica:</p>
+<p><strong>Erro quadrático médio</strong>, que combina viés e variância:</p>
+<p><span class="math display">\[
+\text{MSE}(\bar{y}) = \text{Var}(\bar{y}) + \text{Bias}^2(\bar{y})
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\text{Var}(\bar{y})\)</span> é a variância amostral, que mede a variabilidade da média amostral em torno da média populacional.</li>
+<li><span class="math inline">\(\text{Bias}(\bar{y})\)</span> é a diferença entre a média amostral e a média populacional.</li>
+</ul>
+<p>Podemos ter variância dentro da amostra (isto é, entre os respondentes) e variância entre amostras (isto é, entre diferentes realizações).</p>
+<section id="variância-e-tamanho-amostral" class="level4" data-number="3.2.4.1">
+<h4 data-number="3.2.4.1" class="anchored" data-anchor-id="variância-e-tamanho-amostral"><span class="header-section-number">3.2.4.1</span> Variância e tamanho amostral</h4>
+<p>Uma população infinita gerada por:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;y_i = \mu + \epsilon_i \\
+&amp;\epsilon_i \sim N(0, \sigma^2)
+\end{align*}
+\]</span></p>
+<p>Com <span class="math inline">\(\mu = 100\)</span> e <span class="math inline">\(\sigma = 5\)</span>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># populacao</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">2000</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># media</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># desvio padrao</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># gerando a populacao</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, mu, sigma)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># histograma da distribuicao adicionando uma linha na media</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(y, <span class="at">breaks =</span> <span class="dv">20</span>, <span class="at">main =</span> <span class="st">"Distribuição da população"</span>, <span class="at">xlab =</span> <span class="st">"y"</span>, <span class="at">ylab =</span> <span class="st">"Frequência"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> mu, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aula-3_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Agora, se temos viés na amostra, podemos ter uma média amostral diferente da média populacional:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;y_i = \mu + \epsilon_i + \text{viés} \\
+&amp;\epsilon_i \sim N(0, \sigma^2) \\
+&amp;\text{viés} = 5
+\end{align*}
+\]</span></p>
+<p>Nesse caso, a média amostral é 105:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># amostra</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">2000</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># amostra com viés</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>y_biased <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, mu <span class="sc">+</span> <span class="dv">5</span>, sigma)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># histograma da distribuicao adicionando uma linha na media</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(y_biased, <span class="at">breaks =</span> <span class="dv">20</span>, <span class="at">main =</span> <span class="st">"Distribuição da amostra com viés"</span>, <span class="at">xlab =</span> <span class="st">"y"</span>, <span class="at">ylab =</span> <span class="st">"Frequência"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> mu, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aula-3_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="total-survey-error" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="total-survey-error"><span class="header-section-number">3.2.5</span> Total Survey Error</h3>
+<p>O TSE é um framework sobre os dois grandes processos que geram erros: <strong>mensuração</strong> e <strong>amostragem</strong> (Groves e Lyberg, 2010). Há uma série de fontes para erros: erros de mensuração, de cobertura, de pós-ajuste (pós-estratificação), de não-resposta, amostral, enfim.</p>
+<p><strong>Erros de mensuração:</strong> quando a resposta coletada <span class="math inline">\(y_i\)</span> difere de <span class="math inline">\(Y_i\)</span></p>
+<ul>
+<li>Interpretação errada da pergunta</li>
+<li>Esquecimento</li>
+<li>Anotação errada</li>
+<li>Vergonha de revelar uma opinião</li>
+<li>Respostas aleatórias</li>
+</ul>
+<p><strong>Erro de cobertura:</strong> quando o quadro amostral não abarca toda a população-alvo. Ou melhor, quando o quadro amostral não efetivamente se ajusta à população-alvo. Algumas fontes comuns são registros desatualizados, exclusão de domicílios em áreas remotas ou inacessíveis, pessoas sem telefone ou sem internet, entre outros.</p>
+<ul>
+<li>Subcobertura</li>
+<li>Sobrecobertura</li>
+</ul>
+<p><strong>Erro de não resposta:</strong> parte da amostra não responde. Se não respondentes diferem sistematicamente dos respondentes, há viés de não resposta. O que importa é a <strong>diferença entre quem responde e quem não responde</strong>.</p>
+<ul>
+<li>Unit nonresponse: pessoa não responde nada</li>
+<li>Item nonresponse: pessoa responde parcialmente (isto é, não responde a todas as perguntas)</li>
+</ul>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>No Brasil, a gente trata principalmente do CNEFE – o Cadastro Nacional de Endereços para Fins Estatísticos. É daqui que tiramos as “listas” para o quadro amostral e chegue perto da população de domicílios.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../aulas/aula-2.html" class="pagination-link" aria-label="O que são e para que servem pesquisas de survey">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

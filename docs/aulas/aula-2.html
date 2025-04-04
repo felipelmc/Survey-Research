@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; O que são e para que servem pesquisas de survey – Pesquisa de Survey</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../aulas/aula-3.html" rel="next">
+<link href="../index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Pesquisa de Survey</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Aulas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Erros em survey</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#anotações-das-leituras" id="toc-anotações-das-leituras" class="nav-link active" data-scroll-target="#anotações-das-leituras"><span class="header-section-number">2.1</span> Anotações das leituras</a>
+  <ul class="collapse">
+  <li><a href="#groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-1." id="toc-groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-1." class="nav-link" data-scroll-target="#groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-1."><span class="header-section-number">2.1.1</span> Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., &amp; Tourangeau, R. (2011). <em>Survey methodology</em>. John Wiley &amp; Sons. Cap. 1.</a></li>
+  <li><a href="#zaller-j.-feldman-s.-1992.-a-simple-theory-of-the-survey-response-answering-questions-versus-revealing-preferences.-american-journal-of-political-science-579-616." id="toc-zaller-j.-feldman-s.-1992.-a-simple-theory-of-the-survey-response-answering-questions-versus-revealing-preferences.-american-journal-of-political-science-579-616." class="nav-link" data-scroll-target="#zaller-j.-feldman-s.-1992.-a-simple-theory-of-the-survey-response-answering-questions-versus-revealing-preferences.-american-journal-of-political-science-579-616."><span class="header-section-number">2.1.2</span> Zaller, J., &amp; Feldman, S. (1992). <em>A simple theory of the survey response: Answering questions versus revealing preferences</em>. American Journal of Political Science, 579-616.</a></li>
+  </ul></li>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">2.2</span> Anotações de aula</a>
+  <ul class="collapse">
+  <li><a href="#converse-1964" id="toc-converse-1964" class="nav-link" data-scroll-target="#converse-1964"><span class="header-section-number">2.2.1</span> Converse (1964)</a></li>
+  <li><a href="#zaller-e-feldman-1992" id="toc-zaller-e-feldman-1992" class="nav-link" data-scroll-target="#zaller-e-feldman-1992"><span class="header-section-number">2.2.2</span> Zaller e Feldman (1992)</a></li>
+  <li><a href="#escola-de-michigan" id="toc-escola-de-michigan" class="nav-link" data-scroll-target="#escola-de-michigan"><span class="header-section-number">2.2.3</span> Escola de Michigan</a></li>
+  <li><a href="#heurística" id="toc-heurística" class="nav-link" data-scroll-target="#heurística"><span class="header-section-number">2.2.4</span> Heurística</a></li>
+  <li><a href="#top-of-mind" id="toc-top-of-mind" class="nav-link" data-scroll-target="#top-of-mind"><span class="header-section-number">2.2.5</span> Top of mind</a></li>
+  <li><a href="#estimação-de-preferências" id="toc-estimação-de-preferências" class="nav-link" data-scroll-target="#estimação-de-preferências"><span class="header-section-number">2.2.6</span> Estimação de preferências</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="anotações-das-leituras" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="anotações-das-leituras"><span class="header-section-number">2.1</span> Anotações das leituras</h2>
+<section id="groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-1." class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-1."><span class="header-section-number">2.1.1</span> Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., &amp; Tourangeau, R. (2011). <em>Survey methodology</em>. John Wiley &amp; Sons. Cap. 1.</h3>
+<blockquote class="blockquote">
+<p>There are four perspectives on surveys that are worth describing: the purposes to which surveys were put, the development of question design, the development of sampling methods, and the development of data collection methods. (p.&nbsp;15)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>However, the market research and polling organizations were doing large numbers of interviews, using newly hired people with no special background in the social sciences. Of necessity, researchers needed to specify more carefully the information sought by the survey. Further, researchers found that small changes in the wording of an attitude question sometimes had unusually large effects on the answers. (p.&nbsp;16)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Although the theory of probability was established in the 18th century, its application to practical sample survey work was delayed until the 20th century. The first applications were the taking of a “1 in N” systematic selection from census returns. There were “probability samples”; that is, every record had a known nonzero chance of selection into the sample. (p.&nbsp;17)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Although all police agencies in the United States could be asked to report statistics from their record systems, it was financially impossible to ask all persons in the United States to report their individual victimizations. If a “representative” sample could be identified, this would make the victimization survey possible. Thus, in contrast to the record data, the survey would be subject to “sampling error” (i.e., errors in statistics because of the omission of some persons in the population). (p.&nbsp;20)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The methodological work suggested that the survey would tend to underreport less important crimes, apparently because they were difficult to remember. Finally, both systems have trouble with repeated incidents of the same character. (p.&nbsp;20)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The sample is restricted to persons who are household members, excluding the homeless, those in institutions, and in group quarters. The sample is clustered into hundreds of different sample areas (usually counties or groups of counties) and the sample design is repeated samples of households from the same areas over the years of the study. (p.&nbsp;21)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Each month, the Surveys of Consumers (SOC) telephones a sample of the phone numbers, locates the household numbers among them, and selects one adult from those in the households. The target is the full household population, but to reduce costs, only persons in households with telephones are eligible. […]. After the data are collected, there are statistical adjustments made to the estimates in an attempt to repair the omission of nontelephone households and nonresponse. (p.&nbsp;25-26)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The design features of the surveys are tailored to fit their purposes. The target populations for these surveys are varied – for example, the NCVS aims to describe adults and children age 12 or older, whereas the CES survey has a target population of employers. The NCVS, NSDUH, and NAEP surveys all draw samples of households in two steps, first sampling geographic areas, then sampling from created lists of households within those areas. The Surveys of Consumers and BRFSS draw samples of telephone numbers from all possible numbers within working area codes and exchanges. Then the numbers are screened to find those associated with households. (p.&nbsp;34)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Survey methodology seeks to identify principles about the design, collection, processing, and analysis of surveys that are linked to the cost and quality of survey estimates. This means that the field focuses on improving quality within cost constraints, or, alternatively, reducing costs for some fixed level of quality. “Quality” is defined within a framework labeled the total survey error paradigm. (p.&nbsp;35)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Because survey methodology has this inherently multidisciplinary nature, it has only recently developed as a unified field. (p.&nbsp;35)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>In a similar way, in some cases there are only imperfect solutions for survey design problems. All the approaches available to solve a particular problem may have pluses and minuses. The survey methodologist has to decide which of a set of imperfect options is best. Again, the total survey error approach is to consider the various ways that the options will affect the quality of the resulting data and choose the one that, on balance, will produce the most valuable data. (p.&nbsp;37)</p>
+</blockquote>
+</section>
+<section id="zaller-j.-feldman-s.-1992.-a-simple-theory-of-the-survey-response-answering-questions-versus-revealing-preferences.-american-journal-of-political-science-579-616." class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="zaller-j.-feldman-s.-1992.-a-simple-theory-of-the-survey-response-answering-questions-versus-revealing-preferences.-american-journal-of-political-science-579-616."><span class="header-section-number">2.1.2</span> Zaller, J., &amp; Feldman, S. (1992). <em>A simple theory of the survey response: Answering questions versus revealing preferences</em>. American Journal of Political Science, 579-616.</h3>
+<blockquote class="blockquote">
+<p><strong>Virtually, all public opinion research proceeds on the assumption that citizens possess reasonably well formed attitudes on major political issues and that surveys are passive measures of these attitudes.</strong> The standard view is that when survey respondents say they favor X they are simply describing a preexisting state of feeling favorably toward X.</p>
+<p>Accumulating evidence on the vagaries of mass political attitudes, however, has made this view increasingly dubious. If, as is well known, prople are asked the same question in a series of interviews, their attitude reports are highly changeable. Many, as much evidence also shows, react strongly to the context in which the questions are asked, to the order in which options are presented, and to wholly nonsubstantive changes in question wording. These phenomena are more than methodological curiosities; they raise serious doubts about what public opinion surveys measure.</p>
+<p>In view of this, we propose a new undestanding of the mass survey response. Most citizens, we argue, simply do not possess performed attitudes at the level of specificity demanded in surveys. <strong>Rather, they carry around in their heads a mix of only partially consistent ideas and considerations.</strong> When questioned, they call to mind a sample of these ideas, including an oversample of ideas made salient by the questionnaiere and other recent events, and use them to choose among the options offered. But their choices do not, in most cases, reflect anything that can be described as true attitudes; <strong>rather, they reflect the thoughts that are most accessible in memory at the moment of response</strong>. (p.&nbsp;579-580)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>One of the most unsettling findings of opinion research has been the discovery of a large component of randomness in most people’s answers to survey questions. If the same people are asked the same question in repeated interviews, only about half of them give the same answers. (p.&nbsp;580)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The literature on response effects thus makes it clear that survey questions do not <em>simply</em> measure public opinion. They also shape and channel it by the manner in which they frame issues, order the alternatives, and otherwise set the context of the question. THis has led researchers to a conclusion that seems indisputable but that is fundamentally at odds with the assumptions of most political scientists about the nature of political attitudes: namely, people do not merely <em>reveal</em> preexisting attitudes on surveys; to some considerable extent, people are using the questionnaire to decide what their “attitudes” are (Bishop, Oldendick, and Tuchfarber 1984;; Zaller 1984; Feldman 1990).</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Current attitude models seem quite irrelevant to these observations. The reason for Sartori’s vacillation is not, as students of Converse might say, that he has no opinion on this question, nor is it that, as users of measurement error models might say, Sartori has a “true attitude” that Hochschild is unable to measure reliably. It is rather that Sartori has conflicting opinions, or at least conflicting <em>considerations</em>, that lead him to give different responses at different times, depending on how he thinks about the issue. (p.&nbsp;584)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>AXIOM 1:</strong> The ambivalence axiom. Most people possess opposing considerations on most issues, that is, considerations that might lead them to decide the issue either way. (p.&nbsp;585)</p>
+<p><strong>AXIOM 2:</strong> The response axiom. Individuals answer survey questions by averaging across the considerations that happen to be salient at the moment of response, where saliency is determined by the <em>accessbility axiom</em>. (p.&nbsp;586)</p>
+<p><strong>AXIOM 3:</strong> The accessibility axiom. The accessibility of any given consideration depends on a stochastic sampling process, where considerations that have been recently thought about are somewhat more likely to be sampled. (p.&nbsp;586)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>For a case in which a person devotes great thought and attention to an issue, Axiom 3 implies that there may be multiple considerations salient in memory at the moment of answering questions about the issue and hence many considerations to be averaged across. But a person who rarely thinks about an issue and who is confronted by an interview situatin that requires a succession of quick answers (Feldman 1990) may have only one consideration immediately available in memory, in which case the averaging rule reduces to answering on the basis of a single “top-of-the-head” consideration, as suggested by Taylor and Fiske. (p.&nbsp;586)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The two types of probes [page 587] are clearly not equivalent. The “retrospective” probes, which were posed after people had answered the question in the normal way, were designed to find out what exactly was on people’s minds at the moment of response. The “prospective” or “stop-and-think” probes, on the other hand, were designed to indice people to search their memories more carefully than they ordinarily would for pertinent considerations. Note that the stop-and-think probes do not raise new ideas or push the respondent in a particular direction; they simply require the respondent to say explicitly what meaning he or she attaches to the defining phrases of the question. (p.&nbsp;587-588)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Researchers have long known that different people can answer identical questions as if they concerned different topics. What the vignette of the vacillating teacher shows is that <em>the same person can answer the same question at different times as if it involved different topics</em>. This can happen, according to the model, because the considerations that determine people’s survey answers vary across interviews. Thus, people can give strongly felt, contradictory survey responses without either changing their mix of feelings on the issue or consciously experiencing any ambivalence or conflict – if the particular considerations that determine their survey responses have shifted. (p.&nbsp;594)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>If, as the model claims, individuals possess competing considerations on most issues, and if they answer on the basis of whatever ideas happen to be at the top of their minds at the moment of response, one would expect a fair amount of over-time instability in people’s attitude reports (Deduction 4). The reason is that the consideration(s) that are stochastically accessible at one interview might not be so prominent in the next. This inference is strongly supported by a mass of existing evidence (e.g., Table 1). (p.&nbsp;597)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>This finding indicates that the conflict most responsible for response instability is conflict that occurs across rather than within interviews and that respondents are often unaware of their conflict as they answer questions. Thus, the vacillating teacher exhibited no conflict over government services within either interview, but substantial conflict across interviews. Most likely, once the teacher began to view the government services item through the prism of either “bloated government” or “education crisis”, he or she fell into a mindset that blocked thinking about the other point of view. (p.&nbsp;600)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>This type of question order effect is also explainable from the model. Having had their ideological orientations made salient to them just prior to answering policy items, those respondents who possess such orientations are more likely to rely on them as a consideration in formulating responses to subsequent policy questions, thereby making those responses more strongly correlated with their ideological positions and hence also more ideologically consistent with one another (Deduction 16). (p.&nbsp;603)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Our intent in designing the stop-and-think probes was to create such an inducement. By requiring individuals to discuss the elements of a question before answering it, we were inducing them to call to mind and take account of a wider range of ideas than they normally would. We therefore expected that responses following the stop-and-think treatment would be, all else equal, more reliable indicators of the set of underlying considerations than responses made in the standard way, that is, in the retrospective condition (Deduction 17). (p.&nbsp;603)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em>1. Dependence of attitude reports on probabilistic memory search</em>. Because attitude reports are based on memory searches that are both probabilistic and incomplete, attitude reports tend to be (1) unstable over time; (2) centered on the mean of the underlying considerations; and (3) correlated with the outcomes of memory searches (Deductions 3-5). This is also why people who are more conflicted in their underlying considerations are more unstable in their closed-ended survey responses (Deduction 8).</p>
+<p><em>2. Effects of ideas recently made salient</em>. The notion that individuals’ survey responses can be deflected in the direction of ideas made recently salient has been used to explain question order effects, endorsement effects, race-of-interviewer effects, reference group effects, question framing effects, and TV news priming effects (Deductions 9-16).</p>
+<ol start="3" type="1">
+<li>Effects of thought on attitude reports. The notion that thinking about an issue, as gauged by general levels of political awareness, enables people to recall a large numnber of considerations and hence to make more reliable responses has been used to explain why the public as a whole is more stable on “doorstep” issues (Deducions 6, 7). It also explains why more politically aware persons, and persons especially concerned about an issue, are able to recall more thoughts relevant to ir (Deductions 1, 2). Finally, the notion that greater thought makes attitude reports more reliable has been invoked, with only limited success, to explain the effects of extra thought at the moment of responding to an issue (Deduction 17). (p.&nbsp;607)</li>
+</ol>
+</blockquote>
+</section>
+</section>
+<section id="anotações-de-aula" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">2.2</span> Anotações de aula</h2>
+<p>Surveys ao longo do tempo mostram flutuações relativamente bizarras ao longo do tempo. Certo: sabemos que a população brasileira não atende telefone, pessoas não confiam em pesquisas, etc. É verdade, há uma série de problemas. Mas, no fim das contas e antes disso tudo, survey são uma maneira de interação humana. E, com isso, geram nas pessoas uma série de reações que impactam nas respostas.</p>
+<p>Converse é considerado um dos fundadores da Escola de Michigan, e um dos principais estudiosos de opinião pública. É um dos maiores cientistas políticos de todos os tempos. Num texto de 1964, ele tenta explicar sua visão de opinião pública – “a maioria das pessoas não têm estruturas latentes, ou reais e fixas, sobre a maioria dos objetos de atitude” (slide, Converse 1964).</p>
+<p>Zaller e Feldman, em 1992, propõem uma teoria de resposta a surveys que é contrária a essa visão de Converse. Eles dizem que as pessoas têm opiniões, mas a formação das respostas é plausivelmente um processo <em>on the spot</em> que depende de <em>priming</em>, <em>framing</em> e, mais importante, da capacidade de recuperação de informações (Zaller e Feldman 1992).</p>
+<p>Ainda assim, os autores concordam na medida em que entendem que há um componente estocástico na resposta de surveys. Por um lado, Converse acha que as pessoas não têm opiniões formadas. Por outro lado, Zaller e Feldman acreditam que o componente estocástico varia de acordo com algumas questões, incluindo a atenção do respondente, se é uma pessoa mais ou menos informada, etc.</p>
+<p>O grande mérito dos surveys foi a possibilidade de perguntar para as pessoas sobre opiniões e atitudes. O desafio maior é entender o que as pessoas pensam, sentem e como elas vão agir.</p>
+<section id="converse-1964" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="converse-1964"><span class="header-section-number">2.2.1</span> Converse (1964)</h3>
+<p>Acredita que há <em>constraints</em> lógicos, psicológicos, sociais, heurísticos. As opiniões são amarradas de forma consistente. Mas a maior parte das pessoas não tem esse sistema de crenças estruturados, então elas respondem, mas não respondem em termos ideológicos e <strong>introduzem um componente aleatório</strong></p>
+<p>Essa questão é fundamental porque, se pensarmos segundo Converse, perguntar para a pessoa se ela “é de esquerda ou de direita” sequer faz sentido, porque as pessoas não pensam em termos ideológicos. Diferentemente de uma visão espacial da formação de preferências (i.e., Downs), <strong>sistemas de crenças</strong> são estáveis.</p>
+<p><strong>Implicações:</strong></p>
+<ol type="1">
+<li>Maioria das pessoas não têm preferências ideológicas reais</li>
+<li><em>Surveys</em> superestimam posições políticas</li>
+<li><em>Surveys</em> são mais úteis quando agregam diferentes mensurações possíveis de uma dimensão</li>
+</ol>
+<blockquote class="blockquote">
+<p>Parte da variância de pesquisas de survey tem a ver com a formação de respostas, não com erros amostrais.</p>
+</blockquote>
+</section>
+<section id="zaller-e-feldman-1992" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="zaller-e-feldman-1992"><span class="header-section-number">2.2.2</span> Zaller e Feldman (1992)</h3>
+<p>A maioria das pessoas têm opiniões conflitantes sobre uma mesma questão e as acessam com algum nível de aleatoriedade. Ao longo do tempo, as pessoas vão recebendo “considerações” da elite política e da mídia (principalmente), de maneira que há questões que ficam mais acessíveis na memória do respondente. Isso acaba compondo a resposta que a pessoa dá a uma pergunta de survey. Para o Zaller, é assim que as pessoas formam opiniões.</p>
+<p>Quando as pessoas são entrevistadas, são levadas a refletir sobre questões abstratas. De acordo com o processo de recepção de informações, as pessoas formam suas opiniões e acessam essas informações de maneira aleatória – sendo que o que está “mais freco” tem mais chance de ser acessado.</p>
+<p>Pessoas que têm maior acessibilidade de informações conseguem considerar mais coisas.</p>
+<p><strong>Zaller está de acordo com a ideia de que:</strong></p>
+<ul>
+<li>Pesoas recebem informações de elites proporcionalmente à atenção</li>
+<li>Aceitação depende de predisposição, atenção e reflexão (e.g., <em>motivated reasoning</em>). Isso, para Zaller, é fonte de polarização que vem das elites políticas<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li>Ao responder surveys, pessoas sorteiam informações disponíveis e as ponderam por saliência</li>
+</ul>
+<p><strong>Implicações:</strong></p>
+<ul>
+<li><em>Priming</em> e <em>framing</em> influencia a opinião pública porque afeta a recepção e saliência de informações que podem ser perguntadas em <em>surveys</em></li>
+<li>Mesmo pessoas bem informadas podem ter opiniões instáveis porque a acessibilidade de informações é estocástica</li>
+<li>Pessoas com maior atenção política tendem a rejeitar informações que não estão de acordo com suas preferências</li>
+</ul>
+<p>Uma visualização do modelo é imaginar que pessoas têm tendêndias centrais e variação aleatória em suas respostas.</p>
+</section>
+<section id="escola-de-michigan" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="escola-de-michigan"><span class="header-section-number">2.2.3</span> Escola de Michigan</h3>
+<p>Para a maioria das pessoas, pertencimento a um grupo partidário é a principal fonte de informação e atitudes, o que estrutura suas identidades e oposições.</p>
+<p>Ainda que a intenção de voto, avaliação de governo, etc., sejam partialmente aleatórios, a identificação partidária é um <em>anchor</em> para as respostas. Ou seja, as coisas “partem daqui”.</p>
+<p>A identidade social partidária é estável e duradoura. Então, “com qual partido você se identifica mais?” faz mais sentido do que “você é de esquerda ou de direita?”. É claro, apoiar <span class="math inline">\(x\)</span> ou <span class="math inline">\(y\)</span> não determina comportamentos e opiniões completamente, mas estrutura a forma como as pessoas pensam. A questão de identidade partidária costuma resumir várias outras e ser o melhor preditor de voto. E, melhor ainda, essa é uma questão nada abstrata.</p>
+<blockquote class="blockquote">
+<p><strong>Dica:</strong> Surveys funcionam melhor quando você pergunta coisas paupáveis, mas também coisas que vinculam pessoas a grupos. Os grupos aos quais elas pertencem já permite deduzir uma série de coisas sobre elas.</p>
+</blockquote>
+<p>Livros importantes: - The American Voter (1960) - Partisan Hearts and Minds (2002)</p>
+</section>
+<section id="heurística" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="heurística"><span class="header-section-number">2.2.4</span> Heurística</h3>
+<p>Num survey, quando não tenho informação sobre algo, posso usar algum atalho cognitivo para me ajudar a me posicionar. Por exemplo, se eu não sei nada sobre um candidato, posso votar no candidato do meu partido. Se o jornal que eu leio diz que o candidato é bom, eu posso votar nele.</p>
+</section>
+<section id="top-of-mind" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="top-of-mind"><span class="header-section-number">2.2.5</span> Top of mind</h3>
+<p>O fato de que respostas a surveys dependem do recall e agregação de considerações é algo útil para mensurar a prevalência destas em um dado momento no tempo. Métricas comuns em pesquisas de mercado.</p>
+<blockquote class="blockquote">
+<p>Você está gripado. De pronto, aí, sem pensar muito, qual é o remédio que você toma? A resposta é o que está no <em>top of mind</em>, provavelmente Benegripe.</p>
+</blockquote>
+</section>
+<section id="estimação-de-preferências" class="level3" data-number="2.2.6">
+<h3 data-number="2.2.6" class="anchored" data-anchor-id="estimação-de-preferências"><span class="header-section-number">2.2.6</span> Estimação de preferências</h3>
+<p>Há métodos de estimação de preferências latentes a partir de respostas a diferentes questões de surveys. Exemplo:</p>
+<ul>
+<li><code>basicspace</code></li>
+<li><code>Aldrich-McKelvey scaling</code></li>
+</ul>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Essa ideia tende a ser endossada pela literatura mais recente sobre polarização política e fake news. Além disso, as estratégias para despolarizar a sociedade passam por tentar reduzir a polarização das próprias elites políticas, que, hoje, são as principais fontes de informação (ou <em>motivated reasoning</em>) para a população.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link" aria-label="index.html">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../aulas/aula-3.html" class="pagination-link" aria-label="Erros em survey">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Erros em survey</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
