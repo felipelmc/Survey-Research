@@ -1,0 +1,148 @@
+# O que são e para que servem pesquisas de survey
+
+## Anotações das leituras
+
+### Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2011). _Survey methodology_. John Wiley & Sons. Cap. 1.
+
+> There are four perspectives on surveys that are worth describing: the purposes to which surveys were put, the development of question design, the development of sampling methods, and the development of data collection methods. (p. 15)
+
+> However, the market research and polling organizations were doing large numbers of interviews, using newly hired people with no special background in the social sciences. Of necessity, researchers needed to specify more carefully the information sought by the survey. Further, researchers found that small changes in the wording of an attitude question sometimes had unusually large effects on the answers. (p. 16)
+
+> Although the theory of probability was established in the 18th century, its application to practical sample survey work was delayed until the 20th century. The first applications were the taking of a "1 in N" systematic selection from census returns. There were "probability samples"; that is, every record had a known nonzero chance of selection into the sample. (p. 17)
+
+> Although all police agencies in the United States could be asked to report statistics from their record systems, it was financially impossible to ask all persons in the United States to report their individual victimizations. If a "representative" sample could be identified, this would make the victimization survey possible. Thus, in contrast to the record data, the survey would be subject to "sampling error" (i.e., errors in statistics because of the omission of some persons in the population). (p. 20)
+
+> The methodological work suggested that the survey would tend to underreport less important crimes, apparently because they were difficult to remember. Finally, both systems have trouble with repeated incidents of the same character. (p. 20)
+
+> The sample is restricted to persons who are household members, excluding the homeless, those in institutions, and in group quarters. The sample is clustered into hundreds of different sample areas (usually counties or groups of counties) and the sample design is repeated samples of households from the same areas over the years of the study. (p. 21)
+
+> Each month, the Surveys of Consumers (SOC) telephones a sample of the phone numbers, locates the household numbers among them, and selects one adult from those in the households. The target is the full household population, but to reduce costs, only persons in households with telephones are eligible. [...]. After the data are collected, there are statistical adjustments made to the estimates in an attempt to repair the omission of nontelephone households and nonresponse. (p. 25-26)
+
+> The design features of the surveys are tailored to fit their purposes. The target populations for these surveys are varied -- for example, the NCVS aims to describe adults and children age 12 or older, whereas the CES survey has a target population of employers. The NCVS, NSDUH, and NAEP surveys all draw samples of households in two steps, first sampling geographic areas, then sampling from created lists of households within those areas. The Surveys of Consumers and BRFSS draw samples of telephone numbers from all possible numbers within working area codes and exchanges. Then the numbers are screened to find those associated with households. (p. 34)
+
+> Survey methodology seeks to identify principles about the design, collection, processing, and analysis of surveys that are linked to the cost and quality of survey estimates. This means that the field focuses on improving quality within cost constraints, or, alternatively, reducing costs for some fixed level of quality. "Quality" is defined within a framework labeled the total survey error paradigm. (p. 35)
+
+> Because survey methodology has this inherently multidisciplinary nature, it has only recently developed as a unified field. (p. 35)
+
+> In a similar way, in some cases there are only imperfect solutions for survey design problems. All the approaches available to solve a particular problem may have pluses and minuses. The survey methodologist has to decide which of a set of imperfect options is best. Again, the total survey error approach is to consider the various ways that the options will affect the quality of the resulting data and choose the one that, on balance, will produce the most valuable data. (p. 37)
+
+### Zaller, J., & Feldman, S. (1992). _A simple theory of the survey response: Answering questions versus revealing preferences_. American Journal of Political Science, 579-616.
+
+> **Virtually, all public opinion research proceeds on the assumption that citizens possess reasonably well formed attitudes on major political issues and that surveys are passive measures of these attitudes.** The standard view is that when survey respondents say they favor X they are simply describing a preexisting state of feeling favorably toward X.
+> 
+> Accumulating evidence on the vagaries of mass political attitudes, however, has made this view increasingly dubious. If, as is well known, prople are asked the same question in a series of interviews, their attitude reports are highly changeable. Many, as much evidence also shows, react strongly to the context in which the questions are asked, to the order in which options are presented, and to wholly nonsubstantive changes in question wording. These phenomena are more than methodological curiosities; they raise serious doubts about what public opinion surveys measure.
+> 
+> In view of this, we propose a new undestanding of the mass survey response. Most citizens, we argue, simply do not possess performed attitudes at the level of specificity demanded in surveys. **Rather, they carry around in their heads a mix of only partially consistent ideas and considerations.** When questioned, they call to mind a sample of these ideas, including an oversample of ideas made salient by the questionnaiere and other recent events, and use them to choose among the options offered. But their choices do not, in most cases, reflect anything that can be described as true attitudes; **rather, they reflect the thoughts that are most accessible in memory at the moment of response**. (p. 579-580)
+
+> One of the most unsettling findings of opinion research has been the discovery of a large component of randomness in most people's answers to survey questions. If the same people are asked the same question in repeated interviews, only about half of them give the same answers. (p. 580)
+
+> The literature on response effects thus makes it clear that survey questions do not _simply_ measure public opinion. They also shape and channel it by the manner in which they frame issues, order the alternatives, and otherwise set the context of the question. THis has led researchers to a conclusion that seems indisputable but that is fundamentally at odds with the assumptions of most political scientists about the nature of political attitudes: namely, people do not merely _reveal_ preexisting attitudes on surveys; to some considerable extent, people are using the questionnaire to decide what their "attitudes" are (Bishop, Oldendick, and Tuchfarber 1984;; Zaller 1984; Feldman 1990).
+
+> Current attitude models seem quite irrelevant to these observations. The reason for Sartori's vacillation is not, as students of Converse might say, that he has no opinion on this question, nor is it that, as users of measurement error models might say, Sartori has a "true attitude" that Hochschild is unable to measure reliably. It is rather that Sartori has conflicting opinions, or at least conflicting _considerations_, that lead him to give different responses at different times, depending on how he thinks about the issue. (p. 584)
+
+> **AXIOM 1:** The ambivalence axiom. Most people possess opposing considerations on most issues, that is, considerations that might lead them to decide the issue either way. (p. 585)
+>
+> **AXIOM 2:** The response axiom. Individuals answer survey questions by averaging across the considerations that happen to be salient at the moment of response, where saliency is determined by the _accessbility axiom_. (p. 586)
+>
+> **AXIOM 3:** The accessibility axiom. The accessibility of any given consideration depends on a stochastic sampling process, where considerations that have been recently thought about are somewhat more likely to be sampled. (p. 586)
+
+> For a case in which a person devotes great thought and attention to an issue, Axiom 3 implies that there may be multiple considerations salient in memory at the moment of answering questions about the issue and hence many considerations to be averaged across. But a person who rarely thinks about an issue and who is confronted by an interview situatin that requires a succession of quick answers (Feldman 1990) may have only one consideration immediately available in memory, in which case the averaging rule reduces to answering on the basis of a single "top-of-the-head" consideration, as suggested by Taylor and Fiske. (p. 586)
+
+> The two types of probes [page 587] are clearly not equivalent. The "retrospective" probes, which were posed after people had answered the question in the normal way, were designed to find out what exactly was on people's minds at the moment of response. The "prospective" or "stop-and-think" probes, on the other hand, were designed to indice people to search their memories more carefully than they ordinarily would for pertinent considerations. Note that the stop-and-think probes do not raise new ideas or push the respondent in a particular direction; they simply require the respondent to say explicitly what meaning he or she attaches to the defining phrases of the question. (p. 587-588)
+
+> Researchers have long known that different people can answer identical questions as if they concerned different topics. What the vignette of the vacillating teacher shows is that _the same person can answer the same question at different times as if it involved different topics_. This can happen, according to the model, because the considerations that determine people's survey answers vary across interviews. Thus, people can give strongly felt, contradictory survey responses without either changing their mix of feelings on the issue or consciously experiencing any ambivalence or conflict -- if the particular considerations that determine their survey responses have shifted. (p. 594)
+
+> If, as the model claims, individuals possess competing considerations on most issues, and if they answer on the basis of whatever ideas happen to be at the top of their minds at the moment of response, one would expect a fair amount of over-time instability in people's attitude reports (Deduction 4). The reason is that the consideration(s) that are stochastically accessible at one interview might not be so prominent in the next. This inference is strongly supported by a mass of existing evidence (e.g., Table 1). (p. 597)
+
+> This finding indicates that the conflict most responsible for response instability is conflict that occurs across rather than within interviews and that respondents are often unaware of their conflict as they answer questions. Thus, the vacillating teacher exhibited no conflict over government services within either interview, but substantial conflict across interviews. Most likely, once the teacher began to view the government services item through the prism of either "bloated government" or "education crisis", he or she fell into a mindset that blocked thinking about the other point of view. (p. 600)
+
+> This type of question order effect is also explainable from the model. Having had their ideological orientations made salient to them just prior to answering policy items, those respondents who possess such orientations are more likely to rely on them as a consideration in formulating responses to subsequent policy questions, thereby making those responses more strongly correlated with their ideological positions and hence also more ideologically consistent with one another (Deduction 16). (p. 603)
+
+> Our intent in designing the stop-and-think probes was to create such an inducement. By requiring individuals to discuss the elements of a question before answering it, we were inducing them to call to mind and take account of a wider range of ideas than they normally would. We therefore expected that responses following the stop-and-think treatment would be, all else equal, more reliable indicators of the set of underlying considerations than responses made in the standard way, that is, in the retrospective condition (Deduction 17). (p. 603)
+
+> _1. Dependence of attitude reports on probabilistic memory search_. Because attitude reports are based on memory searches that are both probabilistic and incomplete, attitude reports tend to be (1) unstable over time; (2) centered on the mean of the underlying considerations; and (3) correlated with the outcomes of memory searches (Deductions 3-5). This is also why people who are more conflicted in their underlying considerations are more unstable in their closed-ended survey responses (Deduction 8).
+>
+> _2. Effects of ideas recently made salient_. The notion that individuals' survey responses can be deflected in the direction of ideas made recently salient has been used to explain question order effects, endorsement effects, race-of-interviewer effects, reference group effects, question framing effects, and TV news priming effects (Deductions 9-16).
+>
+> 3. Effects of thought on attitude reports. The notion that thinking about an issue, as gauged by general levels of political awareness, enables people to recall a large numnber of considerations and hence to make more reliable responses has been used to explain why the public as a whole is more stable on "doorstep" issues (Deducions 6, 7). It also explains why more politically aware persons, and persons especially concerned about an issue, are able to recall more thoughts relevant to ir (Deductions 1, 2). Finally, the notion that greater thought makes attitude reports more reliable has been invoked, with only limited success, to explain the effects of extra thought at the moment of responding to an issue (Deduction 17). (p. 607)
+
+## Anotações de aula
+
+Surveys ao longo do tempo mostram flutuações relativamente bizarras ao longo do tempo. Certo: sabemos que a população brasileira não atende telefone, pessoas não confiam em pesquisas, etc. É verdade, há uma série de problemas. Mas, no fim das contas e antes disso tudo, survey são uma maneira de interação humana. E, com isso, geram nas pessoas uma série de reações que impactam nas respostas.
+
+Converse é considerado um dos fundadores da Escola de Michigan, e um dos principais estudiosos de opinião pública. É um dos maiores cientistas políticos de todos os tempos. Num texto de 1964, ele tenta explicar sua visão de opinião pública -- "a maioria das pessoas não têm estruturas latentes, ou reais e fixas, sobre a maioria dos objetos de atitude" (slide, Converse 1964).
+
+Zaller e Feldman, em 1992, propõem uma teoria de resposta a surveys que é contrária a essa visão de Converse. Eles dizem que as pessoas têm opiniões, mas a formação das respostas é plausivelmente um processo _on the spot_ que depende de _priming_, _framing_ e, mais importante, da capacidade de recuperação de informações (Zaller e Feldman 1992).
+
+Ainda assim, os autores concordam na medida em que entendem que há um componente estocástico na resposta de surveys. Por um lado, Converse acha que as pessoas não têm opiniões formadas. Por outro lado, Zaller e Feldman acreditam que o componente estocástico varia de acordo com algumas questões, incluindo a atenção do respondente, se é uma pessoa mais ou menos informada, etc.
+
+O grande mérito dos surveys foi a possibilidade de perguntar para as pessoas sobre opiniões e atitudes. O desafio maior é entender o que as pessoas pensam, sentem e como elas vão agir. 
+
+### Converse (1964)
+
+Acredita que há _constraints_ lógicos, psicológicos, sociais, heurísticos. As opiniões são amarradas de forma consistente. Mas a maior parte das pessoas não tem esse sistema de crenças estruturados, então elas respondem, mas não respondem em termos ideológicos e **introduzem um componente aleatório** 
+
+Essa questão é fundamental porque, se pensarmos segundo Converse, perguntar para a pessoa se ela "é de esquerda ou de direita" sequer faz sentido, porque as pessoas não pensam em termos ideológicos. Diferentemente de uma visão espacial da formação de preferências (i.e., Downs), **sistemas de crenças** são estáveis.
+
+**Implicações:**
+
+1. Maioria das pessoas não têm preferências ideológicas reais
+2. _Surveys_ superestimam posições políticas
+3. _Surveys_ são mais úteis quando agregam diferentes mensurações possíveis de uma dimensão
+
+> Parte da variância de pesquisas de survey tem a ver com a formação de respostas, não com erros amostrais.
+
+### Zaller e Feldman (1992)
+
+A maioria das pessoas têm opiniões conflitantes sobre uma mesma questão e as acessam com algum nível de aleatoriedade. Ao longo do tempo, as pessoas vão recebendo "considerações" da elite política e da mídia (principalmente), de maneira que há questões que ficam mais acessíveis na memória do respondente. Isso acaba compondo a resposta que a pessoa dá a uma pergunta de survey. Para o Zaller, é assim que as pessoas formam opiniões.
+
+Quando as pessoas são entrevistadas, são levadas a refletir sobre questões abstratas. De acordo com o processo de recepção de informações, as pessoas formam suas opiniões e acessam essas informações de maneira aleatória -- sendo que o que está "mais freco" tem mais chance de ser acessado.
+
+Pessoas que têm maior acessibilidade de informações conseguem considerar mais coisas. 
+
+**Zaller está de acordo com a ideia de que:**
+
+- Pesoas recebem informações de elites proporcionalmente à atenção
+- Aceitação depende de predisposição, atenção e reflexão (e.g., _motivated reasoning_). Isso, para Zaller, é fonte de polarização que vem das elites políticas[^1]
+- Ao responder surveys, pessoas sorteiam informações disponíveis e as ponderam por saliência
+
+**Implicações:**
+
+- _Priming_ e _framing_ influencia a opinião pública porque afeta a recepção e saliência de informações que podem ser perguntadas em _surveys_
+- Mesmo pessoas bem informadas podem ter opiniões instáveis porque a acessibilidade de informações é estocástica
+- Pessoas com maior atenção política tendem a rejeitar informações que não estão de acordo com suas preferências
+
+Uma visualização do modelo é imaginar que pessoas têm tendêndias centrais e variação aleatória em suas respostas.
+
+[^1]: Essa ideia tende a ser endossada pela literatura mais recente sobre polarização política e fake news. Além disso, as estratégias para despolarizar a sociedade passam por tentar reduzir a polarização das próprias elites políticas, que, hoje, são as principais fontes de informação (ou _motivated reasoning_) para a população.
+
+### Escola de Michigan
+
+Para a maioria das pessoas, pertencimento a um grupo partidário é a principal fonte de informação e atitudes, o que estrutura suas identidades e oposições.
+
+Ainda que a intenção de voto, avaliação de governo, etc., sejam partialmente aleatórios, a identificação partidária é um _anchor_ para as respostas. Ou seja, as coisas "partem daqui".
+
+A identidade social partidária é estável e duradoura. Então, "com qual partido você se identifica mais?" faz mais sentido do que "você é de esquerda ou de direita?". É claro, apoiar $x$ ou $y$ não determina comportamentos e opiniões completamente, mas estrutura a forma como as pessoas pensam. A questão de identidade partidária costuma resumir várias outras e ser o melhor preditor de voto. E, melhor ainda, essa é uma questão nada abstrata.
+
+> **Dica:** Surveys funcionam melhor quando você pergunta coisas paupáveis, mas também coisas que vinculam pessoas a grupos. Os grupos aos quais elas pertencem já permite deduzir uma série de coisas sobre elas.
+
+Livros importantes:
+- The American Voter (1960)
+- Partisan Hearts and Minds (2002)
+
+### Heurística
+
+Num survey, quando não tenho informação sobre algo, posso usar algum atalho cognitivo para me ajudar a me posicionar. Por exemplo, se eu não sei nada sobre um candidato, posso votar no candidato do meu partido. Se o jornal que eu leio diz que o candidato é bom, eu posso votar nele.
+
+### Top of mind
+
+O fato de que respostas a surveys dependem do recall e agregação de considerações é algo útil para mensurar a prevalência destas em um dado momento no tempo. Métricas comuns em pesquisas de mercado.
+
+> Você está gripado. De pronto, aí, sem pensar muito, qual é o remédio que você toma? A resposta é o que está no _top of mind_, provavelmente Benegripe.
+
+### Estimação de preferências
+
+Há métodos de estimação de preferências latentes a partir de respostas a diferentes questões de surveys. Exemplo:
+
+- `basicspace`
+- `Aldrich-McKelvey scaling`
