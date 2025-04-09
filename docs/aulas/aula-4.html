@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -42,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -101,7 +135,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -189,6 +223,17 @@ window.Quarto = {
   <li><a href="#anotações-das-leituras" id="toc-anotações-das-leituras" class="nav-link active" data-scroll-target="#anotações-das-leituras"><span class="header-section-number">4.1</span> Anotações das leituras</a>
   <ul class="collapse">
   <li><a href="#groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-3-4." id="toc-groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-3-4." class="nav-link" data-scroll-target="#groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-3-4."><span class="header-section-number">4.1.1</span> Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., &amp; Tourangeau, R. (2011). <em>Survey methodology</em>. John Wiley &amp; Sons. Cap. 3-4.</a></li>
+  </ul></li>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">4.2</span> Anotações de aula</a>
+  <ul class="collapse">
+  <li><a href="#amostragem-aleatória-simples-aas" id="toc-amostragem-aleatória-simples-aas" class="nav-link" data-scroll-target="#amostragem-aleatória-simples-aas"><span class="header-section-number">4.2.1</span> Amostragem aleatória simples (AAS)</a></li>
+  <li><a href="#amostragem-sistemática" id="toc-amostragem-sistemática" class="nav-link" data-scroll-target="#amostragem-sistemática"><span class="header-section-number">4.2.2</span> Amostragem sistemática</a></li>
+  <li><a href="#amostragem-estratificada" id="toc-amostragem-estratificada" class="nav-link" data-scroll-target="#amostragem-estratificada"><span class="header-section-number">4.2.3</span> Amostragem estratificada</a></li>
+  <li><a href="#a-relação-entre-amostragem-estratificada-e-amostragem-sistemática" id="toc-a-relação-entre-amostragem-estratificada-e-amostragem-sistemática" class="nav-link" data-scroll-target="#a-relação-entre-amostragem-estratificada-e-amostragem-sistemática"><span class="header-section-number">4.2.4</span> A relação entre amostragem estratificada e amostragem sistemática</a></li>
+  <li><a href="#amostragem-por-conglomerados" id="toc-amostragem-por-conglomerados" class="nav-link" data-scroll-target="#amostragem-por-conglomerados"><span class="header-section-number">4.2.5</span> Amostragem por conglomerados</a></li>
+  <li><a href="#estratificação-vs.-conglomeração" id="toc-estratificação-vs.-conglomeração" class="nav-link" data-scroll-target="#estratificação-vs.-conglomeração"><span class="header-section-number">4.2.6</span> Estratificação vs.&nbsp;conglomeração</a></li>
+  <li><a href="#comparando-desenhos" id="toc-comparando-desenhos" class="nav-link" data-scroll-target="#comparando-desenhos"><span class="header-section-number">4.2.7</span> Comparando desenhos</a></li>
+  <li><a href="#aas-e-viés" id="toc-aas-e-viés" class="nav-link" data-scroll-target="#aas-e-viés"><span class="header-section-number">4.2.8</span> AAS e viés</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -341,11 +386,272 @@ window.Quarto = {
 \bar{y} = (1 - W_{tel}) p_{non-tel} + W_{tel} [ \theta p_{RDD-tel} + (1 - \theta) p_{area-tel}],
 \]</span></p>
 <p>where <span class="math inline">\(\theta\)</span> is the mixing parameter chosen to maximize precision.” (p.&nbsp;92).</p>
+</section>
+</section>
+<section id="capítulo-4---sample-design-and-sampling-error" class="level4" data-number="4.1.1.2">
+<h4 data-number="4.1.1.2" class="anchored" data-anchor-id="capítulo-4---sample-design-and-sampling-error"><span class="header-section-number">4.1.1.2</span> Capítulo 4 - Sample Design and Sampling Error</h4>
+<blockquote class="blockquote">
+<p>How the sample of a survey is obtained can make a difference. The self-selected nature of the NGS survey, coupled with its placement on the National Geographic Society’s website, probably yielded respondents more interested and active in cultural events (Couper, 2000). (p.&nbsp;97)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The random sampling mechanism and geographic controls are designed to avoid the selection of a sample that has higher incomes, or fewer members of ethnic or racial minorities, or more females, or any of a number of other distortions when compared to the entire U.S. population. (p.&nbsp;98)</p>
+<p>Essentially, in its simplest form, the kind of sample selection used in carefully designed surveys has three basic features:</p>
+<ol type="1">
+<li><p>A list, or combinations of lists, of elements in the population (the sampling frame described in Chapter 3)</p></li>
+<li><p>Chance or random selection of elements from the list(s)</p></li>
+<li><p>Some mechanism that assures that key subgroups of the population are represented in the sample (p.&nbsp;98)</p></li>
+</ol>
+</blockquote>
+<blockquote class="blockquote">
+<p>When chance methods, such as tables of random numbers, are applied to all elements of the sampling frame, the samples are referred to as “probability samples”. Probability samples assign each element in the frame a known and nonzero chance to be chosen. These probabilities do not need to be equal. For example, the survey designers may need to overrepresent a small group of the population, such as persons age 70 years and older, in order to have enough of them in the sample to prepare separate estimates for the group. (p.&nbsp;98)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Section 2.3 makes the distinction between fixed errors or biases and variable errors or variance. Both errors can arise through sampling. The basis of both sampling bias and sampling variance is the fact that not all elements of the sampling frame are measured. If there is a systematic failure to observe some elements because of the sample design, this can lead to “sampling bias” in the survey statistics. For example, if some persons in the sampling frame have a zero chance of selection and they have different characteristics on the survey variable, then all samples selected with that design can produce estimates that are too high or too low. Even when all frame elements have the same chance of selection, the same sample design can yield many different samples. They will produce estimates that vary; this variation is the basis of “sampling variance” of the sample statistics. We will use from time to time the word “precision” to denote the levels of variance. (p.&nbsp;98)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>In some sense, you should think of each survey as one realization of a probability sample design among many that could have occurred. It is conventional to describe attributes of the sample realizations using lower case letters. So each sample realization has a mean and a variance of the distribution of <span class="math inline">\(y\)</span> in the sample realization. The sample mean is called <span class="math inline">\(\bar{y}\)</span>, which summarizes all of the different values of <span class="math inline">\(y\)</span> on the sample elements, and the variance of the distribution of <span class="math inline">\(y_i\)</span>’s in the sample realization os labeled as <span class="math inline">\(s^2\)</span>. We will describe sample designs in which values of <span class="math inline">\(\bar{y}\)</span> from one sample realization will be used to estimate <span class="math inline">\(\bar{Y}\)</span> in the frame population. We will describe sample designs in which values of <span class="math inline">\(s^2\)</span> from one sample realization will be used to estimate <span class="math inline">\(S^2\)</span> in the frame population. (p.&nbsp;100-101)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Do not confuse the different “variances” discussed. Each frame population has its own distribution of <span class="math inline">\(Y\)</span> values, <span class="math inline">\(S^2\)</span>, the population element variance, estimated by <span class="math inline">\(s^2\)</span>, the sample element variance from any given sample realization. These are each different from the variance of the sample mean, labeled as <span class="math inline">\(V(\bar{y})\)</span>, estimated by using sample realization data, using <span class="math inline">\(v(\bar{y})\)</span>. Capital letters denote frame population quantities; lower case letters generally denote sample quantities.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[…] the extent of the error due to sampling is a function of four basic principles of the design:</p>
+<ol type="1">
+<li><p>How large a sample of elements is selected</p></li>
+<li><p>What chances of selection into the sample different frame population elements have</p></li>
+<li><p>Whether individual elements are drawn directly and independently or in groups (called “element” or “cluster” samples)</p></li>
+<li><p>Whether the sample is designed to control the representation of key sub-populations in the sample (called “stratification”) (p.&nbsp;102)</p></li>
+</ol>
+</blockquote>
+<section id="simple-random-sampling-srs" class="level5" data-number="4.1.1.2.1">
+<h5 data-number="4.1.1.2.1" class="anchored" data-anchor-id="simple-random-sampling-srs"><span class="header-section-number">4.1.1.2.1</span> Simple Random Sampling (SRS)</h5>
+<blockquote class="blockquote">
+<p>Simple random samples assign an equal probability of selection to each frame element, equal probability to all pairs of frame elements, equal probability to all triplets of frame elements, and so son. (p.&nbsp;103)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>To select an SRS, random numbers can be applied directly to the elements in the list. SRS uses list frames numbered from 1 to <span class="math inline">\(N\)</span>. Random numbers from 1 to <span class="math inline">\(N\)</span> are selected from a table of random numbers, and the corresponding population elements are chosen from the list. If by chance the same population element is chosen more than once, we do not select it into the sample more than once. Instead, we keep selecting until we have <span class="math inline">\(n\)</span> distinct elements from the population. (This is called sampling “without replacement”.)</p>
+<p>From and SRS, we compute the mean of the variable <span class="math inline">\(y\)</span> as</p>
+<p><span class="math display">\[
+\bar{y} = \dfrac{1}{n} \sum_{i=1}^{n} y_i,
+\]</span></p>
+<p>[…]. The sampling variance of the mean can be estimated directly from one sample realization as</p>
+<p><span class="math display">\[
+v(\bar{y}) = \dfrac{(1 - f)}{n} \sum_{i=1}^{n} (y_i - \bar{y})^2 = \dfrac{(1 - f)}{n} s^2,
+\]</span></p>
+<p>[…]. The term <span class="math inline">\((1-f)\)</span> is referred to as the finite population correction, or fpc. THe finite population correction equals the proportion of frame elements not sample or <span class="math inline">\(1 - f\)</span>, where <span class="math inline">\(f\)</span> is the sampling fraction. As a factor in all samples selected without replacement, it acts to reduce the sampling variance of statistics. If we have a situation in which the sample is a large fraction of the population, where <span class="math inline">\(f\)</span> is closer to 1, then the fpc acts to decrease the sampling variance. Often, the frame population is so large relative to the sample that the fpc is ignored.</p>
+<p>When <span class="math inline">\(f\)</span> is small, the fpc is close to 1, and</p>
+<p><span class="math display">\[
+v(\bar{y}) \approx \dfrac{1}{n} s^2.
+\]</span></p>
+</blockquote>
+</section>
+<section id="cluster-sampling" class="level5" data-number="4.1.1.2.2">
+<h5 data-number="4.1.1.2.2" class="anchored" data-anchor-id="cluster-sampling"><span class="header-section-number">4.1.1.2.2</span> Cluster Sampling</h5>
+<blockquote class="blockquote">
+<p>One way to construct frames at reasonable cost is to sample clusters of elements and then collect a list of elements only for the selected clusters. And when a sample cluster is selected and visited, it makes sense to interview or collect data from more than one element in each cluster also to save costs.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>How do we compute statistics for clustered samples? Let us use NAEP as an illustration. For example, suppose that for the NAEP, we could obtain a list of all <span class="math inline">\(A = 40,000\)</span> 4th grade classrooms in the United States, and that each of those classrooms has exactly <span class="math inline">\(B = 25\)</span> students. We do not have a list of the <span class="math inline">\(A \times B = N = 40,000 \times 25 = 1,000,000\)</span> students, but we know that when we get to a classroom, we can easily obtain a list of the 25 students there.</p>
+<p>The sampling procedure is simple: chose a sample of <span class="math inline">\(a\)</span> classrooms using SRS, visit each classroom, and collect data from all students in each sample classroom. If we select <span class="math inline">\(a = 8\)</span> classrooms, out sample size is <span class="math inline">\(n = 8 \times 25 = 200\)</span> students. It should be clear that this is not the same kind of sampling as an SRS of elements. There are many SRS samples of size 200 students that cannot possibly be chosen in this kind of a design. For instance, some SRS sample realizations consist of exactly one student in each of 200 classrooms. None of these are possible cluster samples of 200 students from 8 classrooms.</p>
+</blockquote>
+<p>Nesse caso, do ponto de vista de notação, a coisa fica um pouco mais complexa porque precisamos levar em conta a natureza agrupada dos dados. Imagine que obtemos para cada um dos 200 estudantes da amostra um score de teste <span class="math inline">\(y_{\alpha \beta}\)</span> para o estudante <span class="math inline">\(\beta\)</span> na sala de aula <span class="math inline">\(\alpha\)</span>, e queremos computar a média do score de teste para a população de estudantes:</p>
+<p><span class="math display">\[
+\bar{y} = \dfrac{1}{N} \sum_{\alpha=1}^{A} \sum_{\beta=1}^{B} y_{\alpha \beta}
+\]</span></p>
+<blockquote class="blockquote">
+<p>The sampling variance of this mean is different from the SRS sampling variance. The randomization in the selection is applied only to the classrooms. They are the sampling units, and depending on which classrooms are chosen, the value of <span class="math inline">\(\bar{y}\)</span> will vary. In one sense, everything remains the same as SRS, but we treat the clusters as elements in the sample. (p.&nbsp;108)</p>
+<p>In this case,</p>
+<p><span class="math display">\[
+v(\bar{y}) = \dfrac{(1 - f)}{A} s^2_a
+\]</span></p>
+<p>where <span class="math inline">\(s^2_a\)</span> is variability of the mean test scores across the <span class="math inline">\(A\)</span> classrooms. That is,</p>
+<p><span class="math display">\[
+s^2_a = \dfrac{1}{A - 1} \sum_{\alpha=1}^{A} (\bar{y}_{\alpha} - \bar{y})^2,
+\]</span></p>
+<p>where <span class="math inline">\(\bar{y}_{\alpha}\)</span> is the mean test score in classroom <span class="math inline">\(\alpha\)</span> (p.&nbsp;108).</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The statistic <span class="math inline">\(d^2\)</span> is referred to as the design effect. It is a widely used tool in survey sampling in the determination of sample size, and in summarizing the effect of having sampled clusters instead of elements. <strong>It is defined to be the ration of the sampling variance for a statistic computed under the sample design devided by the sampling variance that would have been obtained from an SRS of exactly the same size.</strong> Every statistic in a survey has its own design effect. Different statistics in the same survey will have different magnitudes of the design effect. (p.&nbsp;109)</p>
+</blockquote>
+</section>
+<section id="the-design-effect-and-within-cluster-homogeneity" class="level5" data-number="4.1.1.2.3">
+<h5 data-number="4.1.1.2.3" class="anchored" data-anchor-id="the-design-effect-and-within-cluster-homogeneity"><span class="header-section-number">4.1.1.2.3</span> The Design Effect and Within-Cluster Homogeneity</h5>
+<p>É importante nos atentarmos para a homogeneidade ou heterogeneidade das observações dentro de cada cluster. Note: se todos os alunos em uma turma tiram a mesma nota no teste, bastaria saber a nota de um único aluno para saber a nota de todos os alunos. Nesses casos, pouca informação nova é adquirida ao entrevistar mais alunos. A medida “roh” (<em>rate of homogeneity</em>) mede a homogeneidade dos clusters.</p>
+<p>Em particular, vale notar que <span class="math inline">\(d^2\)</span> cresce à medida que roh cresce. De fato, podemos escrever <span class="math inline">\(d^2\)</span> como <span class="math inline">\(1 + (B - 1) \rho\)</span>, onde <span class="math inline">\(B\)</span> é o número de elementos dentro de cada cluster. Assim, se <span class="math inline">\(\rho = 0\)</span>, temos <span class="math inline">\(d^2 = 1\)</span> e, se <span class="math inline">\(\rho = 1\)</span>, temos <span class="math inline">\(d^2 = B\)</span>.</p>
+<p>Podemos estimar roh como <span class="math inline">\(\dfrac{(d^2 - 1)}{(b - 1)}\)</span>.</p>
+<section id="stratification-and-stratified-sampling" class="level6" data-number="4.1.1.2.3.1">
+<h6 data-number="4.1.1.2.3.1" class="anchored" data-anchor-id="stratification-and-stratified-sampling"><span class="header-section-number">4.1.1.2.3.1</span> Stratification and Stratified Sampling</h6>
+<blockquote class="blockquote">
+<p>On a frame of population elements, assume that there is information for every element on the list that can be used to divide elements into separate groups, or “strata”. Strata are mutually exclusive groups of elements on a sampling frame. Each frame element can be placed in a singular “stratum”. In stratified sampling, independent selections are made from each stratum, one by one. Separate samples are drawn from each such group, using the same selection procedure (such as SRS in each stratum, when the frame lists elements) or using different selection procedures (such as SRS of elements in some strata, and cluster sampling in others). (p.&nbsp;113)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>To obtain estimates for the whole population, results must be combined across strata. One method weights stratum results by the population proportions <span class="math inline">\(W_h\)</span>. Suppose we are interested in estimating the mean for the population, and we have computed means <span class="math inline">\(\bar{y}_h\)</span> for each stratum. The stratified estimate for the population mean is called <span class="math inline">\(\bar{y}_{st}\)</span> with the subscript <em>st</em> denoting “stratified”. It is computed by:</p>
+</blockquote>
+<p><span class="math display">\[
+\bar{y}_{st} = \sum_{h=1}^{H} W_h \bar{y}_h = \text{weighted sum of strata means}
+\]</span></p>
+</section>
+<section id="summary" class="level6" data-number="4.1.1.2.3.2">
+<h6 data-number="4.1.1.2.3.2" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1.1.2.3.2</span> Summary</h6>
+<blockquote class="blockquote">
+<p>Most of the practices of sample design are deduced from theorems in probability sampling theory. Simple random sampling is a simple base design that is used for the comparison of all complex sample designs. There are four features of sample design on which samples vary:</p>
+<ol type="1">
+<li><p>The number of selected units on which sample statistics are computed (other things being equal, the larger the number of units, the lower the sampling variance of statistics)</p></li>
+<li><p>The use of stratification, which sorts the frame population into different groups that are then sampled separately (other things being equal, the use of stratification decreases the sampling variance of estimates)</p></li>
+<li><p>The use of clustering, which samples groups of elements into the sample simultaneously (other things being equal clustering increases the sampling variance as a function of homogeneity within the clusters on the survey statistics)</p></li>
+<li><p>The assignment of variable selection probabilities to different elements on the frame (if the higher selection probabilities are assigned to groups that exhibit larger variation on the survey variables, this reduces sampling variance; if not, sampling variances can be increased with variable selection probabilities)</p></li>
+</ol>
+</blockquote>
+<hr>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section id="anotações-de-aula" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">4.2</span> Anotações de aula</h2>
+<p>Em 1936, George Gallup entrevistou 50.000 eleitores de diferentes estados americanos. Mesmo assim, é a pessoa que chega mais perto de acertar os resultados das eleições, contrastando com a revista Literary Digest, que aplicava formulários “opt-in” e entrevistou 2 milhões de eleitores.</p>
+<p>Há uma explicação ainda muito repetida de que a amostra da Literary Digest tinha uma amostra focada na classe média e, por outro lado, a amostra de Gallup chegava a pessoas mais pobres. No entanto Lusinchi (2012) mostra que, na verdade, não havia diferenças muito claras entre as amostras quando ajustadas — isto é, pobres e ricos votavam mais ou menos da mesma maneira. Daí, <strong>a culpa que era delegada ao erro de cobertura passa a ser delegada ao erro de não-resposta</strong>: as pessoas que não respondiam à Literary Digest votavam mais no Roosevelt, o que acaba subestimando o apoio a ele na amostra.</p>
+<p>A soma dos erros de survey leva a erros na estimação de uma particular estatística. Por exemplo: se eu quero estimar a renda da população, eu preciso tomar cuidado para evitar uma longa sequência de erros.</p>
+<blockquote class="blockquote">
+<p>Nota: fazer uso de dados de pesquisa de survey comparando o resultado entre institutos não é uma boa ideia. Na prática, a maneira como a pergunta é feita tem um efeito grande. Por exemplo, nas pesquisas da AtlasIntel, as respostas tendem a ser mais extremas do que nas pesquisas da Quaest, por exemplo, onde a taxa de avaliações “Regulares” tende a ser mais alta.</p>
+</blockquote>
+<section id="amostragem-aleatória-simples-aas" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="amostragem-aleatória-simples-aas"><span class="header-section-number">4.2.1</span> Amostragem aleatória simples (AAS)</h3>
+<ul>
+<li>Cada elemento <span class="math inline">\(i\)</span> tem a mesma probabilidade de ser incluído na amostra</li>
+<li>A probabilidade de inclusão é <span class="math inline">\(\pi_i = \dfrac{n}{N}\)</span>, onde <span class="math inline">\(n\)</span> é o número de elementos da amostra e <span class="math inline">\(N\)</span> é o número de elementos da população</li>
+<li>Seleção tipicamente feita <em>sem reposição</em>, i.e., cada <span class="math inline">\(i\)</span> só pode ser selecionado uma vez</li>
+<li>Número total de amostras possíveis é dado por<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <span class="math inline">\(\left(\begin{array}{c} N \\ n \end{array}\right) = \dfrac{N!}{n!(N-n)!}\)</span></li>
+<li>Cada amostra específica tem probabilidade <span class="math inline">\(\mathbb{P}(S) = \dfrac{1}{\left(\begin{array}{c} N \\ n \end{array}\right)}\)</span> de ser selecionada</li>
+</ul>
+<section id="um-tutorial" class="level4" data-number="4.2.1.1">
+<h4 data-number="4.2.1.1" class="anchored" data-anchor-id="um-tutorial"><span class="header-section-number">4.2.1.1</span> Um tutorial</h4>
+<p>Para uma amostra aleatória simples, o quadro amostral precisa ser uma lista de elementos (ou uma <em>proxy</em> para uma lista de elementos, como uma lista telefônica ou de endereços).</p>
+<ul>
+<li>Primeiro, portanto, definimos a população-alvo e o quadro amostral (e.g., lista de estudantes de ensino médio do RJ).</li>
+<li>Depois, definimos o tamanho amostral (e.g., 100 estudantes).</li>
+<li>E aí sorteamos sem reposição (de fato, não faz sentido sorteio com reposição, porque não faz sentido perguntar para a mesma pessoa mais de uma vez). No <code>R</code>, por exemplo, usamos <code>sample()</code> para escolher <span class="math inline">\(n\)</span> pessoas da lista usando IDs para contabilizar a seleção.</li>
+</ul>
+<p>Há prós e contras. Em particular, presencialmente ou pesquisa domiciliar é impossível de fazer dessa maneira. Suponha uma população de 3 pessoas: <span class="math inline">\(\{ Y_1, Y_2, Y_3 \}\)</span>. Queremos uma amostra com <span class="math inline">\(n=2\)</span>. Temos as seguintes combinações possíveis: <span class="math inline">\((Y_1, Y_2)\)</span>, <span class="math inline">\((Y_1, Y_3)\)</span> e <span class="math inline">\((Y_2, Y_3)\)</span>. Se tivéssemos arranjos, teríamos <span class="math inline">\((Y_1, Y_2)\)</span>, <span class="math inline">\((Y_1, Y_3)\)</span>, <span class="math inline">\((Y_2, Y_1)\)</span>, <span class="math inline">\((Y_2, Y_3)\)</span>, <span class="math inline">\((Y_3, Y_1)\)</span> e <span class="math inline">\((Y_3, Y_2)\)</span>. <strong>No caso da amostragem, não importa se a amostra é <span class="math inline">\((Y_1, Y_2)\)</span> ou <span class="math inline">\((Y_2, Y_1)\)</span></strong>, por exemplo. Assim, o denominador remove as duplicatas. No fundo, o denominador mostra quantas vezes cada arranjo é contado. Assim, se o denominador é <span class="math inline">\(2\)</span>, significa que cada arranjo é contado duas vezes. Também chamamos isso de coeficiente binomial.</p>
+<p>Para uma AAS, no mais das vezes temos um quadro amostral como uma listagem de pessoas ou uma listagem de números de telefone. Se tivermos uma amostra com <span class="math inline">\(n=50\)</span> e registrar a idade <span class="math inline">\(y_i\)</span> de cada:</p>
+<ul>
+<li>Cada amostra obtida é uma realização de uma variável aleatória: o plano amostral.</li>
+<li>Distribuições de estatísticas amostrais revelam propriedades de um desenho amostral</li>
+</ul>
+<p>Variância de uma estimativa: <span class="math inline">\(\text{Var}(\bar{y}) = \mathbb{E}[\bar{y}^2] - \mathbb{E}[\bar{y}]^2\)</span>. Já o viés de uma estimativa é dado por <span class="math inline">\(\text{Bias}(\bar{y}) = \mathbb{E}[\bar{y}] - \bar{y}\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># cria um banco de pessoas com idades entre 18 e 80 anos</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pessoas <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">250</span>, <span class="at">idade =</span> <span class="fu">sample</span>(<span class="dv">18</span><span class="sc">:</span><span class="dv">80</span>, <span class="at">size =</span> <span class="dv">250</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 5 amostras de 50 pessoas</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> <span class="fu">sample</span>(pessoas<span class="sc">$</span>idade, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">mean</span>(x))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 51.6
+[1] 39.6
+[1] 54.8
+[1] 49.8
+[1] 48.8</code></pre>
+</div>
+</div>
+<p>De outra maneira, podemos usar a função <code>slice_sample()</code> do <code>dplyr</code> para fazer amostras aleatórias simples. Por exemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Anexando pacote: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Os seguintes objetos são mascarados por 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Os seguintes objetos são mascarados por 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 5 amostras de 50 pessoas</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> pessoas <span class="sc">%&gt;%</span> <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">mean</span>(x<span class="sc">$</span>idade))</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 42.4
+[1] 41.6
+[1] 51.8
+[1] 57
+[1] 49</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="amostragem-sistemática" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="amostragem-sistemática"><span class="header-section-number">4.2.2</span> Amostragem sistemática</h3>
+<p>O jeito de selecionar uma amostra não é por sorteio aleatório, mas por “pulos” na lista. A ideia básica é que usamos um quadro amostral ordenado por <span class="math inline">\(i\)</span> e um intervalo fixo, <span class="math inline">\(k\)</span>. Suponha que <span class="math inline">\(N = 10\)</span> e queremos uma amostra <span class="math inline">\(n=3\)</span>.</p>
+<p>Calculamos <span class="math inline">\(k = \dfrac{N}{n} = \dfrac{10}{3} \approx 3\)</span>. Esse é o tamanho do pulo. Assim, escolhemos um ponto inicial aleatório e vamos definindo os elementos. Uma grande vantagem da amostragem sistemática é que ela evita que recrutemos pessoas próximas da cauda da distribuição. Esse tipo de amostragem é extremamente comum – por exemplo, a cada <span class="math inline">\(100\)</span> clientes você entrevista uma.</p>
+</section>
+<section id="amostragem-estratificada" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="amostragem-estratificada"><span class="header-section-number">4.2.3</span> Amostragem estratificada</h3>
+<p>Uma <strong>amostra estratificada</strong> é uma amostra aleatória simples de cada <strong>estrato estratificado</strong> (criado em função de alguma característica da população que seja conhecida — isto é, uma característica que está sendo levada em conta no meu quadro amostral). Não pode haver sobreposição entre os estratos – isto é, uma pessoa deve pertencer a um, e somente a um estrato.</p>
+<ul>
+<li><strong>Ideia</strong>: dividimos a população em <span class="math inline">\(h\)</span> estratos (e.g., região, tipo de moradia, etc.) e selecionamos uma <em>amostra aleatória simples de cada estrato</em></li>
+<li>Há vários tipos de alocação possíveis, mas a mais comum é a <strong>proporcional</strong>: <span class="math inline">\(n_h = \dfrac{N_h}{N} \times n\)</span>, onde <span class="math inline">\(N_h\)</span> é o número de elementos do estrato <span class="math inline">\(h\)</span> e <span class="math inline">\(N\)</span> é o número total de elementos da população. Assim, a amostra total é dada por <span class="math inline">\(n = \sum_{h=1}^{H} n_h\)</span>.</li>
+</ul>
+<p>Isso é uma ideia profundamente importante e interfere diretamente na maneira como calculamos as estatísticas amostrais.</p>
+<p>Só há vantagens: sabemos como alocar pessoas de antemão, facilita logística, etc. Mas, para além das questões logísticas, diminuímos muito o espaço amostral das respostas possíveis. <strong>Dessa maneira, a distribuição marginal das entrevistas espelha a distribuição marginal do quadro amostral</strong>. De fato, são amostras aleatórias dentro dos estratos, mas os estratos sempre podem ser comparados entre si. Pesquisas telefônicas, por exemplo, fazem amostras estratificadas por DDD.</p>
+<p>Quanto mais homogêneos são os estratos internamente, melhor. Se há pouca variabilidade, não importa quem a gente escolhe. A informação da homogeneidade é fundamental: escolher grupos que sejam semelhantes naquela dimensão que eu quero estudar. Assim, conseguimos diminuir a variância do meu desenho amostral, isto é, obtemos uma distribuição normal com caudas cada vez menos pesadas (isto é, mais centradas em torno da média).</p>
+</section>
+<section id="a-relação-entre-amostragem-estratificada-e-amostragem-sistemática" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="a-relação-entre-amostragem-estratificada-e-amostragem-sistemática"><span class="header-section-number">4.2.4</span> A relação entre amostragem estratificada e amostragem sistemática</h3>
+<p>Na amostragem sistemática, se a lista for ordenada de acordo com características relevantes da população, ela também pode ser chamada de “estratificação implícita”. No fim das contas, diminuímos o espaço amostral e reduzimos a variância da amostra.</p>
+</section>
+<section id="amostragem-por-conglomerados" class="level3" data-number="4.2.5">
+<h3 data-number="4.2.5" class="anchored" data-anchor-id="amostragem-por-conglomerados"><span class="header-section-number">4.2.5</span> Amostragem por conglomerados</h3>
+<ul>
+<li><strong>Ideia</strong>: a população é dividida em grupos (conglomerados ou clusters) e selecionamos aleatoriamente alguns inteiramente, com todos os seus elementos, para integrar a amostra.</li>
+<li>Indexação dupla:
+<ul>
+<li><span class="math inline">\(y_{ij}\)</span> é o valor da unidade <span class="math inline">\(j\)</span> no conglomerado <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(N\)</span> é o total de conglomerados</li>
+<li><span class="math inline">\(M_i\)</span> é o tamanho do conglomerado <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(n\)</span> é o número de conglomerados selecionados</li>
+</ul></li>
+</ul>
+<p>O uso de conglomerados é muito comum na prática. Em praticamente todas as entrevistas amostrais do IBGE usa-se amostragem por conglomerados, sorteando setores censitários, assim como o IPEC e a Quaest.</p>
+<p>Via de regra, o conglomerado precisa ser viável e tornar factível o desenho amostral. De saída, não deve ser a primeira opção. Mas, se a pesquisa parecer inviável, é uma boa opção.</p>
+<p>Do ponto de vista de estatística amostral, a conglomeração é o contrário da estratificação. No conglomerado, fazemos, por exemplo, <span class="math inline">\(5\)</span> entrevistas em cada quarteirão. Mas fazer <span class="math inline">\(5\)</span> entrevistas em um determinado prédio, por exemplo, pode dar respostas que, na média, são iguais. Conglomeração nos faz, no fim das contas, perder informação, porque eu acabo fazendo <span class="math inline">\(5\)</span> entrevistas que equivalem a <span class="math inline">\(1\)</span>, talvez um pouco mais. Nesse caso, a margem de erro é maior, porque eu tenho mais incerteza sobre a minha coleta – fatalmente eu vou terminar com uma amostra mais extrema, porque eu vou capturar muito da mesma coisa. Quanto mais clusters eu visito, mais informação eu consigo obter<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+</section>
+<section id="estratificação-vs.-conglomeração" class="level3" data-number="4.2.6">
+<h3 data-number="4.2.6" class="anchored" data-anchor-id="estratificação-vs.-conglomeração"><span class="header-section-number">4.2.6</span> Estratificação vs.&nbsp;conglomeração</h3>
+<ul>
+<li>Na estratificação, há redução de variância se os <strong>estratos</strong> forem homogêneos</li>
+<li>Na conglomeração, a variância aumenta se os <strong>conglomerados</strong> forem homogêneos</li>
+</ul>
+</section>
+<section id="comparando-desenhos" class="level3" data-number="4.2.7">
+<h3 data-number="4.2.7" class="anchored" data-anchor-id="comparando-desenhos"><span class="header-section-number">4.2.7</span> Comparando desenhos</h3>
+<p>Uma forma de entender os diferentes impactos na variância de desenhos amostrais alternativos é o design effect, que é uma comparação implícita entre a variância de um desenho amostral e a variância de uma AAS:</p>
+<p><span class="math display">\[
+\text{Deff} = \dfrac{\text{Var}(\bar{y})}{\text{Var}(\bar{y}_\text{AAS})}
+\]</span></p>
+</section>
+<section id="aas-e-viés" class="level3" data-number="4.2.8">
+<h3 data-number="4.2.8" class="anchored" data-anchor-id="aas-e-viés"><span class="header-section-number">4.2.8</span> AAS e viés</h3>
+<p>Embora AAS seja geralmente confiável contra viés, há algumas situações em que o viés pode ocorrer. A mais comum delas é o problema no <strong>quadro amostral</strong>: se ele é bom, não há viés; se é ruim, há viés.</p>
 
 
 </section>
 </section>
-</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>O efeito do denominador, aqui, é remover duplicatas de arranjos de <span class="math inline">\(n\)</span> elementos. Por exemplo, se <span class="math inline">\(N = 3\)</span> e <span class="math inline">\(n = 2\)</span>, temos as seguintes combinações possíveis: <span class="math inline">\((1,2)\)</span>, <span class="math inline">\((1,3)\)</span> e <span class="math inline">\((2,3)\)</span>. Se tivéssemos arranjos, teríamos <span class="math inline">\((1,2)\)</span>, <span class="math inline">\((1,3)\)</span>, <span class="math inline">\((2,1)\)</span>, <span class="math inline">\((2,3)\)</span>, <span class="math inline">\((3,1)\)</span>, <span class="math inline">\((3,2)\)</span>. <strong>No caso da amostragem, não importa se a amostra é <span class="math inline">\((1,2)\)</span> ou <span class="math inline">\((2,1)\)</span></strong>, por exemplo. Assim, o denominador remove as duplicatas. No fundo, o denominador mostra quantas vezes cada arranjo é contado. Assim, se o denominador é <span class="math inline">\(2\)</span>, significa que cada arranjo é contado duas vezes. Também chamamos isso de coeficiente binomial.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Se eu faço uma única entrevista por conglomerado, há aqui um ponto de contato com a amostragem simples.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
