@@ -6,7 +6,7 @@ author: Felipe Lamarca
 endnote: no
 ---
 
-# Amostragem
+# Amostragem I
 
 ## Anotações das leituras
 

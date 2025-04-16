@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.23">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Felipe Lamarca">
+
+<title>5&nbsp; Amostragem II – Pesquisa de Survey</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../aulas/aula-4.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7271f29f9498218151f3120baddb7363.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-7781c6eb1472fb9db0a0b30f037448b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-2bdef70b709a83d3dca112ae8d0a50e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-7781c6eb1472fb9db0a0b30f037448b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    window.setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      window.setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    window.hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(darkModeDefault) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const darkModeDefault = false;
+    document.querySelector('link.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !window.hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+    };
+    // Switch to dark mode if need be
+    if (window.hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Amostragem II</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Pesquisa de Survey</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Aulas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Erros em survey</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Amostragem I</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-5.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Amostragem II</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#anotações-das-leituras" id="toc-anotações-das-leituras" class="nav-link active" data-scroll-target="#anotações-das-leituras"><span class="header-section-number">5.1</span> Anotações das leituras</a>
+  <ul class="collapse">
+  <li><a href="#wolf-c.-joye-d.-smith-t.-w.-fu-y.-2016.-the-sage-handbook-of-survey-methodology.-sage.-cap.-22-non-probability-sampling." id="toc-wolf-c.-joye-d.-smith-t.-w.-fu-y.-2016.-the-sage-handbook-of-survey-methodology.-sage.-cap.-22-non-probability-sampling." class="nav-link" data-scroll-target="#wolf-c.-joye-d.-smith-t.-w.-fu-y.-2016.-the-sage-handbook-of-survey-methodology.-sage.-cap.-22-non-probability-sampling."><span class="header-section-number">5.1.1</span> Wolf, C., Joye, D., Smith, T. W., &amp; Fu, Y. (2016). <em>The SAGE handbook of survey methodology</em>. Sage. Cap. 22, <em>Non-probability Sampling</em>.</a></li>
+  <li><a href="#baker-r.-brick-j.-m.-bates-n.-a.-battaglia-m.-couper-m.-p.-dever-j.-a.-gile-k.-j.-tourangeau-r.-2013.-summary-report-of-the-aapor-task-force-on-non-probability-sampling.-journal-of-survey-statistics-and-methodology-12-90143." id="toc-baker-r.-brick-j.-m.-bates-n.-a.-battaglia-m.-couper-m.-p.-dever-j.-a.-gile-k.-j.-tourangeau-r.-2013.-summary-report-of-the-aapor-task-force-on-non-probability-sampling.-journal-of-survey-statistics-and-methodology-12-90143." class="nav-link" data-scroll-target="#baker-r.-brick-j.-m.-bates-n.-a.-battaglia-m.-couper-m.-p.-dever-j.-a.-gile-k.-j.-tourangeau-r.-2013.-summary-report-of-the-aapor-task-force-on-non-probability-sampling.-journal-of-survey-statistics-and-methodology-12-90143."><span class="header-section-number">5.1.2</span> Baker, R., Brick, J. M., Bates, N. A., Battaglia, M., Couper, M. P., Dever, J. A., Gile, K. J., &amp; Tourangeau, R. (2013). Summary report of the AAPOR task force on non-probability sampling. <em>Journal of survey statistics and methodology</em>, 1(2), 90–143.</a></li>
+  <li><a href="#jerit-j.-barabas-j.-2023.-are-nonprobability-surveys-fit-for-purpose-public-opinion-quarterly-87-3-816840." id="toc-jerit-j.-barabas-j.-2023.-are-nonprobability-surveys-fit-for-purpose-public-opinion-quarterly-87-3-816840." class="nav-link" data-scroll-target="#jerit-j.-barabas-j.-2023.-are-nonprobability-surveys-fit-for-purpose-public-opinion-quarterly-87-3-816840."><span class="header-section-number">5.1.3</span> Jerit, J., &amp; Barabas, J. (2023). Are Nonprobability Surveys Fit for Purpose? <em>Public Opinion Quarterly</em>, 87 (3), 816–840.</a></li>
+  </ul></li>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">5.2</span> Anotações de aula</a>
+  <ul class="collapse">
+  <li><a href="#alocação" id="toc-alocação" class="nav-link" data-scroll-target="#alocação"><span class="header-section-number">5.2.1</span> <strong>Alocação</strong></a></li>
+  <li><a href="#múltiplos-estágios" id="toc-múltiplos-estágios" class="nav-link" data-scroll-target="#múltiplos-estágios"><span class="header-section-number">5.2.2</span> <strong>Múltiplos estágios</strong></a></li>
+  <li><a href="#ppt" id="toc-ppt" class="nav-link" data-scroll-target="#ppt"><span class="header-section-number">5.2.3</span> <strong>PPT</strong></a></li>
+  <li><a href="#pesquisa-não-probabilística" id="toc-pesquisa-não-probabilística" class="nav-link" data-scroll-target="#pesquisa-não-probabilística"><span class="header-section-number">5.2.4</span> <strong>Pesquisa não-probabilística</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Amostragem II</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Amostragem II</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Felipe Lamarca </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="anotações-das-leituras" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="anotações-das-leituras"><span class="header-section-number">5.1</span> Anotações das leituras</h2>
+<section id="wolf-c.-joye-d.-smith-t.-w.-fu-y.-2016.-the-sage-handbook-of-survey-methodology.-sage.-cap.-22-non-probability-sampling." class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="wolf-c.-joye-d.-smith-t.-w.-fu-y.-2016.-the-sage-handbook-of-survey-methodology.-sage.-cap.-22-non-probability-sampling."><span class="header-section-number">5.1.1</span> Wolf, C., Joye, D., Smith, T. W., &amp; Fu, Y. (2016). <em>The SAGE handbook of survey methodology</em>. Sage. Cap. 22, <em>Non-probability Sampling</em>.</h3>
+<blockquote class="blockquote">
+<p>[…] the sampling theory as basically developed for <em>probability sampling</em>, where all units in the population have known and positive probabilities of inclusion. The definition implicitly involves <em>randomization</em>, which is a process resembling lottery drawing, where all units are selected according to their inclusion probabilities. (p.&nbsp;329)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[In non-probability samples] This usually means that units are included with unknown probabilities, or, that some of these probabilities are known to be zero. (p.&nbsp;329)</p>
+</blockquote>
+<p>Também podemos enfrentar problemas de ordem “não probabilística” quando utilizamos amostras probabilísticas. Por exemplo, quando a amostra não é representativa da população alvo, mesmo que tenhamos utilizado um método probabilístico. Isso pode ocorrer devido a problemas de cobertura, não resposta ou viés de seleção.</p>
+<blockquote class="blockquote">
+<p>We should underline that wrong results based on non-probability samples – including the above three examples – are typically linked to situations where the standard statistical inference assuming probability sampling was used with non-probability samples. (p.&nbsp;331)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Various inferential approaches exist. We referred here only to the most popular <em>frequentist</em> one, which (a) takes into account the sampling design, (b) assumes that unknown population values are fixed and (c) builds on a sampling distribution of the estimates across all possible samples. (p.&nbsp;332)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The approximate usages of probability sampling in a non-probability setting is sometimes understood in a sense that we first introduce certain modelling assumptions e.g.&nbsp;we assume that there is actually some randomization in the non-probability sample. (p.&nbsp;332)</p>
+</blockquote>
+<p>Medidas indiretas para aproximar designs probabilísticos:</p>
+<ul>
+<li>“Spread the non-probability sample as broadly as possible”: tentar recrutar respondentes a partir de vários canais, para aumentar a diversidade da amostra. Bom exemplo: WageIndicator survey.</li>
+<li>Amostragem por cotas, controlando para características socio-demográficas</li>
+</ul>
+<p>Também podemos fazer aproximações adotando diretamente algumas medidas de amostragem probabilística – por exemplo, incluir algum grau de aleatoriedade na seleção de respondentes (randomização de horários de coleta de resposta; randomização de qual pessoa será entrevistada, etc).</p>
+<blockquote class="blockquote">
+<p>Of course, none of the above-described approaches, direct or indirect, assures with some known accuracy that the corresponding statistical inference will be equivalent to the situation with probability samples. However, it is also true that these approximations usually contribute to certain improvements, while they rarely cause any serious damage. (p.&nbsp;333)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>As already mentioned, with non-probability samples, by definition, the inclusion probabilities are unknown or zero, so without further assumptions this very fact formally prevents any statistical inference calculations (e.g.&nbsp;estimates, variances, confidence intervals, hypothesis testing, etc.). (p.&nbsp;334)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[…] if we apply for a certain non-probability sample a standard procedure to calculate confidence intervals, we implicitly assume that probability sample selection (e.g.&nbsp;SRS) was used. However, at this time we are no longer confident that the interval actually contains the population value with the pre-assumed, say, 5% risk. It is very likely, that the actual risk is way above 5%, but we have no possibility to calculate it from the sample. […]. Applying standard statistical inference approaches as an approximation in non-probability samples can thus ‘seduce’ the users into believing that they have ‘real’ confidence intervals. (p.&nbsp;334)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Being formal and strict, we should acknowledge that randomization – as well as the related probability sampling – is not a necessary precondition for valid statistical inference (Valliant et al., 2000:19). If we have clear and valid assumptions, a specific modelling approach can also provide corresponding statistical inference. In such a situation, we first assume that the data – or at least specific relations among the variables – are generated according to some statistical model. Next, additional external data are then particularly valuable (e.g.&nbsp;sociodemographic backrground variables in the case of online panels), so that certain model-based approaches to statistical inference can be used to build the model and then estimate the values of interest. (p.&nbsp;335)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[<strong>Sobre a definição de <em>panels</em> in the context of non-probability online panels</strong>] […] panels are large databases of units, which initially agreed to cooperate, provided background information and were recruited to serve for occasional or regular selection into specific sample surveys addressing related or unrelated topics. (p.&nbsp;336)</p>
+</blockquote>
+<p>[<strong>on weighting</strong>] In probability samples so-called <em>base weights</em> are used first to compensate for the inclusion probabilities. In a second step, specific <em>non-response weights</em> are applied to reduce the <em>bias</em> – a difference between the estimate and the true value – resulting from non-response. In a similar way, specific weights can be developed for other methodological problems (e.g.&nbsp;non-coverage). In addition, with so-colled <em>population weighting</em> we usually correct for any discrepancies in auxiliary variables. Typically, these are socio-demographic variables (e.g.&nbsp;age, gender, region), but when avaliable, other variables are also considered (e.g.&nbsp;media consumption).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<blockquote class="blockquote">
+<p>We should be aware that weights may (or may not) remove the biases in target variables, but they for sure increase the sampling variance. However, the underlying expectation is of course, that the gains in reducing the bias outweigh the corresponding loss due to increased variance. This is not necessarily true, particularly in the case of weak correlations between auxiliary and target variables, where weights may have no impect on bias removal. (p.&nbsp;339)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>With non-probability samples we often have only one step, because we cannot separate sampling and non-responde mechanisms. The weighting process thus simply assigns weights to units in the sample, so that the underrepresented ones get a weight larger than <span class="math inline">\(1\)</span>, while the opposite happens to overrepresented ones, which is similar as in population weighing. (p.&nbsp;339)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>When we implement approximations from probability samples into a non-probability setting, there is by the very definition little theoretical basis for running a sound statistical inference. Therefore, the justification and validation of these procedures rely solely on the accumulation of anecdotal evidence, which is sometimes ironically called ‘faith-based’ sampling. (p.&nbsp;340)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>We continuously indicated in this chapter – explicitly or implicitly – that in a non-probability setting the statistical inference based on probability sampling principes formally cannot be applied. Still, the practitioners routinely use the corresponding ‘estimates’, <strong>which should be rather labelled as ‘indications’ or even ‘approximations’</strong>. (p.&nbsp;341)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>By abandoning probability sampling principes we usually also abandon the science of statistical inference and enter instead into the art and craft of shaping optimal practical procedures. The experience based on trials and errors in thus essential here, as well as the intuition of the researcher. (p.&nbsp;342)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>We thus recommend to more openly accepting the reality of using a standard statistical inference approach as an approximation in non-probability settings. However, this comes with two warnings: first, the sample selection procedure should be clearly described, documented, presented and critically evaluated. We thus join the AAPOR recommendations that the methods used to draw a sample, to collect the data, to adjust it and to make inferences should be even more detailed compared to probability samples (Baker et al, 2013). […]. Second, we should also elaborate on the underlying assumptions (e.g.&nbsp;models used) and provide explanations about conceptual divergences, dangers, risks and limitations of the interpretation (AAPOR, 2015). When standard statistical inference is applied to any non-probability sample, the minimum should be thus to <em>clearly acknowledge that estimates, confidence intervals, model fitting and hypothesis testing may not work properly or may not work at all</em>. (p.&nbsp;342)</p>
+</blockquote>
+</section>
+<section id="baker-r.-brick-j.-m.-bates-n.-a.-battaglia-m.-couper-m.-p.-dever-j.-a.-gile-k.-j.-tourangeau-r.-2013.-summary-report-of-the-aapor-task-force-on-non-probability-sampling.-journal-of-survey-statistics-and-methodology-12-90143." class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="baker-r.-brick-j.-m.-bates-n.-a.-battaglia-m.-couper-m.-p.-dever-j.-a.-gile-k.-j.-tourangeau-r.-2013.-summary-report-of-the-aapor-task-force-on-non-probability-sampling.-journal-of-survey-statistics-and-methodology-12-90143."><span class="header-section-number">5.1.2</span> Baker, R., Brick, J. M., Bates, N. A., Battaglia, M., Couper, M. P., Dever, J. A., Gile, K. J., &amp; Tourangeau, R. (2013). Summary report of the AAPOR task force on non-probability sampling. <em>Journal of survey statistics and methodology</em>, 1(2), 90–143.</h3>
+<blockquote class="blockquote">
+<p>But for at least the past 60 years, the probability-sampling framework has been used in most surveys. More recently, concerns about coverage and nonresponse coupled with rising costs have led some to wonder whether non-probability sampling methods might be an acceptable alternative, at least under some conditions (Groves 2006; Savage and Burrows 2007). (p.&nbsp;90)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What we have done is examine the strengths and weaknesses of various non-probability methods, considering the theoretical and (to some extent) empirical evidence. We do not claim to have produced an exhaustive study of all possible methods or fully examined all of the literatura on any one of them. However, we believe that we have at least identified the most prominent methods and examined them in a balance and objective way. (p.&nbsp;91)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Historically, the main arguments advanced against probability-based samples have been those of cost and time efficiency. This was an easy argument to make when the most common survey mode was face-to-face interviewing. The emergence of random digit dial (RDD) telephone surveys heralded a broad expansion of probability sampling in political polling, market research, and academia (Glasser and Metzger 1972). Recently, the rapid rise in cell phone-only households raised concerns about coverage bias (Lavrakas et al.&nbsp;2007) and the long-term decline in response rates raised questions about nonresponse bias (Curtin, Presser, and Singer 2005). (p.&nbsp;93)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The challenge for non-probability methods is to identify uncontrolled covariates – what Kish (1987) called “disturbing variables” – that are related to the measures of interest and bring them under control in sample selection, estimation, or both. Probability sampling mitigates the effects for unbalanced covariates through random selection. Non-probability methods have no such advantage. The selection bias inherent in most non-probability methods creates the substantial risk that the distribution of the important covariates in the sample will differ significantly from their distribution in the target population to such an extent that inferences could be misleading if not simply wrong. To be of value non-probability samples must rely on some form of statistical adjustment to manage that risk. (p.&nbsp;94)</p>
+</blockquote>
+<p>Exemplos de estratégias:</p>
+<ul>
+<li><strong>Sample matching</strong>: the sample is matched to a known population distribution on a set of covariates. (p.&nbsp;95)</li>
+<li><strong>Network sampling</strong>: “if a small number of eligible sample members can be identified, and sufficient trust stablished, these first respondents can connect researchers to their social contacts, who can, in turn, connect researchers to others, and so on until the desired sample size is achieved.” (p.&nbsp;95-96)</li>
+<li>Estimation and weight adjustment methods: “[…] model-based estimation, relies on a statistical model that describes the variable being estimated in the survey (Valliant, Dorfman, and Royall 2000; Pfeffermann and Rao 2009). These models treat the outcomes rather than the sampling process as being the random variables.” (p.&nbsp;97). Approaches include, propensity score adjustiment, weight calibration, and raking. (p.&nbsp;98)</li>
+</ul>
+<p>Remarks:</p>
+<ul>
+<li><p>“<strong>Unlike probability sampling, there is no single framework that adequately encompasses all of non-probability sampling</strong>” — “Thus, non-probability sampling is a collection of methods rather than a single method, and it is difficult it not impossible to ascribe properties that apply to all non-probability sampling methodologies.” (p.&nbsp;100)</p></li>
+<li><p>“<strong>Researchers and other data users may find it useful to think of the different non-probability sample approaches as falling on a continuum of expected accuracy of the estimates</strong>” (p.&nbsp;100)</p></li>
+<li><p>“<strong>Transparency is essential</strong>” (p.&nbsp;100)</p></li>
+<li><p>“<strong>Making inferences for any probability or non-probability survey requires some reliance on modeling assumptions</strong>” (p.&nbsp;101)</p></li>
+<li><p>“<strong>The most promising non-probability methods for surveys are those that are based on models that attempt to deal with challenges to inference in both the sampling and estimation stages</strong>”. (p.&nbsp;101)</p></li>
+<li><p>“<strong>One of the reasons model-based methods are not used more frequently in surveys may be that developing the appropriate models and testing their assumptions is difficult and time-consuming, requiring significant statistical expertise.</strong>” (p.&nbsp;101)</p></li>
+</ul>
+</section>
+<section id="jerit-j.-barabas-j.-2023.-are-nonprobability-surveys-fit-for-purpose-public-opinion-quarterly-87-3-816840." class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="jerit-j.-barabas-j.-2023.-are-nonprobability-surveys-fit-for-purpose-public-opinion-quarterly-87-3-816840."><span class="header-section-number">5.1.3</span> Jerit, J., &amp; Barabas, J. (2023). Are Nonprobability Surveys Fit for Purpose? <em>Public Opinion Quarterly</em>, 87 (3), 816–840.</h3>
+<blockquote class="blockquote">
+<p>It may not be apparent why the growing reliance on NPSs is problematic. After all, their dramatically lower cost (compared to probability samples) makes it possible for more people to collect survey data. But NPSs from commercial vendors have some distinctive features relative to other low-cost survey data. <strong>Chief among them is the provenance of the data (Krupnikov, Nam, and Style 2021). When one contracts with a commercial survey firm, the vendor cultivates and manages the sample, often through methods that are not transparent to the client</strong>. While there is variation in how specific survey organizations operate, a key commonality is that the data are culmination of a multi-step – and largely invisible – selection process. (p.&nbsp;817)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Some of the early concerns with NPSs had to do with the ‘professionalism’ of the people completing surveys. […]. In an extensive examination of online sources of polling data, researchers at Pew found that a small, but measurable, percentage of participants (i.e., 4 percent to 7 percent) should be classified as “bogus respondents” [people who tend to give affirmative responses to survey questions without reading them]. (p.&nbsp;818)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Set against research on the generalizability of treatment effects is a different body of work showing that people who participate in online surveys are systematically different from nonparticipants. […]. Several studies suggest that politically engaged respondents are overrepresented in online panels. (p.&nbsp;820)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>At present, there is no evidence that NPSs display greater fitness than traditional, probability-based methods in the domain of election polling. If anything, the practice of herding implies that organizations using NPSs benefit from the (presumed) greater accuracy of probability samples. (p.&nbsp;825)</p>
+</blockquote>
+<p>The authors suggest that using an NPS for testing the wording of a survey question is a reasonable use of the data (p.&nbsp;826). Another fit for purpose is to use NPSs to collect data on “rare populations” (p.&nbsp;826).</p>
+<blockquote class="blockquote">
+<p>[On the combination of probability and nonprobability samples] This usage may seem similar to techniques already employed by researchers (e.g., sample matching, propensity score adjustment, weighting), but there is a crucial difference. With existing methods, the researcher adjusts the composition of a NPS in reference to a probability sample or population figure but uses <em>only</em> the NPS in the analysis. This strategy is problematic because: (1) the researcher must assume the matching/adjustment variables fully explain the selection mechanism that leads to inclusing in the NPS; and (2) there is no formal way to measure the uncertainty (sampling error) of the resulting estimates.</p>
+<p>In response to these challenges, researchers have developed estimation techniques that use Bayesian inference to combine a NPS and a smaller size probability sample. (p.&nbsp;827) (see Sakshaug et al.&nbsp;2019).</p>
+</blockquote>
+</section>
+</section>
+<section id="anotações-de-aula" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">5.2</span> Anotações de aula</h2>
+<p><strong>Contexto:</strong> diferenças entre as estimativas oferecidas pelo Ibope e pelo Gallup na ocasião da eleição de Lula e Afif em 1989. Na época, falava-se de pesquisa como uma ferramenta de “previsão”, e não um retrato do momento. Embora as diferenças estivessem relativamente dentro da margem de erro, isso chama atenção, e a capa do Globo trazia “Pesquisas têm metodologia diferente”. Ibope surge filiado ao Gallup e, na época, faziam pesquisa de cotas. Mas quando veio pro Brasil, Gallup passa a dizer que fazia pesquisa probabilística.</p>
+<section id="alocação" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="alocação"><span class="header-section-number">5.2.1</span> <strong>Alocação</strong></h3>
+<p>Não há um abismo que separa desenhos probabilísticos e não probabilísticos. De saída, precisamos pensar num continuum entre desenhos mais ou menos probabilísticos. De fato, existem desenhos que são probabilísticos “puro sangue”, mas, quando pensamos do ponto de vista de implementação, não é tão simples assim.</p>
+<p><strong>Alocação proporcional:</strong> dentro de cada estrato, a probabilidade de inclusão na amostra, <span class="math inline">\(\pi_i\)</span>, é igual para todos os elementos da população. O tamanho de <span class="math inline">\(n_h\)</span> é proporcional ao tamanho do estrato <span class="math inline">\(N_h\)</span>. O número de entrevistas em cada estrato é determinado pela proporção do estrato na população:</p>
+<p><span class="math display">\[
+f_h = \frac{n_h}{N_h} \Rightarrow n_h = n \times \frac{N_h}{N}
+\]</span></p>
+<p>Esse <span class="math inline">\(f\)</span> diz o peso relativo daquele estrato em relação a todos os estratos que eu defini. Se a população das pessoas da Zona Sul é de <span class="math inline">\(5%\)</span>, então <span class="math inline">\(f_h = 0.05\)</span>.</p>
+<p><strong>Esse é um desenho amplamente utilizado porque ele reduz variância</strong>. Isso é lógico, já que estamos evitando fazer muitas entrevistas (isto é, deslocar a nossa amostra) em uma única região (ou outro elemento usado para fazer a estratificação) de maneira aleatória. Intuitivamente, cada estrato é representado na amostra exatamente em proporção ao seu tamanho na população.</p>
+<p>O número de variáveis de estrato é, no mais das vezes, três. Afinal, se você estratifica demais, você pode gerar muitos grupos e, se há algum erro de mensuração dentro desses grupos, podemos enviesar a amostra.</p>
+<p><strong>Exemplo</strong></p>
+<ul>
+<li>Estrato A com 38 pessoas</li>
+<li>Estrato B com 62 pessoas</li>
+<li><span class="math inline">\(N = 100\)</span>, <span class="math inline">\(n = 20\)</span></li>
+</ul>
+<p>Alocação para o estrato A:</p>
+<p><span class="math display">\[
+\begin{align*}
+n_A &amp;= n \times \frac{N_h}{N} \\
+    &amp;= 20 \times \frac{38}{100} \\
+    &amp;= 7.6 \approx 8
+\end{align*}
+\]</span></p>
+<p>Alocação para o estrato B:</p>
+<p><span class="math display">\[
+\begin{align*}
+n_B &amp;= n \times \frac{N_h}{N} \\
+    &amp;= 20 \times \frac{62}{100} \\
+    &amp;= 12.4 \approx 12
+\end{align*}
+\]</span></p>
+<p>Ao final, as frações amostrais foram:</p>
+<p><span class="math display">\[
+\begin{align*}
+f_A = \frac{n_A}{N_A} = \frac{8}{38} \approx 0.21 \\
+f_B = \frac{n_B}{N_B} = \frac{12}{62} \approx 0.19
+\end{align*}
+\]</span></p>
+<p>O que é aproximadamente <span class="math inline">\(f = \frac{n}{N} = \frac{20}{100} = 0.2\)</span>.</p>
+<p><strong>Importante:</strong> não estamos violando o princípio de equiprobabilidade. A amostra ainda é aleatória e as pessoas têm a mesma chance de serem escolhidas. O que estamos fazendo é garantir que a amostra seja representativa em relação a um determinado estrato da população.</p>
+<p><strong>Estratificação ainda tem um outro efeito:</strong> Temos amostras independentes dentro de cada estrato. Mas, se temos muitos estratos, o <span class="math inline">\(n\)</span> em cada estrato acaba sendo pequeno e, na prática, temos margem de erro muito grandes para analisar determinados segmentos. O que podemos fazer é um desenho estratificado sobreproporcionalizado, alocando mais do que o esperado para um determinado estrato, permitindo leituras dentro dos estratos. Na academia isso normalmente não se faz, mas governo e terceiro setor fazem isso com frequência.</p>
+<blockquote class="blockquote">
+<p>Pense numa situação em que o cliente quer uma leitura nacional, mas também uma leitura mais focada no Amazonas. Nesse caso, podemos ter um segundo desenho amostral aumentando o número de entrevistas naquele estado. Para a leitura nacional, juntamos as amostras provenientes de cada desenho – mas, claro, com a necessidade de ponderar os dados para evitar que o Amazonas “apareça demais”.</p>
+</blockquote>
+<p>A estimação deve levar em conta a fração amostral de cada estado, i.e., uma média ponderada das médias dos estratos:</p>
+<p><span class="math display">\[
+\bar{y}_{st} = \sum^H_{h=1} W_h \times \bar{y}_h,
+\]</span></p>
+<p>onde <span class="math inline">\(W_h\)</span> é o peso do estrato <span class="math inline">\(h\)</span> e <span class="math inline">\(\bar{y}_h\)</span> é a média do estrato <span class="math inline">\(h\)</span>. Estratos são amostras independentes, justapostas, então eu calculo a média dentro de cada uma dessas amostras e combino elas.</p>
+</section>
+<section id="múltiplos-estágios" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="múltiplos-estágios"><span class="header-section-number">5.2.2</span> <strong>Múltiplos estágios</strong></h3>
+<p>Imagine o cenário em que temos um município com 1000 habitantes distribuídos em 8 bairros. Sorteamos 4 bairros (<em>clusters</em>) para, em cada um deles, entrevistar 10 pessoas. Supondo que os bairros têm 125 pessoas cada, um desenho por conglomerados poderia ser:</p>
+<p><span class="math display">\[
+\begin{align*}
+c &amp;= 4 \\
+f_c &amp;= \frac{4}{8} = 0.5 \\
+f_i &amp;= \frac{10}{125} = 0.08 \\
+f &amp;= 0.5 \times 0.08 = 0.04 \\
+n &amp;= 0.04 \times 1000 = 40
+\end{align*}
+\]</span></p>
+<p>Na prática, o sorteio é realizado em algumas etapas: primeiro, sorteados os <em>clusters</em>; depois, dentro de cada <em>cluster</em>, sorteadas as pessoas. Isso é o que chamamos de amostragem em múltiplos estágios. Assim como eu tenho a probabilidade de incluir uma pessoa na amostra, eu tenho também a probabilidade de incluir um conglomerado na amostra.</p>
+<p>“Qual é a probabilidade de eu incluir o bairro A na amostra?” Essa probabilidade é dada pela fração amostral do conglomerado, <span class="math inline">\(f_c\)</span>. E, bom, se 50% dos conglomerados foram sorteados, a probabilidade de incluir o bairro A na amostra é de 50%. E, dado que a pesquisa chegou no meu bairro, qual é a probabilidade de eu ser selecionado? Nesse caso, a probabilidade de eu ser selecionado é de 8%. Então, a probabilidade de eu ser sorteado é de 50% vezes 8%, ou seja, 4%.</p>
+<p>No entanto, note que se o número de pessoas em cada bairro for diferente, essa matemática quebra. A probabilidade de inclusão de cada pessoa na amostra já não é a mesma: se eu fizer o mesmo número de entrevistas em qualquer bairro que eu sortear, em alguns bairros a probabilidade de incluir a pessoa na amostra será maior ou menor do que em outros. Portanto, temos distorções no resultado – um viés sistemático na estimação.</p>
+</section>
+<section id="ppt" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="ppt"><span class="header-section-number">5.2.3</span> <strong>PPT</strong></h3>
+<p><strong>Uma maneira de resolver isso é incorporar o tamanho do bairro na amostra (em termos de número de pessoas) na hora de calcular a fração amostral. Isso é o que chamamos de Probabilidade Propocional ao Tamanho (PPT, ou PPS, em inglês).</strong> Damos maior probabilidade aos conglomerados maiores serem incluídos na amostra – mas, a condição sine qua non é que eu saiba o tamanho da população dentro de cada conglomerado. Incorporamos <strong>probabilidades desiguais</strong> de inclusão para tornar ele “justo”, proporcional.</p>
+<ul>
+<li>8 bairros (conglomerados)
+<ul>
+<li>bairros 1-4: 50 pessoas cada</li>
+<li>bairros 5-8: 200 pessoas cada</li>
+</ul></li>
+<li>População total: <span class="math inline">\(N = 1000\)</span></li>
+</ul>
+<p>Alocação para o bairro 1:</p>
+<p><span class="math display">\[
+\mathbb{P}(\text{bairro_1}) = \frac{50}{1000} = 0.05
+\]</span></p>
+<p>E a probabilidade de selecionar uma pessoa dele é:</p>
+<p><span class="math display">\[
+\mathbb{P}(\text{pessoa} | \text{bairro_1}) = \frac{1}{50} = 0.02
+\]</span></p>
+<p>Agora pense no bairro 5:</p>
+<p><span class="math display">\[
+\mathbb{P}(\text{bairro_5}) = \frac{200}{1000} = 0.2
+\]</span></p>
+<p>E a probabilidade de selecionar uma pessoa dele é:</p>
+<p><span class="math display">\[
+\mathbb{P}(\text{pessoa} | \text{bairro_5}) = \frac{1}{200} = 0.005
+\]</span></p>
+<p>Agora, note uma propriedade interessante: ao fazemos isso, estamos reintroduzindo a equiprobabilidade de seleção. Note que as probabilidades, se multiplicadas em cada caso, dão a mesma probabilidade de seleção das pessoas – <span class="math inline">\(0.001\)</span>. Ou seja, a probabilidade de selecionar uma pessoa do bairro 1 é de 0.05 vezes 0.02, e a probabilidade de selecionar uma pessoa do bairro 5 é de 0.2 vezes 0.005. Isso significa que, mesmo com tamanhos diferentes, as probabilidades de seleção são as mesmas. Isso é o que chamamos de <strong>equiprobabilidade</strong>.</p>
+<ul>
+<li>Calculamos a probabilidade de incluir um determinado bairro</li>
+<li>Calculamos a probabilidade de incluir uma determinada pessoa dentro do bairro</li>
+<li>Multiplicamos as duas probabilidades para obter a probabilidade de incluir uma pessoa do bairro <span class="math inline">\(n\)</span> na amostra.</li>
+</ul>
+</section>
+<section id="pesquisa-não-probabilística" class="level3" data-number="5.2.4">
+<h3 data-number="5.2.4" class="anchored" data-anchor-id="pesquisa-não-probabilística"><span class="header-section-number">5.2.4</span> <strong>Pesquisa não-probabilística</strong></h3>
+<p>Nesses casos, não sabemos a probabilidade de uma pessoa ser sorteada (i.e., ser incluída na amostra). Isso pode ocorrer por diversos motivos:</p>
+<ul>
+<li>Amostragem por quotas</li>
+<li>Amostragem por conveniência</li>
+<li>Amostragem opt-in</li>
+<li>Amostragem sistemática sem <span class="math inline">\(N\)</span> conhecido</li>
+</ul>
+<blockquote class="blockquote">
+<p>Boas variáveis para usar como estratos são aquelas que são relativamente estáveis. Região, por exemplo, é uma boa.</p>
+</blockquote>
+<p>Apesar de vários desenhos na prática serem não-probabilísticos, é possível usar a amostragem probabilística como referência e falar em <strong>graus de aproximação com amostragem probabilística</strong>.</p>
+<ul>
+<li>Pesquisas eleitorais domiciliares tipicamente implementam <em>area sampling</em>, determinando probabilisticamente conglomerados a serem visitados (<em>probability sampling with quotas</em>)</li>
+<li>Seleção por meio de métodos não-intencionais (e.g., seleção sistemática de domicílios, ponto de fluxo, horário de abordagem, etc.)</li>
+</ul>
+<p><strong>Como cotas funcionam?</strong> Eu não sei exatamenta a distribuição de uma certa variável na população, mas existe alguma pesquisa confiável da qual eu posso me basear. Eu quero acabar com uma distribuição de sexo que siga a mesma proporção de uma determinada pesquisa. As mais comuns são sexo, idade e (um pouco mais nebuloso) idade.</p>
+<blockquote class="blockquote">
+<p>Algumas interações (renda vs.&nbsp;raça, e.g.) podem ter de ser levadas em conta por meio de <strong>distribuições conjuntas</strong> (ou quotas cruzadas).</p>
+</blockquote>
+<p>A alocação de entrevistas é feita da mesma maneira que os estratos.</p>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Sugestões de leitura complementar para aprofundar o tema de <em>weighting</em>: Valliant et al.&nbsp;(2013), Bethlehem (2009) e Bethlehem and Biffignandi (2012).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    window.setColorSchemeToggle(window.hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../aulas/aula-4.html" class="pagination-link" aria-label="Amostragem I">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Amostragem I</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,257 @@
+---
+#bibliography: master.bib
+biblio-style: apsr
+fontsize: 11pt
+author: Felipe Lamarca
+endnote: no
+---
+
+# Amostragem II
+
+## Anotações das leituras
+
+### Wolf, C., Joye, D., Smith, T. W., & Fu, Y. (2016). _The SAGE handbook of survey methodology_. Sage. Cap. 22, _Non-probability Sampling_.
+
+> [...] the sampling theory as basically developed for _probability sampling_, where all units in the population have known and positive probabilities of inclusion. The definition implicitly involves _randomization_, which is a process resembling lottery drawing, where all units are selected according to their inclusion probabilities. (p. 329)
+
+> [In non-probability samples] This usually means that units are included with unknown probabilities, or, that some of these probabilities are known to be zero. (p. 329)
+
+Também podemos enfrentar problemas de ordem "não probabilística" quando utilizamos amostras probabilísticas. Por exemplo, quando a amostra não é representativa da população alvo, mesmo que tenhamos utilizado um método probabilístico. Isso pode ocorrer devido a problemas de cobertura, não resposta ou viés de seleção.
+
+> We should underline that wrong results based on non-probability samples -- including the above three examples -- are typically linked to situations where the standard statistical inference assuming probability sampling was used with non-probability samples. (p. 331)
+
+> Various inferential approaches exist. We referred here only to the most popular _frequentist_ one, which (a) takes into account the sampling design, (b) assumes that unknown population values are fixed and (c) builds on a sampling distribution of the estimates across all possible samples. (p. 332)
+
+> The approximate usages of probability sampling in a non-probability setting is sometimes understood in a sense that we first introduce certain modelling assumptions e.g. we assume that there is actually some randomization in  the non-probability sample. (p. 332)
+
+Medidas indiretas para aproximar designs probabilísticos:
+
+- "Spread the non-probability sample as broadly as possible": tentar recrutar respondentes a partir de vários canais, para aumentar a diversidade da amostra. Bom exemplo: WageIndicator survey.
+- Amostragem por cotas, controlando para características socio-demográficas
+
+Também podemos fazer aproximações adotando diretamente algumas medidas de amostragem probabilística -- por exemplo, incluir algum grau de aleatoriedade na seleção de respondentes (randomização de horários de coleta de resposta; randomização de qual pessoa será entrevistada, etc).
+
+> Of course, none of the above-described approaches, direct or indirect, assures with some known accuracy that the corresponding statistical inference will be equivalent to the situation with probability samples. However, it is also true that these approximations usually contribute to certain improvements, while they rarely cause any serious damage. (p. 333)
+
+> As already mentioned, with non-probability samples, by definition, the inclusion probabilities are unknown or zero, so without further assumptions this very fact formally prevents any statistical inference calculations (e.g. estimates, variances, confidence intervals, hypothesis testing, etc.). (p. 334)
+
+> [...] if we apply for a certain non-probability sample a standard procedure to calculate confidence intervals, we implicitly assume that probability sample selection (e.g. SRS) was used. However, at this time we are no longer confident that the interval actually contains the population value with the pre-assumed, say, 5% risk. It is very likely, that the actual risk is way above 5%, but we have no possibility to calculate it from the sample. [...]. Applying standard statistical inference approaches as an approximation in non-probability samples can thus 'seduce' the users into believing that they have 'real' confidence intervals. (p. 334)
+
+> Being formal and strict, we should acknowledge that randomization -- as well as the related probability sampling -- is not a necessary precondition for valid statistical inference (Valliant et al., 2000:19). If we have clear and valid assumptions, a specific modelling approach can also provide corresponding statistical inference. In such a situation, we first assume that the data -- or at least specific relations among the variables -- are generated according to some statistical model. Next, additional external data are then particularly valuable (e.g. sociodemographic backrground variables in the case of online panels), so that certain model-based approaches to statistical inference can be used to build the model and then estimate the values of interest. (p. 335)
+
+> [**Sobre a definição de _panels_ in the context of non-probability online panels**] [...] panels are large databases of units, which initially agreed to cooperate, provided background information and were recruited to serve for occasional or regular selection into specific sample surveys addressing related or unrelated topics. (p. 336)
+
+[**on weighting**] In probability samples so-called _base weights_ are used first to compensate for the inclusion probabilities. In a second step, specific _non-response weights_ are applied to reduce the _bias_ -- a difference between the estimate and the true value -- resulting from non-response. In a similar way, specific weights can be developed for other methodological problems (e.g. non-coverage). In addition, with so-colled _population weighting_ we usually correct for any discrepancies in auxiliary variables. Typically, these are socio-demographic variables (e.g. age, gender, region), but when avaliable, other variables are also considered (e.g. media consumption).[^1]
+
+> We should be aware that weights may (or may not) remove the biases in target variables, but they for sure increase the sampling variance. However, the underlying expectation is of course, that the gains in reducing the bias outweigh the corresponding loss due to increased variance. This is not necessarily true, particularly in the case of weak correlations between auxiliary and target variables, where weights may have no impect on bias removal. (p. 339)
+
+> With non-probability samples we often have only one step, because we cannot separate sampling and non-responde mechanisms. The weighting process thus simply assigns weights to units in the sample, so that the underrepresented ones get a weight larger than $1$, while the opposite happens to overrepresented ones, which is similar as in population weighing. (p. 339)
+
+> When we implement approximations from probability samples into a non-probability setting, there is by the very definition little theoretical basis for running a sound statistical inference. Therefore, the justification and validation of these procedures rely solely on the accumulation of anecdotal evidence, which is sometimes ironically called 'faith-based' sampling. (p. 340)
+
+> We continuously indicated in this chapter -- explicitly or implicitly -- that in a non-probability setting the statistical inference based on probability sampling principes formally cannot be applied. Still, the practitioners routinely use the corresponding 'estimates', **which should be rather labelled as 'indications' or even 'approximations'**. (p. 341)
+
+> By abandoning probability sampling principes we usually also abandon the science of statistical inference and enter instead into the art and craft of shaping optimal practical procedures. The experience based on trials and errors in thus essential here, as well as the intuition of the researcher. (p. 342)
+
+> We thus recommend to more openly accepting the reality of using a standard statistical inference approach as an approximation in non-probability settings. However, this comes with two warnings: first, the sample selection procedure should be clearly described, documented, presented and critically evaluated. We thus join the AAPOR recommendations that the methods used to draw a sample, to collect the data, to adjust it and to make inferences should be even more detailed compared to probability samples (Baker et al, 2013). [...]. Second, we should also elaborate on the underlying assumptions (e.g. models used) and provide explanations about conceptual divergences, dangers, risks and limitations of the interpretation (AAPOR, 2015). When standard statistical inference is applied to any non-probability sample, the minimum should be thus to _clearly acknowledge that estimates, confidence intervals, model fitting and hypothesis testing may not work properly or may not work at all_. (p. 342)
+
+### Baker, R., Brick, J. M., Bates, N. A., Battaglia, M., Couper, M. P., Dever, J. A., Gile, K. J., & Tourangeau, R. (2013). Summary report of the AAPOR task force on non-probability sampling. _Journal of survey statistics and methodology_, 1(2), 90–143.
+
+> But for at least the past 60 years, the probability-sampling framework has been used in most surveys. More recently, concerns about coverage and nonresponse coupled with rising costs have led some to wonder whether non-probability sampling methods might be an acceptable alternative, at least under some conditions (Groves 2006; Savage and Burrows 2007). (p. 90)
+
+> What we have done is examine the strengths and weaknesses of various non-probability methods, considering the theoretical and (to some extent) empirical evidence. We do not claim to have produced an exhaustive study of all possible methods or fully examined all of the literatura on any one of them. However, we believe that we have at least identified the most prominent methods and examined them in a balance and objective way. (p. 91)
+
+> Historically, the main arguments advanced against probability-based samples have been those of cost and time efficiency. This was an easy argument to make when the most common survey mode was face-to-face interviewing. The emergence of random digit dial (RDD) telephone surveys heralded a broad expansion of probability sampling in political polling, market research, and academia (Glasser and Metzger 1972). Recently, the rapid rise in cell phone-only households raised concerns about coverage bias (Lavrakas et al. 2007) and the long-term decline in response rates raised questions about nonresponse bias (Curtin, Presser, and Singer 2005). (p. 93)
+
+> The challenge for non-probability methods is to identify uncontrolled covariates -- what Kish (1987) called "disturbing variables" -- that are related to the measures of interest and bring them under control in sample selection, estimation, or both. Probability sampling mitigates the effects for unbalanced covariates through random selection. Non-probability methods have no such advantage. The selection bias inherent in most non-probability methods creates the substantial risk that the distribution of the important covariates in the sample will differ significantly from their distribution in the target population to such an extent that inferences could be misleading if not simply wrong. To be of value non-probability samples must rely on some form of statistical adjustment to manage that risk. (p. 94)
+
+Exemplos de estratégias:
+
+- **Sample matching**: the sample is matched to a known population distribution on a set of covariates. (p. 95)
+- **Network sampling**: "if a small number of eligible sample members can be identified, and sufficient trust stablished, these first respondents can connect researchers to their social contacts, who can, in turn, connect researchers to others, and so on until the desired sample size is achieved." (p. 95-96)
+- Estimation and weight adjustment methods: "[...] model-based estimation, relies on a statistical model that describes the variable being estimated in the survey (Valliant, Dorfman, and Royall 2000; Pfeffermann and Rao 2009). These models treat the outcomes rather than the sampling process as being the random variables." (p. 97). Approaches include, propensity score adjustiment, weight calibration, and raking. (p. 98)
+
+Remarks:
+
+- "**Unlike probability sampling, there is no single framework that adequately encompasses all of non-probability sampling**" --- "Thus, non-probability sampling is a collection of methods rather than a single method, and it is difficult it not impossible to ascribe properties that apply to all non-probability sampling methodologies." (p. 100)
+
+- "**Researchers and other data users may find it useful to think of the different non-probability sample approaches as falling on a continuum of expected accuracy of the estimates**" (p. 100)
+
+- "**Transparency is essential**" (p. 100)
+
+- "**Making inferences for any probability or non-probability survey requires some reliance on modeling assumptions**" (p. 101)
+
+- "**The most promising non-probability methods for surveys are those that are based on models that attempt to deal with challenges to inference in both the sampling and estimation stages**". (p. 101)
+
+- "**One of the reasons model-based methods are not used more frequently in surveys may be that developing the appropriate models and testing their assumptions is difficult and time-consuming, requiring significant statistical expertise.**" (p. 101)
+
+### Jerit, J., & Barabas, J. (2023). Are Nonprobability Surveys Fit for Purpose? _Public Opinion Quarterly_, 87 (3), 816–840.
+
+> It may not be apparent why the growing reliance on NPSs is problematic. After all, their dramatically lower cost (compared to probability samples) makes it possible for more people to collect survey data. But NPSs from commercial vendors have some distinctive features relative to other low-cost survey data. **Chief among them is the provenance of the data (Krupnikov, Nam, and Style 2021). When one contracts with a commercial survey firm, the vendor cultivates and manages the sample, often through methods that are not transparent to the client**. While there is variation in how specific survey organizations operate, a key commonality is that the data are culmination of a multi-step -- and largely invisible -- selection process. (p. 817)
+
+> Some of the early concerns with NPSs had to do with the 'professionalism' of the people completing surveys. [...]. In an extensive examination of online sources of polling data, researchers at Pew found that a small, but measurable, percentage of participants (i.e., 4 percent to 7 percent) should be classified as "bogus respondents" [people who tend to give affirmative responses to survey questions without reading them]. (p. 818)
+
+> Set against research on the generalizability of treatment effects is a different body of work showing that people who participate in online surveys are systematically different from nonparticipants. [...]. Several studies suggest that politically engaged respondents are overrepresented in online panels. (p. 820)
+
+> At present, there is no evidence that NPSs display greater fitness than traditional, probability-based methods in the domain of election polling. If anything, the practice of herding implies that organizations using NPSs benefit from the (presumed) greater accuracy of probability samples. (p. 825)
+
+The authors suggest that using an NPS for testing the wording of a survey question is a reasonable use of the data (p. 826). Another fit for purpose is to use NPSs to collect data on "rare populations" (p. 826).
+
+> [On the combination of probability and nonprobability samples] This usage may seem similar to techniques already employed by researchers (e.g., sample matching, propensity score adjustment, weighting), but there is a crucial difference. With existing methods, the researcher adjusts the composition of a NPS in reference to a probability sample or population figure but uses _only_ the NPS in the analysis. This strategy is problematic because: (1) the researcher must assume the matching/adjustment variables fully explain the selection mechanism that leads to inclusing in the NPS; and (2) there is no formal way to measure the uncertainty (sampling error) of the resulting estimates.
+>
+> In response to these challenges, researchers have developed estimation techniques that use Bayesian inference to combine a NPS and a smaller size probability sample. (p. 827) (see Sakshaug et al. 2019).
+
+[^1]: Sugestões de leitura complementar para aprofundar o tema de _weighting_: Valliant et al. (2013), Bethlehem (2009) e Bethlehem and Biffignandi (2012).
+
+## Anotações de aula
+
+**Contexto:** diferenças entre as estimativas oferecidas pelo Ibope e pelo Gallup na ocasião da eleição de Lula e Afif em 1989. Na época, falava-se de pesquisa como uma ferramenta de "previsão", e não um retrato do momento. Embora as diferenças estivessem relativamente dentro da margem de erro, isso chama atenção, e a capa do Globo trazia "Pesquisas têm metodologia diferente". Ibope surge filiado ao Gallup e, na época, faziam pesquisa de cotas. Mas quando veio pro Brasil, Gallup passa a dizer que fazia pesquisa probabilística.
+
+### **Alocação**
+
+Não há um abismo que separa desenhos probabilísticos e não probabilísticos. De saída, precisamos pensar num continuum entre desenhos mais ou menos probabilísticos. De fato, existem desenhos que são probabilísticos "puro sangue", mas, quando pensamos do ponto de vista de implementação, não é tão simples assim.
+
+**Alocação proporcional:** dentro de cada estrato, a probabilidade de inclusão na amostra, $\pi_i$, é igual para todos os elementos da população. O tamanho de $n_h$ é proporcional ao tamanho do estrato $N_h$. O número de entrevistas em cada estrato é determinado pela proporção do estrato na população:
+
+$$
+f_h = \frac{n_h}{N_h} \Rightarrow n_h = n \times \frac{N_h}{N}
+$$
+
+Esse $f$ diz o peso relativo daquele estrato em relação a todos os estratos que eu defini. Se a população das pessoas da Zona Sul é de $5%$, então $f_h = 0.05$. 
+
+**Esse é um desenho amplamente utilizado porque ele reduz variância**. Isso é lógico, já que estamos evitando fazer muitas entrevistas (isto é, deslocar a nossa amostra) em uma única região (ou outro elemento usado para fazer a estratificação) de maneira aleatória. Intuitivamente, cada estrato é representado na amostra exatamente em proporção ao seu tamanho na população.
+
+O número de variáveis de estrato é, no mais das vezes, três. Afinal, se você estratifica demais, você pode gerar muitos grupos e, se há algum erro de mensuração dentro desses grupos, podemos enviesar a amostra.
+
+**Exemplo**
+
+- Estrato A com 38 pessoas
+- Estrato B com 62 pessoas
+- $N = 100$, $n = 20$
+
+Alocação para o estrato A:
+
+$$
+\begin{align*}
+n_A &= n \times \frac{N_h}{N} \\
+    &= 20 \times \frac{38}{100} \\ 
+    &= 7.6 \approx 8
+\end{align*}
+$$
+
+Alocação para o estrato B:
+
+$$
+\begin{align*}
+n_B &= n \times \frac{N_h}{N} \\
+    &= 20 \times \frac{62}{100} \\ 
+    &= 12.4 \approx 12
+\end{align*}
+$$
+
+Ao final, as frações amostrais foram:
+
+$$
+\begin{align*}
+f_A = \frac{n_A}{N_A} = \frac{8}{38} \approx 0.21 \\
+f_B = \frac{n_B}{N_B} = \frac{12}{62} \approx 0.19
+\end{align*}
+$$
+
+O que é aproximadamente $f = \frac{n}{N} = \frac{20}{100} = 0.2$.
+
+**Importante:** não estamos violando o princípio de equiprobabilidade. A amostra ainda é aleatória e as pessoas têm a mesma chance de serem escolhidas. O que estamos fazendo é garantir que a amostra seja representativa em relação a um determinado estrato da população.
+
+**Estratificação ainda tem um outro efeito:** Temos amostras independentes dentro de cada estrato. Mas, se temos muitos estratos, o $n$ em cada estrato acaba sendo pequeno e, na prática, temos margem de erro muito grandes para analisar determinados segmentos. O que podemos fazer é um desenho estratificado sobreproporcionalizado, alocando mais do que o esperado para um determinado estrato, permitindo leituras dentro dos estratos. Na academia isso normalmente não se faz, mas governo e terceiro setor fazem isso com frequência.
+
+> Pense numa situação em que o cliente quer uma leitura nacional, mas também uma leitura mais focada no Amazonas. Nesse caso, podemos ter um segundo desenho amostral aumentando o número de entrevistas naquele estado. Para a leitura nacional, juntamos as amostras provenientes de cada desenho -- mas, claro, com a necessidade de ponderar os dados para evitar que o Amazonas "apareça demais". 
+
+A estimação deve levar em conta a fração amostral de cada estado, i.e., uma média ponderada das médias dos estratos:
+
+$$
+\bar{y}_{st} = \sum^H_{h=1} W_h \times \bar{y}_h,
+$$
+
+onde $W_h$ é o peso do estrato $h$ e $\bar{y}_h$ é a média do estrato $h$. Estratos são amostras independentes, justapostas, então eu calculo a média dentro de cada uma dessas amostras e combino elas.
+
+### **Múltiplos estágios**
+
+Imagine o cenário em que temos um município com 1000 habitantes distribuídos em 8 bairros. Sorteamos 4 bairros (_clusters_) para, em cada um deles, entrevistar 10 pessoas. Supondo que os bairros têm 125 pessoas cada, um desenho por conglomerados poderia ser:
+
+$$
+\begin{align*}
+c &= 4 \\
+f_c &= \frac{4}{8} = 0.5 \\
+f_i &= \frac{10}{125} = 0.08 \\
+f &= 0.5 \times 0.08 = 0.04 \\
+n &= 0.04 \times 1000 = 40
+\end{align*}
+$$
+
+Na prática, o sorteio é realizado em algumas etapas: primeiro, sorteados os _clusters_; depois, dentro de cada _cluster_, sorteadas as pessoas. Isso é o que chamamos de amostragem em múltiplos estágios. Assim como eu tenho a probabilidade de incluir uma pessoa na amostra, eu tenho também a probabilidade de incluir um conglomerado na amostra. 
+
+"Qual é a probabilidade de eu incluir o bairro A na amostra?" Essa probabilidade é dada pela fração amostral do conglomerado, $f_c$. E, bom, se 50% dos conglomerados foram sorteados, a probabilidade de incluir o bairro A na amostra é de 50%. E, dado que a pesquisa chegou no meu bairro, qual é a probabilidade de eu ser selecionado? Nesse caso, a probabilidade de eu ser selecionado é de 8%. Então, a probabilidade de eu ser sorteado é de 50% vezes 8%, ou seja, 4%.
+
+No entanto, note que se o número de pessoas em cada bairro for diferente, essa matemática quebra. A probabilidade de inclusão de cada pessoa na amostra já não é a mesma: se eu fizer o mesmo número de entrevistas em qualquer bairro que eu sortear, em alguns bairros a probabilidade de incluir a pessoa na amostra será maior ou menor do que em outros. Portanto, temos distorções no resultado -- um viés sistemático na estimação. 
+
+### **PPT**
+
+**Uma maneira de resolver isso é incorporar o tamanho do bairro na amostra (em termos de número de pessoas) na hora de calcular a fração amostral. Isso é o que chamamos de Probabilidade Propocional ao Tamanho (PPT, ou PPS, em inglês).** Damos maior probabilidade aos conglomerados maiores serem incluídos na amostra -- mas, a condição sine qua non é que eu saiba o tamanho da população dentro de cada conglomerado. Incorporamos **probabilidades desiguais** de inclusão para tornar ele "justo", proporcional.
+
+- 8 bairros (conglomerados)
+    - bairros 1-4: 50 pessoas cada
+    - bairros 5-8: 200 pessoas cada
+- População total: $N = 1000$
+
+Alocação para o bairro 1:
+
+$$
+\mathbb{P}(\text{bairro_1}) = \frac{50}{1000} = 0.05
+$$
+
+E a probabilidade de selecionar uma pessoa dele é:
+
+$$
+\mathbb{P}(\text{pessoa} | \text{bairro_1}) = \frac{1}{50} = 0.02
+$$
+
+Agora pense no bairro 5:
+
+$$
+\mathbb{P}(\text{bairro_5}) = \frac{200}{1000} = 0.2
+$$
+
+E a probabilidade de selecionar uma pessoa dele é:
+
+$$
+\mathbb{P}(\text{pessoa} | \text{bairro_5}) = \frac{1}{200} = 0.005
+$$
+
+Agora, note uma propriedade interessante: ao fazemos isso, estamos reintroduzindo a equiprobabilidade de seleção. Note que as probabilidades, se multiplicadas em cada caso, dão a mesma probabilidade de seleção das pessoas -- $0.001$. Ou seja, a probabilidade de selecionar uma pessoa do bairro 1 é de 0.05 vezes 0.02, e a probabilidade de selecionar uma pessoa do bairro 5 é de 0.2 vezes 0.005. Isso significa que, mesmo com tamanhos diferentes, as probabilidades de seleção são as mesmas. Isso é o que chamamos de **equiprobabilidade**.
+
+- Calculamos a probabilidade de incluir um determinado bairro
+- Calculamos a probabilidade de incluir uma determinada pessoa dentro do bairro
+- Multiplicamos as duas probabilidades para obter a probabilidade de incluir uma pessoa do bairro $n$ na amostra.
+
+### **Pesquisa não-probabilística**
+
+Nesses casos, não sabemos a probabilidade de uma pessoa ser sorteada (i.e., ser incluída na amostra). Isso pode ocorrer por diversos motivos:
+
+- Amostragem por quotas
+- Amostragem por conveniência
+- Amostragem opt-in
+- Amostragem sistemática sem $N$ conhecido
+
+> Boas variáveis para usar como estratos são aquelas que são relativamente estáveis. Região, por exemplo, é uma boa.
+
+Apesar de vários desenhos na prática serem não-probabilísticos, é possível usar a amostragem probabilística como referência e falar em **graus de aproximação com amostragem probabilística**.
+
+- Pesquisas eleitorais domiciliares tipicamente implementam _area sampling_, determinando probabilisticamente conglomerados a serem visitados (_probability sampling with quotas_)
+- Seleção por meio de métodos não-intencionais (e.g., seleção sistemática de domicílios, ponto de fluxo, horário de abordagem, etc.)
+
+**Como cotas funcionam?** Eu não sei exatamenta a distribuição de uma certa variável na população, mas existe alguma pesquisa confiável da qual eu posso me basear. Eu quero acabar com uma distribuição de sexo que siga a mesma proporção de uma determinada pesquisa. As mais comuns são sexo, idade e (um pouco mais nebuloso) idade.
+
+> Algumas interações (renda vs. raça, e.g.) podem ter de ser levadas em conta por meio de **distribuições conjuntas** (ou quotas cruzadas).
+
+A alocação de entrevistas é feita da mesma maneira que os estratos.
+
