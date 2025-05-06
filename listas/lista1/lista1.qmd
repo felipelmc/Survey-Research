@@ -43,7 +43,7 @@ library(modelsummary)
 library(tidyverse)
 library(gt)
 
-set.seed(42)
+set.seed(52)
 
 # dados
 macae <- readRDS("dados/macae.rds")
@@ -56,9 +56,9 @@ Nesta tarefa, vamos implementar versões de três dos principais desenhos amostr
 
 Nosso objetivo é, utilizando diferentes desenhos amostrais, estimar tão bem quanto possível a taxa de alfabetização da população do município. Como estamos utilizando os dados de um censo, não esperamos lidar com erros sistemáticos de cobertura -- i.e., assumimos que temos um bom quadro amostral, que inclui toda a população do município. De fato, tratando-se dos dados de um censo demográfico, já conhecemos a priori a estatística "verdadeira", ou seja, a taxa de alfabetização da população de Macaé. Mesmo assim, a implementação de alguns desenhos amostrais será útil para nos permitir identificar abordagens mais ou menos eficientes (neste caso, com maior ou menor variância) em vista da estimação do parâmetro populacional.
 
-Iniciamos a implementação dos desenhos amostrais com uma amostra aleatória simples. Como veremos, esse é o tipo de amostragem mais simples e permite a derivação de estatísticas amostrais de maneira muito direta; por outro lado, tendemos a obter alta variância na medida em que estamos sujeitos a selecionar grupos muito diferentes entre si e, mais do que isso, temos pouco controle sobre a representação dos grupos em cada realização da amostra. 
+Iniciamos a implementação dos desenhos amostrais com uma amostra aleatória simples. Como veremos, esse é o tipo de amostragem mais simples e permite a derivação de estatísticas amostrais de maneira muito direta; por outro lado, tendemos a obter alta variância na medida em que estamos sujeitos a selecionar grupos muito diferentes entre si e, mais do que isso, temos pouco controle sobre a representação dos grupos em cada realização da amostra.
 
-Com isso em mente, tentaremos visualizar o efeito positivo de implementar uma amostra aleatória simples com estratificação utilizando alocação proporcional. Neste caso, procuramos uma variável de estratificação que minimiza a variância da variável de interesse dentro dos estratos e extraímos amostras aleatórias simples dentro desses estratos; portanto, esperamos obter uma menor variância do que na amostra aleatória simples [@groves2011survey, p. 119]. 
+Com isso em mente, tentaremos visualizar o efeito positivo de implementar uma amostra aleatória simples com estratificação utilizando alocação proporcional. Neste caso, procuramos uma variável de estratificação que minimiza a variância da variável de interesse dentro dos estratos e extraímos amostras aleatórias simples dentro desses estratos; portanto, esperamos obter uma menor variância do que na amostra aleatória simples [@groves2011survey, p. 119].
 
 Por fim, implementamos um desenho amostral por conglomerados, em que primeiro amostramos os conglomerados com probabilidade de seleção proporcional ao tamanho da população e, em seguida, amostramos indivíduos dentro desses conglomerados. Embora essa seja uma abordagem amplamente utilizada por acarretar sensível diminuição de custos, trata-se de um desenho conhecido por aumentar a variância em relação à amostra aleatória simples [@groves2011survey, p. 112-113].
 
@@ -72,13 +72,15 @@ Em um desenho de amostra aleatória simples, cada elemento da população tem a 
 
 $$
 \pi_i = \dfrac{n}{N},
-$$
+$$ 
+
 onde $n$ é o número de elementos na amostra e $N$ é o número de elementos na população. A probabilidade de uma particular amostra ser selecionada é dada por:
 
 $$
 \mathbb{P}(S) = \dfrac{1}{\left(\dfrac{N}{n}\right)},
-$$
-sendo que $\left(\dfrac{N}{n}\right) = \dfrac{N!}{n! \times (N-n)!}$. 
+$$ 
+
+sendo que $\left(\dfrac{N}{n}\right) = \dfrac{N!}{n! \times (N-n)!}$.
 
 Trata-se de uma amostragem de natureza totalmente aleatória e que garante, para $N$ grande, que a probabilidade de se obter uma particular amostra seja muito pequena. No caso dos dados de Macaé, vemos que a chance de obtermos uma amostra qualquer de tamanho $n=1200$ a partir do nosso banco de dados é baixíssima:
 
@@ -106,12 +108,11 @@ var_srs <- var(alfabetizada_srs)
 
 ```
 
-Extraídas as amostras, calculamos também a variância da estatística de interesse, que, no caso do desenho AAS, servirá de benchmark no cálculo do _design effect_ dos demais desenhos a seguir.
-
+Extraídas as amostras, calculamos também a variância da estatística de interesse, que, no caso do desenho AAS, servirá de benchmark no cálculo do *design effect* dos demais desenhos a seguir.
 
 ## Desenho AAS com estratificação
 
-Extrair amostras aleatórias simples com estratificação consiste em dividir os dados em grupos (estratos) e extrair amostras aleatórias simples dos indivíduos dentro desses grupos. Há algumas técnicas possíveis utilizadas para alocar o tamanho $n_h$ de indivíduos a serem amostrados em cada estrato $h$, sendo uma das preferidas a alocação proporcional. Nesse caso, $n_h = n \times \frac{N_h}{N}$, sendo $n$ o número de elementos na amostra, $N_h$ a população do estrato $h$ e $N$ a população total. 
+Extrair amostras aleatórias simples com estratificação consiste em dividir os dados em grupos (estratos) e extrair amostras aleatórias simples dos indivíduos dentro desses grupos. Há algumas técnicas possíveis utilizadas para alocar o tamanho $n_h$ de indivíduos a serem amostrados em cada estrato $h$, sendo uma das preferidas a alocação proporcional. Nesse caso, $n_h = n \times \frac{N_h}{N}$, sendo $n$ o número de elementos na amostra, $N_h$ a população do estrato $h$ e $N$ a população total.
 
 No fim das contas, a consequência dessa abordagem é que cada estrato é representado na amostra exatamente em proporção ao seu tamanho na população. Mais ainda, se esses estratos forem "substantivamente significativos" [@groves2011survey, p. 120] -- ou seja, difiram entre si ao mesmo tempo em que se assemelham internamente no que diz respeito à variável de interesse --, podemos esperar uma variância menor do que no desenho que usa puramente a amostragem aleatória simples. Trata-se de um resultado lógico na medida em que, ao dividir o espaço amostral em grupos relativamente homogêneos internamente, a variância dentro dos grupos é menor; consequentemente, a variância amostral (resultante da combinação das variâncias dos grupos) também será menor [@groves2011survey, p. 119].
 
@@ -163,17 +164,18 @@ design_effect_alfabetizada_estratificada <- var_alfabetizada_estratificada / var
 cat(sprintf("Design effect -- distrito e subdistrito: %.3f\n", design_effect_alfabetizada_estratificada))
 
 ```
-Note que o _design effect_ indica um resultado apenas marginalmente melhor em relação ao desenho AAS. De fato, sabemos que a escolha da variável de estratificação é fundamental na qualidade do resultado -- escolhas ineficazes levam a resultados no máximo um pouco melhores em termos de variância. Para obter melhores resultados seria importante obter, por exemplo, um número menor de estratos [@groves2011survey, p. 118] e, idealmente, estratos com variância interna pequena. Vejamos a tabela com o número de entrevistas, que traz algumas estatísticas dos grupos:
+
+Note que o *design effect* indica um resultado apenas marginalmente melhor em relação ao desenho AAS. De fato, sabemos que a escolha da variável de estratificação é fundamental na qualidade do resultado -- escolhas ineficazes levam a resultados no máximo um pouco melhores em termos de variância. Para obter melhores resultados seria importante obter, por exemplo, um número menor de estratos [@groves2011survey, p. 118] e, idealmente, estratos com variância interna pequena. Vejamos a tabela com o número de entrevistas, que traz algumas estatísticas dos grupos:
 
 ```{r}
 
 print(n_entrevistas)
 
 ```
-Observe que há grupos com poucas entrevistas alocadas, sendo a maioria deles na categoria "Sem informação" nos subdistritos. Além disso, o Centro de Macaé concentra boa parte das entrevistas. A despeito de uma série de tentativas de criação de novos agrupamentos com o objetivo de minimizar a variância interna, diminuir o número de estratos e homogeneizar o tamanho dos grupos, não tive sucesso em encontrar um _design effect_ inferior ao reportado no desenho acima. Para citar alguns exemplos, tentativas incluem a divisão dos bairros em quartis de acordo com a proporção de alfabetização, o agrupamento dos subdistritos "Sem informação", e outros agrupamentos de acordo com a proporção de alfabetização.
 
-Vale notar, ainda, que o uso da variável `bairro` no processo de estratificação levava a um _design effect_ menor. No entanto, como a amostra é composta por mais de $30$ bairros, essa escolha poderia dificultar a operacionalização da pesquisa -- inclusive pelo fato de que teríamos alguns bairros com pouquíssimas entrevistas alocadas.
+Observe que há grupos com poucas entrevistas alocadas, sendo a maioria deles na categoria "Sem informação" nos subdistritos. Além disso, o Centro de Macaé concentra boa parte das entrevistas. A despeito de uma série de tentativas de criação de novos agrupamentos com o objetivo de minimizar a variância interna, diminuir o número de estratos e homogeneizar o tamanho dos grupos, não tive sucesso em encontrar um *design effect* inferior ao reportado no desenho acima. Para citar alguns exemplos, tentativas incluem a divisão dos bairros em quartis de acordo com a proporção de alfabetização, o agrupamento dos subdistritos "Sem informação", e outros agrupamentos de acordo com a proporção de alfabetização.
 
+Vale notar, ainda, que o uso da variável `bairro` no processo de estratificação levava a um *design effect* menor. No entanto, como a amostra é composta por mais de $30$ bairros, essa escolha poderia dificultar a operacionalização da pesquisa -- inclusive pelo fato de que teríamos alguns bairros com pouquíssimas entrevistas alocadas.
 
 ## Desenho por conglomerados
 
@@ -184,7 +186,6 @@ Devemos escolher o número de conglomerados em função do número $n_i$ fixo de
 Essas opções implicam discutir o que leva alguém a escolher um desenho amostral por conglomerado e os prós e contras dessa escolha. Amostrar conglomerados ao invés de indivíduos facilita muito o processo de coleta de dados, por exemplo, ao delimitar as entrevistas a um número bem menor de setores censitários, o que diminui custos e facilita a logística. No entanto, devemos levar em conta o fato de que, provavelmente, integrantes de um mesmo conglomerado são mais ou menos parecidos, ao mesmo tempo que são razoavelmente diferentes dos integrantes dos demais conglomerados. Portanto, na medida em que escolhemos amostrar menos setores censitários e fazer mais entrevistas em cada um deles, a tendência é que a variância do desenho amostral aumente: estamos, ao mesmo tempo, (i) incluindo cada vez menos informações "novas" na amostra ao fazer várias entrevistas em um mesmo setor, e (ii) deixando de coletar informações diferentes de outros setores [@groves2011survey, p. 112-113].
 
 A escolha, portanto, deve ponderar custos operacionais e o efeito negativo que a escolha de um número pequeno de conglomerados tem sobre a variância do desenho. Nesse caso, escolhemos amostrar $80$ setores censitários e amostrar $15$ pessoas em cada um (de fato, uma média das opções disponíveis). Vamos começar calculando a probabilidade de inclusão de cada setor censitário na amostra de maneira proporcional ao seu tamanho:
-
 
 ```{r}
 
@@ -232,7 +233,7 @@ cat(sprintf("Design effect com 80 conglomerados (15 entrevistas em cada): %.3f\n
 
 ```
 
-Apenas por curiosidade científica, podemos também calcular o _design effect_ para os dois desenhos mais extremos, isto é, um (1) em que amostramos $120$ setores censitários e fazemos $10$ entrevistas em cada, e outro (2) em que amostramos $60$ setores censitários e fazemos $20$ entrevistas em cada. De acordo com a literatura, esperamos um _design effect_ menor no primeiro desenho em relação ao segundo, embora ambos devam ter variância amostral maior que o desenho AAS [@groves2011survey, p. 112-113].
+Apenas por curiosidade científica, podemos também calcular o *design effect* para os dois desenhos mais extremos, isto é, um (1) em que amostramos $120$ setores censitários e fazemos $10$ entrevistas em cada, e outro (2) em que amostramos $60$ setores censitários e fazemos $20$ entrevistas em cada. De acordo com a literatura, esperamos um *design effect* menor no primeiro desenho em relação ao segundo, embora ambos devam ter variância amostral maior que o desenho AAS [@groves2011survey, p. 112-113].
 
 ```{r}
 
@@ -260,7 +261,6 @@ design_effect_conglomerados_120 <- var_conglomerados_120 / var_srs
 cat(sprintf("Design effect com 120 conglomerados (10 entrevistas em cada): %.3f\n", design_effect_conglomerados_120))
 
 ```
-
 
 ```{r}
 
@@ -326,9 +326,9 @@ ggplot(df_resultados, aes(x = valor, fill = desenho, color = desenho)) +
 
 ```
 
-De fato, observamos que o desenho com estratificação por distritos e subdistritos possui uma variância amostral menor que o desenho AAS, com amostras mais frequentemente centradas em torno do parâmetro populacional verdadeiro. O desenho por conglomerados com 80 setores censitários e 15 entrevistas em cada possui, por outro lado, uma variância amostral maior -- a distribuição da média amostral apresenta caudas mais pesadas, estimando a média populacional em valores ligeiramente mais extremos do que no desenho AAS. 
+De fato, observamos que o desenho com estratificação por distritos e subdistritos possui uma variância amostral menor que o desenho AAS, com amostras mais frequentemente centradas em torno do parâmetro populacional verdadeiro. O desenho por conglomerados com 80 setores censitários e 15 entrevistas em cada possui, por outro lado, uma variância amostral maior -- a distribuição da média amostral apresenta caudas mais pesadas, estimando a média populacional em valores ligeiramente mais extremos do que no desenho AAS.
 
-Por fim, a @tbl-design apresenta os _design effects_: 
+Por fim, a @tbl-design apresenta os *design effects*:
 
 ```{r}
 #| label: tbl-design
@@ -368,13 +368,12 @@ design_effects_df %>%
   )
 
 ```
-Em linha com o que foi observado no gráfico de distribuições e o que já foi discutido em ocasião anterior, obtivemos um design effect menor que $1$ no desenho estratificado -- mais especificamente, a variância amostral da média no desenho estratificado representa aproximadamente $88.5\%$ da variância do desenho AAS. Trata-se de um resultado marginalmente melhor, que poderia ser mais substantivo a partir da escolha de uma variável de estratificação mais adequada. 
 
-Além disso, encontramos _design effects_ maiores que $1$ em todos os desenhos por conglomerado, indicando que a variância amostral da média é maior nesses casos do que no desenho AAS. De fato, a discussão feita até aqui justifica esse resultado, afinal, a natureza desse desenho amostral normalmente implica maior variância. Observamos também que, quanto maior o número de conglomerados amostrados, menor é o _design effect_, embora todas as variâncias sejam maiores em relação ao desenho AAS. Trata-se de um resultado esperado na medida em que quanto mais informações novas (i.e., de conglomerados diferentes) somos capazes de inserir na amostra, menor é a variância esperada.
+Em linha com o que foi observado no gráfico de distribuições e o que já foi discutido em ocasião anterior, obtivemos um design effect menor que $1$ no desenho estratificado -- mais especificamente, a variância amostral da média no desenho estratificado representa uma fração (grande, infelizmente) da variância do desenho AAS. Trata-se de um resultado marginalmente melhor, que poderia ser mais substantivo a partir da escolha de uma variável de estratificação mais adequada.
 
+Além disso, encontramos *design effects* maiores que $1$ em todos os desenhos por conglomerado, indicando que a variância amostral da média é maior nesses casos do que no desenho AAS. De fato, a discussão feita até aqui justifica esse resultado, afinal, a natureza desse desenho amostral normalmente implica maior variância. Observamos também que, quanto maior o número de conglomerados amostrados, menor é o *design effect*, embora todas as variâncias sejam maiores em relação ao desenho AAS. Trata-se de um resultado esperado na medida em que quanto mais informações novas (i.e., de conglomerados diferentes) somos capazes de inserir na amostra, menor é a variância esperada.
 
 ### Referências
 
 ::: {#refs}
 :::
-
