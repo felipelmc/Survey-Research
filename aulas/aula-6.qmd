@@ -1,0 +1,62 @@
+---
+#bibliography: master.bib
+biblio-style: apsr
+fontsize: 11pt
+author: Felipe Lamarca
+endnote: no
+---
+
+# Desenho de questionários
+
+## Anotações de aula
+
+Teoria do responde guarda muita semelhança com o que vimos do Zaller, mas não exatamente. Zaller foca na recepção e no fato de que as pessoas exercem um filtro na resposta, exercendo algum grau de amostragem mental para responder.
+
+A teoria do respondente assume que as pessoas possuem valores mais ou menos lantentes, mas não valores inatos, mas memórias de longo prazo positivas ou negativas relacionadas a certos aspectos. Tenho uma série de memórias que não me cruzam diariamente, mas que surgem de maneira mais ou menos clara da ideia. Respondentes passam por etapas cognitivas para acessar atitudes da memória de longo-prazo (Touranngeau e Rasinski, 1988).
+ 
+1. Compreensão: entender o enunciado da pergunta
+2. Recuperação: buscar na memória informações necessárias
+3. Julgamento: avaliar e sintetizar informações
+4. Relato: mapear julgamento para resposta
+
+Não existe uma teoria unificada de respostas, mas abordagens enfatizam dois tipos possíveis de processos (Krosnick 1991):
+
+- **Otimizar:** quando pessoas respondem cuidadosa e completamente no mínimo de tempo
+- **Satisficing:** quando usam atalhos ou dão respostas sem esforça
+
+Basicamente existiam dois grupos de pessoas respondendo: algumas que respondem "bruscamente", e outras muito detalhistas. As pessoas que respondiam de forma brusca tendiam, por exemplo, a responder de maneira aquiescente, ou de maneira aleatória, ou lendo apenas as primeiras alternativas... enfim. Quando desenhamos surveys, precisamos minimizar as respostas do tipo "satisficing" e maximizar as respostas ótimas.
+
+No caso do satisficing, as pessoas respondem muito rapidamente, sem pensar; aderem às primeiras opções de resposta razoáveis (e.g., `Sim`, `Muito`); optar por alternativas modais (`0`, `5`, `10`); ignoram perguntas difíceis ou complexas; e respondem "não sei" com frequência, mesmo que não seja uma alternativa. Rapidamente as pessoas ficam cansadas e vão até ao final da pesquisa respondendo "de qualquer maneira".
+
+Para Krosnick, a probabilidade de satisficing é dada por:
+
+$$
+\mathbb{P}(\text{Satisficing}) = \dfrac{\text{Dificuldade}}{\text{Habilidade} \times \text{Motivação}}
+$$
+
+Solução: desenhar questionários de forma a incentivar otimização, que é oposto de satisficing. Podemos controlar três aspectos em diferentes medidas.
+
+- Compreensão, reduzindo a dificuldade do instrumento
+- Recuperação, oferecendo _cues_ -- ganchos ou frases que ajudam a puxar itens da memória. "Pensando nos últimos 7 dias..."; "Falando agora sobre os militares no Haiti que estão no Brasil...".
+
+### Formulação das perguntas
+
+Os princípios gerais de escrita das perguntas:
+
+- Simplicidade
+- Especificidade
+- Instruções
+- Exemplos
+
+Evitar conceitos vagos, negativas (nunca, nunca usar dupla negação), redação complexa e longa. Pré-teste, feito idealmente com uma pessoa de cada segmento, é ideal.
+
+Krosnick sugere também _branching_: Você concorda, sim ou não? E dada a resposta, con/discorda muito ou pouco?
+
+### Texto de recrutamento
+
+Surveys opt-in naturalmente resolvem parte do problema de motivação: auto-seleção recruta em função de motivação. Para outras abordagens, recrutamento importa:
+
+- Evitar abordar pessoas ocupadas
+- Criar ambiente amigável
+- Mensagem de recrutamento persuasiva (tentar motivar a pessoa a participar)
+

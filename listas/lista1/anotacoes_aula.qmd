@@ -1,0 +1,35 @@
+```{r setup, include=FALSE}
+# Pacotes
+library(modelsummary)
+library(tidyverse)
+```
+
+```{r}
+macae <- readRDS("dados/macae.rds")
+```
+
+```{r}
+#| label: fig-aas
+#| fig-cap: "Um gráfico de exemplo"
+macae %>%
+  slice_sample(n = 1200)
+```
+
+```{r}
+props <- macae %>%
+  group_by(distrito) %>%
+  summarise(Nh = n()) %>%
+  mutate(
+    Wh = Nh / sum(Nh),
+    nh = round(Wh * 1200)
+    )
+
+# https://dplyr.tidyverse.org/reference/group_map.html
+macae %>%
+  inner_join(props, by = "distrito") %>%
+  group_by(distrito) %>%
+  # aplica slice_sample a cada grupo usando o nh
+  group_map(~ slice_sample(.x, n = unique(.x$nh), replace = FALSE), .keep = TRUE) %>%
+  bind_rows()
+```
+
