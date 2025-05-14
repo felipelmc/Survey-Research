@@ -1,0 +1,207 @@
+---
+#bibliography: master.bib
+biblio-style: apsr
+fontsize: 11pt
+author: Felipe Lamarca
+endnote: no
+---
+
+# Pós-estratificação
+
+## ## Lumley, T. (2011). _Complex surveys: a guide to analysis using R._ John Wiley & Sons. Chapter 7: Post-stratification, raking, and calibration.
+
+> This chapter deals with techniques for using known population totals for a set of variables (_auxiliary variables_) to adjust the sampling weights and improve estimation for another set of variables. All of these techniques have the same idea: adjustments are made to the sampling weights so that estimated population totals for the auxiliary variables match the known population totals, making the sample more representative of the population. A second benefit is that the estimates are forced to be consistent with the population data, improving their credibility with people who may not understand the sampling process. (p. 135-136)
+
+> Post-stratification adjusts the sampling weights so that the estimated population group sizes are correct, as they would be in stratified sampling. The sampling weights $\frac{1}{\pi_i}$ are replaced by weights $\frac{g_i}{\pi_i}$, where $g_i = \frac{N_i}{\hat{N}_i}$ for the group containing individual $i$.
+
+---
+
+## Anotações de aula
+
+Em amostragem, cada unidade amostral tem um peso. Lemos isso como "quantas unidades na população cada unidade amostrada representa". Se o desenho amostral tiver equiprobabilidade, cada unidade amostrada representa a mesma quantidade de unidade da população e pesos não são necessários.
+
+O estimador ponderado é:
+
+$$
+\hat{Y} = \sum_{i \in s} w_i y_i
+$$
+
+onde $w_i$ é o peso para a unidade $i$ e $y_i$ é a medida extraída do survey.
+
+Considere o seguinte exemplo:
+
+| Área   | Idade | Quantas pessoas ela representa |
+|--------|-------|--------------------------------|
+| ZS     | 25    | 349                            |
+| ZS     | 30    | 482                            |
+
+Nesse caso, indicamos quantas pessoas cada unidade amostral representa. Esse valor é calculado a partir da probabilidade de inclusão da unidade amostral. O peso é o inverso da probabilidade de inclusão. **A ponderação pelo desenho ajusta amostras quando temos probabilidades desiguais de inclusão**: $w_i = \frac{1}{\pi_i}$, onde $\pi_i$ é a probabilidade de inclusão da unidade amostral $i$. Supondo que a probabilidade de inclusão é de 0.25, o peso da unidade amostral é 4. Isso significa que ela representa 4 unidades na população.
+
+Esse estimador também é chamado de estimador de expansão -- o estimador de Horwitz-Thompson. O peso absoluto me diz quantas pessoas de perfil similar uma única pessoa da amostra representa.
+
+$$
+\hat{N} = \sum_{i = 1}^n \frac{y_i}{w_i}
+$$
+
+Note que esse peso é útil para calcular totais populacionais, mas ele é diferente do peso usado para fazer ponderação. Por que ponderar?
+
+- Ponderar pela probabilidade de inclusão quando não temos equiprobabilidade é importante para não incorporar viés na amostra (claro, isso depende de uma amostragem probabilística);
+- Dar maior peso a subgrupos que responderam menos ao survey (não-resposta);
+- Ajustar estimativas com totais populacionais conhecidos (_aka_ calibração)
+
+### Ponderação de ajuste
+
+Problemas com quadro amostral (cobertura, e.g.) e não-resposta de unidade podem introduzir viés se respondentes diferem sistematicamente de não-respondentes:
+
+- Entrevistamos muito menos pessoas mais ricas do que deveríamos;
+- Usamos estratificação com alocação não-proporcional (i.e., regiões pequenas e grandes recebem o mesmo número de entrevistas);
+- Bolsonaristas ou lulistas se recusam mais a responder.
+
+A ponderação duplica, triplica, às vezes quadruplica a informação que temos. Na prática, isso lembra a amostragem por conglomerados, na perspectiva de que estamos aumentando a margem de erro ao não incorporar informações efetivamente novas.
+
+Ideia básica: ajustar os pesos dos respondentes para compensar as unidades ausentes ou sub-representadas. Pesquisa domiciliar probabilística com $n=1000$ entrevistou $380\%$ homens; na população, homens são $50\%$:
+
+$$
+\frac{0.5}{0.38} \ \text{ou} \ \frac{500}{380} \approx 1.315789474
+$$
+
+Cada homem na amostra representa 1.315789474 homens na população. O mesmo vale para mulheres, mas o peso é menor.
+
+### Calibração vs. ponderação
+
+Quando já temos pesos (geralmente do desenho), podemos forçá-los a corresponder a totais populacionais conhecidos em variáveis auxiliares. 
+
+Ponderar é pegar a amostra que eu tenho e tentar aproximá-la de algum benchmark (por exemplo, a população). Calibrar, por outro lado, é pegar um peso que eu já tenho (no mais das vezes, a probabilidade de inclusão) -- supondo que a gente calcule o total populacional e, no entanto, a população brasileira deu $205$ milhões, mas sabemos que a população brasileira é de $203$ milhões. A calibragem ajusta o esquema de pesos para fazer com que o total bata com algum total conhecido da população.
+
+Nesse caso, precisamos encontrar novos pesos $w_i^{\text{Cal}}$ próximos aos pesos iniciais de forma que:
+
+$$
+\sum_{i \in s} w_i^{\text{Cal}} x_i = \sum_{i \in U} x_i = X, 
+$$
+
+onde $X$ é o total populacional ($U$ é a população) conhecido (e.g., total de eleitores) para a variável auxiliar $x_i$. Esse ajuste pode ser feito de várias maneiras: algoritmos iterativos, regressão, etc.
+
+### Pesos e inflação da variância
+
+Pesos de desenho muito grande ou desiguais inflam estimativas. 
+
+> Intuição: uma unidade com peso relativo de $2$ equivale a duplicar a sua entrevista na amostra; para isso, no entanto, precisamos retirar uma unidade de outras unidades da amostra. A solução geralmente é usar tetos ou ajustes para limitar pesos extremos.
+
+### Outros tipos de pós-ajustes em R
+
+- _Rake e iterative proportional fitting_, que ajustam pesos iterativamente para que totais populacionais conhecidos sejam respeitados (pesos relativos);
+- _Generalized regression estimation_ (GREG), que usa modelos de regressão para calibrar pesos;
+- _Multilevel regression and poststratification_ (MrP), que projeta resposta em subgrupos da população (e.g., regiões, idade, sexo) usando modelos de regressão
+
+### Usando o pacote `survey` no R
+
+```{r}
+
+library(tidyverse)
+library(survey)
+
+set.seed(123)
+
+macae <- readRDS("C:/Users/felip/OneDrive/Área de Trabalho/IESP/Survey-Research/listas/lista1/dados/macae.rds")
+
+verdade <- mean(macae$alfabetizada)
+print(verdade)
+
+```
+De maneira naive, podemos estimar a média apenas tirando a média simples da amostra. Devemos esperar algo razoavelmente distoante do parâmetro populacional.
+
+```{r}
+
+amostra <- macae %>%
+  group_by(subdistrito) %>%
+  mutate(pi = 100 / n()) %>%
+  slice_sample(n = 100)
+
+mean(amostra$alfabetizada)
+
+```
+
+Usando o estimador de Horwitz-Thompson, podemos recuperar os pesos absolutos usando a probabilidade de inclusão (i.e., ponderação pela probabilidade de inclusão):
+
+```{r}
+
+amostra <- amostra %>%
+  mutate(peso = 1 / pi)
+
+```
+
+
+Vamos fazer a mesma coisa usando o pacote survey, que nos permite declarar o desenho amostral. Vamos usar as probabilidades de inclusão para "acertar" o cálculo, assim como no exemplo anterior:
+
+```{r}
+
+# todas as observacoes sao intercambiaveis dentro de um estrato, entao ignoramos id (~1)
+metodo1 <- svydesign(~1,
+                     strata = ~subdistrito, # estrato
+                     probs = ~pi, # probabilidades de inclusao para ponderar
+                     data = amostra)
+
+svytotal(~alfabetizada, metodo1)
+svymean(~alfabetizada, metodo1)
+
+```
+Agora, vejamos o método 2: não temos a probabilidade de inclusão, mas tenho os totais populacionais extraídos a partir de alguma outra fonte -- como, por exemplo, o censo demográfico. Eu sei, por exemplo, quantas pessoas moram em cada distrito.
+
+```{r}
+
+# MÉTODO 2: pós-estratificação
+
+# vamos ver o caso naive
+desenho <- svydesign(~id_pessoa,
+                     data = amostra)
+
+# estimamos a média de maneira naive sem ponderar
+svymean(~alfabetizada, desenho)
+
+# agora vamos estratificar
+estratos <- macae %>%
+  group_by(subdistrito) %>%
+  summarise(Freq = n())
+
+# criamos um objeto do tipo postStratify
+metodo2 <- postStratify(desenho, ~subdistrito, estratos)
+
+# calculamos a media usando esse meotod, que estratificou os resultados
+svymean(~alfabetizada, metodo2)
+
+```
+
+Agora passemos ao método 3, que usa Rake:
+
+```{r}
+
+desenho <- svydesign(~id_pessoa,
+                     data = amostra)
+
+# se fossem varias variaveis desbalanceadas, criaria um banco pra cada e 
+# passaria cada um deles na lista
+metodo3 <- rake(desenho, 
+                list(~subdistrito),
+                list(estratos))
+
+svymean(~alfabetizada, metodo3)
+
+```
+Podemos extrair os pesos calculados por cada desenho da seguinte maneira:
+
+```{r}
+
+amostra <- amostra %>%
+  ungroup() %>%
+  mutate(
+    peso_strat = weights(metodo1),
+    peso_pos_strat = weights(metodo2),
+    peso_rake = weights(metodo3)
+  )
+
+head(amostra)
+
+```
+
+Observe que chegamos $\pm$ aos mesmos pesos com cada approach. De fato, são diferentes maneiras de resolver o mesmo problema. 
+

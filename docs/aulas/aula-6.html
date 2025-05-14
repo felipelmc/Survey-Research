@@ -8,7 +8,7 @@
 
 <meta name="author" content="Felipe Lamarca">
 
-<title>Pesquisa de Survey</title>
+<title>6&nbsp; Desenho de questionários – Pesquisa de Survey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,27 +24,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./aulas/aula-2.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-7271f29f9498218151f3120baddb7363.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6c5314280c86e53d2a1a2ca4c5fd5b4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9067a8314a0bb41d06527aea08a6ac86.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-6c5314280c86e53d2a1a2ca4c5fd5b4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../aulas/aula-7.html" rel="next">
+<link href="../aulas/aula-5.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7271f29f9498218151f3120baddb7363.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-7781c6eb1472fb9db0a0b30f037448b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-2bdef70b709a83d3dca112ae8d0a50e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-7781c6eb1472fb9db0a0b30f037448b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -73,8 +74,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -245,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Desenho de questionários</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -260,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Pesquisa de Survey</a> 
+      <a href="../">Pesquisa de Survey</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -275,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
   </div>
 </li>
@@ -290,43 +320,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./aulas/aula-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./aulas/aula-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Erros em survey</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./aulas/aula-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Amostragem I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./aulas/aula-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Amostragem II</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./aulas/aula-6.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-6.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Desenho de questionários</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./aulas/aula-7.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Inferência com Surveys</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./aulas/aula-8.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></span></a>
   </div>
 </li>
@@ -337,16 +367,26 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link active" data-scroll-target="#anotações-de-aula"><span class="header-section-number">6.1</span> Anotações de aula</a>
+  <ul class="collapse">
+  <li><a href="#formulação-das-perguntas" id="toc-formulação-das-perguntas" class="nav-link" data-scroll-target="#formulação-das-perguntas"><span class="header-section-number">6.1.1</span> Formulação das perguntas</a></li>
+  <li><a href="#texto-de-recrutamento" id="toc-texto-de-recrutamento" class="nav-link" data-scroll-target="#texto-de-recrutamento"><span class="header-section-number">6.1.2</span> Texto de recrutamento</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Desenho de questionários</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Pesquisa de Survey</h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Desenho de questionários</span></h1>
 </div>
 
 
@@ -369,13 +409,56 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<blockquote class="blockquote">
-<p>Surveys são, hoje, uma das mais difundidas ferramentas de pesquisa social. Por meio da aplicação de questionários estruturados a uma amostra de determinada população, governos estimam taxas de desemprego e de pobreza; políticos definem estratégias de campanha; institutos de pesquisa identificam tendências de comportamento de diferentes grupos sociais; e empresas investigam a satisfação de seus clientes e testam ações de marketing. A proposta deste curso é oferecer uma introdução panorâmica a este tipo de pesquisa. <a href="ementa.pdf">[ementa]</a></p>
-</blockquote>
-<p><strong>Professor:</strong> Fernando Meireles (IESP-UERJ) <a href="https://fmeireles.com/">[homepage]</a></p>
-<p><strong>Semestre:</strong> 2025.1</p>
+<section id="anotações-de-aula" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">6.1</span> Anotações de aula</h2>
+<p>Teoria do responde guarda muita semelhança com o que vimos do Zaller, mas não exatamente. Zaller foca na recepção e no fato de que as pessoas exercem um filtro na resposta, exercendo algum grau de amostragem mental para responder.</p>
+<p>A teoria do respondente assume que as pessoas possuem valores mais ou menos lantentes, mas não valores inatos, mas memórias de longo prazo positivas ou negativas relacionadas a certos aspectos. Tenho uma série de memórias que não me cruzam diariamente, mas que surgem de maneira mais ou menos clara da ideia. Respondentes passam por etapas cognitivas para acessar atitudes da memória de longo-prazo (Touranngeau e Rasinski, 1988).</p>
+<ol type="1">
+<li>Compreensão: entender o enunciado da pergunta</li>
+<li>Recuperação: buscar na memória informações necessárias</li>
+<li>Julgamento: avaliar e sintetizar informações</li>
+<li>Relato: mapear julgamento para resposta</li>
+</ol>
+<p>Não existe uma teoria unificada de respostas, mas abordagens enfatizam dois tipos possíveis de processos (Krosnick 1991):</p>
+<ul>
+<li><strong>Otimizar:</strong> quando pessoas respondem cuidadosa e completamente no mínimo de tempo</li>
+<li><strong>Satisficing:</strong> quando usam atalhos ou dão respostas sem esforça</li>
+</ul>
+<p>Basicamente existiam dois grupos de pessoas respondendo: algumas que respondem “bruscamente”, e outras muito detalhistas. As pessoas que respondiam de forma brusca tendiam, por exemplo, a responder de maneira aquiescente, ou de maneira aleatória, ou lendo apenas as primeiras alternativas… enfim. Quando desenhamos surveys, precisamos minimizar as respostas do tipo “satisficing” e maximizar as respostas ótimas.</p>
+<p>No caso do satisficing, as pessoas respondem muito rapidamente, sem pensar; aderem às primeiras opções de resposta razoáveis (e.g., <code>Sim</code>, <code>Muito</code>); optar por alternativas modais (<code>0</code>, <code>5</code>, <code>10</code>); ignoram perguntas difíceis ou complexas; e respondem “não sei” com frequência, mesmo que não seja uma alternativa. Rapidamente as pessoas ficam cansadas e vão até ao final da pesquisa respondendo “de qualquer maneira”.</p>
+<p>Para Krosnick, a probabilidade de satisficing é dada por:</p>
+<p><span class="math display">\[
+\mathbb{P}(\text{Satisficing}) = \dfrac{\text{Dificuldade}}{\text{Habilidade} \times \text{Motivação}}
+\]</span></p>
+<p>Solução: desenhar questionários de forma a incentivar otimização, que é oposto de satisficing. Podemos controlar três aspectos em diferentes medidas.</p>
+<ul>
+<li>Compreensão, reduzindo a dificuldade do instrumento</li>
+<li>Recuperação, oferecendo <em>cues</em> – ganchos ou frases que ajudam a puxar itens da memória. “Pensando nos últimos 7 dias…”; “Falando agora sobre os militares no Haiti que estão no Brasil…”.</li>
+</ul>
+<section id="formulação-das-perguntas" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="formulação-das-perguntas"><span class="header-section-number">6.1.1</span> Formulação das perguntas</h3>
+<p>Os princípios gerais de escrita das perguntas:</p>
+<ul>
+<li>Simplicidade</li>
+<li>Especificidade</li>
+<li>Instruções</li>
+<li>Exemplos</li>
+</ul>
+<p>Evitar conceitos vagos, negativas (nunca, nunca usar dupla negação), redação complexa e longa. Pré-teste, feito idealmente com uma pessoa de cada segmento, é ideal.</p>
+<p>Krosnick sugere também <em>branching</em>: Você concorda, sim ou não? E dada a resposta, con/discorda muito ou pouco?</p>
+</section>
+<section id="texto-de-recrutamento" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="texto-de-recrutamento"><span class="header-section-number">6.1.2</span> Texto de recrutamento</h3>
+<p>Surveys opt-in naturalmente resolvem parte do problema de motivação: auto-seleção recruta em função de motivação. Para outras abordagens, recrutamento importa:</p>
+<ul>
+<li>Evitar abordar pessoas ocupadas</li>
+<li>Criar ambiente amigável</li>
+<li>Mensagem de recrutamento persuasiva (tentar motivar a pessoa a participar)</li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -792,10 +875,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../aulas/aula-5.html" class="pagination-link" aria-label="Amostragem II">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Amostragem II</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./aulas/aula-2.html" class="pagination-link" aria-label="O que são e para que servem pesquisas de survey">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../aulas/aula-7.html" class="pagination-link" aria-label="Inferência com Surveys">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Inferência com Surveys</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

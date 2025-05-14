@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.23">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Felipe Lamarca">
+
+<title>7&nbsp; Inferência com Surveys – Pesquisa de Survey</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../aulas/aula-8.html" rel="next">
+<link href="../aulas/aula-6.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7271f29f9498218151f3120baddb7363.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-7781c6eb1472fb9db0a0b30f037448b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-2bdef70b709a83d3dca112ae8d0a50e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-7781c6eb1472fb9db0a0b30f037448b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    window.setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      window.setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    window.hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(darkModeDefault) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const darkModeDefault = false;
+    document.querySelector('link.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !window.hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+    };
+    // Switch to dark mode if need be
+    if (window.hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-7.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Inferência com Surveys</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Pesquisa de Survey</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Aulas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Erros em survey</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Amostragem I</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Amostragem II</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Desenho de questionários</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-7.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Inferência com Surveys</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-10." id="toc-groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-10." class="nav-link active" data-scroll-target="#groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-10."><span class="header-section-number">7.1</span> Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., &amp; Tourangeau, R. (2011). <em>Survey methodology</em>. John Wiley &amp; Sons. Cap. 10.</a>
+  <ul class="collapse">
+  <li><a href="#coding" id="toc-coding" class="nav-link" data-scroll-target="#coding"><span class="header-section-number">7.1.1</span> Coding</a></li>
+  <li><a href="#editing" id="toc-editing" class="nav-link" data-scroll-target="#editing"><span class="header-section-number">7.1.2</span> Editing</a></li>
+  <li><a href="#weighting" id="toc-weighting" class="nav-link" data-scroll-target="#weighting"><span class="header-section-number">7.1.3</span> Weighting</a></li>
+  </ul></li>
+  <li><a href="#lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-caps.-12" id="toc-lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-caps.-12" class="nav-link" data-scroll-target="#lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-caps.-12"><span class="header-section-number">7.2</span> Lumley, T. (2011). <em>Complex surveys: a guide to analysis using R.</em> John Wiley &amp; Sons. Caps. 1–2</a>
+  <ul class="collapse">
+  <li><a href="#chapter-1-basic-tools" id="toc-chapter-1-basic-tools" class="nav-link" data-scroll-target="#chapter-1-basic-tools"><span class="header-section-number">7.2.1</span> Chapter 1: Basic Tools</a></li>
+  <li><a href="#chapter-2-simple-and-stratified-sampling" id="toc-chapter-2-simple-and-stratified-sampling" class="nav-link" data-scroll-target="#chapter-2-simple-and-stratified-sampling"><span class="header-section-number">7.2.2</span> Chapter 2: Simple and Stratified Sampling</a></li>
+  </ul></li>
+  <li><a href="#shirani-mehr-h.-rothschild-d.-goel-s.-gelman-a.-2018.-disentangling-bias-and-variance-in-election-polls.-journal-of-the-american-statistical-association-113522-607614." id="toc-shirani-mehr-h.-rothschild-d.-goel-s.-gelman-a.-2018.-disentangling-bias-and-variance-in-election-polls.-journal-of-the-american-statistical-association-113522-607614." class="nav-link" data-scroll-target="#shirani-mehr-h.-rothschild-d.-goel-s.-gelman-a.-2018.-disentangling-bias-and-variance-in-election-polls.-journal-of-the-american-statistical-association-113522-607614."><span class="header-section-number">7.3</span> Shirani-Mehr, H., Rothschild, D., Goel, S., &amp; Gelman, A. (2018). Disentangling bias and variance in election polls. <em>Journal of the American Statistical Association</em>, 113(522), 607–614.</a></li>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">7.4</span> Anotações de aula</a>
+  <ul class="collapse">
+  <li><a href="#conceitos-importantes" id="toc-conceitos-importantes" class="nav-link" data-scroll-target="#conceitos-importantes"><span class="header-section-number">7.4.1</span> Conceitos importantes</a></li>
+  <li><a href="#teorema-central-do-limite" id="toc-teorema-central-do-limite" class="nav-link" data-scroll-target="#teorema-central-do-limite"><span class="header-section-number">7.4.2</span> Teorema Central do Limite</a></li>
+  <li><a href="#incerteza" id="toc-incerteza" class="nav-link" data-scroll-target="#incerteza"><span class="header-section-number">7.4.3</span> Incerteza</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-7.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Inferência com Surveys</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Inferência com Surveys</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Felipe Lamarca </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-10." class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-10."><span class="header-section-number">7.1</span> Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., &amp; Tourangeau, R. (2011). <em>Survey methodology</em>. John Wiley &amp; Sons. Cap. 10.</h2>
+<blockquote class="blockquote">
+<p>The outcome of the reordering of activities is that computer-assisted surveys must make all the design decisions about data entry protocols and editing during the process of developing the questionnaire. A further implication of the combination of collection, entry, and editing is that the surveys collecting only numeric answers can entirely skip the coding step. (p.&nbsp;330)</p>
+</blockquote>
+<blockquote class="blockquote">
+<ol type="1">
+<li><p>Coding – the process of turning word answers into numeric answers</p></li>
+<li><p>Data entry – the process of entering numeric data into files</p></li>
+<li><p>Editing – the examination of recorded answers to detect errors and inconsistencies</p></li>
+<li><p>Inputation – the repair of item-missing data by placing an answers in a data field</p></li>
+<li><p>Weighting – the adjustment of computations of survey statistics to counteract harmful effects of noncoverage, nonresponse, or unequal probabilies of selection into the sample</p></li>
+<li><p>Sampling variance estimation – the computation of estimates of the instability of survey statistics (from any statistical error that are measurable under the design) (p.&nbsp;330-331)</p></li>
+</ol>
+</blockquote>
+<section id="coding" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="coding"><span class="header-section-number">7.1.1</span> Coding</h3>
+<blockquote class="blockquote">
+<p>To be useful, codes must have the following attributes:</p>
+<ol type="1">
+<li><p>A unique number, used later for statistical computing</p></li>
+<li><p>A text label, designed to describe all the answers assigned to the category</p></li>
+<li><p>Total exhaustive treatment of answers (all responses should be able to be assigned to a category)</p></li>
+<li><p>Mutual exclusivity (no single response should be assignable to more than one category)</p></li>
+<li><p>A number of unique categories that fit the purpose of the analyst (p.&nbsp;332)</p></li>
+</ol>
+</blockquote>
+</section>
+<section id="editing" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="editing"><span class="header-section-number">7.1.2</span> Editing</h3>
+<blockquote class="blockquote">
+<p>There is some consensus on desirable properties of editing systems. These include the use of explicit rules linked to concepts being measured; the ability to replicate the results; editing shifted to rule-based, computer-assisted routines to save money; minimal distortion of data recorded on the questionnaire; the desirability of coordinating editing and imputation; and the criterion that when all is finished, all records pass all edit checks. The future of editing will not resemble in its past. Editing systems will change as computer assistance moves to earlier points in the survey process and becomes integrated with other steps in the survey. It is likely that editing after data collection will decline. It is likely that software systems will increasingly incorporate the knowledge of subject matter experts. (p.&nbsp;347)</p>
+</blockquote>
+</section>
+<section id="weighting" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="weighting"><span class="header-section-number">7.1.3</span> Weighting</h3>
+<blockquote class="blockquote">
+<p>Surveys with complex sample designs often also have unequal probabilities of selection, variation in response rates across important subgroups, and departures from distributions on key variables that are known from outside sources for the population. It is common within complex sample surveys to generate weights to compensate for each of these features. (p.&nbsp;348)</p>
+</blockquote>
+<section id="weighting-for-differential-selection-probabilities" class="level4" data-number="7.1.3.1">
+<h4 data-number="7.1.3.1" class="anchored" data-anchor-id="weighting-for-differential-selection-probabilities"><span class="header-section-number">7.1.3.1</span> Weighting for Differential Selection Probabilities</h4>
+<blockquote class="blockquote">
+<p>THe growing Latino population, and differences in crime victimization between Latino and non-Latino populations, raise the question whether the number of Latino persons in the NCVS, under the overall sample of <span class="math inline">\(125,000\)</span>, is sufficient. Suppose that one person in eight aged 12 years and older is Latino, or a total population of just about <span class="math inline">\(25\)</span> million. If an epsem sample were selection, the sample would have <span class="math inline">\(15,625\)</span> Latinos and <span class="math inline">\(109,375\)</span> non-Latinos. That is, under proportionate allocation, one person in eight in the sample would be Latino as well. The sample results could be combined across Latino and non-Latino populations with no need for weights to compensate for overrepresentation of one group. (p.&nbsp;349)</p>
+</blockquote>
+<p>Suppose we want to estimate statistics of interest with more precision for Latinos. So we increase the the number of Latinos in the sample to <span class="math inline">\(62,500\)</span>. This is totally okay when our goals is to compute statistics for each group separatelly. However, …:</p>
+<blockquote class="blockquote">
+<p>There is a problem though, when the data need to be combined across the groups. The need for combining across groups might arise because of a call for national estimates that ignore ethnicity, or the need for data on a “crossclass” that has sample persons who are Latino as well as non-Latino, such as women. (p.&nbsp;349-350)</p>
+<p>When combining across these groups to get estimates for the entire population, ignoring ethnicity, something must be done to compensate for the substantial overrepresentation of Latinos in the sample. Weights in a weighted analysis applied to individual values are one way to accomplish this adjustment. Recall that the weighted mean can be computed, when individual level weights are available, as</p>
+<p><span class="math display">\[
+\bar{y}_n = \dfrac{\sum^{i = 1}^n w_i \times y_i}{\sum_{i = 1}^n w_i}
+\]</span></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>When data are combined across groups, this weighting decreases the contribution of values for a variable for Latinos the 1/7th the contribution of non-Latinos. This adjustment allows the sample cases to contribute to estimates for the total population in a correct proportionate share. (p.&nbsp;350)</p>
+</blockquote>
+</section>
+<section id="weighting-to-adjust-for-unit-nonresponse" class="level4" data-number="7.1.3.2">
+<h4 data-number="7.1.3.2" class="anchored" data-anchor-id="weighting-to-adjust-for-unit-nonresponse"><span class="header-section-number">7.1.3.2</span> Weighting to Adjust for Unit Nonresponse</h4>
+<blockquote class="blockquote">
+<p>In the initial sample, there are an equal number of persons aged 12-44 and 4 years or older. Thus, the nonresponse mechanism has led to an overrepresentation of older persons among the respondents.</p>
+<p>To compensate for this overrepresentation, an assumption is made in survey nonresponse weighting that generates the same kind of weighting adjustments discussed for unequal probabilities of selection. If one is willing to assume that within subgroups (in this case, age groups) the respondents are a random sample of all sample persons, then the response rate in the group represents a sampling rate. This assumption is referred to as the “missing at random” assumption, and is the basis for mich nonresponse adjusted weights. <strong>The inverse of the response rate can thus be used as a weight to restore the respondent distribution to the original sample distribution</strong>. (p.&nbsp;352)</p>
+</blockquote>
+</section>
+<section id="putting-all-the-weights-together" class="level4" data-number="7.1.3.3">
+<h4 data-number="7.1.3.3" class="anchored" data-anchor-id="putting-all-the-weights-together"><span class="header-section-number">7.1.3.3</span> Putting All the Weights Together</h4>
+<blockquote class="blockquote">
+<p>Finally, to obtain a final weight than can be incorporate the first-stage ratio adjustment (<span class="math inline">\(W_{i1}\)</span>), the unequal probability of selection adjustment (<span class="math inline">\(w_{i2}\)</span>), nonresponse adjustment (<span class="math inline">\(w_{i3}\)</span>), and poststratification (<span class="math inline">\(W_{i4}\)</span>), a final product of all four weights is assigned to each of eight classes […]. (p.&nbsp;352)</p>
+</blockquote>
+</section>
+<section id="sampling-variance-estimation-for-complex-samples" class="level4" data-number="7.1.3.4">
+<h4 data-number="7.1.3.4" class="anchored" data-anchor-id="sampling-variance-estimation-for-complex-samples"><span class="header-section-number">7.1.3.4</span> Sampling Variance Estimation for Complex Samples</h4>
+<blockquote class="blockquote">
+<p>Survey datasets based on stratified multistage samples with weights designed to compensate for unequal probabilities of selection or nonresponse are sometimes referred to as “complex survey data”. Estimation of sampling variances for statistics from these kinds of data require widely available specialized software systems using one of three procedures: the Taylor series approximation, balanced repeated replication, or jackknife repeated replication.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em>Taylor Series Estimation</em> […]. The Taylor series approximation handles this difficulty by converting a ratio into an approximation that does not involve ratios, but instead is a function of sums of sample values. […]. For example, the variance for a simple ration mean like</p>
+<p><span class="math display">\[
+\bar{y}_n = \dfrac{\sum^{i = 1}^n w_i \times y_i}{\sum_{i = 1}^n w_i}
+\]</span></p>
+<p>using a Taylor series approximation (assuming simple random sampling, for simplicity) is</p>
+<p><span class="math display">\[
+\dfrac{1}{(\sum w_i)^2} [ \text{Var}(\sum w_i y_i) + \bar{y}_w^2 \text{Var}(\sum w_i) - 2 \bar{y}_w \text{Cov}(\sum w_i y_i, \sum w_i) ]
+\]</span></p>
+<p>This looks complicated but is just a combination of the types of calculations that are made for the simple random sample variance estimates (see for example the computations on page 99). (p.&nbsp;360)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em>Balanced Repeated Replication and Jackknife Replication</em> The balanced repeated and jackknife repeated methods take and entirely different approach. Rather tha attempting to find an analytic solution to the problem of estimating the sampling variance of a statistic, they rely on repeated subsampling. One can think of repeated replication as being similar to drawing not one but many samples from the same population at the same time. For each sample, an estimate of same statistic, say the mean <span class="math inline">\(\bar{y}_\gamma\)</span>, is computed for each sample <span class="math inline">\(\gamma\)</span>.</p>
+</blockquote>
+<p>In that case, the mean is <span class="math inline">\(\bar{y} = \frac{1}{c} \sum^c_{\gamma = 1} = \bar{y}_\gamma\)</span>, and the variance is <span class="math inline">\(v(\bar{y}) = \frac{1}{c(c-1)} \sum^c_{\gamma = 1} (\bar{y}_\gamma - \bar{y})^2\)</span></p>
+<blockquote class="blockquote">
+<p>The strength of this approach to estimating the sampling variance of a statistic is that it can be applied to almost any kind of statistic: means, proportions, regression coefficients, and medians. Using these procedures requires thousands of calculations made feasible only with high-speed computing. (p.&nbsp;361)</p>
+</blockquote>
+<p>There are differences between the balanced repeated replication and the jackknife replication, but the results are remarkably similar (p.&nbsp;361). “The Taylor series approximation is the most commonly used approach, but that does not mean that it provides a more precise or accurate estimate of variance than the other procedures.” (p.&nbsp;361)</p>
+</section>
+</section>
+</section>
+<section id="lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-caps.-12" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-caps.-12"><span class="header-section-number">7.2</span> Lumley, T. (2011). <em>Complex surveys: a guide to analysis using R.</em> John Wiley &amp; Sons. Caps. 1–2</h2>
+<section id="chapter-1-basic-tools" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="chapter-1-basic-tools"><span class="header-section-number">7.2.1</span> Chapter 1: Basic Tools</h3>
+<blockquote class="blockquote">
+<p>The mathematical development for most of statistics is <em>model-based</em>, and relies on specifying a probability model for the random process that generates the data. […]. To the extent that the model represents the process that generated the data, it is possible to draw conclusions that can be generalized to other situations where the same process operates. As the model can only ever be an approximation, it is important (but often difficult) to know what sort of departures from the model will invalidate the analysis. (p.&nbsp;1)</p>
+<p>The analysis of complex survey samples, in contrast, is usually <em>design-based</em>. The researcher specifies a population, whose data values are unknown but are regarded as fixed, not random. The observed sample is random because it depends on the random selection of individuals from this fixed population. The random selection procedure of individuals (the <em>sample design</em>) is under the control of the reseacher, so all the probabilities involved can, in principle, be known precisely. The goal of the analysis is to estimate features of the fixed population, and design-based inference does not support generalizing findings to other populations. (p.&nbsp;2)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>It is important to remember that what makes a <em>probability sample</em> is the procedure for taking samples from a population, not just the data we happen to end up with. (p.&nbsp;3)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The fundamental statistical idea behind all of design-based inference is that an individual sampled with a sampling probability of <span class="math inline">\(\pi_i\)</span> represents <span class="math inline">\(1/\pi_i\)</span> individuals in the population. The value <span class="math inline">\(1/\pi_i\)</span> is called the <em>sampling weight</em>. (p.&nbsp;4)</p>
+</blockquote>
+<p>Por exemplo, se amostramos 3.500 indivíduos de uma população de 350.000, então a probabilidade de seleção de cada indivíduo é <span class="math inline">\(\pi_i = 3.500/350.000 = 0.01\)</span>. Assim, cada indivíduo amostrado representa <span class="math inline">\(1/\pi_i = 100\)</span> indivíduos na população.</p>
+<p>O Estimador de Horvitz-Thompson é um estimador de média populacional que leva em consideração os pesos amostrais. Ele é dado por:</p>
+<blockquote class="blockquote">
+<p>If X_i is a measurement of variable X on person <span class="math inline">\(i\)</span>, we write:</p>
+<p><span class="math display">\[
+\hat{X_i} = \frac{1}{\pi_i} X_i
+\]</span></p>
+</blockquote>
+<p>Com isso, o estimador para o total populacional <span class="math inline">\(\hat{T}\)</span> é dado por:</p>
+<p><span class="math display">\[
+\hat{T}_X = \sum_{i=1}^n \hat{X_i} = \sum_{i=1}^n \frac{1}{\pi_i} X_i
+\]</span></p>
+<p>A variância do estimador de Horvitz-Thompson é dada por:</p>
+<p><span class="math display">\[
+\text{Var}(\hat{T}_X) = \sum_{i, j} \left( \dfrac{X_i X_j}{\pi_{ij}} - \dfrac{X_i}{\pi_i} \dfrac{X_j}{\pi_j} \right)
+\]</span></p>
+<blockquote class="blockquote">
+<p>Knowing the formula for the variance estimator is less important to the applied user, but it is useful to note two things. The first is that the formula applies to any design, however complicated, where <span class="math inline">\(\pi_i\)</span> and <span class="math inline">\(\pi_{ij}\)</span> are known for the sampled observations. The second is that the formula depends on the pairwise sampling probabilities <span class="math inline">\(\pi_{ij}\)</span>, not just on the sampling weights; this is how correlations in the sampling design enter the computations. (p.&nbsp;5)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>If the necessary sample size for a given level of precision is known for a simple random sample, the sample size for a complex design can be obtained by multiplying by the design effect. While the design effect will not be known in advance, some useful guidance can be obtained by looking at design effects reported for other similar surveys. (p.&nbsp;6)</p>
+</blockquote>
+</section>
+<section id="chapter-2-simple-and-stratified-sampling" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="chapter-2-simple-and-stratified-sampling"><span class="header-section-number">7.2.2</span> Chapter 2: Simple and Stratified Sampling</h3>
+<blockquote class="blockquote">
+<p>The population mean of X can be estimated by dividing the estimated total by the population size, N</p>
+<p><span class="math display">\[
+\hat{\mu}_X = \frac{1}{N} \sum^n_{i = 1} \hat{X}_i = \frac{1}{n} \sum^n_{i = 1} X_i
+\]</span></p>
+<p>so the estimate is just the sample average. The variance estimate is obtained by dividing the variance estimate for the total by <span class="math inline">\(N^2\)</span>: <span class="math display">\[
+\hat{\text{var}}[\hat{\mu}_X] = \frac{N - n}{N} \times \frac{\hat{\text{var}}[X]}{n}
+\]</span></p>
+<p>and the standard error of the mean is the square root of <span class="math inline">\(\hat{\text{var}}[\hat{\mu}_X]\)</span>. This formula shows that the uncertainty in the mean is not very sensitive to the population size as long as the population is much larger than the sample. A sample of 100 people gives the same uncertainty about the mean of a population of 10.000 or 100.000.0000. (p.&nbsp;18)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Confidence intervals for estimates are computed by using a Normal distribution for the estimate, ie, for a 95% confidence interval adding and subtracting 1.96 standard errors. This is not the same as assuming a Normal distribution for the data. Under the simple random sampling and the other sampling designs in this book the distribution of estimates across repeated surveys will be close to a Normal distribution (from the Central Limit Theorem) as long as the sample size is large enough and the estimate is not too strongly influenced by the values of just a few observations. (p.&nbsp;19)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[Caso da amostragem estratificada] Since a stratified sample is just a set of simple random samples from each stratum, the Horvitz-Thompson estimator of the total is just the sum of the estimated totals in each stratum and its variance is the sum of the estimated variances in each stratum. The population mean is estimated by dividing the estimated population total by the population size <span class="math inline">\(N\)</span>.</p>
+</blockquote>
+</section>
+</section>
+<section id="shirani-mehr-h.-rothschild-d.-goel-s.-gelman-a.-2018.-disentangling-bias-and-variance-in-election-polls.-journal-of-the-american-statistical-association-113522-607614." class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="shirani-mehr-h.-rothschild-d.-goel-s.-gelman-a.-2018.-disentangling-bias-and-variance-in-election-polls.-journal-of-the-american-statistical-association-113522-607614."><span class="header-section-number">7.3</span> Shirani-Mehr, H., Rothschild, D., Goel, S., &amp; Gelman, A. (2018). Disentangling bias and variance in election polls. <em>Journal of the American Statistical Association</em>, 113(522), 607–614.</h2>
+<blockquote class="blockquote">
+<p>It has long been known that the margins of errors provided by survey organizations, and reported in the news, understate the total survey error. This is an important topic in sampling but is difficult to address in general for two reasons. First, we like to decompose error into bias and variance, but this can only be done with any precision if we have a large number of surveys and outcomes – not merely a large number of respondents in an individual survey. Second, assessment of error requires a ground truth for comparison, which is tipically not available, as the reason for conducting a sample survey in the first place is to estimate some population characteristic that is not already known. (p.&nbsp;607)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Election polls typically survey a random sample of eligible or likely voters, and then generate population-level estimates by taking a weighted average of responses, where the weights are designed to correct for known differences between sample and population. This general analysis framework yields both a point estimate of the election outcome, and also an estimate of the error in that prediction due to sample variance which accounts for the survey weights (Lohr 2009). In practice, however, polling organizations often use the weights only in computing estimates, ignoring them when computing standard errors and instead reporting 95% margins of error based on the formula for simple random sampling (SRS) – for example, <span class="math inline">\(\pm 3.5\)</span> percentage points for an election survey with 800 people. Appropriate correction for the “design effect” corresponding to unequal weights would increase margins of error (see, for example, Mercer (2016)).</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Figure 1 shows the distribution of these differences, where positive values on the <span class="math inline">\(x\)</span>-axis indicate the Republican candidate received more support in the poll than in the election. We repeat this process separately for senatorial, gubernatorial, and presidential polls. For comparison, the dotted lines show the theoretical distribution of polling errors assuming SRS. Specifically, for each senate poll <span class="math inline">\(i\)</span>, we first simulate an SRS polling result by drawing a sample from a binomial distribution with parameters <span class="math inline">\(n_i\)</span> and <span class="math inline">\(v_{r[i]}\)</span>, where <span class="math inline">\(n_i\)</span> is the number of respondents in poll <span class="math inline">\(i\)</span> who express a preference for one of the two major-party candidates, and <span class="math inline">\(v_{r[i]}\)</span> is the final two-party vote share of the Republican candidate in the corresponding election <span class="math inline">\(r[i]\)</span>. (p.&nbsp;609)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The senatorial and gubernatorial polls, in particular, have substantially larger RMSE (3.7% and 3.9%, respectively) than SRS (2.0% and 2.1%, respectively). In contrast, the RMSE for state-level presidential polls is 2.5%, not much larger than one would expect from SRS (2.0%). (p.&nbsp;609)</p>
+</blockquote>
+<hr>
+</section>
+<section id="anotações-de-aula" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">7.4</span> Anotações de aula</h2>
+<section id="conceitos-importantes" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="conceitos-importantes"><span class="header-section-number">7.4.1</span> Conceitos importantes</h3>
+<ul>
+<li>Parâmetro: medida na população</li>
+<li>Estatística: medida calculada na amostra</li>
+<li>Estimador: procedimento para calcular uma estatística a partir de dados amostrais</li>
+</ul>
+<p>A gente aproxima o valor de um determinado parâmetro usando estatísticas amostrais. Podemos falar, na prática, de estimadores para calcular parâmetros e estatísticas.</p>
+</section>
+<section id="teorema-central-do-limite" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="teorema-central-do-limite"><span class="header-section-number">7.4.2</span> Teorema Central do Limite</h3>
+<p>Estimadores são variáveis aleatórias que dependem do resultado da amostra, o que significa que há uma distribuição associada a cada estimador. Pelo Teorema Central do Limite, para amostras geralmente <span class="math inline">\(n&gt;30\)</span>, começamos a nos aproximar de uma distribuição normal.</p>
+<p>Temos um processo gerador de dados desconhecido e queremos estimar, no caso de uma Binomial, por exemplo, o parâmetro de sucesso. Mas existe algo que eu tenho: o <span class="math inline">\(n\)</span>. A maior parte das distribuições que tem a ver com a amostragem possuem dois parâmetros: o tamanho da amostra (que eu tenho, e eu que defino, e portanto consigo calcular incerteza) e o <span class="math inline">\(\bar{y}\)</span>, que eu não tenho.</p>
+<p>Quando estamos falando de um desenho amostral, podemos gerar um número finito de amostras. Cada uma dessas amostras me gera uma estatística e, quando plotamos essas <span class="math inline">\(n\)</span> estatísticas, para <span class="math inline">\(n &gt; 30\)</span>, a distribuição da estatística amostral se aproximará de uma distribuição amostral.</p>
+</section>
+<section id="incerteza" class="level3" data-number="7.4.3">
+<h3 data-number="7.4.3" class="anchored" data-anchor-id="incerteza"><span class="header-section-number">7.4.3</span> Incerteza</h3>
+<p>Usamos a <strong>variância amostral</strong> para medir a dispersão das estatísticas amostrais:</p>
+<p><span class="math display">\[
+s^2 = \dfrac{\sum (y_i - \bar{y})^2}{n-1}
+\]</span></p>
+<p>Note que, para fazer isso, calculamos primeiro a média.</p>
+<p>Outra forma de medir incerteza é usando o erro-padrão. A variância amostral penaliza pontos mais distantes da média elevando-os ao quadrado e, além disso, é uma medida positiva. O erro-padrão é uma espécie de correção pra isso, mas não só: a gente também leva em consideração o tamanho da amostra.</p>
+<p><span class="math display">\[
+\text{SE}_\bar{y} = \sqrt{\dfrac{s^2}{n}} = \dfrac{s}{\sqrt{n}},
+\]</span> onde <span class="math inline">\(s = \sqrt{s^2}\)</span> é o desvio-padrão da amostra. Na prática, voltamos para a escala original do dado, então a gente consegue calcular uma margem de erro de maneira mais simples.</p>
+<p><strong>Ponto essencial</strong>: se a distribuição amostral de vários estimadores parece normal, usamos a função de densidade normal para calcular a probabilidade de uma estimativa cair em um intervalo. A PDF da normal é:</p>
+<p><span class="math display">\[
+f(x) = \dfrac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}},
+\]</span></p>
+<p>onde <span class="math inline">\(\mu\)</span> é a média da distribuição e <span class="math inline">\(\sigma^2\)</span> é a variância. Na função de probabilidade, você pluga um número e ela te diz a probabilidade de aquele número ter sido gerado por aquela função. Mais especificamente, quando plugamos a média e o desvio padrão, a PDF da normal retorna a probabilidade de um número pertencer àquele intervalo.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>macae <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"C:/Users/felip/OneDrive/Área de Trabalho/IESP/Survey-Research/listas/lista1/dados/macae.rds"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># extraímos uma amostra n=50</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>am <span class="ot">&lt;-</span> macae <span class="sc">%&gt;%</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># media, \bar{y}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>media <span class="ot">&lt;-</span> <span class="fu">sum</span>(am<span class="sc">$</span>alfabetizada) <span class="sc">/</span> <span class="fu">nrow</span>(am)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(media)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.86</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># variancia, $s^2$</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> (am<span class="sc">$</span>alfabetizada <span class="sc">-</span> media)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="fu">sum</span>(var) <span class="sc">/</span> (<span class="fu">nrow</span>(am) <span class="sc">-</span> <span class="dv">1</span>) <span class="co"># tiramos 1 se for uma amostra</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(var)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1228571</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># erro padrao, SE_\bar{y}, na escala do dado original</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>sd_y <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(var)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>se_y <span class="ot">&lt;-</span> sd_y <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">nrow</span>(am))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(se_y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.04956958</code></pre>
+</div>
+</div>
+<p>Com isso temos uma margem de erro e um intervalo de confiança:</p>
+<p><span class="math display">\[
+\text{ME} = 1.96 \times \text{SE}_\bar{y} \\
+\text{IC}_{95\%} = \bar{y} \pm\ \text{ME}
+\]</span> Parece bom, mas é uma aproximação.</p>
+<p>No caso de proporções, margens de erro não são simétricas; isto é, estimativas mais próximas de <span class="math inline">\(0\)</span> ou <span class="math inline">\(1\)</span> têm margens de erro menores (porque os limites <em>forçam</em> redução nas margens). Em termos práticos, a variância de proporção assume uma distribuição binomial, e não normal.</p>
+<p>Vamos usar um exemplo da taxa de alfabetização em Macaé. Imagine que tiramos a seguinte amostra <span class="math inline">\(n=50\)</span>. A variância aqui é <span class="math inline">\(\frac{p(1-p)}{n}\)</span>, onde <span class="math inline">\(p\)</span> é a proporção (ou seja, a média) da amostra. Temos a estatística <span class="math inline">\(\hat{p}\)</span> e <span class="math inline">\(v(\hat{p})\)</span>. O erro padrão nesse caso é apenas a raiz quadrada da variância, sem dividir pelo <span class="math inline">\(\sqrt{n}\)</span>.</p>
+<p>A depender do meu valor de <span class="math inline">\(p\)</span>, a coisa vai mudar. Quando eu estimo alguma coisa que é muito pouco prevalente, <span class="math inline">\(p\)</span> é muito pequeno e a margem de erro também fica muito pequena, porque eu não tenho probabilidades menores que zero, então eu só tenho incerteza “do outro lado”.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    window.setColorSchemeToggle(window.hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../aulas/aula-6.html" class="pagination-link" aria-label="Desenho de questionários">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Desenho de questionários</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../aulas/aula-8.html" class="pagination-link" aria-label="Pós-estratificação">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

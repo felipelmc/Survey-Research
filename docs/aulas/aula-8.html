@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Felipe Lamarca">
 
-<title>2&nbsp; O que são e para que servem pesquisas de survey – Pesquisa de Survey</title>
+<title>8&nbsp; Pós-estratificação – Pesquisa de Survey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../aulas/aula-3.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../aulas/aula-7.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -42,9 +77,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6c5314280c86e53d2a1a2ca4c5fd5b4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-9067a8314a0bb41d06527aea08a6ac86.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-6c5314280c86e53d2a1a2ca4c5fd5b4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-7781c6eb1472fb9db0a0b30f037448b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-2bdef70b709a83d3dca112ae8d0a50e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-7781c6eb1472fb9db0a0b30f037448b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -274,7 +309,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-8.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -319,7 +354,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../aulas/aula-2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../aulas/aula-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></span></a>
   </div>
 </li>
@@ -355,7 +390,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../aulas/aula-8.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-8.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></span></a>
   </div>
 </li>
@@ -371,19 +406,14 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#anotações-das-leituras" id="toc-anotações-das-leituras" class="nav-link active" data-scroll-target="#anotações-das-leituras"><span class="header-section-number">2.1</span> Anotações das leituras</a>
+  <li><a href="#lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration." id="toc-lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration." class="nav-link active" data-scroll-target="#lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration."><span class="header-section-number">8.1</span> ## Lumley, T. (2011). <em>Complex surveys: a guide to analysis using R.</em> John Wiley &amp; Sons. Chapter 7: Post-stratification, raking, and calibration.</a></li>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">8.2</span> Anotações de aula</a>
   <ul class="collapse">
-  <li><a href="#groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-1." id="toc-groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-1." class="nav-link" data-scroll-target="#groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-1."><span class="header-section-number">2.1.1</span> Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., &amp; Tourangeau, R. (2011). <em>Survey methodology</em>. John Wiley &amp; Sons. Cap. 1.</a></li>
-  <li><a href="#zaller-j.-feldman-s.-1992.-a-simple-theory-of-the-survey-response-answering-questions-versus-revealing-preferences.-american-journal-of-political-science-579-616." id="toc-zaller-j.-feldman-s.-1992.-a-simple-theory-of-the-survey-response-answering-questions-versus-revealing-preferences.-american-journal-of-political-science-579-616." class="nav-link" data-scroll-target="#zaller-j.-feldman-s.-1992.-a-simple-theory-of-the-survey-response-answering-questions-versus-revealing-preferences.-american-journal-of-political-science-579-616."><span class="header-section-number">2.1.2</span> Zaller, J., &amp; Feldman, S. (1992). <em>A simple theory of the survey response: Answering questions versus revealing preferences</em>. American Journal of Political Science, 579-616.</a></li>
-  </ul></li>
-  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">2.2</span> Anotações de aula</a>
-  <ul class="collapse">
-  <li><a href="#converse-1964" id="toc-converse-1964" class="nav-link" data-scroll-target="#converse-1964"><span class="header-section-number">2.2.1</span> Converse (1964)</a></li>
-  <li><a href="#zaller-e-feldman-1992" id="toc-zaller-e-feldman-1992" class="nav-link" data-scroll-target="#zaller-e-feldman-1992"><span class="header-section-number">2.2.2</span> Zaller e Feldman (1992)</a></li>
-  <li><a href="#escola-de-michigan" id="toc-escola-de-michigan" class="nav-link" data-scroll-target="#escola-de-michigan"><span class="header-section-number">2.2.3</span> Escola de Michigan</a></li>
-  <li><a href="#heurística" id="toc-heurística" class="nav-link" data-scroll-target="#heurística"><span class="header-section-number">2.2.4</span> Heurística</a></li>
-  <li><a href="#top-of-mind" id="toc-top-of-mind" class="nav-link" data-scroll-target="#top-of-mind"><span class="header-section-number">2.2.5</span> Top of mind</a></li>
-  <li><a href="#estimação-de-preferências" id="toc-estimação-de-preferências" class="nav-link" data-scroll-target="#estimação-de-preferências"><span class="header-section-number">2.2.6</span> Estimação de preferências</a></li>
+  <li><a href="#ponderação-de-ajuste" id="toc-ponderação-de-ajuste" class="nav-link" data-scroll-target="#ponderação-de-ajuste"><span class="header-section-number">8.2.1</span> Ponderação de ajuste</a></li>
+  <li><a href="#calibração-vs.-ponderação" id="toc-calibração-vs.-ponderação" class="nav-link" data-scroll-target="#calibração-vs.-ponderação"><span class="header-section-number">8.2.2</span> Calibração vs.&nbsp;ponderação</a></li>
+  <li><a href="#pesos-e-inflação-da-variância" id="toc-pesos-e-inflação-da-variância" class="nav-link" data-scroll-target="#pesos-e-inflação-da-variância"><span class="header-section-number">8.2.3</span> Pesos e inflação da variância</a></li>
+  <li><a href="#outros-tipos-de-pós-ajustes-em-r" id="toc-outros-tipos-de-pós-ajustes-em-r" class="nav-link" data-scroll-target="#outros-tipos-de-pós-ajustes-em-r"><span class="header-section-number">8.2.4</span> Outros tipos de pós-ajustes em R</a></li>
+  <li><a href="#usando-o-pacote-survey-no-r" id="toc-usando-o-pacote-survey-no-r" class="nav-link" data-scroll-target="#usando-o-pacote-survey-no-r"><span class="header-section-number">8.2.5</span> Usando o pacote <code>survey</code> no R</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -392,15 +422,21 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-8.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O que são e para que servem pesquisas de survey</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Felipe Lamarca </p>
+          </div>
+  </div>
     
   
     
@@ -411,172 +447,261 @@ window.Quarto = {
 </header>
 
 
-<section id="anotações-das-leituras" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="anotações-das-leituras"><span class="header-section-number">2.1</span> Anotações das leituras</h2>
-<section id="groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-1." class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="groves-r.-m.-fowler-jr-f.-j.-couper-m.-p.-lepkowski-j.-m.-singer-e.-tourangeau-r.-2011.-survey-methodology.-john-wiley-sons.-cap.-1."><span class="header-section-number">2.1.1</span> Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., &amp; Tourangeau, R. (2011). <em>Survey methodology</em>. John Wiley &amp; Sons. Cap. 1.</h3>
+<section id="lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration." class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration."><span class="header-section-number">8.1</span> ## Lumley, T. (2011). <em>Complex surveys: a guide to analysis using R.</em> John Wiley &amp; Sons. Chapter 7: Post-stratification, raking, and calibration.</h2>
 <blockquote class="blockquote">
-<p>There are four perspectives on surveys that are worth describing: the purposes to which surveys were put, the development of question design, the development of sampling methods, and the development of data collection methods. (p.&nbsp;15)</p>
+<p>This chapter deals with techniques for using known population totals for a set of variables (<em>auxiliary variables</em>) to adjust the sampling weights and improve estimation for another set of variables. All of these techniques have the same idea: adjustments are made to the sampling weights so that estimated population totals for the auxiliary variables match the known population totals, making the sample more representative of the population. A second benefit is that the estimates are forced to be consistent with the population data, improving their credibility with people who may not understand the sampling process. (p.&nbsp;135-136)</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>However, the market research and polling organizations were doing large numbers of interviews, using newly hired people with no special background in the social sciences. Of necessity, researchers needed to specify more carefully the information sought by the survey. Further, researchers found that small changes in the wording of an attitude question sometimes had unusually large effects on the answers. (p.&nbsp;16)</p>
+<p>Post-stratification adjusts the sampling weights so that the estimated population group sizes are correct, as they would be in stratified sampling. The sampling weights <span class="math inline">\(\frac{1}{\pi_i}\)</span> are replaced by weights <span class="math inline">\(\frac{g_i}{\pi_i}\)</span>, where <span class="math inline">\(g_i = \frac{N_i}{\hat{N}_i}\)</span> for the group containing individual <span class="math inline">\(i\)</span>.</p>
 </blockquote>
-<blockquote class="blockquote">
-<p>Although the theory of probability was established in the 18th century, its application to practical sample survey work was delayed until the 20th century. The first applications were the taking of a “1 in N” systematic selection from census returns. There were “probability samples”; that is, every record had a known nonzero chance of selection into the sample. (p.&nbsp;17)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Although all police agencies in the United States could be asked to report statistics from their record systems, it was financially impossible to ask all persons in the United States to report their individual victimizations. If a “representative” sample could be identified, this would make the victimization survey possible. Thus, in contrast to the record data, the survey would be subject to “sampling error” (i.e., errors in statistics because of the omission of some persons in the population). (p.&nbsp;20)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>The methodological work suggested that the survey would tend to underreport less important crimes, apparently because they were difficult to remember. Finally, both systems have trouble with repeated incidents of the same character. (p.&nbsp;20)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>The sample is restricted to persons who are household members, excluding the homeless, those in institutions, and in group quarters. The sample is clustered into hundreds of different sample areas (usually counties or groups of counties) and the sample design is repeated samples of households from the same areas over the years of the study. (p.&nbsp;21)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Each month, the Surveys of Consumers (SOC) telephones a sample of the phone numbers, locates the household numbers among them, and selects one adult from those in the households. The target is the full household population, but to reduce costs, only persons in households with telephones are eligible. […]. After the data are collected, there are statistical adjustments made to the estimates in an attempt to repair the omission of nontelephone households and nonresponse. (p.&nbsp;25-26)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>The design features of the surveys are tailored to fit their purposes. The target populations for these surveys are varied – for example, the NCVS aims to describe adults and children age 12 or older, whereas the CES survey has a target population of employers. The NCVS, NSDUH, and NAEP surveys all draw samples of households in two steps, first sampling geographic areas, then sampling from created lists of households within those areas. The Surveys of Consumers and BRFSS draw samples of telephone numbers from all possible numbers within working area codes and exchanges. Then the numbers are screened to find those associated with households. (p.&nbsp;34)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Survey methodology seeks to identify principles about the design, collection, processing, and analysis of surveys that are linked to the cost and quality of survey estimates. This means that the field focuses on improving quality within cost constraints, or, alternatively, reducing costs for some fixed level of quality. “Quality” is defined within a framework labeled the total survey error paradigm. (p.&nbsp;35)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Because survey methodology has this inherently multidisciplinary nature, it has only recently developed as a unified field. (p.&nbsp;35)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>In a similar way, in some cases there are only imperfect solutions for survey design problems. All the approaches available to solve a particular problem may have pluses and minuses. The survey methodologist has to decide which of a set of imperfect options is best. Again, the total survey error approach is to consider the various ways that the options will affect the quality of the resulting data and choose the one that, on balance, will produce the most valuable data. (p.&nbsp;37)</p>
-</blockquote>
-</section>
-<section id="zaller-j.-feldman-s.-1992.-a-simple-theory-of-the-survey-response-answering-questions-versus-revealing-preferences.-american-journal-of-political-science-579-616." class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="zaller-j.-feldman-s.-1992.-a-simple-theory-of-the-survey-response-answering-questions-versus-revealing-preferences.-american-journal-of-political-science-579-616."><span class="header-section-number">2.1.2</span> Zaller, J., &amp; Feldman, S. (1992). <em>A simple theory of the survey response: Answering questions versus revealing preferences</em>. American Journal of Political Science, 579-616.</h3>
-<blockquote class="blockquote">
-<p><strong>Virtually, all public opinion research proceeds on the assumption that citizens possess reasonably well formed attitudes on major political issues and that surveys are passive measures of these attitudes.</strong> The standard view is that when survey respondents say they favor X they are simply describing a preexisting state of feeling favorably toward X.</p>
-<p>Accumulating evidence on the vagaries of mass political attitudes, however, has made this view increasingly dubious. If, as is well known, prople are asked the same question in a series of interviews, their attitude reports are highly changeable. Many, as much evidence also shows, react strongly to the context in which the questions are asked, to the order in which options are presented, and to wholly nonsubstantive changes in question wording. These phenomena are more than methodological curiosities; they raise serious doubts about what public opinion surveys measure.</p>
-<p>In view of this, we propose a new undestanding of the mass survey response. Most citizens, we argue, simply do not possess performed attitudes at the level of specificity demanded in surveys. <strong>Rather, they carry around in their heads a mix of only partially consistent ideas and considerations.</strong> When questioned, they call to mind a sample of these ideas, including an oversample of ideas made salient by the questionnaiere and other recent events, and use them to choose among the options offered. But their choices do not, in most cases, reflect anything that can be described as true attitudes; <strong>rather, they reflect the thoughts that are most accessible in memory at the moment of response</strong>. (p.&nbsp;579-580)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>One of the most unsettling findings of opinion research has been the discovery of a large component of randomness in most people’s answers to survey questions. If the same people are asked the same question in repeated interviews, only about half of them give the same answers. (p.&nbsp;580)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>The literature on response effects thus makes it clear that survey questions do not <em>simply</em> measure public opinion. They also shape and channel it by the manner in which they frame issues, order the alternatives, and otherwise set the context of the question. THis has led researchers to a conclusion that seems indisputable but that is fundamentally at odds with the assumptions of most political scientists about the nature of political attitudes: namely, people do not merely <em>reveal</em> preexisting attitudes on surveys; to some considerable extent, people are using the questionnaire to decide what their “attitudes” are (Bishop, Oldendick, and Tuchfarber 1984;; Zaller 1984; Feldman 1990).</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Current attitude models seem quite irrelevant to these observations. The reason for Sartori’s vacillation is not, as students of Converse might say, that he has no opinion on this question, nor is it that, as users of measurement error models might say, Sartori has a “true attitude” that Hochschild is unable to measure reliably. It is rather that Sartori has conflicting opinions, or at least conflicting <em>considerations</em>, that lead him to give different responses at different times, depending on how he thinks about the issue. (p.&nbsp;584)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p><strong>AXIOM 1:</strong> The ambivalence axiom. Most people possess opposing considerations on most issues, that is, considerations that might lead them to decide the issue either way. (p.&nbsp;585)</p>
-<p><strong>AXIOM 2:</strong> The response axiom. Individuals answer survey questions by averaging across the considerations that happen to be salient at the moment of response, where saliency is determined by the <em>accessbility axiom</em>. (p.&nbsp;586)</p>
-<p><strong>AXIOM 3:</strong> The accessibility axiom. The accessibility of any given consideration depends on a stochastic sampling process, where considerations that have been recently thought about are somewhat more likely to be sampled. (p.&nbsp;586)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>For a case in which a person devotes great thought and attention to an issue, Axiom 3 implies that there may be multiple considerations salient in memory at the moment of answering questions about the issue and hence many considerations to be averaged across. But a person who rarely thinks about an issue and who is confronted by an interview situatin that requires a succession of quick answers (Feldman 1990) may have only one consideration immediately available in memory, in which case the averaging rule reduces to answering on the basis of a single “top-of-the-head” consideration, as suggested by Taylor and Fiske. (p.&nbsp;586)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>The two types of probes [page 587] are clearly not equivalent. The “retrospective” probes, which were posed after people had answered the question in the normal way, were designed to find out what exactly was on people’s minds at the moment of response. The “prospective” or “stop-and-think” probes, on the other hand, were designed to indice people to search their memories more carefully than they ordinarily would for pertinent considerations. Note that the stop-and-think probes do not raise new ideas or push the respondent in a particular direction; they simply require the respondent to say explicitly what meaning he or she attaches to the defining phrases of the question. (p.&nbsp;587-588)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Researchers have long known that different people can answer identical questions as if they concerned different topics. What the vignette of the vacillating teacher shows is that <em>the same person can answer the same question at different times as if it involved different topics</em>. This can happen, according to the model, because the considerations that determine people’s survey answers vary across interviews. Thus, people can give strongly felt, contradictory survey responses without either changing their mix of feelings on the issue or consciously experiencing any ambivalence or conflict – if the particular considerations that determine their survey responses have shifted. (p.&nbsp;594)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>If, as the model claims, individuals possess competing considerations on most issues, and if they answer on the basis of whatever ideas happen to be at the top of their minds at the moment of response, one would expect a fair amount of over-time instability in people’s attitude reports (Deduction 4). The reason is that the consideration(s) that are stochastically accessible at one interview might not be so prominent in the next. This inference is strongly supported by a mass of existing evidence (e.g., Table 1). (p.&nbsp;597)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>This finding indicates that the conflict most responsible for response instability is conflict that occurs across rather than within interviews and that respondents are often unaware of their conflict as they answer questions. Thus, the vacillating teacher exhibited no conflict over government services within either interview, but substantial conflict across interviews. Most likely, once the teacher began to view the government services item through the prism of either “bloated government” or “education crisis”, he or she fell into a mindset that blocked thinking about the other point of view. (p.&nbsp;600)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>This type of question order effect is also explainable from the model. Having had their ideological orientations made salient to them just prior to answering policy items, those respondents who possess such orientations are more likely to rely on them as a consideration in formulating responses to subsequent policy questions, thereby making those responses more strongly correlated with their ideological positions and hence also more ideologically consistent with one another (Deduction 16). (p.&nbsp;603)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Our intent in designing the stop-and-think probes was to create such an inducement. By requiring individuals to discuss the elements of a question before answering it, we were inducing them to call to mind and take account of a wider range of ideas than they normally would. We therefore expected that responses following the stop-and-think treatment would be, all else equal, more reliable indicators of the set of underlying considerations than responses made in the standard way, that is, in the retrospective condition (Deduction 17). (p.&nbsp;603)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p><em>1. Dependence of attitude reports on probabilistic memory search</em>. Because attitude reports are based on memory searches that are both probabilistic and incomplete, attitude reports tend to be (1) unstable over time; (2) centered on the mean of the underlying considerations; and (3) correlated with the outcomes of memory searches (Deductions 3-5). This is also why people who are more conflicted in their underlying considerations are more unstable in their closed-ended survey responses (Deduction 8).</p>
-<p><em>2. Effects of ideas recently made salient</em>. The notion that individuals’ survey responses can be deflected in the direction of ideas made recently salient has been used to explain question order effects, endorsement effects, race-of-interviewer effects, reference group effects, question framing effects, and TV news priming effects (Deductions 9-16).</p>
-<ol start="3" type="1">
-<li>Effects of thought on attitude reports. The notion that thinking about an issue, as gauged by general levels of political awareness, enables people to recall a large numnber of considerations and hence to make more reliable responses has been used to explain why the public as a whole is more stable on “doorstep” issues (Deducions 6, 7). It also explains why more politically aware persons, and persons especially concerned about an issue, are able to recall more thoughts relevant to ir (Deductions 1, 2). Finally, the notion that greater thought makes attitude reports more reliable has been invoked, with only limited success, to explain the effects of extra thought at the moment of responding to an issue (Deduction 17). (p.&nbsp;607)</li>
-</ol>
-</blockquote>
-</section>
-</section>
-<section id="anotações-de-aula" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">2.2</span> Anotações de aula</h2>
-<p>Surveys ao longo do tempo mostram flutuações relativamente bizarras ao longo do tempo. Certo: sabemos que a população brasileira não atende telefone, pessoas não confiam em pesquisas, etc. É verdade, há uma série de problemas. Mas, no fim das contas e antes disso tudo, survey são uma maneira de interação humana. E, com isso, geram nas pessoas uma série de reações que impactam nas respostas.</p>
-<p>Converse é considerado um dos fundadores da Escola de Michigan, e um dos principais estudiosos de opinião pública. É um dos maiores cientistas políticos de todos os tempos. Num texto de 1964, ele tenta explicar sua visão de opinião pública – “a maioria das pessoas não têm estruturas latentes, ou reais e fixas, sobre a maioria dos objetos de atitude” (slide, Converse 1964).</p>
-<p>Zaller e Feldman, em 1992, propõem uma teoria de resposta a surveys que é contrária a essa visão de Converse. Eles dizem que as pessoas têm opiniões, mas a formação das respostas é plausivelmente um processo <em>on the spot</em> que depende de <em>priming</em>, <em>framing</em> e, mais importante, da capacidade de recuperação de informações (Zaller e Feldman 1992).</p>
-<p>Ainda assim, os autores concordam na medida em que entendem que há um componente estocástico na resposta de surveys. Por um lado, Converse acha que as pessoas não têm opiniões formadas. Por outro lado, Zaller e Feldman acreditam que o componente estocástico varia de acordo com algumas questões, incluindo a atenção do respondente, se é uma pessoa mais ou menos informada, etc.</p>
-<p>O grande mérito dos surveys foi a possibilidade de perguntar para as pessoas sobre opiniões e atitudes. O desafio maior é entender o que as pessoas pensam, sentem e como elas vão agir.</p>
-<section id="converse-1964" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="converse-1964"><span class="header-section-number">2.2.1</span> Converse (1964)</h3>
-<p>Acredita que há <em>constraints</em> lógicos, psicológicos, sociais, heurísticos. As opiniões são amarradas de forma consistente. Mas a maior parte das pessoas não tem esse sistema de crenças estruturados, então elas respondem, mas não respondem em termos ideológicos e <strong>introduzem um componente aleatório</strong></p>
-<p>Essa questão é fundamental porque, se pensarmos segundo Converse, perguntar para a pessoa se ela “é de esquerda ou de direita” sequer faz sentido, porque as pessoas não pensam em termos ideológicos. Diferentemente de uma visão espacial da formação de preferências (i.e., Downs), <strong>sistemas de crenças</strong> são estáveis.</p>
-<p><strong>Implicações:</strong></p>
-<ol type="1">
-<li>Maioria das pessoas não têm preferências ideológicas reais</li>
-<li><em>Surveys</em> superestimam posições políticas</li>
-<li><em>Surveys</em> são mais úteis quando agregam diferentes mensurações possíveis de uma dimensão</li>
-</ol>
-<blockquote class="blockquote">
-<p>Parte da variância de pesquisas de survey tem a ver com a formação de respostas, não com erros amostrais.</p>
-</blockquote>
-</section>
-<section id="zaller-e-feldman-1992" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="zaller-e-feldman-1992"><span class="header-section-number">2.2.2</span> Zaller e Feldman (1992)</h3>
-<p>A maioria das pessoas têm opiniões conflitantes sobre uma mesma questão e as acessam com algum nível de aleatoriedade. Ao longo do tempo, as pessoas vão recebendo “considerações” da elite política e da mídia (principalmente), de maneira que há questões que ficam mais acessíveis na memória do respondente. Isso acaba compondo a resposta que a pessoa dá a uma pergunta de survey. Para o Zaller, é assim que as pessoas formam opiniões.</p>
-<p>Quando as pessoas são entrevistadas, são levadas a refletir sobre questões abstratas. De acordo com o processo de recepção de informações, as pessoas formam suas opiniões e acessam essas informações de maneira aleatória – sendo que o que está “mais freco” tem mais chance de ser acessado.</p>
-<p>Pessoas que têm maior acessibilidade de informações conseguem considerar mais coisas.</p>
-<p><strong>Zaller está de acordo com a ideia de que:</strong></p>
-<ul>
-<li>Pesoas recebem informações de elites proporcionalmente à atenção</li>
-<li>Aceitação depende de predisposição, atenção e reflexão (e.g., <em>motivated reasoning</em>). Isso, para Zaller, é fonte de polarização que vem das elites políticas<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
-<li>Ao responder surveys, pessoas sorteiam informações disponíveis e as ponderam por saliência</li>
-</ul>
-<p><strong>Implicações:</strong></p>
-<ul>
-<li><em>Priming</em> e <em>framing</em> influencia a opinião pública porque afeta a recepção e saliência de informações que podem ser perguntadas em <em>surveys</em></li>
-<li>Mesmo pessoas bem informadas podem ter opiniões instáveis porque a acessibilidade de informações é estocástica</li>
-<li>Pessoas com maior atenção política tendem a rejeitar informações que não estão de acordo com suas preferências</li>
-</ul>
-<p>Uma visualização do modelo é imaginar que pessoas têm tendêndias centrais e variação aleatória em suas respostas.</p>
-</section>
-<section id="escola-de-michigan" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="escola-de-michigan"><span class="header-section-number">2.2.3</span> Escola de Michigan</h3>
-<p>Para a maioria das pessoas, pertencimento a um grupo partidário é a principal fonte de informação e atitudes, o que estrutura suas identidades e oposições.</p>
-<p>Ainda que a intenção de voto, avaliação de governo, etc., sejam partialmente aleatórios, a identificação partidária é um <em>anchor</em> para as respostas. Ou seja, as coisas “partem daqui”.</p>
-<p>A identidade social partidária é estável e duradoura. Então, “com qual partido você se identifica mais?” faz mais sentido do que “você é de esquerda ou de direita?”. É claro, apoiar <span class="math inline">\(x\)</span> ou <span class="math inline">\(y\)</span> não determina comportamentos e opiniões completamente, mas estrutura a forma como as pessoas pensam. A questão de identidade partidária costuma resumir várias outras e ser o melhor preditor de voto. E, melhor ainda, essa é uma questão nada abstrata.</p>
-<blockquote class="blockquote">
-<p><strong>Dica:</strong> Surveys funcionam melhor quando você pergunta coisas paupáveis, mas também coisas que vinculam pessoas a grupos. Os grupos aos quais elas pertencem já permite deduzir uma série de coisas sobre elas.</p>
-</blockquote>
-<p>Livros importantes: - The American Voter (1960) - Partisan Hearts and Minds (2002)</p>
-</section>
-<section id="heurística" class="level3" data-number="2.2.4">
-<h3 data-number="2.2.4" class="anchored" data-anchor-id="heurística"><span class="header-section-number">2.2.4</span> Heurística</h3>
-<p>Num survey, quando não tenho informação sobre algo, posso usar algum atalho cognitivo para me ajudar a me posicionar. Por exemplo, se eu não sei nada sobre um candidato, posso votar no candidato do meu partido. Se o jornal que eu leio diz que o candidato é bom, eu posso votar nele.</p>
-</section>
-<section id="top-of-mind" class="level3" data-number="2.2.5">
-<h3 data-number="2.2.5" class="anchored" data-anchor-id="top-of-mind"><span class="header-section-number">2.2.5</span> Top of mind</h3>
-<p>O fato de que respostas a surveys dependem do recall e agregação de considerações é algo útil para mensurar a prevalência destas em um dado momento no tempo. Métricas comuns em pesquisas de mercado.</p>
-<blockquote class="blockquote">
-<p>Você está gripado. De pronto, aí, sem pensar muito, qual é o remédio que você toma? A resposta é o que está no <em>top of mind</em>, provavelmente Benegripe.</p>
-</blockquote>
-</section>
-<section id="estimação-de-preferências" class="level3" data-number="2.2.6">
-<h3 data-number="2.2.6" class="anchored" data-anchor-id="estimação-de-preferências"><span class="header-section-number">2.2.6</span> Estimação de preferências</h3>
-<p>Há métodos de estimação de preferências latentes a partir de respostas a diferentes questões de surveys. Exemplo:</p>
-<ul>
-<li><code>basicspace</code></li>
-<li><code>Aldrich-McKelvey scaling</code></li>
-</ul>
-
-
-</section>
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
-<ol>
-<li id="fn1"><p>Essa ideia tende a ser endossada pela literatura mais recente sobre polarização política e fake news. Além disso, as estratégias para despolarizar a sociedade passam por tentar reduzir a polarização das próprias elites políticas, que, hoje, são as principais fontes de informação (ou <em>motivated reasoning</em>) para a população.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
+</section>
+<section id="anotações-de-aula" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">8.2</span> Anotações de aula</h2>
+<p>Em amostragem, cada unidade amostral tem um peso. Lemos isso como “quantas unidades na população cada unidade amostrada representa”. Se o desenho amostral tiver equiprobabilidade, cada unidade amostrada representa a mesma quantidade de unidade da população e pesos não são necessários.</p>
+<p>O estimador ponderado é:</p>
+<p><span class="math display">\[
+\hat{Y} = \sum_{i \in s} w_i y_i
+\]</span></p>
+<p>onde <span class="math inline">\(w_i\)</span> é o peso para a unidade <span class="math inline">\(i\)</span> e <span class="math inline">\(y_i\)</span> é a medida extraída do survey.</p>
+<p>Considere o seguinte exemplo:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Área</th>
+<th>Idade</th>
+<th>Quantas pessoas ela representa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ZS</td>
+<td>25</td>
+<td>349</td>
+</tr>
+<tr class="even">
+<td>ZS</td>
+<td>30</td>
+<td>482</td>
+</tr>
+</tbody>
+</table>
+<p>Nesse caso, indicamos quantas pessoas cada unidade amostral representa. Esse valor é calculado a partir da probabilidade de inclusão da unidade amostral. O peso é o inverso da probabilidade de inclusão. <strong>A ponderação pelo desenho ajusta amostras quando temos probabilidades desiguais de inclusão</strong>: <span class="math inline">\(w_i = \frac{1}{\pi_i}\)</span>, onde <span class="math inline">\(\pi_i\)</span> é a probabilidade de inclusão da unidade amostral <span class="math inline">\(i\)</span>. Supondo que a probabilidade de inclusão é de 0.25, o peso da unidade amostral é 4. Isso significa que ela representa 4 unidades na população.</p>
+<p>Esse estimador também é chamado de estimador de expansão – o estimador de Horwitz-Thompson. O peso absoluto me diz quantas pessoas de perfil similar uma única pessoa da amostra representa.</p>
+<p><span class="math display">\[
+\hat{N} = \sum_{i = 1}^n \frac{y_i}{w_i}
+\]</span></p>
+<p>Note que esse peso é útil para calcular totais populacionais, mas ele é diferente do peso usado para fazer ponderação. Por que ponderar?</p>
+<ul>
+<li>Ponderar pela probabilidade de inclusão quando não temos equiprobabilidade é importante para não incorporar viés na amostra (claro, isso depende de uma amostragem probabilística);</li>
+<li>Dar maior peso a subgrupos que responderam menos ao survey (não-resposta);</li>
+<li>Ajustar estimativas com totais populacionais conhecidos (<em>aka</em> calibração)</li>
+</ul>
+<section id="ponderação-de-ajuste" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="ponderação-de-ajuste"><span class="header-section-number">8.2.1</span> Ponderação de ajuste</h3>
+<p>Problemas com quadro amostral (cobertura, e.g.) e não-resposta de unidade podem introduzir viés se respondentes diferem sistematicamente de não-respondentes:</p>
+<ul>
+<li>Entrevistamos muito menos pessoas mais ricas do que deveríamos;</li>
+<li>Usamos estratificação com alocação não-proporcional (i.e., regiões pequenas e grandes recebem o mesmo número de entrevistas);</li>
+<li>Bolsonaristas ou lulistas se recusam mais a responder.</li>
+</ul>
+<p>A ponderação duplica, triplica, às vezes quadruplica a informação que temos. Na prática, isso lembra a amostragem por conglomerados, na perspectiva de que estamos aumentando a margem de erro ao não incorporar informações efetivamente novas.</p>
+<p>Ideia básica: ajustar os pesos dos respondentes para compensar as unidades ausentes ou sub-representadas. Pesquisa domiciliar probabilística com <span class="math inline">\(n=1000\)</span> entrevistou <span class="math inline">\(380\%\)</span> homens; na população, homens são <span class="math inline">\(50\%\)</span>:</p>
+<p><span class="math display">\[
+\frac{0.5}{0.38} \ \text{ou} \ \frac{500}{380} \approx 1.315789474
+\]</span></p>
+<p>Cada homem na amostra representa 1.315789474 homens na população. O mesmo vale para mulheres, mas o peso é menor.</p>
+</section>
+<section id="calibração-vs.-ponderação" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="calibração-vs.-ponderação"><span class="header-section-number">8.2.2</span> Calibração vs.&nbsp;ponderação</h3>
+<p>Quando já temos pesos (geralmente do desenho), podemos forçá-los a corresponder a totais populacionais conhecidos em variáveis auxiliares.</p>
+<p>Ponderar é pegar a amostra que eu tenho e tentar aproximá-la de algum benchmark (por exemplo, a população). Calibrar, por outro lado, é pegar um peso que eu já tenho (no mais das vezes, a probabilidade de inclusão) – supondo que a gente calcule o total populacional e, no entanto, a população brasileira deu <span class="math inline">\(205\)</span> milhões, mas sabemos que a população brasileira é de <span class="math inline">\(203\)</span> milhões. A calibragem ajusta o esquema de pesos para fazer com que o total bata com algum total conhecido da população.</p>
+<p>Nesse caso, precisamos encontrar novos pesos <span class="math inline">\(w_i^{\text{Cal}}\)</span> próximos aos pesos iniciais de forma que:</p>
+<p><span class="math display">\[
+\sum_{i \in s} w_i^{\text{Cal}} x_i = \sum_{i \in U} x_i = X,
+\]</span></p>
+<p>onde <span class="math inline">\(X\)</span> é o total populacional (<span class="math inline">\(U\)</span> é a população) conhecido (e.g., total de eleitores) para a variável auxiliar <span class="math inline">\(x_i\)</span>. Esse ajuste pode ser feito de várias maneiras: algoritmos iterativos, regressão, etc.</p>
+</section>
+<section id="pesos-e-inflação-da-variância" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="pesos-e-inflação-da-variância"><span class="header-section-number">8.2.3</span> Pesos e inflação da variância</h3>
+<p>Pesos de desenho muito grande ou desiguais inflam estimativas.</p>
+<blockquote class="blockquote">
+<p>Intuição: uma unidade com peso relativo de <span class="math inline">\(2\)</span> equivale a duplicar a sua entrevista na amostra; para isso, no entanto, precisamos retirar uma unidade de outras unidades da amostra. A solução geralmente é usar tetos ou ajustes para limitar pesos extremos.</p>
+</blockquote>
+</section>
+<section id="outros-tipos-de-pós-ajustes-em-r" class="level3" data-number="8.2.4">
+<h3 data-number="8.2.4" class="anchored" data-anchor-id="outros-tipos-de-pós-ajustes-em-r"><span class="header-section-number">8.2.4</span> Outros tipos de pós-ajustes em R</h3>
+<ul>
+<li><em>Rake e iterative proportional fitting</em>, que ajustam pesos iterativamente para que totais populacionais conhecidos sejam respeitados (pesos relativos);</li>
+<li><em>Generalized regression estimation</em> (GREG), que usa modelos de regressão para calibrar pesos;</li>
+<li><em>Multilevel regression and poststratification</em> (MrP), que projeta resposta em subgrupos da população (e.g., regiões, idade, sexo) usando modelos de regressão</li>
+</ul>
+</section>
+<section id="usando-o-pacote-survey-no-r" class="level3" data-number="8.2.5">
+<h3 data-number="8.2.5" class="anchored" data-anchor-id="usando-o-pacote-survey-no-r"><span class="header-section-number">8.2.5</span> Usando o pacote <code>survey</code> no R</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pacote 'survey' foi compilado no R versão 4.4.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Carregando pacotes exigidos: grid
+Carregando pacotes exigidos: Matrix
+
+Anexando pacote: 'Matrix'
+
+Os seguintes objetos são mascarados por 'package:tidyr':
+
+    expand, pack, unpack
+
+Carregando pacotes exigidos: survival
+
+Anexando pacote: 'survey'
+
+O seguinte objeto é mascarado por 'package:graphics':
+
+    dotchart</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>macae <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"C:/Users/felip/OneDrive/Área de Trabalho/IESP/Survey-Research/listas/lista1/dados/macae.rds"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>verdade <span class="ot">&lt;-</span> <span class="fu">mean</span>(macae<span class="sc">$</span>alfabetizada)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(verdade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8720686</code></pre>
+</div>
+</div>
+<p>De maneira naive, podemos estimar a média apenas tirando a média simples da amostra. Devemos esperar algo razoavelmente distoante do parâmetro populacional.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>amostra <span class="ot">&lt;-</span> macae <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(subdistrito) <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pi =</span> <span class="dv">100</span> <span class="sc">/</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">100</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(amostra<span class="sc">$</span>alfabetizada)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8485714</code></pre>
+</div>
+</div>
+<p>Usando o estimador de Horwitz-Thompson, podemos recuperar os pesos absolutos usando a probabilidade de inclusão (i.e., ponderação pela probabilidade de inclusão):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>amostra <span class="ot">&lt;-</span> amostra <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">peso =</span> <span class="dv">1</span> <span class="sc">/</span> pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Vamos fazer a mesma coisa usando o pacote survey, que nos permite declarar o desenho amostral. Vamos usar as probabilidades de inclusão para “acertar” o cálculo, assim como no exemplo anterior:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># todas as observacoes sao intercambiaveis dentro de um estrato, entao ignoramos id (~1)</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>metodo1 <span class="ot">&lt;-</span> <span class="fu">svydesign</span>(<span class="sc">~</span><span class="dv">1</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">strata =</span> <span class="sc">~</span>subdistrito, <span class="co"># estrato</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>                     <span class="at">probs =</span> <span class="sc">~</span>pi, <span class="co"># probabilidades de inclusao para ponderar</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>                     <span class="at">data =</span> amostra)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">svytotal</span>(<span class="sc">~</span>alfabetizada, metodo1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              total     SE
+alfabetizada 176920 3347.8</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">svymean</span>(<span class="sc">~</span>alfabetizada, metodo1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                mean     SE
+alfabetizada 0.85581 0.0162</code></pre>
+</div>
+</div>
+<p>Agora, vejamos o método 2: não temos a probabilidade de inclusão, mas tenho os totais populacionais extraídos a partir de alguma outra fonte – como, por exemplo, o censo demográfico. Eu sei, por exemplo, quantas pessoas moram em cada distrito.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># MÉTODO 2: pós-estratificação</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># vamos ver o caso naive</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>desenho <span class="ot">&lt;-</span> <span class="fu">svydesign</span>(<span class="sc">~</span>id_pessoa,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                     <span class="at">data =</span> amostra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in svydesign.default(~id_pessoa, data = amostra): No weights or
+probabilities supplied, assuming equal probability</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># estimamos a média de maneira naive sem ponderar</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svymean</span>(<span class="sc">~</span>alfabetizada, desenho)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                mean     SE
+alfabetizada 0.84857 0.0136</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># agora vamos estratificar</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>estratos <span class="ot">&lt;-</span> macae <span class="sc">%&gt;%</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(subdistrito) <span class="sc">%&gt;%</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Freq =</span> <span class="fu">n</span>())</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># criamos um objeto do tipo postStratify</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>metodo2 <span class="ot">&lt;-</span> <span class="fu">postStratify</span>(desenho, <span class="sc">~</span>subdistrito, estratos)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># calculamos a media usando esse meotod, que estratificou os resultados</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="fu">svymean</span>(<span class="sc">~</span>alfabetizada, metodo2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                mean     SE
+alfabetizada 0.85581 0.0161</code></pre>
+</div>
+</div>
+<p>Agora passemos ao método 3, que usa Rake:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>desenho <span class="ot">&lt;-</span> <span class="fu">svydesign</span>(<span class="sc">~</span>id_pessoa,</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">data =</span> amostra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in svydesign.default(~id_pessoa, data = amostra): No weights or
+probabilities supplied, assuming equal probability</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># se fossem varias variaveis desbalanceadas, criaria um banco pra cada e </span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># passaria cada um deles na lista</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>metodo3 <span class="ot">&lt;-</span> <span class="fu">rake</span>(desenho, </span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>                <span class="fu">list</span>(<span class="sc">~</span>subdistrito),</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>                <span class="fu">list</span>(estratos))</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="fu">svymean</span>(<span class="sc">~</span>alfabetizada, metodo3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                mean     SE
+alfabetizada 0.85581 0.0161</code></pre>
+</div>
+</div>
+<p>Podemos extrair os pesos calculados por cada desenho da seguinte maneira:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>amostra <span class="ot">&lt;-</span> amostra <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">peso_strat =</span> <span class="fu">weights</span>(metodo1),</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">peso_pos_strat =</span> <span class="fu">weights</span>(metodo2),</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">peso_rake =</span> <span class="fu">weights</span>(metodo3)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(amostra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 11
+  codigo_setor  id_pessoa distrito subdistrito bairro alfabetizada      pi  peso
+  &lt;chr&gt;         &lt;glue&gt;    &lt;chr&gt;    &lt;chr&gt;       &lt;chr&gt;         &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
+1 330240305020… 33024030… Macaé    Aeroporto   Parqu…            1 0.00265  378.
+2 330240305020… 33024030… Macaé    Aeroporto   Ajuda             1 0.00265  378.
+3 330240305020… 33024030… Macaé    Aeroporto   Ajuda             0 0.00265  378.
+4 330240305020… 33024030… Macaé    Aeroporto   Ajuda             1 0.00265  378.
+5 330240305020… 33024030… Macaé    Aeroporto   Parqu…            1 0.00265  378.
+6 330240305020… 33024030… Macaé    Aeroporto   Parqu…            1 0.00265  378.
+# ℹ 3 more variables: peso_strat &lt;dbl&gt;, peso_pos_strat &lt;dbl&gt;, peso_rake &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p>Observe que chegamos <span class="math inline">\(\pm\)</span> aos mesmos pesos com cada approach. De fato, são diferentes maneiras de resolver o mesmo problema.</p>
+
+
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -994,14 +1119,11 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="index.html">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span>
+      <a href="../aulas/aula-7.html" class="pagination-link" aria-label="Inferência com Surveys">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Inferência com Surveys</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../aulas/aula-3.html" class="pagination-link" aria-label="Erros em survey">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Erros em survey</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

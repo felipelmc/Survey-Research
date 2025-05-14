@@ -1,0 +1,275 @@
+---
+#bibliography: master.bib
+biblio-style: apsr
+fontsize: 11pt
+author: Felipe Lamarca
+endnote: no
+---
+
+# Inferência com Surveys
+
+## Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2011). _Survey methodology_. John Wiley & Sons. Cap. 10.
+
+> The outcome of the reordering of activities is that computer-assisted surveys must make all the design decisions about data entry protocols and editing during the process of developing the questionnaire. A further implication of the combination of collection, entry, and editing is that the surveys collecting only numeric answers can entirely skip the coding step. (p. 330)
+
+> 1) Coding -- the process of turning word answers into numeric answers
+>
+> 2) Data entry -- the process of entering numeric data into files
+>
+> 3) Editing -- the examination of recorded answers to detect errors and inconsistencies
+>
+> 4) Inputation -- the repair of item-missing data by placing an answers in a data field
+>
+> 5) Weighting -- the adjustment of computations of survey statistics to counteract harmful effects of noncoverage, nonresponse, or unequal probabilies of selection into the sample
+>
+> 6) Sampling variance estimation -- the computation of estimates of the instability of survey statistics (from any statistical error that are measurable under the design) (p. 330-331)
+
+### Coding
+
+> To be useful, codes must have the following attributes:
+>
+> 1) A unique number, used later for statistical computing
+>
+> 2) A text label, designed to describe all the answers assigned to the category
+>
+> 3) Total exhaustive treatment of answers (all responses should be able to be assigned to a category)
+>
+> 4) Mutual exclusivity (no single response should be assignable to more than one category)
+>
+> 5) A number of unique categories that fit the purpose of the analyst (p. 332)
+
+### Editing
+
+> There is some consensus on desirable properties of editing systems. These include the use of explicit rules linked to concepts being measured; the ability to replicate the results; editing shifted to rule-based, computer-assisted routines to save money; minimal distortion of data recorded on the questionnaire; the desirability of coordinating editing and imputation; and the criterion that when all is finished, all records pass all edit checks. The future of editing will not resemble in its past. Editing systems will change as computer assistance moves to earlier points in the survey process and becomes integrated with other steps in the survey. It is likely that editing after data collection will decline. It is likely that software systems will increasingly incorporate the knowledge of subject matter experts. (p. 347)
+
+### Weighting
+
+> Surveys with complex sample designs often also have unequal probabilities of selection, variation in response rates across important subgroups, and departures from distributions on key variables that are known from outside sources for the population. It is common within complex sample surveys to generate weights to compensate for each of these features. (p. 348)
+
+#### Weighting for Differential Selection Probabilities
+
+> THe growing Latino population, and differences in crime victimization between Latino and non-Latino populations, raise the question whether the number of Latino persons in the NCVS, under the overall sample of $125,000$, is sufficient. Suppose that one person in eight aged 12 years and older is Latino, or a total population of just about $25$ million. If an epsem sample were selection, the sample would have $15,625$ Latinos and $109,375$ non-Latinos. That is, under proportionate allocation, one person in eight in the sample would be Latino as well. The sample results could be combined across Latino and non-Latino populations with no need for weights to compensate for overrepresentation of one group. (p. 349)
+
+Suppose we want to estimate statistics of interest with more precision for Latinos. So we increase the the number of Latinos in the sample to $62,500$. This is totally okay when our goals is to compute statistics for each group separatelly. However, ...:
+
+> There is a problem though, when the data need to be combined across the groups. The need for combining across groups might arise because of a call for national estimates that ignore ethnicity, or the need for data on a "crossclass" that has sample persons who are Latino as well as non-Latino, such as women. (p. 349-350)
+>
+> When combining across these groups to get estimates for the entire population, ignoring ethnicity, something must be done to compensate for the substantial overrepresentation of Latinos in the sample. Weights in a weighted analysis applied to individual values are one way to accomplish this adjustment. Recall that the weighted mean can be computed, when individual level weights are available, as
+>
+> $$
+> \bar{y}_n = \dfrac{\sum^{i = 1}^n w_i \times y_i}{\sum_{i = 1}^n w_i}
+> $$
+
+> When data are combined across groups, this weighting decreases the contribution of values for a variable for Latinos the 1/7th the contribution of non-Latinos. This adjustment allows the sample cases to contribute to estimates for the total population in a correct proportionate share. (p. 350)
+
+#### Weighting to Adjust for Unit Nonresponse
+
+> In the initial sample, there are an equal number of persons aged 12-44 and 4 years or older. Thus, the nonresponse mechanism has led to an overrepresentation of older persons among the respondents.
+>
+> To compensate for this overrepresentation, an assumption is made in survey nonresponse weighting that generates the same kind of weighting adjustments discussed for unequal probabilities of selection. If one is willing to assume that within subgroups (in this case, age groups) the respondents are a random sample of all sample persons, then the response rate in the group represents a sampling rate. This assumption is referred to as the "missing at random" assumption, and is the basis for mich nonresponse adjusted weights. **The inverse of the response rate can thus be used as a weight to restore the respondent distribution to the original sample distribution**. (p. 352)
+
+#### Putting All the Weights Together
+
+> Finally, to obtain a final weight than can be incorporate the first-stage ratio adjustment ($W_{i1}$), the unequal probability of selection adjustment ($w_{i2}$), nonresponse adjustment ($w_{i3}$), and poststratification ($W_{i4}$), a final product of all four weights is assigned to each of eight classes [...]. (p. 352)
+
+#### Sampling Variance Estimation for Complex Samples
+
+> Survey datasets based on stratified multistage samples with weights designed to compensate for unequal probabilities of selection or nonresponse are sometimes referred to as "complex survey data". Estimation of sampling variances for statistics from these kinds of data require widely available specialized software systems using one of three procedures: the Taylor series approximation, balanced repeated replication, or jackknife repeated replication.
+
+> _Taylor Series Estimation_ [...]. The Taylor series approximation handles this difficulty by converting a ratio into an approximation that does not involve ratios, but instead is a function of sums of sample values. [...]. For example, the variance for a simple ration mean like
+>
+> $$
+> \bar{y}_n = \dfrac{\sum^{i = 1}^n w_i \times y_i}{\sum_{i = 1}^n w_i}
+> $$
+> 
+> using a Taylor series approximation (assuming simple random sampling, for simplicity) is
+>
+> $$
+> \dfrac{1}{(\sum w_i)^2} [ \text{Var}(\sum w_i y_i) + \bar{y}_w^2 \text{Var}(\sum w_i) - 2 \bar{y}_w \text{Cov}(\sum w_i y_i, \sum w_i) ]
+> $$
+> 
+> This looks complicated but is just a combination of the types of calculations that are made for the simple random sample variance estimates (see for example the computations on page 99). (p. 360)
+
+> _Balanced Repeated Replication and Jackknife Replication_ The balanced repeated and jackknife repeated methods take and entirely different approach. Rather tha attempting to find an analytic solution to the problem of estimating the sampling variance of a statistic, they rely on repeated subsampling. One can think of repeated replication as being similar to drawing not one but many samples from the same population at the same time. For each sample, an estimate of same statistic, say the mean $\bar{y}_\gamma$, is computed for each sample $\gamma$.
+
+In that case, the mean is $\bar{y} = \frac{1}{c} \sum^c_{\gamma = 1} = \bar{y}_\gamma$, and the variance is $v(\bar{y}) = \frac{1}{c(c-1)} \sum^c_{\gamma = 1} (\bar{y}_\gamma - \bar{y})^2$
+
+> The strength of this approach to estimating the sampling variance of a statistic is that it can be applied to almost any kind of statistic: means, proportions, regression coefficients, and medians. Using these procedures requires thousands of calculations made feasible only with high-speed computing. (p. 361)
+
+There are differences between the balanced repeated replication and the jackknife replication, but the results are remarkably similar (p. 361). "The Taylor series approximation is the most commonly used approach, but that does not mean that it provides a more precise or accurate estimate of variance than the other procedures." (p. 361)
+
+## Lumley, T. (2011). _Complex surveys: a guide to analysis using R._ John Wiley & Sons. Caps. 1–2
+
+### Chapter 1: Basic Tools
+
+> The mathematical development for most of statistics is _model-based_, and relies on specifying a probability model for the random process that generates the data. [...]. To the extent that the model represents the process that generated the data, it is possible to draw conclusions that can be generalized to other situations where the same process operates. As the model can only ever be an approximation, it is important (but often difficult) to know what sort of departures from the model will invalidate the analysis. (p. 1)
+>
+> The analysis of complex survey samples, in contrast, is usually _design-based_. The researcher specifies a population, whose data values are unknown but are regarded as fixed, not random. The observed sample is random because it depends on the random selection of individuals from this fixed population. The random selection procedure of individuals (the _sample design_) is under the control of the reseacher, so all the probabilities involved can, in principle, be known precisely. The goal of the analysis is to estimate features of the fixed population, and design-based inference does not support generalizing findings to other populations. (p. 2)
+
+> It is important to remember that what makes a _probability sample_ is the procedure for taking samples from a population, not just the data we happen to end up with. (p. 3)
+
+> The fundamental statistical idea behind all of design-based inference is that an individual sampled with a sampling probability of $\pi_i$ represents $1/\pi_i$ individuals in the population. The value $1/\pi_i$ is called the _sampling weight_. (p. 4) 
+
+Por exemplo, se amostramos 3.500 indivíduos de uma população de 350.000, então a probabilidade de seleção de cada indivíduo é $\pi_i = 3.500/350.000 = 0.01$. Assim, cada indivíduo amostrado representa $1/\pi_i = 100$ indivíduos na população.
+
+O Estimador de Horvitz-Thompson é um estimador de média populacional que leva em consideração os pesos amostrais. Ele é dado por:
+
+> If X_i is a measurement of variable X on person $i$, we write:
+>
+> $$
+> \hat{X_i} = \frac{1}{\pi_i} X_i
+> $$
+
+Com isso, o estimador para o total populacional $\hat{T}$ é dado por:
+
+$$
+\hat{T}_X = \sum_{i=1}^n \hat{X_i} = \sum_{i=1}^n \frac{1}{\pi_i} X_i
+$$
+
+A variância do estimador de Horvitz-Thompson é dada por:
+
+$$
+\text{Var}(\hat{T}_X) = \sum_{i, j} \left( \dfrac{X_i X_j}{\pi_{ij}} - \dfrac{X_i}{\pi_i} \dfrac{X_j}{\pi_j} \right)
+$$
+
+> Knowing the formula for the variance estimator is less important to the applied user, but it is useful to note two things. The first is that the formula applies to any design, however complicated, where $\pi_i$ and $\pi_{ij}$ are known for the sampled observations. The second is that the formula depends on the pairwise sampling probabilities $\pi_{ij}$, not just on the sampling weights; this is how correlations in the sampling design enter the computations. (p. 5)
+
+> If the necessary sample size for a given level of precision is known for a simple random sample, the sample size for a complex design can be obtained by multiplying by the design effect. While the design effect will not be known in advance, some useful guidance can be obtained by looking at design effects reported for other similar surveys. (p. 6)
+
+### Chapter 2: Simple and Stratified Sampling
+
+> The population mean of X can be estimated by dividing the estimated total by the population size, N
+>
+> $$
+> \hat{\mu}_X = \frac{1}{N} \sum^n_{i = 1} \hat{X}_i = \frac{1}{n} \sum^n_{i = 1} X_i
+> $$
+>
+> so the estimate is just the sample average. The variance estimate is obtained by dividing the variance estimate for the total by $N^2$:
+> $$
+> \hat{\text{var}}[\hat{\mu}_X] = \frac{N - n}{N} \times \frac{\hat{\text{var}}[X]}{n}
+> $$
+> 
+> and the standard error of the mean is the square root of $\hat{\text{var}}[\hat{\mu}_X]$. This formula shows that the uncertainty in the mean is not very sensitive to the population size as long as the population is much larger than the sample. A sample of 100 people gives the same uncertainty about the mean of a population of 10.000 or 100.000.0000. (p. 18)
+
+> Confidence intervals for estimates are computed by using a Normal distribution for the estimate, ie, for a 95% confidence interval adding and subtracting 1.96 standard errors. This is not the same as assuming a Normal distribution for the data. Under the simple random sampling and the other sampling designs in this book the distribution of estimates across repeated surveys will be close to a Normal distribution (from the Central Limit Theorem) as long as the sample size is large enough and the estimate is not too strongly influenced by the values of just a few observations. (p. 19)
+
+> [Caso da amostragem estratificada] Since a stratified sample is just a set of simple random samples from each stratum, the Horvitz-Thompson estimator of the total is just the sum of the estimated totals in each stratum and its variance is the sum of the estimated variances in each stratum. The population mean is estimated by dividing the estimated population total by the population size $N$.
+
+## Shirani-Mehr, H., Rothschild, D., Goel, S., & Gelman, A. (2018). Disentangling bias and variance in election polls. _Journal of the American Statistical Association_, 113(522), 607–614.
+
+> It has long been known that the margins of errors provided by survey organizations, and reported in the news, understate the total survey error. This is an important topic in sampling but is difficult to address in general for two reasons. First, we like to decompose error into bias and variance, but this can only be done with any precision if we have a large number of surveys and outcomes -- not merely a large number of respondents in an individual survey. Second, assessment of error requires a ground truth for comparison, which is tipically not available, as the reason for conducting a sample survey in the first place is to estimate some population characteristic that is not already known. (p. 607)
+
+> Election polls typically survey a random sample of eligible or likely voters, and then generate population-level estimates by taking a weighted average of responses, where the weights are designed to correct for known differences between sample and population. This general analysis framework yields both a point estimate of the election outcome, and also an estimate of the error in that prediction due to sample variance which accounts for the survey weights (Lohr 2009). In practice, however, polling organizations often use the weights only in computing estimates, ignoring them when computing standard errors and instead reporting 95% margins of error based on the formula for simple random sampling (SRS) -- for example, $\pm 3.5$ percentage points for an election survey with 800 people. Appropriate correction for the “design effect” corresponding to unequal weights would increase margins of error (see, for example, Mercer (2016)).
+
+> Figure 1 shows the distribution of these differences, where positive values on the $x$-axis indicate the Republican candidate received more support in the poll than in the election. We repeat this process separately for senatorial, gubernatorial, and presidential polls. For comparison, the dotted lines show the theoretical distribution of polling errors assuming SRS. Specifically, for each senate poll $i$, we first simulate an SRS polling result by drawing a sample from a binomial distribution with parameters $n_i$ and $v_{r[i]}$, where $n_i$ is the number of respondents in poll $i$ who express a preference for one of the two major-party candidates, and $v_{r[i]}$ is the final two-party vote share of the Republican candidate in the corresponding election $r[i]$. (p. 609)
+
+> The senatorial and gubernatorial polls, in particular, have substantially larger RMSE (3.7% and 3.9%, respectively) than SRS (2.0% and 2.1%, respectively). In contrast, the RMSE for state-level presidential polls is 2.5%, not much larger than one would expect from SRS (2.0%). (p. 609)
+
+
+---
+
+## Anotações de aula
+
+### Conceitos importantes
+
+- Parâmetro: medida na população
+- Estatística: medida calculada na amostra
+- Estimador: procedimento para calcular uma estatística a partir de dados amostrais
+
+A gente aproxima o valor de um determinado parâmetro usando estatísticas amostrais. Podemos falar, na prática, de estimadores para calcular parâmetros e estatísticas.
+
+### Teorema Central do Limite
+
+Estimadores são variáveis aleatórias que dependem do resultado da amostra, o que significa que há uma distribuição associada a cada estimador. Pelo Teorema Central do Limite, para amostras geralmente $n>30$, começamos a nos aproximar de uma distribuição normal.
+
+Temos um processo gerador de dados desconhecido e queremos estimar, no caso de uma Binomial, por exemplo, o parâmetro de sucesso. Mas existe algo que eu tenho: o $n$. A maior parte das distribuições que tem a ver com a amostragem possuem dois parâmetros: o tamanho da amostra (que eu tenho, e eu que defino, e portanto consigo calcular incerteza) e o $\bar{y}$, que eu não tenho.
+
+Quando estamos falando de um desenho amostral, podemos gerar um número finito de amostras. Cada uma dessas amostras me gera uma estatística e, quando plotamos essas $n$ estatísticas, para $n > 30$, a distribuição da estatística amostral se aproximará de uma distribuição amostral.
+
+### Incerteza
+
+Usamos a **variância amostral** para medir a dispersão das estatísticas amostrais:
+
+$$
+s^2 = \dfrac{\sum (y_i - \bar{y})^2}{n-1}
+$$
+
+Note que, para fazer isso, calculamos primeiro a média.
+
+Outra forma de medir incerteza é usando o erro-padrão. A variância amostral penaliza pontos mais distantes da média elevando-os ao quadrado e, além disso, é uma medida positiva. O erro-padrão é uma espécie de correção pra isso, mas não só: a gente também leva em consideração o tamanho da amostra.
+
+$$
+\text{SE}_\bar{y} = \sqrt{\dfrac{s^2}{n}} = \dfrac{s}{\sqrt{n}},
+$$
+onde $s = \sqrt{s^2}$ é o desvio-padrão da amostra. Na prática, voltamos para a escala original do dado, então a gente consegue calcular uma margem de erro de maneira mais simples.
+
+**Ponto essencial**: se a distribuição amostral de vários estimadores parece normal, usamos a função de densidade normal para calcular a probabilidade de uma estimativa cair em um intervalo. A PDF da normal é:
+
+$$
+f(x) = \dfrac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}},
+$$
+
+onde $\mu$ é a média da distribuição e $\sigma^2$ é a variância. Na função de probabilidade, você pluga um número e ela te diz a probabilidade de aquele número ter sido gerado por aquela função. Mais especificamente, quando plugamos a média e o desvio padrão, a PDF da normal retorna a probabilidade de um número pertencer àquele intervalo. 
+
+```{r}
+library(tidyverse)
+
+macae <- readRDS("C:/Users/felip/OneDrive/Área de Trabalho/IESP/Survey-Research/listas/lista1/dados/macae.rds")
+
+# extraímos uma amostra n=50
+am <- macae %>%
+  slice_sample(n = 50)
+```
+
+
+
+```{r}
+# media, \bar{y}
+media <- sum(am$alfabetizada) / nrow(am)
+print(media)
+```
+
+```{r}
+# variancia, $s^2$
+var <- (am$alfabetizada - media)^2
+var <- sum(var) / (nrow(am) - 1) # tiramos 1 se for uma amostra
+print(var)
+```
+```{r}
+# erro padrao, SE_\bar{y}, na escala do dado original
+sd_y <- sqrt(var)
+se_y <- sd_y / sqrt(nrow(am))
+print(se_y)
+```
+Com isso temos uma margem de erro e um intervalo de confiança:
+
+$$
+\text{ME} = 1.96 \times \text{SE}_\bar{y} \\
+\text{IC}_{95\%} = \bar{y} \pm\ \text{ME}
+$$
+Parece bom, mas é uma aproximação. 
+
+No caso de proporções, margens de erro não são simétricas; isto é, estimativas mais próximas de $0$ ou $1$ têm margens de erro menores (porque os limites _forçam_ redução nas margens). Em termos práticos, a variância de proporção assume uma distribuição binomial, e não normal.
+
+Vamos usar um exemplo da taxa de alfabetização em Macaé. Imagine que tiramos a seguinte amostra $n=50$. A variância aqui é $\frac{p(1-p)}{n}$, onde $p$ é a proporção (ou seja, a média) da amostra. Temos a estatística $\hat{p}$ e $v(\hat{p})$. O erro padrão nesse caso é apenas a raiz quadrada da variância, sem dividir pelo $\sqrt{n}$.
+
+A depender do meu valor de $p$, a coisa vai mudar. Quando eu estimo alguma coisa que é muito pouco prevalente, $p$ é muito pequeno e a margem de erro também fica muito pequena, porque eu não tenho probabilidades menores que zero, então eu só tenho incerteza "do outro lado". 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
