@@ -8,7 +8,7 @@ endnote: no
 
 # Pós-estratificação
 
-## ## Lumley, T. (2011). _Complex surveys: a guide to analysis using R._ John Wiley & Sons. Chapter 7: Post-stratification, raking, and calibration.
+## Lumley, T. (2011). _Complex surveys: a guide to analysis using R._ John Wiley & Sons. Chapter 7: Post-stratification, raking, and calibration.
 
 > This chapter deals with techniques for using known population totals for a set of variables (_auxiliary variables_) to adjust the sampling weights and improve estimation for another set of variables. All of these techniques have the same idea: adjustments are made to the sampling weights so that estimated population totals for the auxiliary variables match the known population totals, making the sample more representative of the population. A second benefit is that the estimates are forced to be consistent with the population data, improving their credibility with people who may not understand the sampling process. (p. 135-136)
 

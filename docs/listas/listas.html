@@ -8,7 +8,7 @@
 
 <meta name="author" content="Felipe Lamarca">
 
-<title>8&nbsp; Pós-estratificação – Pesquisa de Survey</title>
+<title>9&nbsp; Listas – Pesquisa de Survey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,41 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -66,8 +31,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../listas/listas.html" rel="next">
-<link href="../aulas/aula-7.html" rel="prev">
+<link href="../aulas/aula-8.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -109,35 +73,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -310,7 +245,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-8.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../listas/listas.html">Listas</a></li><li class="breadcrumb-item"><a href="../listas/listas.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Listas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -391,7 +326,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../aulas/aula-8.html" class="sidebar-item-text sidebar-link active">
+  <a href="../aulas/aula-8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></span></a>
   </div>
 </li>
@@ -408,7 +343,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../listas/listas.html" class="sidebar-item-text sidebar-link">
+  <a href="../listas/listas.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Listas</span></span></a>
   </div>
 </li>
@@ -424,15 +359,7 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration." id="toc-lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration." class="nav-link active" data-scroll-target="#lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration."><span class="header-section-number">8.1</span> Lumley, T. (2011). <em>Complex surveys: a guide to analysis using R.</em> John Wiley &amp; Sons. Chapter 7: Post-stratification, raking, and calibration.</a></li>
-  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">8.2</span> Anotações de aula</a>
-  <ul class="collapse">
-  <li><a href="#ponderação-de-ajuste" id="toc-ponderação-de-ajuste" class="nav-link" data-scroll-target="#ponderação-de-ajuste"><span class="header-section-number">8.2.1</span> Ponderação de ajuste</a></li>
-  <li><a href="#calibração-vs.-ponderação" id="toc-calibração-vs.-ponderação" class="nav-link" data-scroll-target="#calibração-vs.-ponderação"><span class="header-section-number">8.2.2</span> Calibração vs.&nbsp;ponderação</a></li>
-  <li><a href="#pesos-e-inflação-da-variância" id="toc-pesos-e-inflação-da-variância" class="nav-link" data-scroll-target="#pesos-e-inflação-da-variância"><span class="header-section-number">8.2.3</span> Pesos e inflação da variância</a></li>
-  <li><a href="#outros-tipos-de-pós-ajustes-em-r" id="toc-outros-tipos-de-pós-ajustes-em-r" class="nav-link" data-scroll-target="#outros-tipos-de-pós-ajustes-em-r"><span class="header-section-number">8.2.4</span> Outros tipos de pós-ajustes em R</a></li>
-  <li><a href="#usando-o-pacote-survey-no-r" id="toc-usando-o-pacote-survey-no-r" class="nav-link" data-scroll-target="#usando-o-pacote-survey-no-r"><span class="header-section-number">8.2.5</span> Usando o pacote <code>survey</code> no R</a></li>
-  </ul></li>
+  <li><a href="#lista-1" id="toc-lista-1" class="nav-link active" data-scroll-target="#lista-1"><span class="header-section-number">9.1</span> Lista 1</a></li>
   </ul>
 </nav>
     </div>
@@ -440,9 +367,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-2.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-8.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../listas/listas.html">Listas</a></li><li class="breadcrumb-item"><a href="../listas/listas.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Listas</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Listas</span></h1>
 </div>
 
 
@@ -465,261 +392,12 @@ window.Quarto = {
 </header>
 
 
-<section id="lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration." class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration."><span class="header-section-number">8.1</span> Lumley, T. (2011). <em>Complex surveys: a guide to analysis using R.</em> John Wiley &amp; Sons. Chapter 7: Post-stratification, raking, and calibration.</h2>
-<blockquote class="blockquote">
-<p>This chapter deals with techniques for using known population totals for a set of variables (<em>auxiliary variables</em>) to adjust the sampling weights and improve estimation for another set of variables. All of these techniques have the same idea: adjustments are made to the sampling weights so that estimated population totals for the auxiliary variables match the known population totals, making the sample more representative of the population. A second benefit is that the estimates are forced to be consistent with the population data, improving their credibility with people who may not understand the sampling process. (p.&nbsp;135-136)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Post-stratification adjusts the sampling weights so that the estimated population group sizes are correct, as they would be in stratified sampling. The sampling weights <span class="math inline">\(\frac{1}{\pi_i}\)</span> are replaced by weights <span class="math inline">\(\frac{g_i}{\pi_i}\)</span>, where <span class="math inline">\(g_i = \frac{N_i}{\hat{N}_i}\)</span> for the group containing individual <span class="math inline">\(i\)</span>.</p>
-</blockquote>
-<hr>
-</section>
-<section id="anotações-de-aula" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">8.2</span> Anotações de aula</h2>
-<p>Em amostragem, cada unidade amostral tem um peso. Lemos isso como “quantas unidades na população cada unidade amostrada representa”. Se o desenho amostral tiver equiprobabilidade, cada unidade amostrada representa a mesma quantidade de unidade da população e pesos não são necessários.</p>
-<p>O estimador ponderado é:</p>
-<p><span class="math display">\[
-\hat{Y} = \sum_{i \in s} w_i y_i
-\]</span></p>
-<p>onde <span class="math inline">\(w_i\)</span> é o peso para a unidade <span class="math inline">\(i\)</span> e <span class="math inline">\(y_i\)</span> é a medida extraída do survey.</p>
-<p>Considere o seguinte exemplo:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Área</th>
-<th>Idade</th>
-<th>Quantas pessoas ela representa</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>ZS</td>
-<td>25</td>
-<td>349</td>
-</tr>
-<tr class="even">
-<td>ZS</td>
-<td>30</td>
-<td>482</td>
-</tr>
-</tbody>
-</table>
-<p>Nesse caso, indicamos quantas pessoas cada unidade amostral representa. Esse valor é calculado a partir da probabilidade de inclusão da unidade amostral. O peso é o inverso da probabilidade de inclusão. <strong>A ponderação pelo desenho ajusta amostras quando temos probabilidades desiguais de inclusão</strong>: <span class="math inline">\(w_i = \frac{1}{\pi_i}\)</span>, onde <span class="math inline">\(\pi_i\)</span> é a probabilidade de inclusão da unidade amostral <span class="math inline">\(i\)</span>. Supondo que a probabilidade de inclusão é de 0.25, o peso da unidade amostral é 4. Isso significa que ela representa 4 unidades na população.</p>
-<p>Esse estimador também é chamado de estimador de expansão – o estimador de Horwitz-Thompson. O peso absoluto me diz quantas pessoas de perfil similar uma única pessoa da amostra representa.</p>
-<p><span class="math display">\[
-\hat{N} = \sum_{i = 1}^n \frac{y_i}{w_i}
-\]</span></p>
-<p>Note que esse peso é útil para calcular totais populacionais, mas ele é diferente do peso usado para fazer ponderação. Por que ponderar?</p>
-<ul>
-<li>Ponderar pela probabilidade de inclusão quando não temos equiprobabilidade é importante para não incorporar viés na amostra (claro, isso depende de uma amostragem probabilística);</li>
-<li>Dar maior peso a subgrupos que responderam menos ao survey (não-resposta);</li>
-<li>Ajustar estimativas com totais populacionais conhecidos (<em>aka</em> calibração)</li>
-</ul>
-<section id="ponderação-de-ajuste" class="level3" data-number="8.2.1">
-<h3 data-number="8.2.1" class="anchored" data-anchor-id="ponderação-de-ajuste"><span class="header-section-number">8.2.1</span> Ponderação de ajuste</h3>
-<p>Problemas com quadro amostral (cobertura, e.g.) e não-resposta de unidade podem introduzir viés se respondentes diferem sistematicamente de não-respondentes:</p>
-<ul>
-<li>Entrevistamos muito menos pessoas mais ricas do que deveríamos;</li>
-<li>Usamos estratificação com alocação não-proporcional (i.e., regiões pequenas e grandes recebem o mesmo número de entrevistas);</li>
-<li>Bolsonaristas ou lulistas se recusam mais a responder.</li>
-</ul>
-<p>A ponderação duplica, triplica, às vezes quadruplica a informação que temos. Na prática, isso lembra a amostragem por conglomerados, na perspectiva de que estamos aumentando a margem de erro ao não incorporar informações efetivamente novas.</p>
-<p>Ideia básica: ajustar os pesos dos respondentes para compensar as unidades ausentes ou sub-representadas. Pesquisa domiciliar probabilística com <span class="math inline">\(n=1000\)</span> entrevistou <span class="math inline">\(380\%\)</span> homens; na população, homens são <span class="math inline">\(50\%\)</span>:</p>
-<p><span class="math display">\[
-\frac{0.5}{0.38} \ \text{ou} \ \frac{500}{380} \approx 1.315789474
-\]</span></p>
-<p>Cada homem na amostra representa 1.315789474 homens na população. O mesmo vale para mulheres, mas o peso é menor.</p>
-</section>
-<section id="calibração-vs.-ponderação" class="level3" data-number="8.2.2">
-<h3 data-number="8.2.2" class="anchored" data-anchor-id="calibração-vs.-ponderação"><span class="header-section-number">8.2.2</span> Calibração vs.&nbsp;ponderação</h3>
-<p>Quando já temos pesos (geralmente do desenho), podemos forçá-los a corresponder a totais populacionais conhecidos em variáveis auxiliares.</p>
-<p>Ponderar é pegar a amostra que eu tenho e tentar aproximá-la de algum benchmark (por exemplo, a população). Calibrar, por outro lado, é pegar um peso que eu já tenho (no mais das vezes, a probabilidade de inclusão) – supondo que a gente calcule o total populacional e, no entanto, a população brasileira deu <span class="math inline">\(205\)</span> milhões, mas sabemos que a população brasileira é de <span class="math inline">\(203\)</span> milhões. A calibragem ajusta o esquema de pesos para fazer com que o total bata com algum total conhecido da população.</p>
-<p>Nesse caso, precisamos encontrar novos pesos <span class="math inline">\(w_i^{\text{Cal}}\)</span> próximos aos pesos iniciais de forma que:</p>
-<p><span class="math display">\[
-\sum_{i \in s} w_i^{\text{Cal}} x_i = \sum_{i \in U} x_i = X,
-\]</span></p>
-<p>onde <span class="math inline">\(X\)</span> é o total populacional (<span class="math inline">\(U\)</span> é a população) conhecido (e.g., total de eleitores) para a variável auxiliar <span class="math inline">\(x_i\)</span>. Esse ajuste pode ser feito de várias maneiras: algoritmos iterativos, regressão, etc.</p>
-</section>
-<section id="pesos-e-inflação-da-variância" class="level3" data-number="8.2.3">
-<h3 data-number="8.2.3" class="anchored" data-anchor-id="pesos-e-inflação-da-variância"><span class="header-section-number">8.2.3</span> Pesos e inflação da variância</h3>
-<p>Pesos de desenho muito grande ou desiguais inflam estimativas.</p>
-<blockquote class="blockquote">
-<p>Intuição: uma unidade com peso relativo de <span class="math inline">\(2\)</span> equivale a duplicar a sua entrevista na amostra; para isso, no entanto, precisamos retirar uma unidade de outras unidades da amostra. A solução geralmente é usar tetos ou ajustes para limitar pesos extremos.</p>
-</blockquote>
-</section>
-<section id="outros-tipos-de-pós-ajustes-em-r" class="level3" data-number="8.2.4">
-<h3 data-number="8.2.4" class="anchored" data-anchor-id="outros-tipos-de-pós-ajustes-em-r"><span class="header-section-number">8.2.4</span> Outros tipos de pós-ajustes em R</h3>
-<ul>
-<li><em>Rake e iterative proportional fitting</em>, que ajustam pesos iterativamente para que totais populacionais conhecidos sejam respeitados (pesos relativos);</li>
-<li><em>Generalized regression estimation</em> (GREG), que usa modelos de regressão para calibrar pesos;</li>
-<li><em>Multilevel regression and poststratification</em> (MrP), que projeta resposta em subgrupos da população (e.g., regiões, idade, sexo) usando modelos de regressão</li>
-</ul>
-</section>
-<section id="usando-o-pacote-survey-no-r" class="level3" data-number="8.2.5">
-<h3 data-number="8.2.5" class="anchored" data-anchor-id="usando-o-pacote-survey-no-r"><span class="header-section-number">8.2.5</span> Usando o pacote <code>survey</code> no R</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: pacote 'survey' foi compilado no R versão 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: grid
-Carregando pacotes exigidos: Matrix
-
-Anexando pacote: 'Matrix'
-
-Os seguintes objetos são mascarados por 'package:tidyr':
-
-    expand, pack, unpack
-
-Carregando pacotes exigidos: survival
-
-Anexando pacote: 'survey'
-
-O seguinte objeto é mascarado por 'package:graphics':
-
-    dotchart</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>macae <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"C:/Users/felip/OneDrive/Área de Trabalho/IESP/Survey-Research/listas/lista1/dados/macae.rds"</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>verdade <span class="ot">&lt;-</span> <span class="fu">mean</span>(macae<span class="sc">$</span>alfabetizada)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(verdade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.8720686</code></pre>
-</div>
-</div>
-<p>De maneira naive, podemos estimar a média apenas tirando a média simples da amostra. Devemos esperar algo razoavelmente distoante do parâmetro populacional.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>amostra <span class="ot">&lt;-</span> macae <span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(subdistrito) <span class="sc">%&gt;%</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pi =</span> <span class="dv">100</span> <span class="sc">/</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">100</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(amostra<span class="sc">$</span>alfabetizada)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.8485714</code></pre>
-</div>
-</div>
-<p>Usando o estimador de Horwitz-Thompson, podemos recuperar os pesos absolutos usando a probabilidade de inclusão (i.e., ponderação pela probabilidade de inclusão):</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>amostra <span class="ot">&lt;-</span> amostra <span class="sc">%&gt;%</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">peso =</span> <span class="dv">1</span> <span class="sc">/</span> pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Vamos fazer a mesma coisa usando o pacote survey, que nos permite declarar o desenho amostral. Vamos usar as probabilidades de inclusão para “acertar” o cálculo, assim como no exemplo anterior:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># todas as observacoes sao intercambiaveis dentro de um estrato, entao ignoramos id (~1)</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>metodo1 <span class="ot">&lt;-</span> <span class="fu">svydesign</span>(<span class="sc">~</span><span class="dv">1</span>,</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">strata =</span> <span class="sc">~</span>subdistrito, <span class="co"># estrato</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>                     <span class="at">probs =</span> <span class="sc">~</span>pi, <span class="co"># probabilidades de inclusao para ponderar</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>                     <span class="at">data =</span> amostra)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">svytotal</span>(<span class="sc">~</span>alfabetizada, metodo1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>              total     SE
-alfabetizada 176920 3347.8</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">svymean</span>(<span class="sc">~</span>alfabetizada, metodo1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                mean     SE
-alfabetizada 0.85581 0.0162</code></pre>
-</div>
-</div>
-<p>Agora, vejamos o método 2: não temos a probabilidade de inclusão, mas tenho os totais populacionais extraídos a partir de alguma outra fonte – como, por exemplo, o censo demográfico. Eu sei, por exemplo, quantas pessoas moram em cada distrito.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># MÉTODO 2: pós-estratificação</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># vamos ver o caso naive</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>desenho <span class="ot">&lt;-</span> <span class="fu">svydesign</span>(<span class="sc">~</span>id_pessoa,</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                     <span class="at">data =</span> amostra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in svydesign.default(~id_pessoa, data = amostra): No weights or
-probabilities supplied, assuming equal probability</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># estimamos a média de maneira naive sem ponderar</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svymean</span>(<span class="sc">~</span>alfabetizada, desenho)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                mean     SE
-alfabetizada 0.84857 0.0136</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># agora vamos estratificar</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>estratos <span class="ot">&lt;-</span> macae <span class="sc">%&gt;%</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(subdistrito) <span class="sc">%&gt;%</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Freq =</span> <span class="fu">n</span>())</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># criamos um objeto do tipo postStratify</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>metodo2 <span class="ot">&lt;-</span> <span class="fu">postStratify</span>(desenho, <span class="sc">~</span>subdistrito, estratos)</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># calculamos a media usando esse meotod, que estratificou os resultados</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="fu">svymean</span>(<span class="sc">~</span>alfabetizada, metodo2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                mean     SE
-alfabetizada 0.85581 0.0161</code></pre>
-</div>
-</div>
-<p>Agora passemos ao método 3, que usa Rake:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>desenho <span class="ot">&lt;-</span> <span class="fu">svydesign</span>(<span class="sc">~</span>id_pessoa,</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">data =</span> amostra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in svydesign.default(~id_pessoa, data = amostra): No weights or
-probabilities supplied, assuming equal probability</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># se fossem varias variaveis desbalanceadas, criaria um banco pra cada e </span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># passaria cada um deles na lista</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>metodo3 <span class="ot">&lt;-</span> <span class="fu">rake</span>(desenho, </span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>                <span class="fu">list</span>(<span class="sc">~</span>subdistrito),</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>                <span class="fu">list</span>(estratos))</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="fu">svymean</span>(<span class="sc">~</span>alfabetizada, metodo3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                mean     SE
-alfabetizada 0.85581 0.0161</code></pre>
-</div>
-</div>
-<p>Podemos extrair os pesos calculados por cada desenho da seguinte maneira:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>amostra <span class="ot">&lt;-</span> amostra <span class="sc">%&gt;%</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">peso_strat =</span> <span class="fu">weights</span>(metodo1),</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">peso_pos_strat =</span> <span class="fu">weights</span>(metodo2),</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">peso_rake =</span> <span class="fu">weights</span>(metodo3)</span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(amostra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 11
-  codigo_setor  id_pessoa distrito subdistrito bairro alfabetizada      pi  peso
-  &lt;chr&gt;         &lt;glue&gt;    &lt;chr&gt;    &lt;chr&gt;       &lt;chr&gt;         &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
-1 330240305020… 33024030… Macaé    Aeroporto   Parqu…            1 0.00265  378.
-2 330240305020… 33024030… Macaé    Aeroporto   Ajuda             1 0.00265  378.
-3 330240305020… 33024030… Macaé    Aeroporto   Ajuda             0 0.00265  378.
-4 330240305020… 33024030… Macaé    Aeroporto   Ajuda             1 0.00265  378.
-5 330240305020… 33024030… Macaé    Aeroporto   Parqu…            1 0.00265  378.
-6 330240305020… 33024030… Macaé    Aeroporto   Parqu…            1 0.00265  378.
-# ℹ 3 more variables: peso_strat &lt;dbl&gt;, peso_pos_strat &lt;dbl&gt;, peso_rake &lt;dbl&gt;</code></pre>
-</div>
-</div>
-<p>Observe que chegamos <span class="math inline">\(\pm\)</span> aos mesmos pesos com cada approach. De fato, são diferentes maneiras de resolver o mesmo problema.</p>
+<section id="lista-1" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="lista-1"><span class="header-section-number">9.1</span> Lista 1</h2>
+<p>Nesta tarefa implementamos 3 desenhos amostrais (AAS, AAS com estratificação e por conglomerados) usando dados de Macaé extraídos do Censo de 2010. O objetivo é avaliar o desempenho de cada desenho em vista da estimação da proporção de indivíduos alfabetizados no município. Observamos que a estimação no desenho estratificado é melhor que no desenho AAS do ponto de vista da variância da estimativa, mas há espaço para melhora a partir da escolha de variáveis de estratificação mais adequadas. O desenho por conglomerado, como esperado, possui variância amostral maior que o desenho AAS. A magnitude dessa diferença varia de acordo com diferentes escolhas de tamanho de conglomerados e número de entrevistas em cada conglomerado. <a href="lista1/lista1.pdf">[link do pdf]</a></p>
+<p><strong>Nota:</strong> 100/100</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1137,14 +815,11 @@ alfabetizada 0.85581 0.0161</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../aulas/aula-7.html" class="pagination-link" aria-label="Inferência com Surveys">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Inferência com Surveys</span></span>
+      <a href="../aulas/aula-8.html" class="pagination-link" aria-label="Pós-estratificação">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../listas/listas.html" class="pagination-link" aria-label="Listas">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Listas</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

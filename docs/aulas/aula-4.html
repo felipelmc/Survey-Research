@@ -397,6 +397,23 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Listas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../listas/listas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Listas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -738,11 +755,11 @@ s^2_a = \dfrac{1}{A - 1} \sum_{\alpha=1}^{A} (\bar{y}_{\alpha} - \bar{y})^2,
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">mean</span>(x))</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 50.6
-[1] 55.8
-[1] 68.8
-[1] 59.6
-[1] 37</code></pre>
+<pre><code>[1] 48.8
+[1] 63.2
+[1] 48
+[1] 50.8
+[1] 51</code></pre>
 </div>
 </div>
 <p>De outra maneira, podemos usar a função <code>slice_sample()</code> do <code>dplyr</code> para fazer amostras aleatórias simples. Por exemplo:</p>
@@ -768,11 +785,11 @@ Anexando pacote: 'dplyr'</code></pre>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">mean</span>(x<span class="sc">$</span>idade))</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 46.4
-[1] 60
-[1] 43.8
-[1] 56.2
-[1] 61.4</code></pre>
+<pre><code>[1] 47.6
+[1] 38.4
+[1] 50.2
+[1] 49
+[1] 32.8</code></pre>
 </div>
 </div>
 </section>
