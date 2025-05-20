@@ -1,0 +1,46 @@
+---
+title: "Tarefa de survey"
+date: "19/05/2025"
+author:
+  - name: Felipe Lamarca
+    email: felipelamarca@iesp.uerj.br
+abstract: > 
+  Nesta tarefa, reformulei para o formato *online* o questionário da pesquisa "Jogo do Bicho" do Datafolha (1988), com adaptações que o tornaram mais curto e focado na percepção sobre a legalização do jogo e na quantificação de quem já jogou. Evitei menções à ilegalidade e destaquei o anonimato para reduzir o viés de desejabilidade social. Também utilizei técnicas de *branching*, linguagem suavizada e perguntas mais concretas, seguindo recomendações metodológicas de @smyth2016designing e @krosnick2018questionnaire. As perguntas de perfil e mais sensíveis foram deixadas para o fim, com exceção da cidade e idade, que servem para filtrar os respondentes.
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: true
+    fig-pos: H
+    tbl-cap-location: top
+    fig-cap-location: top
+    df-print: kable
+    geometry:
+      - top=25mm
+      - left=20mm
+      - right=20mm
+      - bottom=25mm
+bibliography: referencias.bib
+lang: pt
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Escolhas e justificativas
+
+Nesta tarefa, reproduzi para o formato _online_ o questionário da pesquisa "Jogo do Bicho", conduzida pelo Datafolha em junho de 1988 nas cidades de São Paulo (SP) e Rio de Janeiro (RJ). O questionário original e as tabelas resultantes da condução da pesquisa pode ser encontrado [aqui](https://www.cesop.unicamp.br/por/banco_de_dados/v/120)[^1]. É possível acessar o link do questionário modificado, hospedado no Google Forms, [aqui](https://docs.google.com/forms/d/e/1FAIpQLSfzAIqy50RJnqGtT5w7ygEG47LUz8QW1_o5_qzj0NEJwXZPfg/viewform?usp=sharing&ouid=102244569472168978170). 
+
+Realizei uma série de modificações, incluindo a escolha de uma quantidade menor de perguntas. No formato modificado, mais curto, o questionário permite medir a percepção da população sobre a legalização do jogo do bicho e oferece uma tentativa potencialmente mais eficaz de quantificar a proporção de pessoas que jogam ou já jogaram. Por outro lado, com a remoção de algumas perguntas, não é possível medir, por exemplo, o motivo que leva as pessoas a serem a favor ou contra a legalização. Para tentar diminuir a carga negativa atribuída a jogar no bicho (afinal, trata-se de um jogo ilegal) e tentar minimizar o viés de desejabilidade social, chamei o questionário de "Loterias formais e informais no Brasil", evitando menções explícitas à ilegalidade. Como o título do questionário é visível ao usuário no caso _online_, essa modificação pode ser importante. Além disso, no texto inicial, deixei claro (inclusive marcando em negrito, conforme indicado por @smyth2016designing) que as informações do questionário são totalmente anonimizadas e que nenhuma informação fornecida permite identificar o respondente. Inclusive, ao questionar se o respondente já havia jogado alguma vez no bicho, reforcei o caráter anônimo do questionário e utilizei expressões como "Você por acaso já...", tentando tornar a resposta mais socialmente aceitável [@smyth2016designing, p. 224]. No mais, o formato online acaba oferecendo uma vantagem metodológica para temas sensíveis como esse, já que a autoadministração pode, por si só, reduzir o viés de desejabilidade social [@smyth2016designing, p. 224]. 
+
+Algumas das perguntas também foram sensivelmente modificadas. Ao invés de perguntar, por exemplo, "Você costuma jogar na Loto mesmo que raramente? Com que frequência?", evitamos a pergunta de duas questões ao mesmo tempo, separando a questão de afirmação/negação da questão de frequência, além de condensar diferentes loterias formais em uma única questão. A respeito da opinião sobre a legalização do jogo do bicho, fiz o _branching_ da resposta para que o respondente, após concordar ou discordar, informasse o grau de concordância ou discordância [@krosnick2018questionnaire]. Outros ajustes a serem destacados incluem as recomendações de @krosnick2018questionnaire quando diz que "If what you want is a number just ask for the number." [@krosnick2018questionnaire, p. 450]: ao invés de questionar sobre frequências em termos abstratos ("frequentemente", "raramente" etc), ofereço opções de resposta mais concretas (nenhuma vez, 1 vez, de 2 a 5 vezes e assim por diante), perguntando, inclusive, sobre informações nos últimos 30 dias -- o que facilita a recuperação da informação por parte do respondente [@smyth2016designing, p. 222]. Por fim, utilizei a recomendação de @smyth2016designing (p. 219) de evitar deixar perguntas "[...] boring, embarrassing, or sensitive [...]" no início do questionário. Por isso, as perguntas de perfil foram movidas para o final do questionário, com exceção da pergunta sobre a cidade de residência e a idade, que são relevantes para a filtragem dos respondentes[^2]. Essa abordagem também oferece desafios, já que o respondente pode deixar o questionário antes de chegar ao final e, com efeito, as informações de perfil não estarão disponíveis para pós-estratificação. No entanto, como o questionário é curto, essa possibilidade é reduzida. Outro ponto de atenção no questionário é o fato de que a divisão das perguntas em diferentes seções, embora importante para separar as perguntas, pode oferecer ao usuário uma sensação de cansaço e acarretar a decisão de parar de responder antes do final.
+
+[^1]: A pesquisa foi publicada pelo Cesop em setembro de 2024, na ocasião da aprovação do projeto de lei que autorizou o funcionamento de bingos e cassinos e regularizou jogos de azar, conforme [postagem](https://www.facebook.com/cesop.unicamp/posts/o-throwback-thursday-tbt-leva-nos-%C3%A0s-pesquisas-curiosas-e-antigas-que-est%C3%A3o-pres/964815842116742/) do próprio Cesop no Facebook.
+
+[^2]: Indivíduos menores de 16 anos ou residentes fora do Rio de Janeiro (RJ) e São Paulo (SP) não devem responder ao questionário, conforme as especificações do desenho do questionário original.
+
+### Referências
+
+::: {#refs}
+:::

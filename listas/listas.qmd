@@ -13,3 +13,7 @@ endnote: no
 Nesta tarefa implementamos 3 desenhos amostrais (AAS, AAS com estratificação e por conglomerados) usando dados de Macaé extraídos do Censo de 2010. O objetivo é avaliar o desempenho de cada desenho em vista da estimação da proporção de indivíduos alfabetizados no município. Observamos que a estimação no desenho estratificado é melhor que no desenho AAS do ponto de vista da variância da estimativa, mas há espaço para melhora a partir da escolha de variáveis de  estratificação mais adequadas. O desenho por conglomerado, como esperado, possui variância amostral maior que o desenho AAS. A magnitude dessa diferença varia de acordo com diferentes escolhas de tamanho de conglomerados e número de entrevistas em cada conglomerado. [[link do pdf]](lista1/lista1.pdf)
 
 **Nota:** 100/100
+
+## Lista 2
+
+Nesta tarefa, reformulei para o formato *online* o questionário da pesquisa "Jogo do Bicho" do Datafolha (1988), com adaptações que o tornaram mais curto e focado na percepção sobre a legalização do jogo e na quantificação de quem já jogou. Evitei menções à ilegalidade e destaquei o anonimato para reduzir o viés de desejabilidade social. Também utilizei técnicas de *branching*, linguagem suavizada e perguntas mais concretas, seguindo recomendações metodológicas de @smyth2016designing e @krosnick2018questionnaire. As perguntas de perfil e mais sensíveis foram deixadas para o fim, com exceção da cidade e idade, que servem para filtrar os respondentes. [[link do pdf]](listas/lista2/lista2.pdf)
