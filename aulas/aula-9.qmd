@@ -1,0 +1,25 @@
+---
+#bibliography: master.bib
+biblio-style: apsr
+fontsize: 11pt
+author: Felipe Lamarca
+endnote: no
+---
+
+# Pós-estratificação com modelos
+
+## Wang, W., Rothschild, D., Goel, S., & Gelman, A. (2015). Forecasting elections with non-representative polls. _International Journal of Forecasting_, 31(3), 980–991
+
+
+## Hanretty, C. (2020). An Introduction to Multilevel Regression and Post-Stratification for Estimating Constituency Opinion: _Political Studies Review_, 18(4), 630–645
+
+
+## Lax, J. R., & Phillips, J. H. (2009). How Should We Estimate Public Opinion in the States. _American Journal of Political Science_, 53(1), 107–121
+
+
+## Buttice, M. K., & Highton, B. (2013). How does multilevel regression and poststratification perform with conventional national surveys? _Political Analysis_, 21(04), 449–467.
+
+
+## Other materials
+
+- [Multilevel regression and post-stratification case studies](https://bookdown.org/jl5522/MRP-case-studies/), by Lopez-Martin, J., Phillips, J. H., & Gelman, A. (2022).
