@@ -395,6 +395,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pós-estratificação</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Pós-estratificação com modelos</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -409,7 +415,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../listas/listas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Listas</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Listas</span></span></a>
   </div>
 </li>
       </ul>
@@ -701,7 +707,7 @@ f(x) = \dfrac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}},
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>media <span class="ot">&lt;-</span> <span class="fu">sum</span>(am<span class="sc">$</span>alfabetizada) <span class="sc">/</span> <span class="fu">nrow</span>(am)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(media)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9</code></pre>
+<pre><code>[1] 0.94</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -710,7 +716,7 @@ f(x) = \dfrac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}},
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="fu">sum</span>(var) <span class="sc">/</span> (<span class="fu">nrow</span>(am) <span class="sc">-</span> <span class="dv">1</span>) <span class="co"># tiramos 1 se for uma amostra</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(var)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.09183673</code></pre>
+<pre><code>[1] 0.05755102</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -719,7 +725,7 @@ f(x) = \dfrac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}},
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>se_y <span class="ot">&lt;-</span> sd_y <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">nrow</span>(am))</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(se_y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.04285714</code></pre>
+<pre><code>[1] 0.03392669</code></pre>
 </div>
 </div>
 <p>Com isso temos uma margem de erro e um intervalo de confiança:</p>
