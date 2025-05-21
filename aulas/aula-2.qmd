@@ -1,3 +1,9 @@
+---
+fontsize: 12pt
+author: Felipe Lamarca
+endnote: no
+---
+
 # O que são e para que servem pesquisas de survey
 
 ## Anotações das leituras

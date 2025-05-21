@@ -1,3 +1,5 @@
+# Apresentação do curso
+
 > Surveys são, hoje, uma das mais difundidas ferramentas de pesquisa social. Por meio da aplicação de questionários estruturados a uma amostra de determinada população, governos estimam taxas de desemprego e de pobreza; políticos definem estratégias de campanha; institutos de pesquisa identificam tendências de comportamento de diferentes grupos sociais; e empresas investigam a satisfação de seus clientes e testam ações de marketing. A proposta deste curso é oferecer uma introdução panorâmica a este tipo de pesquisa. [[ementa]](ementa.pdf)
 
 **Professor:** Fernando Meireles (IESP-UERJ) [[homepage]](https://fmeireles.com/)

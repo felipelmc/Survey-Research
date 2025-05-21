@@ -1,7 +1,5 @@
 ---
-#bibliography: master.bib
-biblio-style: apsr
-fontsize: 11pt
+fontsize: 12pt
 author: Felipe Lamarca
 endnote: no
 ---
