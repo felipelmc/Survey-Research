@@ -195,3 +195,94 @@ $$
 - [Multilevel regression and post-stratification case studies](https://bookdown.org/jl5522/MRP-case-studies/), by Lopez-Martin, J., Phillips, J. H., & Gelman, A. (2022). O que achei legal desse material é que ele inclui uma série de estudos de caso, com dados e código, que mostram como aplicar MRP em diferentes contextos. Vale voltar nele depois, especialmente quando for aplicar MRP.
 
 ## Anotações de aula
+
+MrP provavelmente é o grande avanço na pesquisa de survey possivelmente desde RDD. O que ele faz é usar um modelo de regressão multinível para estimar a opinião pública em subpopulações, como distritos eleitorais ou estados, a partir de uma amostra nacional. Isso é especialmente útil quando a amostra é pequena ou não representativa. O modelo usa informações demográficas e geográficas para fazer previsões mais precisas.
+
+Até agora, viemos fazendo inferência com base em desenho. Nesse caso, todo mundo tem mais ou menos a mesma chance de ser selecionado. Pelo mecanismo de aleatoriedade, a minha amostra vai acabar espelhando a população de fundo -- daí, basta usar estimadores muito simples para fazer inferências sobre a população. Essencialmente é a lógica de experimentos -- espero, em média, que o grupo seja igual ao controle (ou que a amostra espelhe a população). No entanto, na maior parte do tempo não temos essas amostras. Na prática, as amostras não são probabilísticas e, no final, a amostra não é representativa.
+
+Agora, vamos partir para o paradigma de inferência baseada em modelo (_model-based inference_). Eu não sei como a amostra foi feita e muito menos sei qual é a probabilidade de inclusão de um respondente na amostra.
+
+> 💡 MrP (_Multilevel Regression with Poststratification_) é uma forma de inferência baseada em modelo que usa um modelo de regressão multinível para modelar o processo gerador de dados. Assim, não precisamos proceder como uma amostra probabilística. Eu posso criar um modelo de regressão para estimar a probabilidade de alguém ser incluído na amostra.
+
+O modelo de MrP precisa aprender a modelar as respostas individuais das pessoas. Vamos supor:
+
+```{r}
+
+library(ggplot2)
+
+# vamos supor que assim um dado eh produzido
+# i.e., o processo gerador de dados
+beta_0 <- 2.2 # intercepto
+beta_1 <- 0.5 # coeficiente de X
+X <- rnorm(100)
+erro <- rnorm(100, 0, 1)
+Y <- beta_0 + beta_1 * X + erro
+
+df <- data.frame(X, Y)
+
+# plota a relação
+ggplot(df, aes(x = X, y = Y)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "X", y = "Y") +
+  theme_minimal()
+
+# vamos estimar os parametros do modelo
+# e recuperar algo proximo desse 2.2 e 0.5
+model <- lm(Y ~ X, data = df)
+summary(model)
+
+```
+
+No fundo, o MrP serve para gerar predições para cada tipo de segmento de uma população. Exemplo:
+
+$$
+\mathbb{P}(y_i = 1) = \phi (\beta_0 + \alpha_{k[i]}^{\text{educação}} + \alpha_{j[i]}^{\text{sexo}} + \alpha_{l[i]}^{\text{idade}} + \alpha_{n[i]}^{\text{UF}})
+$$
+
+O que são os $\alpha$?
+
+- Educação: $\alpha_k^{\text{educação}} \sim \mathcal{N}(0, \sigma^2_{\text{educação}})$
+- Sexo: $\alpha_j^{\text{sexo}} \sim \mathcal{N}(0, \sigma^2_{\text{sexo}})$
+- Idade: $\alpha_l^{\text{idade}} \sim \mathcal{N}(0, \sigma^2_{\text{idade}})$
+- UF: $\alpha_n^{\text{UF}} \sim \mathcal{N}(0, \sigma^2_{\text{UF}})$
+
+> 💡 Efeitos aleatórios fazem _partial pooling_, isto é, puxam efeitos de grupos pequenos, mais incertos, para efeitos de grupos maiores similares. 
+
+**Variáveis de contexto:** outra vantagem é poder modelar efeitos conjunturais ou contextuais. Ou seja, podemos ter covariáveis no nível dos grupos:
+
+$$
+\alpha_n^{\text{UF}} \sim \mathcal{N}(\beta X_n, \sigma^2_{\text{UF}}),
+$$
+
+onde $X_n$ é a matriz de covariáveis mensuradas no nível da UF.
+
+### Agregação
+
+Tendo um modelo multinível ajustado para predizer respostas individuais a partir de variáveis demográficas e contextuais, o próximo passo é agregar as previsões por subunidade/subgrupo. Passo a passo:
+
+1. Usa o modelo para atribuir $\mathbb{P}(y_i = 1)$ para cada unidade $i$
+2. Cada predição é multiplicada pela contagem populacional de cada tipo na população (e.g., mulheres, 18-24 anos, etc.)
+3. As previsões são agrupadas por subunidade/subgrupo
+
+A segunda etapa, portanto, é a pós estratificação propriamente:
+
+$$
+\hat{\pi}_g^{\text{MrP}} = \dfrac{\sum_g \hat{\pi}_g N_g}{\sum_g N_g},
+$$
+
+onde $N_g$ é o número de pessoas no grupo $g$ e $\hat{\pi}_g$ é a predição do modelo para o grupo $g$. O resultado final é uma estimativa da proporção de pessoas que responderam $1$ (seja lá o que $1$ significa na variável resposta) na população.
+
+Os dados do survey são usados unicamente para ajustar os parâmetros do modelo. Depois disso, basta fazer as predições desse modelo no banco de dados de totais populacionais -- conseguida a partir de bases importantes como o Censo ou a PNAD.
+
+### Incerteza
+
+No caso bayesiano, a incerteza é tranquilamente incorporada ao modelo. Afinal, bastaria tirar diferentes amostras da posteriori para obter intervalos de credibilidade para as predições. No caso frequentista, a incerteza precisa ser aproximada por _bootstrapping_. Nos dois casos, intervalos são aproximações (e, normalmente, é demorado calculá-los). 
+
+### Outros pontos de atenção
+
+- MrP é _sensível_ à especificação do modelo
+- MrP **depende imensamente** dos dados de estratificação
+- MrP não ajuda muito a corrigir erros de mensuração
+
+A não-resposta não ignorável não é corrigida pelo MrP. Você passa por um bolsonarista ou um trumpista na rua e ele terminantemente se recusa a te dar uma resposta, não há correção por MrP.

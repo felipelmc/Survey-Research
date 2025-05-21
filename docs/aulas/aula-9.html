@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -400,7 +435,12 @@ window.Quarto = {
   <li><a href="#lax-j.-r.-phillips-j.-h.-2009.-how-should-we-estimate-public-opinion-in-the-states.-american-journal-of-political-science-531-107121" id="toc-lax-j.-r.-phillips-j.-h.-2009.-how-should-we-estimate-public-opinion-in-the-states.-american-journal-of-political-science-531-107121" class="nav-link" data-scroll-target="#lax-j.-r.-phillips-j.-h.-2009.-how-should-we-estimate-public-opinion-in-the-states.-american-journal-of-political-science-531-107121"><span class="header-section-number">9.3</span> Lax, J. R., &amp; Phillips, J. H. (2009). How Should We Estimate Public Opinion in the States. <em>American Journal of Political Science</em>, 53(1), 107–121</a></li>
   <li><a href="#buttice-m.-k.-highton-b.-2013.-how-does-multilevel-regression-and-poststratification-perform-with-conventional-national-surveys-political-analysis-2104-449467." id="toc-buttice-m.-k.-highton-b.-2013.-how-does-multilevel-regression-and-poststratification-perform-with-conventional-national-surveys-political-analysis-2104-449467." class="nav-link" data-scroll-target="#buttice-m.-k.-highton-b.-2013.-how-does-multilevel-regression-and-poststratification-perform-with-conventional-national-surveys-political-analysis-2104-449467."><span class="header-section-number">9.4</span> Buttice, M. K., &amp; Highton, B. (2013). How does multilevel regression and poststratification perform with conventional national surveys? <em>Political Analysis</em>, 21(04), 449–467.</a></li>
   <li><a href="#other-materials" id="toc-other-materials" class="nav-link" data-scroll-target="#other-materials"><span class="header-section-number">9.5</span> Other materials</a></li>
-  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">9.6</span> Anotações de aula</a></li>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">9.6</span> Anotações de aula</a>
+  <ul class="collapse">
+  <li><a href="#agregação" id="toc-agregação" class="nav-link" data-scroll-target="#agregação"><span class="header-section-number">9.6.1</span> Agregação</a></li>
+  <li><a href="#incerteza" id="toc-incerteza" class="nav-link" data-scroll-target="#incerteza"><span class="header-section-number">9.6.2</span> Incerteza</a></li>
+  <li><a href="#outros-pontos-de-atenção" id="toc-outros-pontos-de-atenção" class="nav-link" data-scroll-target="#outros-pontos-de-atenção"><span class="header-section-number">9.6.3</span> Outros pontos de atenção</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -650,8 +690,116 @@ window.Quarto = {
 </section>
 <section id="anotações-de-aula" class="level2" data-number="9.6">
 <h2 data-number="9.6" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">9.6</span> Anotações de aula</h2>
+<p>MrP provavelmente é o grande avanço na pesquisa de survey possivelmente desde RDD. O que ele faz é usar um modelo de regressão multinível para estimar a opinião pública em subpopulações, como distritos eleitorais ou estados, a partir de uma amostra nacional. Isso é especialmente útil quando a amostra é pequena ou não representativa. O modelo usa informações demográficas e geográficas para fazer previsões mais precisas.</p>
+<p>Até agora, viemos fazendo inferência com base em desenho. Nesse caso, todo mundo tem mais ou menos a mesma chance de ser selecionado. Pelo mecanismo de aleatoriedade, a minha amostra vai acabar espelhando a população de fundo – daí, basta usar estimadores muito simples para fazer inferências sobre a população. Essencialmente é a lógica de experimentos – espero, em média, que o grupo seja igual ao controle (ou que a amostra espelhe a população). No entanto, na maior parte do tempo não temos essas amostras. Na prática, as amostras não são probabilísticas e, no final, a amostra não é representativa.</p>
+<p>Agora, vamos partir para o paradigma de inferência baseada em modelo (<em>model-based inference</em>). Eu não sei como a amostra foi feita e muito menos sei qual é a probabilidade de inclusão de um respondente na amostra.</p>
+<blockquote class="blockquote">
+<p>💡 MrP (<em>Multilevel Regression with Poststratification</em>) é uma forma de inferência baseada em modelo que usa um modelo de regressão multinível para modelar o processo gerador de dados. Assim, não precisamos proceder como uma amostra probabilística. Eu posso criar um modelo de regressão para estimar a probabilidade de alguém ser incluído na amostra.</p>
+</blockquote>
+<p>O modelo de MrP precisa aprender a modelar as respostas individuais das pessoas. Vamos supor:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># vamos supor que assim um dado eh produzido</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># i.e., o processo gerador de dados</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>beta_0 <span class="ot">&lt;-</span> <span class="fl">2.2</span> <span class="co"># intercepto</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>beta_1 <span class="ot">&lt;-</span> <span class="fl">0.5</span> <span class="co"># coeficiente de X</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>erro <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">&lt;-</span> beta_0 <span class="sc">+</span> beta_1 <span class="sc">*</span> X <span class="sc">+</span> erro</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(X, Y)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># plota a relação</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> X, <span class="at">y =</span> Y)) <span class="sc">+</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"X"</span>, <span class="at">y =</span> <span class="st">"Y"</span>) <span class="sc">+</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aula-9_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># vamos estimar os parametros do modelo</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># e recuperar algo proximo desse 2.2 e 0.5</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(Y <span class="sc">~</span> X, <span class="at">data =</span> df)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Y ~ X, data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.9641 -0.6068 -0.1762  0.6618  2.8223 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   2.1111     0.1010  20.909  &lt; 2e-16 ***
+X             0.4684     0.1042   4.495 1.91e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.9898 on 98 degrees of freedom
+Multiple R-squared:  0.1709,    Adjusted R-squared:  0.1625 
+F-statistic: 20.21 on 1 and 98 DF,  p-value: 1.908e-05</code></pre>
+</div>
+</div>
+<p>No fundo, o MrP serve para gerar predições para cada tipo de segmento de uma população. Exemplo:</p>
+<p><span class="math display">\[
+\mathbb{P}(y_i = 1) = \phi (\beta_0 + \alpha_{k[i]}^{\text{educação}} + \alpha_{j[i]}^{\text{sexo}} + \alpha_{l[i]}^{\text{idade}} + \alpha_{n[i]}^{\text{UF}})
+\]</span></p>
+<p>O que são os <span class="math inline">\(\alpha\)</span>?</p>
+<ul>
+<li>Educação: <span class="math inline">\(\alpha_k^{\text{educação}} \sim \mathcal{N}(0, \sigma^2_{\text{educação}})\)</span></li>
+<li>Sexo: <span class="math inline">\(\alpha_j^{\text{sexo}} \sim \mathcal{N}(0, \sigma^2_{\text{sexo}})\)</span></li>
+<li>Idade: <span class="math inline">\(\alpha_l^{\text{idade}} \sim \mathcal{N}(0, \sigma^2_{\text{idade}})\)</span></li>
+<li>UF: <span class="math inline">\(\alpha_n^{\text{UF}} \sim \mathcal{N}(0, \sigma^2_{\text{UF}})\)</span></li>
+</ul>
+<blockquote class="blockquote">
+<p>💡 Efeitos aleatórios fazem <em>partial pooling</em>, isto é, puxam efeitos de grupos pequenos, mais incertos, para efeitos de grupos maiores similares.</p>
+</blockquote>
+<p><strong>Variáveis de contexto:</strong> outra vantagem é poder modelar efeitos conjunturais ou contextuais. Ou seja, podemos ter covariáveis no nível dos grupos:</p>
+<p><span class="math display">\[
+\alpha_n^{\text{UF}} \sim \mathcal{N}(\beta X_n, \sigma^2_{\text{UF}}),
+\]</span></p>
+<p>onde <span class="math inline">\(X_n\)</span> é a matriz de covariáveis mensuradas no nível da UF.</p>
+<section id="agregação" class="level3" data-number="9.6.1">
+<h3 data-number="9.6.1" class="anchored" data-anchor-id="agregação"><span class="header-section-number">9.6.1</span> Agregação</h3>
+<p>Tendo um modelo multinível ajustado para predizer respostas individuais a partir de variáveis demográficas e contextuais, o próximo passo é agregar as previsões por subunidade/subgrupo. Passo a passo:</p>
+<ol type="1">
+<li>Usa o modelo para atribuir <span class="math inline">\(\mathbb{P}(y_i = 1)\)</span> para cada unidade <span class="math inline">\(i\)</span></li>
+<li>Cada predição é multiplicada pela contagem populacional de cada tipo na população (e.g., mulheres, 18-24 anos, etc.)</li>
+<li>As previsões são agrupadas por subunidade/subgrupo</li>
+</ol>
+<p>A segunda etapa, portanto, é a pós estratificação propriamente:</p>
+<p><span class="math display">\[
+\hat{\pi}_g^{\text{MrP}} = \dfrac{\sum_g \hat{\pi}_g N_g}{\sum_g N_g},
+\]</span></p>
+<p>onde <span class="math inline">\(N_g\)</span> é o número de pessoas no grupo <span class="math inline">\(g\)</span> e <span class="math inline">\(\hat{\pi}_g\)</span> é a predição do modelo para o grupo <span class="math inline">\(g\)</span>. O resultado final é uma estimativa da proporção de pessoas que responderam <span class="math inline">\(1\)</span> (seja lá o que <span class="math inline">\(1\)</span> significa na variável resposta) na população.</p>
+<p>Os dados do survey são usados unicamente para ajustar os parâmetros do modelo. Depois disso, basta fazer as predições desse modelo no banco de dados de totais populacionais – conseguida a partir de bases importantes como o Censo ou a PNAD.</p>
+</section>
+<section id="incerteza" class="level3" data-number="9.6.2">
+<h3 data-number="9.6.2" class="anchored" data-anchor-id="incerteza"><span class="header-section-number">9.6.2</span> Incerteza</h3>
+<p>No caso bayesiano, a incerteza é tranquilamente incorporada ao modelo. Afinal, bastaria tirar diferentes amostras da posteriori para obter intervalos de credibilidade para as predições. No caso frequentista, a incerteza precisa ser aproximada por <em>bootstrapping</em>. Nos dois casos, intervalos são aproximações (e, normalmente, é demorado calculá-los).</p>
+</section>
+<section id="outros-pontos-de-atenção" class="level3" data-number="9.6.3">
+<h3 data-number="9.6.3" class="anchored" data-anchor-id="outros-pontos-de-atenção"><span class="header-section-number">9.6.3</span> Outros pontos de atenção</h3>
+<ul>
+<li>MrP é <em>sensível</em> à especificação do modelo</li>
+<li>MrP <strong>depende imensamente</strong> dos dados de estratificação</li>
+<li>MrP não ajuda muito a corrigir erros de mensuração</li>
+</ul>
+<p>A não-resposta não ignorável não é corrigida pelo MrP. Você passa por um bolsonarista ou um trumpista na rua e ele terminantemente se recusa a te dar uma resposta, não há correção por MrP.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
