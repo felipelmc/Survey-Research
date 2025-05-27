@@ -18,7 +18,7 @@ include-in-header:
         }
       </style>
 bibliography: referencias.bib
-output-file: slide.html
+output-file: index.html
 ---
 
 ## Relembrando
