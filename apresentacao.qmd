@@ -30,7 +30,6 @@ A técnica de MrP envolve ($\approx$) duas etapas:
 1. ajustamos um modelo de regressão multinível para estimar $\mathbb{P}(y_i = 1)$
 2. usamos a probabilidade estimada para calcular as proporções na população (em termos de $N$)
 
-
 #### Outras abordagens
 
 Usar regressão multinível faz sentido, mas não é a única abordagem possível. Na prática, podemos optar por qualquer abordagem que estime probabilidades (por exemplo, árvores de decisão [@bisbee2019barp]).
@@ -54,7 +53,7 @@ O grande bottleneck desses modelos complexos (_deep_) é o **tempo** necessário
 > While recent work has reported that BART outperforms noticeably better than traditional MRP [@bisbee2019barp], I demonstrate that this is not the case. [@goplerud2023reevaluating, p. 530]
 
 
-## A escolha da priori
+## A escolha da priori para $\sigma_j$
 
 - Uma priori gama-inversa põe pouca probabilidade em valores próximos de 0 e, portanto, superestimamos o efeito aleatório
 - A priori Huang-Wand põe mais peso em valores menores do efeito aleatório, permitindo maior regularização. Com efeito, o tempo de ajuste é "infinitamente" maior.
