@@ -1,0 +1,10 @@
+---
+fontsize: 12pt
+author: Felipe Lamarca
+endnote: no
+bibliography: referencias.bib
+---
+
+# Goplerud (2023)
+
+Na apresentação da disciplina de survey, apresentei @goplerud2023reevaluating [[link]](https://www.cambridge.org/core/journals/american-political-science-review/article/reevaluating-machine-learning-for-mrp-given-the-comparable-performance-of-deep-hierarchical-models/B31FC4D3CB09C3CE2188AB55169C2CB6). O artigo mostra que modelos multinível completos (ou "profundos"), com muitos termos interativos e, portanto, muitos parâmetros a serem estimados, podem ser ajustados com alta velocidade utilizando inferência variacional. Além disso, @goplerud2023reevaluating também compara a performance de modelos multinível frente a modelos de _machine learning_ utilizando técnicas de ensemble. A apresentação completa pode ser encontrada [neste link](https://felipelamarca.com/Apresentacao-Survey).

@@ -420,6 +420,23 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apresentação</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../apresentacao/apresentacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Goplerud (2023)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -737,23 +754,23 @@ lm(formula = Y ~ X, data = df)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--1.9641 -0.6068 -0.1762  0.6618  2.8223 
+-2.8085 -0.7260 -0.1127  0.6664  2.4715 
 
 Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)   2.1111     0.1010  20.909  &lt; 2e-16 ***
-X             0.4684     0.1042   4.495 1.91e-05 ***
+(Intercept)   2.1246     0.1027  20.678  &lt; 2e-16 ***
+X             0.5995     0.1061   5.648 1.59e-07 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 0.9898 on 98 degrees of freedom
-Multiple R-squared:  0.1709,    Adjusted R-squared:  0.1625 
-F-statistic: 20.21 on 1 and 98 DF,  p-value: 1.908e-05</code></pre>
+Residual standard error: 1.025 on 98 degrees of freedom
+Multiple R-squared:  0.2456,    Adjusted R-squared:  0.2379 
+F-statistic:  31.9 on 1 and 98 DF,  p-value: 1.589e-07</code></pre>
 </div>
 </div>
 <p>No fundo, o MrP serve para gerar predições para cada tipo de segmento de uma população. Exemplo:</p>
 <p><span class="math display">\[
-\mathbb{P}(y_i = 1) = \phi (\beta_0 + \alpha_{k[i]}^{\text{educação}} + \alpha_{j[i]}^{\text{sexo}} + \alpha_{l[i]}^{\text{idade}} + \alpha_{n[i]}^{\text{UF}})
+\mathbb{P}(y_i = 1) = \Phi (\beta_0 + \alpha_{k[i]}^{\text{educação}} + \alpha_{j[i]}^{\text{sexo}} + \alpha_{l[i]}^{\text{idade}} + \alpha_{n[i]}^{\text{UF}})
 \]</span></p>
 <p>O que são os <span class="math inline">\(\alpha\)</span>?</p>
 <ul>

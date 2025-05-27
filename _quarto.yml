@@ -20,7 +20,11 @@ book:
     - part: Listas
       chapters:
         - listas/listas.qmd
-        
+    - part: Apresentação
+      chapters:
+        - apresentacao/apresentacao.qmd
+
+
 format:
   html:
     theme: 
@@ -28,6 +32,3 @@ format:
       dark: [cosmo, theme-dark.scss]
     css: styles.css
     toc: true
-
-
-
