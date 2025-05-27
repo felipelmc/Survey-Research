@@ -401,6 +401,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Pós-estratificação com modelos</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Modelos flexíveis de MrP</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -415,7 +421,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../listas/listas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Listas</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Listas</span></span></a>
   </div>
 </li>
       </ul>
@@ -432,7 +438,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../apresentacao/apresentacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Goplerud (2023)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Goplerud (2023)</span></span></a>
   </div>
 </li>
       </ul>
@@ -778,11 +784,11 @@ s^2_a = \dfrac{1}{A - 1} \sum_{\alpha=1}^{A} (\bar{y}_{\alpha} - \bar{y})^2,
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">mean</span>(x))</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 43.2
-[1] 45.6
-[1] 40.6
-[1] 42.8
-[1] 46</code></pre>
+<pre><code>[1] 57.8
+[1] 51.2
+[1] 61
+[1] 47
+[1] 66</code></pre>
 </div>
 </div>
 <p>De outra maneira, podemos usar a função <code>slice_sample()</code> do <code>dplyr</code> para fazer amostras aleatórias simples. Por exemplo:</p>
@@ -808,11 +814,11 @@ Anexando pacote: 'dplyr'</code></pre>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">mean</span>(x<span class="sc">$</span>idade))</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 56.6
-[1] 54
-[1] 47.8
-[1] 54.4
-[1] 41</code></pre>
+<pre><code>[1] 51
+[1] 49.8
+[1] 47
+[1] 52.6
+[1] 54.8</code></pre>
 </div>
 </div>
 </section>

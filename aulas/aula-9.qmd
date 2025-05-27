@@ -237,7 +237,7 @@ summary(model)
 No fundo, o MrP serve para gerar predições para cada tipo de segmento de uma população. Exemplo:
 
 $$
-\mathbb{P}(y_i = 1) = \phi (\beta_0 + \alpha_{k[i]}^{\text{educação}} + \alpha_{j[i]}^{\text{sexo}} + \alpha_{l[i]}^{\text{idade}} + \alpha_{n[i]}^{\text{UF}})
+\mathbb{P}(y_i = 1) = \Phi (\beta_0 + \alpha_{k[i]}^{\text{educação}} + \alpha_{j[i]}^{\text{sexo}} + \alpha_{l[i]}^{\text{idade}} + \alpha_{n[i]}^{\text{UF}})
 $$
 
 O que são os $\alpha$?
@@ -286,3 +286,4 @@ No caso bayesiano, a incerteza é tranquilamente incorporada ao modelo. Afinal, 
 - MrP não ajuda muito a corrigir erros de mensuração
 
 A não-resposta não ignorável não é corrigida pelo MrP. Você passa por um bolsonarista ou um trumpista na rua e ele terminantemente se recusa a te dar uma resposta, não há correção por MrP.
+

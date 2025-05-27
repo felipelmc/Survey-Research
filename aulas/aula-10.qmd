@@ -1,0 +1,118 @@
+---
+fontsize: 12pt
+author: Felipe Lamarca
+endnote: no
+---
+
+# Modelos flexíveis de MrP
+
+## Ghitza, Y., & Gelman, A. (2013). Deep Interactions with MRP: Election Turnout and Voting Patterns Among Small Electoral Subgroups. _American Journal of Political Science_, 57 (3), 762–776.
+
+> This work is in the forefront of statistical analysis of survey data. Methodologically, we improve upon the existing MRP literature in five ways: (1) modeling deeper levels of interaction between geographic and demographic covariates, (2) allowing for the relationship between covariates to be nonlinear and even nonmonotonic, if demandaded by the data, (3) accounting for survey weights while maintaining appropriate cell sizes for partial pooling, (4) adjusting turnout and voting levels after estimates are obtained, and (5) introducing a series of informative multidimensional graphical displays as a form of model checking. (p. 763)
+
+> The population is defined based on three variables, taking on levels $j_1 = 1, \ldots, J_1$; $j_2 = 1, \ldots, J_2$; $j_3 = 1, \ldots, J_3$. For example, in our model of income $\times$ ethnicity $\times$ state, $J = (5, 4, 51)$. [...].
+>
+> We further suppose that each of the three factors $k$ has $L_k$ group-level predictors and is thus associated with a $J_k \times L_k$ matrix $X^k$ of group-level predictors. The predictors in out example are as follows: for income ($k = 1$), we have a $5 \times 2$ matrix $X^1$ whose two columns correspond to a constant term and a simple index variable that takes on values $1, 2, 3, 4, 5$. For ethnicity ($k = 2$), we only have a constant term, so $X^2$ is a $4 \times 1$ matrix of ones. For state ($k = 3$), we have three predictors in the vote choice model: a constant term, Republican vote share in a past presidential election, and average income in the state [...]. Thus, $X^3$ is a $51 \times 3$ matrix.
+>
+> Finally, each of our models has a binary outcome, which could be the decision of whether to vote or for which candidate to vote. In any case, we label the outcome as $y$ and, whithin any cell $j$, we label $y_j$ as the number of Yes responses in that cell and $n_j$ as the number of Yes or No responses (excluding no-answers and other responses). Assuming independent sampling, the data model is $y_j \sim \text{Binomial}(n_j, \theta_j)$, where $\theta_j$ is what we want to estimate: the proportion of Yes responses in cell $j$ in the population.
+
+> We fit a model that includes group-level predictors as well as unexplained variation at each of the levels of the factors and their interactions. This resulting nonnested multilevel is complicated enough that we build it up in stages.
+>
+> _Classical logistic regression_. To start, we fit a simple (nonmultilevel) model on the $J$ cells, with the cell-level predictors derived from the group-level predictor matrices $X^1, X^2, X^3$. For each cell $j$ (labeled with three indexes as $j = (j_1, j_2, j_3)$), we start with the main effects, which come to a constant term plus $(L^1 - 1) + (L^2 - 1) + (L^3 - 1)$ predictors (with the $-1$ eterms coming from the duplicates of the constant term from the three design matrices). We then include all the two-way interactions, which give $(L^1 - 1)(L^2 - 1) + (L^1 - 1)(L^3 - 1) + (L^2 - 1)(L^3 - 1)$ additional predictors. In our example, these correspond to different slopes for income among Republican and Democratic states and different slopes among rich and poor states. The classical regression is informed by the binomial data model along with a logistic link, $\theta_j = \text{logit}^{-1} (X_j \beta)$, where $X$ is the combined predictor matrix constructed above.
+>
+> _Multilevel regression with no group-level predictors_. If we ignore the group-level predictors, we can form a basic multilevel logistic regression by modeling the outcome for cells $j$ by factors for the components, $j_1, j_2, j_3$:
+>
+> $$
+> \begin{align*}
+> \theta_j &= \text{logit}^{-1} (\alpha^0 + \alpha^1_{j_1} + \alpha^2_{j_2} + \alpha^3_{j_3} + \alpha^{1, 2}_{j_1, j_2} + \alpha^{1, 3}_{j_1, j_3} + \alpha^{2, 3}_{j_2, j_3} + \alpha^{1, 2, 3}_{j_1, j_2, j_3})  \\
+> &= \text{logit}^{-1} \left(\sum_S \alpha^S_{S(j)} \right)
+> \end{align*}
+> $$
+
+> _Multilevel model with group-level predictors_. The next step is to combine the above two models by taking the classical regression and adding the multilevel terms; this is a varying intercep regression (also called a mixed-effects model):
+> $$
+> \theta_j = \text{logit}^{-1} \left( X_j \beta + \sum_S \alpha^S_{S(j)} \right)
+> $$
+
+> _Multilevel model with varying slopes for group-level predictors_. The importance of particular demographic factors can vary systematically by state. For example, individual income is more strongly associated with Republican voting in rich states than in poor states. [...].
+>
+> We implement by allowing each coefficient to vary by all the factors no included in the predictors. In our example, the coefficients for the state-level predictors (Republican presidential vote share and average state income) are allowed to vary by income level and ethnicity, while the coefficient for the continuous income predictor can vary by ethnicity and state.
+
+O modelo final é escrito assim:
+
+> $$
+> \theta_j = \text{logit}^{-1} \left( \sum_S X^S \beta^S_{S(j)} + \sum_S \alpha^S_{S(j)} \right)
+> $$
+>
+> where $S$ is the set of subsets of $\{ 1, 2, 3, 4 \}$, referring to income, ethnicity, state, and region, $\beta^S_{S(j)}$ are varying slopes for group-level predicots, and $\alpha^S_{S(j)}$ are varying intercepts.
+
+> Although mainstream political commentary tends to think of demographic groups (especially minorities) as homogenous voting blocs, they exhibit substantion heterogeneity.
+
+> The important takeaways here are that (1) there are substantial and important differences between subgroups, even within demographic categories, and (2) our method captures those differences while keeping estimates stable and reasonable. This is in line with Figure 1: there we showed that raw estimates are too noisy to be interpretable and that increasingly complicated statistical models help reveal trends in the data. (p. 771)
+
+> As mentioned, our framework is not just a way to look at state-level estimates; rather, it allows us to combine subgroups in any way we please. (p. 771)
+
+> The main point that we would like to highlight here is that the turnout swing was primarily driven by African Americans and young minorities. These groups are highlighted with a thick box and lines because they are the only groups with a total turnout change over 5%. Although the popular consensus would imply that young _white_ voters also increased their turnout, that is simply not the case. _Poor_ younger whites indeed turned out at higher rates than before, but this is a small subset of that overall group, as shown in the histograms. The incorrect interpretation of that has often been given is driven by improperly combining all young people into a single group. By breaking them out, we see that there is a big difference between white young people and minority young people. (p. 772)
+
+> This article has introduced and described our method for producing estimates of turnout and vote choice for deeply interacted subgroups of the population: groups that are defined by multiple demographic and geographic characteristics. Although regression models have been used for decades to infere these estimates, MRP is an improvement over traditional methods for several reasons. Multilevel modeling allows estimates to be partially pooled to take advantage of common characteristics in different parts of the electorate, while poststratification corrects for the underlying distribution of the electorate. (p. 772)
+
+> As a result, we recommend a gradual and visual approach to model building: build a simple model, graph inferences, add complexity to that model in the form of additional covariates and interactions, graph, and continue until all appropriate variables are included. The purpose of intermittent graphing is to ensure that model estimates remain reasonable and that changes induced by additional covariates or interactions are understood. Because there will eventually be too many interactions to be interpreted by simply looking at the coefficients, it is important to graph final estimates as a substitute or in addition to the coefficients alone.
+
+## Bisbee, J. (2019). BARP: Improving Mister P Using Bayesian Additive Regression Trees. _American Political Science Review_, 113(4), 1060–1065.
+
+> The core challenge is the curse of dimensionality. Ideally, researchers would predict the outcome using many covariates such as age, race, education, gender, and church attendance, and extrapolate the outcome to the 50 states. But it is unlikely that the researcher has sufficient observations to generate predictions for each combination of covariates in each state -- combinations referred to as "cells". For example, a nationally representative survey has many observations of 30 to 45-years-old white college-educated men living in California, but only few observations of Hispanic women aged older 65 years with a PhD living in Alaska. Estimating the coefficients for the latter cell can be improved with regularization to obtain stable estimates with good predictive accuracy. (p. 1)
+
+> The current gold standard for this type of extrapolation is known as multilevel regression and poststratification, or MRP. MRP predicts an outcome using a multilevel model which borrows information from richer parts of the covariate space to yield more stable and accurate estimates where the data are sparser. (p. 1)
+
+> In this letter, I replace the multilevel model with Bayesian additive regression trees (BART, or when combined with post-stratification, BARP) and demonstrate its superior performance across the same 89 surveys and using the same predictors discussed in Buttice and Highton (2013). BARP's benefits are two-fold. First, BARP is able to do more with less data, thanks to superior regularization. Second, BARP is fully nonparametric, relaxing the need for the researcher to prior determine the appropriate functional form _a priori_. (p. 1)
+
+> Nonparametric methods can relieve the researcher of correctly determining the functional form and provide a better regularization for estimating relationships in sparsely populated cells. Although these methods are not a silver bullet, I demonstrate that they can do more with less.
+
+> BART estimates a function $f$ that predicts an outcome using covariates: $y = f(x)$. The unknown function $f$ is approximated by $h(x)$, which is a sum of decision trees.
+
+> BART uses Bayesian priors on the structure of the model and on the parameters in the terminal nodes. These priors ensure that no tree is unduly influential, thereby avoiding the overfitting problems facing more brittle tree-based methods. Estimation proceeds through a backfitting algorithm that generates a posterior distribution for all parameters. Draws from this posterior first propose a change to the structure that further protects BART from overfitting. (p. 2)
+
+Na versão _Corrigendum_ de 2023 do mesmo artigo, em co-autoria com Goplerud, Bisbee diz:
+
+> Bisbee regrets the coding error in the above article. As identified by Goplerud, Bisbee (2019a)'s replication code failed to sort the data prior to calculating predictions from the MRP model, leading to injection of noise into MRP estimates while not affecting BARP estimates. This lead to exaggerated performance improvements when comparing traditional MRP with BART.
+
+> The corrected results demonstrate that the difference in performance between the two methods is much more of a toss-up, whether evaluated using mean absolute error (MAE, left panel) or interstate correlation (right panel).
+
+## Goplerud, M. (2023). Re-Evaluating Machine Learning for MRP Given the Comparable Performance of (Deep) Hierarchical Models. _American Political Science Review_, 1–8.
+
+> Multiple papers have suggested that relying on machine learning methods can provide substantially better performance than traditional approaches that use hierarchical models. However, these comparisons are often unfair to traditional techniques as they omit possibly important interactions or nonlinear effects. I show that complex ("deep") hierarchical models that include interactions can nearly match or outperform state-of-the-art machine learning methods. [...]. The main limitation of using deep hierarchical models is speed. This paper derives new techniques to further accelerate estimation using variational approximations. I provide software that uses weakly informative priors and can estimate nonlinear effects using splines. This allows flexible and complex hierarchical models to be fit as quickly as many comparable machine learning techniques. (Abstract)
+
+> MRP is a two-step process that begins by fitting a predictive model to the survey using demographic and state-level information. Next, opinion estimates for the states are obtained by a weighted average of the predicted values for various demographic groups inside of that state using their known distribution. While the performance of MRP depends on both steps, multiple papers have found that using machine learning for the predictive model outperforms traditional methods ("multilevel regression") by considerable margins. (p. 529)
+
+> Following their [Ghitza and Gelman (2013)], I refer to complex hierarchical models that explicitly include interations or nonlinear effects as "deep MRP". (p. 529)
+
+> Thus, despite the understandable enthusiasm for applying machine learning to MRP, it is simply unknown in a systematic wat whether machine learning outperforms deep MRP. The main reason for this gap in the literature is a practical one. Existing uses of deep MRP sometimes include nearly 20 random effects to capture the underlying heterogeneity and thus are usually very slow to estimate. Fiven that one might wish to fit these models repeatedly (e.g., comparing different specifications), this has quite reasonably caused researchers to "rule out" deep MRP.
+>
+> Fortunately, recent work has shown that deep MRP can be estimated very quickly using variational inference while producing very similar point estimates to traditional methods (Goplerud 2022). [...]. My initial systematic tests found that those algorithms performed unfavorably against machine learning. This paper provides two improvements to existing variational methods that result in competitive performance: First, Goplerud (2022) relied on an improperly calibrated prior that often resulted in too little regularization. Second, those algorithms cannot capture nonlinear effects of continuous covariates (e.g., presidential vote share). (p. 529-530)
+
+> Those concerns are addressed by, first, extending the variational algorithms to include a weakly informative prior (Huang and Wand 2013) that can more appropriately regularize random effects and, second, allowing the use of penalized splines for continuous predictors.After implementing a number of novel computational techniques to accelerate estimation, the accompanying open-source software can fit highly flexible deep MRP in minutes—rather than the hours possibly needed for traditional approaches.(p. 530)
+
+> The key limitation in fitting MRP with interactions is the speed of estimation. Earlier research has shown that fitting a single deep MRP model can take multiple hours (e.g., Goplerud 2022). This is because of the presence of high-dimensional integrals that traditional methods either numerically approximate or address using Bayesian methods.
+>
+> Variational inference provides a different approach for fast estimation; the goal is to find the best approximating distribution to the posterior given some simplying assumption -- usually that blocks of parameters are independent (Grimmer 2011). (p. 530)
+
+> The choice of prior on the variance of the random effect $p_0 (\sigma^2_j)$ is a difficult task. Some inferential techniques assume a flat prior. A risk of this strategy is that point estimates of $\sigma^2_j$ could be degenerate and equal zero; this sets all random effects estimates equal to zero. This problem is rather common for the Laplace approximation in `glmer` (Chung et al. 2015). A proper prior prevents this problem and thus is preferable. An Inverse-Gamma prior is a popular choice, but it is difficult to calibrate the strength correctly (Gelman 2006).
+
+> Figure 1 shows that Goplerud's (2022) prior puts effectively no mass on small values of $\sigma_j$ (e.g., $P(\sigma_j \leq 0.25 \approx 0.0003)$). thus, in the event where the true value is small (i.e., the random effect is mostly irrelevant), the prior results in too large estimates of $\sigma_j$, thereby underregularizing the coefficients, which likely results in poorer performance. By contrast, the Huang-Wand prior puts nontrivial weight on very small $\sigma_j$ and thus allows for strong regularization when appropriate. (p. 530)
+
+> [...] naively incorporating the Huang-Wand prior dramatically increases estimation time. While it does increase the time per iteration, the major problem is that estimation requires 5-10 times more interations to converge. Thus, a key contribution of this paper is to accelerate variational algorithms when this more appropriate prior is employed. (p. 531)
+
+> I address that scenario by allowing estimation of nonlinear effects using splines as in a generalized additive model.
+
+Usam também o dataset de Buttice and Highton (2013), que compõe os resultados de 89 surveys.
+
+> This model [the one used by Buttice and Highton (2013)] includes no interactions between variables or nonlinear effects on continuous predictors, and thus is likely insufficiently rich to capture the true underlying relationship. It is reasonable to suspect that a "properly specified" MRP model should include at least some interactions to be competitive with methods that can automatically learn interactions or nonlinearities. (p. 532)
+
+O autor aidiciona todas as interações possíveis entre variáveis demográficas e geográficas e a interação tripla das três variáveis demográficas. Além disso, usa splines para capturar efeitos potencialmente não-lineares nas variáveis contínuas no nível dos estados.
+
+> The first comparison explores whether deep MRP adds much benefit when used alongside a suite of machine learning methods. I begin by using a technique known as "stacking" that takes the predictions of many different methods and combines them into a single prediction known as an ensemble. (p. 532)
+
+> A useful property of ensembles is the ability to compare the weights given the constituent models. The weights reflect both the performance and the methods and its "distinctiveness" from the other methods in the ensemble. Using each survey in Buttice and Highton (2013), I drew 10 different samples of varying sizes and estimated the ensemble using fivefold cross-validation with the models in Ornstein (2020), where I swapped the traditional ("Simple") MRP model with the deep MRP model.
+
+https://projecteuclid.org/journals/bayesian-analysis/volume-17/issue-2/Fast-and-Accurate-Estimation-of-Non-Nested-Binomial-Hierarchical-Models/10.1214/21-BA1266.full
+
