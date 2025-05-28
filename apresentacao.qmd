@@ -1,6 +1,6 @@
 ---
 title: "Re-Evaluating Machine Learning for MRP Given the Comparable Performance of (Deep) Hierarchical Models"
-subtitle: "Max Gloperud (2023) @ American Political Science Review, 1-8"
+subtitle: "Max Goplerud (2023) @ American Political Science Review, 1-8"
 author: "Felipe Lamarca -- felipelamarca@iesp.uerj.br"
 format:
   revealjs: 
