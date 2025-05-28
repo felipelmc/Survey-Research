@@ -115,6 +115,21 @@ Problema: pode ser mais difícil quantificar incerteza quando você combina vár
 
 3. A combinação de várias técnicas (via _ensemble_) é uma boa estratégia para melhorar a capacidade preditiva. Ainda assim, os modelos de regressão multinível normalmente apresentam -- pelo menos em @goplerud2023reevaluating -- a maior capacidade de previsão fora da amostra.
 
+## Sugestões
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![@breiman2001statistical](img/statistical_modeling_two_cultures.png)
+:::
+
+::: {.column width="50%"}
+![@shmueli2010explain](img/to_explain_or_to_predict.png)
+:::
+
+::::
+
+
 ## Referências
 
 ::: {#refs}
