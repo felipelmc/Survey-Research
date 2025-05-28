@@ -9,7 +9,7 @@
 <link href="apresentacao_files/libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.23">
 
-  <meta name="author" content="Felipe Lamarca – felipelamarca@iesp.uerj.com">
+  <meta name="author" content="Felipe Lamarca – felipelamarca@iesp.uerj.br">
   <title>Re-Evaluating Machine Learning for MRP Given the Comparable Performance of (Deep) Hierarchical Models</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -160,7 +160,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Felipe Lamarca – felipelamarca@iesp.uerj.com 
+Felipe Lamarca – felipelamarca@iesp.uerj.br 
 </div>
 </div>
 </div>
@@ -171,7 +171,7 @@ Felipe Lamarca – felipelamarca@iesp.uerj.com
 <h4 id="mrp">MrP</h4>
 <p>A técnica de MrP envolve (<span class="math inline">\(\approx\)</span>) duas etapas:</p>
 <ol type="1">
-<li>ajustamos um modelo de regressão multinível para estimar <span class="math inline">\(\mathbb{P}(y_i = 1)\)</span></li>
+<li>ajustamos um modelo de regressão multinível para estimar <span class="math inline">\(\mathbb{P}(y_i = 1 | X_i)\)</span></li>
 <li>usamos a probabilidade estimada para calcular as proporções na população (em termos de <span class="math inline">\(N\)</span>)</li>
 </ol>
 <h4 id="outras-abordagens">Outras abordagens</h4>
@@ -204,13 +204,13 @@ Felipe Lamarca – felipelamarca@iesp.uerj.com
 <p>Usa os mesmos dados de <span class="citation" data-cites="butticehighton2013">Buttice and Highton (<a href="#/referências" role="doc-biblioref" onclick="">2013</a>)</span> – o dataset com 89 <em>policy questions</em>. O modelo utilizado na ocasião, no entanto, é muito simples e não serve aos propósitos de <span class="citation" data-cites="goplerud2023reevaluating">Goplerud (<a href="#/referências" role="doc-biblioref" onclick="">2023</a>)</span>, mesmo porque inclui apenas um termo interativo:</p>
 <p><span class="math display">\[
 \begin{align}
-\mathbb{P}(y_i = 1) = \text{logit}^{-1}(
+\mathbb{P}(y_i = 1 | X_i) = \text{logit}^{-1}(
     &amp;\beta_0 +
     \beta_{\text{pvote}} \cdot \text{pvote}_{g[i]} +
     \beta_{\text{relig}} \cdot \text{relig}_{g[i]} + \\
     &amp;\alpha^{\text{age}}_{g[i]} +
     \alpha^{\text{educ}}_{g[i]} +
-    \alpha^{\text{gXr}}_{g[i]} +
+    \alpha^{\text{g} \times \text{r}}_{g[i]} +
     \alpha^{\text{state}}_{g[i]} +
     \alpha^{\text{region}}_{g[i]}
 )
