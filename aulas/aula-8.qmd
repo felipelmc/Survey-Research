@@ -6,11 +6,79 @@ endnote: no
 
 # Pós-estratificação
 
+## Wolf, C., Joye, D., Smith, T. W., & Fu, Y. (2016). The SAGE handbook of survey methodology. Sage. Chapter 31: Analysis of Data from Stratified and Clustered Surveys.
+
+In the SRS case, we have a list of elements, which allows us to attribute to each element in the list a probability of being selected. In particular, "If the population is size $N$ and the sample is size $n$, then the probability of selection of each unit is $\frac{n}{N}$." (p. 478)
+
+The mean is just:
+
+$$
+\bar{y} = \dfrac{1}{n} \sum^n_{i=1} y_i
+$$
+
+The sample mean has itself a distribution: "We select just one sample, but there are many other samples that we could have selected, and each one would give an estimate of the mean." The variance of the sample estimate of the mean is:
+
+$$
+\text{Var}(\bar{y}) = \dfrac{ \left( 1 - \frac{n}{N} \right) S^2 }{n}
+$$
+
+where $\frac{n}{N}$ is the sampling fraction and $S^2$ is the variability of the variable $(Y)$ in the population. It gives the true variance of the estimate of the mean, but we usually cannot calculate it, because $S^2$ is not known. We then estimate $S^2$ by $s^2$, in in-sample variability:
+
+$$
+s^2 = \dfrac{ \sum^n_1 (y_i - \bar{y})^2 }{n-1}
+$$
+
+$\left( 1 - \frac{n}{N} \right)$ is the _finite population correction_, which is often vary small. We can estimate the variance as:
+
+$$
+\text{var}(\bar{y}) = \dfrac{s^2}{n}
+$$
+
+Now, in the stratified context, we estimate the variance as:
+
+$$
+\text{var}(\bar{y}) = \sum_H \dfrac{W_h^2 s^2_h}{n_h}
+$$
+
+> The first step in deriving weights is to take the inverse of the probability of selection for each unit. In an SRS, the probability of selection of each unit is simply $n/N$ and thus the weight for each case is $N/n$. In stratified samples using SRS within strata, but disproportionate allocation to strata, the weight is different for each stratum, but constant within strata. In PPS samples, each unit may have a different probability of selection and thus a different weight. Weights that adjust for the probability of selection are called design weights. (p. 482)
+
+> Most surveys suffer from nonresponse, and weights are often adjusted to account for it. There are several different methods of adjusting weights for nonresponse using information that is available for respondents and nonrespondents. [...]. If we have several variables available for each selected case, we can estimate a response and use the predicted propensities based on the model to adjust the weights. (p. 482-483)
+
+> Raking, post-stratification, and calibration are in this class: all involve adjusting the sample so that it matches the population based on known population information. For example, in many contries, women are more likely to respond to surveys than men and thus the set of respondents has more women than men. These adjustment techniques increase the weight of the responding men, and decrease the weight of women, so that the weighted sample reflects the population. (p. 483)
+
+> If these adjustment techniques increase the variance of our estimates, why do we use them? Because we believe that the point estimates (that is, the estimates of means, quantiles, correlation coefficients, regression coefficients, and so on) that we get with the final adjusted weights are more accurate (less biased) than those that we get wehn we use only the design weights. The cost of this reduction in bias is an increase in variance. (p. 483)
+
+> In complex surveys, weights, stratification, and cluster sampling interact to make the estimation of variances particularly difficult. When a sample caintains these elements, the variance estimation formulas given above do not work, and we need to turn to alternative methods. There are two broad classes of techniques to estimate variances and standard errors from complex samples: Taylor-series linearization and replication, which includes several similar techniques. (p. 484)
+
+> Replication techniques work on a different principle. Replication methods estimate variance by choosing subsets from the sample itself, and using the variability across all these subsets to estimate the variance of the sampling distribution. How exactly these subsamples of the sample are selected depends on the exact replication method in use. (p. 484)
+
 ## Lumley, T. (2011). _Complex surveys: a guide to analysis using R._ John Wiley & Sons. Chapter 7: Post-stratification, raking, and calibration.
 
 > This chapter deals with techniques for using known population totals for a set of variables (_auxiliary variables_) to adjust the sampling weights and improve estimation for another set of variables. All of these techniques have the same idea: adjustments are made to the sampling weights so that estimated population totals for the auxiliary variables match the known population totals, making the sample more representative of the population. A second benefit is that the estimates are forced to be consistent with the population data, improving their credibility with people who may not understand the sampling process. (p. 135-136)
 
 > Post-stratification adjusts the sampling weights so that the estimated population group sizes are correct, as they would be in stratified sampling. The sampling weights $\frac{1}{\pi_i}$ are replaced by weights $\frac{g_i}{\pi_i}$, where $g_i = \frac{N_i}{\hat{N}_i}$ for the group containing individual $i$.
+
+> Adjusting the weights to incorporate the auxiliary information is straightforward, but estimating the resulting standard errors is more difficult. For replicate-weight designs it is sufficient to post-stratify each set of replicate weights (Valliant [178]). Since the estimated group size will then match the known population group size for every set of replicates, between-group variation will not produce differences between replicates and so the replicate-weight standard errors will correctly omit the between-group differences. (p. 137)
+
+> The function `postStratify()` creates a post-stratified survey design object. In addition to adjusting the sampling weights, it adds information to allow the standard errors to be adjusted. For a replicate-weight design this involves computing a post-stratification on each set of replicate weights; for linearization estimators it involves storing the group identifier and weight information so that between-group contributions to variance can be removed.
+
+> The first step is to set up the information about population group sizes. This information can be in a data frame (as here) or in a `table` object as is produced by the `table()` function. In the data frame format, one or more columns give the values of the grouping variables and the final column, which must be named `Freq`, gives the population counts. The call to `postStratify()` specifies the grouping variables as a model formula in the `strata` argument, and gives the table of population counts as the `population` argument. The function returns a new, post-stratified survey design object.
+
+> Raking allows multiple grouping variables to be used without constructing a complete cross-classification. The process involves post-stratifying on each set of variables in turn, and repeating this process until the weights stop changing. The name arises from the image of raking a garden bed alternately in each direction to smooth out the soil. Raking can also be applied when partial cross-classifications of the variables are available.
+>
+> [...]
+>
+> Standard error computations after raking are based on the iterative post-stratification algorithm. For standard errors based on replicate weights, raking each set of replicate weights ensures that the auxiliary information is correctly incorporated into between-replicate differences. [...].
+>
+> The `rake()` function performs the computations for raking by repeatedly calling `postStratify()`. Each of these calls to `postStratify()` accumulates the necessary information for standard error computations. (p. 139)
+
+> As in section 7.2, post-stratification can be seen as making the smallest possible changes to the weights that result in the estimated population totals matching the known totals. This view of post-stratification leads to _calibration_ estimators. An alternative is to note that the estimated population total after post-stratification is a regression estimator, for a working regression model that uses indicatorvariables for each post-stratum as predictors. This view leads to _generalized regression_ or GREG estimators. (p. 141)
+
+> "Regression thinking" is useful in understanding why large increases in precision are possible -- it is surprising to many biostatisticians that small changes in sampling weights can increase precision dramatically, but it is easier to understand that a good regression model can reduce the unexplained variation. "Calibration thinking" often leads to simpler formulas and simpler software implementation, since an explicit model is not needed. (p. 141)
+
+$$
+\hat{T}_\text{reg} = \sum^N_{i = 1} x_i \hat{\beta}_i = \left( \sum^N_{i = 1} X_i \right) \hat{\beta} = T_X \hat{\beta}
+$$
 
 ---
 

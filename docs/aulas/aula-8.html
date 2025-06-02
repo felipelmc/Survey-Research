@@ -453,14 +453,15 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration." id="toc-lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration." class="nav-link active" data-scroll-target="#lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration."><span class="header-section-number">8.1</span> Lumley, T. (2011). <em>Complex surveys: a guide to analysis using R.</em> John Wiley &amp; Sons. Chapter 7: Post-stratification, raking, and calibration.</a></li>
-  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">8.2</span> Anotações de aula</a>
+  <li><a href="#wolf-c.-joye-d.-smith-t.-w.-fu-y.-2016.-the-sage-handbook-of-survey-methodology.-sage.-chapter-31-analysis-of-data-from-stratified-and-clustered-surveys." id="toc-wolf-c.-joye-d.-smith-t.-w.-fu-y.-2016.-the-sage-handbook-of-survey-methodology.-sage.-chapter-31-analysis-of-data-from-stratified-and-clustered-surveys." class="nav-link active" data-scroll-target="#wolf-c.-joye-d.-smith-t.-w.-fu-y.-2016.-the-sage-handbook-of-survey-methodology.-sage.-chapter-31-analysis-of-data-from-stratified-and-clustered-surveys."><span class="header-section-number">8.1</span> Wolf, C., Joye, D., Smith, T. W., &amp; Fu, Y. (2016). The SAGE handbook of survey methodology. Sage. Chapter 31: Analysis of Data from Stratified and Clustered Surveys.</a></li>
+  <li><a href="#lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration." id="toc-lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration." class="nav-link" data-scroll-target="#lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration."><span class="header-section-number">8.2</span> Lumley, T. (2011). <em>Complex surveys: a guide to analysis using R.</em> John Wiley &amp; Sons. Chapter 7: Post-stratification, raking, and calibration.</a></li>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">8.3</span> Anotações de aula</a>
   <ul class="collapse">
-  <li><a href="#ponderação-de-ajuste" id="toc-ponderação-de-ajuste" class="nav-link" data-scroll-target="#ponderação-de-ajuste"><span class="header-section-number">8.2.1</span> Ponderação de ajuste</a></li>
-  <li><a href="#calibração-vs.-ponderação" id="toc-calibração-vs.-ponderação" class="nav-link" data-scroll-target="#calibração-vs.-ponderação"><span class="header-section-number">8.2.2</span> Calibração vs.&nbsp;ponderação</a></li>
-  <li><a href="#pesos-e-inflação-da-variância" id="toc-pesos-e-inflação-da-variância" class="nav-link" data-scroll-target="#pesos-e-inflação-da-variância"><span class="header-section-number">8.2.3</span> Pesos e inflação da variância</a></li>
-  <li><a href="#outros-tipos-de-pós-ajustes-em-r" id="toc-outros-tipos-de-pós-ajustes-em-r" class="nav-link" data-scroll-target="#outros-tipos-de-pós-ajustes-em-r"><span class="header-section-number">8.2.4</span> Outros tipos de pós-ajustes em R</a></li>
-  <li><a href="#usando-o-pacote-survey-no-r" id="toc-usando-o-pacote-survey-no-r" class="nav-link" data-scroll-target="#usando-o-pacote-survey-no-r"><span class="header-section-number">8.2.5</span> Usando o pacote <code>survey</code> no R</a></li>
+  <li><a href="#ponderação-de-ajuste" id="toc-ponderação-de-ajuste" class="nav-link" data-scroll-target="#ponderação-de-ajuste"><span class="header-section-number">8.3.1</span> Ponderação de ajuste</a></li>
+  <li><a href="#calibração-vs.-ponderação" id="toc-calibração-vs.-ponderação" class="nav-link" data-scroll-target="#calibração-vs.-ponderação"><span class="header-section-number">8.3.2</span> Calibração vs.&nbsp;ponderação</a></li>
+  <li><a href="#pesos-e-inflação-da-variância" id="toc-pesos-e-inflação-da-variância" class="nav-link" data-scroll-target="#pesos-e-inflação-da-variância"><span class="header-section-number">8.3.3</span> Pesos e inflação da variância</a></li>
+  <li><a href="#outros-tipos-de-pós-ajustes-em-r" id="toc-outros-tipos-de-pós-ajustes-em-r" class="nav-link" data-scroll-target="#outros-tipos-de-pós-ajustes-em-r"><span class="header-section-number">8.3.4</span> Outros tipos de pós-ajustes em R</a></li>
+  <li><a href="#usando-o-pacote-survey-no-r" id="toc-usando-o-pacote-survey-no-r" class="nav-link" data-scroll-target="#usando-o-pacote-survey-no-r"><span class="header-section-number">8.3.5</span> Usando o pacote <code>survey</code> no R</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -494,18 +495,84 @@ window.Quarto = {
 </header>
 
 
-<section id="lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration." class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration."><span class="header-section-number">8.1</span> Lumley, T. (2011). <em>Complex surveys: a guide to analysis using R.</em> John Wiley &amp; Sons. Chapter 7: Post-stratification, raking, and calibration.</h2>
+<section id="wolf-c.-joye-d.-smith-t.-w.-fu-y.-2016.-the-sage-handbook-of-survey-methodology.-sage.-chapter-31-analysis-of-data-from-stratified-and-clustered-surveys." class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="wolf-c.-joye-d.-smith-t.-w.-fu-y.-2016.-the-sage-handbook-of-survey-methodology.-sage.-chapter-31-analysis-of-data-from-stratified-and-clustered-surveys."><span class="header-section-number">8.1</span> Wolf, C., Joye, D., Smith, T. W., &amp; Fu, Y. (2016). The SAGE handbook of survey methodology. Sage. Chapter 31: Analysis of Data from Stratified and Clustered Surveys.</h2>
+<p>In the SRS case, we have a list of elements, which allows us to attribute to each element in the list a probability of being selected. In particular, “If the population is size <span class="math inline">\(N\)</span> and the sample is size <span class="math inline">\(n\)</span>, then the probability of selection of each unit is <span class="math inline">\(\frac{n}{N}\)</span>.” (p.&nbsp;478)</p>
+<p>The mean is just:</p>
+<p><span class="math display">\[
+\bar{y} = \dfrac{1}{n} \sum^n_{i=1} y_i
+\]</span></p>
+<p>The sample mean has itself a distribution: “We select just one sample, but there are many other samples that we could have selected, and each one would give an estimate of the mean.” The variance of the sample estimate of the mean is:</p>
+<p><span class="math display">\[
+\text{Var}(\bar{y}) = \dfrac{ \left( 1 - \frac{n}{N} \right) S^2 }{n}
+\]</span></p>
+<p>where <span class="math inline">\(\frac{n}{N}\)</span> is the sampling fraction and <span class="math inline">\(S^2\)</span> is the variability of the variable <span class="math inline">\((Y)\)</span> in the population. It gives the true variance of the estimate of the mean, but we usually cannot calculate it, because <span class="math inline">\(S^2\)</span> is not known. We then estimate <span class="math inline">\(S^2\)</span> by <span class="math inline">\(s^2\)</span>, in in-sample variability:</p>
+<p><span class="math display">\[
+s^2 = \dfrac{ \sum^n_1 (y_i - \bar{y})^2 }{n-1}
+\]</span></p>
+<p><span class="math inline">\(\left( 1 - \frac{n}{N} \right)\)</span> is the <em>finite population correction</em>, which is often vary small. We can estimate the variance as:</p>
+<p><span class="math display">\[
+\text{var}(\bar{y}) = \dfrac{s^2}{n}
+\]</span></p>
+<p>Now, in the stratified context, we estimate the variance as:</p>
+<p><span class="math display">\[
+\text{var}(\bar{y}) = \sum_H \dfrac{W_h^2 s^2_h}{n_h}
+\]</span></p>
+<blockquote class="blockquote">
+<p>The first step in deriving weights is to take the inverse of the probability of selection for each unit. In an SRS, the probability of selection of each unit is simply <span class="math inline">\(n/N\)</span> and thus the weight for each case is <span class="math inline">\(N/n\)</span>. In stratified samples using SRS within strata, but disproportionate allocation to strata, the weight is different for each stratum, but constant within strata. In PPS samples, each unit may have a different probability of selection and thus a different weight. Weights that adjust for the probability of selection are called design weights. (p.&nbsp;482)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Most surveys suffer from nonresponse, and weights are often adjusted to account for it. There are several different methods of adjusting weights for nonresponse using information that is available for respondents and nonrespondents. […]. If we have several variables available for each selected case, we can estimate a response and use the predicted propensities based on the model to adjust the weights. (p.&nbsp;482-483)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Raking, post-stratification, and calibration are in this class: all involve adjusting the sample so that it matches the population based on known population information. For example, in many contries, women are more likely to respond to surveys than men and thus the set of respondents has more women than men. These adjustment techniques increase the weight of the responding men, and decrease the weight of women, so that the weighted sample reflects the population. (p.&nbsp;483)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>If these adjustment techniques increase the variance of our estimates, why do we use them? Because we believe that the point estimates (that is, the estimates of means, quantiles, correlation coefficients, regression coefficients, and so on) that we get with the final adjusted weights are more accurate (less biased) than those that we get wehn we use only the design weights. The cost of this reduction in bias is an increase in variance. (p.&nbsp;483)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>In complex surveys, weights, stratification, and cluster sampling interact to make the estimation of variances particularly difficult. When a sample caintains these elements, the variance estimation formulas given above do not work, and we need to turn to alternative methods. There are two broad classes of techniques to estimate variances and standard errors from complex samples: Taylor-series linearization and replication, which includes several similar techniques. (p.&nbsp;484)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Replication techniques work on a different principle. Replication methods estimate variance by choosing subsets from the sample itself, and using the variability across all these subsets to estimate the variance of the sampling distribution. How exactly these subsamples of the sample are selected depends on the exact replication method in use. (p.&nbsp;484)</p>
+</blockquote>
+</section>
+<section id="lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration." class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="lumley-t.-2011.-complex-surveys-a-guide-to-analysis-using-r.-john-wiley-sons.-chapter-7-post-stratification-raking-and-calibration."><span class="header-section-number">8.2</span> Lumley, T. (2011). <em>Complex surveys: a guide to analysis using R.</em> John Wiley &amp; Sons. Chapter 7: Post-stratification, raking, and calibration.</h2>
 <blockquote class="blockquote">
 <p>This chapter deals with techniques for using known population totals for a set of variables (<em>auxiliary variables</em>) to adjust the sampling weights and improve estimation for another set of variables. All of these techniques have the same idea: adjustments are made to the sampling weights so that estimated population totals for the auxiliary variables match the known population totals, making the sample more representative of the population. A second benefit is that the estimates are forced to be consistent with the population data, improving their credibility with people who may not understand the sampling process. (p.&nbsp;135-136)</p>
 </blockquote>
 <blockquote class="blockquote">
 <p>Post-stratification adjusts the sampling weights so that the estimated population group sizes are correct, as they would be in stratified sampling. The sampling weights <span class="math inline">\(\frac{1}{\pi_i}\)</span> are replaced by weights <span class="math inline">\(\frac{g_i}{\pi_i}\)</span>, where <span class="math inline">\(g_i = \frac{N_i}{\hat{N}_i}\)</span> for the group containing individual <span class="math inline">\(i\)</span>.</p>
 </blockquote>
+<blockquote class="blockquote">
+<p>Adjusting the weights to incorporate the auxiliary information is straightforward, but estimating the resulting standard errors is more difficult. For replicate-weight designs it is sufficient to post-stratify each set of replicate weights (Valliant [178]). Since the estimated group size will then match the known population group size for every set of replicates, between-group variation will not produce differences between replicates and so the replicate-weight standard errors will correctly omit the between-group differences. (p.&nbsp;137)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The function <code>postStratify()</code> creates a post-stratified survey design object. In addition to adjusting the sampling weights, it adds information to allow the standard errors to be adjusted. For a replicate-weight design this involves computing a post-stratification on each set of replicate weights; for linearization estimators it involves storing the group identifier and weight information so that between-group contributions to variance can be removed.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The first step is to set up the information about population group sizes. This information can be in a data frame (as here) or in a <code>table</code> object as is produced by the <code>table()</code> function. In the data frame format, one or more columns give the values of the grouping variables and the final column, which must be named <code>Freq</code>, gives the population counts. The call to <code>postStratify()</code> specifies the grouping variables as a model formula in the <code>strata</code> argument, and gives the table of population counts as the <code>population</code> argument. The function returns a new, post-stratified survey design object.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Raking allows multiple grouping variables to be used without constructing a complete cross-classification. The process involves post-stratifying on each set of variables in turn, and repeating this process until the weights stop changing. The name arises from the image of raking a garden bed alternately in each direction to smooth out the soil. Raking can also be applied when partial cross-classifications of the variables are available.</p>
+<p>[…]</p>
+<p>Standard error computations after raking are based on the iterative post-stratification algorithm. For standard errors based on replicate weights, raking each set of replicate weights ensures that the auxiliary information is correctly incorporated into between-replicate differences. […].</p>
+<p>The <code>rake()</code> function performs the computations for raking by repeatedly calling <code>postStratify()</code>. Each of these calls to <code>postStratify()</code> accumulates the necessary information for standard error computations. (p.&nbsp;139)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>As in section 7.2, post-stratification can be seen as making the smallest possible changes to the weights that result in the estimated population totals matching the known totals. This view of post-stratification leads to <em>calibration</em> estimators. An alternative is to note that the estimated population total after post-stratification is a regression estimator, for a working regression model that uses indicatorvariables for each post-stratum as predictors. This view leads to <em>generalized regression</em> or GREG estimators. (p.&nbsp;141)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Regression thinking” is useful in understanding why large increases in precision are possible – it is surprising to many biostatisticians that small changes in sampling weights can increase precision dramatically, but it is easier to understand that a good regression model can reduce the unexplained variation. “Calibration thinking” often leads to simpler formulas and simpler software implementation, since an explicit model is not needed. (p.&nbsp;141)</p>
+</blockquote>
+<p><span class="math display">\[
+\hat{T}_\text{reg} = \sum^N_{i = 1} x_i \hat{\beta}_i = \left( \sum^N_{i = 1} X_i \right) \hat{\beta} = T_X \hat{\beta}
+\]</span></p>
 <hr>
 </section>
-<section id="anotações-de-aula" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">8.2</span> Anotações de aula</h2>
+<section id="anotações-de-aula" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">8.3</span> Anotações de aula</h2>
 <p>Em amostragem, cada unidade amostral tem um peso. Lemos isso como “quantas unidades na população cada unidade amostrada representa”. Se o desenho amostral tiver equiprobabilidade, cada unidade amostrada representa a mesma quantidade de unidade da população e pesos não são necessários.</p>
 <p>O estimador ponderado é:</p>
 <p><span class="math display">\[
@@ -545,8 +612,8 @@ window.Quarto = {
 <li>Dar maior peso a subgrupos que responderam menos ao survey (não-resposta);</li>
 <li>Ajustar estimativas com totais populacionais conhecidos (<em>aka</em> calibração)</li>
 </ul>
-<section id="ponderação-de-ajuste" class="level3" data-number="8.2.1">
-<h3 data-number="8.2.1" class="anchored" data-anchor-id="ponderação-de-ajuste"><span class="header-section-number">8.2.1</span> Ponderação de ajuste</h3>
+<section id="ponderação-de-ajuste" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="ponderação-de-ajuste"><span class="header-section-number">8.3.1</span> Ponderação de ajuste</h3>
 <p>Problemas com quadro amostral (cobertura, e.g.) e não-resposta de unidade podem introduzir viés se respondentes diferem sistematicamente de não-respondentes:</p>
 <ul>
 <li>Entrevistamos muito menos pessoas mais ricas do que deveríamos;</li>
@@ -560,8 +627,8 @@ window.Quarto = {
 \]</span></p>
 <p>Cada homem na amostra representa 1.315789474 homens na população. O mesmo vale para mulheres, mas o peso é menor.</p>
 </section>
-<section id="calibração-vs.-ponderação" class="level3" data-number="8.2.2">
-<h3 data-number="8.2.2" class="anchored" data-anchor-id="calibração-vs.-ponderação"><span class="header-section-number">8.2.2</span> Calibração vs.&nbsp;ponderação</h3>
+<section id="calibração-vs.-ponderação" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="calibração-vs.-ponderação"><span class="header-section-number">8.3.2</span> Calibração vs.&nbsp;ponderação</h3>
 <p>Quando já temos pesos (geralmente do desenho), podemos forçá-los a corresponder a totais populacionais conhecidos em variáveis auxiliares.</p>
 <p>Ponderar é pegar a amostra que eu tenho e tentar aproximá-la de algum benchmark (por exemplo, a população). Calibrar, por outro lado, é pegar um peso que eu já tenho (no mais das vezes, a probabilidade de inclusão) – supondo que a gente calcule o total populacional e, no entanto, a população brasileira deu <span class="math inline">\(205\)</span> milhões, mas sabemos que a população brasileira é de <span class="math inline">\(203\)</span> milhões. A calibragem ajusta o esquema de pesos para fazer com que o total bata com algum total conhecido da população.</p>
 <p>Nesse caso, precisamos encontrar novos pesos <span class="math inline">\(w_i^{\text{Cal}}\)</span> próximos aos pesos iniciais de forma que:</p>
@@ -570,23 +637,23 @@ window.Quarto = {
 \]</span></p>
 <p>onde <span class="math inline">\(X\)</span> é o total populacional (<span class="math inline">\(U\)</span> é a população) conhecido (e.g., total de eleitores) para a variável auxiliar <span class="math inline">\(x_i\)</span>. Esse ajuste pode ser feito de várias maneiras: algoritmos iterativos, regressão, etc.</p>
 </section>
-<section id="pesos-e-inflação-da-variância" class="level3" data-number="8.2.3">
-<h3 data-number="8.2.3" class="anchored" data-anchor-id="pesos-e-inflação-da-variância"><span class="header-section-number">8.2.3</span> Pesos e inflação da variância</h3>
+<section id="pesos-e-inflação-da-variância" class="level3" data-number="8.3.3">
+<h3 data-number="8.3.3" class="anchored" data-anchor-id="pesos-e-inflação-da-variância"><span class="header-section-number">8.3.3</span> Pesos e inflação da variância</h3>
 <p>Pesos de desenho muito grande ou desiguais inflam estimativas.</p>
 <blockquote class="blockquote">
 <p>Intuição: uma unidade com peso relativo de <span class="math inline">\(2\)</span> equivale a duplicar a sua entrevista na amostra; para isso, no entanto, precisamos retirar uma unidade de outras unidades da amostra. A solução geralmente é usar tetos ou ajustes para limitar pesos extremos.</p>
 </blockquote>
 </section>
-<section id="outros-tipos-de-pós-ajustes-em-r" class="level3" data-number="8.2.4">
-<h3 data-number="8.2.4" class="anchored" data-anchor-id="outros-tipos-de-pós-ajustes-em-r"><span class="header-section-number">8.2.4</span> Outros tipos de pós-ajustes em R</h3>
+<section id="outros-tipos-de-pós-ajustes-em-r" class="level3" data-number="8.3.4">
+<h3 data-number="8.3.4" class="anchored" data-anchor-id="outros-tipos-de-pós-ajustes-em-r"><span class="header-section-number">8.3.4</span> Outros tipos de pós-ajustes em R</h3>
 <ul>
 <li><em>Rake e iterative proportional fitting</em>, que ajustam pesos iterativamente para que totais populacionais conhecidos sejam respeitados (pesos relativos);</li>
 <li><em>Generalized regression estimation</em> (GREG), que usa modelos de regressão para calibrar pesos;</li>
 <li><em>Multilevel regression and poststratification</em> (MrP), que projeta resposta em subgrupos da população (e.g., regiões, idade, sexo) usando modelos de regressão</li>
 </ul>
 </section>
-<section id="usando-o-pacote-survey-no-r" class="level3" data-number="8.2.5">
-<h3 data-number="8.2.5" class="anchored" data-anchor-id="usando-o-pacote-survey-no-r"><span class="header-section-number">8.2.5</span> Usando o pacote <code>survey</code> no R</h3>
+<section id="usando-o-pacote-survey-no-r" class="level3" data-number="8.3.5">
+<h3 data-number="8.3.5" class="anchored" data-anchor-id="usando-o-pacote-survey-no-r"><span class="header-section-number">8.3.5</span> Usando o pacote <code>survey</code> no R</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">

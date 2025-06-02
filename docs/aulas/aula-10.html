@@ -421,6 +421,7 @@ window.Quarto = {
   <li><a href="#ghitza-y.-gelman-a.-2013.-deep-interactions-with-mrp-election-turnout-and-voting-patterns-among-small-electoral-subgroups.-american-journal-of-political-science-57-3-762776." id="toc-ghitza-y.-gelman-a.-2013.-deep-interactions-with-mrp-election-turnout-and-voting-patterns-among-small-electoral-subgroups.-american-journal-of-political-science-57-3-762776." class="nav-link active" data-scroll-target="#ghitza-y.-gelman-a.-2013.-deep-interactions-with-mrp-election-turnout-and-voting-patterns-among-small-electoral-subgroups.-american-journal-of-political-science-57-3-762776."><span class="header-section-number">10.1</span> Ghitza, Y., &amp; Gelman, A. (2013). Deep Interactions with MRP: Election Turnout and Voting Patterns Among Small Electoral Subgroups. <em>American Journal of Political Science</em>, 57 (3), 762–776.</a></li>
   <li><a href="#bisbee-j.-2019.-barp-improving-mister-p-using-bayesian-additive-regression-trees.-american-political-science-review-1134-10601065." id="toc-bisbee-j.-2019.-barp-improving-mister-p-using-bayesian-additive-regression-trees.-american-political-science-review-1134-10601065." class="nav-link" data-scroll-target="#bisbee-j.-2019.-barp-improving-mister-p-using-bayesian-additive-regression-trees.-american-political-science-review-1134-10601065."><span class="header-section-number">10.2</span> Bisbee, J. (2019). BARP: Improving Mister P Using Bayesian Additive Regression Trees. <em>American Political Science Review</em>, 113(4), 1060–1065.</a></li>
   <li><a href="#goplerud-m.-2023.-re-evaluating-machine-learning-for-mrp-given-the-comparable-performance-of-deep-hierarchical-models.-american-political-science-review-18." id="toc-goplerud-m.-2023.-re-evaluating-machine-learning-for-mrp-given-the-comparable-performance-of-deep-hierarchical-models.-american-political-science-review-18." class="nav-link" data-scroll-target="#goplerud-m.-2023.-re-evaluating-machine-learning-for-mrp-given-the-comparable-performance-of-deep-hierarchical-models.-american-political-science-review-18."><span class="header-section-number">10.3</span> Goplerud, M. (2023). Re-Evaluating Machine Learning for MRP Given the Comparable Performance of (Deep) Hierarchical Models. <em>American Political Science Review</em>, 1–8.</a></li>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">10.4</span> Anotações de aula</a></li>
   </ul>
 </nav>
     </div>
@@ -582,7 +583,25 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>A useful property of ensembles is the ability to compare the weights given the constituent models. The weights reflect both the performance and the methods and its “distinctiveness” from the other methods in the ensemble. Using each survey in Buttice and Highton (2013), I drew 10 different samples of varying sizes and estimated the ensemble using fivefold cross-validation with the models in Ornstein (2020), where I swapped the traditional (“Simple”) MRP model with the deep MRP model.</p>
 </blockquote>
-<p>https://projecteuclid.org/journals/bayesian-analysis/volume-17/issue-2/Fast-and-Accurate-Estimation-of-Non-Nested-Binomial-Hierarchical-Models/10.1214/21-BA1266.full</p>
+</section>
+<section id="anotações-de-aula" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">10.4</span> Anotações de aula</h2>
+<p>No MrP, um modelo aprende a dar respostas pelas pessoas (a partir da resposta das pessoas).</p>
+<ul>
+<li>Primeiro, usamos modelos de regressão para predizer respostas individuais a partir de características observadas (e.g., idade, gênero, renda, região, etc.)</li>
+<li>Depois, projetamos essas respostas individuais para a população alvo, ajustando estimativas</li>
+</ul>
+<p>Uma das inovações centrais recentes em MrP é o uso de <strong>modelos flexível</strong> que se adaptam à complexidade dos <strong>PGDs</strong> assumidos. Isso inclui:</p>
+<ul>
+<li>intercepts que variam por grupo e sub-grupo</li>
+<li>inclinações que variam por grupo e sub-grupo</li>
+<li>interações enttre preditores, com ou sem variação por grupo</li>
+<li>diferentes formas funcionais e transformações de preditores</li>
+<li>modelos com efeitos aleatórios, inferência bayesiana, etc.</li>
+<li>modelos de <em>machine learning</em> (e.g., árvores de decisão, florestas aleatórias, redes neurais, etc.)</li>
+</ul>
+<p>O que Ghiza and Gelman (2013) advogam é que você não necessariamente precisa de modelos de <em>machine learning</em>. Modelos de regressão bem especificados apresentam boa performance. Em particular, devemos pensar em interações entre as variáveis a partir da exploração exaustiva do banco de dados.</p>
+<p>O benchmark que temos para usar modelos de MrP é que, em geral, bases com 5.000 respostas é o caso ótimo, mas a partir de 3.000 é suficiente. Menos que isso não é tão bom.</p>
 
 
 </section>

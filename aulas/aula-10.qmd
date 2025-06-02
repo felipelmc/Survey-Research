@@ -114,5 +114,25 @@ O autor aidiciona todas as interações possíveis entre variáveis demográfica
 
 > A useful property of ensembles is the ability to compare the weights given the constituent models. The weights reflect both the performance and the methods and its "distinctiveness" from the other methods in the ensemble. Using each survey in Buttice and Highton (2013), I drew 10 different samples of varying sizes and estimated the ensemble using fivefold cross-validation with the models in Ornstein (2020), where I swapped the traditional ("Simple") MRP model with the deep MRP model.
 
-https://projecteuclid.org/journals/bayesian-analysis/volume-17/issue-2/Fast-and-Accurate-Estimation-of-Non-Nested-Binomial-Hierarchical-Models/10.1214/21-BA1266.full
+## Anotações de aula
+
+No MrP, um modelo aprende a dar respostas pelas pessoas (a partir da resposta das pessoas). 
+
+- Primeiro, usamos modelos de regressão para predizer respostas individuais a partir de características observadas (e.g., idade, gênero, renda, região, etc.)
+- Depois, projetamos essas respostas individuais para a população alvo, ajustando estimativas
+
+Uma das inovações centrais recentes em MrP é o uso de **modelos flexível** que se adaptam à complexidade dos **PGDs** assumidos. Isso inclui:
+
+- intercepts que variam por grupo e sub-grupo
+- inclinações que variam por grupo e sub-grupo
+- interações enttre preditores, com ou sem variação por grupo
+- diferentes formas funcionais e transformações de preditores
+- modelos com efeitos aleatórios, inferência bayesiana, etc.
+- modelos de _machine learning_ (e.g., árvores de decisão, florestas aleatórias, redes neurais, etc.)
+
+O que Ghiza and Gelman (2013) advogam é que você não necessariamente precisa de modelos de _machine learning_. Modelos de regressão bem especificados apresentam boa performance. Em particular, devemos pensar em interações entre as variáveis a partir da exploração exaustiva do banco de dados.
+
+O benchmark que temos para usar modelos de MrP é que, em geral, bases com 5.000 respostas é o caso ótimo, mas a partir de 3.000 é suficiente. Menos que isso não é tão bom.
+
+
 
