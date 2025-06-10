@@ -1,0 +1,1801 @@
+id_entrevista,regiao,uf,sexo,idade,cor_raca,religiao,escolaridade,confianca_governo,confianca_judiciario,economia_12meses,voto_2t
+1,Sul,Paraná,Feminino,45 a 59 anos,Parda,Evangélica,Médio,1,4,Muito melhor,1
+2,Nordeste,Ceará,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,3,4,Muito pior,2
+3,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Parda,Católica,Fundamental,1,2,Muito melhor,1
+4,Nordeste,Bahia,Masculino,25 a 34 anos,Parda,Evangélica,Superior,1,1,Muito pior,2
+5,Nordeste,Ceará,Masculino,25 a 34 anos,Preta,Umbanda,Médio,1,4,Muito pior,2
+6,Centro-Oeste,Mato Grosso,Masculino,60 anos ou mais,Preta,Católica,Fundamental,1,3,Muito pior,2
+7,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Evangélica,Superior,3,2,Pouco melhor,1
+8,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Preta,Católica,Fundamental,2,2,Pouco melhor,1
+9,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Preta,Católica,Fundamental,1,3,Pouco pior,1
+10,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,3,2,Pouco pior,1
+11,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Não Tem Religião,Médio,3,1,Muito pior,2
+12,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Católica,Fundamental,3,1,Igual,Não votou
+13,Nordeste,Sergipe,Masculino,18 a 24 anos,Parda,Católica,Médio,2,2,Pouco melhor,1
+14,Sul,Paraná,Masculino,60 anos ou mais,Branca,Não Tem Religião,Fundamental,3,3,Muito melhor,Não votou
+15,Sul,Paraná,Masculino,25 a 34 anos,Branca,Cristão,Superior,2,2,Igual,2
+16,Centro-Oeste,Mato Grosso Do Sul,Feminino,25 a 34 anos,Preta,Católica,Fundamental,4,1,Muito pior,Não votou
+17,Nordeste,Ceará,Masculino,25 a 34 anos,Parda,Evangélica,Médio,1,1,Igual,Não votou
+18,Nordeste,Ceará,Feminino,45 a 59 anos,Parda,Católica,Médio,3,2,Pouco melhor,1
+19,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Médio,3,3,Igual,4
+20,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Preta,"Espírita Kardecista, Espiritualista",Superior,4,2,Pouco pior,2
+21,Sul,Santa Catarina,Feminino,60 anos ou mais,Preta,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,4,2,Muito pior,2
+22,Sudeste,São Paulo,Masculino,60 anos ou mais,Parda,Católica,Fundamental,1,4,Pouco melhor,1
+23,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Candomblé,Fundamental,3,3,Muito melhor,1
+24,Sul,Santa Catarina,Feminino,18 a 24 anos,Preta,Umbanda,Médio,3,3,Não sabe,Não votou
+25,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Evangélica,Médio,1,4,Pouco melhor,1
+26,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Evangélica,Médio,3,3,Muito pior,2
+27,Sul,Santa Catarina,Feminino,25 a 34 anos,Branca,Evangélica,Médio,3,3,Pouco pior,1
+28,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Branca,Católica,Fundamental,4,3,Muito pior,2
+29,Norte,Amazonas,Masculino,25 a 34 anos,Preta,Evangélica,Fundamental,3,3,Pouco pior,1
+30,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Branca,Católica,Fundamental,3,3,Igual,2
+31,Nordeste,Ceará,Feminino,60 anos ou mais,Branca,Católica,Fundamental,Não sabe,2,Muito pior,Não votou
+32,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Evangélica,Fundamental,3,2,Pouco melhor,1
+33,Nordeste,Maranhão,Feminino,45 a 59 anos,Branca,Católica,Fundamental,Não sabe,3,Muito pior,2
+34,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Católica,Médio,3,3,Pouco melhor,1
+35,Nordeste,Pernambuco,Feminino,25 a 34 anos,Preta,Evangélica,Fundamental,3,2,Muito pior,2
+36,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Parda,Evangélica,Superior,3,3,Pouco melhor,1
+37,Nordeste,Sergipe,Masculino,35 a 44 anos,Branca,Evangélica,Superior,4,3,Muito melhor,1
+38,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Não Tem Religião,Superior,2,2,Pouco pior,2
+39,Sudeste,São Paulo,Masculino,45 a 59 anos,Outras,Católica,Médio,3,3,Não sabe,1
+40,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,"Espírita Kardecista, Espiritualista",Médio,1,4,Muito melhor,1
+41,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Católica,Médio,3,3,Pouco pior,1
+42,Nordeste,Alagoas,Masculino,16 e 17 anos,Parda,Não Tem Religião,Fundamental,3,3,Pouco melhor,3
+43,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Católica,Médio,2,2,Muito melhor,1
+44,Sul,Rio Grande Do Sul,Masculino,25 a 34 anos,Branca,Católica,Médio,3,2,Igual,2
+45,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Preta,Evangélica,Fundamental,3,1,Pouco melhor,2
+46,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Evangélica,Médio,2,3,Pouco melhor,1
+47,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Parda,Católica,Superior,2,2,Pouco pior,2
+48,Sul,Rio Grande Do Sul,Feminino,60 anos ou mais,Branca,Evangélica,Fundamental,2,1,Muito melhor,1
+49,Norte,Pará,Masculino,60 anos ou mais,Parda,Católica,Fundamental,4,4,Muito pior,2
+50,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Parda,Evangélica,Fundamental,4,2,Pouco melhor,2
+51,Centro-Oeste,Goiás,Masculino,35 a 44 anos,Preta,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,1,1,Muito pior,2
+52,Nordeste,Paraíba,Masculino,25 a 34 anos,Outras,Candomblé,Fundamental,1,1,Muito pior,2
+53,Norte,Pará,Feminino,60 anos ou mais,Parda,Católica,Fundamental,1,3,Igual,Não votou
+54,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Parda,Evangélica,Médio,2,3,Pouco pior,1
+55,Sudeste,São Paulo,Feminino,16 e 17 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,2,4,Pouco pior,2
+56,Sul,Santa Catarina,Feminino,45 a 59 anos,Parda,Não Tem Religião,Médio,2,1,Muito melhor,Não votou
+57,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Parda,Evangélica,Médio,1,3,Pouco melhor,1
+58,Norte,Pará,Masculino,60 anos ou mais,Branca,Católica,Médio,4,3,Igual,2
+59,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Católica,Médio,4,4,Pouco pior,1
+60,Nordeste,Bahia,Feminino,45 a 59 anos,Outras,Católica,Fundamental,Não sabe,1,Não respondeu,2
+61,Centro-Oeste,Mato Grosso,Feminino,25 a 34 anos,Parda,Evangélica,Superior,2,4,Muito melhor,1
+62,Sul,Santa Catarina,Masculino,35 a 44 anos,Branca,Católica,Médio,4,2,Muito pior,2
+63,Nordeste,Piauí,Masculino,60 anos ou mais,Parda,Católica,Médio,3,2,Pouco melhor,1
+64,Nordeste,Maranhão,Masculino,60 anos ou mais,Parda,Católica,Fundamental,1,1,Muito pior,2
+65,Sul,Santa Catarina,Masculino,25 a 34 anos,Preta,Não Tem Religião,Superior,3,3,Muito pior,2
+66,Sul,Paraná,Feminino,60 anos ou mais,Branca,Católica,Médio,1,3,Igual,2
+67,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Católica,Médio,3,3,Igual,1
+68,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Católica,Médio,4,2,Pouco pior,2
+69,Sul,Paraná,Masculino,45 a 59 anos,Branca,Católica,Médio,2,3,Igual,1
+70,Nordeste,Maranhão,Masculino,45 a 59 anos,Branca,Católica,Médio,2,2,Igual,2
+71,Centro-Oeste,Distrito Federal,Feminino,35 a 44 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,3,3,Muito pior,2
+72,Nordeste,Pernambuco,Masculino,35 a 44 anos,Parda,Evangélica,Médio,1,4,Muito melhor,1
+73,Nordeste,Piauí,Feminino,18 a 24 anos,Parda,Católica,Médio,3,1,Muito pior,Não votou
+74,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Branca,Evangélica,Fundamental,2,2,Pouco melhor,2
+75,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Católica,Médio,2,1,Pouco pior,Não votou
+76,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Parda,Não Tem Religião,Superior,1,1,Pouco pior,2
+77,Centro-Oeste,Distrito Federal,Masculino,35 a 44 anos,Branca,Católica,Fundamental,4,4,Igual,6
+78,Sudeste,São Paulo,Masculino,35 a 44 anos,Outras,Não Tem Religião,Médio,2,4,Pouco pior,1
+79,Nordeste,Ceará,Feminino,60 anos ou mais,Branca,Católica,Médio,3,3,Pouco pior,1
+80,Norte,Pará,Masculino,60 anos ou mais,Parda,Católica,Fundamental,4,1,Pouco melhor,2
+81,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Católica,Médio,2,3,Pouco melhor,6
+82,Sudeste,Minas Gerais,Masculino,18 a 24 anos,Preta,Evangélica,Médio,4,1,Muito melhor,1
+83,Centro-Oeste,Mato Grosso Do Sul,Feminino,35 a 44 anos,Parda,Católica,Fundamental,3,1,Igual,2
+84,Nordeste,Sergipe,Masculino,60 anos ou mais,Outras,Evangélica,Fundamental,1,4,Pouco melhor,Não votou
+85,Sul,Paraná,Masculino,35 a 44 anos,Branca,Evangélica,Médio,1,3,Pouco melhor,1
+86,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Católica,Superior,2,4,Igual,Não votou
+87,Nordeste,Rio Grande Do Norte,Masculino,25 a 34 anos,Branca,Evangélica,Superior,3,3,Muito melhor,1
+88,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Médio,1,4,Pouco pior,1
+89,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Médio,1,1,Muito melhor,1
+90,Nordeste,Pernambuco,Masculino,45 a 59 anos,Branca,Católica,Fundamental,1,3,Muito pior,Não votou
+91,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Branca,Católica,Médio,2,2,Muito melhor,1
+92,Nordeste,Pernambuco,Masculino,45 a 59 anos,Parda,É Ateu/Agnóstico/ Não Acredita Em Deus,Fundamental,4,4,Muito pior,4
+93,Sul,Paraná,Masculino,35 a 44 anos,Branca,Católica,Médio,2,3,Muito melhor,1
+94,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Umbanda,Fundamental,3,4,Muito pior,2
+95,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Evangélica,Médio,3,3,Igual,2
+96,Norte,Pará,Masculino,45 a 59 anos,Preta,Evangélica,Superior,1,1,Muito melhor,1
+97,Nordeste,Maranhão,Feminino,25 a 34 anos,Parda,Evangélica,Médio,Não sabe,Não sabe,Não sabe,2
+98,Centro-Oeste,Mato Grosso Do Sul,Masculino,60 anos ou mais,Parda,Católica,Fundamental,1,4,Igual,2
+99,Nordeste,Piauí,Feminino,45 a 59 anos,Parda,Católica,Fundamental,1,3,Muito pior,2
+100,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Evangélica,Superior,3,3,Pouco melhor,1
+101,Nordeste,Alagoas,Feminino,35 a 44 anos,Parda,Católica,Fundamental,4,3,Pouco pior,2
+102,Centro-Oeste,Mato Grosso Do Sul,Masculino,25 a 34 anos,Preta,Católica,Superior,3,3,Pouco melhor,Não votou
+103,Nordeste,Ceará,Masculino,18 a 24 anos,Branca,Evangélica,Médio,4,2,Pouco melhor,1
+104,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Preta,Católica,Fundamental,4,3,Pouco pior,2
+105,Nordeste,Pernambuco,Feminino,25 a 34 anos,Branca,Católica,Superior,3,2,Muito pior,Não votou
+106,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Branca,Católica,Médio,2,2,Pouco pior,2
+107,Centro-Oeste,Goiás,Masculino,60 anos ou mais,Parda,Evangélica,Fundamental,2,4,Muito pior,2
+108,Nordeste,Bahia,Feminino,25 a 34 anos,Preta,Evangélica,Médio,2,2,Igual,3
+109,Nordeste,Sergipe,Feminino,16 e 17 anos,Preta,Católica,Médio,3,3,Pouco pior,2
+110,Sul,Santa Catarina,Masculino,25 a 34 anos,Parda,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,3,1,Muito pior,2
+111,Norte,Amapá,Masculino,18 a 24 anos,Parda,Católica,Médio,3,3,Pouco pior,1
+112,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Evangélica,Médio,3,3,Igual,6
+113,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Evangélica,Médio,3,3,Pouco melhor,1
+114,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Preta,Evangélica,Médio,2,2,Pouco melhor,2
+115,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Não Tem Religião,Médio,3,3,Muito pior,2
+116,Sul,Paraná,Feminino,60 anos ou mais,Preta,Católica,Superior,3,3,Pouco melhor,1
+117,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Fundamental,4,3,Pouco pior,2
+118,Norte,Acre,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Pouco pior,1
+119,Centro-Oeste,Distrito Federal,Feminino,25 a 34 anos,Parda,Evangélica,Superior,3,4,Pouco melhor,1
+120,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Católica,Superior,1,3,Muito melhor,1
+121,Centro-Oeste,Distrito Federal,Feminino,45 a 59 anos,Branca,Evangélica,Fundamental,2,3,Pouco melhor,1
+122,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Preta,Católica,Superior,2,2,Igual,2
+123,Norte,Pará,Feminino,18 a 24 anos,Parda,Evangélica,Médio,2,2,Pouco pior,2
+124,Nordeste,Rio Grande Do Norte,Masculino,35 a 44 anos,Parda,Católica,Fundamental,4,4,Muito pior,1
+125,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Branca,Católica,Fundamental,3,3,Muito pior,Não votou
+126,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Fundamental,3,Não sabe,Muito pior,2
+127,Sudeste,São Paulo,Feminino,35 a 44 anos,Preta,Candomblé,Superior,2,2,Muito pior,1
+128,Nordeste,Sergipe,Masculino,35 a 44 anos,Parda,Católica,Médio,3,3,Muito pior,4
+129,Nordeste,Rio Grande Do Norte,Feminino,25 a 34 anos,Parda,Não Tem Religião,Fundamental,2,2,Muito pior,1
+130,Centro-Oeste,Mato Grosso Do Sul,Feminino,25 a 34 anos,Parda,Católica,Superior,4,4,Muito melhor,Não votou
+131,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Católica,Médio,3,2,Pouco melhor,1
+132,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Católica,Médio,3,3,Pouco melhor,Não votou
+133,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Católica,Médio,3,2,Pouco pior,3
+134,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Branca,Evangélica,Médio,2,3,Pouco pior,1
+135,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Parda,Católica,Fundamental,2,3,Pouco melhor,1
+136,Sul,Paraná,Feminino,45 a 59 anos,Preta,Católica,Superior,2,2,Igual,2
+137,Sul,Rio Grande Do Sul,Feminino,25 a 34 anos,Preta,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,Não sabe,2,Pouco pior,3
+138,Sul,Paraná,Feminino,60 anos ou mais,Branca,Católica,Fundamental,3,2,Pouco melhor,1
+139,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Evangélica,Médio,3,4,Muito pior,2
+140,Nordeste,Bahia,Masculino,25 a 34 anos,Parda,Católica,Fundamental,2,2,Pouco melhor,Não votou
+141,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Branca,Católica,Superior,2,2,Muito melhor,1
+142,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Evangélica,Fundamental,3,1,Muito pior,1
+143,Sul,Paraná,Masculino,35 a 44 anos,Parda,Evangélica,Fundamental,2,3,Pouco melhor,1
+144,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Católica,Superior,2,4,Muito pior,1
+145,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Católica,Superior,3,2,Muito pior,2
+146,Nordeste,Maranhão,Masculino,18 a 24 anos,Preta,Não Sabe,Fundamental,Não sabe,Não sabe,Não respondeu,2
+147,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Preta,Evangélica,Médio,1,1,Muito melhor,1
+148,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Preta,Evangélica,Médio,3,3,Pouco melhor,1
+149,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,2,2,Pouco melhor,1
+150,Nordeste,Alagoas,Feminino,25 a 34 anos,Parda,Evangélica,Superior,4,3,Igual,3
+151,Nordeste,Alagoas,Masculino,25 a 34 anos,Parda,Católica,Fundamental,1,3,Muito melhor,1
+152,Sudeste,São Paulo,Masculino,25 a 34 anos,Preta,Umbanda,Médio,3,1,Pouco melhor,2
+153,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Não Respondeu,Superior,3,1,Muito melhor,2
+154,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Médio,1,4,Muito melhor,1
+155,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,4,2,Muito pior,2
+156,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Católica,Fundamental,3,4,Muito pior,Não votou
+157,Nordeste,Ceará,Masculino,18 a 24 anos,Parda,Católica,Médio,3,3,Igual,1
+158,Sudeste,São Paulo,Masculino,25 a 34 anos,Preta,Candomblé,Fundamental,2,2,Muito pior,2
+159,Norte,Pará,Masculino,35 a 44 anos,Preta,Católica,Superior,3,3,Pouco pior,2
+160,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Católica,Superior,4,1,Pouco pior,2
+161,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Parda,Evangélica,Médio,2,2,Igual,1
+162,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Parda,Evangélica,Superior,4,3,Pouco melhor,1
+163,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Preta,Católica,Superior,3,1,Igual,2
+164,Nordeste,Alagoas,Feminino,25 a 34 anos,Parda,Católica,Superior,3,4,Muito melhor,1
+165,Nordeste,Maranhão,Feminino,18 a 24 anos,Parda,Evangélica,Fundamental,1,1,Pouco melhor,2
+166,Norte,Tocantins,Feminino,45 a 59 anos,Parda,Evangélica,Superior,3,2,Pouco melhor,3
+167,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Umbanda,Superior,1,4,Muito melhor,1
+168,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Católica,Médio,1,2,Igual,Não votou
+169,Sul,Rio Grande Do Sul,Feminino,60 anos ou mais,Branca,Evangélica,Superior,1,2,Muito melhor,1
+170,Norte,Pará,Feminino,35 a 44 anos,Parda,Evangélica,Médio,4,3,Pouco pior,2
+171,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Evangélica,Médio,2,2,Pouco melhor,1
+172,Sudeste,Rio De Janeiro,Masculino,35 a 44 anos,Parda,Umbanda,Médio,2,3,Pouco pior,1
+173,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Branca,Católica,Superior,1,1,Igual,2
+174,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Parda,Católica,Fundamental,1,4,Muito melhor,1
+175,Nordeste,Ceará,Masculino,18 a 24 anos,Parda,Católica,Superior,3,1,Pouco melhor,6
+176,Nordeste,Ceará,Masculino,60 anos ou mais,Preta,Católica,Fundamental,1,4,Igual,Não votou
+177,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,Não Tem Religião,Médio,3,3,Pouco pior,2
+178,Norte,Pará,Masculino,45 a 59 anos,Parda,Católica,Superior,4,2,Pouco pior,2
+179,Centro-Oeste,Goiás,Masculino,45 a 59 anos,Parda,Católica,Médio,1,3,Muito melhor,1
+180,Norte,Pará,Masculino,25 a 34 anos,Parda,Católica,Médio,1,3,Muito pior,2
+181,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Acredita em Deus,Médio,4,3,Muito pior,2
+182,Sul,Paraná,Masculino,45 a 59 anos,Parda,Católica,Médio,1,1,Muito melhor,1
+183,Nordeste,Alagoas,Feminino,18 a 24 anos,Branca,Não Tem Religião,Médio,4,3,Igual,3
+184,Sul,Paraná,Feminino,60 anos ou mais,Outras,Evangélica,Fundamental,3,3,Igual,Não votou
+185,Nordeste,Paraíba,Masculino,25 a 34 anos,Outras,Evangélica,Médio,3,1,Muito melhor,1
+186,Norte,Amazonas,Feminino,35 a 44 anos,Preta,Evangélica,Fundamental,3,2,Pouco melhor,1
+187,Nordeste,Rio Grande Do Norte,Masculino,18 a 24 anos,Parda,Católica,Médio,2,2,Igual,1
+188,Sul,Paraná,Feminino,60 anos ou mais,Branca,Católica,Fundamental,1,3,Pouco pior,Não votou
+189,Nordeste,Ceará,Masculino,45 a 59 anos,Parda,Evangélica,Superior,1,2,Muito melhor,1
+190,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,2,2,Pouco pior,1
+191,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Parda,Evangélica,Médio,1,3,Pouco pior,Não votou
+192,Norte,Pará,Masculino,18 a 24 anos,Parda,Evangélica,Médio,4,3,Pouco melhor,1
+193,Sul,Paraná,Feminino,35 a 44 anos,Preta,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,2,3,Pouco pior,Não votou
+194,Nordeste,Rio Grande Do Norte,Feminino,25 a 34 anos,Parda,Católica,Médio,3,1,Igual,1
+195,Nordeste,Ceará,Masculino,45 a 59 anos,Preta,Católica,Fundamental,1,1,Pouco melhor,1
+196,Nordeste,Maranhão,Masculino,45 a 59 anos,Parda,Católica,Fundamental,1,1,Muito melhor,2
+197,Sudeste,Rio De Janeiro,Masculino,35 a 44 anos,Parda,Católica,Fundamental,3,1,Igual,2
+198,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,Católica,Fundamental,2,2,Pouco melhor,2
+199,Nordeste,Maranhão,Feminino,45 a 59 anos,Parda,Católica,Fundamental,4,3,Muito pior,2
+200,Sudeste,São Paulo,Feminino,60 anos ou mais,Parda,Evangélica,Fundamental,4,3,Igual,1
+201,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Católica,Médio,1,2,Pouco melhor,1
+202,Sul,Santa Catarina,Feminino,60 anos ou mais,Branca,Católica,Superior,3,2,Muito pior,Não votou
+203,Nordeste,Piauí,Feminino,35 a 44 anos,Parda,Católica,Médio,1,1,Pouco melhor,2
+204,Sudeste,Rio De Janeiro,Feminino,35 a 44 anos,Parda,Não Tem Religião,Fundamental,4,2,Muito pior,2
+205,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Médio,3,3,Muito pior,2
+206,Sudeste,Rio De Janeiro,Feminino,35 a 44 anos,Branca,Não Tem Religião,Superior,3,2,Pouco pior,2
+207,Sul,Santa Catarina,Feminino,35 a 44 anos,Parda,Evangélica,Médio,2,4,Muito melhor,1
+208,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Evangélica,Superior,1,1,Muito pior,1
+209,Nordeste,Pernambuco,Feminino,18 a 24 anos,Preta,Católica,Superior,3,3,Igual,2
+210,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Superior,2,3,Igual,1
+211,Nordeste,Piauí,Masculino,18 a 24 anos,Parda,Católica,Médio,3,3,Muito pior,2
+212,Nordeste,Ceará,Masculino,35 a 44 anos,Parda,Católica,Superior,2,2,Pouco pior,2
+213,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Evangélica,Médio,2,3,Muito melhor,1
+214,Nordeste,Piauí,Masculino,25 a 34 anos,Parda,Católica,Médio,2,1,Pouco melhor,2
+215,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Branca,Católica,Médio,1,3,Igual,1
+216,Norte,Amapá,Feminino,45 a 59 anos,Parda,Católica,Médio,3,3,Pouco melhor,1
+217,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Preta,Não Tem Religião,Médio,3,1,Muito pior,2
+218,Nordeste,Alagoas,Masculino,35 a 44 anos,Parda,Católica,Médio,1,2,Pouco melhor,1
+219,Nordeste,Piauí,Masculino,25 a 34 anos,Parda,Católica,Médio,3,3,Igual,2
+220,Nordeste,Maranhão,Feminino,35 a 44 anos,Branca,Católica,Médio,3,3,Igual,2
+221,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Branca,Evangélica,Fundamental,2,3,Muito pior,1
+222,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Branca,Evangélica,Médio,1,4,Pouco melhor,1
+223,Nordeste,Maranhão,Feminino,60 anos ou mais,Branca,Católica,Fundamental,2,Não sabe,Pouco pior,2
+224,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Médio,2,2,Muito melhor,1
+225,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Evangélica,Médio,3,3,Pouco melhor,1
+226,Sudeste,Rio De Janeiro,Masculino,35 a 44 anos,Parda,Não Tem Religião,Médio,2,1,Muito pior,Não votou
+227,Sudeste,Rio De Janeiro,Feminino,25 a 34 anos,Parda,Evangélica,Superior,3,2,Pouco melhor,1
+228,Sudeste,São Paulo,Masculino,25 a 34 anos,Outras,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,4,2,Pouco melhor,2
+229,Nordeste,Maranhão,Masculino,35 a 44 anos,Parda,Católica,Médio,2,3,Pouco pior,2
+230,Centro-Oeste,Goiás,Feminino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Pouco melhor,Não votou
+231,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,Católica,Médio,1,1,Muito pior,2
+232,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Preta,Evangélica,Fundamental,1,3,Igual,2
+233,Sudeste,Espírito Santo,Masculino,25 a 34 anos,Preta,Evangélica,Médio,1,3,Igual,1
+234,Centro-Oeste,Mato Grosso,Masculino,60 anos ou mais,Preta,"Espírita Kardecista, Espiritualista",Fundamental,3,1,Pouco pior,2
+235,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Evangélica,Médio,1,4,Muito melhor,1
+236,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Branca,Católica,Médio,3,3,Pouco melhor,1
+237,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Evangélica,Médio,3,2,Igual,1
+238,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Branca,Católica,Superior,2,2,Muito melhor,1
+239,Sul,Paraná,Feminino,25 a 34 anos,Preta,Evangélica,Médio,3,3,Pouco melhor,Não votou
+240,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Não Tem Religião,Fundamental,4,4,Muito pior,2
+241,Nordeste,Rio Grande Do Norte,Masculino,18 a 24 anos,Parda,Católica,Médio,3,3,Pouco pior,2
+242,Sudeste,São Paulo,Masculino,18 a 24 anos,Preta,Evangélica,Superior,2,3,Muito melhor,1
+243,Nordeste,Pernambuco,Masculino,45 a 59 anos,Preta,Não Tem Religião,Fundamental,3,3,Pouco pior,2
+244,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Médio,1,3,Muito melhor,Não votou
+245,Nordeste,Pernambuco,Feminino,25 a 34 anos,Parda,Evangélica,Médio,3,3,Igual,1
+246,Nordeste,Bahia,Feminino,35 a 44 anos,Preta,Evangélica,Fundamental,3,2,Muito pior,3
+247,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,4,Igual,1
+248,Sul,Rio Grande Do Sul,Feminino,25 a 34 anos,Parda,Evangélica,Superior,1,2,Muito pior,2
+249,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Evangélica,Fundamental,3,3,Pouco pior,4
+250,Sudeste,Espírito Santo,Feminino,45 a 59 anos,Preta,Não Tem Religião,Superior,3,3,Muito pior,2
+251,Sudeste,Rio De Janeiro,Masculino,35 a 44 anos,Parda,Evangélica,Superior,2,4,Pouco melhor,1
+252,Norte,Pará,Masculino,45 a 59 anos,Preta,Católica,Médio,4,3,Muito pior,2
+253,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Umbanda,Médio,3,2,Pouco melhor,2
+254,Nordeste,Maranhão,Feminino,60 anos ou mais,Parda,Católica,Fundamental,3,4,Muito pior,2
+255,Nordeste,Sergipe,Masculino,60 anos ou mais,Parda,Católica,Fundamental,1,3,Pouco melhor,2
+256,Nordeste,Paraíba,Masculino,35 a 44 anos,Parda,Evangélica,Fundamental,1,3,Muito melhor,1
+257,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Parda,Candomblé,Superior,3,2,Pouco melhor,3
+258,Sul,Santa Catarina,Masculino,25 a 34 anos,Parda,Católica,Superior,3,3,Muito pior,2
+259,Norte,Tocantins,Masculino,18 a 24 anos,Branca,Não Tem Religião,Superior,1,2,Muito pior,2
+260,Sudeste,Rio De Janeiro,Feminino,45 a 59 anos,Preta,Candomblé,Médio,4,1,Pouco melhor,3
+261,Nordeste,Bahia,Masculino,25 a 34 anos,Parda,Católica,Médio,3,3,Muito melhor,1
+262,Sudeste,São Paulo,Feminino,60 anos ou mais,Parda,"Espírita Kardecista, Espiritualista",Superior,2,2,Pouco pior,6
+263,Nordeste,Piauí,Masculino,35 a 44 anos,Preta,Católica,Fundamental,1,4,Igual,2
+264,Sul,Rio Grande Do Sul,Masculino,35 a 44 anos,Branca,Não Tem Religião,Fundamental,Não sabe,4,Muito pior,2
+265,Centro-Oeste,Goiás,Feminino,35 a 44 anos,Preta,Católica,Superior,1,1,Igual,1
+266,Sul,Santa Catarina,Feminino,45 a 59 anos,Branca,Católica,Fundamental,2,2,Pouco melhor,Não votou
+267,Sudeste,Rio De Janeiro,Feminino,45 a 59 anos,Branca,Católica,Médio,4,2,Pouco pior,2
+268,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Preta,Católica,Fundamental,4,3,Pouco melhor,2
+269,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,Evangélica,Médio,1,3,Muito melhor,1
+270,Sul,Paraná,Masculino,45 a 59 anos,Branca,Católica,Superior,3,3,Muito pior,2
+271,Nordeste,Pernambuco,Feminino,25 a 34 anos,Parda,Católica,Médio,3,3,Igual,2
+272,Sul,Rio Grande Do Sul,Feminino,45 a 59 anos,Branca,Não Tem Religião,Médio,4,4,Muito pior,Não votou
+273,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Evangélica,Médio,3,3,Muito pior,2
+274,Nordeste,Sergipe,Feminino,45 a 59 anos,Parda,Católica,Médio,1,3,Muito melhor,1
+275,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Muito melhor,1
+276,Nordeste,Maranhão,Masculino,35 a 44 anos,Parda,Católica,Médio,2,1,Muito pior,2
+277,Nordeste,Sergipe,Feminino,60 anos ou mais,Parda,Evangélica,Fundamental,3,3,Pouco melhor,1
+278,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Evangélica,Médio,2,3,Muito melhor,1
+279,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Evangélica,Médio,3,1,Pouco melhor,1
+280,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Superior,2,3,Pouco melhor,1
+281,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Não Tem Religião,Superior,3,3,Pouco pior,3
+282,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Branca,Católica,Médio,3,3,Pouco pior,Não votou
+283,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Evangélica,Superior,2,1,Muito melhor,1
+284,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Católica,Médio,2,1,Igual,6
+285,Nordeste,Piauí,Masculino,18 a 24 anos,Parda,Católica,Médio,3,1,Pouco pior,2
+286,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,Católica,Fundamental,3,3,Pouco melhor,1
+287,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Parda,Católica,Fundamental,1,1,Muito pior,Não votou
+288,Nordeste,Piauí,Masculino,45 a 59 anos,Branca,Católica,Médio,2,2,Muito melhor,1
+289,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Evangélica,Médio,3,3,Pouco pior,2
+290,Nordeste,Maranhão,Masculino,60 anos ou mais,Branca,Católica,Fundamental,2,3,Igual,1
+291,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Pouco pior,2
+292,Nordeste,Piauí,Feminino,60 anos ou mais,Parda,Católica,Médio,3,3,Muito pior,2
+293,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Evangélica,Médio,3,1,Muito melhor,1
+294,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,"Seicho-No-Ie, Messiânica, Perfeita Liberdade",Médio,4,2,Muito pior,Não votou
+295,Sul,Santa Catarina,Feminino,45 a 59 anos,Branca,Evangélica,Fundamental,3,2,Igual,1
+296,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Superior,2,2,Pouco melhor,1
+297,Nordeste,Ceará,Feminino,35 a 44 anos,Parda,Evangélica,Fundamental,2,2,Muito pior,2
+298,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Católica,Fundamental,1,1,Pouco pior,2
+299,Sul,Rio Grande Do Sul,Masculino,45 a 59 anos,Preta,Católica,Médio,4,4,Pouco melhor,Não votou
+300,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Preta,Evangélica,Médio,3,3,Pouco melhor,6
+301,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,"Mórmon, Adventista, Testemunha De Jeová",Médio,2,2,Pouco melhor,Não votou
+302,Nordeste,Pernambuco,Masculino,35 a 44 anos,Preta,"Espírita Kardecista, Espiritualista",Superior,4,4,Muito pior,Não votou
+303,Nordeste,Ceará,Feminino,35 a 44 anos,Parda,Evangélica,Médio,1,1,Pouco melhor,1
+304,Nordeste,Alagoas,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Pouco melhor,2
+305,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,2,2,Pouco pior,1
+306,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Branca,Não Respondeu,Médio,2,3,Pouco melhor,1
+307,Nordeste,Ceará,Feminino,35 a 44 anos,Parda,Evangélica,Fundamental,4,4,Muito pior,2
+308,Nordeste,Maranhão,Feminino,16 e 17 anos,Parda,Não Tem Religião,Médio,2,2,Pouco pior,2
+309,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Branca,Católica,Fundamental,2,1,Muito pior,2
+310,Nordeste,Piauí,Feminino,35 a 44 anos,Parda,Católica,Fundamental,3,3,Igual,1
+311,Centro-Oeste,Goiás,Masculino,45 a 59 anos,Parda,Católica,Médio,1,4,Muito melhor,1
+312,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Católica,Médio,4,4,Pouco pior,2
+313,Norte,Pará,Masculino,45 a 59 anos,Parda,Católica,Fundamental,4,4,Pouco melhor,2
+314,Norte,Pará,Feminino,25 a 34 anos,Parda,Católica,Médio,3,3,Muito pior,2
+315,Centro-Oeste,Distrito Federal,Feminino,25 a 34 anos,Branca,Católica,Superior,4,3,Muito melhor,1
+316,Nordeste,Rio Grande Do Norte,Masculino,18 a 24 anos,Parda,Não Tem Religião,Superior,3,3,Pouco pior,2
+317,Sul,Santa Catarina,Masculino,60 anos ou mais,Branca,Católica,Fundamental,3,4,Muito pior,2
+318,Centro-Oeste,Distrito Federal,Masculino,45 a 59 anos,Parda,Evangélica,Superior,1,4,Muito melhor,1
+319,Norte,Roraima,Feminino,60 anos ou mais,Preta,Evangélica,Médio,2,Não sabe,Muito pior,2
+320,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Médio,4,3,Pouco melhor,4
+321,Centro-Oeste,Goiás,Feminino,45 a 59 anos,Parda,Católica,Fundamental,1,1,Pouco melhor,2
+322,Sudeste,Rio De Janeiro,Masculino,60 anos ou mais,Parda,Católica,Fundamental,1,4,Pouco melhor,1
+323,Nordeste,Ceará,Feminino,45 a 59 anos,Parda,Católica,Médio,2,1,Pouco pior,2
+324,Norte,Roraima,Masculino,60 anos ou mais,Parda,Evangélica,Fundamental,3,3,Pouco melhor,5
+325,Nordeste,Bahia,Masculino,35 a 44 anos,Preta,Católica,Fundamental,1,3,Igual,2
+326,Nordeste,Alagoas,Feminino,60 anos ou mais,Parda,Católica,Fundamental,3,1,Pouco melhor,1
+327,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Católica,Médio,3,Não sabe,Igual,2
+328,Centro-Oeste,Mato Grosso,Feminino,45 a 59 anos,Branca,Evangélica,Médio,3,4,Pouco melhor,1
+329,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,4,2,Muito pior,2
+330,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Médio,4,2,Igual,Não votou
+331,Sul,Rio Grande Do Sul,Masculino,60 anos ou mais,Parda,Candomblé,Fundamental,4,4,Pouco pior,2
+332,Nordeste,Bahia,Masculino,18 a 24 anos,Preta,Evangélica,Médio,1,1,Muito pior,4
+333,Sul,Rio Grande Do Sul,Masculino,45 a 59 anos,Branca,Católica,Fundamental,2,1,Muito pior,Não votou
+334,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Católica,Fundamental,4,3,Pouco pior,Não votou
+335,Sudeste,São Paulo,Feminino,18 a 24 anos,Branca,Umbanda,Médio,2,2,Pouco melhor,2
+336,Sul,Rio Grande Do Sul,Masculino,18 a 24 anos,Parda,Evangélica,Superior,3,3,Igual,Não votou
+337,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Médio,2,2,Pouco melhor,1
+338,Sul,Paraná,Feminino,60 anos ou mais,Branca,Não Tem Religião,Superior,3,3,Igual,Não votou
+339,Sul,Rio Grande Do Sul,Masculino,25 a 34 anos,Branca,Católica,Superior,3,2,Pouco pior,2
+340,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Católica,Fundamental,4,3,Pouco pior,1
+341,Sul,Paraná,Feminino,60 anos ou mais,Parda,Evangélica,Fundamental,2,1,Pouco melhor,1
+342,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,2,Igual,Não votou
+343,Centro-Oeste,Goiás,Masculino,25 a 34 anos,Preta,Não Tem Religião,Superior,3,4,Pouco melhor,Não votou
+344,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,1,4,Muito pior,1
+345,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Católica,Médio,1,3,Muito melhor,1
+346,Sul,Rio Grande Do Sul,Feminino,35 a 44 anos,Branca,Católica,Superior,2,1,Pouco pior,4
+347,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Evangélica,Médio,3,3,Pouco pior,2
+348,Norte,Pará,Masculino,18 a 24 anos,Parda,Católica,Médio,1,3,Igual,2
+349,Nordeste,Pernambuco,Feminino,45 a 59 anos,Branca,Católica,Médio,1,1,Muito pior,2
+350,Nordeste,Ceará,Feminino,35 a 44 anos,Parda,Católica,Fundamental,1,1,Igual,2
+351,Centro-Oeste,Mato Grosso,Masculino,25 a 34 anos,Preta,Evangélica,Médio,4,3,Muito pior,2
+352,Nordeste,Rio Grande Do Norte,Feminino,35 a 44 anos,Parda,Católica,Médio,4,4,Pouco melhor,1
+353,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Católica,Médio,2,3,Muito pior,Não votou
+354,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Branca,Católica,Médio,2,2,Pouco melhor,1
+355,Nordeste,Alagoas,Masculino,18 a 24 anos,Parda,Umbanda,Fundamental,3,3,Pouco pior,Não votou
+356,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Católica,Superior,2,2,Igual,1
+357,Centro-Oeste,Mato Grosso,Feminino,45 a 59 anos,Preta,Evangélica,Fundamental,4,3,Muito pior,2
+358,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Médio,2,1,Muito pior,2
+359,Sul,Rio Grande Do Sul,Masculino,25 a 34 anos,Branca,Umbanda,Superior,4,3,Muito pior,2
+360,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Pouco melhor,6
+361,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Branca,Evangélica,Superior,3,3,Pouco melhor,1
+362,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Outras,Católica,Fundamental,1,Não sabe,Não sabe,Não votou
+363,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Evangélica,Fundamental,2,2,Pouco melhor,1
+364,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Preta,Católica,Fundamental,2,2,Igual,2
+365,Sul,Santa Catarina,Masculino,60 anos ou mais,Branca,Católica,Fundamental,3,3,Pouco pior,1
+366,Sudeste,Rio De Janeiro,Masculino,60 anos ou mais,Branca,Católica,Médio,1,4,Muito melhor,1
+367,Sul,Paraná,Feminino,60 anos ou mais,Branca,Católica,Médio,2,1,Muito pior,2
+368,Nordeste,Pernambuco,Masculino,35 a 44 anos,Parda,Católica,Superior,3,3,Pouco pior,2
+369,Sudeste,São Paulo,Feminino,18 a 24 anos,Preta,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,3,2,Igual,Não votou
+370,Centro-Oeste,Goiás,Masculino,25 a 34 anos,Parda,Católica,Médio,1,4,Pouco melhor,1
+371,Sul,Santa Catarina,Masculino,45 a 59 anos,Branca,Católica,Fundamental,3,2,Muito pior,2
+372,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,Católica,Médio,4,4,Pouco melhor,1
+373,Sul,Rio Grande Do Sul,Feminino,35 a 44 anos,Branca,Evangélica,Fundamental,3,2,Pouco melhor,6
+374,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Branca,Católica,Médio,3,4,Pouco melhor,1
+375,Sul,Rio Grande Do Sul,Masculino,45 a 59 anos,Branca,Católica,Superior,Não sabe,1,Muito pior,Não votou
+376,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Evangélica,Fundamental,4,4,Muito melhor,1
+377,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Médio,1,1,Igual,2
+378,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Católica,Médio,2,4,Muito melhor,1
+379,Sul,Santa Catarina,Feminino,45 a 59 anos,Branca,Católica,Médio,2,3,Pouco melhor,1
+380,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Evangélica,Médio,3,4,Muito pior,2
+381,Sul,Santa Catarina,Feminino,25 a 34 anos,Branca,Católica,Médio,2,2,Igual,Não votou
+382,Nordeste,Ceará,Masculino,35 a 44 anos,Parda,Evangélica,Médio,3,4,Igual,2
+383,Nordeste,Pernambuco,Feminino,45 a 59 anos,Parda,"Espírita Kardecista, Espiritualista",Superior,1,1,Muito pior,2
+384,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Preta,Católica,Superior,2,2,Igual,3
+385,Nordeste,Ceará,Feminino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Muito pior,2
+386,Nordeste,Pernambuco,Masculino,25 a 34 anos,Parda,Judaica,Médio,2,2,Pouco melhor,1
+387,Sul,Paraná,Masculino,18 a 24 anos,Branca,Evangélica,Médio,3,1,Muito melhor,1
+388,Nordeste,Maranhão,Feminino,35 a 44 anos,Preta,Católica,Fundamental,4,4,Muito pior,2
+389,Nordeste,Rio Grande Do Norte,Masculino,25 a 34 anos,Preta,Católica,Médio,1,1,Muito melhor,1
+390,Sul,Paraná,Feminino,60 anos ou mais,Branca,Umbanda,Fundamental,2,1,Muito pior,Não votou
+391,Norte,Amazonas,Masculino,60 anos ou mais,Parda,Católica,Fundamental,3,1,Pouco melhor,2
+392,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Católica,Médio,4,2,Pouco pior,3
+393,Sudeste,Rio De Janeiro,Feminino,35 a 44 anos,Preta,Evangélica,Médio,2,2,Pouco melhor,6
+394,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,Católica,Fundamental,3,1,Muito pior,2
+395,Sul,Santa Catarina,Masculino,18 a 24 anos,Branca,Não Tem Religião,Fundamental,4,3,Muito pior,2
+396,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Parda,Católica,Fundamental,1,3,Pouco pior,2
+397,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,3,3,Pouco pior,2
+398,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Católica,Fundamental,2,3,Pouco pior,2
+399,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Evangélica,Médio,3,1,Pouco pior,3
+400,Sul,Paraná,Feminino,35 a 44 anos,Parda,Católica,Fundamental,1,1,Pouco pior,2
+401,Sul,Santa Catarina,Masculino,60 anos ou mais,Branca,Católica,Médio,1,2,Pouco melhor,1
+402,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Evangélica,Superior,3,4,Pouco pior,Não votou
+403,Nordeste,Ceará,Masculino,45 a 59 anos,Branca,Católica,Médio,1,4,Pouco melhor,1
+404,Nordeste,Alagoas,Feminino,60 anos ou mais,Outras,Evangélica,Médio,4,2,Muito melhor,1
+405,Sul,Paraná,Masculino,60 anos ou mais,Parda,Católica,Fundamental,1,1,Pouco melhor,2
+406,Sul,Paraná,Feminino,45 a 59 anos,Parda,Católica,Fundamental,4,4,Muito pior,6
+407,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Preta,"Mórmon, Adventista, Testemunha De Jeová",Médio,3,3,Muito pior,3
+408,Sudeste,São Paulo,Masculino,60 anos ou mais,Parda,Evangélica,Fundamental,1,3,Igual,Não votou
+409,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Evangélica,Superior,3,4,Pouco melhor,1
+410,Centro-Oeste,Distrito Federal,Feminino,35 a 44 anos,Parda,Católica,Fundamental,1,1,Muito pior,1
+411,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Católica,Fundamental,1,4,Pouco melhor,1
+412,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Evangélica,Superior,1,4,Muito melhor,1
+413,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Preta,Católica,Superior,2,1,Pouco melhor,2
+414,Nordeste,Ceará,Masculino,35 a 44 anos,Parda,Católica,Médio,4,Não sabe,Muito melhor,1
+415,Norte,Amazonas,Masculino,25 a 34 anos,Preta,Católica,Superior,3,2,Muito pior,2
+416,Sudeste,São Paulo,Feminino,35 a 44 anos,Outras,Não Tem Religião,Superior,3,3,Pouco melhor,2
+417,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,Católica,Superior,3,2,Pouco melhor,2
+418,Centro-Oeste,Goiás,Masculino,25 a 34 anos,Branca,Cristão,Médio,4,4,Pouco melhor,1
+419,Centro-Oeste,Goiás,Feminino,60 anos ou mais,Parda,Umbanda,Médio,3,3,Pouco pior,6
+420,Nordeste,Rio Grande Do Norte,Feminino,35 a 44 anos,Parda,Católica,Fundamental,Não sabe,1,Igual,2
+421,Nordeste,Bahia,Masculino,25 a 34 anos,Parda,Evangélica,Fundamental,1,3,Pouco pior,2
+422,Nordeste,Piauí,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,4,1,Muito pior,1
+423,Norte,Amazonas,Masculino,35 a 44 anos,Parda,Evangélica,Fundamental,1,1,Igual,1
+424,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,4,4,Pouco melhor,1
+425,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Evangélica,Médio,1,3,Pouco pior,1
+426,Sul,Santa Catarina,Feminino,18 a 24 anos,Preta,Católica,Fundamental,4,1,Pouco pior,Não votou
+427,Centro-Oeste,Distrito Federal,Feminino,16 e 17 anos,Preta,Católica,Médio,3,1,Pouco melhor,2
+428,Sudeste,Rio De Janeiro,Masculino,60 anos ou mais,Preta,Umbanda,Superior,4,1,Muito pior,2
+429,Nordeste,Alagoas,Masculino,35 a 44 anos,Parda,Católica,Médio,4,3,Pouco melhor,1
+430,Nordeste,Pernambuco,Feminino,25 a 34 anos,Preta,Católica,Superior,3,3,Muito pior,2
+431,Sul,Paraná,Feminino,35 a 44 anos,Parda,Católica,Fundamental,2,3,Igual,1
+432,Sul,Rio Grande Do Sul,Masculino,35 a 44 anos,Branca,Católica,Fundamental,3,1,Pouco pior,1
+433,Nordeste,Ceará,Masculino,45 a 59 anos,Branca,Católica,Fundamental,4,3,Muito pior,2
+434,Sudeste,Minas Gerais,Masculino,18 a 24 anos,Parda,Católica,Médio,2,1,Pouco pior,2
+435,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Parda,Evangélica,Fundamental,3,2,Pouco melhor,1
+436,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Médio,2,3,Muito melhor,1
+437,Norte,Amapá,Masculino,45 a 59 anos,Branca,Católica,Fundamental,3,4,Pouco melhor,1
+438,Norte,Acre,Feminino,18 a 24 anos,Parda,Evangélica,Médio,3,3,Muito melhor,1
+439,Sudeste,Rio De Janeiro,Feminino,45 a 59 anos,Parda,Católica,Fundamental,4,3,Pouco pior,2
+440,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Evangélica,Superior,1,4,Igual,1
+441,Sul,Santa Catarina,Feminino,45 a 59 anos,Branca,Católica,Fundamental,3,4,Muito pior,2
+442,Centro-Oeste,Distrito Federal,Feminino,35 a 44 anos,Preta,Católica,Fundamental,2,3,Muito pior,Não votou
+443,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Católica,Médio,1,1,Pouco melhor,Não votou
+444,Nordeste,Bahia,Feminino,18 a 24 anos,Parda,Evangélica,Superior,3,3,Muito pior,2
+445,Sudeste,Rio De Janeiro,Masculino,60 anos ou mais,Parda,Católica,Fundamental,1,1,Muito pior,2
+446,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Parda,Católica,Superior,3,2,Muito melhor,1
+447,Nordeste,Maranhão,Feminino,18 a 24 anos,Parda,Não Tem Religião,Médio,4,1,Muito pior,2
+448,Norte,Pará,Feminino,35 a 44 anos,Preta,Católica,Médio,2,1,Igual,2
+449,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Branca,Católica,Médio,3,2,Muito pior,2
+450,Centro-Oeste,Mato Grosso Do Sul,Feminino,60 anos ou mais,Branca,Católica,Médio,3,3,Pouco melhor,1
+451,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,Evangélica,Fundamental,3,3,Pouco pior,1
+452,Sul,Paraná,Masculino,60 anos ou mais,Branca,Católica,Fundamental,2,3,Igual,1
+453,Sul,Paraná,Masculino,25 a 34 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,2,2,Pouco pior,2
+454,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Acredita em Deus,Superior,2,3,Pouco pior,1
+455,Nordeste,Pernambuco,Masculino,35 a 44 anos,Parda,Não Tem Religião,Superior,4,3,Muito pior,Não votou
+456,Sudeste,São Paulo,Feminino,25 a 34 anos,Preta,Evangélica,Médio,3,3,Pouco pior,2
+457,Sul,Paraná,Masculino,35 a 44 anos,Parda,Cristão,Superior,2,1,Muito pior,2
+458,Nordeste,Ceará,Feminino,60 anos ou mais,Branca,Católica,Médio,4,1,Muito pior,2
+459,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,Não Tem Religião,Médio,3,3,Pouco pior,4
+460,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Evangélica,Médio,1,4,Pouco melhor,1
+461,Norte,Acre,Masculino,18 a 24 anos,Parda,Evangélica,Superior,3,1,Pouco melhor,1
+462,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Branca,Católica,Médio,1,3,Muito pior,2
+463,Sudeste,Espírito Santo,Masculino,18 a 24 anos,Parda,Católica,Médio,3,3,Pouco melhor,1
+464,Nordeste,Pernambuco,Feminino,25 a 34 anos,Branca,Católica,Médio,2,2,Igual,2
+465,Nordeste,Ceará,Feminino,18 a 24 anos,Outras,Evangélica,Médio,3,2,Igual,2
+466,Centro-Oeste,Distrito Federal,Masculino,35 a 44 anos,Outras,Evangélica,Superior,2,4,Pouco melhor,1
+467,Sul,Santa Catarina,Masculino,35 a 44 anos,Preta,"Espírita Kardecista, Espiritualista",Superior,4,3,Muito pior,2
+468,Centro-Oeste,Mato Grosso Do Sul,Masculino,60 anos ou mais,Parda,Evangélica,Fundamental,2,1,Muito melhor,1
+469,Nordeste,Rio Grande Do Norte,Masculino,18 a 24 anos,Preta,Evangélica,Médio,2,3,Pouco pior,Não votou
+470,Centro-Oeste,Goiás,Feminino,18 a 24 anos,Preta,Cristão,Superior,3,3,Muito melhor,2
+471,Centro-Oeste,Goiás,Feminino,35 a 44 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,3,2,Igual,2
+472,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Não Tem Religião,Médio,3,3,Pouco pior,2
+473,Sul,Santa Catarina,Masculino,60 anos ou mais,Branca,Católica,Fundamental,4,1,Muito pior,2
+474,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,Católica,Médio,3,4,Muito pior,2
+475,Sudeste,Minas Gerais,Masculino,18 a 24 anos,Preta,Católica,Superior,4,3,Muito pior,2
+476,Nordeste,Ceará,Feminino,18 a 24 anos,Parda,Evangélica,Médio,2,2,Pouco melhor,1
+477,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Branca,Evangélica,Médio,3,3,Pouco melhor,1
+478,Nordeste,Rio Grande Do Norte,Masculino,18 a 24 anos,Branca,Católica,Superior,3,3,Muito pior,2
+479,Sul,Santa Catarina,Feminino,25 a 34 anos,Preta,Evangélica,Fundamental,3,3,Muito pior,1
+480,Nordeste,Rio Grande Do Norte,Masculino,18 a 24 anos,Branca,Católica,Superior,4,3,Não sabe,2
+481,Sul,Paraná,Feminino,18 a 24 anos,Parda,Evangélica,Superior,3,3,Pouco melhor,1
+482,Nordeste,Ceará,Masculino,25 a 34 anos,Parda,Católica,Superior,3,1,Muito pior,2
+483,Sul,Paraná,Masculino,45 a 59 anos,Branca,Evangélica,Fundamental,3,1,Igual,1
+484,Nordeste,Paraíba,Masculino,18 a 24 anos,Parda,"Mórmon, Adventista, Testemunha De Jeová",Médio,3,1,Pouco melhor,Não votou
+485,Sul,Santa Catarina,Feminino,60 anos ou mais,Branca,Evangélica,Fundamental,Não sabe,Não sabe,Pouco melhor,Não votou
+486,Sudeste,São Paulo,Masculino,35 a 44 anos,Preta,Evangélica,Superior,1,3,Muito melhor,1
+487,Sul,Santa Catarina,Feminino,25 a 34 anos,Parda,Evangélica,Médio,3,2,Pouco melhor,1
+488,Nordeste,Piauí,Feminino,18 a 24 anos,Outras,Católica,Médio,3,4,Não sabe,2
+489,Nordeste,Piauí,Masculino,60 anos ou mais,Parda,Católica,Fundamental,3,3,Pouco melhor,1
+490,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,Católica,Médio,4,1,Igual,1
+491,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Superior,3,2,Igual,2
+492,Norte,Tocantins,Feminino,25 a 34 anos,Parda,Evangélica,Médio,4,2,Pouco melhor,Não votou
+493,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Católica,Médio,4,4,Muito pior,3
+494,Nordeste,Piauí,Feminino,25 a 34 anos,Preta,Católica,Fundamental,1,3,Muito melhor,2
+495,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,1,1,Igual,2
+496,Nordeste,Rio Grande Do Norte,Feminino,35 a 44 anos,Parda,Católica,Médio,3,1,Muito pior,2
+497,Sul,Santa Catarina,Feminino,45 a 59 anos,Branca,Católica,Superior,2,1,Pouco pior,Não votou
+498,Sudeste,São Paulo,Feminino,25 a 34 anos,Outras,Evangélica,Médio,3,3,Muito pior,1
+499,Nordeste,Sergipe,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Pouco melhor,1
+500,Sul,Paraná,Feminino,25 a 34 anos,Parda,Católica,Superior,3,3,Pouco melhor,1
+501,Norte,Roraima,Feminino,45 a 59 anos,Parda,Evangélica,Médio,4,4,Pouco pior,1
+502,Sul,Paraná,Masculino,60 anos ou mais,Parda,Não Tem Religião,Médio,3,1,Pouco melhor,4
+503,Nordeste,Alagoas,Feminino,45 a 59 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,4,3,Muito pior,2
+504,Nordeste,Alagoas,Feminino,18 a 24 anos,Parda,Não Tem Religião,Superior,1,3,Muito melhor,1
+505,Sul,Santa Catarina,Masculino,35 a 44 anos,Parda,Católica,Superior,2,2,Pouco melhor,Não votou
+506,Sul,Santa Catarina,Masculino,60 anos ou mais,Branca,Evangélica,Fundamental,Não sabe,2,Muito pior,2
+507,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Não Tem Religião,Fundamental,1,1,Pouco pior,2
+508,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Parda,Não Tem Religião,Médio,2,2,Igual,3
+509,Sul,Santa Catarina,Feminino,45 a 59 anos,Preta,Católica,Fundamental,4,3,Igual,Não votou
+510,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Não Tem Religião,Superior,2,2,Muito pior,1
+511,Nordeste,Bahia,Masculino,45 a 59 anos,Branca,Candomblé,Médio,1,1,Muito melhor,Não votou
+512,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Católica,Superior,4,3,Muito pior,2
+513,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Fundamental,4,4,Igual,Não votou
+514,Sul,Paraná,Feminino,18 a 24 anos,Parda,Evangélica,Fundamental,3,1,Pouco pior,2
+515,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Evangélica,Médio,1,3,Pouco pior,Não votou
+516,Nordeste,Alagoas,Masculino,45 a 59 anos,Parda,Evangélica,Médio,4,3,Muito melhor,1
+517,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Branca,Católica,Fundamental,3,3,Muito pior,2
+518,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Evangélica,Médio,4,3,Pouco melhor,6
+519,Sul,Rio Grande Do Sul,Masculino,35 a 44 anos,Preta,Umbanda,Médio,4,1,Igual,2
+520,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Médio,3,2,Igual,3
+521,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,Católica,Fundamental,4,3,Pouco pior,5
+522,Norte,Tocantins,Feminino,25 a 34 anos,Branca,Católica,Médio,3,3,Igual,Não votou
+523,Centro-Oeste,Mato Grosso,Masculino,18 a 24 anos,Parda,Evangélica,Médio,3,2,Igual,1
+524,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Católica,Fundamental,1,1,Igual,2
+525,Nordeste,Ceará,Feminino,18 a 24 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,3,2,Muito pior,2
+526,Norte,Amazonas,Feminino,25 a 34 anos,Preta,Evangélica,Médio,4,4,Igual,1
+527,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Parda,Católica,Fundamental,3,2,Pouco melhor,2
+528,Sul,Paraná,Feminino,18 a 24 anos,Parda,Católica,Médio,3,3,Muito pior,6
+529,Nordeste,Maranhão,Feminino,35 a 44 anos,Outras,Católica,Superior,3,1,Muito pior,2
+530,Sudeste,Rio De Janeiro,Feminino,25 a 34 anos,Preta,Evangélica,Médio,3,3,Pouco melhor,1
+531,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Não Tem Religião,Superior,4,2,Pouco pior,Não votou
+532,Nordeste,Ceará,Masculino,18 a 24 anos,Parda,Evangélica,Médio,3,3,Pouco melhor,2
+533,Sul,Santa Catarina,Feminino,25 a 34 anos,Parda,Evangélica,Médio,4,4,Muito pior,Não votou
+534,Sul,Rio Grande Do Sul,Masculino,35 a 44 anos,Branca,Evangélica,Superior,3,2,Igual,Não votou
+535,Nordeste,Alagoas,Feminino,45 a 59 anos,Parda,Católica,Médio,1,2,Muito melhor,1
+536,Sul,Rio Grande Do Sul,Masculino,60 anos ou mais,Branca,Católica,Fundamental,2,4,Muito melhor,1
+537,Sul,Santa Catarina,Feminino,45 a 59 anos,Branca,Evangélica,Fundamental,3,2,Pouco pior,1
+538,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Umbanda,Fundamental,3,4,Muito pior,Não votou
+539,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,Católica,Médio,1,3,Pouco melhor,6
+540,Norte,Pará,Masculino,35 a 44 anos,Preta,Católica,Fundamental,4,Não sabe,Muito pior,4
+541,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Evangélica,Médio,3,2,Muito melhor,Não votou
+542,Norte,Amazonas,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,1,1,Pouco pior,1
+543,Nordeste,Piauí,Feminino,18 a 24 anos,Parda,Evangélica,Médio,3,3,Pouco pior,Não votou
+544,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Católica,Médio,4,4,Muito pior,Não votou
+545,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Evangélica,Fundamental,1,4,Muito melhor,1
+546,Sul,Santa Catarina,Feminino,60 anos ou mais,Parda,Evangélica,Fundamental,2,2,Pouco melhor,2
+547,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Branca,Católica,Superior,1,3,Pouco melhor,1
+548,Nordeste,Maranhão,Masculino,35 a 44 anos,Parda,Evangélica,Superior,1,4,Muito melhor,1
+549,Nordeste,Bahia,Feminino,35 a 44 anos,Branca,Católica,Fundamental,1,1,Muito pior,2
+550,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,Católica,Médio,2,3,Pouco melhor,2
+551,Nordeste,Rio Grande Do Norte,Feminino,18 a 24 anos,Parda,Evangélica,Fundamental,1,4,Muito pior,2
+552,Centro-Oeste,Mato Grosso Do Sul,Feminino,35 a 44 anos,Parda,Católica,Superior,4,4,Pouco melhor,1
+553,Nordeste,Sergipe,Feminino,18 a 24 anos,Preta,Católica,Médio,3,3,Pouco melhor,2
+554,Nordeste,Ceará,Feminino,60 anos ou mais,Preta,Católica,Fundamental,1,4,Muito pior,2
+555,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Médio,4,4,Igual,1
+556,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,3,4,Muito melhor,1
+557,Nordeste,Maranhão,Masculino,35 a 44 anos,Parda,Evangélica,Superior,2,2,Igual,Não votou
+558,Nordeste,Pernambuco,Masculino,18 a 24 anos,Branca,Católica,Fundamental,4,4,Pouco pior,Não votou
+559,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Médio,4,4,Muito pior,3
+560,Centro-Oeste,Mato Grosso Do Sul,Masculino,35 a 44 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,2,3,Pouco melhor,1
+561,Nordeste,Piauí,Feminino,45 a 59 anos,Parda,Católica,Superior,1,4,Pouco pior,2
+562,Nordeste,Ceará,Feminino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Pouco melhor,1
+563,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Católica,Médio,3,3,Igual,2
+564,Sudeste,Rio De Janeiro,Masculino,60 anos ou mais,Branca,Evangélica,Médio,3,2,Muito pior,2
+565,Nordeste,Piauí,Feminino,35 a 44 anos,Parda,Evangélica,Fundamental,3,3,Igual,1
+566,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Fundamental,4,4,Pouco pior,2
+567,Sudeste,Rio De Janeiro,Masculino,60 anos ou mais,Parda,Católica,Fundamental,1,1,Igual,2
+568,Nordeste,Paraíba,Masculino,45 a 59 anos,Branca,Católica,Fundamental,1,1,Muito melhor,1
+569,Norte,Amazonas,Masculino,18 a 24 anos,Parda,Evangélica,Médio,1,1,Pouco melhor,1
+570,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,4,1,Pouco pior,2
+571,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Evangélica,Médio,1,4,Pouco melhor,2
+572,Nordeste,Ceará,Masculino,25 a 34 anos,Parda,Evangélica,Fundamental,4,4,Pouco pior,2
+573,Sul,Paraná,Masculino,60 anos ou mais,Branca,Evangélica,Fundamental,3,3,Pouco melhor,1
+574,Norte,Pará,Masculino,25 a 34 anos,Parda,Evangélica,Superior,3,2,Igual,2
+575,Sul,Paraná,Masculino,18 a 24 anos,Parda,Católica,Fundamental,3,1,Pouco melhor,1
+576,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Branca,Evangélica,Superior,4,4,Pouco melhor,1
+577,Sul,Paraná,Masculino,45 a 59 anos,Branca,Católica,Médio,1,4,Muito melhor,1
+578,Nordeste,Bahia,Feminino,18 a 24 anos,Branca,Não Tem Religião,Fundamental,2,2,Muito pior,Não votou
+579,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Umbanda,Médio,1,1,Pouco pior,2
+580,Sudeste,Rio De Janeiro,Masculino,60 anos ou mais,Parda,Católica,Superior,1,4,Pouco pior,2
+581,Nordeste,Maranhão,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,3,3,Igual,2
+582,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Fundamental,4,4,Pouco melhor,Não votou
+583,Norte,Pará,Masculino,18 a 24 anos,Parda,Católica,Médio,3,3,Igual,Não votou
+584,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Branca,Católica,Fundamental,1,3,Muito melhor,1
+585,Sul,Paraná,Feminino,45 a 59 anos,Parda,Evangélica,Superior,3,3,Muito melhor,1
+586,Sul,Rio Grande Do Sul,Feminino,35 a 44 anos,Branca,Católica,Superior,1,1,Igual,2
+587,Nordeste,Maranhão,Feminino,35 a 44 anos,Parda,Evangélica,Médio,1,2,Muito melhor,Não votou
+588,Norte,Pará,Masculino,45 a 59 anos,Parda,Católica,Fundamental,2,1,Igual,Não votou
+589,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Preta,Evangélica,Médio,3,3,Pouco pior,1
+590,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,Católica,Superior,4,4,Pouco melhor,1
+591,Nordeste,Maranhão,Masculino,45 a 59 anos,Branca,Católica,Médio,1,3,Muito melhor,1
+592,Centro-Oeste,Goiás,Feminino,35 a 44 anos,Outras,Católica,Médio,4,1,Muito pior,2
+593,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Não Tem Religião,Médio,3,2,Muito pior,2
+594,Sul,Santa Catarina,Masculino,35 a 44 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,4,4,Muito pior,2
+595,Norte,Amazonas,Masculino,35 a 44 anos,Parda,Católica,Médio,1,3,Pouco melhor,1
+596,Norte,Pará,Masculino,35 a 44 anos,Parda,Não Tem Religião,Médio,1,4,Muito melhor,1
+597,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Evangélica,Fundamental,1,3,Muito melhor,1
+598,Nordeste,Maranhão,Feminino,25 a 34 anos,Preta,Católica,Fundamental,1,1,Muito pior,Não votou
+599,Nordeste,Ceará,Masculino,45 a 59 anos,Parda,Católica,Médio,4,1,Pouco pior,2
+600,Centro-Oeste,Goiás,Feminino,45 a 59 anos,Parda,Católica,Médio,3,1,Muito pior,2
+601,Nordeste,Ceará,Masculino,25 a 34 anos,Preta,Católica,Fundamental,1,3,Muito pior,2
+602,Centro-Oeste,Distrito Federal,Masculino,60 anos ou mais,Parda,Católica,Médio,3,4,Pouco pior,1
+603,Sul,Paraná,Masculino,60 anos ou mais,Branca,Não Tem Religião,Médio,3,4,Igual,1
+604,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Branca,Católica,Fundamental,1,1,Pouco melhor,2
+605,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Branca,Católica,Médio,2,4,Muito melhor,1
+606,Sudeste,Minas Gerais,Masculino,18 a 24 anos,Branca,Católica,Médio,2,2,Muito melhor,1
+607,Nordeste,Maranhão,Feminino,35 a 44 anos,Preta,Católica,Fundamental,2,4,Muito pior,Não votou
+608,Sul,Santa Catarina,Masculino,45 a 59 anos,Branca,Evangélica,Superior,1,3,Muito melhor,1
+609,Nordeste,Paraíba,Feminino,45 a 59 anos,Branca,Evangélica,Fundamental,3,3,Pouco pior,1
+610,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Não Tem Religião,Médio,3,3,Pouco pior,2
+611,Nordeste,Paraíba,Masculino,25 a 34 anos,Preta,Evangélica,Médio,4,4,Muito pior,Não votou
+612,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Preta,Católica,Fundamental,1,4,Muito pior,Não votou
+613,Sudeste,São Paulo,Masculino,60 anos ou mais,Parda,Católica,Fundamental,1,4,Muito melhor,1
+614,Sul,Paraná,Masculino,45 a 59 anos,Branca,Católica,Médio,2,2,Muito pior,3
+615,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Branca,Católica,Superior,4,3,Muito pior,2
+616,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,Não Tem Religião,Médio,1,3,Igual,2
+617,Sul,Santa Catarina,Feminino,35 a 44 anos,Branca,Católica,Superior,3,3,Muito pior,2
+618,Sudeste,São Paulo,Masculino,25 a 34 anos,Preta,Evangélica,Médio,4,4,Muito melhor,1
+619,Nordeste,Maranhão,Masculino,18 a 24 anos,Preta,Evangélica,Médio,1,1,Pouco melhor,2
+620,Nordeste,Maranhão,Feminino,60 anos ou mais,Preta,Católica,Fundamental,1,3,Igual,2
+621,Nordeste,Piauí,Feminino,35 a 44 anos,Parda,Católica,Médio,4,3,Muito pior,2
+622,Nordeste,Maranhão,Masculino,45 a 59 anos,Branca,Evangélica,Médio,4,2,Pouco melhor,1
+623,Sul,Santa Catarina,Feminino,60 anos ou mais,Branca,Evangélica,Fundamental,1,2,Pouco melhor,1
+624,Sudeste,São Paulo,Feminino,60 anos ou mais,Parda,Católica,Fundamental,3,3,Não sabe,Não votou
+625,Sul,Paraná,Feminino,25 a 34 anos,Branca,Católica,Médio,2,4,Muito pior,2
+626,Centro-Oeste,Goiás,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,3,3,Igual,2
+627,Norte,Roraima,Masculino,25 a 34 anos,Parda,Evangélica,Fundamental,3,3,Muito melhor,1
+628,Nordeste,Alagoas,Masculino,60 anos ou mais,Branca,Católica,Médio,2,3,Pouco melhor,1
+629,Nordeste,Ceará,Feminino,25 a 34 anos,Branca,Católica,Superior,2,2,Pouco pior,2
+630,Sul,Paraná,Feminino,18 a 24 anos,Branca,Umbanda,Médio,3,2,Pouco pior,1
+631,Nordeste,Rio Grande Do Norte,Feminino,45 a 59 anos,Branca,Evangélica,Médio,3,3,Pouco melhor,1
+632,Nordeste,Pernambuco,Feminino,35 a 44 anos,Preta,Umbanda,Superior,3,3,Pouco pior,2
+633,Sul,Santa Catarina,Masculino,35 a 44 anos,Parda,Evangélica,Fundamental,2,2,Pouco pior,2
+634,Nordeste,Pernambuco,Feminino,35 a 44 anos,Branca,Evangélica,Fundamental,3,3,Pouco pior,2
+635,Nordeste,Pernambuco,Masculino,35 a 44 anos,Branca,Católica,Superior,3,3,Pouco pior,2
+636,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Evangélica,Fundamental,1,1,Muito melhor,1
+637,Nordeste,Paraíba,Feminino,25 a 34 anos,Parda,Evangélica,Fundamental,4,3,Muito pior,2
+638,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Pouco pior,2
+639,Sul,Paraná,Feminino,25 a 34 anos,Branca,Católica,Médio,3,3,Pouco melhor,1
+640,Nordeste,Bahia,Masculino,35 a 44 anos,Preta,Católica,Superior,2,2,Muito pior,4
+641,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Católica,Superior,3,3,Pouco melhor,2
+642,Sul,Paraná,Feminino,25 a 34 anos,Outras,Umbanda,Médio,2,3,Pouco pior,Não votou
+643,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,3,3,Pouco melhor,1
+644,Nordeste,Ceará,Masculino,60 anos ou mais,Preta,Católica,Fundamental,2,1,Pouco melhor,2
+645,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Fundamental,3,3,Pouco melhor,2
+646,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Fundamental,4,4,Muito pior,2
+647,Norte,Pará,Feminino,25 a 34 anos,Parda,Católica,Médio,3,2,Pouco pior,2
+648,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Fundamental,2,1,Pouco melhor,2
+649,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Superior,2,3,Muito melhor,1
+650,Centro-Oeste,Distrito Federal,Feminino,35 a 44 anos,Preta,Católica,Superior,2,2,Não sabe,3
+651,Centro-Oeste,Mato Grosso Do Sul,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Muito pior,2
+652,Norte,Amazonas,Feminino,25 a 34 anos,Parda,Evangélica,Superior,3,3,Igual,Não votou
+653,Nordeste,Alagoas,Feminino,60 anos ou mais,Branca,Católica,Fundamental,1,3,Muito melhor,1
+654,Nordeste,Piauí,Masculino,25 a 34 anos,Parda,Evangélica,Fundamental,4,3,Pouco melhor,Não votou
+655,Nordeste,Maranhão,Feminino,60 anos ou mais,Outras,Católica,Fundamental,3,1,Pouco pior,1
+656,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,Católica,Superior,3,2,Pouco melhor,1
+657,Sudeste,Rio De Janeiro,Feminino,35 a 44 anos,Preta,Evangélica,Fundamental,1,4,Muito pior,Não votou
+658,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,Não Tem Religião,Médio,3,3,Igual,2
+659,Nordeste,Pernambuco,Feminino,16 e 17 anos,Branca,Não Tem Religião,Médio,2,2,Pouco pior,2
+660,Sul,Rio Grande Do Sul,Feminino,25 a 34 anos,Branca,Católica,Médio,3,1,Pouco melhor,1
+661,Centro-Oeste,Goiás,Feminino,35 a 44 anos,Outras,Evangélica,Médio,4,3,Muito pior,Não votou
+662,Centro-Oeste,Goiás,Feminino,45 a 59 anos,Parda,"Espírita Kardecista, Espiritualista",Superior,3,2,Muito pior,2
+663,Nordeste,Maranhão,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,1,3,Muito melhor,2
+664,Nordeste,Rio Grande Do Norte,Feminino,60 anos ou mais,Branca,Evangélica,Fundamental,2,3,Muito pior,Não votou
+665,Sul,Rio Grande Do Sul,Feminino,18 a 24 anos,Preta,Não Tem Religião,Fundamental,2,2,Pouco pior,2
+666,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Evangélica,Médio,2,2,Muito melhor,1
+667,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Parda,Católica,Fundamental,1,1,Muito pior,2
+668,Nordeste,Ceará,Masculino,25 a 34 anos,Parda,Evangélica,Superior,3,3,Pouco melhor,1
+669,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Outras,Evangélica,Médio,3,2,Pouco melhor,1
+670,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Não Tem Religião,Superior,2,3,Não sabe,2
+671,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Católica,Superior,2,2,Pouco melhor,1
+672,Sul,Rio Grande Do Sul,Masculino,25 a 34 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,4,2,Pouco melhor,2
+673,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Católica,Superior,3,2,Pouco pior,2
+674,Sudeste,Rio De Janeiro,Feminino,18 a 24 anos,Parda,Não Tem Religião,Médio,1,1,Pouco melhor,1
+675,Norte,Pará,Feminino,18 a 24 anos,Parda,Evangélica,Médio,4,4,Muito melhor,1
+676,Nordeste,Maranhão,Feminino,35 a 44 anos,Preta,Não Tem Religião,Médio,2,3,Pouco pior,2
+677,Norte,Amapá,Masculino,35 a 44 anos,Preta,Católica,Médio,4,1,Pouco pior,3
+678,Sul,Rio Grande Do Sul,Feminino,45 a 59 anos,Branca,Católica,Médio,2,2,Pouco melhor,1
+679,Nordeste,Piauí,Masculino,45 a 59 anos,Preta,Católica,Fundamental,1,1,Muito pior,2
+680,Norte,Amazonas,Masculino,60 anos ou mais,Parda,Católica,Médio,4,1,Igual,2
+681,Nordeste,Ceará,Feminino,60 anos ou mais,Preta,Católica,Fundamental,3,4,Pouco melhor,2
+682,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Católica,Médio,1,1,Pouco pior,2
+683,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Branca,Católica,Fundamental,4,3,Muito pior,1
+684,Sul,Paraná,Masculino,60 anos ou mais,Branca,Não Tem Religião,Médio,3,1,Pouco pior,2
+685,Centro-Oeste,Goiás,Masculino,45 a 59 anos,Parda,"Espírita Kardecista, Espiritualista",Superior,2,3,Muito melhor,1
+686,Nordeste,Alagoas,Masculino,35 a 44 anos,Branca,Católica,Médio,4,2,Muito pior,2
+687,Nordeste,Alagoas,Feminino,25 a 34 anos,Preta,Católica,Superior,3,3,Muito pior,3
+688,Nordeste,Pernambuco,Masculino,18 a 24 anos,Branca,Católica,Médio,2,3,Pouco melhor,1
+689,Sul,Santa Catarina,Masculino,45 a 59 anos,Branca,Católica,Fundamental,4,1,Muito pior,2
+690,Nordeste,Pernambuco,Feminino,35 a 44 anos,Parda,Evangélica,Fundamental,4,1,Muito pior,2
+691,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Evangélica,Médio,2,2,Muito pior,2
+692,Centro-Oeste,Distrito Federal,Feminino,60 anos ou mais,Preta,Evangélica,Fundamental,2,3,Muito pior,2
+693,Sul,Santa Catarina,Masculino,35 a 44 anos,Parda,Católica,Fundamental,4,4,Muito melhor,1
+694,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Evangélica,Médio,2,3,Muito melhor,1
+695,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Católica,Superior,Não sabe,3,Pouco melhor,1
+696,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Não Tem Religião,Superior,4,4,Muito pior,Não votou
+697,Norte,Amazonas,Masculino,35 a 44 anos,Parda,Católica,Médio,1,1,Pouco melhor,2
+698,Sudeste,Rio De Janeiro,Masculino,60 anos ou mais,Parda,Evangélica,Médio,3,3,Muito pior,2
+699,Sudeste,São Paulo,Feminino,18 a 24 anos,Branca,Católica,Superior,2,2,Pouco pior,1
+700,Sudeste,São Paulo,Feminino,25 a 34 anos,Preta,"Mórmon, Adventista, Testemunha De Jeová",Médio,4,4,Muito pior,4
+701,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Branca,Evangélica,Superior,4,1,Pouco melhor,2
+702,Nordeste,Piauí,Feminino,25 a 34 anos,Parda,Católica,Superior,3,1,Pouco pior,2
+703,Sul,Santa Catarina,Feminino,45 a 59 anos,Parda,Católica,Fundamental,4,2,Muito pior,2
+704,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Parda,Católica,Superior,2,4,Muito melhor,1
+705,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Evangélica,Médio,3,1,Igual,Não votou
+706,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Parda,Católica,Fundamental,4,2,Igual,3
+707,Sudeste,Rio De Janeiro,Masculino,18 a 24 anos,Branca,Evangélica,Médio,3,3,Pouco melhor,1
+708,Nordeste,Alagoas,Feminino,25 a 34 anos,Branca,Católica,Médio,3,3,Pouco pior,1
+709,Norte,Acre,Masculino,25 a 34 anos,Preta,Evangélica,Médio,1,4,Pouco melhor,1
+710,Sudeste,São Paulo,Masculino,60 anos ou mais,Parda,Católica,Médio,4,3,Igual,1
+711,Nordeste,Ceará,Feminino,60 anos ou mais,Branca,Não Tem Religião,Médio,1,2,Pouco pior,1
+712,Nordeste,Alagoas,Feminino,60 anos ou mais,Branca,Católica,Fundamental,1,1,Igual,2
+713,Nordeste,Pernambuco,Feminino,35 a 44 anos,Outras,Candomblé,Superior,3,4,Muito pior,2
+714,Sul,Paraná,Masculino,35 a 44 anos,Preta,Evangélica,Superior,3,4,Pouco melhor,1
+715,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,"Espírita Kardecista, Espiritualista",Superior,2,4,Muito melhor,1
+716,Nordeste,Bahia,Feminino,60 anos ou mais,Parda,Evangélica,Fundamental,1,3,Muito pior,Não votou
+717,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Católica,Médio,1,1,Pouco melhor,2
+718,Sul,Paraná,Masculino,45 a 59 anos,Branca,Evangélica,Médio,3,1,Igual,2
+719,Sudeste,Rio De Janeiro,Feminino,35 a 44 anos,Branca,Evangélica,Médio,3,3,Igual,1
+720,Nordeste,Piauí,Masculino,35 a 44 anos,Preta,Católica,Fundamental,3,3,Pouco pior,3
+721,Norte,Pará,Feminino,25 a 34 anos,Parda,Evangélica,Fundamental,4,4,Igual,2
+722,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,3,3,Pouco melhor,2
+723,Nordeste,Paraíba,Feminino,45 a 59 anos,Parda,Evangélica,Médio,3,3,Muito melhor,1
+724,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Católica,Superior,3,3,Igual,2
+725,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Parda,Evangélica,Fundamental,3,1,Pouco melhor,6
+726,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Preta,Católica,Fundamental,Não sabe,1,Igual,2
+727,Sul,Paraná,Feminino,60 anos ou mais,Branca,Católica,Superior,2,4,Pouco melhor,1
+728,Nordeste,Rio Grande Do Norte,Feminino,45 a 59 anos,Branca,Católica,Fundamental,3,4,Muito pior,2
+729,Nordeste,Bahia,Feminino,35 a 44 anos,Parda,Católica,Médio,Não sabe,1,Igual,2
+730,Nordeste,Pernambuco,Masculino,35 a 44 anos,Branca,Católica,Superior,3,2,Muito pior,2
+731,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Evangélica,Médio,4,3,Pouco pior,6
+732,Sudeste,São Paulo,Masculino,18 a 24 anos,Outras,Evangélica,Médio,4,4,Muito melhor,1
+733,Nordeste,Bahia,Feminino,25 a 34 anos,Parda,Não Tem Religião,Médio,4,4,Muito pior,Não votou
+734,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,1,Pouco melhor,2
+735,Nordeste,Alagoas,Masculino,25 a 34 anos,Preta,Não Tem Religião,Médio,1,4,Pouco melhor,1
+736,Sudeste,Rio De Janeiro,Masculino,16 e 17 anos,Branca,"Espírita Kardecista, Espiritualista",Médio,1,3,Muito pior,2
+737,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Não Tem Religião,Fundamental,3,3,Muito pior,2
+738,Nordeste,Maranhão,Feminino,60 anos ou mais,Parda,Evangélica,Fundamental,1,3,Pouco melhor,6
+739,Sul,Santa Catarina,Masculino,45 a 59 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,3,4,Igual,Não votou
+740,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Evangélica,Superior,4,4,Igual,1
+741,Norte,Acre,Masculino,60 anos ou mais,Parda,Católica,Fundamental,4,4,Não sabe,1
+742,Sul,Santa Catarina,Feminino,60 anos ou mais,Branca,Católica,Fundamental,2,Não sabe,Muito pior,Não votou
+743,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Branca,Católica,Médio,1,2,Igual,2
+744,Nordeste,Pernambuco,Masculino,35 a 44 anos,Parda,Católica,Superior,1,1,Igual,2
+745,Norte,Pará,Feminino,25 a 34 anos,Parda,Católica,Fundamental,2,1,Muito pior,Não votou
+746,Sudeste,São Paulo,Masculino,25 a 34 anos,Preta,Não Tem Religião,Médio,3,3,Pouco pior,2
+747,Nordeste,Ceará,Feminino,25 a 34 anos,Parda,Católica,Médio,2,2,Muito pior,2
+748,Sul,Santa Catarina,Masculino,45 a 59 anos,Branca,Católica,Superior,1,3,Pouco melhor,1
+749,Nordeste,Rio Grande Do Norte,Masculino,35 a 44 anos,Preta,Evangélica,Fundamental,2,4,Muito melhor,1
+750,Sul,Santa Catarina,Masculino,25 a 34 anos,Branca,Católica,Fundamental,3,3,Pouco pior,Não votou
+751,Nordeste,Alagoas,Masculino,25 a 34 anos,Parda,Católica,Médio,3,1,Muito pior,2
+752,Norte,Pará,Feminino,60 anos ou mais,Parda,Católica,Fundamental,1,1,Muito melhor,1
+753,Sul,Santa Catarina,Feminino,35 a 44 anos,Branca,Evangélica,Médio,3,2,Muito melhor,1
+754,Sul,Paraná,Masculino,18 a 24 anos,Branca,Não Tem Religião,Superior,2,2,Pouco melhor,2
+755,Nordeste,Piauí,Feminino,25 a 34 anos,Preta,Católica,Fundamental,1,3,Pouco melhor,2
+756,Nordeste,Alagoas,Masculino,25 a 34 anos,Branca,Não Tem Religião,Fundamental,3,3,Muito pior,2
+757,Sudeste,Rio De Janeiro,Feminino,18 a 24 anos,Preta,Evangélica,Médio,4,4,Não sabe,1
+758,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Branca,Evangélica,Médio,3,3,Muito pior,2
+759,Nordeste,Rio Grande Do Norte,Masculino,45 a 59 anos,Outras,Evangélica,Fundamental,1,1,Pouco melhor,2
+760,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Parda,Evangélica,Médio,3,2,Pouco melhor,1
+761,Sul,Santa Catarina,Feminino,60 anos ou mais,Branca,Evangélica,Médio,3,2,Pouco pior,1
+762,Sudeste,Rio De Janeiro,Masculino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Pouco pior,Não votou
+763,Nordeste,Alagoas,Feminino,25 a 34 anos,Parda,Católica,Fundamental,3,1,Pouco pior,2
+764,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Médio,3,4,Pouco melhor,1
+765,Sul,Paraná,Masculino,16 e 17 anos,Parda,Não Tem Religião,Médio,3,3,Igual,2
+766,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Não Tem Religião,Médio,3,3,Pouco melhor,4
+767,Nordeste,Pernambuco,Feminino,18 a 24 anos,Parda,Católica,Médio,1,1,Muito melhor,2
+768,Sudeste,Rio De Janeiro,Masculino,25 a 34 anos,Preta,Não Tem Religião,Superior,3,3,Pouco pior,Não votou
+769,Sul,Paraná,Feminino,35 a 44 anos,Parda,Evangélica,Médio,2,3,Pouco melhor,Não votou
+770,Sudeste,São Paulo,Masculino,25 a 34 anos,Preta,Católica,Fundamental,2,3,Pouco melhor,1
+771,Nordeste,Pernambuco,Feminino,45 a 59 anos,Parda,Evangélica,Médio,3,3,Pouco melhor,1
+772,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Católica,Superior,4,3,Pouco pior,2
+773,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Evangélica,Superior,2,3,Pouco melhor,1
+774,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Católica,Fundamental,1,1,Igual,2
+775,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Branca,Evangélica,Fundamental,1,4,Pouco melhor,1
+776,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Branca,Católica,Superior,3,3,Pouco melhor,1
+777,Sudeste,Rio De Janeiro,Feminino,45 a 59 anos,Preta,Evangélica,Fundamental,1,2,Muito pior,1
+778,Nordeste,Maranhão,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,1,3,Muito pior,2
+779,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Evangélica,Médio,2,2,Não sabe,Não votou
+780,Sudeste,São Paulo,Feminino,60 anos ou mais,Preta,"Espírita Kardecista, Espiritualista",Fundamental,3,1,Muito melhor,1
+781,Centro-Oeste,Goiás,Feminino,35 a 44 anos,Branca,Evangélica,Médio,1,4,Muito melhor,1
+782,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Parda,Não Tem Religião,Fundamental,3,3,Pouco melhor,1
+783,Sul,Paraná,Feminino,18 a 24 anos,Branca,Católica,Fundamental,1,1,Pouco pior,2
+784,Norte,Tocantins,Feminino,45 a 59 anos,Preta,Católica,Médio,3,1,Muito pior,2
+785,Sul,Santa Catarina,Feminino,35 a 44 anos,Preta,Católica,Fundamental,4,3,Muito pior,2
+786,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,Não Tem Religião,Médio,3,3,Muito pior,Não votou
+787,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,"Espírita Kardecista, Espiritualista",Superior,2,2,Muito pior,2
+788,Nordeste,Alagoas,Feminino,35 a 44 anos,Parda,Umbanda,Médio,3,1,Pouco pior,1
+789,Norte,Pará,Feminino,35 a 44 anos,Parda,Católica,Médio,3,1,Pouco melhor,2
+790,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Parda,Evangélica,Superior,2,3,Muito melhor,1
+791,Sudeste,Rio De Janeiro,Masculino,35 a 44 anos,Parda,Evangélica,Superior,1,2,Muito melhor,1
+792,Sudeste,São Paulo,Masculino,60 anos ou mais,Parda,Católica,Fundamental,1,3,Igual,2
+793,Nordeste,Piauí,Masculino,18 a 24 anos,Parda,Católica,Médio,3,2,Pouco melhor,3
+794,Centro-Oeste,Goiás,Feminino,35 a 44 anos,Branca,Católica,Superior,4,3,Muito melhor,1
+795,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Parda,Católica,Fundamental,1,1,Pouco pior,2
+796,Nordeste,Bahia,Masculino,25 a 34 anos,Branca,Católica,Médio,2,4,Pouco pior,2
+797,Nordeste,Alagoas,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,4,Muito melhor,1
+798,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Branca,Católica,Fundamental,2,4,Muito melhor,1
+799,Sudeste,São Paulo,Masculino,60 anos ou mais,Parda,Não Tem Religião,Fundamental,3,4,Não sabe,6
+800,Nordeste,Maranhão,Masculino,60 anos ou mais,Branca,Evangélica,Fundamental,1,2,Muito melhor,1
+801,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Branca,Católica,Médio,1,2,Pouco melhor,Não votou
+802,Nordeste,Piauí,Feminino,18 a 24 anos,Parda,Católica,Médio,1,1,Pouco pior,2
+803,Sul,Paraná,Masculino,25 a 34 anos,Parda,Católica,Médio,2,3,Muito melhor,1
+804,Nordeste,Maranhão,Masculino,35 a 44 anos,Parda,Católica,Médio,3,1,Pouco pior,2
+805,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Evangélica,Médio,1,3,Muito melhor,1
+806,Centro-Oeste,Mato Grosso,Feminino,18 a 24 anos,Parda,Não Respondeu,Médio,1,1,Não sabe,6
+807,Centro-Oeste,Mato Grosso Do Sul,Feminino,35 a 44 anos,Preta,Evangélica,Médio,4,1,Igual,Não votou
+808,Nordeste,Bahia,Masculino,60 anos ou mais,Branca,Não Tem Religião,Fundamental,2,3,Pouco pior,2
+809,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Preta,Católica,Fundamental,3,2,Muito pior,2
+810,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,Não Tem Religião,Fundamental,3,4,Igual,1
+811,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Católica,Fundamental,3,3,Muito pior,Não votou
+812,Norte,Tocantins,Masculino,35 a 44 anos,Parda,Não Tem Religião,Superior,3,3,Pouco melhor,2
+813,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Preta,Evangélica,Médio,3,3,Pouco pior,2
+814,Nordeste,Bahia,Masculino,18 a 24 anos,Preta,Não Tem Religião,Fundamental,4,4,Muito pior,3
+815,Sul,Rio Grande Do Sul,Feminino,45 a 59 anos,Branca,Não Tem Religião,Superior,4,1,Muito pior,2
+816,Sudeste,São Paulo,Masculino,25 a 34 anos,Preta,Evangélica,Médio,4,3,Igual,Não votou
+817,Nordeste,Bahia,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Muito melhor,1
+818,Nordeste,Paraíba,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,3,3,Igual,Não votou
+819,Norte,Tocantins,Feminino,45 a 59 anos,Outras,Evangélica,Fundamental,4,1,Muito melhor,Não votou
+820,Nordeste,Alagoas,Feminino,45 a 59 anos,Outras,Evangélica,Fundamental,4,1,Muito melhor,2
+821,Nordeste,Ceará,Masculino,60 anos ou mais,Outras,Evangélica,Fundamental,3,3,Muito pior,1
+822,Nordeste,Maranhão,Masculino,25 a 34 anos,Parda,Católica,Médio,2,1,Muito melhor,1
+823,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,3,2,Igual,Não votou
+824,Sul,Santa Catarina,Feminino,45 a 59 anos,Parda,Católica,Fundamental,1,1,Muito pior,2
+825,Sudeste,São Paulo,Masculino,25 a 34 anos,Preta,Evangélica,Superior,2,1,Pouco melhor,1
+826,Sudeste,Rio De Janeiro,Masculino,18 a 24 anos,Preta,Evangélica,Superior,1,3,Muito melhor,Não votou
+827,Norte,Pará,Feminino,25 a 34 anos,Parda,Católica,Médio,3,3,Pouco pior,2
+828,Nordeste,Bahia,Feminino,25 a 34 anos,Preta,Evangélica,Fundamental,2,3,Pouco pior,2
+829,Nordeste,Ceará,Masculino,35 a 44 anos,Parda,Católica,Fundamental,1,3,Muito pior,2
+830,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Evangélica,Médio,2,2,Igual,1
+831,Norte,Amazonas,Masculino,35 a 44 anos,Parda,Católica,Médio,1,1,Muito pior,2
+832,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Parda,Católica,Médio,3,3,Pouco pior,1
+833,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,3,2,Pouco pior,2
+834,Centro-Oeste,Mato Grosso Do Sul,Feminino,45 a 59 anos,Branca,Católica,Fundamental,3,3,Pouco melhor,Não votou
+835,Nordeste,Maranhão,Feminino,45 a 59 anos,Branca,Evangélica,Superior,3,3,Pouco melhor,4
+836,Centro-Oeste,Goiás,Masculino,45 a 59 anos,Parda,Católica,Médio,2,2,Pouco pior,1
+837,Sudeste,Espírito Santo,Masculino,45 a 59 anos,Branca,Católica,Superior,3,3,Pouco melhor,1
+838,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,Católica,Médio,2,2,Muito melhor,1
+839,Centro-Oeste,Mato Grosso Do Sul,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,3,3,Pouco pior,4
+840,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Católica,Médio,2,3,Igual,Não votou
+841,Nordeste,Bahia,Feminino,45 a 59 anos,Preta,Católica,Médio,3,2,Muito pior,2
+842,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Evangélica,Superior,2,2,Muito pior,2
+843,Norte,Pará,Masculino,25 a 34 anos,Parda,Evangélica,Médio,3,3,Pouco pior,Não votou
+844,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Igual,4
+845,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Evangélica,Médio,2,3,Pouco melhor,1
+846,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Médio,2,3,Pouco melhor,1
+847,Sul,Paraná,Masculino,18 a 24 anos,Parda,Evangélica,Médio,2,2,Muito melhor,1
+848,Sul,Santa Catarina,Masculino,60 anos ou mais,Branca,Católica,Médio,1,4,Muito melhor,1
+849,Sudeste,Espírito Santo,Feminino,18 a 24 anos,Branca,Evangélica,Superior,3,4,Pouco melhor,1
+850,Sul,Santa Catarina,Masculino,25 a 34 anos,Parda,Católica,Médio,2,2,Pouco pior,Não votou
+851,Centro-Oeste,Goiás,Masculino,45 a 59 anos,Parda,Católica,Superior,2,3,Muito melhor,1
+852,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Não Tem Religião,Médio,3,2,Pouco pior,Não votou
+853,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Parda,Não Tem Religião,Fundamental,3,3,Muito melhor,Não votou
+854,Sul,Rio Grande Do Sul,Feminino,45 a 59 anos,Preta,Evangélica,Fundamental,3,3,Muito melhor,1
+855,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Evangélica,Médio,1,3,Pouco melhor,1
+856,Nordeste,Ceará,Feminino,18 a 24 anos,Parda,Católica,Médio,3,4,Muito pior,Não votou
+857,Sul,Santa Catarina,Masculino,45 a 59 anos,Branca,Católica,Superior,2,2,Não sabe,1
+858,Nordeste,Rio Grande Do Norte,Masculino,35 a 44 anos,Parda,Católica,Fundamental,3,3,Igual,2
+859,Centro-Oeste,Goiás,Masculino,45 a 59 anos,Branca,Católica,Fundamental,1,3,Muito melhor,1
+860,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Parda,Católica,Fundamental,4,3,Pouco melhor,2
+861,Norte,Amapá,Feminino,25 a 34 anos,Parda,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,2,Não sabe,Pouco melhor,1
+862,Sudeste,São Paulo,Masculino,60 anos ou mais,Preta,Umbanda,Superior,1,1,Igual,2
+863,Nordeste,Alagoas,Masculino,25 a 34 anos,Preta,Evangélica,Fundamental,3,1,Pouco melhor,3
+864,Sul,Paraná,Feminino,35 a 44 anos,Branca,Católica,Fundamental,3,3,Muito pior,Não votou
+865,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Não Tem Religião,Médio,2,1,Igual,2
+866,Nordeste,Maranhão,Feminino,18 a 24 anos,Parda,Católica,Médio,3,1,Igual,2
+867,Nordeste,Pernambuco,Masculino,35 a 44 anos,Parda,Católica,Médio,1,4,Pouco melhor,1
+868,Nordeste,Bahia,Masculino,25 a 34 anos,Preta,Não Tem Religião,Médio,4,4,Muito pior,6
+869,Sul,Santa Catarina,Feminino,35 a 44 anos,Branca,Não Tem Religião,Médio,3,1,Pouco melhor,1
+870,Sudeste,Rio De Janeiro,Feminino,25 a 34 anos,Preta,Católica,Superior,3,3,Igual,2
+871,Sudeste,Rio De Janeiro,Feminino,18 a 24 anos,Parda,Não Tem Religião,Superior,3,1,Muito melhor,1
+872,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Católica,Médio,3,1,Muito pior,1
+873,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Superior,2,2,Igual,2
+874,Norte,Tocantins,Feminino,35 a 44 anos,Branca,Não Tem Religião,Superior,1,2,Muito pior,2
+875,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Evangélica,Médio,1,4,Muito melhor,1
+876,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Católica,Fundamental,3,3,Pouco melhor,Não votou
+877,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Não Tem Religião,Médio,3,3,Pouco melhor,Não votou
+878,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Branca,Católica,Superior,3,1,Muito pior,2
+879,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Parda,Católica,Médio,3,3,Muito melhor,1
+880,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Parda,Católica,Médio,4,4,Muito pior,Não votou
+881,Sudeste,São Paulo,Feminino,60 anos ou mais,Preta,Católica,Fundamental,3,3,Pouco pior,2
+882,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Não Tem Religião,Fundamental,1,1,Muito melhor,1
+883,Sul,Rio Grande Do Sul,Feminino,35 a 44 anos,Preta,Católica,Médio,3,4,Muito pior,6
+884,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Católica,Médio,4,2,Igual,1
+885,Nordeste,Piauí,Masculino,60 anos ou mais,Outras,Não Tem Religião,Fundamental,4,3,Muito pior,2
+886,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Evangélica,Superior,4,2,Pouco pior,6
+887,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Católica,Médio,4,3,Pouco pior,2
+888,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,Evangélica,Superior,2,1,Não respondeu,5
+889,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Branca,Católica,Médio,2,1,Pouco melhor,1
+890,Sudeste,São Paulo,Feminino,18 a 24 anos,Preta,Evangélica,Fundamental,3,3,Igual,2
+891,Centro-Oeste,Distrito Federal,Feminino,60 anos ou mais,Parda,Evangélica,Superior,2,2,Pouco pior,2
+892,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Católica,Fundamental,3,2,Muito melhor,Não votou
+893,Nordeste,Bahia,Feminino,18 a 24 anos,Parda,Católica,Fundamental,2,2,Pouco pior,Não votou
+894,Centro-Oeste,Distrito Federal,Masculino,25 a 34 anos,Parda,Evangélica,Fundamental,4,3,Pouco pior,2
+895,Nordeste,Paraíba,Feminino,60 anos ou mais,Branca,Evangélica,Médio,2,2,Pouco melhor,1
+896,Nordeste,Ceará,Masculino,18 a 24 anos,Parda,Evangélica,Médio,3,2,Igual,1
+897,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Outras,Católica,Fundamental,2,3,Muito pior,2
+898,Nordeste,Piauí,Feminino,35 a 44 anos,Parda,Católica,Médio,4,4,Pouco melhor,1
+899,Nordeste,Pernambuco,Feminino,45 a 59 anos,Branca,Evangélica,Médio,4,4,Muito pior,2
+900,Sul,Paraná,Feminino,35 a 44 anos,Preta,Católica,Médio,3,3,Pouco melhor,2
+901,Nordeste,Alagoas,Feminino,18 a 24 anos,Branca,Católica,Superior,3,2,Pouco pior,2
+902,Centro-Oeste,Mato Grosso,Masculino,18 a 24 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,4,3,Muito pior,2
+903,Norte,Pará,Feminino,45 a 59 anos,Parda,Católica,Fundamental,1,3,Muito pior,2
+904,Norte,Pará,Feminino,45 a 59 anos,Parda,Católica,Médio,Não sabe,4,Pouco melhor,1
+905,Centro-Oeste,Goiás,Feminino,25 a 34 anos,Branca,Católica,Superior,1,Não sabe,Igual,1
+906,Nordeste,Bahia,Masculino,60 anos ou mais,Preta,Católica,Fundamental,1,2,Muito pior,Não votou
+907,Nordeste,Rio Grande Do Norte,Feminino,18 a 24 anos,Parda,Católica,Superior,2,3,Pouco pior,2
+908,Nordeste,Piauí,Masculino,45 a 59 anos,Outras,Católica,Fundamental,3,1,Pouco melhor,2
+909,Nordeste,Bahia,Masculino,35 a 44 anos,Parda,Católica,Fundamental,3,1,Pouco melhor,2
+910,Norte,Roraima,Masculino,35 a 44 anos,Preta,Evangélica,Fundamental,3,3,Não sabe,2
+911,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Preta,Católica,Médio,3,3,Pouco pior,2
+912,Sudeste,São Paulo,Feminino,60 anos ou mais,Parda,Evangélica,Fundamental,3,2,Muito melhor,1
+913,Norte,Amapá,Masculino,35 a 44 anos,Branca,Católica,Médio,3,2,Muito pior,1
+914,Nordeste,Ceará,Masculino,25 a 34 anos,Parda,Não Tem Religião,Médio,3,1,Muito pior,2
+915,Nordeste,Ceará,Feminino,60 anos ou mais,Preta,Evangélica,Fundamental,1,1,Muito melhor,2
+916,Sudeste,Rio De Janeiro,Feminino,35 a 44 anos,Branca,Evangélica,Superior,1,1,Pouco melhor,1
+917,Nordeste,Alagoas,Masculino,35 a 44 anos,Preta,Católica,Médio,1,4,Muito melhor,1
+918,Norte,Amazonas,Feminino,25 a 34 anos,Parda,Evangélica,Fundamental,3,2,Pouco melhor,1
+919,Sul,Paraná,Masculino,25 a 34 anos,Branca,Católica,Médio,3,2,Pouco melhor,1
+920,Sul,Paraná,Feminino,25 a 34 anos,Parda,Evangélica,Fundamental,2,2,Igual,1
+921,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Evangélica,Superior,4,2,Igual,3
+922,Centro-Oeste,Goiás,Masculino,35 a 44 anos,Outras,Evangélica,Médio,3,3,Pouco melhor,Não votou
+923,Centro-Oeste,Mato Grosso,Masculino,45 a 59 anos,Branca,Evangélica,Superior,1,3,Muito melhor,Não votou
+924,Sul,Rio Grande Do Sul,Feminino,35 a 44 anos,Branca,Evangélica,Superior,2,2,Pouco pior,2
+925,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Católica,Superior,2,3,Pouco pior,6
+926,Nordeste,Bahia,Feminino,25 a 34 anos,Preta,Não Tem Religião,Médio,4,4,Pouco pior,2
+927,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Evangélica,Médio,4,2,Pouco melhor,4
+928,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Evangélica,Fundamental,3,2,Muito pior,2
+929,Sul,Paraná,Masculino,60 anos ou mais,Branca,Católica,Fundamental,1,4,Muito melhor,1
+930,Nordeste,Rio Grande Do Norte,Masculino,25 a 34 anos,Outras,Católica,Superior,3,3,Pouco pior,2
+931,Nordeste,Rio Grande Do Norte,Feminino,18 a 24 anos,Parda,Evangélica,Médio,3,3,Pouco melhor,1
+932,Nordeste,Piauí,Feminino,60 anos ou mais,Branca,Católica,Fundamental,3,4,Pouco pior,2
+933,Sul,Rio Grande Do Sul,Masculino,18 a 24 anos,Parda,Cristão,Médio,3,2,Pouco melhor,1
+934,Norte,Amapá,Feminino,60 anos ou mais,Branca,Não Tem Religião,Fundamental,4,4,Muito pior,2
+935,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Evangélica,Superior,4,3,Pouco pior,2
+936,Norte,Amapá,Masculino,16 e 17 anos,Parda,Católica,Médio,2,2,Pouco pior,1
+937,Nordeste,Piauí,Masculino,35 a 44 anos,Parda,Católica,Superior,1,3,Pouco melhor,1
+938,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Evangélica,Superior,4,2,Pouco pior,2
+939,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Parda,Católica,Médio,3,4,Pouco melhor,1
+940,Nordeste,Paraíba,Masculino,45 a 59 anos,Parda,Católica,Superior,4,3,Pouco pior,Não votou
+941,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Católica,Superior,4,4,Pouco melhor,1
+942,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Branca,Católica,Médio,3,3,Pouco pior,2
+943,Sudeste,São Paulo,Masculino,18 a 24 anos,Preta,Evangélica,Médio,4,4,Muito pior,3
+944,Norte,Amazonas,Masculino,60 anos ou mais,Parda,Católica,Fundamental,3,4,Pouco melhor,1
+945,Sudeste,São Paulo,Feminino,45 a 59 anos,Preta,Católica,Médio,3,3,Muito pior,3
+946,Norte,Amazonas,Feminino,35 a 44 anos,Parda,Evangélica,Médio,2,3,Muito melhor,1
+947,Nordeste,Ceará,Feminino,60 anos ou mais,Parda,Católica,Fundamental,3,4,Muito pior,2
+948,Nordeste,Rio Grande Do Norte,Feminino,45 a 59 anos,Parda,Católica,Médio,2,2,Muito pior,2
+949,Nordeste,Piauí,Feminino,45 a 59 anos,Parda,Católica,Médio,3,3,Pouco melhor,1
+950,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Outras,"Espírita Kardecista, Espiritualista",Fundamental,3,3,Muito melhor,Não votou
+951,Centro-Oeste,Mato Grosso,Masculino,45 a 59 anos,Parda,Católica,Médio,3,3,Muito pior,2
+952,Sudeste,São Paulo,Masculino,60 anos ou mais,Parda,Católica,Fundamental,3,3,Muito pior,2
+953,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Fundamental,3,1,Muito pior,2
+954,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Não Tem Religião,Médio,3,3,Muito pior,2
+955,Nordeste,Piauí,Feminino,45 a 59 anos,Outras,"Espírita Kardecista, Espiritualista",Superior,1,3,Muito melhor,Não votou
+956,Nordeste,Bahia,Feminino,45 a 59 anos,Parda,Não Tem Religião,Médio,4,2,Muito pior,2
+957,Nordeste,Ceará,Feminino,45 a 59 anos,Parda,Católica,Fundamental,1,4,Igual,2
+958,Norte,Acre,Feminino,25 a 34 anos,Parda,Não Sabe,Superior,3,3,Muito pior,5
+959,Sudeste,Rio De Janeiro,Masculino,25 a 34 anos,Parda,Católica,Médio,1,1,Muito melhor,1
+960,Sudeste,São Paulo,Feminino,60 anos ou mais,Parda,Católica,Fundamental,2,4,Igual,Não votou
+961,Nordeste,Paraíba,Feminino,35 a 44 anos,Preta,Evangélica,Fundamental,1,3,Pouco melhor,2
+962,Sul,Santa Catarina,Feminino,35 a 44 anos,Parda,Não Tem Religião,Fundamental,3,3,Muito pior,2
+963,Centro-Oeste,Distrito Federal,Feminino,45 a 59 anos,Branca,Evangélica,Fundamental,3,3,Igual,Não votou
+964,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Fundamental,3,3,Pouco pior,1
+965,Nordeste,Alagoas,Masculino,60 anos ou mais,Parda,"Espírita Kardecista, Espiritualista",Fundamental,3,3,Igual,Não votou
+966,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Evangélica,Superior,1,3,Muito melhor,1
+967,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Parda,Evangélica,Fundamental,1,1,Igual,1
+968,Sul,Santa Catarina,Feminino,60 anos ou mais,Branca,Católica,Superior,2,4,Pouco melhor,1
+969,Nordeste,Piauí,Masculino,45 a 59 anos,Outras,Evangélica,Fundamental,1,2,Pouco pior,2
+970,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Católica,Fundamental,3,3,Pouco melhor,2
+971,Nordeste,Pernambuco,Masculino,25 a 34 anos,Preta,Não Tem Religião,Médio,4,4,Muito pior,2
+972,Norte,Rondônia,Masculino,35 a 44 anos,Parda,Evangélica,Médio,1,4,Muito melhor,1
+973,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Católica,Superior,1,4,Pouco melhor,1
+974,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Parda,Católica,Superior,2,1,Pouco melhor,1
+975,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,3,3,Pouco melhor,1
+976,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,"Espírita Kardecista, Espiritualista",Fundamental,3,3,Pouco melhor,1
+977,Sul,Rio Grande Do Sul,Feminino,18 a 24 anos,Preta,Católica,Médio,1,2,Igual,2
+978,Nordeste,Maranhão,Masculino,35 a 44 anos,Branca,Católica,Fundamental,2,2,Igual,2
+979,Nordeste,Bahia,Feminino,25 a 34 anos,Parda,Católica,Superior,1,1,Muito pior,2
+980,Nordeste,Ceará,Feminino,45 a 59 anos,Preta,Evangélica,Fundamental,3,3,Pouco melhor,2
+981,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Preta,Evangélica,Fundamental,4,4,Pouco pior,2
+982,Nordeste,Rio Grande Do Norte,Masculino,45 a 59 anos,Branca,Católica,Fundamental,3,3,Igual,1
+983,Sul,Paraná,Masculino,35 a 44 anos,Branca,Católica,Médio,2,4,Pouco melhor,1
+984,Sul,Santa Catarina,Masculino,45 a 59 anos,Parda,Católica,Superior,3,1,Pouco pior,2
+985,Nordeste,Piauí,Masculino,60 anos ou mais,Branca,Católica,Médio,3,4,Muito pior,2
+986,Norte,Pará,Masculino,60 anos ou mais,Parda,Católica,Fundamental,2,2,Pouco pior,2
+987,Nordeste,Maranhão,Masculino,25 a 34 anos,Parda,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,3,2,Pouco pior,3
+988,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Parda,Católica,Superior,3,2,Igual,2
+989,Sul,Rio Grande Do Sul,Feminino,45 a 59 anos,Branca,Católica,Médio,1,1,Muito pior,2
+990,Sudeste,Rio De Janeiro,Masculino,25 a 34 anos,Parda,Não Tem Religião,Médio,3,2,Muito pior,2
+991,Nordeste,Alagoas,Feminino,45 a 59 anos,Outras,Católica,Fundamental,1,4,Muito pior,2
+992,Centro-Oeste,Goiás,Feminino,45 a 59 anos,Preta,Não Tem Religião,Fundamental,4,3,Muito pior,1
+993,Norte,Pará,Masculino,35 a 44 anos,Parda,Católica,Médio,4,3,Igual,2
+994,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Superior,1,1,Pouco melhor,1
+995,Centro-Oeste,Goiás,Masculino,18 a 24 anos,Parda,Evangélica,Médio,1,2,Não sabe,Não votou
+996,Centro-Oeste,Goiás,Masculino,45 a 59 anos,Branca,Católica,Superior,3,1,Igual,2
+997,Nordeste,Ceará,Feminino,25 a 34 anos,Parda,Católica,Superior,2,2,Pouco pior,2
+998,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Preta,Não Tem Religião,Médio,4,3,Pouco pior,2
+999,Sul,Santa Catarina,Masculino,35 a 44 anos,Parda,Católica,Superior,4,1,Muito pior,2
+1000,Nordeste,Paraíba,Feminino,60 anos ou mais,Branca,Evangélica,Médio,3,1,Pouco melhor,1
+1001,Nordeste,Maranhão,Masculino,45 a 59 anos,Parda,Católica,Médio,1,1,Muito pior,2
+1002,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Evangélica,Médio,1,4,Muito melhor,1
+1003,Centro-Oeste,Distrito Federal,Feminino,60 anos ou mais,Parda,Evangélica,Superior,3,1,Muito pior,2
+1004,Sul,Santa Catarina,Feminino,35 a 44 anos,Parda,Evangélica,Fundamental,3,3,Muito pior,Não votou
+1005,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Católica,Médio,4,4,Igual,1
+1006,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Preta,Não Tem Religião,Médio,1,4,Pouco melhor,2
+1007,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Evangélica,Fundamental,4,4,Pouco melhor,4
+1008,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Evangélica,Superior,2,3,Muito melhor,1
+1009,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Pouco pior,2
+1010,Norte,Amazonas,Feminino,45 a 59 anos,Parda,Católica,Médio,3,3,Pouco pior,2
+1011,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Preta,Católica,Fundamental,2,1,Muito pior,1
+1012,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,"Espírita Kardecista, Espiritualista",Médio,2,4,Pouco melhor,1
+1013,Centro-Oeste,Goiás,Masculino,35 a 44 anos,Parda,Católica,Superior,1,1,Muito pior,2
+1014,Sudeste,São Paulo,Feminino,60 anos ou mais,Outras,Católica,Fundamental,3,3,Muito pior,2
+1015,Nordeste,Paraíba,Feminino,45 a 59 anos,Branca,Evangélica,Médio,Não sabe,4,Muito pior,6
+1016,Nordeste,Piauí,Feminino,45 a 59 anos,Preta,Evangélica,Médio,3,3,Muito pior,2
+1017,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Evangélica,Médio,2,3,Pouco melhor,1
+1018,Sudeste,Minas Gerais,Masculino,18 a 24 anos,Branca,Não Tem Religião,Médio,3,3,Muito pior,2
+1019,Nordeste,Alagoas,Masculino,60 anos ou mais,Preta,Católica,Médio,2,3,Muito melhor,1
+1020,Norte,Amazonas,Feminino,60 anos ou mais,Outras,Evangélica,Fundamental,1,1,Muito melhor,1
+1021,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Evangélica,Fundamental,1,1,Igual,1
+1022,Nordeste,Paraíba,Feminino,35 a 44 anos,Preta,Evangélica,Médio,3,3,Pouco pior,1
+1023,Centro-Oeste,Distrito Federal,Masculino,60 anos ou mais,Parda,Evangélica,Médio,2,2,Igual,1
+1024,Nordeste,Pernambuco,Masculino,35 a 44 anos,Preta,Católica,Superior,2,3,Muito melhor,1
+1025,Sudeste,Rio De Janeiro,Masculino,25 a 34 anos,Preta,Evangélica,Médio,2,2,Pouco melhor,1
+1026,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Católica,Fundamental,2,3,Pouco melhor,1
+1027,Norte,Acre,Feminino,60 anos ou mais,Parda,Budista,Fundamental,Não sabe,4,Muito melhor,1
+1028,Nordeste,Alagoas,Masculino,35 a 44 anos,Parda,Católica,Médio,2,3,Muito pior,2
+1029,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Parda,Católica,Médio,3,3,Pouco pior,2
+1030,Sul,Rio Grande Do Sul,Feminino,35 a 44 anos,Branca,Não Tem Religião,Superior,3,3,Muito pior,2
+1031,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Branca,Católica,Médio,3,1,Pouco pior,1
+1032,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,"Espírita Kardecista, Espiritualista",Médio,2,4,Igual,1
+1033,Sudeste,Espírito Santo,Feminino,60 anos ou mais,Branca,"Espírita Kardecista, Espiritualista",Superior,1,4,Pouco pior,1
+1034,Sul,Santa Catarina,Feminino,25 a 34 anos,Preta,Evangélica,Fundamental,1,3,Muito pior,2
+1035,Sul,Santa Catarina,Feminino,45 a 59 anos,Parda,Evangélica,Médio,2,2,Muito pior,2
+1036,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Evangélica,Superior,1,3,Pouco melhor,1
+1037,Nordeste,Alagoas,Feminino,35 a 44 anos,Branca,Evangélica,Médio,4,4,Muito melhor,1
+1038,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Católica,Fundamental,4,4,Muito pior,Não votou
+1039,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Preta,Católica,Médio,4,3,Muito pior,2
+1040,Nordeste,Paraíba,Feminino,60 anos ou mais,Branca,Católica,Fundamental,1,1,Igual,2
+1041,Sul,Santa Catarina,Masculino,35 a 44 anos,Parda,"Espírita Kardecista, Espiritualista",Fundamental,1,3,Muito melhor,1
+1042,Nordeste,Maranhão,Masculino,18 a 24 anos,Branca,Evangélica,Superior,2,2,Pouco melhor,1
+1043,Norte,Pará,Feminino,18 a 24 anos,Preta,Católica,Médio,4,3,Pouco pior,2
+1044,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Evangélica,Médio,3,4,Muito melhor,Não votou
+1045,Sudeste,São Paulo,Feminino,18 a 24 anos,Branca,Católica,Médio,3,2,Pouco pior,2
+1046,Centro-Oeste,Mato Grosso,Feminino,35 a 44 anos,Preta,Católica,Superior,2,3,Muito pior,2
+1047,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,Católica,Fundamental,1,2,Igual,1
+1048,Sudeste,São Paulo,Masculino,18 a 24 anos,Preta,Evangélica,Médio,4,3,Muito pior,3
+1049,Nordeste,Bahia,Feminino,45 a 59 anos,Preta,Não Tem Religião,Fundamental,3,1,Pouco pior,Não votou
+1050,Sudeste,São Paulo,Feminino,45 a 59 anos,Preta,Católica,Fundamental,3,3,Pouco pior,2
+1051,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,Católica,Fundamental,1,2,Igual,2
+1052,Centro-Oeste,Distrito Federal,Feminino,60 anos ou mais,Branca,Católica,Fundamental,3,4,Muito pior,2
+1053,Norte,Pará,Feminino,45 a 59 anos,Preta,Católica,Fundamental,3,3,Pouco pior,Não votou
+1054,Nordeste,Alagoas,Masculino,35 a 44 anos,Parda,Católica,Fundamental,1,1,Muito melhor,2
+1055,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Não sabe,1
+1056,Nordeste,Piauí,Feminino,60 anos ou mais,Preta,"Espírita Kardecista, Espiritualista",Fundamental,1,1,Igual,2
+1057,Nordeste,Piauí,Feminino,45 a 59 anos,Branca,Católica,Médio,1,1,Muito melhor,1
+1058,Sudeste,São Paulo,Feminino,18 a 24 anos,Branca,Evangélica,Médio,3,3,Muito pior,1
+1059,Centro-Oeste,Mato Grosso,Feminino,35 a 44 anos,Preta,Católica,Fundamental,2,2,Muito pior,Não votou
+1060,Sul,Paraná,Feminino,45 a 59 anos,Branca,Católica,Superior,2,1,Pouco melhor,2
+1061,Nordeste,Bahia,Masculino,45 a 59 anos,Preta,Católica,Fundamental,3,3,Igual,2
+1062,Sudeste,Rio De Janeiro,Masculino,25 a 34 anos,Parda,Católica,Médio,1,2,Muito melhor,1
+1063,Centro-Oeste,Distrito Federal,Masculino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Igual,1
+1064,Sul,Paraná,Feminino,18 a 24 anos,Branca,Católica,Médio,2,2,Pouco melhor,1
+1065,Sul,Rio Grande Do Sul,Masculino,60 anos ou mais,Branca,Católica,Fundamental,3,3,Pouco pior,2
+1066,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Católica,Médio,3,3,Muito pior,6
+1067,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Parda,Católica,Superior,3,3,Muito melhor,1
+1068,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Parda,Evangélica,Médio,2,3,Pouco melhor,1
+1069,Sudeste,São Paulo,Masculino,25 a 34 anos,Preta,Evangélica,Superior,1,2,Igual,Não votou
+1070,Sudeste,São Paulo,Feminino,45 a 59 anos,Preta,Católica,Médio,4,2,Pouco melhor,1
+1071,Nordeste,Alagoas,Feminino,35 a 44 anos,Parda,Católica,Médio,2,3,Muito pior,2
+1072,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Fundamental,3,4,Pouco melhor,1
+1073,Sudeste,São Paulo,Feminino,35 a 44 anos,Preta,Católica,Médio,4,4,Pouco pior,2
+1074,Centro-Oeste,Mato Grosso Do Sul,Masculino,45 a 59 anos,Parda,Evangélica,Superior,2,2,Igual,4
+1075,Centro-Oeste,Goiás,Feminino,25 a 34 anos,Branca,"Espírita Kardecista, Espiritualista",Médio,4,1,Muito pior,2
+1076,Sudeste,São Paulo,Feminino,18 a 24 anos,Branca,Não Tem Religião,Médio,2,4,Igual,1
+1077,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Não Tem Religião,Médio,3,3,Muito melhor,1
+1078,Norte,Roraima,Masculino,35 a 44 anos,Parda,Evangélica,Médio,1,3,Igual,2
+1079,Sul,Paraná,Feminino,45 a 59 anos,Branca,Católica,Superior,1,2,Muito melhor,1
+1080,Sudeste,São Paulo,Masculino,35 a 44 anos,Preta,Umbanda,Médio,1,1,Igual,2
+1081,Sudeste,São Paulo,Feminino,60 anos ou mais,Parda,Católica,Fundamental,2,2,Muito pior,Não votou
+1082,Centro-Oeste,Mato Grosso,Masculino,45 a 59 anos,Parda,Católica,Fundamental,1,3,Igual,1
+1083,Nordeste,Bahia,Masculino,18 a 24 anos,Branca,Não Tem Religião,Fundamental,1,2,Pouco pior,2
+1084,Centro-Oeste,Mato Grosso Do Sul,Masculino,60 anos ou mais,Parda,Não Tem Religião,Médio,3,2,Pouco melhor,1
+1085,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,Católica,Médio,2,3,Pouco melhor,2
+1086,Sudeste,Rio De Janeiro,Feminino,18 a 24 anos,Parda,Evangélica,Médio,4,3,Pouco pior,2
+1087,Nordeste,Alagoas,Masculino,60 anos ou mais,Preta,Católica,Médio,3,3,Pouco pior,2
+1088,Centro-Oeste,Goiás,Feminino,25 a 34 anos,Preta,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,2,2,Pouco pior,2
+1089,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Branca,Evangélica,Fundamental,3,3,Pouco melhor,1
+1090,Nordeste,Alagoas,Masculino,25 a 34 anos,Branca,Não Tem Religião,Superior,4,3,Pouco melhor,1
+1091,Nordeste,Maranhão,Feminino,35 a 44 anos,Branca,Católica,Superior,2,2,Pouco melhor,2
+1092,Sul,Santa Catarina,Feminino,25 a 34 anos,Parda,Evangélica,Superior,2,2,Pouco pior,Não votou
+1093,Centro-Oeste,Goiás,Feminino,25 a 34 anos,Parda,Evangélica,Médio,2,1,Muito melhor,1
+1094,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,2,Igual,1
+1095,Centro-Oeste,Mato Grosso Do Sul,Masculino,18 a 24 anos,Parda,Católica,Médio,3,3,Muito melhor,6
+1096,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Branca,Católica,Superior,2,3,Pouco melhor,1
+1097,Sudeste,São Paulo,Feminino,18 a 24 anos,Branca,Evangélica,Médio,1,3,Pouco pior,Não votou
+1098,Sudeste,Rio De Janeiro,Masculino,18 a 24 anos,Parda,Evangélica,Médio,3,3,Igual,1
+1099,Sul,Rio Grande Do Sul,Feminino,35 a 44 anos,Branca,Católica,Superior,2,2,Pouco melhor,1
+1100,Sul,Rio Grande Do Sul,Masculino,25 a 34 anos,Parda,Católica,Superior,4,4,Pouco melhor,Não votou
+1101,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Católica,Fundamental,3,3,Pouco pior,3
+1102,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Católica,Fundamental,3,3,Muito melhor,1
+1103,Nordeste,Piauí,Masculino,45 a 59 anos,Parda,Católica,Fundamental,1,1,Pouco melhor,6
+1104,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Budista,Médio,1,3,Pouco melhor,2
+1105,Sul,Paraná,Feminino,18 a 24 anos,Branca,Evangélica,Médio,2,2,Pouco pior,2
+1106,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Evangélica,Superior,4,4,Muito pior,2
+1107,Norte,Pará,Masculino,60 anos ou mais,Parda,Evangélica,Fundamental,1,1,Pouco melhor,2
+1108,Nordeste,Pernambuco,Masculino,18 a 24 anos,Preta,Católica,Superior,1,1,Muito pior,2
+1109,Nordeste,Alagoas,Masculino,35 a 44 anos,Parda,Católica,Médio,1,1,Igual,2
+1110,Sul,Paraná,Masculino,45 a 59 anos,Branca,Católica,Médio,1,4,Muito melhor,1
+1111,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Não Tem Religião,Médio,2,2,Pouco pior,2
+1112,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Parda,Católica,Médio,1,1,Muito pior,2
+1113,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Médio,4,1,Pouco melhor,2
+1114,Sul,Paraná,Feminino,25 a 34 anos,Branca,Católica,Médio,4,4,Não sabe,2
+1115,Nordeste,Ceará,Feminino,60 anos ou mais,Parda,Católica,Fundamental,4,2,Muito pior,1
+1116,Norte,Amazonas,Masculino,45 a 59 anos,Parda,Católica,Fundamental,4,1,Muito pior,2
+1117,Sudeste,São Paulo,Masculino,60 anos ou mais,Parda,Católica,Fundamental,2,3,Pouco melhor,1
+1118,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Branca,Católica,Superior,2,1,Igual,Não votou
+1119,Norte,Tocantins,Masculino,45 a 59 anos,Preta,Acredita em Deus,Fundamental,4,4,Muito pior,2
+1120,Nordeste,Ceará,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Muito pior,2
+1121,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Católica,Médio,4,3,Igual,2
+1122,Sudeste,Rio De Janeiro,Feminino,35 a 44 anos,Branca,Evangélica,Fundamental,2,4,Pouco melhor,Não votou
+1123,Nordeste,Ceará,Masculino,60 anos ou mais,Parda,Não Tem Religião,Fundamental,1,3,Muito melhor,1
+1124,Nordeste,Ceará,Masculino,35 a 44 anos,Outras,Católica,Fundamental,1,1,Igual,2
+1125,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Branca,Evangélica,Superior,3,4,Muito melhor,1
+1126,Centro-Oeste,Distrito Federal,Feminino,35 a 44 anos,Outras,Católica,Médio,3,3,Igual,1
+1127,Nordeste,Alagoas,Masculino,18 a 24 anos,Branca,Católica,Superior,2,2,Pouco pior,2
+1128,Sul,Paraná,Masculino,45 a 59 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,3,3,Igual,Não votou
+1129,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Outras,Evangélica,Médio,3,3,Pouco pior,2
+1130,Nordeste,Paraíba,Masculino,18 a 24 anos,Parda,Umbanda,Superior,2,3,Pouco pior,Não votou
+1131,Sul,Paraná,Feminino,18 a 24 anos,Parda,Católica,Fundamental,1,3,Muito pior,Não votou
+1132,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Católica,Médio,3,3,Pouco pior,3
+1133,Norte,Amapá,Masculino,18 a 24 anos,Parda,Católica,Superior,2,3,Não sabe,1
+1134,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Não Tem Religião,Superior,3,3,Pouco pior,6
+1135,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Fundamental,3,4,Igual,Não votou
+1136,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Umbanda,Médio,1,1,Pouco melhor,1
+1137,Nordeste,Ceará,Masculino,35 a 44 anos,Preta,Evangélica,Fundamental,4,4,Muito pior,2
+1138,Nordeste,Bahia,Masculino,60 anos ou mais,Preta,Católica,Médio,3,3,Muito melhor,1
+1139,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Católica,Fundamental,1,2,Igual,Não votou
+1140,Centro-Oeste,Mato Grosso,Masculino,35 a 44 anos,Preta,Católica,Médio,2,2,Igual,1
+1141,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Superior,4,3,Igual,2
+1142,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,Não Tem Religião,Médio,3,2,Muito melhor,Não votou
+1143,Nordeste,Maranhão,Masculino,35 a 44 anos,Parda,Católica,Médio,3,3,Igual,2
+1144,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,2,2,Igual,3
+1145,Centro-Oeste,Mato Grosso,Feminino,35 a 44 anos,Preta,Católica,Superior,1,3,Muito pior,1
+1146,Nordeste,Maranhão,Masculino,25 a 34 anos,Parda,Católica,Médio,3,1,Não sabe,2
+1147,Sul,Santa Catarina,Feminino,25 a 34 anos,Branca,Evangélica,Médio,4,4,Pouco melhor,6
+1148,Nordeste,Ceará,Masculino,45 a 59 anos,Parda,Católica,Fundamental,4,4,Pouco melhor,2
+1149,Nordeste,Maranhão,Masculino,18 a 24 anos,Parda,Católica,Médio,1,4,Pouco melhor,2
+1150,Sudeste,Rio De Janeiro,Feminino,25 a 34 anos,Preta,Católica,Fundamental,1,1,Muito pior,Não votou
+1151,Nordeste,Maranhão,Feminino,45 a 59 anos,Parda,Evangélica,Médio,3,3,Igual,1
+1152,Nordeste,Pernambuco,Feminino,45 a 59 anos,Preta,Não Tem Religião,Superior,4,4,Muito pior,2
+1153,Nordeste,Ceará,Feminino,45 a 59 anos,Parda,Católica,Fundamental,4,1,Muito pior,2
+1154,Sul,Paraná,Feminino,25 a 34 anos,Preta,Católica,Fundamental,4,3,Pouco pior,1
+1155,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Parda,Católica,Fundamental,Não sabe,1,Pouco melhor,1
+1156,Nordeste,Ceará,Masculino,35 a 44 anos,Parda,Evangélica,Médio,2,2,Muito pior,1
+1157,Centro-Oeste,Goiás,Feminino,45 a 59 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,4,3,Igual,1
+1158,Sudeste,Minas Gerais,Masculino,18 a 24 anos,Parda,Não Tem Religião,Médio,2,2,Pouco pior,Não votou
+1159,Norte,Acre,Feminino,35 a 44 anos,Branca,Evangélica,Fundamental,4,3,Igual,Não votou
+1160,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Preta,Católica,Médio,3,3,Muito pior,2
+1161,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Branca,Evangélica,Médio,1,4,Muito melhor,1
+1162,Norte,Pará,Feminino,25 a 34 anos,Parda,Evangélica,Fundamental,3,1,Muito pior,1
+1163,Nordeste,Alagoas,Masculino,25 a 34 anos,Parda,Evangélica,Superior,1,4,Muito melhor,1
+1164,Norte,Roraima,Feminino,45 a 59 anos,Parda,Evangélica,Médio,3,Não sabe,Pouco melhor,Não votou
+1165,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Evangélica,Médio,4,4,Igual,Não votou
+1166,Nordeste,Rio Grande Do Norte,Feminino,60 anos ou mais,Parda,Católica,Fundamental,2,3,Não sabe,Não votou
+1167,Nordeste,Piauí,Feminino,35 a 44 anos,Parda,Não Tem Religião,Fundamental,3,1,Igual,2
+1168,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Católica,Superior,1,2,Muito pior,2
+1169,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Evangélica,Fundamental,3,3,Pouco melhor,Não votou
+1170,Nordeste,Maranhão,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Pouco melhor,1
+1171,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Evangélica,Médio,1,4,Muito melhor,1
+1172,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Outras,"Espírita Kardecista, Espiritualista",Superior,1,1,Pouco pior,2
+1173,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Parda,Evangélica,Médio,1,4,Muito pior,1
+1174,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,1,1,Pouco melhor,2
+1175,Nordeste,Rio Grande Do Norte,Masculino,45 a 59 anos,Branca,Católica,Fundamental,3,4,Pouco melhor,Não votou
+1176,Sudeste,Rio De Janeiro,Feminino,18 a 24 anos,Branca,Evangélica,Médio,3,3,Muito pior,1
+1177,Nordeste,Piauí,Feminino,60 anos ou mais,Parda,Católica,Fundamental,4,4,Muito pior,2
+1178,Sul,Paraná,Masculino,60 anos ou mais,Branca,Católica,Fundamental,3,4,Muito pior,5
+1179,Centro-Oeste,Distrito Federal,Masculino,45 a 59 anos,Branca,Não Tem Religião,Fundamental,4,1,Muito pior,2
+1180,Sul,Rio Grande Do Sul,Feminino,45 a 59 anos,Branca,Católica,Superior,1,2,Muito pior,2
+1181,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Outras,Católica,Fundamental,3,2,Muito pior,2
+1182,Sul,Paraná,Masculino,25 a 34 anos,Branca,Evangélica,Médio,3,2,Pouco pior,1
+1183,Centro-Oeste,Distrito Federal,Feminino,45 a 59 anos,Parda,Católica,Médio,3,1,Pouco melhor,3
+1184,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Branca,Evangélica,Superior,1,3,Muito melhor,1
+1185,Nordeste,Bahia,Masculino,45 a 59 anos,Preta,Não Tem Religião,Superior,2,2,Igual,2
+1186,Nordeste,Paraíba,Masculino,35 a 44 anos,Outras,Evangélica,Médio,2,4,Pouco pior,1
+1187,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Parda,"Espírita Kardecista, Espiritualista",Médio,3,4,Pouco melhor,1
+1188,Sudeste,Rio De Janeiro,Masculino,60 anos ou mais,Preta,Evangélica,Fundamental,3,2,Pouco melhor,1
+1189,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Católica,Médio,1,4,Muito melhor,1
+1190,Sul,Paraná,Feminino,18 a 24 anos,Branca,Não Tem Religião,Superior,3,3,Pouco melhor,2
+1191,Sul,Paraná,Masculino,60 anos ou mais,Parda,Acredita em Deus,Fundamental,4,3,Muito pior,2
+1192,Sul,Rio Grande Do Sul,Masculino,25 a 34 anos,Preta,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,3,2,Pouco pior,2
+1193,Nordeste,Alagoas,Masculino,25 a 34 anos,Preta,Católica,Fundamental,3,3,Pouco melhor,1
+1194,Norte,Rondônia,Masculino,18 a 24 anos,Parda,Evangélica,Médio,3,3,Pouco pior,1
+1195,Centro-Oeste,Goiás,Masculino,35 a 44 anos,Preta,Católica,Médio,4,1,Muito pior,2
+1196,Nordeste,Piauí,Feminino,45 a 59 anos,Parda,Católica,Médio,3,1,Igual,Não votou
+1197,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Católica,Fundamental,Não sabe,3,Igual,1
+1198,Nordeste,Rio Grande Do Norte,Feminino,60 anos ou mais,Preta,Evangélica,Fundamental,1,4,Muito pior,2
+1199,Sul,Paraná,Masculino,45 a 59 anos,Parda,Católica,Médio,Não sabe,3,Muito pior,2
+1200,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Outras,Não Tem Religião,Médio,1,1,Pouco pior,3
+1201,Sul,Santa Catarina,Feminino,18 a 24 anos,Branca,Evangélica,Médio,3,3,Muito melhor,1
+1202,Sul,Santa Catarina,Masculino,18 a 24 anos,Branca,Católica,Médio,3,3,Pouco melhor,Não votou
+1203,Nordeste,Pernambuco,Masculino,60 anos ou mais,Outras,Católica,Médio,2,1,Pouco melhor,1
+1204,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Católica,Fundamental,2,1,Igual,Não votou
+1205,Sudeste,São Paulo,Masculino,25 a 34 anos,Preta,Evangélica,Médio,1,3,Pouco melhor,1
+1206,Nordeste,Ceará,Feminino,25 a 34 anos,Parda,Católica,Médio,2,2,Pouco pior,2
+1207,Sul,Santa Catarina,Masculino,45 a 59 anos,Branca,Católica,Médio,2,3,Igual,2
+1208,Sul,Santa Catarina,Masculino,18 a 24 anos,Branca,Não Tem Religião,Médio,1,3,Pouco pior,Não votou
+1209,Nordeste,Rio Grande Do Norte,Feminino,45 a 59 anos,Parda,Católica,Médio,1,1,Muito pior,2
+1210,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Evangélica,Médio,3,3,Muito pior,Não votou
+1211,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Parda,Católica,Médio,3,3,Pouco melhor,1
+1212,Nordeste,Maranhão,Feminino,25 a 34 anos,Parda,Católica,Médio,2,3,Muito pior,2
+1213,Nordeste,Maranhão,Feminino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Pouco pior,2
+1214,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Evangélica,Médio,2,2,Pouco melhor,1
+1215,Nordeste,Piauí,Masculino,35 a 44 anos,Branca,Evangélica,Fundamental,4,2,Pouco pior,2
+1216,Norte,Pará,Feminino,25 a 34 anos,Parda,Não Tem Religião,Médio,3,1,Pouco pior,Não votou
+1217,Sul,Paraná,Masculino,18 a 24 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,4,2,Pouco melhor,1
+1218,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Católica,Fundamental,3,3,Muito pior,2
+1219,Centro-Oeste,Goiás,Feminino,60 anos ou mais,Branca,"Espírita Kardecista, Espiritualista",Superior,3,2,Pouco pior,2
+1220,Centro-Oeste,Mato Grosso,Feminino,35 a 44 anos,Parda,Evangélica,Superior,3,2,Muito pior,2
+1221,Norte,Amapá,Masculino,35 a 44 anos,Branca,Católica,Médio,3,3,Pouco pior,2
+1222,Sul,Paraná,Masculino,25 a 34 anos,Parda,Cristão,Fundamental,2,2,Igual,Não votou
+1223,Nordeste,Maranhão,Masculino,25 a 34 anos,Parda,Evangélica,Superior,4,3,Igual,1
+1224,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Fundamental,2,1,Muito pior,2
+1225,Sul,Paraná,Masculino,60 anos ou mais,Branca,Católica,Médio,3,1,Muito pior,2
+1226,Nordeste,Alagoas,Feminino,25 a 34 anos,Preta,Evangélica,Fundamental,1,1,Muito melhor,2
+1227,Nordeste,Rio Grande Do Norte,Masculino,18 a 24 anos,Branca,Não Tem Religião,Médio,2,2,Pouco pior,4
+1228,Centro-Oeste,Distrito Federal,Feminino,25 a 34 anos,Branca,Católica,Médio,1,3,Muito melhor,2
+1229,Nordeste,Maranhão,Masculino,45 a 59 anos,Parda,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,3,3,Igual,1
+1230,Sudeste,São Paulo,Feminino,25 a 34 anos,Preta,Evangélica,Superior,3,1,Muito pior,2
+1231,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Católica,Médio,3,3,Pouco melhor,1
+1232,Sudeste,Rio De Janeiro,Masculino,35 a 44 anos,Branca,Não Tem Religião,Médio,3,1,Pouco melhor,1
+1233,Nordeste,Rio Grande Do Norte,Masculino,25 a 34 anos,Branca,Não Tem Religião,Médio,4,4,Muito pior,2
+1234,Sul,Paraná,Feminino,60 anos ou mais,Parda,"Mórmon, Adventista, Testemunha De Jeová",Fundamental,3,3,Pouco melhor,1
+1235,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Preta,Católica,Médio,3,3,Muito pior,3
+1236,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Médio,2,3,Igual,1
+1237,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Católica,Fundamental,1,3,Muito melhor,Não votou
+1238,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Superior,3,2,Pouco pior,2
+1239,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Católica,Médio,3,4,Muito pior,1
+1240,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Evangélica,Médio,3,3,Muito pior,1
+1241,Nordeste,Alagoas,Feminino,35 a 44 anos,Parda,Católica,Médio,2,2,Pouco melhor,1
+1242,Nordeste,Sergipe,Masculino,60 anos ou mais,Preta,"Espírita Kardecista, Espiritualista",Superior,4,2,Muito pior,3
+1243,Nordeste,Pernambuco,Feminino,25 a 34 anos,Parda,Católica,Superior,3,3,Muito pior,2
+1244,Sudeste,São Paulo,Feminino,60 anos ou mais,Parda,Evangélica,Fundamental,3,3,Igual,2
+1245,Norte,Pará,Feminino,18 a 24 anos,Parda,Evangélica,Médio,1,3,Pouco melhor,2
+1246,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Evangélica,Médio,3,3,Pouco melhor,1
+1247,Nordeste,Alagoas,Masculino,60 anos ou mais,Preta,Evangélica,Fundamental,4,1,Muito pior,2
+1248,Nordeste,Alagoas,Feminino,25 a 34 anos,Branca,"Mórmon, Adventista, Testemunha De Jeová",Fundamental,3,3,Pouco pior,Não votou
+1249,Centro-Oeste,Distrito Federal,Feminino,25 a 34 anos,Parda,Evangélica,Médio,2,2,Pouco pior,2
+1250,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Católica,Médio,4,3,Igual,2
+1251,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Preta,Evangélica,Médio,4,2,Muito pior,1
+1252,Sudeste,São Paulo,Feminino,18 a 24 anos,Branca,Católica,Médio,4,3,Igual,2
+1253,Sul,Paraná,Masculino,18 a 24 anos,Parda,Católica,Médio,3,1,Pouco melhor,2
+1254,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Católica,Médio,3,3,Muito melhor,Não votou
+1255,Nordeste,Alagoas,Masculino,18 a 24 anos,Branca,Católica,Médio,3,2,Pouco pior,1
+1256,Nordeste,Piauí,Feminino,18 a 24 anos,Parda,Católica,Médio,3,3,Pouco pior,2
+1257,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Evangélica,Médio,3,3,Muito melhor,1
+1258,Nordeste,Maranhão,Feminino,25 a 34 anos,Parda,Católica,Superior,1,1,Pouco melhor,2
+1259,Nordeste,Maranhão,Masculino,35 a 44 anos,Preta,Evangélica,Fundamental,4,4,Muito pior,2
+1260,Nordeste,Ceará,Masculino,45 a 59 anos,Parda,Evangélica,Médio,3,1,Pouco pior,2
+1261,Centro-Oeste,Goiás,Feminino,16 e 17 anos,Branca,Católica,Superior,4,2,Igual,Não votou
+1262,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Parda,Católica,Fundamental,1,3,Pouco pior,Não votou
+1263,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Evangélica,Médio,2,4,Muito melhor,1
+1264,Nordeste,Sergipe,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,4,4,Pouco melhor,Não votou
+1265,Norte,Roraima,Masculino,18 a 24 anos,Parda,Não Tem Religião,Médio,4,4,Não sabe,1
+1266,Sul,Rio Grande Do Sul,Masculino,18 a 24 anos,Branca,Não Tem Religião,Superior,2,3,Muito pior,2
+1267,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Católica,Superior,3,1,Pouco melhor,2
+1268,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,Católica,Médio,2,3,Pouco melhor,2
+1269,Sudeste,Rio De Janeiro,Masculino,35 a 44 anos,Branca,Católica,Médio,Não sabe,3,Pouco melhor,1
+1270,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Católica,Médio,4,2,Pouco pior,6
+1271,Centro-Oeste,Goiás,Feminino,35 a 44 anos,Parda,Católica,Médio,3,3,Pouco pior,Não votou
+1272,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Evangélica,Médio,2,2,Pouco melhor,1
+1273,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Médio,4,3,Muito pior,2
+1274,Sul,Rio Grande Do Sul,Feminino,18 a 24 anos,Parda,Católica,Médio,1,3,Pouco melhor,Não votou
+1275,Sudeste,São Paulo,Feminino,25 a 34 anos,Preta,Candomblé,Superior,4,3,Muito pior,Não votou
+1276,Nordeste,Alagoas,Feminino,45 a 59 anos,Branca,Evangélica,Fundamental,1,1,Muito melhor,1
+1277,Nordeste,Rio Grande Do Norte,Feminino,60 anos ou mais,Parda,Católica,Médio,2,2,Muito pior,2
+1278,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Parda,Católica,Fundamental,1,3,Pouco melhor,1
+1279,Nordeste,Ceará,Feminino,45 a 59 anos,Branca,Católica,Fundamental,2,2,Pouco melhor,2
+1280,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Parda,Católica,Médio,2,2,Igual,Não votou
+1281,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Católica,Médio,4,2,Muito pior,2
+1282,Nordeste,Alagoas,Masculino,35 a 44 anos,Branca,Católica,Superior,3,1,Muito pior,2
+1283,Nordeste,Piauí,Feminino,60 anos ou mais,Parda,Católica,Superior,3,3,Muito pior,2
+1284,Nordeste,Bahia,Feminino,25 a 34 anos,Preta,Católica,Médio,2,2,Muito pior,2
+1285,Nordeste,Bahia,Feminino,60 anos ou mais,Preta,Evangélica,Fundamental,Não sabe,Não sabe,Igual,6
+1286,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Evangélica,Médio,4,1,Muito pior,2
+1287,Sul,Santa Catarina,Masculino,25 a 34 anos,Parda,Católica,Médio,3,2,Pouco melhor,Não votou
+1288,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Branca,Não Tem Religião,Médio,3,4,Pouco melhor,1
+1289,Nordeste,Paraíba,Masculino,45 a 59 anos,Preta,Católica,Fundamental,2,3,Pouco melhor,2
+1290,Nordeste,Alagoas,Masculino,18 a 24 anos,Parda,Não Tem Religião,Médio,2,3,Pouco melhor,Não votou
+1291,Nordeste,Rio Grande Do Norte,Feminino,45 a 59 anos,Parda,Católica,Médio,1,1,Pouco melhor,1
+1292,Nordeste,Ceará,Masculino,25 a 34 anos,Parda,Católica,Fundamental,2,3,Pouco melhor,2
+1293,Nordeste,Alagoas,Feminino,60 anos ou mais,Parda,Evangélica,Médio,4,3,Muito melhor,1
+1294,Norte,Acre,Masculino,35 a 44 anos,Parda,Não Tem Religião,Médio,3,3,Pouco pior,1
+1295,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Não Respondeu,Superior,3,3,Pouco melhor,6
+1296,Nordeste,Ceará,Feminino,18 a 24 anos,Parda,Católica,Médio,3,3,Pouco melhor,2
+1297,Norte,Rondônia,Masculino,25 a 34 anos,Preta,Evangélica,Superior,4,3,Pouco melhor,1
+1298,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Igual,2
+1299,Sul,Paraná,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,3,3,Pouco pior,2
+1300,Sudeste,Rio De Janeiro,Masculino,60 anos ou mais,Parda,Evangélica,Fundamental,1,1,Pouco melhor,2
+1301,Sul,Santa Catarina,Masculino,45 a 59 anos,Parda,Católica,Médio,1,3,Muito melhor,1
+1302,Sudeste,Rio De Janeiro,Feminino,25 a 34 anos,Parda,"Espírita Kardecista, Espiritualista",Médio,3,1,Igual,2
+1303,Sudeste,Rio De Janeiro,Masculino,25 a 34 anos,Outras,Evangélica,Superior,1,2,Pouco pior,1
+1304,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Branca,Católica,Superior,3,3,Pouco pior,2
+1305,Nordeste,Paraíba,Feminino,25 a 34 anos,Parda,Evangélica,Médio,1,3,Pouco melhor,1
+1306,Sul,Paraná,Masculino,35 a 44 anos,Branca,Católica,Médio,2,2,Pouco pior,2
+1307,Centro-Oeste,Distrito Federal,Feminino,60 anos ou mais,Branca,"Espírita Kardecista, Espiritualista",Superior,2,2,Muito pior,2
+1308,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Preta,Católica,Médio,2,4,Muito melhor,1
+1309,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Parda,Evangélica,Superior,4,4,Muito pior,2
+1310,Nordeste,Alagoas,Feminino,45 a 59 anos,Parda,"Espírita Kardecista, Espiritualista",Superior,1,1,Muito pior,2
+1311,Sul,Rio Grande Do Sul,Feminino,60 anos ou mais,Branca,Católica,Superior,3,3,Muito pior,2
+1312,Sudeste,Rio De Janeiro,Feminino,25 a 34 anos,Parda,Evangélica,Médio,4,4,Pouco melhor,1
+1313,Nordeste,Piauí,Masculino,25 a 34 anos,Preta,Católica,Médio,3,3,Pouco melhor,1
+1314,Nordeste,Piauí,Masculino,18 a 24 anos,Branca,Umbanda,Superior,2,2,Igual,1
+1315,Nordeste,Piauí,Masculino,45 a 59 anos,Parda,Católica,Médio,4,1,Muito pior,4
+1316,Nordeste,Paraíba,Feminino,35 a 44 anos,Preta,Evangélica,Médio,3,3,Muito melhor,1
+1317,Nordeste,Bahia,Masculino,60 anos ou mais,Parda,Católica,Fundamental,2,2,Muito pior,2
+1318,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Parda,Evangélica,Médio,2,1,Pouco melhor,1
+1319,Centro-Oeste,Goiás,Masculino,35 a 44 anos,Parda,"Espírita Kardecista, Espiritualista",Superior,1,3,Muito melhor,1
+1320,Sudeste,Rio De Janeiro,Masculino,25 a 34 anos,Branca,Católica,Superior,2,2,Pouco pior,2
+1321,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Evangélica,Médio,4,4,Muito pior,Não votou
+1322,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Branca,Católica,Médio,4,4,Pouco pior,2
+1323,Sul,Rio Grande Do Sul,Masculino,35 a 44 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,1,4,Pouco melhor,1
+1324,Nordeste,Pernambuco,Feminino,35 a 44 anos,Preta,Católica,Médio,4,3,Muito pior,2
+1325,Centro-Oeste,Distrito Federal,Feminino,45 a 59 anos,Parda,"Espírita Kardecista, Espiritualista",Superior,4,3,Muito pior,2
+1326,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Parda,Evangélica,Fundamental,3,1,Muito pior,6
+1327,Nordeste,Bahia,Masculino,45 a 59 anos,Preta,Não Tem Religião,Médio,4,2,Muito pior,2
+1328,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Católica,Médio,3,3,Pouco melhor,1
+1329,Sul,Rio Grande Do Sul,Masculino,45 a 59 anos,Branca,Católica,Fundamental,1,1,Igual,2
+1330,Nordeste,Ceará,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,1,Pouco pior,2
+1331,Nordeste,Maranhão,Feminino,60 anos ou mais,Parda,Evangélica,Médio,2,2,Pouco pior,2
+1332,Norte,Tocantins,Feminino,18 a 24 anos,Preta,Não Tem Religião,Médio,2,2,Muito pior,2
+1333,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Fundamental,3,3,Muito melhor,4
+1334,Nordeste,Maranhão,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,1,Muito pior,Não votou
+1335,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Evangélica,Fundamental,3,4,Muito pior,2
+1336,Sudeste,Rio De Janeiro,Masculino,25 a 34 anos,Branca,Não Tem Religião,Médio,1,3,Pouco pior,2
+1337,Norte,Amazonas,Masculino,35 a 44 anos,Outras,Não Tem Religião,Superior,1,4,Pouco melhor,1
+1338,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Parda,Católica,Superior,3,3,Pouco pior,1
+1339,Centro-Oeste,Mato Grosso,Feminino,18 a 24 anos,Preta,Católica,Médio,2,1,Igual,3
+1340,Sudeste,São Paulo,Feminino,45 a 59 anos,Preta,"Espírita Kardecista, Espiritualista",Médio,4,4,Pouco pior,2
+1341,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Não Tem Religião,Superior,1,2,Muito pior,2
+1342,Sudeste,Minas Gerais,Masculino,16 e 17 anos,Branca,Católica,Médio,1,3,Muito melhor,1
+1343,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Médio,4,2,Igual,1
+1344,Centro-Oeste,Goiás,Masculino,25 a 34 anos,Parda,Não Tem Religião,Superior,2,3,Igual,Não votou
+1345,Nordeste,Alagoas,Feminino,18 a 24 anos,Preta,Não Tem Religião,Fundamental,3,4,Pouco pior,Não votou
+1346,Nordeste,Rio Grande Do Norte,Feminino,45 a 59 anos,Parda,Católica,Fundamental,1,1,Não sabe,2
+1347,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Evangélica,Médio,1,4,Pouco melhor,1
+1348,Sudeste,Minas Gerais,Masculino,18 a 24 anos,Parda,Não Tem Religião,Médio,3,3,Igual,2
+1349,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Preta,Católica,Superior,2,2,Igual,6
+1350,Nordeste,Alagoas,Feminino,60 anos ou mais,Parda,Evangélica,Fundamental,3,4,Pouco pior,Não votou
+1351,Sul,Paraná,Masculino,60 anos ou mais,Branca,Evangélica,Fundamental,1,3,Muito melhor,1
+1352,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Católica,Médio,3,2,Pouco pior,1
+1353,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,1,Muito pior,2
+1354,Nordeste,Maranhão,Feminino,60 anos ou mais,Parda,Católica,Médio,2,2,Pouco melhor,1
+1355,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,"Mórmon, Adventista, Testemunha De Jeová",Médio,4,2,Muito pior,3
+1356,Sul,Paraná,Masculino,60 anos ou mais,Parda,Católica,Médio,2,4,Pouco melhor,1
+1357,Centro-Oeste,Mato Grosso Do Sul,Feminino,35 a 44 anos,Branca,Católica,Superior,2,2,Muito melhor,1
+1358,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Muito pior,2
+1359,Norte,Amazonas,Masculino,16 e 17 anos,Parda,Evangélica,Médio,3,3,Igual,1
+1360,Sudeste,Rio De Janeiro,Feminino,45 a 59 anos,Parda,Não Tem Religião,Médio,2,2,Muito pior,2
+1361,Sudeste,São Paulo,Feminino,25 a 34 anos,Outras,Umbanda,Superior,3,2,Muito pior,2
+1362,Sul,Paraná,Feminino,18 a 24 anos,Branca,Evangélica,Médio,3,3,Muito pior,1
+1363,Norte,Tocantins,Masculino,45 a 59 anos,Branca,"Seicho-No-Ie, Messiânica, Perfeita Liberdade",Médio,1,1,Muito pior,2
+1364,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,"Espírita Kardecista, Espiritualista",Superior,2,3,Igual,1
+1365,Sudeste,São Paulo,Feminino,35 a 44 anos,Preta,Católica,Médio,3,3,Pouco pior,2
+1366,Nordeste,Piauí,Masculino,25 a 34 anos,Parda,Católica,Fundamental,4,3,Igual,2
+1367,Sudeste,Rio De Janeiro,Feminino,45 a 59 anos,Preta,Católica,Médio,3,3,Pouco pior,2
+1368,Sudeste,São Paulo,Feminino,18 a 24 anos,Branca,Não Tem Religião,Médio,4,1,Igual,2
+1369,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Fundamental,1,1,Pouco pior,1
+1370,Centro-Oeste,Goiás,Feminino,18 a 24 anos,Branca,Católica,Médio,1,2,Igual,Não votou
+1371,Sul,Rio Grande Do Sul,Masculino,25 a 34 anos,Branca,Não Tem Religião,Superior,4,3,Muito pior,2
+1372,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Evangélica,Médio,Não sabe,4,Igual,4
+1373,Nordeste,Bahia,Feminino,18 a 24 anos,Preta,Evangélica,Superior,3,3,Pouco melhor,2
+1374,Sul,Rio Grande Do Sul,Feminino,25 a 34 anos,Branca,Umbanda,Médio,2,2,Pouco pior,2
+1375,Norte,Pará,Masculino,45 a 59 anos,Preta,Católica,Fundamental,3,2,Igual,Não votou
+1376,Nordeste,Pernambuco,Feminino,35 a 44 anos,Parda,Acredita em Deus,Fundamental,1,1,Muito pior,2
+1377,Centro-Oeste,Distrito Federal,Masculino,45 a 59 anos,Parda,"Espírita Kardecista, Espiritualista",Médio,4,3,Muito pior,2
+1378,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Católica,Fundamental,4,3,Pouco pior,1
+1379,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Branca,Católica,Fundamental,1,1,Muito pior,Não votou
+1380,Norte,Roraima,Masculino,25 a 34 anos,Branca,Não Tem Religião,Superior,2,1,Pouco pior,2
+1381,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Branca,Evangélica,Superior,2,2,Pouco melhor,6
+1382,Sul,Rio Grande Do Sul,Masculino,18 a 24 anos,Parda,Não Tem Religião,Superior,2,2,Pouco melhor,1
+1383,Sudeste,São Paulo,Feminino,18 a 24 anos,Branca,Católica,Superior,2,3,Igual,6
+1384,Nordeste,Pernambuco,Feminino,25 a 34 anos,Branca,Evangélica,Médio,4,3,Igual,Não votou
+1385,Centro-Oeste,Distrito Federal,Masculino,25 a 34 anos,Branca,Evangélica,Médio,1,3,Pouco melhor,Não votou
+1386,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Católica,Fundamental,3,3,Muito pior,1
+1387,Norte,Pará,Masculino,60 anos ou mais,Preta,Católica,Médio,2,3,Pouco pior,2
+1388,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Branca,Evangélica,Médio,1,4,Muito melhor,1
+1389,Sul,Paraná,Feminino,45 a 59 anos,Parda,Católica,Fundamental,3,Não sabe,Muito pior,1
+1390,Nordeste,Alagoas,Masculino,60 anos ou mais,Preta,Católica,Fundamental,4,4,Muito pior,2
+1391,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Fundamental,4,1,Pouco pior,2
+1392,Sul,Paraná,Feminino,25 a 34 anos,Branca,Evangélica,Superior,2,2,Muito melhor,1
+1393,Sudeste,São Paulo,Masculino,25 a 34 anos,Preta,Não Tem Religião,Médio,3,3,Igual,4
+1394,Sul,Santa Catarina,Masculino,25 a 34 anos,Preta,Evangélica,Fundamental,3,3,Pouco pior,Não votou
+1395,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,Católica,Superior,2,2,Pouco melhor,Não votou
+1396,Sul,Santa Catarina,Masculino,45 a 59 anos,Parda,Católica,Fundamental,1,3,Muito pior,2
+1397,Sudeste,São Paulo,Masculino,25 a 34 anos,Preta,Católica,Superior,2,2,Pouco pior,2
+1398,Centro-Oeste,Goiás,Masculino,25 a 34 anos,Branca,Evangélica,Médio,1,3,Muito melhor,1
+1399,Norte,Pará,Masculino,35 a 44 anos,Outras,Católica,Superior,3,3,Pouco pior,2
+1400,Nordeste,Alagoas,Feminino,25 a 34 anos,Parda,Católica,Médio,3,2,Muito pior,4
+1401,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Parda,Evangélica,Médio,2,2,Igual,1
+1402,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Católica,Fundamental,4,4,Muito pior,2
+1403,Nordeste,Ceará,Masculino,35 a 44 anos,Parda,Católica,Médio,3,3,Muito pior,2
+1404,Nordeste,Alagoas,Masculino,18 a 24 anos,Preta,Evangélica,Médio,1,1,Muito melhor,1
+1405,Sul,Paraná,Masculino,45 a 59 anos,Branca,Católica,Médio,2,2,Igual,1
+1406,Nordeste,Piauí,Feminino,45 a 59 anos,Parda,Católica,Médio,1,1,Muito pior,2
+1407,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Superior,1,4,Pouco melhor,1
+1408,Nordeste,Alagoas,Masculino,45 a 59 anos,Parda,Católica,Superior,2,3,Muito pior,Não votou
+1409,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Outras,Não Tem Religião,Médio,3,1,Igual,3
+1410,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Fundamental,4,4,Muito pior,1
+1411,Sul,Paraná,Feminino,35 a 44 anos,Parda,Evangélica,Fundamental,1,3,Pouco melhor,1
+1412,Sudeste,Minas Gerais,Masculino,18 a 24 anos,Outras,Católica,Médio,3,3,Igual,4
+1413,Norte,Amazonas,Feminino,25 a 34 anos,Branca,Católica,Médio,3,3,Pouco pior,2
+1414,Nordeste,Maranhão,Feminino,18 a 24 anos,Parda,Não Tem Religião,Médio,2,2,Pouco pior,2
+1415,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Católica,Médio,3,4,Muito pior,2
+1416,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Preta,Católica,Fundamental,4,3,Pouco pior,2
+1417,Norte,Acre,Feminino,25 a 34 anos,Parda,Evangélica,Fundamental,1,3,Muito pior,2
+1418,Nordeste,Alagoas,Feminino,45 a 59 anos,Parda,Católica,Médio,3,1,Muito pior,4
+1419,Norte,Roraima,Feminino,25 a 34 anos,Preta,Evangélica,Superior,3,4,Pouco pior,Não votou
+1420,Sul,Paraná,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,2,3,Muito pior,2
+1421,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Católica,Fundamental,3,3,Pouco melhor,2
+1422,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Católica,Fundamental,3,1,Igual,2
+1423,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Parda,Católica,Superior,2,3,Pouco melhor,3
+1424,Sudeste,Rio De Janeiro,Masculino,35 a 44 anos,Parda,Evangélica,Fundamental,3,3,Muito pior,2
+1425,Nordeste,Pernambuco,Feminino,35 a 44 anos,Parda,Evangélica,Médio,2,2,Igual,2
+1426,Sul,Paraná,Feminino,45 a 59 anos,Parda,Católica,Médio,4,2,Muito pior,2
+1427,Sul,Santa Catarina,Masculino,60 anos ou mais,Outras,Católica,Fundamental,1,1,Muito melhor,1
+1428,Sul,Paraná,Masculino,60 anos ou mais,Outras,Católica,Médio,3,3,Pouco melhor,6
+1429,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Preta,Católica,Fundamental,1,1,Pouco pior,2
+1430,Sul,Rio Grande Do Sul,Feminino,25 a 34 anos,Preta,Católica,Superior,3,2,Muito pior,2
+1431,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Branca,Evangélica,Fundamental,2,2,Pouco melhor,Não votou
+1432,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Preta,Católica,Superior,4,1,Muito pior,2
+1433,Sudeste,São Paulo,Feminino,25 a 34 anos,Outras,Evangélica,Médio,1,2,Pouco melhor,2
+1434,Sudeste,São Paulo,Feminino,25 a 34 anos,Preta,Não Tem Religião,Superior,2,3,Muito pior,2
+1435,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Evangélica,Médio,2,2,Pouco melhor,1
+1436,Sul,Santa Catarina,Feminino,45 a 59 anos,Branca,Evangélica,Fundamental,1,3,Muito melhor,6
+1437,Nordeste,Paraíba,Feminino,45 a 59 anos,Branca,Católica,Fundamental,3,4,Muito pior,1
+1438,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Médio,1,3,Pouco melhor,2
+1439,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Evangélica,Fundamental,2,3,Muito melhor,1
+1440,Sul,Rio Grande Do Sul,Masculino,35 a 44 anos,Branca,Católica,Médio,2,3,Igual,3
+1441,Sudeste,São Paulo,Feminino,60 anos ou mais,Preta,Não Tem Religião,Fundamental,4,4,Muito pior,2
+1442,Sul,Santa Catarina,Feminino,35 a 44 anos,Parda,Católica,Fundamental,4,2,Muito pior,2
+1443,Nordeste,Bahia,Feminino,16 e 17 anos,Preta,Evangélica,Médio,2,2,Pouco melhor,2
+1444,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Preta,Católica,Fundamental,1,2,Pouco pior,2
+1445,Nordeste,Bahia,Feminino,45 a 59 anos,Branca,Evangélica,Médio,3,3,Muito melhor,1
+1446,Centro-Oeste,Distrito Federal,Masculino,25 a 34 anos,Parda,Católica,Médio,3,3,Pouco pior,2
+1447,Sudeste,Rio De Janeiro,Feminino,45 a 59 anos,Parda,Católica,Médio,1,4,Igual,1
+1448,Sul,Paraná,Masculino,25 a 34 anos,Outras,Umbanda,Médio,2,2,Igual,2
+1449,Nordeste,Pernambuco,Masculino,35 a 44 anos,Parda,Católica,Fundamental,4,4,Pouco melhor,2
+1450,Sudeste,Rio De Janeiro,Feminino,45 a 59 anos,Preta,Católica,Médio,1,3,Muito pior,2
+1451,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Evangélica,Fundamental,3,3,Pouco melhor,1
+1452,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Parda,Católica,Superior,3,3,Muito melhor,Não votou
+1453,Centro-Oeste,Goiás,Masculino,60 anos ou mais,Preta,Cristão,Médio,1,1,Muito melhor,1
+1454,Sudeste,Minas Gerais,Masculino,18 a 24 anos,Parda,Católica,Superior,2,2,Pouco melhor,1
+1455,Sul,Rio Grande Do Sul,Feminino,60 anos ou mais,Branca,"Espírita Kardecista, Espiritualista",Fundamental,1,1,Muito pior,Não votou
+1456,Nordeste,Pernambuco,Feminino,18 a 24 anos,Parda,Católica,Fundamental,3,2,Muito pior,2
+1457,Norte,Pará,Masculino,25 a 34 anos,Parda,Católica,Superior,3,3,Pouco melhor,Não votou
+1458,Nordeste,Alagoas,Feminino,45 a 59 anos,Parda,"Espírita Kardecista, Espiritualista",Fundamental,2,3,Pouco melhor,3
+1459,Centro-Oeste,Goiás,Masculino,25 a 34 anos,Parda,"Espírita Kardecista, Espiritualista",Superior,3,4,Muito melhor,Não votou
+1460,Nordeste,Maranhão,Masculino,25 a 34 anos,Parda,Não Tem Religião,Médio,1,1,Pouco melhor,Não votou
+1461,Centro-Oeste,Goiás,Masculino,45 a 59 anos,Parda,Católica,Superior,2,2,Pouco melhor,1
+1462,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Católica,Superior,2,2,Muito pior,Não votou
+1463,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Médio,4,1,Pouco pior,1
+1464,Sul,Paraná,Feminino,35 a 44 anos,Branca,Evangélica,Fundamental,3,3,Igual,1
+1465,Sudeste,São Paulo,Feminino,60 anos ou mais,Preta,"Espírita Kardecista, Espiritualista",Superior,3,3,Muito melhor,1
+1466,Sul,Rio Grande Do Sul,Masculino,60 anos ou mais,Branca,Não Tem Religião,Médio,3,3,Muito pior,1
+1467,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Branca,Evangélica,Fundamental,1,1,Pouco melhor,1
+1468,Centro-Oeste,Mato Grosso,Feminino,35 a 44 anos,Parda,Católica,Médio,3,3,Igual,Não votou
+1469,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Católica,Fundamental,3,4,Muito pior,2
+1470,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Católica,Médio,3,1,Muito melhor,1
+1471,Sul,Paraná,Masculino,25 a 34 anos,Branca,Católica,Superior,4,4,Pouco melhor,1
+1472,Sul,Paraná,Feminino,60 anos ou mais,Branca,Católica,Superior,3,3,Pouco pior,2
+1473,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Parda,Evangélica,Fundamental,1,2,Muito melhor,1
+1474,Centro-Oeste,Mato Grosso,Feminino,60 anos ou mais,Parda,Católica,Fundamental,4,Não sabe,Muito pior,Não votou
+1475,Nordeste,Piauí,Feminino,18 a 24 anos,Parda,Não Tem Religião,Médio,3,1,Pouco melhor,2
+1476,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Fundamental,4,1,Muito pior,Não votou
+1477,Sudeste,São Paulo,Masculino,35 a 44 anos,Preta,Não Tem Religião,Médio,1,3,Pouco pior,1
+1478,Nordeste,Maranhão,Feminino,45 a 59 anos,Parda,Católica,Fundamental,1,3,Muito pior,2
+1479,Nordeste,Maranhão,Masculino,18 a 24 anos,Parda,Evangélica,Superior,2,3,Pouco melhor,1
+1480,Nordeste,Pernambuco,Masculino,35 a 44 anos,Branca,Católica,Médio,2,2,Igual,2
+1481,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Umbanda,Médio,3,3,Pouco melhor,Não votou
+1482,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Evangélica,Médio,4,3,Muito pior,2
+1483,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Parda,Católica,Fundamental,4,1,Pouco pior,2
+1484,Sul,Paraná,Feminino,60 anos ou mais,Branca,Católica,Superior,3,4,Igual,1
+1485,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Evangélica,Médio,4,1,Muito pior,2
+1486,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,Católica,Superior,2,4,Muito melhor,1
+1487,Nordeste,Rio Grande Do Norte,Feminino,35 a 44 anos,Parda,Católica,Fundamental,3,1,Pouco melhor,2
+1488,Centro-Oeste,Mato Grosso Do Sul,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Igual,1
+1489,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Católica,Médio,1,1,Pouco melhor,1
+1490,Norte,Pará,Masculino,35 a 44 anos,Outras,Católica,Superior,1,2,Pouco pior,1
+1491,Nordeste,Pernambuco,Feminino,25 a 34 anos,Branca,Não Tem Religião,Médio,4,3,Muito pior,2
+1492,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Não Tem Religião,Médio,3,3,Pouco pior,Não votou
+1493,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Parda,Evangélica,Superior,3,3,Igual,1
+1494,Sudeste,Espírito Santo,Masculino,35 a 44 anos,Parda,Evangélica,Médio,2,2,Pouco melhor,1
+1495,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Evangélica,Médio,4,3,Igual,2
+1496,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Candomblé,Superior,4,3,Pouco melhor,2
+1497,Centro-Oeste,Goiás,Feminino,25 a 34 anos,Parda,Não Tem Religião,Médio,1,2,Muito melhor,1
+1498,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Católica,Médio,2,1,Igual,2
+1499,Sul,Paraná,Masculino,60 anos ou mais,Branca,Católica,Médio,3,3,Muito melhor,6
+1500,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Outras,Católica,Fundamental,1,1,Pouco pior,2
+1501,Sul,Rio Grande Do Sul,Feminino,18 a 24 anos,Branca,Não Tem Religião,Superior,3,3,Pouco pior,2
+1502,Centro-Oeste,Mato Grosso,Feminino,60 anos ou mais,Branca,Não Tem Religião,Fundamental,4,4,Muito pior,1
+1503,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Católica,Superior,4,1,Muito pior,2
+1504,Sul,Santa Catarina,Masculino,25 a 34 anos,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,4,4,Muito melhor,1
+1505,Nordeste,Maranhão,Feminino,60 anos ou mais,Parda,Católica,Fundamental,1,Não sabe,Igual,2
+1506,Norte,Pará,Feminino,60 anos ou mais,Parda,Católica,Fundamental,3,1,Muito pior,Não votou
+1507,Sul,Rio Grande Do Sul,Masculino,35 a 44 anos,Preta,Evangélica,Médio,4,4,Pouco melhor,2
+1508,Sudeste,Rio De Janeiro,Feminino,25 a 34 anos,Parda,Não Tem Religião,Superior,3,3,Pouco pior,Não votou
+1509,Nordeste,Bahia,Feminino,45 a 59 anos,Parda,"Mórmon, Adventista, Testemunha De Jeová",Médio,Não sabe,2,Muito pior,Não votou
+1510,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Branca,Católica,Fundamental,3,2,Pouco pior,1
+1511,Sudeste,São Paulo,Masculino,45 a 59 anos,Preta,Católica,Médio,1,3,Muito melhor,1
+1512,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Católica,Superior,3,4,Pouco melhor,2
+1513,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Branca,Católica,Superior,1,2,Pouco pior,2
+1514,Nordeste,Ceará,Feminino,60 anos ou mais,Parda,Católica,Fundamental,1,4,Igual,2
+1515,Norte,Tocantins,Masculino,25 a 34 anos,Parda,Não Tem Religião,Superior,2,2,Muito pior,2
+1516,Centro-Oeste,Distrito Federal,Masculino,25 a 34 anos,Branca,Católica,Fundamental,3,2,Igual,Não votou
+1517,Norte,Amapá,Feminino,35 a 44 anos,Parda,Católica,Médio,2,3,Igual,1
+1518,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Evangélica,Fundamental,3,4,Pouco melhor,1
+1519,Sudeste,Rio De Janeiro,Feminino,35 a 44 anos,Branca,Evangélica,Superior,2,3,Pouco melhor,1
+1520,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Católica,Superior,1,4,Pouco pior,1
+1521,Nordeste,Bahia,Feminino,60 anos ou mais,Parda,Evangélica,Médio,3,2,Muito pior,2
+1522,Sudeste,São Paulo,Masculino,25 a 34 anos,Parda,Evangélica,Superior,3,1,Igual,1
+1523,Nordeste,Bahia,Feminino,35 a 44 anos,Preta,Evangélica,Superior,1,1,Muito pior,2
+1524,Sudeste,Minas Gerais,Masculino,18 a 24 anos,Parda,"Mórmon, Adventista, Testemunha De Jeová",Médio,2,2,Pouco melhor,Não votou
+1525,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Evangélica,Fundamental,4,1,Muito pior,2
+1526,Sul,Paraná,Masculino,25 a 34 anos,Branca,Católica,Médio,3,2,Pouco melhor,1
+1527,Nordeste,Alagoas,Feminino,25 a 34 anos,Outras,"Espírita Kardecista, Espiritualista",Superior,3,2,Igual,2
+1528,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Evangélica,Médio,2,Não sabe,Igual,Não votou
+1529,Sudeste,São Paulo,Feminino,35 a 44 anos,Outras,Evangélica,Superior,2,4,Igual,1
+1530,Norte,Pará,Feminino,25 a 34 anos,Preta,Católica,Superior,4,1,Pouco melhor,2
+1531,Sudeste,Rio De Janeiro,Masculino,60 anos ou mais,Parda,Católica,Fundamental,3,3,Muito pior,2
+1532,Nordeste,Rio Grande Do Norte,Feminino,45 a 59 anos,Branca,Católica,Superior,1,3,Muito pior,3
+1533,Sudeste,Rio De Janeiro,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,1,Muito pior,1
+1534,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Não Tem Religião,Médio,Não sabe,3,Igual,6
+1535,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Branca,Católica,Superior,3,1,Pouco pior,2
+1536,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Parda,Evangélica,Médio,3,2,Pouco pior,1
+1537,Centro-Oeste,Goiás,Masculino,60 anos ou mais,Branca,Católica,Superior,2,3,Muito melhor,1
+1538,Nordeste,Pernambuco,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Pouco melhor,1
+1539,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,Católica,Médio,3,3,Muito pior,2
+1540,Nordeste,Alagoas,Masculino,35 a 44 anos,Parda,Católica,Médio,1,1,Igual,Não votou
+1541,Nordeste,Piauí,Masculino,35 a 44 anos,Parda,"Mórmon, Adventista, Testemunha De Jeová",Superior,3,3,Pouco pior,3
+1542,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Parda,Católica,Superior,2,2,Muito pior,2
+1543,Nordeste,Pernambuco,Feminino,25 a 34 anos,Preta,Evangélica,Superior,3,3,Igual,2
+1544,Nordeste,Maranhão,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,3,3,Muito pior,1
+1545,Sudeste,São Paulo,Masculino,35 a 44 anos,Preta,Evangélica,Médio,4,4,Muito melhor,1
+1546,Nordeste,Pernambuco,Masculino,45 a 59 anos,Parda,Evangélica,Fundamental,3,1,Muito pior,2
+1547,Nordeste,Piauí,Masculino,18 a 24 anos,Parda,Católica,Fundamental,1,2,Pouco pior,2
+1548,Nordeste,Bahia,Masculino,45 a 59 anos,Branca,Católica,Fundamental,4,2,Pouco melhor,2
+1549,Nordeste,Rio Grande Do Norte,Masculino,60 anos ou mais,Branca,Católica,Fundamental,3,1,Muito pior,2
+1550,Sul,Rio Grande Do Sul,Feminino,25 a 34 anos,Branca,Evangélica,Médio,2,2,Pouco melhor,1
+1551,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Não Tem Religião,Superior,4,2,Muito pior,2
+1552,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Evangélica,Superior,4,4,Igual,4
+1553,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Não Tem Religião,Médio,1,4,Pouco melhor,1
+1554,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Branca,Evangélica,Fundamental,2,1,Igual,2
+1555,Centro-Oeste,Goiás,Masculino,25 a 34 anos,Branca,"Espírita Kardecista, Espiritualista",Superior,1,1,Igual,Não votou
+1556,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Evangélica,Médio,4,3,Muito pior,2
+1557,Nordeste,Pernambuco,Masculino,45 a 59 anos,Outras,Não Tem Religião,Fundamental,4,3,Pouco pior,2
+1558,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Médio,4,3,Não sabe,2
+1559,Norte,Rondônia,Feminino,25 a 34 anos,Parda,Evangélica,Médio,4,2,Muito melhor,1
+1560,Nordeste,Piauí,Masculino,35 a 44 anos,Outras,Católica,Fundamental,1,1,Pouco pior,2
+1561,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Evangélica,Fundamental,3,3,Muito pior,2
+1562,Centro-Oeste,Goiás,Feminino,25 a 34 anos,Parda,Católica,Superior,2,2,Pouco pior,Não votou
+1563,Nordeste,Maranhão,Feminino,45 a 59 anos,Parda,Católica,Superior,4,1,Pouco pior,2
+1564,Norte,Amazonas,Masculino,18 a 24 anos,Parda,Evangélica,Médio,1,3,Igual,Não votou
+1565,Nordeste,Rio Grande Do Norte,Masculino,25 a 34 anos,Parda,Pagão,Médio,2,2,Pouco melhor,2
+1566,Sudeste,Rio De Janeiro,Masculino,25 a 34 anos,Parda,"Espírita Kardecista, Espiritualista",Superior,3,1,Pouco pior,2
+1567,Nordeste,Rio Grande Do Norte,Masculino,45 a 59 anos,Branca,Evangélica,Superior,2,4,Igual,1
+1568,Sul,Paraná,Masculino,45 a 59 anos,Branca,Evangélica,Fundamental,1,3,Igual,1
+1569,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Fundamental,2,2,Pouco pior,2
+1570,Nordeste,Pernambuco,Masculino,25 a 34 anos,Outras,Evangélica,Médio,1,2,Igual,2
+1571,Nordeste,Maranhão,Feminino,18 a 24 anos,Branca,Católica,Médio,4,3,Muito pior,Não votou
+1572,Centro-Oeste,Distrito Federal,Masculino,16 e 17 anos,Parda,Não Tem Religião,Médio,2,1,Pouco melhor,Não votou
+1573,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Branca,Católica,Superior,1,4,Muito melhor,1
+1574,Sudeste,São Paulo,Masculino,18 a 24 anos,Preta,Umbanda,Médio,4,3,Igual,4
+1575,Nordeste,Piauí,Feminino,25 a 34 anos,Parda,Não Tem Religião,Médio,4,3,Muito pior,4
+1576,Nordeste,Pernambuco,Masculino,60 anos ou mais,Outras,Católica,Fundamental,1,1,Muito pior,2
+1577,Sul,Santa Catarina,Feminino,60 anos ou mais,Branca,É Ateu/Agnóstico/ Não Acredita Em Deus,Médio,4,2,Muito pior,2
+1578,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Branca,Católica,Médio,2,2,Igual,2
+1579,Nordeste,Maranhão,Feminino,45 a 59 anos,Parda,Católica,Fundamental,3,4,Pouco pior,2
+1580,Sudeste,São Paulo,Masculino,25 a 34 anos,Preta,Evangélica,Médio,3,3,Pouco melhor,3
+1581,Nordeste,Pernambuco,Feminino,60 anos ou mais,Parda,Evangélica,Médio,3,3,Pouco pior,1
+1582,Sudeste,Rio De Janeiro,Masculino,25 a 34 anos,Branca,Católica,Superior,2,2,Pouco melhor,1
+1583,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Evangélica,Fundamental,3,3,Pouco melhor,2
+1584,Nordeste,Alagoas,Masculino,45 a 59 anos,Outras,Evangélica,Fundamental,4,4,Muito melhor,1
+1585,Nordeste,Maranhão,Masculino,35 a 44 anos,Preta,Evangélica,Médio,3,3,Igual,1
+1586,Sul,Rio Grande Do Sul,Feminino,18 a 24 anos,Branca,Católica,Superior,3,3,Muito melhor,1
+1587,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Não Tem Religião,Superior,3,Não sabe,Muito pior,2
+1588,Sudeste,Rio De Janeiro,Masculino,18 a 24 anos,Parda,Evangélica,Médio,3,3,Igual,1
+1589,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,Católica,Fundamental,3,3,Pouco melhor,Não votou
+1590,Sudeste,São Paulo,Feminino,60 anos ou mais,Parda,Católica,Superior,1,1,Pouco melhor,1
+1591,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Parda,Evangélica,Superior,3,2,Pouco melhor,6
+1592,Nordeste,Piauí,Masculino,35 a 44 anos,Parda,Católica,Fundamental,4,3,Igual,Não votou
+1593,Nordeste,Ceará,Feminino,45 a 59 anos,Parda,Candomblé,Superior,1,1,Muito pior,2
+1594,Nordeste,Bahia,Masculino,45 a 59 anos,Preta,Católica,Superior,2,1,Muito pior,2
+1595,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Católica,Médio,3,3,Muito pior,6
+1596,Nordeste,Piauí,Masculino,45 a 59 anos,Parda,Evangélica,Fundamental,1,3,Muito melhor,1
+1597,Sudeste,São Paulo,Masculino,18 a 24 anos,Parda,Evangélica,Médio,2,2,Pouco melhor,1
+1598,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Branca,Católica,Fundamental,3,4,Muito pior,2
+1599,Sul,Paraná,Masculino,45 a 59 anos,Branca,Católica,Médio,1,4,Muito melhor,1
+1600,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Branca,Católica,Superior,3,3,Pouco melhor,1
+1601,Centro-Oeste,Distrito Federal,Feminino,18 a 24 anos,Preta,Evangélica,Médio,3,3,Muito melhor,Não votou
+1602,Norte,Pará,Feminino,16 e 17 anos,Parda,Evangélica,Médio,4,4,Pouco melhor,Não votou
+1603,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Não Tem Religião,Médio,2,2,Igual,2
+1604,Nordeste,Rio Grande Do Norte,Feminino,35 a 44 anos,Branca,Candomblé,Fundamental,Não sabe,3,Muito melhor,2
+1605,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Evangélica,Superior,2,1,Pouco melhor,2
+1606,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Branca,Católica,Fundamental,3,3,Pouco pior,1
+1607,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Católica,Superior,3,2,Muito pior,2
+1608,Sul,Paraná,Feminino,60 anos ou mais,Parda,Católica,Superior,2,2,Pouco melhor,1
+1609,Nordeste,Ceará,Masculino,45 a 59 anos,Preta,Católica,Fundamental,4,1,Pouco pior,2
+1610,Sudeste,Rio De Janeiro,Masculino,60 anos ou mais,Parda,Evangélica,Superior,3,4,Muito melhor,1
+1611,Sul,Paraná,Feminino,45 a 59 anos,Branca,Católica,Médio,4,4,Não sabe,1
+1612,Sul,Rio Grande Do Sul,Masculino,45 a 59 anos,Preta,Católica,Fundamental,3,2,Pouco pior,2
+1613,Nordeste,Maranhão,Masculino,18 a 24 anos,Parda,Católica,Médio,3,3,Muito pior,2
+1614,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Preta,Não Tem Religião,Médio,3,3,Pouco melhor,Não votou
+1615,Sudeste,Rio De Janeiro,Feminino,45 a 59 anos,Parda,Católica,Superior,3,3,Pouco pior,Não votou
+1616,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Médio,3,3,Muito melhor,1
+1617,Norte,Rondônia,Feminino,18 a 24 anos,Branca,Evangélica,Médio,2,3,Pouco melhor,1
+1618,Nordeste,Maranhão,Masculino,45 a 59 anos,Parda,Católica,Médio,1,1,Muito pior,2
+1619,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Parda,Católica,Fundamental,3,3,Pouco melhor,6
+1620,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Católica,Médio,2,2,Pouco melhor,1
+1621,Sul,Paraná,Masculino,35 a 44 anos,Parda,Não Tem Religião,Médio,2,3,Pouco melhor,1
+1622,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Parda,Católica,Fundamental,2,3,Pouco pior,2
+1623,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Pouco pior,1
+1624,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Branca,"Espírita Kardecista, Espiritualista",Médio,4,4,Muito pior,Não votou
+1625,Nordeste,Ceará,Feminino,25 a 34 anos,Parda,Católica,Superior,4,1,Pouco pior,Não votou
+1626,Sudeste,Rio De Janeiro,Feminino,18 a 24 anos,Preta,Católica,Médio,3,1,Pouco pior,2
+1627,Sudeste,São Paulo,Feminino,18 a 24 anos,Branca,Não Tem Religião,Médio,3,1,Pouco pior,3
+1628,Nordeste,Pernambuco,Feminino,25 a 34 anos,Parda,Não Tem Religião,Médio,3,2,Muito pior,2
+1629,Sudeste,São Paulo,Feminino,60 anos ou mais,Branca,Evangélica,Fundamental,1,4,Muito melhor,1
+1630,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Branca,Não Tem Religião,Superior,2,3,Pouco melhor,6
+1631,Norte,Amazonas,Feminino,35 a 44 anos,Parda,Católica,Superior,1,3,Muito pior,2
+1632,Sudeste,Minas Gerais,Feminino,45 a 59 anos,Preta,Católica,Superior,4,1,Pouco pior,2
+1633,Norte,Pará,Masculino,25 a 34 anos,Parda,Católica,Médio,1,1,Muito pior,2
+1634,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Não Tem Religião,Fundamental,3,3,Não respondeu,Não votou
+1635,Sul,Paraná,Feminino,25 a 34 anos,Branca,Evangélica,Fundamental,2,2,Muito pior,2
+1636,Nordeste,Maranhão,Masculino,25 a 34 anos,Parda,Evangélica,Fundamental,1,1,Muito melhor,1
+1637,Sudeste,São Paulo,Feminino,18 a 24 anos,Branca,Não Tem Religião,Médio,2,2,Pouco pior,2
+1638,Nordeste,Piauí,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,2,Muito pior,2
+1639,Centro-Oeste,Goiás,Feminino,25 a 34 anos,Parda,Evangélica,Médio,1,1,Pouco melhor,2
+1640,Sul,Paraná,Feminino,45 a 59 anos,Parda,Católica,Fundamental,4,1,Muito pior,2
+1641,Nordeste,Piauí,Feminino,45 a 59 anos,Parda,Católica,Médio,4,3,Pouco pior,1
+1642,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,Evangélica,Médio,2,2,Pouco pior,3
+1643,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Católica,Médio,3,2,Pouco melhor,6
+1644,Norte,Amazonas,Feminino,16 e 17 anos,Parda,Católica,Médio,4,4,Muito pior,2
+1645,Nordeste,Paraíba,Masculino,45 a 59 anos,Preta,Católica,Fundamental,1,1,Pouco melhor,2
+1646,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Parda,Evangélica,Médio,2,3,Pouco pior,1
+1647,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Não Tem Religião,Superior,4,4,Pouco pior,3
+1648,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,"Mórmon, Adventista, Testemunha De Jeová",Superior,1,2,Pouco melhor,Não votou
+1649,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,Católica,Superior,3,3,Pouco melhor,1
+1650,Nordeste,Alagoas,Masculino,60 anos ou mais,Parda,Católica,Fundamental,2,1,Pouco pior,2
+1651,Norte,Pará,Feminino,60 anos ou mais,Parda,Católica,Fundamental,3,4,Igual,2
+1652,Sudeste,São Paulo,Feminino,60 anos ou mais,Preta,Católica,Médio,3,3,Pouco melhor,2
+1653,Centro-Oeste,Mato Grosso,Masculino,25 a 34 anos,Branca,Evangélica,Médio,4,3,Muito melhor,1
+1654,Nordeste,Ceará,Feminino,25 a 34 anos,Preta,Evangélica,Médio,4,4,Pouco melhor,1
+1655,Sul,Rio Grande Do Sul,Masculino,60 anos ou mais,Preta,Católica,Superior,2,2,Pouco pior,2
+1656,Sudeste,São Paulo,Masculino,18 a 24 anos,Preta,Não Tem Religião,Médio,3,1,Igual,2
+1657,Centro-Oeste,Distrito Federal,Masculino,45 a 59 anos,Preta,Católica,Fundamental,4,4,Pouco pior,1
+1658,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Católica,Superior,4,2,Pouco melhor,1
+1659,Nordeste,Maranhão,Masculino,18 a 24 anos,Parda,Não Tem Religião,Médio,2,2,Pouco pior,Não votou
+1660,Sul,Paraná,Masculino,45 a 59 anos,Branca,Judaica,Fundamental,4,4,Igual,6
+1661,Sudeste,Rio De Janeiro,Feminino,25 a 34 anos,Parda,Evangélica,Fundamental,3,3,Pouco pior,2
+1662,Sul,Rio Grande Do Sul,Feminino,60 anos ou mais,Branca,"Espírita Kardecista, Espiritualista",Médio,2,1,Muito pior,2
+1663,Sul,Paraná,Feminino,35 a 44 anos,Branca,Evangélica,Médio,3,2,Não sabe,Não votou
+1664,Norte,Pará,Feminino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Pouco pior,2
+1665,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Preta,É Ateu/Agnóstico/ Não Acredita Em Deus,Fundamental,3,3,Igual,Não votou
+1666,Nordeste,Maranhão,Feminino,25 a 34 anos,Parda,Católica,Superior,2,2,Muito pior,2
+1667,Sul,Paraná,Feminino,45 a 59 anos,Branca,Católica,Superior,3,2,Pouco pior,2
+1668,Norte,Amapá,Masculino,35 a 44 anos,Branca,Católica,Médio,1,3,Pouco melhor,1
+1669,Sul,Rio Grande Do Sul,Feminino,18 a 24 anos,Preta,Não Tem Religião,Médio,2,2,Muito pior,2
+1670,Nordeste,Alagoas,Masculino,60 anos ou mais,Outras,Evangélica,Fundamental,1,4,Muito melhor,1
+1671,Nordeste,Piauí,Masculino,25 a 34 anos,Parda,Evangélica,Médio,3,3,Pouco melhor,3
+1672,Centro-Oeste,Goiás,Feminino,35 a 44 anos,Outras,Católica,Superior,4,4,Pouco melhor,4
+1673,Nordeste,Bahia,Feminino,60 anos ou mais,Preta,Católica,Médio,4,3,Igual,2
+1674,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Médio,1,3,Pouco pior,1
+1675,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Branca,Católica,Médio,4,3,Pouco melhor,2
+1676,Nordeste,Piauí,Feminino,16 e 17 anos,Parda,Católica,Médio,3,2,Pouco pior,2
+1677,Sudeste,Rio De Janeiro,Feminino,18 a 24 anos,Parda,"Espírita Kardecista, Espiritualista",Médio,3,2,Pouco melhor,Não votou
+1678,Sul,Santa Catarina,Masculino,45 a 59 anos,Branca,Evangélica,Médio,1,4,Muito melhor,1
+1679,Nordeste,Ceará,Masculino,35 a 44 anos,Branca,Evangélica,Fundamental,4,4,Muito pior,1
+1680,Nordeste,Ceará,Feminino,25 a 34 anos,Parda,Católica,Fundamental,1,1,Igual,2
+1681,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Evangélica,Superior,1,1,Muito melhor,1
+1682,Nordeste,Ceará,Feminino,35 a 44 anos,Parda,Católica,Médio,3,3,Igual,2
+1683,Norte,Acre,Feminino,18 a 24 anos,Parda,Evangélica,Médio,2,2,Pouco melhor,1
+1684,Norte,Amapá,Masculino,25 a 34 anos,Preta,Católica,Superior,3,3,Pouco melhor,1
+1685,Nordeste,Paraíba,Feminino,25 a 34 anos,Parda,Evangélica,Médio,3,1,Pouco melhor,1
+1686,Sul,Paraná,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Pouco melhor,1
+1687,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Católica,Médio,1,1,Igual,1
+1688,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Evangélica,Superior,3,1,Muito pior,2
+1689,Sudeste,Minas Gerais,Feminino,60 anos ou mais,Parda,Católica,Fundamental,3,3,Pouco melhor,2
+1690,Nordeste,Ceará,Feminino,45 a 59 anos,Outras,Católica,Fundamental,1,1,Muito pior,2
+1691,Sudeste,São Paulo,Feminino,25 a 34 anos,Branca,Católica,Superior,2,3,Pouco melhor,1
+1692,Nordeste,Rio Grande Do Norte,Feminino,60 anos ou mais,Branca,Católica,Médio,4,3,Muito pior,2
+1693,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Evangélica,Superior,2,4,Muito melhor,1
+1694,Sudeste,Rio De Janeiro,Masculino,18 a 24 anos,Parda,Não Tem Religião,Superior,4,3,Pouco pior,1
+1695,Sul,Santa Catarina,Feminino,60 anos ou mais,Branca,Católica,Fundamental,1,1,Muito pior,2
+1696,Nordeste,Maranhão,Masculino,45 a 59 anos,Parda,Católica,Fundamental,1,1,Muito pior,2
+1697,Nordeste,Bahia,Feminino,45 a 59 anos,Preta,Católica,Médio,Não sabe,3,Muito pior,2
+1698,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Evangélica,Médio,1,4,Muito melhor,1
+1699,Sudeste,São Paulo,Masculino,35 a 44 anos,Branca,Evangélica,Superior,2,4,Muito melhor,1
+1700,Sudeste,São Paulo,Feminino,18 a 24 anos,Branca,Católica,Superior,3,3,Pouco pior,Não votou
+1701,Sul,Paraná,Feminino,25 a 34 anos,Parda,Evangélica,Médio,2,1,Muito pior,Não votou
+1702,Nordeste,Bahia,Feminino,18 a 24 anos,Branca,Católica,Médio,1,3,Igual,1
+1703,Sudeste,São Paulo,Feminino,60 anos ou mais,Parda,Evangélica,Médio,2,3,Pouco melhor,1
+1704,Norte,Tocantins,Masculino,25 a 34 anos,Preta,Não Tem Religião,Médio,2,2,Muito pior,Não votou
+1705,Norte,Amazonas,Feminino,60 anos ou mais,Preta,Católica,Médio,3,3,Igual,2
+1706,Centro-Oeste,Goiás,Masculino,18 a 24 anos,Preta,Não Tem Religião,Superior,3,2,Pouco pior,2
+1707,Sudeste,Minas Gerais,Masculino,60 anos ou mais,Preta,Não Tem Religião,Fundamental,3,4,Igual,Não votou
+1708,Norte,Amazonas,Masculino,45 a 59 anos,Parda,Católica,Médio,4,4,Muito pior,2
+1709,Sul,Rio Grande Do Sul,Masculino,35 a 44 anos,Branca,Católica,Médio,2,2,Pouco pior,2
+1710,Sudeste,São Paulo,Masculino,25 a 34 anos,Outras,Não Tem Religião,Fundamental,4,3,Muito pior,2
+1711,Nordeste,Alagoas,Feminino,45 a 59 anos,Branca,Evangélica,Médio,3,3,Pouco melhor,1
+1712,Centro-Oeste,Goiás,Masculino,35 a 44 anos,Branca,Católica,Médio,2,3,Pouco melhor,1
+1713,Nordeste,Maranhão,Masculino,45 a 59 anos,Branca,Católica,Fundamental,1,2,Muito melhor,1
+1714,Sudeste,Minas Gerais,Feminino,18 a 24 anos,Parda,Evangélica,Médio,3,1,Pouco melhor,1
+1715,Centro-Oeste,Mato Grosso,Masculino,45 a 59 anos,Parda,Católica,Médio,4,3,Igual,6
+1716,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Umbanda,Médio,4,4,Igual,1
+1717,Nordeste,Ceará,Masculino,25 a 34 anos,Preta,Católica,Médio,2,2,Pouco melhor,1
+1718,Sul,Paraná,Feminino,45 a 59 anos,Parda,Não Tem Religião,Médio,1,3,Pouco melhor,1
+1719,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Evangélica,Médio,1,1,Muito pior,2
+1720,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Branca,Católica,Superior,1,4,Pouco melhor,1
+1721,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Católica,Médio,4,3,Muito pior,Não votou
+1722,Sul,Santa Catarina,Feminino,60 anos ou mais,Branca,Católica,Fundamental,1,2,Muito pior,2
+1723,Nordeste,Maranhão,Masculino,18 a 24 anos,Parda,Não Tem Religião,Médio,2,3,Igual,1
+1724,Nordeste,Ceará,Feminino,60 anos ou mais,Branca,Católica,Fundamental,1,3,Muito melhor,2
+1725,Sul,Rio Grande Do Sul,Masculino,25 a 34 anos,Branca,Evangélica,Médio,2,3,Pouco melhor,1
+1726,Nordeste,Maranhão,Masculino,60 anos ou mais,Branca,Evangélica,Fundamental,3,3,Pouco melhor,1
+1727,Sudeste,São Paulo,Feminino,45 a 59 anos,Preta,Evangélica,Médio,4,3,Muito pior,2
+1728,Sul,Paraná,Masculino,35 a 44 anos,Outras,Católica,Fundamental,1,1,Muito melhor,Não votou
+1729,Sudeste,Espírito Santo,Feminino,35 a 44 anos,Parda,Católica,Superior,1,3,Pouco pior,Não votou
+1730,Sul,Santa Catarina,Masculino,60 anos ou mais,Branca,Evangélica,Fundamental,4,2,Muito pior,1
+1731,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Branca,Católica,Médio,4,4,Muito pior,2
+1732,Sudeste,Rio De Janeiro,Feminino,35 a 44 anos,Parda,Católica,Médio,1,1,Muito pior,2
+1733,Sudeste,São Paulo,Feminino,18 a 24 anos,Parda,Evangélica,Médio,3,3,Pouco pior,Não votou
+1734,Norte,Amazonas,Masculino,45 a 59 anos,Parda,Católica,Médio,1,1,Igual,2
+1735,Norte,Pará,Feminino,18 a 24 anos,Parda,Católica,Médio,3,3,Muito pior,2
+1736,Sudeste,Rio De Janeiro,Feminino,45 a 59 anos,Parda,Evangélica,Fundamental,1,2,Muito pior,2
+1737,Sul,Paraná,Feminino,45 a 59 anos,Preta,Católica,Fundamental,2,3,Igual,2
+1738,Sudeste,Rio De Janeiro,Feminino,18 a 24 anos,Parda,Católica,Superior,3,2,Muito pior,2
+1739,Sudeste,Minas Gerais,Masculino,25 a 34 anos,Parda,"Espírita Kardecista, Espiritualista",Médio,3,2,Muito melhor,2
+1740,Sudeste,São Paulo,Feminino,60 anos ou mais,Preta,Candomblé,Fundamental,4,4,Não sabe,Não votou
+1741,Sul,Paraná,Feminino,25 a 34 anos,Branca,Evangélica,Superior,2,2,Pouco pior,2
+1742,Nordeste,Piauí,Feminino,35 a 44 anos,Parda,Não Tem Religião,Fundamental,Não sabe,3,Pouco pior,2
+1743,Nordeste,Alagoas,Feminino,25 a 34 anos,Parda,Católica,Superior,1,1,Muito pior,2
+1744,Centro-Oeste,Distrito Federal,Masculino,25 a 34 anos,Branca,Judaica,Superior,3,3,Muito melhor,1
+1745,Sudeste,Rio De Janeiro,Feminino,25 a 34 anos,Parda,Católica,Médio,1,1,Pouco melhor,Não votou
+1746,Nordeste,Bahia,Feminino,25 a 34 anos,Parda,Católica,Médio,4,3,Igual,2
+1747,Sudeste,São Paulo,Masculino,25 a 34 anos,Branca,Evangélica,Superior,2,2,Igual,2
+1748,Sudeste,São Paulo,Feminino,35 a 44 anos,Branca,Católica,Fundamental,2,Não sabe,Igual,2
+1749,Sul,Paraná,Feminino,45 a 59 anos,Branca,Católica,Superior,3,3,Pouco pior,2
+1750,Nordeste,Ceará,Masculino,18 a 24 anos,Preta,Evangélica,Superior,1,4,Muito melhor,1
+1751,Sudeste,Espírito Santo,Feminino,45 a 59 anos,Branca,"Espírita Kardecista, Espiritualista",Médio,2,4,Pouco melhor,1
+1752,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Evangélica,Médio,3,2,Pouco pior,2
+1753,Sudeste,Minas Gerais,Masculino,45 a 59 anos,Parda,Católica,Fundamental,1,3,Pouco melhor,1
+1754,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Médio,3,2,Muito pior,2
+1755,Norte,Pará,Masculino,45 a 59 anos,Branca,Católica,Fundamental,4,1,Igual,1
+1756,Nordeste,Maranhão,Feminino,25 a 34 anos,Parda,Evangélica,Médio,3,3,Muito pior,3
+1757,Norte,Amazonas,Feminino,45 a 59 anos,Outras,Evangélica,Fundamental,Não sabe,Não sabe,Pouco melhor,2
+1758,Nordeste,Pernambuco,Feminino,25 a 34 anos,Preta,Judaica,Médio,1,3,Pouco melhor,1
+1759,Nordeste,Pernambuco,Masculino,45 a 59 anos,Branca,Não Tem Religião,Fundamental,4,4,Muito pior,2
+1760,Nordeste,Alagoas,Feminino,18 a 24 anos,Parda,Evangélica,Médio,2,3,Muito pior,Não votou
+1761,Sudeste,São Paulo,Masculino,45 a 59 anos,Branca,Católica,Médio,4,1,Muito pior,2
+1762,Nordeste,Ceará,Feminino,18 a 24 anos,Parda,Católica,Fundamental,1,2,Pouco melhor,2
+1763,Nordeste,Maranhão,Masculino,25 a 34 anos,Branca,Evangélica,Médio,1,1,Pouco pior,2
+1764,Sul,Paraná,Feminino,25 a 34 anos,Outras,Não Tem Religião,Superior,2,2,Muito pior,2
+1765,Sudeste,Minas Gerais,Feminino,35 a 44 anos,Branca,Evangélica,Fundamental,2,2,Pouco pior,1
+1766,Sudeste,São Paulo,Feminino,25 a 34 anos,Parda,Candomblé,Superior,3,1,Muito pior,2
+1767,Norte,Amazonas,Feminino,35 a 44 anos,Parda,Evangélica,Médio,2,3,Igual,2
+1768,Sudeste,São Paulo,Masculino,60 anos ou mais,Branca,Católica,Fundamental,4,4,Muito pior,3
+1769,Norte,Amazonas,Feminino,18 a 24 anos,Parda,Evangélica,Superior,1,3,Pouco melhor,1
+1770,Nordeste,Piauí,Feminino,35 a 44 anos,Parda,Católica,Médio,2,1,Igual,2
+1771,Sudeste,São Paulo,Masculino,45 a 59 anos,Parda,Evangélica,Superior,3,3,Igual,1
+1772,Sudeste,São Paulo,Masculino,60 anos ou mais,Parda,Católica,Fundamental,4,3,Muito pior,2
+1773,Nordeste,Paraíba,Feminino,16 e 17 anos,Branca,Não Tem Religião,Médio,3,3,Muito pior,2
+1774,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Católica,Fundamental,1,3,Muito melhor,Não votou
+1775,Norte,Pará,Masculino,45 a 59 anos,Preta,Evangélica,Fundamental,3,1,Pouco melhor,2
+1776,Nordeste,Alagoas,Masculino,35 a 44 anos,Preta,Católica,Fundamental,3,3,Muito pior,2
+1777,Sudeste,São Paulo,Masculino,18 a 24 anos,Branca,Evangélica,Médio,3,3,Pouco pior,2
+1778,Nordeste,Rio Grande Do Norte,Feminino,18 a 24 anos,Outras,Católica,Médio,3,3,Muito pior,2
+1779,Sudeste,São Paulo,Feminino,18 a 24 anos,Preta,Evangélica,Médio,1,1,Muito pior,2
+1780,Sul,Santa Catarina,Masculino,35 a 44 anos,Preta,Evangélica,Fundamental,3,3,Pouco pior,2
+1781,Sudeste,São Paulo,Feminino,45 a 59 anos,Branca,Evangélica,Superior,1,3,Muito melhor,1
+1782,Sudeste,Minas Gerais,Feminino,25 a 34 anos,Parda,Católica,Médio,2,3,Pouco melhor,1
+1783,Sul,Santa Catarina,Feminino,45 a 59 anos,Outras,Católica,Fundamental,3,1,Muito pior,2
+1784,Sudeste,São Paulo,Feminino,35 a 44 anos,Parda,Católica,Médio,1,1,Igual,2
+1785,Nordeste,Ceará,Masculino,60 anos ou mais,Outras,Não Tem Religião,Fundamental,1,3,Muito pior,Não votou
+1786,Sudeste,Minas Gerais,Masculino,35 a 44 anos,Parda,Evangélica,Médio,1,3,Pouco melhor,2
+1787,Nordeste,Rio Grande Do Norte,Feminino,60 anos ou mais,Parda,Católica,Fundamental,4,2,Muito pior,2
+1788,Sudeste,São Paulo,Masculino,35 a 44 anos,Parda,Católica,Médio,1,2,Muito pior,2
+1789,Nordeste,Sergipe,Masculino,25 a 34 anos,Branca,Católica,Médio,4,3,Pouco melhor,1
+1790,Nordeste,Ceará,Feminino,35 a 44 anos,Parda,Evangélica,Médio,3,3,Pouco melhor,2
+1791,Sudeste,Minas Gerais,Masculino,18 a 24 anos,Branca,Católica,Superior,3,4,Igual,4
+1792,Sudeste,Rio De Janeiro,Feminino,60 anos ou mais,Branca,Católica,Fundamental,3,3,Muito pior,2
+1793,Sudeste,São Paulo,Feminino,45 a 59 anos,Parda,Evangélica,Médio,2,2,Muito melhor,1
+1794,Centro-Oeste,Distrito Federal,Masculino,45 a 59 anos,Parda,Católica,Fundamental,1,4,Muito pior,2
+1795,Nordeste,Sergipe,Masculino,45 a 59 anos,Parda,Católica,Médio,1,1,Muito pior,6
+1796,Nordeste,Bahia,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Igual,2
+1797,Nordeste,Pernambuco,Feminino,60 anos ou mais,Preta,Católica,Médio,4,3,Igual,2
+1798,Norte,Amapá,Feminino,18 a 24 anos,Parda,Católica,Médio,3,2,Igual,1
+1799,Nordeste,Maranhão,Masculino,45 a 59 anos,Parda,Católica,Fundamental,3,3,Igual,Não votou
+1800,Sudeste,Rio De Janeiro,Masculino,45 a 59 anos,Preta,Evangélica,Médio,2,4,Pouco melhor,Não votou

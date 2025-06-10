@@ -1,0 +1,77 @@
+---
+fontsize: 12pt
+author: Felipe Lamarca
+endnote: no
+---
+
+# Não-resposta
+
+## Wolf, C., Joye, D., Smith, T. W., & Fu, Y. (2016). The SAGE handbook of survey methodology. Sage. Chapter 27: Unit nonresponse.
+
+> Nonresponse can reduce the precision of a survey when the final number of respondents is smaller than intended. And nonresponse can result in bias when respondents differ from nonrespondents, or when the likelihood of participating in a survey is correlated with one of the core survey variables. (p. 410)
+
+> Nonresponse rates are neither the only nor the main problem. The empirical relationship between response rates and nonresponse bias is not strong (see Groves and Peytcheva, 2008; and Brick, 2013 for an overview). [...]. According to his [Bethlehem (2002)] model, nonresponse is not problematic if outcome variables are not related to response behavior. [...]. These studies clearly show that the focus should be on nonresponse bias rather than nonresponse rates. (p. 410)
+
+> Individual field outcomes can be placed in one of the following four categories: ineligibles; cases of unknown eligibility; eligible cases that are not interviewed (nonrespondents); and interviews (respondents). This classification looks deceptively simple, but in practice is rather complicated. (p. 410-411)
+
+> Some surveys allow substitution. This means that when the original sample unit does not respond, a replacement can be sought. According to the AAPOR, substitution is allowed as long as it is clearly reported. When substitution is allowed, selection probabilities are hard to determine, and the effect of substitution on nonresponse bias is hard to assess. For this reason, many high-quality surveys do not allow for substitution. (p. 411)
+
+> Assessing the elegibility of sample units, i.e., whether they belong to the target population, is an important part of the response rate calculation. This might be a simple procedure in general social surveys among the residents of a particular country, but could be difficult for specific surveys, e.g., members of minority ethnic groups. If screening questions have to be asked to identify members of particular subgroups, there is evidence that the membership of subgroups will be underestimated. (p. 411)
+
+> The factors behind nonresponse are context-dependent. One reason for this is that nonresponse mechanisms will differ according to the type of surveys. (p. 411)
+
+> _Exclusion_ and _noncoverage_ also have an effect on response rates. It will be easier to obtain a high response rate if difficult groups are excluded in advance, such as people who do not speak the majority language, people with menal or physical disabilities, people in non-residential households, and people who live in isolated areas. (p. 412)
+
+> The mode of the survey (see Chapter 11 of this Handbook) is directly related to response rates and nonresponse bias. (p. 412)
+
+> The obligation to analyze nonresponse bias would be appreciated by the _nonresponse measures_. Underlying this approach is the fact that the response rate is in reality not a good quality indicator, as there is not necessarily a linear relationship between response rates and nonresponse bias (Groves and Peytcheva, 2008). According to Bethlehem (2002), nonresponse will not result in bias if response behavior is not related to target variables. If it is, auxiliary variables that are related to both target variables and response behavior can be used to adjust for nonresponse bias. These auxiliary data can come from rich sampling frames, from linking population records and administrative data to sampling frames, and from call records and interviewer observations. _Nonresponse adjusters_ try to solve the problem in this way. (p. 413)
+
+## Anotações de aula
+
+Atualmente, a não-resposta é o problema mais difícil de lidar em survey. É um tema quente hoje nas revistas de pesquisa de opinião pública. **O problema não é a não-resposta em si, mas sim que a gente não sabe quem são essas pessoas que não respondem.** Com isso, estamos sob um risco enorme de que essas pessoas sejam sistematicamente diferentes das pessoas que respondem -- i.e., não sabemos qual é o PGD das pessoas que não respondem os surveys.
+
+A não-resposta não-ignorável é preocupante. Quando isso ocorre, não podemos ignorar o fato de que as pessoas optaram por não dar uma resposta ao meu instrumento e que não sabemos quem são essas pessoas.
+
+> Intuitivamente, o **viés de não-resposta** é similar ao problema de cobertura. Na prática, não estamos acessando uma parte da população.
+
+A magnitude disso é o quão diferentes são os grupos que respondem e que não respondem.
+
+### Taxa RR2
+
+$$
+\text{RR2} = \dfrac{I + P}{(I + P) + (R + NC + O) + (UH + UO)},
+$$
+
+sendo Completas (I), Parciais (P), Recusas (R), Não-contatos (NC) e Outros (O). 
+
+### Taxa de cooperação COOP1 da AAPOR:
+
+$$
+\dfrac{I}{(I+P) + R + O},
+$$
+
+sendo Completas (I), Parciais (P), Recusas (R), Não-contatos (NC), Outros (O). Esse é o módulo da não-resposta que é mais problemático. A pessoa entende do que se trata a pesquisa -- i.e., atendeu o telefone, mas optou por não participar da pesquisa.
+
+### Recusa -- REF1 da AAPOR
+
+$$
+\dfrac{R}{(I+P) + (R + NC + O) + (UH + UO)}
+$$
+
+### Mecanismos
+
+- **Leverage-salience:** a saliência do tópico para a pessoa respondente pode afetar a taxa de resposta
+- **Troca social:** há custos e benefícios em participar; confiança no _survey_, na pessoa entrevistadora, reciprocidades, educação, etc., afetam esses custos e benefícios.
+- **Big five:** conscientiousness e openness to experience aumentam a taxa de resposta
+- **Motivational bias:** pessoas mais engajadas e informadas em política são mais propensas a responder
+
+O grande hot topic hoje tem a ver com esse último ponto. Há cada vez mais estudos acumulando evidência comparativa de que a não-resposta parece ter relação com atitudes polarizadas 
+
+> Cavari e Freedman (2018) comparam a taxa de resposta com o resultado obtido em eleições nos Estados Unidos.
+
+### O que fazer?
+
+Não há mágica, mas há paliativos. Algumas possibilidades a nível de abordagem incluem utilizar diferentes formas de recrutamento, alteração de incentivos (idealmente financeiros, mas também saliência)
+
+E, do ponto de vista de desenho e pós-ajuste, podemos incorporar na amostragem probabilidades de inclusão diferentes por taxa de resposta esperada, e ponderação por variáveis relacionadas à cooperação.
+

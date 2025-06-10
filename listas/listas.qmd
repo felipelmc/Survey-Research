@@ -6,14 +6,22 @@ author: Felipe Lamarca
 endnote: no
 ---
 
-# Listas
+# Tarefas
 
-## Lista 1
+## Tarefa I
 
 Nesta tarefa implementamos 3 desenhos amostrais (AAS, AAS com estratificação e por conglomerados) usando dados de Macaé extraídos do Censo de 2010. O objetivo é avaliar o desempenho de cada desenho em vista da estimação da proporção de indivíduos alfabetizados no município. Observamos que a estimação no desenho estratificado é melhor que no desenho AAS do ponto de vista da variância da estimativa, mas há espaço para melhora a partir da escolha de variáveis de  estratificação mais adequadas. O desenho por conglomerado, como esperado, possui variância amostral maior que o desenho AAS. A magnitude dessa diferença varia de acordo com diferentes escolhas de tamanho de conglomerados e número de entrevistas em cada conglomerado. [[link do pdf]](lista1/lista1.pdf)
 
 **Nota:** 100/100
 
-## Lista 2
+## Tarefa II
 
 Nesta tarefa, reformulei para o formato *online* o questionário da pesquisa "Jogo do Bicho" do Datafolha (1988), com adaptações que o tornaram mais curto e focado na percepção sobre a legalização do jogo e na quantificação de quem já jogou. Evitei menções à ilegalidade e destaquei o anonimato para reduzir o viés de desejabilidade social. Também utilizei técnicas de *branching*, linguagem suavizada e perguntas mais concretas, seguindo recomendações metodológicas de @smyth2016designing e @krosnick2018questionnaire. As perguntas de perfil e mais sensíveis foram deixadas para o fim, com exceção da cidade e idade, que servem para filtrar os respondentes. [[link do pdf]](lista2/lista2.pdf)
+
+**Nota:** 100/100
+
+## Tarefa 3
+
+Nesta tarefa, utilizo dados do Estudo Eleitoral Brasileiro (ESEB) de 2022 para implementar duas abordagens de pós-ajuste simples: pós-estratificação e rake. O objetivo é avaliar em que medida essas estratégias de ponderação, aplicadas a uma amostra coletada através de um desenho amostral complexo, melhoram a qualidade das estimativas dos parâmetros populacionais. Observamos que ambas as abordagens corrigem parte das discrepâncias entre amostra e população. Embora os ajustes sejam geralmente sutis, em alguns casos as diferenças são substantivamente relevantes, especialmente em contextos de disputa acirrada, como o da eleição de 2022. Por fim, discute-se a possibilidadede incluir variáveis adicionais, como religião ou perfil político, para refinar futuras estratégias de ponderação. [[link do pdf]](lista3/lista3.pdf)
+
+
