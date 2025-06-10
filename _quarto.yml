@@ -18,7 +18,7 @@ book:
         - aulas/aula-8.qmd
         - aulas/aula-9.qmd
         - aulas/aula-10.qmd
-    - part: Listas
+    - part: Tarefas
       chapters:
         - listas/listas.qmd
     - part: Apresentação

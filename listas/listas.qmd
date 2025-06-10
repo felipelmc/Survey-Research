@@ -20,7 +20,7 @@ Nesta tarefa, reformulei para o formato *online* o questionário da pesquisa "Jo
 
 **Nota:** 100/100
 
-## Tarefa 3
+## Tarefa III
 
 Nesta tarefa, utilizo dados do Estudo Eleitoral Brasileiro (ESEB) de 2022 para implementar duas abordagens de pós-ajuste simples: pós-estratificação e rake. O objetivo é avaliar em que medida essas estratégias de ponderação, aplicadas a uma amostra coletada através de um desenho amostral complexo, melhoram a qualidade das estimativas dos parâmetros populacionais. Observamos que ambas as abordagens corrigem parte das discrepâncias entre amostra e população. Embora os ajustes sejam geralmente sutis, em alguns casos as diferenças são substantivamente relevantes, especialmente em contextos de disputa acirrada, como o da eleição de 2022. Por fim, discute-se a possibilidadede incluir variáveis adicionais, como religião ou perfil político, para refinar futuras estratégias de ponderação. [[link do pdf]](lista3/lista3.pdf)
 
