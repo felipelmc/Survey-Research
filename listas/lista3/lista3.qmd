@@ -391,7 +391,11 @@ Observe que, no código acima, utilizamos o argumento `partial` com o valor `TRU
 
 Conforme descrito pelo próprio Thomas Lumley, criador do pacote `survey` [neste post](https://stats.stackexchange.com/questions/504007/what-goes-wrong-with-post-stratification-if-a-combination-of-values-does-not-exi) do Cross Validated, há maneiras de contornar isso -- por exemplo, colapsando categorias de uma ou várias variáveis. No nosso caso, a variável mais provável de resolver o problema ao ser colapsada seria o estado; seria razoável, em particular, utilizar a região ao invés da unidade federativa. Não fiz testes nesse sentido, e assumo que se trata de uma limitação do processo de ponderação que implementei.
 
-Agora, vamos implementar o rake. Diferente da abordagem de pós-estratificação, o rake é um processo iterativo que procura aproximar as distribuições marginais do survey das distribuições marginais da população. Trata-se de uma abordagem especialmente útil em situações em que não podemos lançar mão das distribuições conjuntas das variáveis de ponderação. Poderíamos, com isso, ter incluído as distribuições marginais da variável de escolaridade e religião, que escolhemos ignorar para simplificar a execução da tarefa. O código abaixo implementa o rake: 
+Agora, vamos implementar o rake. Diferente da abordagem de pós-estratificação, o rake é um processo iterativo que procura aproximar as distribuições marginais do survey das distribuições marginais da população. Trata-se de uma abordagem especialmente útil em situações em que não podemos lançar mão das distribuições conjuntas das variáveis de ponderação. Poderíamos, com isso, ter incluído as distribuições marginais da variável de escolaridade e religião, que escolhemos ignorar para simplificar a execução da tarefa. 
+
+É importante deixar claro, ainda, que o rake também permite a inclusão de distribuições conjuntas, além das marginais [@lumley2011complex]. Nesse caso, bastaria incluir também uma ou algumas tabelas com as variáveis combinadas (semelhante, em certo sentido, à base de estratos). Não o fizemos neste caso porque esbarraríamos no mesmo problema da pós-estratificação -- isto é, há combinações de estratos na população que não existem na amostra. Novamente, trata-se de uma limitação do pós-ajuste implementado.
+
+O código abaixo implementa um rake simples, utilizando apenas as distribuições marginais: 
 
 ```{r}
 
