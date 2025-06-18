@@ -18,6 +18,9 @@ book:
         - aulas/aula-8.qmd
         - aulas/aula-9.qmd
         - aulas/aula-10.qmd
+        - aulas/aula-11.qmd
+        - aulas/aula-12.qmd
+        - aulas/aula-13.qmd
     - part: Tarefas
       chapters:
         - listas/listas.qmd

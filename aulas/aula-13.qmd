@@ -1,0 +1,64 @@
+---
+fontsize: 12pt
+author: Felipe Lamarca
+endnote: no
+---
+
+# Pesquisas eleitorais, eleitorado provável e indecisos
+
+## Kenett, R. S., Pfeffermann, D., & Steinberg, D. M. (2018). Election polls—a survey, a critique, and proposals. _Annual Review of Statistics and Its Application_, 5(1), 1–24.
+
+Data collection methods:
+
+- **Mail surveys**
+- **Telephone surveys:** "In recent years, they have suffered from growing rates of nonresponse, partly due to innovations like caller ID, answering machines, and privacy managers. [...]. Moreover, this phenomenon is especially true of the younger population, leading to potential bias in telephone surveys that use only landline telephone numbers." (p. 6)
+- **Web-based surveys and Internet panels:** "Open-ended web surveys pose methodological challenges in assembling sampling frames for the probability sampling and dealing with coverage issues and selection bias." (p. 6)
+- **Face-to-face interviews**
+- **Social media-derived data**
+
+> Methods for analyzing surveys focus on adjustments aimed at reducing the bias that results from the failure of the sample to accurately represent the population of voters. A common approach is the use of reweighting, in which weights are computed on the basis of under- or overrepresentation so that observations from sectors that are underrepresented in the sample get a weight larger than 1, and observations from overrepresented sectors get a weight smaller than 1. (p. 7-8)
+
+> _Voting intention._ Preelection surveys invariably include some eligible voters who do not vote in the election. Preferences of nonvoters may be different from those of actual voters. Thus, the data from (likely) nonvoters can bias the results of a survey. [...]. A common solution has been to divide registered respondents into two groups. Respondents who scored beyond a specific cutoff have been designated as likely voters, and only their choices are counted in the tally (Daves 2000, Asher 2007). (p. 9)
+
+> _Nonresponse adjustment._ Nonresponse is a critical issue in survey analysis. Selection bias due to nonresponse is an a posterior effect that can make the set of completed surveys unrepresentative in the sample. 
+
+## Rentsch, A., Schaffner, B. F., & Gross, J. H. (2019). The elusive likely voter: Improving electoral predictions with more informed vote-propensity models. _Public Opinion Quarterly_, 83(4), 782–804.
+
+> Forecasting who will actually vote is a particularly challenging problem because, unlike other estimation efforts, pollsters must make an inference about a population (all eventual voters) that does not yet exist.
+
+> Ultimately, the data argue against the common practice of hard classification of likely versus unlikely voters and in favor of weighting eligible voters' potential vote choice by an estimated probability that they will vote, using a combination of respondent self-reported intention to vote, voting history, and demographic data that pollsters already collect. (p. 783)
+
+> The people most likely to overreport voting (to say they will vote when they will not) are "those who are under the most pressure to vote" (Bernstein, Chadha, and Montjoy 2001, p. 41). For example, Ansolabehere and Hersh (2012, p. 449) find that "well-educated, high-income partisans who are engaged in public affairs, attend church regularly, and have lived in the community for a while" retrospectively misreport their voting behavior. (p. 784)
+
+> Most likely-voter models utilize responses to a combination of questions about an individual's vote intent, voting history, and interest in politics. Approaches vary, from a single vote-intention question to composite scores, based on several questions, including ones on past voting behavior, and others gauging knowledge about the voting process, such as where the respondent's polling place is. (p. 785)
+
+Some people use cutoff approaches, deleting people who are unlikely to vote. It seems a bad thing to do.
+
+> Probabilistic models, which are less frequently implemented by political polling firms, offer clear benefits. This probability is then used as a weight: Responses from those who are more likely to vote are weighted more heavily than responses from those who are unlikely to vote, but all are included in the election prediction.
+
+> This study considers four approaches to modeling likely voters. In the first and simplest approach, vote intention responses are compared to a threshold value in order to identify likely voters. Anyone who claims that they will definetely vote or already have done so is considered a likely voter. [...]
+> [...]
+> The final two models estimated are the two probabilistic likely-voter models. Both of these models employ _random forests_, a powerful machine learning tool that relies upon a large number of decision trees, each fed with a random subset of the data and a random subset of all possible variables at each split, that can be used to compute vote-propensity scores much in the same way that logistic regression can be used. (p. 9)
+
+> Based on these results, we encourage pollsters to consider implementing likely-voter models (such as PGaD) that maximize the full amount of information at their disposal. Specifically, a likely-voter model that is probabilistic uses information from all respondents in the sample rather than discarding those that fail to meet a particular threshold. And a likely-voter model that makes use of demographic information for its predictions takes advantage of data that most pollsters collect anyway and which happen to be good predictors of turnout and overreporting.
+
+## Pereira, F. B., & Nunes, F. (2024). Pesquisas eleitorais e mudanças tardias na decisão do voto. _Opinião Pública_, 30, e3011.
+
+> Uma explicação menos popular entre analistas é a de que as divergências observadas seriam causadas por mudanças reais na distribuição das intenções de voto no eleitorado durante os dias (ou mesmo horas) finais da campanha do primeiro turno. Tal explicação é geralmente rechaçada com o argumento de que seria um subterfúgio, uma explicação posterior ao resultado que serviria como defesa velada dos institutos de pesquisa. No entanto, o fenômeno da mudança tardia na decisão do voto é amplamente explorado na literatura internacional sobre pesquisas de intenção de voto (Kennedy et al., 2018; Bon; Ballard; Baffour, 2019). (p. 2)
+
+> O presente artigo traz evidências sugestivas da mudança tardia na decisão de voto no primeiro turno da eleição presidencial de 2022, quando as pesquisas eleitorais de véspera divergiram drasticamente do resultado oficial. Além de discutir as bases teóricas dos mecanismos de voto estratégico e alinhamento dos indecisos, os quais explicariam as mudanças tardias, o artigo apresenta um experimento conduzido nos últimos dias da campanha presidencial que mostra os efeitos de mensagens de vídeo sobre a mudança de voto dos eleitores não alinhados a Lula ou a Bolsonaro. Os resultados sugerem que parte substancial desses eleitores apresentava alta propensão a mudar seu voto em resposta a estímulos de campanha. Além disso, o experimento evidencia o poder de persuasão de conteúdos de campanha, algo que não é encontrado no contexto estadunidense (Coppock; Hill; Vavreck, 2020; Beknazar-Yusbashev; Stalinski, 2022; Sides; Vavreck; Warshaw, 2022), e que fora observado em apenas um artigo anterior conduzido no contexto brasileiro (Desposato, 2007). (p. 23)
+
+---
+
+# Anotações de aula
+
+Por que sempre erramos para o mesmo lado? Em média, as pesquisas subestimam o voto à direita. Isso está associado especialmente a dois problemas:
+
+- Nonvoters
+- Nonrespondents 
+
+No fundo, há dois problemas: um é aquele que não responde; outro, é aquele que diz que vai votar mas não vota, inflando a votação.
+
+Survey tem uma série de problemas. No Brasil, as pesquisas são de alto nível; em particular, temos excelente performance, como indica Jennings and Wlezien (2018), em artigo publicado na Nature [[link]](https://www.nature.com/articles/s41562-018-0315-6). 
+
+Ainda não parece ser o caso de que a não-resposta é um grande problema no Brasil -- em média, um ponto para um lado ou para outro e não muito mais que isso. 
