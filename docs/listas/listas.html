@@ -410,6 +410,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#tarefa-i" id="toc-tarefa-i" class="nav-link active" data-scroll-target="#tarefa-i"><span class="header-section-number">14.1</span> Tarefa I</a></li>
   <li><a href="#tarefa-ii" id="toc-tarefa-ii" class="nav-link" data-scroll-target="#tarefa-ii"><span class="header-section-number">14.2</span> Tarefa II</a></li>
   <li><a href="#tarefa-iii" id="toc-tarefa-iii" class="nav-link" data-scroll-target="#tarefa-iii"><span class="header-section-number">14.3</span> Tarefa III</a></li>
+  <li><a href="#tarefa-iv" id="toc-tarefa-iv" class="nav-link" data-scroll-target="#tarefa-iv"><span class="header-section-number">14.4</span> Tarefa IV</a></li>
   </ul>
 </nav>
     </div>
@@ -456,6 +457,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="14.3" class="anchored" data-anchor-id="tarefa-iii"><span class="header-section-number">14.3</span> Tarefa III</h2>
 <p>Nesta tarefa, utilizo dados do Estudo Eleitoral Brasileiro (ESEB) de 2022 para implementar duas abordagens de pós-ajuste simples: pós-estratificação e rake. O objetivo é avaliar em que medida essas estratégias de ponderação, aplicadas a uma amostra coletada através de um desenho amostral complexo, melhoram a qualidade das estimativas dos parâmetros populacionais. Observamos que ambas as abordagens corrigem parte das discrepâncias entre amostra e população. Embora os ajustes sejam geralmente sutis, em alguns casos as diferenças são substantivamente relevantes, especialmente em contextos de disputa acirrada, como o da eleição de 2022. Por fim, discute-se a possibilidadede incluir variáveis adicionais, como religião ou perfil político, para refinar futuras estratégias de ponderação. <a href="lista3/lista3.pdf">[link do pdf]</a></p>
 <p><strong>Nota:</strong> 100/100</p>
+</section>
+<section id="tarefa-iv" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="tarefa-iv"><span class="header-section-number">14.4</span> Tarefa IV</h2>
+<p>Nesta tarefa, aplico a técnica de <em>Multilevel Regression with Poststratification</em> (MrP) a um survey online com 2.015 adultos brasileiros recrutados via Facebook, com o objetivo de recuperar estimativas populacionais a partir de uma amostra enviesada. O procedimento envolve, inicialmente, o ajuste de modelos de regressão multinível para prever atitudes e comportamentos em estratos sociodemográficos relevantes, seguido da pós-estratificação com base na PNAD Contínua. Testo duas especificações de MrP para estimar o voto em Jair Bolsonaro no 1º turno de 2018, usando o valor oficial como referência. O modelo com interceptos e <em>slopes</em> variáveis por estado mostrou melhor desempenho, convergindo para a proporção real. Com essa configuração, estimo que 67% da população se opõe à legalização do aborto, resultado consistente com pesquisas relativamente recentes de dois importantes institutos de pesquisa de opinião brasileiros. Os achados demonstram o potencial do MrP para corrigir vieses na amostra e gerar estimativas confiáveis, mesmo a partir de surveys não-probabilísticos. A qualidade dos resultados, no entanto, é altamente dependente de uma boa especificação do modelo, o que depende de um bom conhecimento de negócio e uma análise exploratória detalhada.</p>
 
 
 </section>

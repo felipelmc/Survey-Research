@@ -802,11 +802,11 @@ s^2_a = \dfrac{1}{A - 1} \sum_{\alpha=1}^{A} (\bar{y}_{\alpha} - \bar{y})^2,
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">mean</span>(x))</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 48
-[1] 60.2
-[1] 42.8
-[1] 54.8
-[1] 54.6</code></pre>
+<pre><code>[1] 36.4
+[1] 62.6
+[1] 39.8
+[1] 38.8
+[1] 35.2</code></pre>
 </div>
 </div>
 <p>De outra maneira, podemos usar a função <code>slice_sample()</code> do <code>dplyr</code> para fazer amostras aleatórias simples. Por exemplo:</p>
@@ -814,15 +814,15 @@ s^2_a = \dfrac{1}{A - 1} \sum_{\alpha=1}^{A} (\bar{y}_{\alpha} - \bar{y})^2,
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
-Anexando pacote: 'dplyr'</code></pre>
+Attaching package: 'dplyr'</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Os seguintes objetos são mascarados por 'package:stats':
+<pre><code>The following objects are masked from 'package:stats':
 
     filter, lag</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Os seguintes objetos são mascarados por 'package:base':
+<pre><code>The following objects are masked from 'package:base':
 
     intersect, setdiff, setequal, union</code></pre>
 </div>
@@ -832,11 +832,11 @@ Anexando pacote: 'dplyr'</code></pre>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">mean</span>(x<span class="sc">$</span>idade))</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 40.2
-[1] 49.6
-[1] 48
-[1] 43.4
-[1] 44.8</code></pre>
+<pre><code>[1] 52
+[1] 44.8
+[1] 58.6
+[1] 46.2
+[1] 60.2</code></pre>
 </div>
 </div>
 </section>
