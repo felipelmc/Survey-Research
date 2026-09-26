@@ -5,8 +5,6 @@ author: "Felipe Lamarca -- felipelamarca@iesp.uerj.br"
 format:
   revealjs: 
     slide-number: true
-    chalkboard: 
-      buttons: false
     preview-links: auto
     smaller: true
     footer: '[https://felipelamarca.com](https://felipelamarca.com)'
@@ -18,7 +16,6 @@ include-in-header:
         }
       </style>
 bibliography: referencias.bib
-output-file: index.html
 ---
 
 ## Relembrando

@@ -1,6 +1,9 @@
+# Subprojeto de slides: fica fora da renderização do livro (ver project.render no
+# _quarto.yml da raiz). Renderize com `quarto render trabalhos/apresentacao/slides`
+# e faça o commit do index.html gerado, que é autocontido.
 project:
-  title: "apresentacao"
-  output-dir: docs
+  type: default
 
-
-
+format:
+  revealjs:
+    embed-resources: true
