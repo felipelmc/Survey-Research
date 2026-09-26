@@ -1,0 +1,24 @@
+Package: surveynotes
+Title: Pacotes de R usados nas anotações de Pesquisa de Survey
+Version: 0.0.1
+Description: Não é um pacote de verdade. Lista as dependências de R para instalar
+    localmente com `pak::local_install_deps()` antes de `quarto render`.
+Imports:
+    dplyr,
+    geobr,
+    ggplot2,
+    gt,
+    here,
+    knitr,
+    lme4,
+    modelsummary,
+    patchwork,
+    rlang,
+    rmarkdown,
+    scales,
+    sf,
+    sidrar,
+    stringi,
+    stringr,
+    survey,
+    tidyverse
