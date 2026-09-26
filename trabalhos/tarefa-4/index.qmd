@@ -55,15 +55,14 @@ source(here::here("_extensions/felipelmc/course-notes/r/notes.R"))
 validacao <- data.frame(
   estimativa = c("Amostra sem ajuste", "MrP 1: interceptos variáveis",
                  "MrP 2: slopes de idade e escolaridade por UF", "Resultado oficial"),
-  valor = c(0.298, 0.3336922, 0.4607143, 0.4603)
+  valor = c(0.298, 0.3336922, 0.4607143, 0.4603),
+  rotulo = c("29,8%", "33,4%", "46,07%", "46,03%")
 )
 validacao$estimativa <- factor(validacao$estimativa, levels = rev(validacao$estimativa))
 grafico_validacao <- ggplot(validacao, aes(valor, estimativa)) +
   geom_vline(xintercept = 0.4603, linetype = "dashed", colour = cn_palette$ink3) +
-  geom_segment(aes(x = 0.25, xend = valor, yend = estimativa), colour = cn_palette$line_strong) +
   geom_point(aes(colour = estimativa == "Resultado oficial"), size = 3.4, show.legend = FALSE) +
-  geom_text(aes(label = scales::percent(valor, accuracy = 0.1, decimal.mark = ",")),
-            hjust = -0.35, size = 3.6, colour = cn_palette$ink2) +
+  geom_text(aes(label = rotulo), hjust = -0.3, size = 3.6, colour = cn_palette$ink2) +
   scale_colour_manual(values = c(`TRUE` = cn_palette$award, `FALSE` = cn_palette$accent)) +
   scale_x_continuous(labels = scales::label_percent(accuracy = 1, decimal.mark = ","),
                      limits = c(0.25, 0.52)) +

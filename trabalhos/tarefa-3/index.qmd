@@ -654,14 +654,17 @@ voto_destaque <- voto_2t$data %>%
 destaque <- ggplot(voto_destaque, aes(x = mean, y = fct_rev(estrategia), colour = candidato)) +
   geom_point(size = 3.6) +
   geom_text(aes(label = scales::percent(mean, accuracy = 0.1, decimal.mark = ",")),
-            vjust = -1.1, size = 3.6, show.legend = FALSE) +
-  facet_wrap(~ candidato, scales = "free_x") +
+            hjust = -0.35, size = 3.8, show.legend = FALSE) +
+  facet_grid(candidato ~ ., switch = "y") +
   scale_colour_manual(values = c(Lula = cn_palette$danger, Bolsonaro = cn_palette$accent),
                       guide = "none") +
-  scale_x_continuous(labels = scales::label_percent(accuracy = 0.1, decimal.mark = ","),
-                     expand = expansion(mult = 0.35)) +
+  scale_x_continuous(labels = scales::label_percent(accuracy = 1, decimal.mark = ","),
+                     limits = c(0.35, 0.44), breaks = seq(0.35, 0.44, by = 0.01)) +
   labs(x = "Voto no segundo turno de 2022 (ESEB)", y = NULL) +
-  theme_notes(base_size = 12)
+  theme_notes(base_size = 13) +
+  theme(strip.placement = "outside",
+        strip.text.y.left = element_text(angle = 0, face = "bold"),
+        panel.grid.major.y = element_blank())
 ggsave("destaque.png", destaque + theme(plot.margin = margin(18, 24, 18, 18)),
        width = 8, height = 4.5, dpi = 150, bg = "#F6F6F3")
 ```
