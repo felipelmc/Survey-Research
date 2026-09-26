@@ -1,12 +1,11 @@
 ---
-fontsize: 12pt
-author: Felipe Lamarca
-endnote: no
+title: "Pesquisas eleitorais, eleitorado provável e indecisos"
+aula: 13
 ---
 
-# Pesquisas eleitorais, eleitorado provável e indecisos
+## Leituras
 
-## Kenett, R. S., Pfeffermann, D., & Steinberg, D. M. (2018). Election polls—a survey, a critique, and proposals. _Annual Review of Statistics and Its Application_, 5(1), 1–24.
+### Kenett, R. S., Pfeffermann, D., & Steinberg, D. M. (2018). Election polls—a survey, a critique, and proposals. _Annual Review of Statistics and Its Application_, 5(1), 1–24.
 
 Data collection methods:
 
@@ -22,7 +21,7 @@ Data collection methods:
 
 > _Nonresponse adjustment._ Nonresponse is a critical issue in survey analysis. Selection bias due to nonresponse is an a posterior effect that can make the set of completed surveys unrepresentative in the sample. 
 
-## Rentsch, A., Schaffner, B. F., & Gross, J. H. (2019). The elusive likely voter: Improving electoral predictions with more informed vote-propensity models. _Public Opinion Quarterly_, 83(4), 782–804.
+### Rentsch, A., Schaffner, B. F., & Gross, J. H. (2019). The elusive likely voter: Improving electoral predictions with more informed vote-propensity models. _Public Opinion Quarterly_, 83(4), 782–804.
 
 > Forecasting who will actually vote is a particularly challenging problem because, unlike other estimation efforts, pollsters must make an inference about a population (all eventual voters) that does not yet exist.
 
@@ -42,15 +41,13 @@ Some people use cutoff approaches, deleting people who are unlikely to vote. It 
 
 > Based on these results, we encourage pollsters to consider implementing likely-voter models (such as PGaD) that maximize the full amount of information at their disposal. Specifically, a likely-voter model that is probabilistic uses information from all respondents in the sample rather than discarding those that fail to meet a particular threshold. And a likely-voter model that makes use of demographic information for its predictions takes advantage of data that most pollsters collect anyway and which happen to be good predictors of turnout and overreporting.
 
-## Pereira, F. B., & Nunes, F. (2024). Pesquisas eleitorais e mudanças tardias na decisão do voto. _Opinião Pública_, 30, e3011.
+### Pereira, F. B., & Nunes, F. (2024). Pesquisas eleitorais e mudanças tardias na decisão do voto. _Opinião Pública_, 30, e3011.
 
 > Uma explicação menos popular entre analistas é a de que as divergências observadas seriam causadas por mudanças reais na distribuição das intenções de voto no eleitorado durante os dias (ou mesmo horas) finais da campanha do primeiro turno. Tal explicação é geralmente rechaçada com o argumento de que seria um subterfúgio, uma explicação posterior ao resultado que serviria como defesa velada dos institutos de pesquisa. No entanto, o fenômeno da mudança tardia na decisão do voto é amplamente explorado na literatura internacional sobre pesquisas de intenção de voto (Kennedy et al., 2018; Bon; Ballard; Baffour, 2019). (p. 2)
 
 > O presente artigo traz evidências sugestivas da mudança tardia na decisão de voto no primeiro turno da eleição presidencial de 2022, quando as pesquisas eleitorais de véspera divergiram drasticamente do resultado oficial. Além de discutir as bases teóricas dos mecanismos de voto estratégico e alinhamento dos indecisos, os quais explicariam as mudanças tardias, o artigo apresenta um experimento conduzido nos últimos dias da campanha presidencial que mostra os efeitos de mensagens de vídeo sobre a mudança de voto dos eleitores não alinhados a Lula ou a Bolsonaro. Os resultados sugerem que parte substancial desses eleitores apresentava alta propensão a mudar seu voto em resposta a estímulos de campanha. Além disso, o experimento evidencia o poder de persuasão de conteúdos de campanha, algo que não é encontrado no contexto estadunidense (Coppock; Hill; Vavreck, 2020; Beknazar-Yusbashev; Stalinski, 2022; Sides; Vavreck; Warshaw, 2022), e que fora observado em apenas um artigo anterior conduzido no contexto brasileiro (Desposato, 2007). (p. 23)
 
----
-
-# Anotações de aula
+## Anotações de aula
 
 Por que sempre erramos para o mesmo lado? Em média, as pesquisas subestimam o voto à direita. Isso está associado especialmente a dois problemas:
 
@@ -61,4 +58,4 @@ No fundo, há dois problemas: um é aquele que não responde; outro, é aquele q
 
 Survey tem uma série de problemas. No Brasil, as pesquisas são de alto nível; em particular, temos excelente performance, como indica Jennings and Wlezien (2018), em artigo publicado na Nature [[link]](https://www.nature.com/articles/s41562-018-0315-6). 
 
-Ainda não parece ser o caso de que a não-resposta é um grande problema no Brasil -- em média, um ponto para um lado ou para outro e não muito mais que isso. 
+Ainda não parece ser o caso de que a não-resposta é um grande problema no Brasil -- em média, um ponto para um lado ou para outro e não muito mais que isso.

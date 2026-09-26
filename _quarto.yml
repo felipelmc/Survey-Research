@@ -1,38 +1,70 @@
+# Pesquisa de Survey · anotações de aula.
+# Tema, fontes, navbar, idioma e congelamento vêm da extensão Course Notes
+# (_extensions/felipelmc/course-notes). Aqui ficam só os dados da disciplina.
 project:
-  type: book
-  output-dir: docs
+  type: course-notes
+  render:
+    - index.qmd
+    - aulas/*.qmd
+    - trabalhos/index.qmd
+    - trabalhos/*/index.qmd
+    - referencias.qmd
+  resources:
+    - ementa.pdf
+    - trabalhos/apresentacao/slides/index.html
 
 book:
   title: "Pesquisa de Survey"
-  author: Felipe Lamarca
+  subtitle: "Desenho, amostragem e análise de surveys"
+  author: "Felipe Lamarca"
+  date: last-modified
+  site-url: https://felipelamarca.com/Survey-Research/
+  repo-url: https://github.com/felipelmc/Survey-Research
+  repo-actions: [source, issue]
+  navbar:
+    left:
+      - text: "Pesquisa de Survey"
+        href: index.qmd
   chapters:
     - index.qmd
-    - part: Aulas
+    - part: "Desenho"
       chapters:
-        - aulas/aula-2.qmd
-        - aulas/aula-3.qmd
-        - aulas/aula-4.qmd
-        - aulas/aula-5.qmd
-        - aulas/aula-6.qmd
-        - aulas/aula-7.qmd
-        - aulas/aula-8.qmd
-        - aulas/aula-9.qmd
-        - aulas/aula-10.qmd
-        - aulas/aula-11.qmd
-        - aulas/aula-12.qmd
-        - aulas/aula-13.qmd
-    - part: Tarefas
+        - href: aulas/aula-02.qmd
+          text: "02 · O que são e para que servem pesquisas de survey"
+        - href: aulas/aula-03.qmd
+          text: "03 · Erros em survey"
+        - href: aulas/aula-04.qmd
+          text: "04 · Amostragem I"
+        - href: aulas/aula-05.qmd
+          text: "05 · Amostragem II"
+        - href: aulas/aula-06.qmd
+          text: "06 · Desenho de questionários"
+    - part: "Análise"
       chapters:
-        - listas/listas.qmd
-    - part: Apresentação
+        - href: aulas/aula-07.qmd
+          text: "07 · Inferência com surveys"
+        - href: aulas/aula-08.qmd
+          text: "08 · Pós-estratificação"
+        - href: aulas/aula-09.qmd
+          text: "09 · Pós-estratificação com modelos"
+        - href: aulas/aula-10.qmd
+          text: "10 · Modelos flexíveis de MrP"
+    - part: "Tópicos em pesquisa de survey"
       chapters:
-        - apresentacao/apresentacao.qmd
+        - href: aulas/aula-11.qmd
+          text: "11 · Não-resposta"
+        - href: aulas/aula-12.qmd
+          text: "12 · Desejabilidade social"
+        - href: aulas/aula-13.qmd
+          text: "13 · Pesquisas eleitorais, eleitorado provável e indecisos"
+    - part: "Trabalhos"
+      chapters:
+        - trabalhos/index.qmd
+        - trabalhos/tarefa-1/index.qmd
+        - trabalhos/tarefa-2/index.qmd
+        - trabalhos/tarefa-3/index.qmd
+        - trabalhos/apresentacao/index.qmd
+        - trabalhos/tarefa-4/index.qmd
+    - referencias.qmd
 
-
-format:
-  html:
-    theme: 
-      light: cosmo
-      dark: [cosmo, theme-dark.scss]
-    css: styles.css
-    toc: true
+bibliography: [references.bib]

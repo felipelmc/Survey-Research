@@ -1,12 +1,11 @@
 ---
-fontsize: 12pt
-author: Felipe Lamarca
-endnote: no
+title: "Pós-estratificação"
+aula: 8
 ---
 
-# Pós-estratificação
+## Leituras
 
-## Wolf, C., Joye, D., Smith, T. W., & Fu, Y. (2016). The SAGE handbook of survey methodology. Sage. Chapter 31: Analysis of Data from Stratified and Clustered Surveys.
+### Wolf, C., Joye, D., Smith, T. W., & Fu, Y. (2016). The SAGE handbook of survey methodology. Sage. Chapter 31: Analysis of Data from Stratified and Clustered Surveys.
 
 In the SRS case, we have a list of elements, which allows us to attribute to each element in the list a probability of being selected. In particular, "If the population is size $N$ and the sample is size $n$, then the probability of selection of each unit is $\frac{n}{N}$." (p. 478)
 
@@ -52,7 +51,7 @@ $$
 
 > Replication techniques work on a different principle. Replication methods estimate variance by choosing subsets from the sample itself, and using the variability across all these subsets to estimate the variance of the sampling distribution. How exactly these subsamples of the sample are selected depends on the exact replication method in use. (p. 484)
 
-## Lumley, T. (2011). _Complex surveys: a guide to analysis using R._ John Wiley & Sons. Chapter 7: Post-stratification, raking, and calibration.
+### Lumley, T. (2011). _Complex surveys: a guide to analysis using R._ John Wiley & Sons. Chapter 7: Post-stratification, raking, and calibration.
 
 > This chapter deals with techniques for using known population totals for a set of variables (_auxiliary variables_) to adjust the sampling weights and improve estimation for another set of variables. All of these techniques have the same idea: adjustments are made to the sampling weights so that estimated population totals for the auxiliary variables match the known population totals, making the sample more representative of the population. A second benefit is that the estimates are forced to be consistent with the population data, improving their credibility with people who may not understand the sampling process. (p. 135-136)
 
@@ -79,8 +78,6 @@ $$
 $$
 \hat{T}_\text{reg} = \sum^N_{i = 1} x_i \hat{\beta}_i = \left( \sum^N_{i = 1} X_i \right) \hat{\beta} = T_X \hat{\beta}
 $$
-
----
 
 ## Anotações de aula
 
@@ -168,7 +165,7 @@ library(survey)
 
 set.seed(123)
 
-macae <- readRDS("C:/Users/felip/OneDrive/Área de Trabalho/IESP/Survey-Research/listas/lista1/dados/macae.rds")
+macae <- readRDS(here::here("trabalhos/tarefa-1/dados/macae.rds"))
 
 verdade <- mean(macae$alfabetizada)
 print(verdade)
@@ -269,5 +266,4 @@ head(amostra)
 
 ```
 
-Observe que chegamos $\pm$ aos mesmos pesos com cada approach. De fato, são diferentes maneiras de resolver o mesmo problema. 
-
+Observe que chegamos $\pm$ aos mesmos pesos com cada approach. De fato, são diferentes maneiras de resolver o mesmo problema.

@@ -1,6 +1,17 @@
 ---
-title: "Tarefa III de survey"
-date: "09/06/2025"
+title: "Pós-estratificação e raking no ESEB 2022 com margens do Censo 2022"
+subtitle: "Tarefa III · Pesquisa de Survey"
+tipo: Tarefa
+date: 2025-06-09
+description: "A amostra do Estudo Eleitoral Brasileiro de 2022 ponderada por UF, cor/raça e idade do Censo 2022, com pós-estratificação e raking, e o efeito dos pesos sobre confiança nas instituições, avaliação da economia e voto no segundo turno."
+image: destaque.png
+image-alt: "Voto no segundo turno de 2022 no ESEB, sem ponderação, com pós-estratificação e com raking."
+metodos: [Pós-estratificação, Raking, Amostragem complexa]
+dados: ["ESEB 2022", "Censo 2022 (SIDRA 10061)"]
+materiais:
+  - {text: PDF, href: tarefa-3.pdf}
+  - {text: Enunciado, href: enunciado.pdf}
+  - {text: Código, href: "https://github.com/felipelmc/Survey-Research/tree/main/trabalhos/tarefa-3"}
 author:
   - name: Felipe Lamarca
     email: felipelamarca@iesp.uerj.br
@@ -29,13 +40,18 @@ format:
       - left=20mm
       - right=20mm
       - bottom=25mm
-bibliography: referencias.bib
-lang: pt
 execute:
   echo: true
   warning: false
   message: false
 ---
+
+::: {.callout-tip .achados}
+## Principais resultados
+- Frente ao Censo 2022, a amostra do ESEB subestima a população branca em cerca de 9 pontos percentuais e superestima a preta em cerca de 5; também subestima quem tem 60 anos ou mais e superestima quem tem de 25 a 34 anos. São Paulo, Minas Gerais e Paraná aparecem sobre-representados.
+- A pós-estratificação por UF, cor/raça e idade e o raking pelas margens dessas três variáveis aproximam bem as distribuições da população. O sexo, que ficou fora do ajuste, também é parcialmente corrigido, sobretudo na pós-estratificação.
+- Nas variáveis sem parâmetro conhecido, os pesos mudam as estimativas em um ou poucos pontos percentuais. No segundo turno, a amostra sem ponderação superestima ligeiramente o voto em Lula e subestima o voto em Bolsonaro, uma diferença pequena, mas relevante numa eleição acirrada.
+:::
 
 # Introdução
 
@@ -49,7 +65,8 @@ Esta tarefa está dividida em algumas seções, além desta introdução. A segu
 
 No _chunk_ de código abaixo, importo todas as bibliotecas necessárias para a realização da tarefa, defino uma `seed` arbitrariamente escolhida e faço a leitura dos dados. No caso do banco de dados amostral, importamos uma base fornecida na descrição da tarefa; no caso do censo de 2022, importamos os dados por intermédio da biblioteca `sidrar`.
 
-```{r setup, include=TRUE}
+```{r}
+#| label: setup
 
 # pacotes utilizados
 library(modelsummary)
@@ -623,6 +640,32 @@ plot_layout(guides = "collect") & theme(legend.position = "bottom")
 
 ```
 
+```{r}
+#| include: false
+source(here::here("_extensions/felipelmc/course-notes/r/notes.R"))
+voto_destaque <- voto_2t$data %>%
+  filter(category %in% c("Lula", "Bolsonaro")) %>%
+  mutate(
+    candidato = factor(as.character(category), levels = c("Lula", "Bolsonaro")),
+    estrategia = factor(as.character(strategy),
+                        levels = c("Naive", "Poststrat", "Rake"),
+                        labels = c("Sem ponderação", "Pós-estratificação", "Raking"))
+  )
+destaque <- ggplot(voto_destaque, aes(x = mean, y = fct_rev(estrategia), colour = candidato)) +
+  geom_point(size = 3.6) +
+  geom_text(aes(label = scales::percent(mean, accuracy = 0.1, decimal.mark = ",")),
+            vjust = -1.1, size = 3.6, show.legend = FALSE) +
+  facet_wrap(~ candidato, scales = "free_x") +
+  scale_colour_manual(values = c(Lula = cn_palette$danger, Bolsonaro = cn_palette$accent),
+                      guide = "none") +
+  scale_x_continuous(labels = scales::label_percent(accuracy = 0.1, decimal.mark = ","),
+                     expand = expansion(mult = 0.35)) +
+  labs(x = "Voto no segundo turno de 2022 (ESEB)", y = NULL) +
+  theme_notes(base_size = 12)
+ggsave("destaque.png", destaque + theme(plot.margin = margin(18, 24, 18, 18)),
+       width = 8, height = 4.5, dpi = 150, bg = "#F6F6F3")
+```
+
 Aqui, os resultados são mais sutis, com ajustes na faixa de um ou alguns poucos pontos percentuais. No caso da confiança no governo, por exemplo, a estimativa _naive_ superestima levemente os indivíduos com pouca confiança no governo, enquanto parece subestimar em pequeno grau os indivíduos com alguma ou muita confiança. Já no caso da avaliação da economia nos últimos 12 meses, por exemplo, houve uma subestimação daqueles que acreditam que ela estava "Muito pior".
 
 Por fim, vale a pena destacar as estimativas de voto no segundo turno. A abordagem _naive_ superestima ligeiramente a votação de Lula e subestima a de Bolsonaro em comparação com as abordagens ajustadas. É uma diferença pequena, mas, considerando o contexto altamente acirrado das eleições de 2022, bastante importante. 
@@ -632,8 +675,3 @@ Seria interessante acrescentar a religião às variáveis de ajuste, considerand
 Além disso, um ponto importante é que análises futuras poderiam testar utilizar a variável de região ao invés de unidade federativa, ou mesmo colapsar outras variáveis, com o objetivo de garantir que todos os estratos obtidos pelo censo apareçam na amostra. Essas abordagens potencialmente melhorariam a qualidade do ajuste por pós-estratificação.
 
 [^1]: Isso só faria sentido, é claro, em um cenário onde as eleições já ocorreram e estamos explorando a opinião da população a respeito dessas outras variáveis.
-
-# Referências
-
-::: {#refs}
-:::

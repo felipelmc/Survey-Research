@@ -1,12 +1,11 @@
 ---
-fontsize: 12pt
-author: Felipe Lamarca
-endnote: no
+title: "Desenho de questionários"
+aula: 6
 ---
 
-# Desenho de questionários
+## Leituras
 
-## Krosnick, J. A. (2018). Questionnaire Design. Em D. L. Vannette & J. A. Krosnick (Orgs.), _The Palgrave Handbook of Survey Research_ (p. 439–455). Springer International Publishing.
+### Krosnick, J. A. (2018). Questionnaire Design. Em D. L. Vannette & J. A. Krosnick (Orgs.), _The Palgrave Handbook of Survey Research_ (p. 439–455). Springer International Publishing.
 
 > I have come to the view that question wording is where the crises lies at the moment, that's one area where we severely need more work. (p. 440)
 
@@ -26,7 +25,7 @@ endnote: no
 
 > First, lots and lots of studies are done that help us to inform the issues of questionnaire design and yet there is much more work to be done, especially with regard to language. I think we understand a lot about structure, but we understand much less about language. There is also an issue of dissemination. NSF of course has commitment not only to making discoveries but also to disseminating those discoveries through educational efforts and outreach. I think there is a real opportunity here because there are lots of people who don’t know it’s a bad idea to offer a ‘don’t know’ response option. There are lots of people who don’t know the order of answer choices and close questions matter and how to handle that. There are lots and lots of people who think it’s fine to ask agree/disagree questions, so a major educational outreach effort to disseminate the findings of this literature would help. (p. 455)
 
-## Wolf, C., Joye, D., Smith, T. W., & Fu, Y. (2016). _The SAGE handbook of survey methodology_. Sage. Cap. 16: Designing Questions and Questionnaires, by Jolene D. Smyth
+### Wolf, C., Joye, D., Smith, T. W., & Fu, Y. (2016). _The SAGE handbook of survey methodology_. Sage. Cap. 16: Designing Questions and Questionnaires, by Jolene D. Smyth
 
 > This is why questionnaire design texts suggest avoiding starting with boring, embarrassing, or sensitive questions and instead make the first question simple, interesting, and applicable to all sample members with a professional design and visual layout that makes the questionnaire look simple to complete. (p. 219)
 
@@ -51,7 +50,6 @@ endnote: no
 > There are several ways question ordering can help with retrieval. For example, grouping topically similar questions gains efficiencies because respondents can use retrieved information to answer all questions on a topic before moving to a different topic (Dillman et al., 2014). However, one also has to be watchful for unintentional priming effects, which occur when information retrieved for an early question is used to answer a later question simply because it is more easily accessible. For example, Todorov (2000) found that asking respondents about specific chronic conditions early in the National Health Interview Survey on Disability increased the likelihood that they would identify one of the chronic conditions asked about as a cause of their disability in a later question. (p. 229)
 
 > Orienting oneself to how respondents will experience the questionnaire and their response process can provide a useful framework for making these design decisions. This includes keeping in mind the goals of encouraging response, promoting optimizing, providing a clear navigational path, and, of course, collecting high quality measurements. It also requires one to think about how their design will impact each stage of the response process. In addition, understanding the response process and where it can break down can help one determine what pretesting method(s) are most appropriate for a given questionnaire and troubleshoot problems. (p. 231)
-
 
 ## Anotações de aula
 
@@ -118,4 +116,3 @@ Perguntar renda familiar costuma ser melhor por manter um certo nível de privac
 É normal colocar a ancoragem no salário mínimo. Fernando sugere valores absolutos e, no tratamento, fazer o ajuste.
 
 "Segundo as categorias do IBGE, " [pergunta sobre identificação de cor/raça]. Sempre uma boa opção se ancorar nisso.
-

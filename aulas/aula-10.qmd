@@ -1,12 +1,11 @@
 ---
-fontsize: 12pt
-author: Felipe Lamarca
-endnote: no
+title: "Modelos flexíveis de MrP"
+aula: 10
 ---
 
-# Modelos flexíveis de MrP
+## Leituras
 
-## Ghitza, Y., & Gelman, A. (2013). Deep Interactions with MRP: Election Turnout and Voting Patterns Among Small Electoral Subgroups. _American Journal of Political Science_, 57 (3), 762–776.
+### Ghitza, Y., & Gelman, A. (2013). Deep Interactions with MRP: Election Turnout and Voting Patterns Among Small Electoral Subgroups. _American Journal of Political Science_, 57 (3), 762–776.
 
 > This work is in the forefront of statistical analysis of survey data. Methodologically, we improve upon the existing MRP literature in five ways: (1) modeling deeper levels of interaction between geographic and demographic covariates, (2) allowing for the relationship between covariates to be nonlinear and even nonmonotonic, if demandaded by the data, (3) accounting for survey weights while maintaining appropriate cell sizes for partial pooling, (4) adjusting turnout and voting levels after estimates are obtained, and (5) introducing a series of informative multidimensional graphical displays as a form of model checking. (p. 763)
 
@@ -58,7 +57,7 @@ O modelo final é escrito assim:
 
 > As a result, we recommend a gradual and visual approach to model building: build a simple model, graph inferences, add complexity to that model in the form of additional covariates and interactions, graph, and continue until all appropriate variables are included. The purpose of intermittent graphing is to ensure that model estimates remain reasonable and that changes induced by additional covariates or interactions are understood. Because there will eventually be too many interactions to be interpreted by simply looking at the coefficients, it is important to graph final estimates as a substitute or in addition to the coefficients alone.
 
-## Bisbee, J. (2019). BARP: Improving Mister P Using Bayesian Additive Regression Trees. _American Political Science Review_, 113(4), 1060–1065.
+### Bisbee, J. (2019). BARP: Improving Mister P Using Bayesian Additive Regression Trees. _American Political Science Review_, 113(4), 1060–1065.
 
 > The core challenge is the curse of dimensionality. Ideally, researchers would predict the outcome using many covariates such as age, race, education, gender, and church attendance, and extrapolate the outcome to the 50 states. But it is unlikely that the researcher has sufficient observations to generate predictions for each combination of covariates in each state -- combinations referred to as "cells". For example, a nationally representative survey has many observations of 30 to 45-years-old white college-educated men living in California, but only few observations of Hispanic women aged older 65 years with a PhD living in Alaska. Estimating the coefficients for the latter cell can be improved with regularization to obtain stable estimates with good predictive accuracy. (p. 1)
 
@@ -78,7 +77,7 @@ Na versão _Corrigendum_ de 2023 do mesmo artigo, em co-autoria com Goplerud, Bi
 
 > The corrected results demonstrate that the difference in performance between the two methods is much more of a toss-up, whether evaluated using mean absolute error (MAE, left panel) or interstate correlation (right panel).
 
-## Goplerud, M. (2023). Re-Evaluating Machine Learning for MRP Given the Comparable Performance of (Deep) Hierarchical Models. _American Political Science Review_, 1–8.
+### Goplerud, M. (2023). Re-Evaluating Machine Learning for MRP Given the Comparable Performance of (Deep) Hierarchical Models. _American Political Science Review_, 1–8.
 
 > Multiple papers have suggested that relying on machine learning methods can provide substantially better performance than traditional approaches that use hierarchical models. However, these comparisons are often unfair to traditional techniques as they omit possibly important interactions or nonlinear effects. I show that complex ("deep") hierarchical models that include interactions can nearly match or outperform state-of-the-art machine learning methods. [...]. The main limitation of using deep hierarchical models is speed. This paper derives new techniques to further accelerate estimation using variational approximations. I provide software that uses weakly informative priors and can estimate nonlinear effects using splines. This allows flexible and complex hierarchical models to be fit as quickly as many comparable machine learning techniques. (Abstract)
 
@@ -133,6 +132,3 @@ Uma das inovações centrais recentes em MrP é o uso de **modelos flexível** q
 O que Ghiza and Gelman (2013) advogam é que você não necessariamente precisa de modelos de _machine learning_. Modelos de regressão bem especificados apresentam boa performance. Em particular, devemos pensar em interações entre as variáveis a partir da exploração exaustiva do banco de dados.
 
 O benchmark que temos para usar modelos de MrP é que, em geral, bases com 5.000 respostas é o caso ótimo, mas a partir de 3.000 é suficiente. Menos que isso não é tão bom.
-
-
-

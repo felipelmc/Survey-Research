@@ -1,6 +1,15 @@
 ---
-title: "Tarefa de survey"
-date: "19/05/2025"
+title: "Jogo do bicho online: redesenho do questionário Datafolha (1988) para autoaplicação"
+subtitle: "Tarefa II · Pesquisa de Survey"
+tipo: Tarefa
+date: 2025-05-19
+description: "O questionário do Datafolha sobre o jogo do bicho (1988), reescrito para um formulário online curto: menos perguntas, branching, frequências concretas e cuidados contra o viés de desejabilidade social."
+metodos: [Desenho de questionário, Desejabilidade social, Branching]
+dados: ["Datafolha 1988 (Cesop)"]
+materiais:
+  - {text: PDF, href: tarefa-2.pdf}
+  - {text: Enunciado, href: enunciado.pdf}
+  - {text: Formulário, href: "https://docs.google.com/forms/d/e/1FAIpQLSfzAIqy50RJnqGtT5w7ygEG47LUz8QW1_o5_qzj0NEJwXZPfg/viewform?usp=sharing&ouid=102244569472168978170"}
 author:
   - name: Felipe Lamarca
     email: felipelamarca@iesp.uerj.br
@@ -20,13 +29,18 @@ format:
       - left=20mm
       - right=20mm
       - bottom=25mm
-bibliography: referencias.bib
-lang: pt
 execute:
   echo: true
   warning: false
   message: false
 ---
+
+::: {.callout-tip .achados}
+## Principais resultados
+- O questionário original do Datafolha, aplicado em junho de 1988 em São Paulo e no Rio de Janeiro, virou um formulário online mais curto, focado na opinião sobre a legalização do jogo do bicho e na proporção de quem joga ou já jogou.
+- Para reduzir o viés de desejabilidade social, o formulário se chama "Loterias formais e informais no Brasil", não menciona a ilegalidade do jogo, destaca o anonimato e pergunta "Você por acaso já...".
+- As frequências passaram a ser concretas (nenhuma vez, 1 vez, de 2 a 5 vezes...) e referidas aos últimos 30 dias; a opinião sobre a legalização usa *branching*; e as perguntas de perfil foram para o fim, exceto cidade e idade, que filtram os respondentes.
+:::
 
 # Escolhas e justificativas
 
@@ -39,8 +53,3 @@ Algumas das perguntas também foram sensivelmente modificadas. Ao invés de perg
 [^1]: A pesquisa foi publicada pelo Cesop em setembro de 2024, na ocasião da aprovação do projeto de lei que autorizou o funcionamento de bingos e cassinos e regularizou jogos de azar, conforme [postagem](https://www.facebook.com/cesop.unicamp/posts/o-throwback-thursday-tbt-leva-nos-%C3%A0s-pesquisas-curiosas-e-antigas-que-est%C3%A3o-pres/964815842116742/) do próprio Cesop no Facebook.
 
 [^2]: Indivíduos menores de 16 anos ou residentes fora do Rio de Janeiro (RJ) e São Paulo (SP) não devem responder ao questionário, conforme as especificações do desenho do questionário original.
-
-### Referências
-
-::: {#refs}
-:::

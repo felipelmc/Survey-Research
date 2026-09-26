@@ -1,12 +1,13 @@
 ---
-fontsize: 12pt
-author: Felipe Lamarca
-endnote: no
+title: "Desejabilidade social"
+aula: 12
 ---
 
-# Desejabilidade Social
+## Leituras
 
-- Vale ler: Tourangeau, R., & Yan, T. (2007). _Sensitive questions in surveys_. Psychological bulletin, 133(5), 859.
+### Tourangeau, R., & Yan, T. (2007). _Sensitive questions in surveys_. Psychological bulletin, 133(5), 859.
+
+Vale ler.
 
 ## Anotações de aula
 
@@ -35,4 +36,3 @@ Técnicas mais sofisticadas de lidar com desejabilidade.
 - **Endorsement experiment:** pergunta sobre apoio político/figuras públicas que defendem posições sensíveis; permite inferência indireta sobre o item sensível.
 - **Randomized response:** respondente usa sorteio (e.g., uma moeda) para decidir se responde à pergunta sensível ou à pergunta neutra; reduz efeitos do entrevistador.
 - **Conjoint experiment:** pergunta sobre preferências em cenários hipotéticos; reduz efeitos de desejabilidade social ao focar em comparações entre alternativas.
-

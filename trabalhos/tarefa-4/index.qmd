@@ -1,6 +1,17 @@
 ---
-title: "Tarefa IV de survey"
-date: "04/07/2025"
+title: "MrP com uma amostra do Facebook: voto em Bolsonaro (2018) e oposição ao aborto"
+subtitle: "Tarefa IV · Pesquisa de Survey"
+tipo: Tarefa
+date: 2025-07-04
+description: "Regressão multinível com pós-estratificação (MrP) sobre um survey online de 2.015 adultos recrutados pelo Facebook: validação com o voto em Bolsonaro no 1º turno de 2018 e estimativa da oposição ao aborto por região."
+image: destaque.png
+image-alt: "Voto em Bolsonaro no 1º turno de 2018: amostra sem ajuste, dois modelos de MrP e o resultado oficial."
+metodos: [MrP, Modelos multinível, Amostra não probabilística]
+dados: ["Smith & Boas (2019)", "PNAD Contínua"]
+materiais:
+  - {text: PDF, href: tarefa-4.pdf}
+  - {text: Enunciado, href: enunciado.pdf}
+  - {text: Código, href: "https://github.com/felipelmc/Survey-Research/tree/main/trabalhos/tarefa-4"}
 author:
   - name: Felipe Lamarca
     email: felipelamarca@iesp.uerj.br
@@ -20,13 +31,52 @@ format:
       - left=20mm
       - right=20mm
       - bottom=25mm
-bibliography: referencias.bib
-lang: pt
 execute:
   echo: true
   warning: false
   message: false
 ---
+
+::: {.callout-tip .achados}
+## Principais resultados
+- Na amostra do Facebook, só 29,8% dizem ter votado em Bolsonaro no 1º turno de 2018, contra 46,03% no resultado oficial. A amostra sobre-representa jovens de 18 a 24 anos e pessoas com ensino superior, e sub-representa quem tem 60 anos ou mais e quem tem ensino fundamental.
+- O MrP só com interceptos variáveis chega a 33,4%. Com *slopes* de idade e escolaridade variando por estado, a estimativa vai a 46,07%, praticamente o valor oficial.
+- Com essa especificação, cerca de 67% da população seria contrária ao aborto (na pergunta original, a favor da proibição completa), com a maior oposição no Sul (77,5%) e no Centro-Oeste (74,9%) e a menor no Norte (51,4%).
+:::
+
+```{r}
+#| label: fig-validacao
+#| fig-cap: "Voto em Bolsonaro no 1º turno de 2018: a amostra sem ajuste, os dois modelos de MrP e o resultado oficial. Valores reportados na seção de resultados."
+#| fig-width: 7
+#| fig-height: 3
+#| echo: false
+library(ggplot2)
+source(here::here("_extensions/felipelmc/course-notes/r/notes.R"))
+validacao <- data.frame(
+  estimativa = c("Amostra sem ajuste", "MrP 1: interceptos variáveis",
+                 "MrP 2: slopes de idade e escolaridade por UF", "Resultado oficial"),
+  valor = c(0.298, 0.3336922, 0.4607143, 0.4603)
+)
+validacao$estimativa <- factor(validacao$estimativa, levels = rev(validacao$estimativa))
+grafico_validacao <- ggplot(validacao, aes(valor, estimativa)) +
+  geom_vline(xintercept = 0.4603, linetype = "dashed", colour = cn_palette$ink3) +
+  geom_segment(aes(x = 0.25, xend = valor, yend = estimativa), colour = cn_palette$line_strong) +
+  geom_point(aes(colour = estimativa == "Resultado oficial"), size = 3.4, show.legend = FALSE) +
+  geom_text(aes(label = scales::percent(valor, accuracy = 0.1, decimal.mark = ",")),
+            hjust = -0.35, size = 3.6, colour = cn_palette$ink2) +
+  scale_colour_manual(values = c(`TRUE` = cn_palette$award, `FALSE` = cn_palette$accent)) +
+  scale_x_continuous(labels = scales::label_percent(accuracy = 1, decimal.mark = ","),
+                     limits = c(0.25, 0.52)) +
+  labs(x = "Voto em Bolsonaro no 1º turno de 2018", y = NULL) +
+  theme_notes(base_size = 12)
+grafico_validacao
+```
+
+```{r}
+#| include: false
+ggsave("destaque.png", grafico_validacao + theme(plot.margin = margin(18, 24, 18, 18)),
+       width = 8, height = 4.5, dpi = 150, bg = "#F6F6F3")
+```
 
 # Introdução
 
@@ -580,8 +630,3 @@ Dividindo os resultados por região, observamos que o posicionamento contrário 
 # Considerações finais
 
 De maneira geral, observamos que a pós-estratificação utilizando um modelo de MrP relativamente complexo, com _slopes_ variáveis, permitiu estimar bem a proporção de indivíduos que votaram em Jair Bolsonaro. Aplicando este modelo para estimar a proporção da população que é contrária ao aborto, foi possível obter estimativas consistentes com as publicadas por alguns dos principais institutos de pesquisa do país. Esses resultados são um exemplo de como amostras não probabilísticas e pouco representativas podem ser trabalhadas para estimar, com alguma qualidade, parâmetros populacionais desconhecidos.
-
-# Referências
-
-::: {#refs}
-:::

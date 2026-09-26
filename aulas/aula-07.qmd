@@ -1,12 +1,11 @@
 ---
-fontsize: 12pt
-author: Felipe Lamarca
-endnote: no
+title: "Inferência com surveys"
+aula: 7
 ---
 
-# Inferência com Surveys
+## Leituras
 
-## Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2011). _Survey methodology_. John Wiley & Sons. Cap. 10.
+### Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2011). _Survey methodology_. John Wiley & Sons. Cap. 10.
 
 > The outcome of the reordering of activities is that computer-assisted surveys must make all the design decisions about data entry protocols and editing during the process of developing the questionnaire. A further implication of the combination of collection, entry, and editing is that the surveys collecting only numeric answers can entirely skip the coding step. (p. 330)
 
@@ -22,7 +21,7 @@ endnote: no
 >
 > 6) Sampling variance estimation -- the computation of estimates of the instability of survey statistics (from any statistical error that are measurable under the design) (p. 330-331)
 
-### Coding
+#### Coding
 
 > To be useful, codes must have the following attributes:
 >
@@ -36,11 +35,11 @@ endnote: no
 >
 > 5) A number of unique categories that fit the purpose of the analyst (p. 332)
 
-### Editing
+#### Editing
 
 > There is some consensus on desirable properties of editing systems. These include the use of explicit rules linked to concepts being measured; the ability to replicate the results; editing shifted to rule-based, computer-assisted routines to save money; minimal distortion of data recorded on the questionnaire; the desirability of coordinating editing and imputation; and the criterion that when all is finished, all records pass all edit checks. The future of editing will not resemble in its past. Editing systems will change as computer assistance moves to earlier points in the survey process and becomes integrated with other steps in the survey. It is likely that editing after data collection will decline. It is likely that software systems will increasingly incorporate the knowledge of subject matter experts. (p. 347)
 
-### Weighting
+#### Weighting
 
 > Surveys with complex sample designs often also have unequal probabilities of selection, variation in response rates across important subgroups, and departures from distributions on key variables that are known from outside sources for the population. It is common within complex sample surveys to generate weights to compensate for each of these features. (p. 348)
 
@@ -96,9 +95,7 @@ In that case, the mean is $\bar{y} = \frac{1}{c} \sum^c_{\gamma = 1} = \bar{y}_\
 
 There are differences between the balanced repeated replication and the jackknife replication, but the results are remarkably similar (p. 361). "The Taylor series approximation is the most commonly used approach, but that does not mean that it provides a more precise or accurate estimate of variance than the other procedures." (p. 361)
 
-## Lumley, T. (2011). _Complex surveys: a guide to analysis using R._ John Wiley & Sons. Caps. 1–2
-
-### Chapter 1: Basic Tools
+### Lumley, T. (2011). _Complex surveys: a guide to analysis using R._ John Wiley & Sons. Cap. 1: _Basic Tools_
 
 > The mathematical development for most of statistics is _model-based_, and relies on specifying a probability model for the random process that generates the data. [...]. To the extent that the model represents the process that generated the data, it is possible to draw conclusions that can be generalized to other situations where the same process operates. As the model can only ever be an approximation, it is important (but often difficult) to know what sort of departures from the model will invalidate the analysis. (p. 1)
 >
@@ -134,7 +131,7 @@ $$
 
 > If the necessary sample size for a given level of precision is known for a simple random sample, the sample size for a complex design can be obtained by multiplying by the design effect. While the design effect will not be known in advance, some useful guidance can be obtained by looking at design effects reported for other similar surveys. (p. 6)
 
-### Chapter 2: Simple and Stratified Sampling
+### Lumley, T. (2011). _Complex surveys: a guide to analysis using R._ John Wiley & Sons. Cap. 2: _Simple and Stratified Sampling_
 
 > The population mean of X can be estimated by dividing the estimated total by the population size, N
 >
@@ -153,7 +150,7 @@ $$
 
 > [Caso da amostragem estratificada] Since a stratified sample is just a set of simple random samples from each stratum, the Horvitz-Thompson estimator of the total is just the sum of the estimated totals in each stratum and its variance is the sum of the estimated variances in each stratum. The population mean is estimated by dividing the estimated population total by the population size $N$.
 
-## Shirani-Mehr, H., Rothschild, D., Goel, S., & Gelman, A. (2018). Disentangling bias and variance in election polls. _Journal of the American Statistical Association_, 113(522), 607–614.
+### Shirani-Mehr, H., Rothschild, D., Goel, S., & Gelman, A. (2018). Disentangling bias and variance in election polls. _Journal of the American Statistical Association_, 113(522), 607–614.
 
 > It has long been known that the margins of errors provided by survey organizations, and reported in the news, understate the total survey error. This is an important topic in sampling but is difficult to address in general for two reasons. First, we like to decompose error into bias and variance, but this can only be done with any precision if we have a large number of surveys and outcomes -- not merely a large number of respondents in an individual survey. Second, assessment of error requires a ground truth for comparison, which is tipically not available, as the reason for conducting a sample survey in the first place is to estimate some population characteristic that is not already known. (p. 607)
 
@@ -162,9 +159,6 @@ $$
 > Figure 1 shows the distribution of these differences, where positive values on the $x$-axis indicate the Republican candidate received more support in the poll than in the election. We repeat this process separately for senatorial, gubernatorial, and presidential polls. For comparison, the dotted lines show the theoretical distribution of polling errors assuming SRS. Specifically, for each senate poll $i$, we first simulate an SRS polling result by drawing a sample from a binomial distribution with parameters $n_i$ and $v_{r[i]}$, where $n_i$ is the number of respondents in poll $i$ who express a preference for one of the two major-party candidates, and $v_{r[i]}$ is the final two-party vote share of the Republican candidate in the corresponding election $r[i]$. (p. 609)
 
 > The senatorial and gubernatorial polls, in particular, have substantially larger RMSE (3.7% and 3.9%, respectively) than SRS (2.0% and 2.1%, respectively). In contrast, the RMSE for state-level presidential polls is 2.5%, not much larger than one would expect from SRS (2.0%). (p. 609)
-
-
----
 
 ## Anotações de aula
 
@@ -212,7 +206,7 @@ onde $\mu$ é a média da distribuição e $\sigma^2$ é a variância. Na funç�
 ```{r}
 library(tidyverse)
 
-macae <- readRDS("C:/Users/felip/OneDrive/Área de Trabalho/IESP/Survey-Research/listas/lista1/dados/macae.rds")
+macae <- readRDS(here::here("trabalhos/tarefa-1/dados/macae.rds"))
 
 # extraímos uma amostra n=50
 am <- macae %>%
@@ -251,23 +245,4 @@ No caso de proporções, margens de erro não são simétricas; isto é, estimat
 
 Vamos usar um exemplo da taxa de alfabetização em Macaé. Imagine que tiramos a seguinte amostra $n=50$. A variância aqui é $\frac{p(1-p)}{n}$, onde $p$ é a proporção (ou seja, a média) da amostra. Temos a estatística $\hat{p}$ e $v(\hat{p})$. O erro padrão nesse caso é apenas a raiz quadrada da variância, sem dividir pelo $\sqrt{n}$.
 
-A depender do meu valor de $p$, a coisa vai mudar. Quando eu estimo alguma coisa que é muito pouco prevalente, $p$ é muito pequeno e a margem de erro também fica muito pequena, porque eu não tenho probabilidades menores que zero, então eu só tenho incerteza "do outro lado". 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+A depender do meu valor de $p$, a coisa vai mudar. Quando eu estimo alguma coisa que é muito pouco prevalente, $p$ é muito pequeno e a margem de erro também fica muito pequena, porque eu não tenho probabilidades menores que zero, então eu só tenho incerteza "do outro lado".

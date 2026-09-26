@@ -1,12 +1,9 @@
 ---
-fontsize: 12pt
-author: Felipe Lamarca
-endnote: no
+title: "O que são e para que servem pesquisas de survey"
+aula: 2
 ---
 
-# O que são e para que servem pesquisas de survey
-
-## Anotações das leituras
+## Leituras
 
 ### Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2011). _Survey methodology_. John Wiley & Sons. Cap. 1.
 

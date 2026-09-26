@@ -1,0 +1,17 @@
+---
+title: "Goplerud (2023): MrP com modelos hierárquicos profundos versus machine learning"
+subtitle: "Apresentação · Pesquisa de Survey"
+tipo: Apresentação
+date: 2025-05-28
+description: "Apresentação de Goplerud (2023): modelos multinível profundos, com muitas interações e ajustados rapidamente com inferência variacional, têm desempenho comparável ao de métodos de machine learning no MrP."
+image: capa.png
+image-alt: "Slide de título da apresentação sobre Goplerud (2023)."
+metodos: [MrP, Modelos multinível, Inferência variacional, Ensemble]
+materiais:
+  - {text: Slides em tela cheia, href: slides/index.html}
+  - {text: Artigo, href: "https://www.cambridge.org/core/journals/american-political-science-review/article/reevaluating-machine-learning-for-mrp-given-the-comparable-performance-of-deep-hierarchical-models/B31FC4D3CB09C3CE2188AB55169C2CB6"}
+---
+
+Na apresentação da disciplina de survey, apresentei @goplerud2023reevaluating [[link]](https://www.cambridge.org/core/journals/american-political-science-review/article/reevaluating-machine-learning-for-mrp-given-the-comparable-performance-of-deep-hierarchical-models/B31FC4D3CB09C3CE2188AB55169C2CB6). O artigo mostra que modelos multinível completos (ou "profundos"), com muitos termos interativos e, portanto, muitos parâmetros a serem estimados, podem ser ajustados com alta velocidade utilizando inferência variacional. Além disso, @goplerud2023reevaluating também compara a performance de modelos multinível frente a modelos de _machine learning_ utilizando técnicas de ensemble. A apresentação completa pode ser encontrada abaixo.
+
+{{< slides url="slides/index.html" title="Goplerud (2023): MrP com modelos hierárquicos profundos versus machine learning" >}}

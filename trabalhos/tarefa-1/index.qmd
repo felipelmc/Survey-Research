@@ -1,6 +1,17 @@
 ---
-title: "Tarefa de survey"
-date: "12/03/2025"
+title: "Desenhos amostrais e efeito de delineamento: alfabetização em Macaé (Censo 2010)"
+subtitle: "Tarefa I · Pesquisa de Survey"
+tipo: Tarefa
+date: 2025-03-12
+description: "Três desenhos amostrais (AAS, estratificação proporcional e conglomerados com PPS) comparados em 2.000 amostras simuladas da taxa de alfabetização de Macaé, a partir do Censo 2010."
+image: destaque.png
+image-alt: "Distribuições amostrais da proporção de alfabetizados em Macaé nos desenhos AAS, estratificado e por conglomerados."
+metodos: [AAS, Estratificação, Conglomerados (PPS), Efeito de delineamento, Simulação]
+dados: ["Censo 2010 (IBGE)"]
+materiais:
+  - {text: PDF, href: tarefa-1.pdf}
+  - {text: Enunciado, href: enunciado.pdf}
+  - {text: Código, href: "https://github.com/felipelmc/Survey-Research/tree/main/trabalhos/tarefa-1"}
 author:
   - name: Felipe Lamarca
     email: felipelamarca@iesp.uerj.br
@@ -29,15 +40,22 @@ format:
       - left=20mm
       - right=20mm
       - bottom=25mm
-bibliography: referencias.bib
-lang: pt
 execute:
   echo: true
   warning: false
   message: false
 ---
 
-```{r setup, include=FALSE}
+::: {.callout-tip .achados}
+## Principais resultados
+- Em 2.000 amostras simuladas de 1.200 pessoas, a estratificação proporcional por distrito e subdistrito teve efeito de delineamento de 0,930: variância menor que a da AAS, mas um ganho apenas marginal.
+- O desenho por conglomerados com PPS escolhido, com 80 setores censitários e 15 entrevistas em cada, teve efeito de delineamento de 1,219.
+- Com o total de entrevistas fixo, o efeito de delineamento cresce à medida que caem os setores sorteados: 1,059 com 120 setores (10 entrevistas em cada), 1,219 com 80 (15) e 1,247 com 60 (20).
+:::
+
+```{r}
+#| label: setup
+#| include: false
 # Pacotes
 library(modelsummary)
 library(tidyverse)
@@ -326,6 +344,32 @@ ggplot(df_resultados, aes(x = valor, fill = desenho, color = desenho)) +
 
 ```
 
+```{r}
+#| include: false
+source(here::here("_extensions/felipelmc/course-notes/r/notes.R"))
+destaque <- df_resultados %>%
+  mutate(desenho = factor(
+    desenho,
+    levels = c("Estratificação", "SRS", "Conglomerados"),
+    labels = c("Estratificação (distrito e subdistrito)", "AAS",
+               "Conglomerados (80 setores, 15 entrevistas em cada)")
+  )) %>%
+  ggplot(aes(x = valor, colour = desenho, fill = desenho)) +
+  geom_density(alpha = 0.12, linewidth = 0.8) +
+  geom_vline(xintercept = mean(macae$alfabetizada), linetype = "dashed",
+             colour = cn_palette$ink3) +
+  scale_colour_notes() +
+  scale_fill_notes() +
+  scale_x_continuous(labels = scales::label_percent(accuracy = 1, decimal.mark = ",")) +
+  labs(x = "Proporção de alfabetizados em 2.000 amostras de 1.200 pessoas",
+       y = NULL, colour = NULL, fill = NULL) +
+  guides(colour = guide_legend(ncol = 1), fill = guide_legend(ncol = 1)) +
+  theme_notes(base_size = 12) +
+  theme(axis.text.y = element_blank(), panel.grid.major.y = element_blank())
+ggsave("destaque.png", destaque + theme(plot.margin = margin(18, 24, 18, 18)),
+       width = 8, height = 4.5, dpi = 150, bg = "#F6F6F3")
+```
+
 De fato, observamos que o desenho com estratificação por distritos e subdistritos possui uma variância amostral menor que o desenho AAS, com amostras mais frequentemente centradas em torno do parâmetro populacional verdadeiro. O desenho por conglomerados com 80 setores censitários e 15 entrevistas em cada possui, por outro lado, uma variância amostral maior -- a distribuição da média amostral apresenta caudas mais pesadas, estimando a média populacional em valores ligeiramente mais extremos do que no desenho AAS.
 
 Por fim, a @tbl-design apresenta os *design effects*:
@@ -373,7 +417,3 @@ Em linha com o que foi observado no gráfico de distribuições e o que já foi 
 
 Além disso, encontramos *design effects* maiores que $1$ em todos os desenhos por conglomerado, indicando que a variância amostral da média é maior nesses casos do que no desenho AAS. De fato, a discussão feita até aqui justifica esse resultado, afinal, a natureza desse desenho amostral normalmente implica maior variância. Observamos também que, quanto maior o número de conglomerados amostrados, menor é o *design effect*, embora todas as variâncias sejam maiores em relação ao desenho AAS. Trata-se de um resultado esperado na medida em que quanto mais informações novas (i.e., de conglomerados diferentes) somos capazes de inserir na amostra, menor é a variância esperada.
 
-### Referências
-
-::: {#refs}
-:::

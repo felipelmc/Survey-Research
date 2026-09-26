@@ -1,7 +1,45 @@
-# Apresentação do curso
+---
+title: "Pesquisa de Survey"
+subtitle: "Desenho, amostragem e análise de surveys"
+eyebrow: "IESP-UERJ · 2025.1"
+byline: "Anotações de Felipe Lamarca"
+---
+
+Este site reúne minhas anotações das aulas de Pesquisa de Survey, disciplina do programa de pós-graduação do [IESP-UERJ](https://iesp.uerj.br).
+
+## Sobre a disciplina
 
 > Surveys são, hoje, uma das mais difundidas ferramentas de pesquisa social. Por meio da aplicação de questionários estruturados a uma amostra de determinada população, governos estimam taxas de desemprego e de pobreza; políticos definem estratégias de campanha; institutos de pesquisa identificam tendências de comportamento de diferentes grupos sociais; e empresas investigam a satisfação de seus clientes e testam ações de marketing. A proposta deste curso é oferecer uma introdução panorâmica a este tipo de pesquisa. [[ementa]](ementa.pdf)
 
-**Professor:** Fernando Meireles (IESP-UERJ) [[homepage]](https://fmeireles.com/)
+Professor
+: Fernando Meireles (IESP-UERJ) [[homepage]](https://fmeireles.com/)
 
-**Semestre:** 2025.1
+Semestre
+: 2025.1
+
+## Aulas
+
+| Aula | Tema | |
+|:--|:--|:--|
+| 01 | Apresentação do curso | sem anotações |
+| 02 | O que são e para que servem pesquisas de survey | [notas](aulas/aula-02.qmd) |
+| 03 | Erros em survey | [notas](aulas/aula-03.qmd) |
+| 04 | Amostragem I | [notas](aulas/aula-04.qmd) |
+| 05 | Amostragem II | [notas](aulas/aula-05.qmd) |
+| 06 | Desenho de questionários | [notas](aulas/aula-06.qmd) |
+| 07 | Inferência com surveys | [notas](aulas/aula-07.qmd) |
+| 08 | Pós-estratificação | [notas](aulas/aula-08.qmd) |
+| 09 | Pós-estratificação com modelos | [notas](aulas/aula-09.qmd) |
+| 10 | Modelos flexíveis de MrP | [notas](aulas/aula-10.qmd) |
+| 11 | Não-resposta | [notas](aulas/aula-11.qmd) |
+| 12 | Desejabilidade social | [notas](aulas/aula-12.qmd) |
+| 13 | Pesquisas eleitorais, eleitorado provável e indecisos | [notas](aulas/aula-13.qmd) |
+
+## Como usar estas notas
+
+As anotações estão organizadas por aula na barra lateral à esquerda, agrupadas nas três partes do curso: desenho, análise e tópicos em pesquisa de survey. A parte [Trabalhos](trabalhos/index.qmd) reúne as quatro tarefas entregues e a apresentação de @goplerud2023reevaluating.
+
+::: {.callout-note}
+## Anotações pessoais
+Estas são anotações pessoais e podem conter imprecisões. Use-as como complemento, não como substituto do material oficial da disciplina. Citações literais ficam como no original, com a página, e explicações escritas com auxílio de IA aparecem em caixas identificadas.
+:::

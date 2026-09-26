@@ -1,16 +1,11 @@
 ---
-fontsize: 12pt
-author: Felipe Lamarca
-endnote: no
+title: "Amostragem I"
+aula: 4
 ---
 
-# Amostragem I
+## Leituras
 
-## Anotações das leituras
-
-### Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2011). _Survey methodology_. John Wiley & Sons. Cap. 3-4.
-
-#### Capítulo 3 - Target Populations, Sampling Frames, and Coverage Error
+### Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2011). _Survey methodology_. John Wiley & Sons. Cap. 3: _Target Populations, Sampling Frames, and Coverage Error_
 
 > In short, statistics describing different populations can be collected in a single survey when the populations are linked to units from which measurements are taken.
 >
@@ -38,13 +33,13 @@ The match of sampling frame to target population created three potential outcome
 
 Outros problemas incluem "Duplication" -- isto é, vários elementos da framing são mapeados para um único elemento da população alvo e, nesse caso, há sobrerrepresentação de alguns elementos; além disso, há também o problema de "Clustering", quando múltiplos elementos da população alvo a um único elemento da frame.
 
-##### Undercoverage
+#### Undercoverage
 
 > Undercoverage is the weakness of sampling frames promptiong the greatest fears of coverage error. It threatens to produce errors of nonobservation in survey statistics from failure to include parts of the target population in any survey using the frame. (p. 72)
 
 > Another common concern about undercoverage in household surveys stems from the fact that sampling frames for households generally provide identification of the housing unit (through an address or telephone number) but not identifiers for persons within the household.
 
-##### Ineligible Units
+#### Ineligible Units
 
 > Sometimes, sampling frames contain elements that are not part of the target population. For example, in telephone number frames, many of the numbers are nonworking or nonresidential numbers, complicating the use of the frame for the target population of households. In area probability surveys, sometimes the map materials contain units outside the target geographical area. (p. 76)
 
@@ -52,7 +47,7 @@ Outros problemas incluem "Duplication" -- isto é, vários elementos da framing 
 
 > Although undercoverage is a difficult problem, "ineligible" or "foreign" units in the frame can be a less difficult problem to deal with if the problem is not extensive. When foreign units are identified on the frame before selection begins, they can be purged at little cost. [...]. For example, it is known that approximately 15% of entries in residential portions of national telephone directories are numbers that are no longer in service. To achieve a sample of 100 telephone households, one could select a sample of $100(1 - 0.15) = 118$ entires from the directory, expecting that 18 are going to be out-of-service numbers. (p. 76)
 
-##### Clustering
+#### Clustering
 
 > A telephone directory lists telephone households in order by surname, given name, and address. When sampling adults from this frame, an immediately obvious problem is the clustering of eligible persons that occurs. "Clusterng" means that multiple elements of the target population are represented by the same frame element. A telephone listing in the directory may have a single or two or more adults living there. (p. 77)
 
@@ -60,17 +55,17 @@ Outros problemas incluem "Duplication" -- isto é, vários elementos da framing 
 
 > After sample selection, there is one other issue that needs to be addressed in this form of cluster sampling: unequal probabilities of selection. If all frame elements are given equal chances, but one eligible selection is made from each, then elements in large clusters have lower overall probabilities of selection than elements in small clusters. For example, an eligible person chosen in a telephone household containing two eligibles has a chance of one-half of being selected, given that the household was sampled, whereas those in a household with four eligibles have a one-in-four chance. (p. 78)
 
-##### Duplication
+#### Duplication
 
 > "Duplication" means that a single target population element is associated with multiple frame elements. In the telephone survey example, this may arise when a single telephone household has more than one listing in a telephone directory. (p. 79)
 
 > The problem that arises with this kind of frame problem is similar to that encountered with clustering. Target population elements with multiple frame units have higher chances of selection and will be overrepresented in the sample, relative to the population. If there is a correlation between duplication and variables of interest, survey estimates will be biased. In survey estimation, the problem is that both the presence of duplication and the correlation between duplication and survey variables are often unknown. (p. 79)
 
-##### Clustering and Duplication
+#### Clustering and Duplication
 
 > It is also possible to have frame units mapped to multiple population elements. For example, in telephone household surveys of adults, one may encounter a household with several adults who have multiple entries in the directory. (p. 80)
 
-##### Desenhos de amostragem e seus problemas
+#### Desenhos de amostragem e seus problemas
 
 Há vários framing problems relacionados a pesquisas de survey. Há uma série de desenhos alternativos, que também possuem problemas atrelados:
 
@@ -82,7 +77,7 @@ Há vários framing problems relacionados a pesquisas de survey. Há uma série 
 
 "In short, without a universal frame of e-mail addresses with known links to individual population elements, some survey practices have begun to ignore the frame development step. Without a well-defined sampling frame, the coverage error of resulting estimates is completely unknowable." (p. 84).
 
-##### Coverage error
+#### Coverage error
 
 > Undercoverage is a difficult problem, and may be an important source of coverage error in surveys. It is important to note, though, that coverage error is a property of sample statistics and estimates made from surveys. 
 
@@ -94,7 +89,7 @@ $$
 
 one $\bar{Y}$ é a média da população total, $\bar{Y}_C$ é a média da população coberta e $\bar{Y}_U$ é a média da população não coberta. $U$ é o número de unidades não cobertas e $N$ é o número total de unidades. "**Thus, the error due to not covering the $N-C$ units left out of the frame is a function of the proportion 'not covered' and the difference between means for the covered and the not covered.**" (p. 88).
 
-##### Reduzindo o erro de cobertura
+#### Reduzindo o erro de cobertura
 
 - **The Half-Open Interval:** "Consider, for example, address or housing unit lists used in household surveys. These lists may become out of date and miss units quickly. They may also have missed housing units that upon closer inspection could be added to the list. Since address lists are typically in a particular geographic order, it is possible to add units to the frame only for selected frame elements, rather than updating the entire list." (p. 88).
 
@@ -116,7 +111,7 @@ $$
 
 where $\theta$ is the mixing parameter chosen to maximize precision." (p. 92).
 
-#### Capítulo 4 - Sample Design and Sampling Error
+### Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2011). _Survey methodology_. John Wiley & Sons. Cap. 4: _Sample Design and Sampling Error_
 
 > How the sample of a survey is obtained can make a difference. The self-selected nature of the NGS survey, coupled with its placement on the National Geographic Society's website, probably yielded respondents more interested and active in cultural events (Couper, 2000). (p. 97)
 
@@ -148,7 +143,7 @@ where $\theta$ is the mixing parameter chosen to maximize precision." (p. 92).
 >
 > 4) Whether the sample is designed to control the representation of key sub-populations in the sample (called "stratification") (p. 102)
 
-##### Simple Random Sampling (SRS)
+#### Simple Random Sampling (SRS)
 
 > Simple random samples assign an equal probability of selection to each frame element, equal probability to all pairs of frame elements, equal probability to all triplets of frame elements, and so son. (p. 103)
 
@@ -175,7 +170,7 @@ where $\theta$ is the mixing parameter chosen to maximize precision." (p. 92).
 > $$
 >
 
-##### Cluster Sampling
+#### Cluster Sampling
 
 > One way to construct frames at reasonable cost is to sample clusters of elements and then collect a list of elements only for the selected clusters. And when a sample cluster is selected and visited, it makes sense to interview or collect data from more than one element in each cluster also to save costs.
 
@@ -207,7 +202,7 @@ $$
 
 > The statistic $d^2$ is referred to as the design effect. It is a widely used tool in survey sampling in the determination of sample size, and in summarizing the effect of having sampled clusters instead of elements. **It is defined to be the ration of the sampling variance for a statistic computed under the sample design devided by the sampling variance that would have been obtained from an SRS of exactly the same size.** Every statistic in a survey has its own design effect. Different statistics in the same survey will have different magnitudes of the design effect. (p. 109)
 
-##### The Design Effect and Within-Cluster Homogeneity
+#### The Design Effect and Within-Cluster Homogeneity
 
 É importante nos atentarmos para a homogeneidade ou heterogeneidade das observações dentro de cada cluster. Note: se todos os alunos em uma turma tiram a mesma nota no teste, bastaria saber a nota de um único aluno para saber a nota de todos os alunos. Nesses casos, pouca informação nova é adquirida ao entrevistar mais alunos. A medida "roh" (_rate of homogeneity_) mede a homogeneidade dos clusters. 
 
@@ -215,7 +210,7 @@ Em particular, vale notar que $d^2$ cresce à medida que roh cresce. De fato, po
 
 Podemos estimar roh como $\dfrac{(d^2 - 1)}{(b - 1)}$.
 
-###### Stratification and Stratified Sampling
+#### Stratification and Stratified Sampling
 
 > On a frame of population elements, assume that there is information for every element on the list that can be used to divide elements into separate groups, or "strata". Strata are mutually exclusive groups of elements on a sampling frame. Each frame element can be placed in a singular "stratum". In stratified sampling, independent selections are made from each stratum, one by one. Separate samples are drawn from each such group, using the same selection procedure (such as SRS in each stratum, when the frame lists elements) or using different selection procedures (such as SRS of elements in some strata, and cluster sampling in others). (p. 113)
 
@@ -225,7 +220,7 @@ $$
 \bar{y}_{st} = \sum_{h=1}^{H} W_h \bar{y}_h = \text{weighted sum of strata means}
 $$
 
-###### Summary
+#### Summary
 
 > Most of the practices of sample design are deduced from theorems in probability sampling theory. Simple random sampling is a simple base design that is used for the comparison of all complex sample designs. There are four features of sample design on which samples vary:
 >
@@ -236,8 +231,6 @@ $$
 > 3) The use of clustering, which samples groups of elements into the sample simultaneously (other things being equal clustering increases the sampling variance as a function of homogeneity within the clusters on the survey statistics)
 > 
 > 4) The assignment of variable selection probabilities to different elements on the frame (if the higher selection probabilities are assigned to groups that exhibit larger variation on the survey variables, this reduces sampling variance; if not, sampling variances can be increased with variable selection probabilities)
-
----
 
 ## Anotações de aula
 

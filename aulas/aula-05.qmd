@@ -1,12 +1,9 @@
 ---
-fontsize: 12pt
-author: Felipe Lamarca
-endnote: no
+title: "Amostragem II"
+aula: 5
 ---
 
-# Amostragem II
-
-## Anotações das leituras
+## Leituras
 
 ### Wolf, C., Joye, D., Smith, T. W., & Fu, Y. (2016). _The SAGE handbook of survey methodology_. Sage. Cap. 22, _Non-probability Sampling_.
 
@@ -105,7 +102,7 @@ The authors suggest that using an NPS for testing the wording of a survey questi
 
 **Contexto:** diferenças entre as estimativas oferecidas pelo Ibope e pelo Gallup na ocasião da eleição de Lula e Afif em 1989. Na época, falava-se de pesquisa como uma ferramenta de "previsão", e não um retrato do momento. Embora as diferenças estivessem relativamente dentro da margem de erro, isso chama atenção, e a capa do Globo trazia "Pesquisas têm metodologia diferente". Ibope surge filiado ao Gallup e, na época, faziam pesquisa de cotas. Mas quando veio pro Brasil, Gallup passa a dizer que fazia pesquisa probabilística.
 
-### **Alocação**
+### Alocação
 
 Não há um abismo que separa desenhos probabilísticos e não probabilísticos. De saída, precisamos pensar num continuum entre desenhos mais ou menos probabilísticos. De fato, existem desenhos que são probabilísticos "puro sangue", mas, quando pensamos do ponto de vista de implementação, não é tão simples assim.
 
@@ -172,7 +169,7 @@ $$
 
 onde $W_h$ é o peso do estrato $h$ e $\bar{y}_h$ é a média do estrato $h$. Estratos são amostras independentes, justapostas, então eu calculo a média dentro de cada uma dessas amostras e combino elas.
 
-### **Múltiplos estágios**
+### Múltiplos estágios
 
 Imagine o cenário em que temos um município com 1000 habitantes distribuídos em 8 bairros. Sorteamos 4 bairros (_clusters_) para, em cada um deles, entrevistar 10 pessoas. Supondo que os bairros têm 125 pessoas cada, um desenho por conglomerados poderia ser:
 
@@ -192,7 +189,7 @@ Na prática, o sorteio é realizado em algumas etapas: primeiro, sorteados os _c
 
 No entanto, note que se o número de pessoas em cada bairro for diferente, essa matemática quebra. A probabilidade de inclusão de cada pessoa na amostra já não é a mesma: se eu fizer o mesmo número de entrevistas em qualquer bairro que eu sortear, em alguns bairros a probabilidade de incluir a pessoa na amostra será maior ou menor do que em outros. Portanto, temos distorções no resultado -- um viés sistemático na estimação. 
 
-### **PPT**
+### PPT
 
 **Uma maneira de resolver isso é incorporar o tamanho do bairro na amostra (em termos de número de pessoas) na hora de calcular a fração amostral. Isso é o que chamamos de Probabilidade Propocional ao Tamanho (PPT, ou PPS, em inglês).** Damos maior probabilidade aos conglomerados maiores serem incluídos na amostra -- mas, a condição sine qua non é que eu saiba o tamanho da população dentro de cada conglomerado. Incorporamos **probabilidades desiguais** de inclusão para tornar ele "justo", proporcional.
 
@@ -231,7 +228,7 @@ Agora, note uma propriedade interessante: ao fazemos isso, estamos reintroduzind
 - Calculamos a probabilidade de incluir uma determinada pessoa dentro do bairro
 - Multiplicamos as duas probabilidades para obter a probabilidade de incluir uma pessoa do bairro $n$ na amostra.
 
-### **Pesquisa não-probabilística**
+### Pesquisa não-probabilística
 
 Nesses casos, não sabemos a probabilidade de uma pessoa ser sorteada (i.e., ser incluída na amostra). Isso pode ocorrer por diversos motivos:
 
@@ -252,4 +249,3 @@ Apesar de vários desenhos na prática serem não-probabilísticos, é possível
 > Algumas interações (renda vs. raça, e.g.) podem ter de ser levadas em conta por meio de **distribuições conjuntas** (ou quotas cruzadas).
 
 A alocação de entrevistas é feita da mesma maneira que os estratos.
-
