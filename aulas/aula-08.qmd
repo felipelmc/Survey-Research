@@ -100,10 +100,10 @@ Considere o seguinte exemplo:
 
 Nesse caso, indicamos quantas pessoas cada unidade amostral representa. Esse valor é calculado a partir da probabilidade de inclusão da unidade amostral. O peso é o inverso da probabilidade de inclusão. **A ponderação pelo desenho ajusta amostras quando temos probabilidades desiguais de inclusão**: $w_i = \frac{1}{\pi_i}$, onde $\pi_i$ é a probabilidade de inclusão da unidade amostral $i$. Supondo que a probabilidade de inclusão é de 0.25, o peso da unidade amostral é 4. Isso significa que ela representa 4 unidades na população.
 
-Esse estimador também é chamado de estimador de expansão -- o estimador de Horwitz-Thompson. O peso absoluto me diz quantas pessoas de perfil similar uma única pessoa da amostra representa.
+Esse estimador também é chamado de estimador de expansão -- o estimador de Horvitz-Thompson. O peso absoluto me diz quantas pessoas de perfil similar uma única pessoa da amostra representa.
 
 $$
-\hat{N} = \sum_{i = 1}^n \frac{y_i}{w_i}
+\hat{T} = \sum_{i = 1}^n w_i y_i
 $$
 
 Note que esse peso é útil para calcular totais populacionais, mas ele é diferente do peso usado para fazer ponderação. Por que ponderar?
@@ -122,7 +122,7 @@ Problemas com quadro amostral (cobertura, e.g.) e não-resposta de unidade podem
 
 A ponderação duplica, triplica, às vezes quadruplica a informação que temos. Na prática, isso lembra a amostragem por conglomerados, na perspectiva de que estamos aumentando a margem de erro ao não incorporar informações efetivamente novas.
 
-Ideia básica: ajustar os pesos dos respondentes para compensar as unidades ausentes ou sub-representadas. Pesquisa domiciliar probabilística com $n=1000$ entrevistou $380\%$ homens; na população, homens são $50\%$:
+Ideia básica: ajustar os pesos dos respondentes para compensar as unidades ausentes ou sub-representadas. Pesquisa domiciliar probabilística com $n=1000$ entrevistou $380$ homens; na população, homens são $50\%$:
 
 $$
 \frac{0.5}{0.38} \ \text{ou} \ \frac{500}{380} \approx 1.315789474
@@ -171,7 +171,7 @@ verdade <- mean(macae$alfabetizada)
 print(verdade)
 
 ```
-De maneira naive, podemos estimar a média apenas tirando a média simples da amostra. Devemos esperar algo razoavelmente distoante do parâmetro populacional.
+De maneira naive, podemos estimar a média apenas tirando a média simples da amostra. Devemos esperar algo razoavelmente destoante do parâmetro populacional.
 
 ```{r}
 
@@ -184,7 +184,7 @@ mean(amostra$alfabetizada)
 
 ```
 
-Usando o estimador de Horwitz-Thompson, podemos recuperar os pesos absolutos usando a probabilidade de inclusão (i.e., ponderação pela probabilidade de inclusão):
+Usando o estimador de Horvitz-Thompson, podemos recuperar os pesos absolutos usando a probabilidade de inclusão (i.e., ponderação pela probabilidade de inclusão):
 
 ```{r}
 

@@ -54,7 +54,7 @@ Suppose we want to estimate statistics of interest with more precision for Latin
 > When combining across these groups to get estimates for the entire population, ignoring ethnicity, something must be done to compensate for the substantial overrepresentation of Latinos in the sample. Weights in a weighted analysis applied to individual values are one way to accomplish this adjustment. Recall that the weighted mean can be computed, when individual level weights are available, as
 >
 > $$
-> \bar{y}_n = \dfrac{\sum^{i = 1}^n w_i \times y_i}{\sum_{i = 1}^n w_i}
+> \bar{y}_n = \dfrac{\sum_{i = 1}^n w_i \times y_i}{\sum_{i = 1}^n w_i}
 > $$
 
 > When data are combined across groups, this weighting decreases the contribution of values for a variable for Latinos the 1/7th the contribution of non-Latinos. This adjustment allows the sample cases to contribute to estimates for the total population in a correct proportionate share. [@groves2011survey, p. 350]
@@ -76,7 +76,7 @@ Suppose we want to estimate statistics of interest with more precision for Latin
 > _Taylor Series Estimation_ [...]. The Taylor series approximation handles this difficulty by converting a ratio into an approximation that does not involve ratios, but instead is a function of sums of sample values. [...]. For example, the variance for a simple ration mean like
 >
 > $$
-> \bar{y}_n = \dfrac{\sum^{i = 1}^n w_i \times y_i}{\sum_{i = 1}^n w_i}
+> \bar{y}_n = \dfrac{\sum_{i = 1}^n w_i \times y_i}{\sum_{i = 1}^n w_i}
 > $$
 > 
 > using a Taylor series approximation (assuming simple random sampling, for simplicity) is
@@ -89,7 +89,7 @@ Suppose we want to estimate statistics of interest with more precision for Latin
 
 > _Balanced Repeated Replication and Jackknife Replication_ The balanced repeated and jackknife repeated methods take and entirely different approach. Rather tha attempting to find an analytic solution to the problem of estimating the sampling variance of a statistic, they rely on repeated subsampling. One can think of repeated replication as being similar to drawing not one but many samples from the same population at the same time. For each sample, an estimate of same statistic, say the mean $\bar{y}_\gamma$, is computed for each sample $\gamma$.
 
-In that case, the mean is $\bar{y} = \frac{1}{c} \sum^c_{\gamma = 1} = \bar{y}_\gamma$, and the variance is $v(\bar{y}) = \frac{1}{c(c-1)} \sum^c_{\gamma = 1} (\bar{y}_\gamma - \bar{y})^2$
+In that case, the mean is $\bar{y} = \frac{1}{c} \sum^c_{\gamma = 1} \bar{y}_\gamma$, and the variance is $v(\bar{y}) = \frac{1}{c(c-1)} \sum^c_{\gamma = 1} (\bar{y}_\gamma - \bar{y})^2$
 
 > The strength of this approach to estimating the sampling variance of a statistic is that it can be applied to almost any kind of statistic: means, proportions, regression coefficients, and medians. Using these procedures requires thousands of calculations made feasible only with high-speed computing. [@groves2011survey, p. 361]
 
@@ -193,6 +193,7 @@ Outra forma de medir incerteza é usando o erro-padrão. A variância amostral p
 $$
 \text{SE}_\bar{y} = \sqrt{\dfrac{s^2}{n}} = \dfrac{s}{\sqrt{n}},
 $$
+
 onde $s = \sqrt{s^2}$ é o desvio-padrão da amostra. Na prática, voltamos para a escala original do dado, então a gente consegue calcular uma margem de erro de maneira mais simples.
 
 **Ponto essencial**: se a distribuição amostral de vários estimadores parece normal, usamos a função de densidade normal para calcular a probabilidade de uma estimativa cair em um intervalo. A PDF da normal é:
@@ -236,9 +237,12 @@ print(se_y)
 Com isso temos uma margem de erro e um intervalo de confiança:
 
 $$
-\text{ME} = 1.96 \times \text{SE}_\bar{y} \\
-\text{IC}_{95\%} = \bar{y} \pm\ \text{ME}
+\begin{aligned}
+\text{ME} &= 1.96 \times \text{SE}_\bar{y} \\
+\text{IC}_{95\%} &= \bar{y} \pm\ \text{ME}
+\end{aligned}
 $$
+
 Parece bom, mas é uma aproximação. 
 
 No caso de proporções, margens de erro não são simétricas; isto é, estimativas mais próximas de $0$ ou $1$ têm margens de erro menores (porque os limites _forçam_ redução nas margens). Em termos práticos, a variância de proporção assume uma distribuição binomial, e não normal.

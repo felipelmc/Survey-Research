@@ -87,13 +87,13 @@ $$
 \bar{Y}_C - \bar{Y} = \dfrac{U}{N} (\bar{Y}_C - \bar{Y}_U),
 $$
 
-one $\bar{Y}$ é a média da população total, $\bar{Y}_C$ é a média da população coberta e $\bar{Y}_U$ é a média da população não coberta. $U$ é o número de unidades não cobertas e $N$ é o número total de unidades. "**Thus, the error due to not covering the $N-C$ units left out of the frame is a function of the proportion 'not covered' and the difference between means for the covered and the not covered.**" [@groves2011survey, p. 88].
+onde $\bar{Y}$ é a média da população total, $\bar{Y}_C$ é a média da população coberta e $\bar{Y}_U$ é a média da população não coberta. $U$ é o número de unidades não cobertas e $N$ é o número total de unidades. "**Thus, the error due to not covering the $N-C$ units left out of the frame is a function of the proportion 'not covered' and the difference between means for the covered and the not covered.**" [@groves2011survey, p. 88].
 
 #### Reduzindo o erro de cobertura
 
 - **The Half-Open Interval:** "Consider, for example, address or housing unit lists used in household surveys. These lists may become out of date and miss units quickly. They may also have missed housing units that upon closer inspection could be added to the list. Since address lists are typically in a particular geographic order, it is possible to add units to the frame only for selected frame elements, rather than updating the entire list." [@groves2011survey, p. 88].
 
-- **Multiplicy sampling**: "Some frame supplementation methods add elements to a population through network sampling." [@groves2011survey, p. 90].
+- **Multiplicity sampling**: "Some frame supplementation methods add elements to a population through network sampling." [@groves2011survey, p. 90].
 
 - **Multiple frame designs**: "For example, an out-of-date set of listings of housing units can be supplemented by a frame of newly constructed housing units obtained from planning departments in governmental units responsible for zoning where sample addressses are located" [@groves2011survey, p. 91]. 
 
@@ -265,7 +265,7 @@ Para uma AAS, no mais das vezes temos um quadro amostral como uma listagem de pe
 - Cada amostra obtida é uma realização de uma variável aleatória: o plano amostral.
 - Distribuições de estatísticas amostrais revelam propriedades de um desenho amostral
 
-Variância de uma estimativa: $\text{Var}(\bar{y}) = \mathbb{E}[\bar{y}^2] - \mathbb{E}[\bar{y}]^2$. Já o viés de uma estimativa é dado por $\text{Bias}(\bar{y}) = \mathbb{E}[\bar{y}] - \bar{y}$.
+Variância de uma estimativa: $\text{Var}(\bar{y}) = \mathbb{E}[\bar{y}^2] - \mathbb{E}[\bar{y}]^2$. Já o viés de uma estimativa é dado por $\text{Bias}(\bar{y}) = \mathbb{E}[\bar{y}] - \bar{Y}$.
 
 ```{r}
 # cria um banco de pessoas com idades entre 18 e 80 anos

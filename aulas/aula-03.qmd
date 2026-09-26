@@ -133,7 +133,7 @@ Que tipo de informação podemos efetivamente extrair de perguntas feitas em sur
 
 ## Anotações de aula
 
-A coisa talvez mais importante do survey é que o resultado é proveninente de um processo de interação -- e, ao criar uma interação, ele deflagra um certo processo cognitivo. Além disso, a maioria das pessoas não tem opiniões estáticas sobre a maioria dos assuntos de opinião pública -- daí, a resposta é uma média ponderada das últimas informações que a pessoa se lembra. De fato, pessoas que se interessam e se informam mais sobre política tendem a ter opiniões mais consistentes.
+A coisa talvez mais importante do survey é que o resultado é proveniente de um processo de interação -- e, ao criar uma interação, ele deflagra um certo processo cognitivo. Além disso, a maioria das pessoas não tem opiniões estáticas sobre a maioria dos assuntos de opinião pública -- daí, a resposta é uma média ponderada das últimas informações que a pessoa se lembra. De fato, pessoas que se interessam e se informam mais sobre política tendem a ter opiniões mais consistentes.
 
 Agora, do ponto de vista de um curso formal de survey, o outro lado é falar do **Total Survey Error**. As duas grandes famílias de erro são os erros de mensuração (isto é, que diz respeito ao que eu quero saber e como eu extraio a informação), e os erros de amostragem (qual é a população-alvo? Como selecionamos a amostra?).
 
@@ -141,7 +141,7 @@ O capítulo do Groves dá os conceitos básicos de survey:
 - população
 - unidade de análise
 - amostra
-- quadro amostral: para eu poder fazer inferência sobre uma população, eu preciso de um jeito de definí-la (até porque eu preciso acessá-la). Trata-se do que eu acesso da população -- é a parte objetiva do que eu quero acessar da população.[^1]
+- quadro amostral: para eu poder fazer inferência sobre uma população, eu preciso de um jeito de defini-la (até porque eu preciso acessá-la). Trata-se do que eu acesso da população -- é a parte objetiva do que eu quero acessar da população.[^1]
 - desenho amostral
 - estimação
 - inferência
@@ -207,7 +207,7 @@ Ela representa 4 pessoas na população. Se $y_i = 10$, ela contribui $4 \times 
 
 ### Estimador de Horvitz-Thompson
 
-Para estimar um total populacional, somamos os valores observados na amostra ponderados pelos seus pesos, $w_i$. Se eu sei quantas pessoas cada uma das pessoas na amostra reprensenta, então eu consigo estimar o total populacional. Peso também pode ser chamado de fator de expansão.
+Para estimar um total populacional, somamos os valores observados na amostra ponderados pelos seus pesos, $w_i$. Se eu sei quantas pessoas cada uma das pessoas na amostra representa, então eu consigo estimar o total populacional. Peso também pode ser chamado de fator de expansão.
 
 $$
 \hat{T}_{HT} = \sum_{i=1}^{n} w_i y_i = \sum_{i=1}^{n} \frac{y_i}{\pi_i}
@@ -217,7 +217,7 @@ Mesmo usando HT, a estimativa do total pode diferir de $T$ na população; com a
 
 ### Erros
 
-Erros nada mais são do que diferenças entre estimativa amostral e parâmetro populacional (assumindo, por ora, amostras aleatórias com sorteios independentes de uma população infinita). A quantidade de uma pesquisa depende da proximidade entre $\bar{y}$ e $\bar{Y}$.
+Erros nada mais são do que diferenças entre estimativa amostral e parâmetro populacional (assumindo, por ora, amostras aleatórias com sorteios independentes de uma população infinita). A qualidade de uma pesquisa depende da proximidade entre $\bar{y}$ e $\bar{Y}$.
 
 Uma forma teórica de quantificar o erro total para uma estatística específica:
 

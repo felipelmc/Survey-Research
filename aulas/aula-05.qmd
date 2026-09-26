@@ -112,7 +112,7 @@ $$
 f_h = \frac{n_h}{N_h} \Rightarrow n_h = n \times \frac{N_h}{N}
 $$
 
-Esse $f$ diz o peso relativo daquele estrato em relação a todos os estratos que eu defini. Se a população das pessoas da Zona Sul é de $5%$, então $f_h = 0.05$. 
+Esse $f$ diz o peso relativo daquele estrato em relação a todos os estratos que eu defini. Se a população das pessoas da Zona Sul é de 5%, então $f_h = 0.05$. 
 
 **Esse é um desenho amplamente utilizado porque ele reduz variância**. Isso é lógico, já que estamos evitando fazer muitas entrevistas (isto é, deslocar a nossa amostra) em uma única região (ou outro elemento usado para fazer a estratificação) de maneira aleatória. Intuitivamente, cada estrato é representado na amostra exatamente em proporção ao seu tamanho na população.
 
@@ -191,7 +191,7 @@ No entanto, note que se o número de pessoas em cada bairro for diferente, essa 
 
 ### PPT
 
-**Uma maneira de resolver isso é incorporar o tamanho do bairro na amostra (em termos de número de pessoas) na hora de calcular a fração amostral. Isso é o que chamamos de Probabilidade Propocional ao Tamanho (PPT, ou PPS, em inglês).** Damos maior probabilidade aos conglomerados maiores serem incluídos na amostra -- mas, a condição sine qua non é que eu saiba o tamanho da população dentro de cada conglomerado. Incorporamos **probabilidades desiguais** de inclusão para tornar ele "justo", proporcional.
+**Uma maneira de resolver isso é incorporar o tamanho do bairro na amostra (em termos de número de pessoas) na hora de calcular a fração amostral. Isso é o que chamamos de Probabilidade Proporcional ao Tamanho (PPT, ou PPS, em inglês).** Damos maior probabilidade aos conglomerados maiores serem incluídos na amostra -- mas, a condição sine qua non é que eu saiba o tamanho da população dentro de cada conglomerado. Incorporamos **probabilidades desiguais** de inclusão para tornar ele "justo", proporcional.
 
 - 8 bairros (conglomerados)
     - bairros 1-4: 50 pessoas cada
@@ -201,28 +201,28 @@ No entanto, note que se o número de pessoas em cada bairro for diferente, essa 
 Alocação para o bairro 1:
 
 $$
-\mathbb{P}(\text{bairro_1}) = \frac{50}{1000} = 0.05
+\mathbb{P}(\text{bairro}_1) = \frac{50}{1000} = 0.05
 $$
 
 E a probabilidade de selecionar uma pessoa dele é:
 
 $$
-\mathbb{P}(\text{pessoa} | \text{bairro_1}) = \frac{1}{50} = 0.02
+\mathbb{P}(\text{pessoa} | \text{bairro}_1) = \frac{1}{50} = 0.02
 $$
 
 Agora pense no bairro 5:
 
 $$
-\mathbb{P}(\text{bairro_5}) = \frac{200}{1000} = 0.2
+\mathbb{P}(\text{bairro}_5) = \frac{200}{1000} = 0.2
 $$
 
 E a probabilidade de selecionar uma pessoa dele é:
 
 $$
-\mathbb{P}(\text{pessoa} | \text{bairro_5}) = \frac{1}{200} = 0.005
+\mathbb{P}(\text{pessoa} | \text{bairro}_5) = \frac{1}{200} = 0.005
 $$
 
-Agora, note uma propriedade interessante: ao fazemos isso, estamos reintroduzindo a equiprobabilidade de seleção. Note que as probabilidades, se multiplicadas em cada caso, dão a mesma probabilidade de seleção das pessoas -- $0.001$. Ou seja, a probabilidade de selecionar uma pessoa do bairro 1 é de 0.05 vezes 0.02, e a probabilidade de selecionar uma pessoa do bairro 5 é de 0.2 vezes 0.005. Isso significa que, mesmo com tamanhos diferentes, as probabilidades de seleção são as mesmas. Isso é o que chamamos de **equiprobabilidade**.
+Agora, note uma propriedade interessante: ao fazermos isso, estamos reintroduzindo a equiprobabilidade de seleção. Note que as probabilidades, se multiplicadas em cada caso, dão a mesma probabilidade de seleção das pessoas -- $0.001$. Ou seja, a probabilidade de selecionar uma pessoa do bairro 1 é de 0.05 vezes 0.02, e a probabilidade de selecionar uma pessoa do bairro 5 é de 0.2 vezes 0.005. Isso significa que, mesmo com tamanhos diferentes, as probabilidades de seleção são as mesmas. Isso é o que chamamos de **equiprobabilidade**.
 
 - Calculamos a probabilidade de incluir um determinado bairro
 - Calculamos a probabilidade de incluir uma determinada pessoa dentro do bairro
@@ -244,7 +244,7 @@ Apesar de vários desenhos na prática serem não-probabilísticos, é possível
 - Pesquisas eleitorais domiciliares tipicamente implementam _area sampling_, determinando probabilisticamente conglomerados a serem visitados (_probability sampling with quotas_)
 - Seleção por meio de métodos não-intencionais (e.g., seleção sistemática de domicílios, ponto de fluxo, horário de abordagem, etc.)
 
-**Como cotas funcionam?** Eu não sei exatamenta a distribuição de uma certa variável na população, mas existe alguma pesquisa confiável da qual eu posso me basear. Eu quero acabar com uma distribuição de sexo que siga a mesma proporção de uma determinada pesquisa. As mais comuns são sexo, idade e (um pouco mais nebuloso) idade.
+**Como cotas funcionam?** Eu não sei exatamente a distribuição de uma certa variável na população, mas existe alguma pesquisa confiável da qual eu posso me basear. Eu quero acabar com uma distribuição de sexo que siga a mesma proporção de uma determinada pesquisa. As mais comuns são sexo, idade e (um pouco mais nebuloso) idade.
 
 > Algumas interações (renda vs. raça, e.g.) podem ter de ser levadas em conta por meio de **distribuições conjuntas** (ou quotas cruzadas).
 
