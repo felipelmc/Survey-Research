@@ -276,7 +276,7 @@ pessoas <- data.frame(id = 1:250, idade = sample(18:80, size = 250, replace = TR
 
 # 5 amostras de 50 pessoas
 for (i in 1:5){
-    x <- sample(pessoas$idade, size = 5, replace = FALSE)
+    x <- sample(pessoas$idade, size = 50, replace = FALSE)
     print(mean(x))
 }
 ```
@@ -288,7 +288,7 @@ library(dplyr)
 
 # 5 amostras de 50 pessoas
 for (i in 1:5){
-    x <- pessoas %>% slice_sample(n = 5, replace = FALSE)
+    x <- pessoas %>% slice_sample(n = 50, replace = FALSE)
     print(mean(x$idade))
 }
 ```

@@ -41,7 +41,7 @@ Agora, pensando do ponto de vista de qualidade de um survey...:
 
 > For example, the answer to a survey question about how many times one has been victimized in the last six months is viewed as just one incident of the application of that question to a specific respondent. In the language of psychometric measurement theory, each survey is one trial of an infinite number of trials. [...]. We do not really administer the test many times; instead, we envision that the one test might have achieved different outcomes from the same person over conceptually independent trials. [@groves2011survey, p. 48]
 
-> Validity is the correlation of the measurement, $Y_i$, and the true value, $\mu_i$, measured over all possible trials and persons: $\mathbb{E}[Y_{it} - \bar{Y} (\mu_i - \mu)] / [\sqrt{\mathbb{E}(Y_{it} - \bar{Y}]^2)} \sqrt{\mathbb{E}(\mu_i - \mu)^2}]$ [@groves2011survey, p. 48]
+> Validity is the correlation of the measurement, $Y_i$, and the true value, $\mu_i$, measured over all possible trials and persons: $\mathbb{E}[(Y_{it} - \bar{Y})(\mu_i - \mu)] / [\sqrt{\mathbb{E}(Y_{it} - \bar{Y})^2} \sqrt{\mathbb{E}(\mu_i - \mu)^2}]$ [@groves2011survey, p. 48]
 >
 > [...] When $y$ and $\mu$ covary, moving up and down in tandem, the measurement has high construct validity. A valid measure of an underlying construct is one that is perfecly correlated to the construct. [@groves2011survey, p. 48] 
 

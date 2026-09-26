@@ -44,6 +44,12 @@ execute:
 - Com essa especificação, cerca de 67% da população seria contrária ao aborto (na pergunta original, a favor da proibição completa), com a maior oposição no Sul (77,5%) e no Centro-Oeste (74,9%) e a menor no Norte (51,4%).
 :::
 
+::: {.nota-ia collapse="false" title="Sobre a estimativa de 67%: nota preparada com auxílio do Claude"}
+A estimativa de 67% vem da especificação com *slopes* de idade e escolaridade por UF. Refeito para a variável `contra_aborto`, esse modelo termina num ajuste singular: as correlações entre os efeitos aleatórios de escolaridade por UF são estimadas em −1 e +1, e a variância do intercepto de sexo em zero. Nessas condições, a projeção depende muito da especificação. Com o modelo só de interceptos variáveis, a mesma base dá cerca de 48%, e a amostra sem ajuste, 33,2%.
+
+A comparação com o Datafolha (2024) também pede cuidado. A variável modelada vale 1 para quem defende a proibição completa do aborto, enquanto os 66% do Datafolha são de pessoas contrárias ao PL 1904/2024, que endurece a punição ao aborto; as duas medidas apontam em sentidos diferentes. A pesquisa da Quaest (72% contra a legalização) é uma referência mais próxima, mas também mede uma posição mais ampla que a proibição completa.
+:::
+
 ```{r}
 #| label: fig-validacao
 #| fig-cap: "Voto em Bolsonaro no 1º turno de 2018: a amostra sem ajuste, os dois modelos de MrP e o resultado oficial. Valores reportados na seção de resultados."
@@ -343,7 +349,7 @@ comparar_variavel(df, estratos, "escolaridade")
 
 Agora que já analisamos devidamente as diferenças entre a amostra coletada e a população brasileira, vamos passar a uma etapa crucial ao ajuste de modelos de regressão para pós-estratificação: a análise exploratória. O que acontece, na prática, é que a performance do MrP é altamente condicionada pela especificação do modelo. Isso significa, portanto -- e conforme insistem @ghitza2013deep --, que devemos analisar cuidadosamente quais variáveis incluiremos no modelo e, mais ainda, a maneira como essas variáveis se relacionam entre si.
 
-A abordagem utilizada nesta tarefa foi a seguinte: entendendo que o voto em Bolsonaro em 2018 e o posicionamento contrário ao aborto são ações mais ou menos correlacionadas, implementei uma série de modelos multinível que tinham como objetivo inicial estimar a proporção da população que havia votado em Bolsonaro no primeiro turno das eleições presidenciais de 2018. Essa abordagem é útil porque, na prática, o percentual de indivíduos que votaram em Bolsonaro no primeiro turno das eleições de 2018 é um parâmetro conhecido: 46,03%. Após isso, utilizo o modelo que apresentou a melhor performance para estimar a proporção de indivíduos favoráveis ao aborto.
+A abordagem utilizada nesta tarefa foi a seguinte: entendendo que o voto em Bolsonaro em 2018 e o posicionamento contrário ao aborto são ações mais ou menos correlacionadas, implementei uma série de modelos multinível que tinham como objetivo inicial estimar a proporção da população que havia votado em Bolsonaro no primeiro turno das eleições presidenciais de 2018. Essa abordagem é útil porque, na prática, o percentual de indivíduos que votaram em Bolsonaro no primeiro turno das eleições de 2018 é um parâmetro conhecido: 46,03%. Após isso, utilizo o modelo que apresentou a melhor performance para estimar a proporção de indivíduos contrários ao aborto.
 
 Essa abordagem, é claro, tem uma série de limitações. Uma delas diz respeito ao fato de que o voto em Bolsonaro e o posicionamento contrário ao aborto são atitudes apenas parcialmente correlacionadas. Isso significa dizer que, ao assumir uma mesma estratégia de MrP para estimar os dois parâmetros quase certamente levará a algum tipo de erro. Mesmo assim, assumo que essa abordagem é a melhor possível dadas as informações disponíveis.
 

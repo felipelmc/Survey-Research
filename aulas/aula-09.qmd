@@ -267,7 +267,7 @@ Tendo um modelo multinível ajustado para predizer respostas individuais a parti
 A segunda etapa, portanto, é a pós-estratificação propriamente:
 
 $$
-\hat{\pi}_g^{\text{MrP}} = \dfrac{\sum_g \hat{\pi}_g N_g}{\sum_g N_g},
+\hat{\pi}^{\text{MrP}} = \dfrac{\sum_g \hat{\pi}_g N_g}{\sum_g N_g},
 $$
 
 onde $N_g$ é o número de pessoas no grupo $g$ e $\hat{\pi}_g$ é a predição do modelo para o grupo $g$. O resultado final é uma estimativa da proporção de pessoas que responderam $1$ (seja lá o que $1$ significa na variável resposta) na população.

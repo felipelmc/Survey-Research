@@ -24,7 +24,7 @@ abstract: >
   corrigem parte das discrepâncias entre amostra e população. Embora os ajustes 
   sejam geralmente sutis, em alguns casos as diferenças são substantivamente relevantes, 
   especialmente em contextos de disputa acirrada, como o da eleição de 2022. Por fim, 
-  discute-se a possibilidadede incluir variáveis adicionais, 
+  discute-se a possibilidade de incluir variáveis adicionais, 
   como religião ou perfil político, para refinar futuras estratégias de ponderação.
 format:
   pdf:
@@ -369,7 +369,7 @@ comparar_variavel(cor_raca)
 
 ```
 
-Algo semelhante ocorre na variável `cor_raca`. No gráfico da distribuição marginal, para todo o Brasil, observamos que a há uma sistemática subestimação da população branca em algo em torno de 9 pontos percentuais, enquanto a população preta é superestimada em aproximadamente 5 pontos percentuais. Outras religiões também são superestimadas. Pela magnitude dessas diferenças, certamente será importante incluir `cor_raca` no pós-ajuste.
+Algo semelhante ocorre na variável `cor_raca`. No gráfico da distribuição marginal, para todo o Brasil, observamos que a há uma sistemática subestimação da população branca em algo em torno de 9 pontos percentuais, enquanto a população preta é superestimada em aproximadamente 5 pontos percentuais. Outras categorias de cor/raça também são superestimadas. Pela magnitude dessas diferenças, certamente será importante incluir `cor_raca` no pós-ajuste.
 
 
 ```{r}
