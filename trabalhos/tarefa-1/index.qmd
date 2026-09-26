@@ -351,20 +351,17 @@ destaque <- df_resultados %>%
   mutate(desenho = factor(
     desenho,
     levels = c("Estratificação", "SRS", "Conglomerados"),
-    labels = c("Estratificação (distrito e subdistrito)", "AAS",
-               "Conglomerados (80 setores, 15 entrevistas em cada)")
+    labels = c("Estratificação", "AAS", "Conglomerados (80 × 15)")
   )) %>%
-  ggplot(aes(x = valor, colour = desenho, fill = desenho)) +
-  geom_density(alpha = 0.12, linewidth = 0.8) +
+  ggplot(aes(x = valor, colour = desenho)) +
+  geom_density(linewidth = 1, key_glyph = "path") +
   geom_vline(xintercept = mean(macae$alfabetizada), linetype = "dashed",
              colour = cn_palette$ink3) +
   scale_colour_notes() +
-  scale_fill_notes() +
   scale_x_continuous(labels = scales::label_percent(accuracy = 1, decimal.mark = ",")) +
   labs(x = "Proporção de alfabetizados em 2.000 amostras de 1.200 pessoas",
-       y = NULL, colour = NULL, fill = NULL) +
-  guides(colour = guide_legend(ncol = 1), fill = guide_legend(ncol = 1)) +
-  theme_notes(base_size = 12) +
+       y = NULL, colour = NULL) +
+  theme_notes(base_size = 13) +
   theme(axis.text.y = element_blank(), panel.grid.major.y = element_blank())
 ggsave("destaque.png", destaque + theme(plot.margin = margin(18, 24, 18, 18)),
        width = 8, height = 4.5, dpi = 150, bg = "#F6F6F3")

@@ -9,9 +9,6 @@ project:
     - trabalhos/index.qmd
     - trabalhos/*/index.qmd
     - referencias.qmd
-  resources:
-    - ementa.pdf
-    - trabalhos/apresentacao/slides/index.html
 
 book:
   title: "Pesquisa de Survey"
