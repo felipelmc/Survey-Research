@@ -5,25 +5,25 @@ aula: 4
 
 ## Leituras
 
-### Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2011). _Survey methodology_. John Wiley & Sons. Cap. 3: _Target Populations, Sampling Frames, and Coverage Error_
+### @groves2011survey, cap. 3: *Target Populations, Sampling Frames, and Coverage Error*
 
 > In short, statistics describing different populations can be collected in a single survey when the populations are linked to units from which measurements are taken.
 >
-> Among common research tools, surveys are unique in their concern about a well-specified population. For example, when conducting a randomized biomedical experiments, the researcher often pays much more attention to the experimental stimulus and the conditions of the measurement than to the identification of the population under study. The implicit assumption in such research is that the chief purpose is identifying the conditions under which the stimulus produces the hypothesized effect. The demonstration that it does so for a variety of types of subjects is secondary. **Because surveys evolved as tools to describe fixed, finite populations, survey researchers are specific and explicit about definitions of populations under study.** (p. 69)
+> Among common research tools, surveys are unique in their concern about a well-specified population. For example, when conducting a randomized biomedical experiments, the researcher often pays much more attention to the experimental stimulus and the conditions of the measurement than to the identification of the population under study. The implicit assumption in such research is that the chief purpose is identifying the conditions under which the stimulus produces the hypothesized effect. The demonstration that it does so for a variety of types of subjects is secondary. **Because surveys evolved as tools to describe fixed, finite populations, survey researchers are specific and explicit about definitions of populations under study.** [@groves2011survey, p. 69]
 
 - Target population: grupo de "elementos" sobre os quais a pesquisa de survey deseja fazer inferência usando estatísticas amostrais (_sample statistics_). A população-alvo é finita em tamanho (isto é, pode ser contada); existem durante um certo período de tempo; e são observáveis.
 
-> For example, the target population of many U.S. household surveys is persons 18 years of age or older, "adults" who reside in housing units within the United States. (p. 70)
+> For example, the target population of many U.S. household surveys is persons 18 years of age or older, "adults" who reside in housing units within the United States. [@groves2011survey, p. 70]
 
-> There are many populations, though, for which lists of individual elements are not readily available. For example, in the United States lists are seldom avaliable in one place for all students attending school in a province or state, inmates in prisions, or even adults living in a specific county. (p. 71)
+> There are many populations, though, for which lists of individual elements are not readily available. For example, in the United States lists are seldom avaliable in one place for all students attending school in a province or state, inmates in prisions, or even adults living in a specific county. [@groves2011survey, p. 71]
 
 > When available sampling frames miss the target population partially or entirely, the survey researcher faces two options:
 >
 > 1) Redefine the target population to fit the frame better
 > 
-> 2) Admit the possibility of coverage error in statistics describing the original target population (p. 71)
+> 2) Admit the possibility of coverage error in statistics describing the original target population [@groves2011survey, p. 71]
 
-> A common example of redefining the target population is found in telephone household surveys, where the sample is based on a frame of telephone numbers. Although the desired target population might be all adults living in the U.S. households, the attraction of using the telephone frame may persuade the researcher to alter the target population to adults living in telephone households. Alternatively, the researcher can keep the full household target population and document that approximately 2% of U.S. adults are missed because they have no telephones. (p. 71)
+> A common example of redefining the target population is found in telephone household surveys, where the sample is based on a frame of telephone numbers. Although the desired target population might be all adults living in the U.S. households, the attraction of using the telephone frame may persuade the researcher to alter the target population to adults living in telephone households. Alternatively, the researcher can keep the full household target population and document that approximately 2% of U.S. adults are missed because they have no telephones. [@groves2011survey, p. 71]
 
 The match of sampling frame to target population created three potential outcomes:
 
@@ -35,35 +35,35 @@ Outros problemas incluem "Duplication" -- isto é, vários elementos da framing 
 
 #### Undercoverage
 
-> Undercoverage is the weakness of sampling frames promptiong the greatest fears of coverage error. It threatens to produce errors of nonobservation in survey statistics from failure to include parts of the target population in any survey using the frame. (p. 72)
+> Undercoverage is the weakness of sampling frames promptiong the greatest fears of coverage error. It threatens to produce errors of nonobservation in survey statistics from failure to include parts of the target population in any survey using the frame. [@groves2011survey, p. 72]
 
 > Another common concern about undercoverage in household surveys stems from the fact that sampling frames for households generally provide identification of the housing unit (through an address or telephone number) but not identifiers for persons within the household.
 
 #### Ineligible Units
 
-> Sometimes, sampling frames contain elements that are not part of the target population. For example, in telephone number frames, many of the numbers are nonworking or nonresidential numbers, complicating the use of the frame for the target population of households. In area probability surveys, sometimes the map materials contain units outside the target geographical area. (p. 76)
+> Sometimes, sampling frames contain elements that are not part of the target population. For example, in telephone number frames, many of the numbers are nonworking or nonresidential numbers, complicating the use of the frame for the target population of households. In area probability surveys, sometimes the map materials contain units outside the target geographical area. [@groves2011survey, p. 76]
 
-> When interviewers develop frames of household members withing a unit, they often use residence definitions that do not match the meaning of "household" held by the informant. Parents of the students living away from home often think of them as members of the household, yet many survey protocols would place them at college. The informants might tend to exclude persons unrelated to them who rent a room in the housing unit. Studies show that children in shared custody between their father and mother are likely to be duplicated by appearing in each parent's household list. (p. 76)
+> When interviewers develop frames of household members withing a unit, they often use residence definitions that do not match the meaning of "household" held by the informant. Parents of the students living away from home often think of them as members of the household, yet many survey protocols would place them at college. The informants might tend to exclude persons unrelated to them who rent a room in the housing unit. Studies show that children in shared custody between their father and mother are likely to be duplicated by appearing in each parent's household list. [@groves2011survey, p. 76]
 
-> Although undercoverage is a difficult problem, "ineligible" or "foreign" units in the frame can be a less difficult problem to deal with if the problem is not extensive. When foreign units are identified on the frame before selection begins, they can be purged at little cost. [...]. For example, it is known that approximately 15% of entries in residential portions of national telephone directories are numbers that are no longer in service. To achieve a sample of 100 telephone households, one could select a sample of $100(1 - 0.15) = 118$ entires from the directory, expecting that 18 are going to be out-of-service numbers. (p. 76)
+> Although undercoverage is a difficult problem, "ineligible" or "foreign" units in the frame can be a less difficult problem to deal with if the problem is not extensive. When foreign units are identified on the frame before selection begins, they can be purged at little cost. [...]. For example, it is known that approximately 15% of entries in residential portions of national telephone directories are numbers that are no longer in service. To achieve a sample of 100 telephone households, one could select a sample of $100(1 - 0.15) = 118$ entires from the directory, expecting that 18 are going to be out-of-service numbers. [@groves2011survey, p. 76]
 
 #### Clustering
 
-> A telephone directory lists telephone households in order by surname, given name, and address. When sampling adults from this frame, an immediately obvious problem is the clustering of eligible persons that occurs. "Clusterng" means that multiple elements of the target population are represented by the same frame element. A telephone listing in the directory may have a single or two or more adults living there. (p. 77)
+> A telephone directory lists telephone households in order by surname, given name, and address. When sampling adults from this frame, an immediately obvious problem is the clustering of eligible persons that occurs. "Clusterng" means that multiple elements of the target population are represented by the same frame element. A telephone listing in the directory may have a single or two or more adults living there. [@groves2011survey, p. 77]
 
-> One way to react to clustering of target population elements is by simply selecting all eligible units in the selected telephone households (or all eligible units in a cluster). With this design, the probability of selection of the cluster applies to all elements in the cluster. (p. 77)
+> One way to react to clustering of target population elements is by simply selecting all eligible units in the selected telephone households (or all eligible units in a cluster). With this design, the probability of selection of the cluster applies to all elements in the cluster. [@groves2011survey, p. 77]
 
-> After sample selection, there is one other issue that needs to be addressed in this form of cluster sampling: unequal probabilities of selection. If all frame elements are given equal chances, but one eligible selection is made from each, then elements in large clusters have lower overall probabilities of selection than elements in small clusters. For example, an eligible person chosen in a telephone household containing two eligibles has a chance of one-half of being selected, given that the household was sampled, whereas those in a household with four eligibles have a one-in-four chance. (p. 78)
+> After sample selection, there is one other issue that needs to be addressed in this form of cluster sampling: unequal probabilities of selection. If all frame elements are given equal chances, but one eligible selection is made from each, then elements in large clusters have lower overall probabilities of selection than elements in small clusters. For example, an eligible person chosen in a telephone household containing two eligibles has a chance of one-half of being selected, given that the household was sampled, whereas those in a household with four eligibles have a one-in-four chance. [@groves2011survey, p. 78]
 
 #### Duplication
 
-> "Duplication" means that a single target population element is associated with multiple frame elements. In the telephone survey example, this may arise when a single telephone household has more than one listing in a telephone directory. (p. 79)
+> "Duplication" means that a single target population element is associated with multiple frame elements. In the telephone survey example, this may arise when a single telephone household has more than one listing in a telephone directory. [@groves2011survey, p. 79]
 
-> The problem that arises with this kind of frame problem is similar to that encountered with clustering. Target population elements with multiple frame units have higher chances of selection and will be overrepresented in the sample, relative to the population. If there is a correlation between duplication and variables of interest, survey estimates will be biased. In survey estimation, the problem is that both the presence of duplication and the correlation between duplication and survey variables are often unknown. (p. 79)
+> The problem that arises with this kind of frame problem is similar to that encountered with clustering. Target population elements with multiple frame units have higher chances of selection and will be overrepresented in the sample, relative to the population. If there is a correlation between duplication and variables of interest, survey estimates will be biased. In survey estimation, the problem is that both the presence of duplication and the correlation between duplication and survey variables are often unknown. [@groves2011survey, p. 79]
 
 #### Clustering and Duplication
 
-> It is also possible to have frame units mapped to multiple population elements. For example, in telephone household surveys of adults, one may encounter a household with several adults who have multiple entries in the directory. (p. 80)
+> It is also possible to have frame units mapped to multiple population elements. For example, in telephone household surveys of adults, one may encounter a household with several adults who have multiple entries in the directory. [@groves2011survey, p. 80]
 
 #### Desenhos de amostragem e seus problemas
 
@@ -73,9 +73,9 @@ Há vários framing problems relacionados a pesquisas de survey. Há uma série 
 
 - **Telephone number frames for households and persons**: ao usar linhas fixas, falhamos em cobrir cerca de 20% das unidades residenciais dos Estados Unidos. Além disso, um percentual menor possui mais de uma linha fixa e acabam sendo duplicados. Além disso, com o uso de celulares, essa abordagem torna-se mais complicada -- mesmo porque números de telefone celular são associados a uma pessoa, e não a um endereço.
 
-- **Frames for Web Surveys of General Populations**: "The e-mail frame, however, fails to cover large portions of the household population. It has duplication problems because one person can have many different e-mail addresses, and it has clustering problems because more than one person can share an e-mail address." (p. 83). 
+- **Frames for Web Surveys of General Populations**: "The e-mail frame, however, fails to cover large portions of the household population. It has duplication problems because one person can have many different e-mail addresses, and it has clustering problems because more than one person can share an e-mail address." [@groves2011survey, p. 83]. 
 
-"In short, without a universal frame of e-mail addresses with known links to individual population elements, some survey practices have begun to ignore the frame development step. Without a well-defined sampling frame, the coverage error of resulting estimates is completely unknowable." (p. 84).
+"In short, without a universal frame of e-mail addresses with known links to individual population elements, some survey practices have begun to ignore the frame development step. Without a well-defined sampling frame, the coverage error of resulting estimates is completely unknowable." [@groves2011survey, p. 84].
 
 #### Coverage error
 
@@ -87,17 +87,17 @@ $$
 \bar{Y}_C - \bar{Y} = \dfrac{U}{N} (\bar{Y}_C - \bar{Y}_U),
 $$
 
-one $\bar{Y}$ é a média da população total, $\bar{Y}_C$ é a média da população coberta e $\bar{Y}_U$ é a média da população não coberta. $U$ é o número de unidades não cobertas e $N$ é o número total de unidades. "**Thus, the error due to not covering the $N-C$ units left out of the frame is a function of the proportion 'not covered' and the difference between means for the covered and the not covered.**" (p. 88).
+one $\bar{Y}$ é a média da população total, $\bar{Y}_C$ é a média da população coberta e $\bar{Y}_U$ é a média da população não coberta. $U$ é o número de unidades não cobertas e $N$ é o número total de unidades. "**Thus, the error due to not covering the $N-C$ units left out of the frame is a function of the proportion 'not covered' and the difference between means for the covered and the not covered.**" [@groves2011survey, p. 88].
 
 #### Reduzindo o erro de cobertura
 
-- **The Half-Open Interval:** "Consider, for example, address or housing unit lists used in household surveys. These lists may become out of date and miss units quickly. They may also have missed housing units that upon closer inspection could be added to the list. Since address lists are typically in a particular geographic order, it is possible to add units to the frame only for selected frame elements, rather than updating the entire list." (p. 88).
+- **The Half-Open Interval:** "Consider, for example, address or housing unit lists used in household surveys. These lists may become out of date and miss units quickly. They may also have missed housing units that upon closer inspection could be added to the list. Since address lists are typically in a particular geographic order, it is possible to add units to the frame only for selected frame elements, rather than updating the entire list." [@groves2011survey, p. 88].
 
-- **Multiplicy sampling**: "Some frame supplementation methods add elements to a population through network sampling." (p. 90).
+- **Multiplicy sampling**: "Some frame supplementation methods add elements to a population through network sampling." [@groves2011survey, p. 90].
 
-- **Multiple frame designs**: "For example, an out-of-date set of listings of housing units can be supplemented by a frame of newly constructed housing units obtained from planning departments in governmental units responsible for zoning where sample addressses are located" (p. 91). 
+- **Multiple frame designs**: "For example, an out-of-date set of listings of housing units can be supplemented by a frame of newly constructed housing units obtained from planning departments in governmental units responsible for zoning where sample addressses are located" [@groves2011survey, p. 91]. 
 
-"At times, the supplemental frame may cover a completely separate portion of the population. In most cases, though, supplemental frames overlap with the principal frame. In such cases, multiple framing sampling and estimation procedures are employed to correct for unequal probabilities of selection and possibly to yield improved precision for survey estimates." (p. 91).
+"At times, the supplemental frame may cover a completely separate portion of the population. In most cases, though, supplemental frames overlap with the principal frame. In such cases, multiple framing sampling and estimation procedures are employed to correct for unequal probabilities of selection and possibly to yield improved precision for survey estimates." [@groves2011survey, p. 91].
 
 "There are several solutions to the overlap and overrepresentation problem. One is to screen the area household frame. At the doorstep, before an interview is conducted, the interviewer determines whether the household has a fixed-line telephone that would allow it to be reached by telephone. If so, the unit is not selected and no interview is attempted. With this procedure, the overlap is eliminated, and the dual frame sample design has complete coverage of households.
 
@@ -109,13 +109,13 @@ $$
 \bar{y} = (1 - W_{tel}) p_{non-tel} + W_{tel} [ \theta p_{RDD-tel} + (1 - \theta) p_{area-tel}],
 $$
 
-where $\theta$ is the mixing parameter chosen to maximize precision." (p. 92).
+where $\theta$ is the mixing parameter chosen to maximize precision." [@groves2011survey, p. 92].
 
-### Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2011). _Survey methodology_. John Wiley & Sons. Cap. 4: _Sample Design and Sampling Error_
+### @groves2011survey, cap. 4: *Sample Design and Sampling Error*
 
-> How the sample of a survey is obtained can make a difference. The self-selected nature of the NGS survey, coupled with its placement on the National Geographic Society's website, probably yielded respondents more interested and active in cultural events (Couper, 2000). (p. 97)
+> How the sample of a survey is obtained can make a difference. The self-selected nature of the NGS survey, coupled with its placement on the National Geographic Society's website, probably yielded respondents more interested and active in cultural events (Couper, 2000). [@groves2011survey, p. 97]
 
-> The random sampling mechanism and geographic controls are designed to avoid the selection of a sample that has higher incomes, or fewer members of ethnic or racial minorities, or more females, or any of a number of other distortions when compared to the entire U.S. population. (p. 98)
+> The random sampling mechanism and geographic controls are designed to avoid the selection of a sample that has higher incomes, or fewer members of ethnic or racial minorities, or more females, or any of a number of other distortions when compared to the entire U.S. population. [@groves2011survey, p. 98]
 > 
 > Essentially, in its simplest form, the kind of sample selection used in carefully designed surveys has three basic features:
 >
@@ -123,13 +123,13 @@ where $\theta$ is the mixing parameter chosen to maximize precision." (p. 92).
 >
 > 2) Chance or random selection of elements from the list(s)
 >
-> 3) Some mechanism that assures that key subgroups of the population are represented in the sample (p. 98)
+> 3) Some mechanism that assures that key subgroups of the population are represented in the sample [@groves2011survey, p. 98]
 
-> When chance methods, such as tables of random numbers, are applied to all elements of the sampling frame, the samples are referred to as "probability samples". Probability samples assign each element in the frame a known and nonzero chance to be chosen. These probabilities do not need to be equal. For example, the survey designers may need to overrepresent a small group of the population, such as persons age 70 years and older, in order to have enough of them in the sample to prepare separate estimates for the group. (p. 98)
+> When chance methods, such as tables of random numbers, are applied to all elements of the sampling frame, the samples are referred to as "probability samples". Probability samples assign each element in the frame a known and nonzero chance to be chosen. These probabilities do not need to be equal. For example, the survey designers may need to overrepresent a small group of the population, such as persons age 70 years and older, in order to have enough of them in the sample to prepare separate estimates for the group. [@groves2011survey, p. 98]
 
-> Section 2.3 makes the distinction between fixed errors or biases and variable errors or variance. Both errors can arise through sampling. The basis of both sampling bias and sampling variance is the fact that not all elements of the sampling frame are measured. If there is a systematic failure to observe some elements because of the sample design, this can lead to "sampling bias" in the survey statistics. For example, if some persons in the sampling frame have a zero chance of selection and they have different characteristics on the survey variable, then all samples selected with that design can produce estimates that are too high or too low. Even when all frame elements have the same chance of selection, the same sample design can yield many different samples. They will produce estimates that vary; this variation is the basis of "sampling variance" of the sample statistics. We will use from time to time the word "precision" to denote the levels of variance. (p. 98)
+> Section 2.3 makes the distinction between fixed errors or biases and variable errors or variance. Both errors can arise through sampling. The basis of both sampling bias and sampling variance is the fact that not all elements of the sampling frame are measured. If there is a systematic failure to observe some elements because of the sample design, this can lead to "sampling bias" in the survey statistics. For example, if some persons in the sampling frame have a zero chance of selection and they have different characteristics on the survey variable, then all samples selected with that design can produce estimates that are too high or too low. Even when all frame elements have the same chance of selection, the same sample design can yield many different samples. They will produce estimates that vary; this variation is the basis of "sampling variance" of the sample statistics. We will use from time to time the word "precision" to denote the levels of variance. [@groves2011survey, p. 98]
 
-> In some sense, you should think of each survey as one realization of a probability sample design among many that could have occurred. It is conventional to describe attributes of the sample realizations using lower case letters. So each sample realization has a mean and a variance of the distribution of $y$ in the sample realization. The sample mean is called $\bar{y}$, which summarizes all of the different values of $y$ on the sample elements, and the variance of the distribution of $y_i$'s in the sample realization os labeled as $s^2$. We will describe sample designs in which values of $\bar{y}$ from one sample realization will be used to estimate $\bar{Y}$ in the frame population. We will describe sample designs in which values of $s^2$ from one sample realization will be used to estimate $S^2$ in the frame population. (p. 100-101)
+> In some sense, you should think of each survey as one realization of a probability sample design among many that could have occurred. It is conventional to describe attributes of the sample realizations using lower case letters. So each sample realization has a mean and a variance of the distribution of $y$ in the sample realization. The sample mean is called $\bar{y}$, which summarizes all of the different values of $y$ on the sample elements, and the variance of the distribution of $y_i$'s in the sample realization os labeled as $s^2$. We will describe sample designs in which values of $\bar{y}$ from one sample realization will be used to estimate $\bar{Y}$ in the frame population. We will describe sample designs in which values of $s^2$ from one sample realization will be used to estimate $S^2$ in the frame population. [@groves2011survey, p. 100-101]
 
 > Do not confuse the different "variances" discussed. Each frame population has its own distribution of $Y$ values, $S^2$, the population element variance, estimated by $s^2$, the sample element variance from any given sample realization. These are each different from the variance of the sample mean, labeled as $V(\bar{y})$, estimated by using sample realization data, using $v(\bar{y})$. Capital letters denote frame population quantities; lower case letters generally denote sample quantities.
 
@@ -141,11 +141,11 @@ where $\theta$ is the mixing parameter chosen to maximize precision." (p. 92).
 >
 > 3) Whether individual elements are drawn directly and independently or in groups (called "element" or "cluster" samples)
 >
-> 4) Whether the sample is designed to control the representation of key sub-populations in the sample (called "stratification") (p. 102)
+> 4) Whether the sample is designed to control the representation of key sub-populations in the sample (called "stratification") [@groves2011survey, p. 102]
 
 #### Simple Random Sampling (SRS)
 
-> Simple random samples assign an equal probability of selection to each frame element, equal probability to all pairs of frame elements, equal probability to all triplets of frame elements, and so son. (p. 103)
+> Simple random samples assign an equal probability of selection to each frame element, equal probability to all pairs of frame elements, equal probability to all triplets of frame elements, and so son. [@groves2011survey, p. 103]
 
 > To select an SRS, random numbers can be applied directly to the elements in the list. SRS uses list frames numbered from 1 to $N$. Random numbers from 1 to $N$ are selected from a table of random numbers, and the corresponding population elements are chosen from the list. If by chance the same population element is chosen more than once, we do not select it into the sample more than once. Instead, we keep selecting until we have $n$ distinct elements from the population. (This is called sampling "without replacement".)
 >
@@ -184,7 +184,7 @@ $$
 \bar{y} = \dfrac{1}{N} \sum_{\alpha=1}^{A} \sum_{\beta=1}^{B} y_{\alpha \beta}
 $$
 
-> The sampling variance of this mean is different from the SRS sampling variance. The randomization in the selection is applied only to the classrooms. They are the sampling units, and depending on which classrooms are chosen, the value of $\bar{y}$ will vary. In one sense, everything remains the same as SRS, but we treat the clusters as elements in the sample. (p. 108)
+> The sampling variance of this mean is different from the SRS sampling variance. The randomization in the selection is applied only to the classrooms. They are the sampling units, and depending on which classrooms are chosen, the value of $\bar{y}$ will vary. In one sense, everything remains the same as SRS, but we treat the clusters as elements in the sample. [@groves2011survey, p. 108]
 > 
 > In this case,
 > 
@@ -198,9 +198,9 @@ $$
 > s^2_a = \dfrac{1}{A - 1} \sum_{\alpha=1}^{A} (\bar{y}_{\alpha} - \bar{y})^2,
 > $$
 >
-> where $\bar{y}_{\alpha}$ is the mean test score in classroom $\alpha$ (p. 108).
+> where $\bar{y}_{\alpha}$ is the mean test score in classroom $\alpha$ [@groves2011survey, p. 108].
 
-> The statistic $d^2$ is referred to as the design effect. It is a widely used tool in survey sampling in the determination of sample size, and in summarizing the effect of having sampled clusters instead of elements. **It is defined to be the ration of the sampling variance for a statistic computed under the sample design devided by the sampling variance that would have been obtained from an SRS of exactly the same size.** Every statistic in a survey has its own design effect. Different statistics in the same survey will have different magnitudes of the design effect. (p. 109)
+> The statistic $d^2$ is referred to as the design effect. It is a widely used tool in survey sampling in the determination of sample size, and in summarizing the effect of having sampled clusters instead of elements. **It is defined to be the ration of the sampling variance for a statistic computed under the sample design devided by the sampling variance that would have been obtained from an SRS of exactly the same size.** Every statistic in a survey has its own design effect. Different statistics in the same survey will have different magnitudes of the design effect. [@groves2011survey, p. 109]
 
 #### The Design Effect and Within-Cluster Homogeneity
 
@@ -212,7 +212,7 @@ Podemos estimar roh como $\dfrac{(d^2 - 1)}{(b - 1)}$.
 
 #### Stratification and Stratified Sampling
 
-> On a frame of population elements, assume that there is information for every element on the list that can be used to divide elements into separate groups, or "strata". Strata are mutually exclusive groups of elements on a sampling frame. Each frame element can be placed in a singular "stratum". In stratified sampling, independent selections are made from each stratum, one by one. Separate samples are drawn from each such group, using the same selection procedure (such as SRS in each stratum, when the frame lists elements) or using different selection procedures (such as SRS of elements in some strata, and cluster sampling in others). (p. 113)
+> On a frame of population elements, assume that there is information for every element on the list that can be used to divide elements into separate groups, or "strata". Strata are mutually exclusive groups of elements on a sampling frame. Each frame element can be placed in a singular "stratum". In stratified sampling, independent selections are made from each stratum, one by one. Separate samples are drawn from each such group, using the same selection procedure (such as SRS in each stratum, when the frame lists elements) or using different selection procedures (such as SRS of elements in some strata, and cluster sampling in others). [@groves2011survey, p. 113]
 
 > To obtain estimates for the whole population, results must be combined across strata. One method weights stratum results by the population proportions $W_h$. Suppose we are interested in estimating the mean for the population, and we have computed means $\bar{y}_h$ for each stratum. The stratified estimate for the population mean is called $\bar{y}_{st}$ with the subscript _st_ denoting "stratified". It is computed by:
 

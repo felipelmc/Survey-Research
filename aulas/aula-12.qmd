@@ -5,7 +5,7 @@ aula: 12
 
 ## Leituras
 
-### Tourangeau, R., & Yan, T. (2007). _Sensitive questions in surveys_. Psychological bulletin, 133(5), 859.
+### @tourangeau2007sensitive
 
 Vale ler.
 
