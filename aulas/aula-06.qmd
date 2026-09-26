@@ -80,7 +80,7 @@ $$
 Solução: desenhar questionários de forma a incentivar otimização, que é oposto de satisficing. Podemos controlar três aspectos em diferentes medidas.
 
 - Compreensão, reduzindo a dificuldade do instrumento
-- Recuperação, oferecendo _cues_ -- ganchos ou frases que ajudam a puxar itens da memória. "Pensando nos últimos 7 dias..."; "Falando agora sobre os militares no Haiti que estão no Brasil...".
+- Recuperação, oferecendo _cues_: ganchos ou frases que ajudam a puxar itens da memória. "Pensando nos últimos 7 dias..."; "Falando agora sobre os militares no Haiti que estão no Brasil...".
 
 ### Formulação das perguntas
 
@@ -105,7 +105,7 @@ Surveys opt-in naturalmente resolvem parte do problema de motivação: auto-sele
 
 ### Outros
 
-Quando a pergunta é sensível (raça etc), "Prefiro não responder" é um way out muito fácil. Em alguns casos é justo, mas nesses casos é melhor colocar "Não sei". Quando são perguntas que tem algum nível de factualidade, o "Não sei" significa que a pessoa de fato não entende sobre o assunto -- e, se ela já respondeu várias questões sobre o assunto antes, "Não sei" passa a ser menos atrativo e ela vai responder algo.
+Quando a pergunta é sensível (raça etc), "Prefiro não responder" é um way out muito fácil. Em alguns casos é justo, mas nesses casos é melhor colocar "Não sei". Quando são perguntas que tem algum nível de factualidade, o "Não sei" significa que a pessoa de fato não entende sobre o assunto; e, se ela já respondeu várias questões sobre o assunto antes, "Não sei" passa a ser menos atrativo e ela vai responder algo.
 
 Formatos de "grade", em que você faz a pergunta uma vez a pessoa vai respondendo, vendo toda a escala de resposta de uma vez, é ótimo. Vai ganhando eficiência e permite que o respondente faça comparações.
 

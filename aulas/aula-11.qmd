@@ -27,7 +27,7 @@ aula: 11
 
 ## Anotações de aula
 
-Atualmente, a não-resposta é o problema mais difícil de lidar em survey. É um tema quente hoje nas revistas de pesquisa de opinião pública. **O problema não é a não-resposta em si, mas sim que a gente não sabe quem são essas pessoas que não respondem.** Com isso, estamos sob um risco enorme de que essas pessoas sejam sistematicamente diferentes das pessoas que respondem -- i.e., não sabemos qual é o PGD das pessoas que não respondem os surveys.
+Atualmente, a não-resposta é o problema mais difícil de lidar em survey. É um tema quente hoje nas revistas de pesquisa de opinião pública. **O problema não é a não-resposta em si, mas sim que a gente não sabe quem são essas pessoas que não respondem.** Com isso, estamos sob um risco enorme de que essas pessoas sejam sistematicamente diferentes das pessoas que respondem, i.e., não sabemos qual é o PGD das pessoas que não respondem os surveys.
 
 A não-resposta não-ignorável é preocupante. Quando isso ocorre, não podemos ignorar o fato de que as pessoas optaram por não dar uma resposta ao meu instrumento e que não sabemos quem são essas pessoas.
 
@@ -49,9 +49,9 @@ $$
 \dfrac{I}{(I+P) + R + O},
 $$
 
-sendo Completas (I), Parciais (P), Recusas (R), Não-contatos (NC), Outros (O). Esse é o módulo da não-resposta que é mais problemático. A pessoa entende do que se trata a pesquisa -- i.e., atendeu o telefone, mas optou por não participar da pesquisa.
+sendo Completas (I), Parciais (P), Recusas (R), Não-contatos (NC), Outros (O). Esse é o módulo da não-resposta que é mais problemático. A pessoa entende do que se trata a pesquisa, i.e., atendeu o telefone, mas optou por não participar da pesquisa.
 
-### Recusa -- REF1 da AAPOR
+### Recusa: REF1 da AAPOR
 
 $$
 \dfrac{R}{(I+P) + (R + NC + O) + (UH + UO)}

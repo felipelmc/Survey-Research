@@ -100,7 +100,7 @@ Considere o seguinte exemplo:
 
 Nesse caso, indicamos quantas pessoas cada unidade amostral representa. Esse valor é calculado a partir da probabilidade de inclusão da unidade amostral. O peso é o inverso da probabilidade de inclusão. **A ponderação pelo desenho ajusta amostras quando temos probabilidades desiguais de inclusão**: $w_i = \frac{1}{\pi_i}$, onde $\pi_i$ é a probabilidade de inclusão da unidade amostral $i$. Supondo que a probabilidade de inclusão é de 0.25, o peso da unidade amostral é 4. Isso significa que ela representa 4 unidades na população.
 
-Esse estimador também é chamado de estimador de expansão -- o estimador de Horvitz-Thompson. O peso absoluto me diz quantas pessoas de perfil similar uma única pessoa da amostra representa.
+Esse estimador também é chamado de estimador de expansão, o estimador de Horvitz-Thompson. O peso absoluto me diz quantas pessoas de perfil similar uma única pessoa da amostra representa.
 
 $$
 \hat{T} = \sum_{i = 1}^n w_i y_i
@@ -134,7 +134,7 @@ Cada homem na amostra representa 1.315789474 homens na população. O mesmo vale
 
 Quando já temos pesos (geralmente do desenho), podemos forçá-los a corresponder a totais populacionais conhecidos em variáveis auxiliares. 
 
-Ponderar é pegar a amostra que eu tenho e tentar aproximá-la de algum benchmark (por exemplo, a população). Calibrar, por outro lado, é pegar um peso que eu já tenho (no mais das vezes, a probabilidade de inclusão) -- supondo que a gente calcule o total populacional e, no entanto, a população brasileira deu $205$ milhões, mas sabemos que a população brasileira é de $203$ milhões. A calibragem ajusta o esquema de pesos para fazer com que o total bata com algum total conhecido da população.
+Ponderar é pegar a amostra que eu tenho e tentar aproximá-la de algum benchmark (por exemplo, a população). Calibrar, por outro lado, é pegar um peso que eu já tenho (no mais das vezes, a probabilidade de inclusão): supondo que a gente calcule o total populacional e, no entanto, a população brasileira deu $205$ milhões, mas sabemos que a população brasileira é de $203$ milhões. A calibragem ajusta o esquema de pesos para fazer com que o total bata com algum total conhecido da população.
 
 Nesse caso, precisamos encontrar novos pesos $w_i^{\text{Cal}}$ próximos aos pesos iniciais de forma que:
 
@@ -208,7 +208,7 @@ svytotal(~alfabetizada, metodo1)
 svymean(~alfabetizada, metodo1)
 
 ```
-Agora, vejamos o método 2: não temos a probabilidade de inclusão, mas tenho os totais populacionais extraídos a partir de alguma outra fonte -- como, por exemplo, o censo demográfico. Eu sei, por exemplo, quantas pessoas moram em cada distrito.
+Agora, vejamos o método 2: não temos a probabilidade de inclusão, mas tenho os totais populacionais extraídos a partir de alguma outra fonte, como, por exemplo, o censo demográfico. Eu sei, por exemplo, quantas pessoas moram em cada distrito.
 
 ```{r}
 

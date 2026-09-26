@@ -73,7 +73,7 @@ aula: 2
 
 Surveys ao longo do tempo mostram flutuações relativamente bizarras ao longo do tempo. Certo: sabemos que a população brasileira não atende telefone, pessoas não confiam em pesquisas, etc. É verdade, há uma série de problemas. Mas, no fim das contas e antes disso tudo, survey são uma maneira de interação humana. E, com isso, geram nas pessoas uma série de reações que impactam nas respostas.
 
-Converse é considerado um dos fundadores da Escola de Michigan, e um dos principais estudiosos de opinião pública. É um dos maiores cientistas políticos de todos os tempos. Num texto de 1964, ele tenta explicar sua visão de opinião pública -- "a maioria das pessoas não têm estruturas latentes, ou reais e fixas, sobre a maioria dos objetos de atitude" [slide, @converse1964nature].
+Converse é considerado um dos fundadores da Escola de Michigan, e um dos principais estudiosos de opinião pública. É um dos maiores cientistas políticos de todos os tempos. Num texto de 1964, ele tenta explicar sua visão de opinião pública: "a maioria das pessoas não têm estruturas latentes, ou reais e fixas, sobre a maioria dos objetos de atitude" [slide, @converse1964nature].
 
 Zaller e Feldman, em 1992, propõem uma teoria de resposta a surveys que é contrária a essa visão de Converse. Eles dizem que as pessoas têm opiniões, mas a formação das respostas é plausivelmente um processo _on the spot_ que depende de _priming_, _framing_ e, mais importante, da capacidade de recuperação de informações [@zaller1992simple].
 
@@ -99,7 +99,7 @@ Essa questão é fundamental porque, se pensarmos segundo Converse, perguntar pa
 
 A maioria das pessoas têm opiniões conflitantes sobre uma mesma questão e as acessam com algum nível de aleatoriedade. Ao longo do tempo, as pessoas vão recebendo "considerações" da elite política e da mídia (principalmente), de maneira que há questões que ficam mais acessíveis na memória do respondente. Isso acaba compondo a resposta que a pessoa dá a uma pergunta de survey. Para o Zaller, é assim que as pessoas formam opiniões.
 
-Quando as pessoas são entrevistadas, são levadas a refletir sobre questões abstratas. De acordo com o processo de recepção de informações, as pessoas formam suas opiniões e acessam essas informações de maneira aleatória -- sendo que o que está "mais freco" tem mais chance de ser acessado.
+Quando as pessoas são entrevistadas, são levadas a refletir sobre questões abstratas. De acordo com o processo de recepção de informações, as pessoas formam suas opiniões e acessam essas informações de maneira aleatória, sendo que o que está "mais freco" tem mais chance de ser acessado.
 
 Pessoas que têm maior acessibilidade de informações conseguem considerar mais coisas. 
 

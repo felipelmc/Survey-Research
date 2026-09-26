@@ -133,7 +133,7 @@ Que tipo de informação podemos efetivamente extrair de perguntas feitas em sur
 
 ## Anotações de aula
 
-A coisa talvez mais importante do survey é que o resultado é proveniente de um processo de interação -- e, ao criar uma interação, ele deflagra um certo processo cognitivo. Além disso, a maioria das pessoas não tem opiniões estáticas sobre a maioria dos assuntos de opinião pública -- daí, a resposta é uma média ponderada das últimas informações que a pessoa se lembra. De fato, pessoas que se interessam e se informam mais sobre política tendem a ter opiniões mais consistentes.
+A coisa talvez mais importante do survey é que o resultado é proveniente de um processo de interação e, ao criar uma interação, ele deflagra um certo processo cognitivo. Além disso, a maioria das pessoas não tem opiniões estáticas sobre a maioria dos assuntos de opinião pública; daí, a resposta é uma média ponderada das últimas informações que a pessoa se lembra. De fato, pessoas que se interessam e se informam mais sobre política tendem a ter opiniões mais consistentes.
 
 Agora, do ponto de vista de um curso formal de survey, o outro lado é falar do **Total Survey Error**. As duas grandes famílias de erro são os erros de mensuração (isto é, que diz respeito ao que eu quero saber e como eu extraio a informação), e os erros de amostragem (qual é a população-alvo? Como selecionamos a amostra?).
 
@@ -141,7 +141,7 @@ O capítulo do Groves dá os conceitos básicos de survey:
 - população
 - unidade de análise
 - amostra
-- quadro amostral: para eu poder fazer inferência sobre uma população, eu preciso de um jeito de defini-la (até porque eu preciso acessá-la). Trata-se do que eu acesso da população -- é a parte objetiva do que eu quero acessar da população.[^1]
+- quadro amostral: para eu poder fazer inferência sobre uma população, eu preciso de um jeito de defini-la (até porque eu preciso acessá-la). Trata-se do que eu acesso da população: é a parte objetiva do que eu quero acessar da população.[^1]
 - desenho amostral
 - estimação
 - inferência
@@ -154,7 +154,7 @@ No caso de pesquisa amostral no Brasil, o estado-da-arte envolve sorteios no ní
 
 Datafolha, por outro lado, usa pontos de fluxo. Dividimos a unidade territorial em uma série de partes, e procuramos os lugares onde passam mais pessoas. De fato, o lugar onde as pessoas passam no dia a dia. Então não existe listagem das pessoas, mas há uma listagem dos lugares onde as pessoas passam (então, de certa maneira, existe um componente "aleatório").
 
-Agora, sobre desenho amostral, temos uma coisa mais "alto nível". É a receita do bolo. O plano amostral é algo mais objetivo -- sorteei os setores censitários etc. E a inferência, no fim das contas, é o que permite a gente extrapolar os dados da amostra para a população, calculando determinadas estatísticas sob incerteza.
+Agora, sobre desenho amostral, temos uma coisa mais "alto nível". É a receita do bolo. O plano amostral é algo mais objetivo: sorteei os setores censitários etc. E a inferência, no fim das contas, é o que permite a gente extrapolar os dados da amostra para a população, calculando determinadas estatísticas sob incerteza.
 
 ### Notação básica
 
@@ -313,4 +313,4 @@ O TSE é um framework sobre os dois grandes processos que geram erros: **mensura
 - Unit nonresponse: pessoa não responde nada
 - Item nonresponse: pessoa responde parcialmente (isto é, não responde a todas as perguntas)
 
-[^1]: No Brasil, a gente trata principalmente do CNEFE -- o Cadastro Nacional de Endereços para Fins Estatísticos. É daqui que tiramos as "listas" para o quadro amostral e chegue perto da população de domicílios.
+[^1]: No Brasil, a gente trata principalmente do CNEFE, o Cadastro Nacional de Endereços para Fins Estatísticos. É daqui que tiramos as "listas" para o quadro amostral e chegue perto da população de domicílios.

@@ -197,7 +197,7 @@ $$
 
 MrP provavelmente é o grande avanço na pesquisa de survey possivelmente desde RDD. O que ele faz é usar um modelo de regressão multinível para estimar a opinião pública em subpopulações, como distritos eleitorais ou estados, a partir de uma amostra nacional. Isso é especialmente útil quando a amostra é pequena ou não representativa. O modelo usa informações demográficas e geográficas para fazer previsões mais precisas.
 
-Até agora, viemos fazendo inferência com base em desenho. Nesse caso, todo mundo tem mais ou menos a mesma chance de ser selecionado. Pelo mecanismo de aleatoriedade, a minha amostra vai acabar espelhando a população de fundo -- daí, basta usar estimadores muito simples para fazer inferências sobre a população. Essencialmente é a lógica de experimentos -- espero, em média, que o grupo seja igual ao controle (ou que a amostra espelhe a população). No entanto, na maior parte do tempo não temos essas amostras. Na prática, as amostras não são probabilísticas e, no final, a amostra não é representativa.
+Até agora, viemos fazendo inferência com base em desenho. Nesse caso, todo mundo tem mais ou menos a mesma chance de ser selecionado. Pelo mecanismo de aleatoriedade, a minha amostra vai acabar espelhando a população de fundo; daí, basta usar estimadores muito simples para fazer inferências sobre a população. Essencialmente é a lógica de experimentos: espero, em média, que o grupo seja igual ao controle (ou que a amostra espelhe a população). No entanto, na maior parte do tempo não temos essas amostras. Na prática, as amostras não são probabilísticas e, no final, a amostra não é representativa.
 
 Agora, vamos partir para o paradigma de inferência baseada em modelo (_model-based inference_). Eu não sei como a amostra foi feita e muito menos sei qual é a probabilidade de inclusão de um respondente na amostra.
 
@@ -272,7 +272,7 @@ $$
 
 onde $N_g$ é o número de pessoas no grupo $g$ e $\hat{\pi}_g$ é a predição do modelo para o grupo $g$. O resultado final é uma estimativa da proporção de pessoas que responderam $1$ (seja lá o que $1$ significa na variável resposta) na população.
 
-Os dados do survey são usados unicamente para ajustar os parâmetros do modelo. Depois disso, basta fazer as predições desse modelo no banco de dados de totais populacionais -- conseguida a partir de bases importantes como o Censo ou a PNAD.
+Os dados do survey são usados unicamente para ajustar os parâmetros do modelo. Depois disso, basta fazer as predições desse modelo no banco de dados de totais populacionais, conseguida a partir de bases importantes como o Censo ou a PNAD.
 
 ### Incerteza
 

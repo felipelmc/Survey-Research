@@ -58,4 +58,4 @@ No fundo, há dois problemas: um é aquele que não responde; outro, é aquele q
 
 Survey tem uma série de problemas. No Brasil, as pesquisas são de alto nível; em particular, temos excelente performance, como indica Jennings and Wlezien (2018), em artigo publicado na Nature [[link]](https://www.nature.com/articles/s41562-018-0315-6). 
 
-Ainda não parece ser o caso de que a não-resposta é um grande problema no Brasil -- em média, um ponto para um lado ou para outro e não muito mais que isso.
+Ainda não parece ser o caso de que a não-resposta é um grande problema no Brasil: em média, um ponto para um lado ou para outro e não muito mais que isso.

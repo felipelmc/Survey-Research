@@ -24,7 +24,7 @@ Medidas indiretas para aproximar designs probabilísticos:
 - "Spread the non-probability sample as broadly as possible": tentar recrutar respondentes a partir de vários canais, para aumentar a diversidade da amostra. Bom exemplo: WageIndicator survey.
 - Amostragem por cotas, controlando para características socio-demográficas
 
-Também podemos fazer aproximações adotando diretamente algumas medidas de amostragem probabilística -- por exemplo, incluir algum grau de aleatoriedade na seleção de respondentes (randomização de horários de coleta de resposta; randomização de qual pessoa será entrevistada, etc).
+Também podemos fazer aproximações adotando diretamente algumas medidas de amostragem probabilística, por exemplo, incluir algum grau de aleatoriedade na seleção de respondentes (randomização de horários de coleta de resposta; randomização de qual pessoa será entrevistada, etc).
 
 > Of course, none of the above-described approaches, direct or indirect, assures with some known accuracy that the corresponding statistical inference will be equivalent to the situation with probability samples. However, it is also true that these approximations usually contribute to certain improvements, while they rarely cause any serious damage. [@vehovar2016nonprobability, p. 333]
 
@@ -187,11 +187,11 @@ Na prática, o sorteio é realizado em algumas etapas: primeiro, sorteados os _c
 
 "Qual é a probabilidade de eu incluir o bairro A na amostra?" Essa probabilidade é dada pela fração amostral do conglomerado, $f_c$. E, bom, se 50% dos conglomerados foram sorteados, a probabilidade de incluir o bairro A na amostra é de 50%. E, dado que a pesquisa chegou no meu bairro, qual é a probabilidade de eu ser selecionado? Nesse caso, a probabilidade de eu ser selecionado é de 8%. Então, a probabilidade de eu ser sorteado é de 50% vezes 8%, ou seja, 4%.
 
-No entanto, note que se o número de pessoas em cada bairro for diferente, essa matemática quebra. A probabilidade de inclusão de cada pessoa na amostra já não é a mesma: se eu fizer o mesmo número de entrevistas em qualquer bairro que eu sortear, em alguns bairros a probabilidade de incluir a pessoa na amostra será maior ou menor do que em outros. Portanto, temos distorções no resultado -- um viés sistemático na estimação. 
+No entanto, note que se o número de pessoas em cada bairro for diferente, essa matemática quebra. A probabilidade de inclusão de cada pessoa na amostra já não é a mesma: se eu fizer o mesmo número de entrevistas em qualquer bairro que eu sortear, em alguns bairros a probabilidade de incluir a pessoa na amostra será maior ou menor do que em outros. Portanto, temos distorções no resultado: um viés sistemático na estimação. 
 
 ### PPT
 
-**Uma maneira de resolver isso é incorporar o tamanho do bairro na amostra (em termos de número de pessoas) na hora de calcular a fração amostral. Isso é o que chamamos de Probabilidade Proporcional ao Tamanho (PPT, ou PPS, em inglês).** Damos maior probabilidade aos conglomerados maiores serem incluídos na amostra -- mas, a condição sine qua non é que eu saiba o tamanho da população dentro de cada conglomerado. Incorporamos **probabilidades desiguais** de inclusão para tornar ele "justo", proporcional.
+**Uma maneira de resolver isso é incorporar o tamanho do bairro na amostra (em termos de número de pessoas) na hora de calcular a fração amostral. Isso é o que chamamos de Probabilidade Proporcional ao Tamanho (PPT, ou PPS, em inglês).** Damos maior probabilidade aos conglomerados maiores serem incluídos na amostra, mas a condição sine qua non é que eu saiba o tamanho da população dentro de cada conglomerado. Incorporamos **probabilidades desiguais** de inclusão para tornar ele "justo", proporcional.
 
 - 8 bairros (conglomerados)
     - bairros 1-4: 50 pessoas cada
@@ -222,7 +222,7 @@ $$
 \mathbb{P}(\text{pessoa} | \text{bairro}_5) = \frac{1}{200} = 0.005
 $$
 
-Agora, note uma propriedade interessante: ao fazermos isso, estamos reintroduzindo a equiprobabilidade de seleção. Note que as probabilidades, se multiplicadas em cada caso, dão a mesma probabilidade de seleção das pessoas -- $0.001$. Ou seja, a probabilidade de selecionar uma pessoa do bairro 1 é de 0.05 vezes 0.02, e a probabilidade de selecionar uma pessoa do bairro 5 é de 0.2 vezes 0.005. Isso significa que, mesmo com tamanhos diferentes, as probabilidades de seleção são as mesmas. Isso é o que chamamos de **equiprobabilidade**.
+Agora, note uma propriedade interessante: ao fazermos isso, estamos reintroduzindo a equiprobabilidade de seleção. Note que as probabilidades, se multiplicadas em cada caso, dão a mesma probabilidade de seleção das pessoas: $0.001$. Ou seja, a probabilidade de selecionar uma pessoa do bairro 1 é de 0.05 vezes 0.02, e a probabilidade de selecionar uma pessoa do bairro 5 é de 0.2 vezes 0.005. Isso significa que, mesmo com tamanhos diferentes, as probabilidades de seleção são as mesmas. Isso é o que chamamos de **equiprobabilidade**.
 
 - Calculamos a probabilidade de incluir um determinado bairro
 - Calculamos a probabilidade de incluir uma determinada pessoa dentro do bairro

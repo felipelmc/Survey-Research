@@ -31,7 +31,7 @@ The match of sampling frame to target population created three potential outcome
 - **Undercoverage** - when a target population element is not included in the sampling frame
 - **Ineligible (or foreign) units** - when a sampling frame element is not a target population element (e.g. business numbers in a frame of residential numbers)
 
-Outros problemas incluem "Duplication" -- isto é, vários elementos da framing são mapeados para um único elemento da população alvo e, nesse caso, há sobrerrepresentação de alguns elementos; além disso, há também o problema de "Clustering", quando múltiplos elementos da população alvo a um único elemento da frame.
+Outros problemas incluem "Duplication", isto é, vários elementos da framing são mapeados para um único elemento da população alvo e, nesse caso, há sobrerrepresentação de alguns elementos; além disso, há também o problema de "Clustering", quando múltiplos elementos da população alvo a um único elemento da frame.
 
 #### Undercoverage
 
@@ -71,7 +71,7 @@ Há vários framing problems relacionados a pesquisas de survey. Há uma série 
 
 - **Area frames (list of area units like census tracts or counties)**: primeiro, um subconjunto de áreas é selecionado; depois, listagens de endereços são geradas para a área selecionada. 
 
-- **Telephone number frames for households and persons**: ao usar linhas fixas, falhamos em cobrir cerca de 20% das unidades residenciais dos Estados Unidos. Além disso, um percentual menor possui mais de uma linha fixa e acabam sendo duplicados. Além disso, com o uso de celulares, essa abordagem torna-se mais complicada -- mesmo porque números de telefone celular são associados a uma pessoa, e não a um endereço.
+- **Telephone number frames for households and persons**: ao usar linhas fixas, falhamos em cobrir cerca de 20% das unidades residenciais dos Estados Unidos. Além disso, um percentual menor possui mais de uma linha fixa e acabam sendo duplicados. Além disso, com o uso de celulares, essa abordagem torna-se mais complicada, mesmo porque números de telefone celular são associados a uma pessoa, e não a um endereço.
 
 - **Frames for Web Surveys of General Populations**: "The e-mail frame, however, fails to cover large portions of the household population. It has duplication problems because one person can have many different e-mail addresses, and it has clustering problems because more than one person can share an e-mail address." [@groves2011survey, p. 83]. 
 
@@ -236,7 +236,7 @@ $$
 
 Em 1936, George Gallup entrevistou 50.000 eleitores de diferentes estados americanos. Mesmo assim, é a pessoa que chega mais perto de acertar os resultados das eleições, contrastando com a revista Literary Digest, que aplicava formulários "opt-in" e entrevistou 2 milhões de eleitores.
 
-Há uma explicação ainda muito repetida de que a amostra da Literary Digest tinha uma amostra focada na classe média e, por outro lado, a amostra de Gallup chegava a pessoas mais pobres. No entanto Lusinchi (2012) mostra que, na verdade, não havia diferenças muito claras entre as amostras quando ajustadas --- isto é, pobres e ricos votavam mais ou menos da mesma maneira. Daí, **a culpa que era delegada ao erro de cobertura passa a ser delegada ao erro de não-resposta**: as pessoas que não respondiam à Literary Digest votavam mais no Roosevelt, o que acaba subestimando o apoio a ele na amostra.
+Há uma explicação ainda muito repetida de que a amostra da Literary Digest tinha uma amostra focada na classe média e, por outro lado, a amostra de Gallup chegava a pessoas mais pobres. No entanto Lusinchi (2012) mostra que, na verdade, não havia diferenças muito claras entre as amostras quando ajustadas, isto é, pobres e ricos votavam mais ou menos da mesma maneira. Daí, **a culpa que era delegada ao erro de cobertura passa a ser delegada ao erro de não-resposta**: as pessoas que não respondiam à Literary Digest votavam mais no Roosevelt, o que acaba subestimando o apoio a ele na amostra.
 
 A soma dos erros de survey leva a erros na estimação de uma particular estatística. Por exemplo: se eu quero estimar a renda da população, eu preciso tomar cuidado para evitar uma longa sequência de erros.
 
@@ -294,11 +294,11 @@ for (i in 1:5){
 
 O jeito de selecionar uma amostra não é por sorteio aleatório, mas por "pulos" na lista. A ideia básica é que usamos um quadro amostral ordenado por $i$ e um intervalo fixo, $k$. Suponha que $N = 10$ e queremos uma amostra $n=3$.
 
-Calculamos $k = \dfrac{N}{n} = \dfrac{10}{3} \approx 3$. Esse é o tamanho do pulo. Assim, escolhemos um ponto inicial aleatório e vamos definindo os elementos. Uma grande vantagem da amostragem sistemática é que ela evita que recrutemos pessoas próximas da cauda da distribuição. Esse tipo de amostragem é extremamente comum -- por exemplo, a cada $100$ clientes você entrevista uma.
+Calculamos $k = \dfrac{N}{n} = \dfrac{10}{3} \approx 3$. Esse é o tamanho do pulo. Assim, escolhemos um ponto inicial aleatório e vamos definindo os elementos. Uma grande vantagem da amostragem sistemática é que ela evita que recrutemos pessoas próximas da cauda da distribuição. Esse tipo de amostragem é extremamente comum: por exemplo, a cada $100$ clientes você entrevista uma.
 
 ### Amostragem estratificada
 
-Uma **amostra estratificada** é uma amostra aleatória simples de cada **estrato estratificado** (criado em função de alguma característica da população que seja conhecida --- isto é, uma característica que está sendo levada em conta no meu quadro amostral). Não pode haver sobreposição entre os estratos -- isto é, uma pessoa deve pertencer a um, e somente a um estrato.
+Uma **amostra estratificada** é uma amostra aleatória simples de cada **estrato estratificado** (criado em função de alguma característica da população que seja conhecida, isto é, uma característica que está sendo levada em conta no meu quadro amostral). Não pode haver sobreposição entre os estratos, isto é, uma pessoa deve pertencer a um, e somente a um estrato.
 
 - **Ideia**: dividimos a população em $h$ estratos (e.g., região, tipo de moradia, etc.) e selecionamos uma _amostra aleatória simples de cada estrato_
 - Há vários tipos de alocação possíveis, mas a mais comum é a **proporcional**: $n_h = \dfrac{N_h}{N} \times n$, onde $N_h$ é o número de elementos do estrato $h$ e $N$ é o número total de elementos da população. Assim, a amostra total é dada por $n = \sum_{h=1}^{H} n_h$.
@@ -326,7 +326,7 @@ O uso de conglomerados é muito comum na prática. Em praticamente todas as entr
 
 Via de regra, o conglomerado precisa ser viável e tornar factível o desenho amostral. De saída, não deve ser a primeira opção. Mas, se a pesquisa parecer inviável, é uma boa opção. 
 
-Do ponto de vista de estatística amostral, a conglomeração é o contrário da estratificação. No conglomerado, fazemos, por exemplo, $5$ entrevistas em cada quarteirão. Mas fazer $5$ entrevistas em um determinado prédio, por exemplo, pode dar respostas que, na média, são iguais. Conglomeração nos faz, no fim das contas, perder informação, porque eu acabo fazendo $5$ entrevistas que equivalem a $1$, talvez um pouco mais. Nesse caso, a margem de erro é maior, porque eu tenho mais incerteza sobre a minha coleta -- fatalmente eu vou terminar com uma amostra mais extrema, porque eu vou capturar muito da mesma coisa. Quanto mais clusters eu visito, mais informação eu consigo obter[^2].
+Do ponto de vista de estatística amostral, a conglomeração é o contrário da estratificação. No conglomerado, fazemos, por exemplo, $5$ entrevistas em cada quarteirão. Mas fazer $5$ entrevistas em um determinado prédio, por exemplo, pode dar respostas que, na média, são iguais. Conglomeração nos faz, no fim das contas, perder informação, porque eu acabo fazendo $5$ entrevistas que equivalem a $1$, talvez um pouco mais. Nesse caso, a margem de erro é maior, porque eu tenho mais incerteza sobre a minha coleta: fatalmente eu vou terminar com uma amostra mais extrema, porque eu vou capturar muito da mesma coisa. Quanto mais clusters eu visito, mais informação eu consigo obter[^2].
 
 ### Estratificação vs. conglomeração
 
