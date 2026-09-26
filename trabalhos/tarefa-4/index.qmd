@@ -629,3 +629,105 @@ Dividindo os resultados por região, observamos que o posicionamento contrário 
 # Considerações finais
 
 De maneira geral, observamos que a pós-estratificação utilizando um modelo de MrP relativamente complexo, com _slopes_ variáveis, permitiu estimar bem a proporção de indivíduos que votaram em Jair Bolsonaro. Aplicando este modelo para estimar a proporção da população que é contrária ao aborto, foi possível obter estimativas consistentes com as publicadas por alguns dos principais institutos de pesquisa do país. Esses resultados são um exemplo de como amostras não probabilísticas e pouco representativas podem ser trabalhadas para estimar, com alguma qualidade, parâmetros populacionais desconhecidos.
+
+```{r}
+#| include: false
+# Estimativas por UF para a simulação interativa (agregados; nenhum dado individual)
+dir.create("interativo", showWarnings = FALSE)
+estratos$m1 <- predict(model1, newdata = estratos, type = "response", re.form = NULL, allow.new.levels = TRUE)
+estratos$m2 <- predict(model2, newdata = estratos, type = "response", re.form = NULL, allow.new.levels = TRUE)
+estratos$m3 <- predict(model3, newdata = estratos, type = "response", re.form = NULL, allow.new.levels = TRUE)
+estimativas_uf <- estratos %>%
+  group_by(uf) %>%
+  summarise(across(c(m1, m2, m3), ~ weighted.mean(.x, n)), .groups = "drop")
+amostra_uf <- df %>%
+  group_by(uf) %>%
+  summarise(n = n(),
+            amostra_bolsonaro = mean(votou_bolsonato_1t_2018, na.rm = TRUE),
+            amostra_aborto = mean(contra_aborto, na.rm = TRUE), .groups = "drop")
+left_join(estimativas_uf, amostra_uf, by = "uf") %>%
+  write.csv("interativo/mrp_uf.csv", row.names = FALSE)
+```
+
+# Simulação interativa
+
+::: {.nota-ia collapse="false" title="Visualização e texto preparados com auxílio do Claude"}
+O relatório valida o MrP no total nacional. Aqui, as mesmas três especificações são levadas ao nível das UFs: cada quadrado é um estado, na posição aproximada do mapa. Para o voto em Bolsonaro no 1º turno de 2018, compare a amostra sem ajuste, o MrP só com interceptos variáveis, o MrP com *slopes* por UF e o resultado oficial do TSE; o gráfico de dispersão mostra cada estimativa estadual contra o valor oficial e o erro absoluto médio. As estimativas estaduais são exploratórias: o relatório não as validou, e alguns estados têm pouquíssimos entrevistados (o número aparece em cada quadrado).
+:::
+
+```{ojs}
+//| echo: false
+import {scheme, palette, plotStyle, fmt} from "/_extensions/felipelmc/course-notes/ojs/notes.js"
+mode = scheme()
+pal = palette(mode)
+mrp = FileAttachment("interativo/mrp_uf.csv").csv({typed: true})
+tse = FileAttachment("interativo/tse_2018_1t_uf.csv").csv({typed: true})
+grade = new Map(Object.entries({
+  RR: [2, 0], AP: [4, 0], AM: [1, 1], PA: [3, 1], MA: [4, 1], CE: [5, 1], RN: [6, 1],
+  AC: [0, 2], RO: [1, 2], MT: [2, 2], TO: [3, 2], PI: [4, 2], PE: [5, 2], PB: [6, 2],
+  MS: [2, 3], GO: [3, 3], DF: [4, 3], BA: [5, 3], AL: [6, 3],
+  SP: [3, 4], MG: [4, 4], ES: [5, 4], SE: [6, 4], PR: [3, 5], RJ: [4, 5], SC: [3, 6], RS: [3, 7]
+}))
+```
+
+::: cn-sim
+
+```{ojs}
+//| echo: false
+viewof fonte = Inputs.radio(new Map([
+  ["Amostra sem ajuste", "amostra_bolsonaro"], ["MrP 1 (interceptos)", "m1"], ["MrP 2 (slopes por UF)", "m2"], ["Resultado oficial (TSE)", "oficial"]
+]), {value: "m2", label: "Voto em Bolsonaro, 1º turno de 2018"})
+```
+
+```{ojs}
+//| echo: false
+dados = {
+  const oficial = new Map(tse.map((d) => [d.uf, d.pct / 100]));
+  return mrp.map((d) => ({...d, oficial: oficial.get(d.uf), col: grade.get(d.uf)?.[0], lin: grade.get(d.uf)?.[1]}));
+}
+erro = (k) => d3.mean(dados, (d) => Math.abs(d[k] - d.oficial))
+corTexto = (d) => {
+  const t = (d[fonte] - 0.1) / 0.6;          // posição na rampa de cores
+  const claro = mode === "dark" ? t > 0.55 : t < 0.45;
+  return claro ? "#0E1116" : "#FFFFFF";
+}
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width: Math.min(width, 520), height: Math.min(width, 520) * 8 / 7 * 0.92, style: plotStyle,
+  x: {axis: null, domain: d3.range(7)}, y: {axis: null, domain: d3.range(8)}, padding: 0.06,
+  color: {type: "linear", domain: [0.1, 0.7], range: [pal.ramp[0], pal.ramp[4]], legend: true, tickFormat: ".0%", label: "Voto em Bolsonaro"},
+  marks: [
+    Plot.cell(dados, {x: "col", y: "lin", fill: (d) => d[fonte], rx: 6,
+      title: (d) => `${d.uf}: ${fmt(100 * d[fonte], 1)}% (n = ${d.n}; oficial ${fmt(100 * d.oficial, 1)}%)`}),
+    Plot.text(dados, {x: "col", y: "lin", text: "uf", dy: width > 480 ? -8 : -5, fill: corTexto, fontWeight: 600, fontSize: width > 480 ? 12 : 10}),
+    Plot.text(dados, {x: "col", y: "lin", text: (d) => fmt(100 * d[fonte], 0) + "%", dy: width > 480 ? 6 : 7, fill: corTexto, fontSize: width > 480 ? 10 : 9}),
+    width > 480 ? Plot.text(dados, {x: "col", y: "lin", text: (d) => `n = ${d.n}`, dy: 18, fill: corTexto, fillOpacity: 0.8, fontSize: 8}) : null
+  ]
+})
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width, height: 280, style: plotStyle, marginLeft: 44, grid: true,
+  x: {label: "Resultado oficial por UF →", domain: [0.15, 0.75], tickFormat: ".0%"},
+  y: {label: "↑ Estimativa", domain: [0, 0.8], tickFormat: ".0%"},
+  marks: [
+    Plot.line([[0, 0], [0.8, 0.8]], {stroke: pal.lineStrong, strokeDasharray: "4,3"}),
+    Plot.dot(dados, {x: "oficial", y: (d) => d[fonte === "oficial" ? "m2" : fonte], r: (d) => Math.sqrt(d.n) / 1.6 + 1.5, fill: pal.accent, fillOpacity: 0.6}),
+    Plot.text(dados, {x: "oficial", y: (d) => d[fonte === "oficial" ? "m2" : fonte], text: "uf", dx: 8, textAnchor: "start", fill: pal.ink3, fontSize: 9})
+  ]
+})
+```
+
+```{ojs}
+//| echo: false
+html`<p class="cn-readout">Erro absoluto médio por UF: amostra <b>${fmt(100 * erro("amostra_bolsonaro"), 1)} p.p.</b> · MrP 1 <b>${fmt(100 * erro("m1"), 1)} p.p.</b> · MrP 2 <b>${fmt(100 * erro("m2"), 1)} p.p.</b></p>`
+```
+
+:::
+
+Resultados oficiais por UF: TSE, divulgação de resultados do 1º turno de 2018, percentual de votos válidos.

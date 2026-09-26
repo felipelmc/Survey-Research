@@ -267,3 +267,101 @@ head(amostra)
 ```
 
 Observe que chegamos $\pm$ aos mesmos pesos com cada approach. De fato, são diferentes maneiras de resolver o mesmo problema.
+
+## Simulação
+
+::: {.nota-ia collapse="false" title="Simulação e texto preparados com auxílio do Claude"}
+Uma amostra de 1.000 pessoas sub-representa homens (38%, como no exemplo da aula) e jovens. Conhecemos as margens da população (sexo e faixa etária) e, para a pós-estratificação, também a tabela cruzada. O raking (*iterative proportional fitting*) ajusta os pesos alternando entre as margens: primeiro acerta o sexo, depois a idade, depois o sexo de novo, até convergir. Mova o número de iterações para ver as margens ponderadas chegando às da população. O resultado do raking acerta as margens, mas não necessariamente a tabela cruzada; por isso a estimativa da aprovação pode diferir da pós-estratificação quando o desfecho depende da combinação sexo × idade.
+:::
+
+::: {.panel-tabset}
+
+### Interativo
+
+```{ojs}
+//| echo: false
+import {scheme, palette, plotStyle, fmt} from "/_extensions/felipelmc/course-notes/ojs/notes.js"
+mode = scheme()
+pal = palette(mode)
+```
+
+::: cn-sim
+
+```{ojs}
+//| echo: false
+viewof iter = Inputs.range([0, 8], {value: 0, step: 1, label: "Iterações do raking"})
+viewof interacao = Inputs.range([-0.3, 0.3], {value: -0.2, step: 0.01, label: "Efeito extra entre homens jovens"})
+```
+
+```{ojs}
+//| echo: false
+celulas = [
+  {sexo: "Homens", idade: "18–34", n: 70,  pop: 0.16},
+  {sexo: "Homens", idade: "35–59", n: 170, pop: 0.21},
+  {sexo: "Homens", idade: "60+",   n: 140, pop: 0.13},
+  {sexo: "Mulheres", idade: "18–34", n: 150, pop: 0.14},
+  {sexo: "Mulheres", idade: "35–59", n: 280, pop: 0.19},
+  {sexo: "Mulheres", idade: "60+",   n: 190, pop: 0.17}
+]
+aprov = (c) => 0.4 + (c.sexo === "Mulheres" ? 0.15 : 0) + (c.idade === "18–34" ? -0.12 : c.idade === "60+" ? 0.08 : 0)
+             + (c.sexo === "Homens" && c.idade === "18–34" ? interacao : 0)
+rake = {
+  const N = d3.sum(celulas, (c) => c.n);
+  const alvoSexo = d3.rollup(celulas, (v) => d3.sum(v, (c) => c.pop), (c) => c.sexo);
+  const alvoIdade = d3.rollup(celulas, (v) => d3.sum(v, (c) => c.pop), (c) => c.idade);
+  let w = celulas.map(() => 1);
+  const passos = [w.slice()];
+  for (let k = 0; k < iter; k++) {
+    const dim = k % 2 === 0 ? "sexo" : "idade", alvo = dim === "sexo" ? alvoSexo : alvoIdade;
+    const atual = d3.rollup(celulas.map((c, i) => ({c, wn: w[i] * c.n})), (v) => d3.sum(v, (d) => d.wn) / N, (d) => d.c[dim]);
+    w = w.map((wi, i) => wi * alvo.get(celulas[i][dim]) / atual.get(celulas[i][dim]));
+  }
+  const margens = [];
+  for (const dim of ["sexo", "idade"]) {
+    const alvo = dim === "sexo" ? alvoSexo : alvoIdade;
+    const pond = d3.rollup(celulas.map((c, i) => ({c, wn: w[i] * c.n})), (v) => d3.sum(v, (d) => d.wn) / N, (d) => d.c[dim]);
+    for (const [cat, p] of alvo) margens.push({categoria: cat, fonte: "População", p}, {categoria: cat, fonte: "Amostra ponderada", p: pond.get(cat)});
+  }
+  const est = (pesos) => d3.sum(celulas, (c, i) => pesos[i] * c.n * aprov(c)) / d3.sum(celulas, (c, i) => pesos[i] * c.n);
+  const ps = celulas.map((c) => c.pop * N / c.n);
+  return {margens, bruta: est(celulas.map(() => 1)), raking: est(w), pos: est(ps), verdade: d3.sum(celulas, (c) => c.pop * aprov(c))};
+}
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width, height: 220, style: plotStyle, marginLeft: 70,
+  x: {label: "Proporção →", domain: [0, 0.65], tickFormat: ".0%"}, y: {label: null, domain: ["Homens", "Mulheres", "18–34", "35–59", "60+"]},
+  color: {domain: ["População", "Amostra ponderada"], range: [pal.award, pal.accent], legend: true},
+  marks: [
+    Plot.link(d3.groups(rake.margens, (d) => d.categoria).map(([c, v]) => ({c, x1: v[0].p, x2: v[1].p})), {y1: "c", y2: "c", x1: "x1", x2: "x2", stroke: pal.lineStrong}),
+    Plot.dot(rake.margens, {y: "categoria", x: "p", fill: "fonte", r: 5})
+  ]
+})
+```
+
+```{ojs}
+//| echo: false
+html`<p class="cn-readout">Aprovação estimada: sem pesos <b>${fmt(100 * rake.bruta, 1)}%</b> · raking (${iter} it.) <b>${fmt(100 * rake.raking, 1)}%</b> · pós-estratificação <b>${fmt(100 * rake.pos, 1)}%</b> · população <b>${fmt(100 * rake.verdade, 1)}%</b></p>`
+```
+
+:::
+
+### Em R
+
+```{r}
+#| eval: false
+library(survey)
+amostra <- data.frame(
+  sexo  = rep(c("H", "H", "H", "M", "M", "M"), c(70, 170, 140, 150, 280, 190)),
+  idade = rep(c("18-34", "35-59", "60+"), 2)[rep(1:6, c(70, 170, 140, 150, 280, 190))]
+)
+d <- svydesign(ids = ~1, data = amostra)
+pop_sexo  <- data.frame(sexo = c("H", "M"), Freq = c(500, 500))
+pop_idade <- data.frame(idade = c("18-34", "35-59", "60+"), Freq = c(300, 400, 300))
+d_rake <- rake(d, list(~sexo, ~idade), list(pop_sexo, pop_idade))
+svymean(~sexo + idade, d_rake)
+```
+
+:::

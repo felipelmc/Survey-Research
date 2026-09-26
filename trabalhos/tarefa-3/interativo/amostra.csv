@@ -1,0 +1,932 @@
+"uf","cor_raca","idade","sexo","voto","n"
+"acre","Branca","35 a 44 anos","Feminino","Outro",1
+"acre","Parda","18 a 24 anos","Feminino","Bolsonaro",2
+"acre","Parda","18 a 24 anos","Masculino","Bolsonaro",1
+"acre","Parda","25 a 34 anos","Feminino","Lula",1
+"acre","Parda","25 a 34 anos","Feminino","Outro",1
+"acre","Parda","35 a 44 anos","Masculino","Bolsonaro",1
+"acre","Parda","45 a 59 anos","Masculino","Bolsonaro",1
+"acre","Parda","60 anos ou mais","Feminino","Bolsonaro",1
+"acre","Parda","60 anos ou mais","Masculino","Bolsonaro",1
+"acre","Preta","25 a 34 anos","Masculino","Bolsonaro",1
+"alagoas","Branca","18 a 24 anos","Feminino","Lula",1
+"alagoas","Branca","18 a 24 anos","Feminino","Outro",1
+"alagoas","Branca","18 a 24 anos","Masculino","Bolsonaro",1
+"alagoas","Branca","18 a 24 anos","Masculino","Lula",1
+"alagoas","Branca","25 a 34 anos","Feminino","Bolsonaro",1
+"alagoas","Branca","25 a 34 anos","Feminino","Outro",1
+"alagoas","Branca","25 a 34 anos","Masculino","Bolsonaro",1
+"alagoas","Branca","25 a 34 anos","Masculino","Lula",1
+"alagoas","Branca","35 a 44 anos","Feminino","Bolsonaro",1
+"alagoas","Branca","35 a 44 anos","Masculino","Lula",2
+"alagoas","Branca","45 a 59 anos","Feminino","Bolsonaro",2
+"alagoas","Branca","45 a 59 anos","Feminino","Lula",1
+"alagoas","Branca","60 anos ou mais","Feminino","Bolsonaro",1
+"alagoas","Branca","60 anos ou mais","Feminino","Lula",1
+"alagoas","Branca","60 anos ou mais","Masculino","Bolsonaro",1
+"alagoas","Outras","25 a 34 anos","Feminino","Lula",1
+"alagoas","Outras","45 a 59 anos","Feminino","Lula",2
+"alagoas","Outras","45 a 59 anos","Masculino","Bolsonaro",1
+"alagoas","Outras","60 anos ou mais","Feminino","Bolsonaro",1
+"alagoas","Outras","60 anos ou mais","Masculino","Bolsonaro",1
+"alagoas","Parda","18 a 24 anos","Feminino","Bolsonaro",1
+"alagoas","Parda","18 a 24 anos","Feminino","Outro",1
+"alagoas","Parda","18 a 24 anos","Masculino","Outro",2
+"alagoas","Parda","25 a 34 anos","Feminino","Bolsonaro",1
+"alagoas","Parda","25 a 34 anos","Feminino","Lula",2
+"alagoas","Parda","25 a 34 anos","Feminino","Outro",2
+"alagoas","Parda","25 a 34 anos","Masculino","Bolsonaro",2
+"alagoas","Parda","25 a 34 anos","Masculino","Lula",1
+"alagoas","Parda","35 a 44 anos","Feminino","Bolsonaro",2
+"alagoas","Parda","35 a 44 anos","Feminino","Lula",2
+"alagoas","Parda","35 a 44 anos","Masculino","Bolsonaro",2
+"alagoas","Parda","35 a 44 anos","Masculino","Lula",3
+"alagoas","Parda","35 a 44 anos","Masculino","Outro",1
+"alagoas","Parda","45 a 59 anos","Feminino","Bolsonaro",1
+"alagoas","Parda","45 a 59 anos","Feminino","Lula",1
+"alagoas","Parda","45 a 59 anos","Feminino","Outro",2
+"alagoas","Parda","45 a 59 anos","Masculino","Bolsonaro",2
+"alagoas","Parda","45 a 59 anos","Masculino","Lula",1
+"alagoas","Parda","45 a 59 anos","Masculino","Outro",1
+"alagoas","Parda","60 anos ou mais","Feminino","Bolsonaro",2
+"alagoas","Parda","60 anos ou mais","Feminino","Outro",1
+"alagoas","Parda","60 anos ou mais","Masculino","Lula",1
+"alagoas","Parda","60 anos ou mais","Masculino","Outro",1
+"alagoas","Preta","18 a 24 anos","Feminino","Outro",1
+"alagoas","Preta","18 a 24 anos","Masculino","Bolsonaro",1
+"alagoas","Preta","25 a 34 anos","Feminino","Lula",1
+"alagoas","Preta","25 a 34 anos","Feminino","Outro",1
+"alagoas","Preta","25 a 34 anos","Masculino","Bolsonaro",2
+"alagoas","Preta","25 a 34 anos","Masculino","Outro",1
+"alagoas","Preta","35 a 44 anos","Masculino","Bolsonaro",1
+"alagoas","Preta","35 a 44 anos","Masculino","Lula",1
+"alagoas","Preta","60 anos ou mais","Masculino","Bolsonaro",1
+"alagoas","Preta","60 anos ou mais","Masculino","Lula",3
+"amapa","Branca","35 a 44 anos","Masculino","Bolsonaro",2
+"amapa","Branca","35 a 44 anos","Masculino","Lula",1
+"amapa","Branca","45 a 59 anos","Masculino","Bolsonaro",1
+"amapa","Branca","60 anos ou mais","Feminino","Lula",1
+"amapa","Parda","18 a 24 anos","Feminino","Bolsonaro",1
+"amapa","Parda","18 a 24 anos","Masculino","Bolsonaro",2
+"amapa","Parda","25 a 34 anos","Feminino","Bolsonaro",1
+"amapa","Parda","35 a 44 anos","Feminino","Bolsonaro",1
+"amapa","Parda","45 a 59 anos","Feminino","Bolsonaro",1
+"amapa","Preta","25 a 34 anos","Masculino","Bolsonaro",1
+"amapa","Preta","35 a 44 anos","Masculino","Outro",1
+"amazonas","Branca","25 a 34 anos","Feminino","Lula",1
+"amazonas","Outras","35 a 44 anos","Masculino","Bolsonaro",1
+"amazonas","Outras","45 a 59 anos","Feminino","Lula",1
+"amazonas","Outras","60 anos ou mais","Feminino","Bolsonaro",1
+"amazonas","Parda","18 a 24 anos","Feminino","Bolsonaro",1
+"amazonas","Parda","18 a 24 anos","Masculino","Bolsonaro",1
+"amazonas","Parda","18 a 24 anos","Masculino","Outro",1
+"amazonas","Parda","25 a 34 anos","Feminino","Bolsonaro",1
+"amazonas","Parda","25 a 34 anos","Feminino","Outro",1
+"amazonas","Parda","35 a 44 anos","Feminino","Bolsonaro",1
+"amazonas","Parda","35 a 44 anos","Feminino","Lula",2
+"amazonas","Parda","35 a 44 anos","Masculino","Bolsonaro",2
+"amazonas","Parda","35 a 44 anos","Masculino","Lula",2
+"amazonas","Parda","45 a 59 anos","Feminino","Bolsonaro",1
+"amazonas","Parda","45 a 59 anos","Feminino","Lula",1
+"amazonas","Parda","45 a 59 anos","Masculino","Lula",3
+"amazonas","Parda","60 anos ou mais","Masculino","Bolsonaro",1
+"amazonas","Parda","60 anos ou mais","Masculino","Lula",2
+"amazonas","Preta","25 a 34 anos","Feminino","Bolsonaro",1
+"amazonas","Preta","25 a 34 anos","Masculino","Bolsonaro",1
+"amazonas","Preta","25 a 34 anos","Masculino","Lula",1
+"amazonas","Preta","35 a 44 anos","Feminino","Bolsonaro",1
+"amazonas","Preta","60 anos ou mais","Feminino","Lula",1
+"bahia","Branca","18 a 24 anos","Feminino","Bolsonaro",1
+"bahia","Branca","18 a 24 anos","Feminino","Outro",1
+"bahia","Branca","18 a 24 anos","Masculino","Lula",1
+"bahia","Branca","25 a 34 anos","Masculino","Lula",1
+"bahia","Branca","35 a 44 anos","Feminino","Lula",1
+"bahia","Branca","45 a 59 anos","Feminino","Bolsonaro",1
+"bahia","Branca","45 a 59 anos","Masculino","Lula",1
+"bahia","Branca","45 a 59 anos","Masculino","Outro",1
+"bahia","Branca","60 anos ou mais","Masculino","Lula",1
+"bahia","Outras","45 a 59 anos","Feminino","Lula",1
+"bahia","Parda","18 a 24 anos","Feminino","Lula",1
+"bahia","Parda","18 a 24 anos","Feminino","Outro",1
+"bahia","Parda","25 a 34 anos","Feminino","Lula",2
+"bahia","Parda","25 a 34 anos","Feminino","Outro",1
+"bahia","Parda","25 a 34 anos","Masculino","Bolsonaro",1
+"bahia","Parda","25 a 34 anos","Masculino","Lula",2
+"bahia","Parda","25 a 34 anos","Masculino","Outro",1
+"bahia","Parda","35 a 44 anos","Feminino","Bolsonaro",1
+"bahia","Parda","35 a 44 anos","Feminino","Lula",1
+"bahia","Parda","35 a 44 anos","Masculino","Lula",1
+"bahia","Parda","45 a 59 anos","Feminino","Lula",1
+"bahia","Parda","45 a 59 anos","Feminino","Outro",1
+"bahia","Parda","45 a 59 anos","Masculino","Lula",1
+"bahia","Parda","60 anos ou mais","Feminino","Lula",1
+"bahia","Parda","60 anos ou mais","Feminino","Outro",1
+"bahia","Parda","60 anos ou mais","Masculino","Lula",1
+"bahia","Preta","18 a 24 anos","Feminino","Lula",1
+"bahia","Preta","18 a 24 anos","Masculino","Outro",2
+"bahia","Preta","25 a 34 anos","Feminino","Lula",3
+"bahia","Preta","25 a 34 anos","Feminino","Outro",1
+"bahia","Preta","25 a 34 anos","Masculino","Outro",1
+"bahia","Preta","35 a 44 anos","Feminino","Lula",1
+"bahia","Preta","35 a 44 anos","Feminino","Outro",1
+"bahia","Preta","35 a 44 anos","Masculino","Lula",1
+"bahia","Preta","35 a 44 anos","Masculino","Outro",1
+"bahia","Preta","45 a 59 anos","Feminino","Lula",2
+"bahia","Preta","45 a 59 anos","Feminino","Outro",1
+"bahia","Preta","45 a 59 anos","Masculino","Lula",4
+"bahia","Preta","60 anos ou mais","Feminino","Lula",1
+"bahia","Preta","60 anos ou mais","Feminino","Outro",1
+"bahia","Preta","60 anos ou mais","Masculino","Bolsonaro",1
+"bahia","Preta","60 anos ou mais","Masculino","Outro",1
+"ceara","Branca","18 a 24 anos","Feminino","Lula",1
+"ceara","Branca","18 a 24 anos","Masculino","Bolsonaro",1
+"ceara","Branca","25 a 34 anos","Feminino","Lula",1
+"ceara","Branca","35 a 44 anos","Masculino","Bolsonaro",1
+"ceara","Branca","45 a 59 anos","Feminino","Lula",1
+"ceara","Branca","45 a 59 anos","Masculino","Bolsonaro",1
+"ceara","Branca","45 a 59 anos","Masculino","Lula",1
+"ceara","Branca","60 anos ou mais","Feminino","Bolsonaro",2
+"ceara","Branca","60 anos ou mais","Feminino","Lula",2
+"ceara","Branca","60 anos ou mais","Feminino","Outro",1
+"ceara","Outras","18 a 24 anos","Feminino","Lula",1
+"ceara","Outras","35 a 44 anos","Masculino","Lula",1
+"ceara","Outras","45 a 59 anos","Feminino","Lula",1
+"ceara","Outras","60 anos ou mais","Masculino","Bolsonaro",1
+"ceara","Outras","60 anos ou mais","Masculino","Outro",1
+"ceara","Parda","18 a 24 anos","Feminino","Bolsonaro",1
+"ceara","Parda","18 a 24 anos","Feminino","Lula",2
+"ceara","Parda","18 a 24 anos","Feminino","Outro",1
+"ceara","Parda","18 a 24 anos","Masculino","Bolsonaro",2
+"ceara","Parda","18 a 24 anos","Masculino","Lula",1
+"ceara","Parda","18 a 24 anos","Masculino","Outro",1
+"ceara","Parda","25 a 34 anos","Feminino","Lula",4
+"ceara","Parda","25 a 34 anos","Feminino","Outro",1
+"ceara","Parda","25 a 34 anos","Masculino","Bolsonaro",1
+"ceara","Parda","25 a 34 anos","Masculino","Lula",4
+"ceara","Parda","25 a 34 anos","Masculino","Outro",1
+"ceara","Parda","35 a 44 anos","Feminino","Bolsonaro",1
+"ceara","Parda","35 a 44 anos","Feminino","Lula",6
+"ceara","Parda","35 a 44 anos","Masculino","Bolsonaro",2
+"ceara","Parda","35 a 44 anos","Masculino","Lula",4
+"ceara","Parda","45 a 59 anos","Feminino","Bolsonaro",2
+"ceara","Parda","45 a 59 anos","Feminino","Lula",6
+"ceara","Parda","45 a 59 anos","Masculino","Bolsonaro",1
+"ceara","Parda","45 a 59 anos","Masculino","Lula",4
+"ceara","Parda","60 anos ou mais","Feminino","Bolsonaro",1
+"ceara","Parda","60 anos ou mais","Feminino","Lula",2
+"ceara","Parda","60 anos ou mais","Masculino","Bolsonaro",1
+"ceara","Preta","18 a 24 anos","Masculino","Bolsonaro",1
+"ceara","Preta","25 a 34 anos","Feminino","Bolsonaro",1
+"ceara","Preta","25 a 34 anos","Masculino","Bolsonaro",1
+"ceara","Preta","25 a 34 anos","Masculino","Lula",2
+"ceara","Preta","35 a 44 anos","Masculino","Lula",1
+"ceara","Preta","45 a 59 anos","Feminino","Lula",1
+"ceara","Preta","45 a 59 anos","Masculino","Bolsonaro",1
+"ceara","Preta","45 a 59 anos","Masculino","Lula",1
+"ceara","Preta","60 anos ou mais","Feminino","Lula",3
+"ceara","Preta","60 anos ou mais","Masculino","Lula",1
+"ceara","Preta","60 anos ou mais","Masculino","Outro",1
+"distrito federal","Branca","25 a 34 anos","Feminino","Bolsonaro",1
+"distrito federal","Branca","25 a 34 anos","Feminino","Lula",1
+"distrito federal","Branca","25 a 34 anos","Masculino","Bolsonaro",1
+"distrito federal","Branca","25 a 34 anos","Masculino","Outro",2
+"distrito federal","Branca","35 a 44 anos","Feminino","Lula",1
+"distrito federal","Branca","35 a 44 anos","Masculino","Outro",1
+"distrito federal","Branca","45 a 59 anos","Feminino","Bolsonaro",1
+"distrito federal","Branca","45 a 59 anos","Feminino","Outro",1
+"distrito federal","Branca","45 a 59 anos","Masculino","Lula",1
+"distrito federal","Branca","60 anos ou mais","Feminino","Lula",2
+"distrito federal","Outras","35 a 44 anos","Feminino","Bolsonaro",1
+"distrito federal","Outras","35 a 44 anos","Masculino","Bolsonaro",1
+"distrito federal","Parda","25 a 34 anos","Feminino","Bolsonaro",1
+"distrito federal","Parda","25 a 34 anos","Feminino","Lula",1
+"distrito federal","Parda","25 a 34 anos","Masculino","Lula",2
+"distrito federal","Parda","35 a 44 anos","Feminino","Bolsonaro",1
+"distrito federal","Parda","35 a 44 anos","Masculino","Bolsonaro",1
+"distrito federal","Parda","45 a 59 anos","Feminino","Lula",1
+"distrito federal","Parda","45 a 59 anos","Feminino","Outro",1
+"distrito federal","Parda","45 a 59 anos","Masculino","Bolsonaro",1
+"distrito federal","Parda","45 a 59 anos","Masculino","Lula",2
+"distrito federal","Parda","60 anos ou mais","Feminino","Lula",2
+"distrito federal","Parda","60 anos ou mais","Masculino","Bolsonaro",2
+"distrito federal","Preta","18 a 24 anos","Feminino","Outro",1
+"distrito federal","Preta","35 a 44 anos","Feminino","Outro",2
+"distrito federal","Preta","45 a 59 anos","Masculino","Bolsonaro",1
+"distrito federal","Preta","60 anos ou mais","Feminino","Lula",1
+"espirito santo","Branca","18 a 24 anos","Feminino","Bolsonaro",1
+"espirito santo","Branca","45 a 59 anos","Feminino","Bolsonaro",1
+"espirito santo","Branca","45 a 59 anos","Masculino","Bolsonaro",1
+"espirito santo","Branca","60 anos ou mais","Feminino","Bolsonaro",1
+"espirito santo","Parda","18 a 24 anos","Masculino","Bolsonaro",1
+"espirito santo","Parda","35 a 44 anos","Feminino","Outro",1
+"espirito santo","Parda","35 a 44 anos","Masculino","Bolsonaro",1
+"espirito santo","Preta","25 a 34 anos","Masculino","Bolsonaro",1
+"espirito santo","Preta","45 a 59 anos","Feminino","Lula",1
+"goias","Branca","18 a 24 anos","Feminino","Outro",1
+"goias","Branca","25 a 34 anos","Feminino","Bolsonaro",1
+"goias","Branca","25 a 34 anos","Feminino","Lula",1
+"goias","Branca","25 a 34 anos","Masculino","Bolsonaro",2
+"goias","Branca","25 a 34 anos","Masculino","Outro",1
+"goias","Branca","35 a 44 anos","Feminino","Bolsonaro",2
+"goias","Branca","35 a 44 anos","Feminino","Lula",1
+"goias","Branca","35 a 44 anos","Masculino","Bolsonaro",1
+"goias","Branca","45 a 59 anos","Feminino","Bolsonaro",1
+"goias","Branca","45 a 59 anos","Masculino","Bolsonaro",1
+"goias","Branca","45 a 59 anos","Masculino","Lula",1
+"goias","Branca","60 anos ou mais","Feminino","Lula",1
+"goias","Branca","60 anos ou mais","Masculino","Bolsonaro",1
+"goias","Outras","35 a 44 anos","Feminino","Lula",1
+"goias","Outras","35 a 44 anos","Feminino","Outro",2
+"goias","Outras","35 a 44 anos","Masculino","Outro",1
+"goias","Parda","18 a 24 anos","Masculino","Outro",1
+"goias","Parda","25 a 34 anos","Feminino","Bolsonaro",2
+"goias","Parda","25 a 34 anos","Feminino","Lula",1
+"goias","Parda","25 a 34 anos","Feminino","Outro",1
+"goias","Parda","25 a 34 anos","Masculino","Bolsonaro",1
+"goias","Parda","25 a 34 anos","Masculino","Outro",2
+"goias","Parda","35 a 44 anos","Feminino","Outro",1
+"goias","Parda","35 a 44 anos","Masculino","Bolsonaro",1
+"goias","Parda","35 a 44 anos","Masculino","Lula",1
+"goias","Parda","45 a 59 anos","Feminino","Lula",4
+"goias","Parda","45 a 59 anos","Feminino","Outro",1
+"goias","Parda","45 a 59 anos","Masculino","Bolsonaro",6
+"goias","Parda","60 anos ou mais","Feminino","Outro",1
+"goias","Parda","60 anos ou mais","Masculino","Lula",1
+"goias","Preta","18 a 24 anos","Feminino","Lula",1
+"goias","Preta","18 a 24 anos","Masculino","Lula",1
+"goias","Preta","25 a 34 anos","Feminino","Lula",1
+"goias","Preta","25 a 34 anos","Masculino","Outro",1
+"goias","Preta","35 a 44 anos","Feminino","Bolsonaro",1
+"goias","Preta","35 a 44 anos","Masculino","Lula",2
+"goias","Preta","45 a 59 anos","Feminino","Bolsonaro",1
+"goias","Preta","60 anos ou mais","Masculino","Bolsonaro",1
+"maranhao","Branca","18 a 24 anos","Feminino","Outro",1
+"maranhao","Branca","18 a 24 anos","Masculino","Bolsonaro",1
+"maranhao","Branca","25 a 34 anos","Masculino","Lula",1
+"maranhao","Branca","35 a 44 anos","Feminino","Lula",2
+"maranhao","Branca","35 a 44 anos","Masculino","Lula",1
+"maranhao","Branca","45 a 59 anos","Feminino","Lula",1
+"maranhao","Branca","45 a 59 anos","Feminino","Outro",1
+"maranhao","Branca","45 a 59 anos","Masculino","Bolsonaro",3
+"maranhao","Branca","45 a 59 anos","Masculino","Lula",1
+"maranhao","Branca","60 anos ou mais","Feminino","Lula",1
+"maranhao","Branca","60 anos ou mais","Masculino","Bolsonaro",3
+"maranhao","Outras","35 a 44 anos","Feminino","Lula",1
+"maranhao","Outras","60 anos ou mais","Feminino","Bolsonaro",1
+"maranhao","Parda","18 a 24 anos","Feminino","Lula",4
+"maranhao","Parda","18 a 24 anos","Masculino","Bolsonaro",2
+"maranhao","Parda","18 a 24 anos","Masculino","Lula",2
+"maranhao","Parda","18 a 24 anos","Masculino","Outro",1
+"maranhao","Parda","25 a 34 anos","Feminino","Lula",4
+"maranhao","Parda","25 a 34 anos","Feminino","Outro",1
+"maranhao","Parda","25 a 34 anos","Masculino","Bolsonaro",3
+"maranhao","Parda","25 a 34 anos","Masculino","Lula",1
+"maranhao","Parda","25 a 34 anos","Masculino","Outro",2
+"maranhao","Parda","35 a 44 anos","Feminino","Bolsonaro",1
+"maranhao","Parda","35 a 44 anos","Feminino","Outro",2
+"maranhao","Parda","35 a 44 anos","Masculino","Bolsonaro",1
+"maranhao","Parda","35 a 44 anos","Masculino","Lula",4
+"maranhao","Parda","35 a 44 anos","Masculino","Outro",1
+"maranhao","Parda","45 a 59 anos","Feminino","Bolsonaro",2
+"maranhao","Parda","45 a 59 anos","Feminino","Lula",8
+"maranhao","Parda","45 a 59 anos","Masculino","Bolsonaro",1
+"maranhao","Parda","45 a 59 anos","Masculino","Lula",4
+"maranhao","Parda","45 a 59 anos","Masculino","Outro",1
+"maranhao","Parda","60 anos ou mais","Feminino","Bolsonaro",1
+"maranhao","Parda","60 anos ou mais","Feminino","Lula",3
+"maranhao","Parda","60 anos ou mais","Feminino","Outro",1
+"maranhao","Parda","60 anos ou mais","Masculino","Lula",1
+"maranhao","Preta","18 a 24 anos","Masculino","Lula",2
+"maranhao","Preta","25 a 34 anos","Feminino","Outro",1
+"maranhao","Preta","35 a 44 anos","Feminino","Lula",2
+"maranhao","Preta","35 a 44 anos","Feminino","Outro",1
+"maranhao","Preta","35 a 44 anos","Masculino","Bolsonaro",1
+"maranhao","Preta","35 a 44 anos","Masculino","Lula",1
+"maranhao","Preta","60 anos ou mais","Feminino","Lula",1
+"mato grosso","Branca","18 a 24 anos","Masculino","Lula",1
+"mato grosso","Branca","25 a 34 anos","Masculino","Bolsonaro",1
+"mato grosso","Branca","45 a 59 anos","Feminino","Bolsonaro",1
+"mato grosso","Branca","45 a 59 anos","Masculino","Outro",1
+"mato grosso","Branca","60 anos ou mais","Feminino","Bolsonaro",1
+"mato grosso","Parda","18 a 24 anos","Feminino","Outro",1
+"mato grosso","Parda","18 a 24 anos","Masculino","Bolsonaro",1
+"mato grosso","Parda","25 a 34 anos","Feminino","Bolsonaro",1
+"mato grosso","Parda","35 a 44 anos","Feminino","Lula",1
+"mato grosso","Parda","35 a 44 anos","Feminino","Outro",1
+"mato grosso","Parda","45 a 59 anos","Masculino","Bolsonaro",1
+"mato grosso","Parda","45 a 59 anos","Masculino","Lula",1
+"mato grosso","Parda","45 a 59 anos","Masculino","Outro",1
+"mato grosso","Parda","60 anos ou mais","Feminino","Outro",1
+"mato grosso","Preta","18 a 24 anos","Feminino","Outro",1
+"mato grosso","Preta","25 a 34 anos","Masculino","Lula",1
+"mato grosso","Preta","35 a 44 anos","Feminino","Bolsonaro",1
+"mato grosso","Preta","35 a 44 anos","Feminino","Lula",1
+"mato grosso","Preta","35 a 44 anos","Feminino","Outro",1
+"mato grosso","Preta","35 a 44 anos","Masculino","Bolsonaro",1
+"mato grosso","Preta","45 a 59 anos","Feminino","Lula",1
+"mato grosso","Preta","60 anos ou mais","Masculino","Lula",2
+"mato grosso do sul","Branca","35 a 44 anos","Feminino","Bolsonaro",1
+"mato grosso do sul","Branca","35 a 44 anos","Masculino","Bolsonaro",1
+"mato grosso do sul","Branca","45 a 59 anos","Feminino","Outro",1
+"mato grosso do sul","Branca","60 anos ou mais","Feminino","Bolsonaro",1
+"mato grosso do sul","Parda","18 a 24 anos","Masculino","Outro",1
+"mato grosso do sul","Parda","25 a 34 anos","Feminino","Outro",1
+"mato grosso do sul","Parda","35 a 44 anos","Feminino","Bolsonaro",2
+"mato grosso do sul","Parda","35 a 44 anos","Feminino","Lula",1
+"mato grosso do sul","Parda","45 a 59 anos","Feminino","Outro",1
+"mato grosso do sul","Parda","45 a 59 anos","Masculino","Lula",1
+"mato grosso do sul","Parda","45 a 59 anos","Masculino","Outro",1
+"mato grosso do sul","Parda","60 anos ou mais","Masculino","Bolsonaro",2
+"mato grosso do sul","Parda","60 anos ou mais","Masculino","Lula",1
+"mato grosso do sul","Preta","25 a 34 anos","Feminino","Outro",1
+"mato grosso do sul","Preta","25 a 34 anos","Masculino","Outro",1
+"mato grosso do sul","Preta","35 a 44 anos","Feminino","Outro",1
+"minas gerais","Branca","18 a 24 anos","Feminino","Bolsonaro",4
+"minas gerais","Branca","18 a 24 anos","Feminino","Outro",2
+"minas gerais","Branca","18 a 24 anos","Masculino","Bolsonaro",1
+"minas gerais","Branca","18 a 24 anos","Masculino","Lula",1
+"minas gerais","Branca","18 a 24 anos","Masculino","Outro",1
+"minas gerais","Branca","25 a 34 anos","Feminino","Bolsonaro",1
+"minas gerais","Branca","25 a 34 anos","Feminino","Lula",3
+"minas gerais","Branca","25 a 34 anos","Feminino","Outro",4
+"minas gerais","Branca","25 a 34 anos","Masculino","Bolsonaro",7
+"minas gerais","Branca","25 a 34 anos","Masculino","Lula",4
+"minas gerais","Branca","35 a 44 anos","Feminino","Bolsonaro",2
+"minas gerais","Branca","35 a 44 anos","Feminino","Lula",4
+"minas gerais","Branca","35 a 44 anos","Masculino","Bolsonaro",4
+"minas gerais","Branca","35 a 44 anos","Masculino","Lula",1
+"minas gerais","Branca","45 a 59 anos","Feminino","Bolsonaro",6
+"minas gerais","Branca","45 a 59 anos","Feminino","Lula",4
+"minas gerais","Branca","45 a 59 anos","Feminino","Outro",1
+"minas gerais","Branca","45 a 59 anos","Masculino","Bolsonaro",3
+"minas gerais","Branca","45 a 59 anos","Masculino","Lula",2
+"minas gerais","Branca","45 a 59 anos","Masculino","Outro",1
+"minas gerais","Branca","60 anos ou mais","Feminino","Bolsonaro",1
+"minas gerais","Branca","60 anos ou mais","Feminino","Lula",2
+"minas gerais","Branca","60 anos ou mais","Masculino","Bolsonaro",5
+"minas gerais","Branca","60 anos ou mais","Masculino","Lula",3
+"minas gerais","Outras","18 a 24 anos","Masculino","Outro",1
+"minas gerais","Outras","25 a 34 anos","Feminino","Lula",1
+"minas gerais","Outras","35 a 44 anos","Feminino","Bolsonaro",1
+"minas gerais","Outras","35 a 44 anos","Feminino","Lula",1
+"minas gerais","Outras","35 a 44 anos","Masculino","Lula",1
+"minas gerais","Outras","45 a 59 anos","Feminino","Outro",1
+"minas gerais","Outras","45 a 59 anos","Masculino","Outro",1
+"minas gerais","Outras","60 anos ou mais","Feminino","Lula",1
+"minas gerais","Outras","60 anos ou mais","Feminino","Outro",1
+"minas gerais","Outras","60 anos ou mais","Masculino","Lula",1
+"minas gerais","Parda","18 a 24 anos","Feminino","Bolsonaro",3
+"minas gerais","Parda","18 a 24 anos","Feminino","Lula",2
+"minas gerais","Parda","18 a 24 anos","Feminino","Outro",1
+"minas gerais","Parda","18 a 24 anos","Masculino","Bolsonaro",1
+"minas gerais","Parda","18 a 24 anos","Masculino","Lula",2
+"minas gerais","Parda","18 a 24 anos","Masculino","Outro",2
+"minas gerais","Parda","25 a 34 anos","Feminino","Bolsonaro",8
+"minas gerais","Parda","25 a 34 anos","Feminino","Lula",2
+"minas gerais","Parda","25 a 34 anos","Feminino","Outro",2
+"minas gerais","Parda","25 a 34 anos","Masculino","Bolsonaro",6
+"minas gerais","Parda","25 a 34 anos","Masculino","Lula",5
+"minas gerais","Parda","25 a 34 anos","Masculino","Outro",2
+"minas gerais","Parda","35 a 44 anos","Feminino","Bolsonaro",6
+"minas gerais","Parda","35 a 44 anos","Feminino","Lula",1
+"minas gerais","Parda","35 a 44 anos","Feminino","Outro",3
+"minas gerais","Parda","35 a 44 anos","Masculino","Bolsonaro",6
+"minas gerais","Parda","35 a 44 anos","Masculino","Lula",1
+"minas gerais","Parda","35 a 44 anos","Masculino","Outro",2
+"minas gerais","Parda","45 a 59 anos","Feminino","Bolsonaro",7
+"minas gerais","Parda","45 a 59 anos","Feminino","Lula",5
+"minas gerais","Parda","45 a 59 anos","Feminino","Outro",1
+"minas gerais","Parda","45 a 59 anos","Masculino","Bolsonaro",3
+"minas gerais","Parda","45 a 59 anos","Masculino","Lula",6
+"minas gerais","Parda","45 a 59 anos","Masculino","Outro",2
+"minas gerais","Parda","60 anos ou mais","Feminino","Bolsonaro",4
+"minas gerais","Parda","60 anos ou mais","Feminino","Lula",5
+"minas gerais","Parda","60 anos ou mais","Feminino","Outro",4
+"minas gerais","Parda","60 anos ou mais","Masculino","Bolsonaro",3
+"minas gerais","Parda","60 anos ou mais","Masculino","Lula",3
+"minas gerais","Preta","18 a 24 anos","Feminino","Lula",1
+"minas gerais","Preta","18 a 24 anos","Feminino","Outro",1
+"minas gerais","Preta","18 a 24 anos","Masculino","Bolsonaro",1
+"minas gerais","Preta","18 a 24 anos","Masculino","Lula",1
+"minas gerais","Preta","25 a 34 anos","Feminino","Bolsonaro",1
+"minas gerais","Preta","25 a 34 anos","Feminino","Lula",2
+"minas gerais","Preta","25 a 34 anos","Masculino","Lula",3
+"minas gerais","Preta","25 a 34 anos","Masculino","Outro",1
+"minas gerais","Preta","35 a 44 anos","Feminino","Bolsonaro",3
+"minas gerais","Preta","35 a 44 anos","Feminino","Lula",2
+"minas gerais","Preta","35 a 44 anos","Feminino","Outro",3
+"minas gerais","Preta","35 a 44 anos","Masculino","Bolsonaro",1
+"minas gerais","Preta","35 a 44 anos","Masculino","Lula",1
+"minas gerais","Preta","35 a 44 anos","Masculino","Outro",1
+"minas gerais","Preta","45 a 59 anos","Feminino","Bolsonaro",2
+"minas gerais","Preta","45 a 59 anos","Feminino","Lula",3
+"minas gerais","Preta","45 a 59 anos","Masculino","Bolsonaro",1
+"minas gerais","Preta","45 a 59 anos","Masculino","Lula",4
+"minas gerais","Preta","60 anos ou mais","Feminino","Lula",3
+"minas gerais","Preta","60 anos ou mais","Feminino","Outro",2
+"minas gerais","Preta","60 anos ou mais","Masculino","Lula",2
+"minas gerais","Preta","60 anos ou mais","Masculino","Outro",1
+"para","Branca","45 a 59 anos","Masculino","Bolsonaro",1
+"para","Branca","60 anos ou mais","Masculino","Lula",1
+"para","Outras","35 a 44 anos","Masculino","Bolsonaro",1
+"para","Outras","35 a 44 anos","Masculino","Lula",1
+"para","Parda","18 a 24 anos","Feminino","Bolsonaro",1
+"para","Parda","18 a 24 anos","Feminino","Lula",3
+"para","Parda","18 a 24 anos","Masculino","Bolsonaro",1
+"para","Parda","18 a 24 anos","Masculino","Lula",1
+"para","Parda","18 a 24 anos","Masculino","Outro",1
+"para","Parda","25 a 34 anos","Feminino","Bolsonaro",1
+"para","Parda","25 a 34 anos","Feminino","Lula",4
+"para","Parda","25 a 34 anos","Feminino","Outro",2
+"para","Parda","25 a 34 anos","Masculino","Lula",3
+"para","Parda","25 a 34 anos","Masculino","Outro",2
+"para","Parda","35 a 44 anos","Feminino","Lula",2
+"para","Parda","35 a 44 anos","Masculino","Bolsonaro",1
+"para","Parda","35 a 44 anos","Masculino","Lula",1
+"para","Parda","45 a 59 anos","Feminino","Bolsonaro",1
+"para","Parda","45 a 59 anos","Feminino","Lula",2
+"para","Parda","45 a 59 anos","Masculino","Lula",2
+"para","Parda","45 a 59 anos","Masculino","Outro",1
+"para","Parda","60 anos ou mais","Feminino","Bolsonaro",1
+"para","Parda","60 anos ou mais","Feminino","Lula",1
+"para","Parda","60 anos ou mais","Feminino","Outro",2
+"para","Parda","60 anos ou mais","Masculino","Lula",4
+"para","Preta","18 a 24 anos","Feminino","Lula",1
+"para","Preta","25 a 34 anos","Feminino","Lula",1
+"para","Preta","35 a 44 anos","Feminino","Lula",1
+"para","Preta","35 a 44 anos","Masculino","Lula",1
+"para","Preta","35 a 44 anos","Masculino","Outro",1
+"para","Preta","45 a 59 anos","Feminino","Outro",1
+"para","Preta","45 a 59 anos","Masculino","Bolsonaro",1
+"para","Preta","45 a 59 anos","Masculino","Lula",2
+"para","Preta","45 a 59 anos","Masculino","Outro",1
+"para","Preta","60 anos ou mais","Masculino","Lula",1
+"paraiba","Branca","45 a 59 anos","Feminino","Bolsonaro",2
+"paraiba","Branca","45 a 59 anos","Feminino","Outro",1
+"paraiba","Branca","45 a 59 anos","Masculino","Bolsonaro",1
+"paraiba","Branca","60 anos ou mais","Feminino","Bolsonaro",2
+"paraiba","Branca","60 anos ou mais","Feminino","Lula",1
+"paraiba","Outras","25 a 34 anos","Masculino","Bolsonaro",1
+"paraiba","Outras","25 a 34 anos","Masculino","Lula",1
+"paraiba","Outras","35 a 44 anos","Masculino","Bolsonaro",1
+"paraiba","Parda","18 a 24 anos","Masculino","Outro",2
+"paraiba","Parda","25 a 34 anos","Feminino","Bolsonaro",2
+"paraiba","Parda","25 a 34 anos","Feminino","Lula",1
+"paraiba","Parda","35 a 44 anos","Masculino","Bolsonaro",1
+"paraiba","Parda","45 a 59 anos","Feminino","Bolsonaro",1
+"paraiba","Parda","45 a 59 anos","Feminino","Outro",1
+"paraiba","Parda","45 a 59 anos","Masculino","Outro",1
+"paraiba","Preta","25 a 34 anos","Masculino","Outro",1
+"paraiba","Preta","35 a 44 anos","Feminino","Bolsonaro",2
+"paraiba","Preta","35 a 44 anos","Feminino","Lula",1
+"paraiba","Preta","45 a 59 anos","Masculino","Lula",2
+"parana","Branca","18 a 24 anos","Feminino","Bolsonaro",3
+"parana","Branca","18 a 24 anos","Feminino","Lula",3
+"parana","Branca","18 a 24 anos","Masculino","Bolsonaro",2
+"parana","Branca","18 a 24 anos","Masculino","Lula",1
+"parana","Branca","25 a 34 anos","Feminino","Bolsonaro",2
+"parana","Branca","25 a 34 anos","Feminino","Lula",4
+"parana","Branca","25 a 34 anos","Masculino","Bolsonaro",4
+"parana","Branca","25 a 34 anos","Masculino","Lula",2
+"parana","Branca","35 a 44 anos","Feminino","Bolsonaro",1
+"parana","Branca","35 a 44 anos","Feminino","Outro",2
+"parana","Branca","35 a 44 anos","Masculino","Bolsonaro",3
+"parana","Branca","35 a 44 anos","Masculino","Lula",1
+"parana","Branca","45 a 59 anos","Feminino","Bolsonaro",2
+"parana","Branca","45 a 59 anos","Feminino","Lula",3
+"parana","Branca","45 a 59 anos","Masculino","Bolsonaro",7
+"parana","Branca","45 a 59 anos","Masculino","Lula",2
+"parana","Branca","45 a 59 anos","Masculino","Outro",3
+"parana","Branca","60 anos ou mais","Feminino","Bolsonaro",3
+"parana","Branca","60 anos ou mais","Feminino","Lula",3
+"parana","Branca","60 anos ou mais","Feminino","Outro",3
+"parana","Branca","60 anos ou mais","Masculino","Bolsonaro",5
+"parana","Branca","60 anos ou mais","Masculino","Lula",2
+"parana","Branca","60 anos ou mais","Masculino","Outro",3
+"parana","Outras","25 a 34 anos","Feminino","Lula",1
+"parana","Outras","25 a 34 anos","Feminino","Outro",1
+"parana","Outras","25 a 34 anos","Masculino","Lula",1
+"parana","Outras","35 a 44 anos","Masculino","Outro",1
+"parana","Outras","60 anos ou mais","Feminino","Outro",1
+"parana","Outras","60 anos ou mais","Masculino","Outro",1
+"parana","Parda","18 a 24 anos","Feminino","Bolsonaro",1
+"parana","Parda","18 a 24 anos","Feminino","Lula",1
+"parana","Parda","18 a 24 anos","Feminino","Outro",2
+"parana","Parda","18 a 24 anos","Masculino","Bolsonaro",2
+"parana","Parda","18 a 24 anos","Masculino","Lula",1
+"parana","Parda","25 a 34 anos","Feminino","Bolsonaro",2
+"parana","Parda","25 a 34 anos","Feminino","Outro",1
+"parana","Parda","25 a 34 anos","Masculino","Bolsonaro",1
+"parana","Parda","25 a 34 anos","Masculino","Outro",1
+"parana","Parda","35 a 44 anos","Feminino","Bolsonaro",3
+"parana","Parda","35 a 44 anos","Feminino","Lula",1
+"parana","Parda","35 a 44 anos","Feminino","Outro",1
+"parana","Parda","35 a 44 anos","Masculino","Bolsonaro",2
+"parana","Parda","35 a 44 anos","Masculino","Lula",1
+"parana","Parda","45 a 59 anos","Feminino","Bolsonaro",4
+"parana","Parda","45 a 59 anos","Feminino","Lula",4
+"parana","Parda","45 a 59 anos","Feminino","Outro",1
+"parana","Parda","45 a 59 anos","Masculino","Bolsonaro",1
+"parana","Parda","45 a 59 anos","Masculino","Lula",1
+"parana","Parda","60 anos ou mais","Feminino","Bolsonaro",3
+"parana","Parda","60 anos ou mais","Masculino","Bolsonaro",1
+"parana","Parda","60 anos ou mais","Masculino","Lula",2
+"parana","Parda","60 anos ou mais","Masculino","Outro",1
+"parana","Preta","25 a 34 anos","Feminino","Bolsonaro",1
+"parana","Preta","25 a 34 anos","Feminino","Outro",1
+"parana","Preta","35 a 44 anos","Feminino","Lula",1
+"parana","Preta","35 a 44 anos","Feminino","Outro",1
+"parana","Preta","35 a 44 anos","Masculino","Bolsonaro",1
+"parana","Preta","45 a 59 anos","Feminino","Lula",2
+"parana","Preta","60 anos ou mais","Feminino","Bolsonaro",1
+"pernambuco","Branca","18 a 24 anos","Masculino","Bolsonaro",1
+"pernambuco","Branca","18 a 24 anos","Masculino","Outro",1
+"pernambuco","Branca","25 a 34 anos","Feminino","Lula",2
+"pernambuco","Branca","25 a 34 anos","Feminino","Outro",2
+"pernambuco","Branca","35 a 44 anos","Feminino","Lula",1
+"pernambuco","Branca","35 a 44 anos","Masculino","Lula",3
+"pernambuco","Branca","45 a 59 anos","Feminino","Lula",2
+"pernambuco","Branca","45 a 59 anos","Masculino","Lula",1
+"pernambuco","Branca","45 a 59 anos","Masculino","Outro",1
+"pernambuco","Outras","25 a 34 anos","Masculino","Lula",1
+"pernambuco","Outras","35 a 44 anos","Feminino","Lula",1
+"pernambuco","Outras","45 a 59 anos","Masculino","Lula",1
+"pernambuco","Outras","60 anos ou mais","Masculino","Bolsonaro",1
+"pernambuco","Outras","60 anos ou mais","Masculino","Lula",1
+"pernambuco","Parda","18 a 24 anos","Feminino","Lula",2
+"pernambuco","Parda","25 a 34 anos","Feminino","Bolsonaro",1
+"pernambuco","Parda","25 a 34 anos","Feminino","Lula",3
+"pernambuco","Parda","25 a 34 anos","Masculino","Bolsonaro",1
+"pernambuco","Parda","35 a 44 anos","Feminino","Lula",3
+"pernambuco","Parda","35 a 44 anos","Masculino","Bolsonaro",2
+"pernambuco","Parda","35 a 44 anos","Masculino","Lula",3
+"pernambuco","Parda","35 a 44 anos","Masculino","Outro",1
+"pernambuco","Parda","45 a 59 anos","Feminino","Bolsonaro",1
+"pernambuco","Parda","45 a 59 anos","Feminino","Lula",1
+"pernambuco","Parda","45 a 59 anos","Masculino","Bolsonaro",1
+"pernambuco","Parda","45 a 59 anos","Masculino","Lula",1
+"pernambuco","Parda","45 a 59 anos","Masculino","Outro",1
+"pernambuco","Parda","60 anos ou mais","Feminino","Bolsonaro",1
+"pernambuco","Preta","18 a 24 anos","Feminino","Lula",1
+"pernambuco","Preta","18 a 24 anos","Masculino","Lula",1
+"pernambuco","Preta","25 a 34 anos","Feminino","Bolsonaro",1
+"pernambuco","Preta","25 a 34 anos","Feminino","Lula",3
+"pernambuco","Preta","25 a 34 anos","Masculino","Lula",1
+"pernambuco","Preta","35 a 44 anos","Feminino","Lula",2
+"pernambuco","Preta","35 a 44 anos","Masculino","Bolsonaro",1
+"pernambuco","Preta","35 a 44 anos","Masculino","Outro",1
+"pernambuco","Preta","45 a 59 anos","Feminino","Lula",1
+"pernambuco","Preta","45 a 59 anos","Masculino","Lula",1
+"pernambuco","Preta","60 anos ou mais","Feminino","Lula",1
+"piaui","Branca","18 a 24 anos","Masculino","Bolsonaro",1
+"piaui","Branca","35 a 44 anos","Masculino","Lula",1
+"piaui","Branca","45 a 59 anos","Feminino","Bolsonaro",1
+"piaui","Branca","45 a 59 anos","Masculino","Bolsonaro",1
+"piaui","Branca","60 anos ou mais","Feminino","Lula",1
+"piaui","Branca","60 anos ou mais","Masculino","Lula",1
+"piaui","Outras","18 a 24 anos","Feminino","Lula",1
+"piaui","Outras","35 a 44 anos","Masculino","Lula",1
+"piaui","Outras","45 a 59 anos","Feminino","Outro",1
+"piaui","Outras","45 a 59 anos","Masculino","Lula",2
+"piaui","Outras","60 anos ou mais","Masculino","Lula",1
+"piaui","Parda","18 a 24 anos","Feminino","Lula",3
+"piaui","Parda","18 a 24 anos","Feminino","Outro",2
+"piaui","Parda","18 a 24 anos","Masculino","Lula",3
+"piaui","Parda","18 a 24 anos","Masculino","Outro",1
+"piaui","Parda","25 a 34 anos","Feminino","Lula",1
+"piaui","Parda","25 a 34 anos","Feminino","Outro",1
+"piaui","Parda","25 a 34 anos","Masculino","Lula",3
+"piaui","Parda","25 a 34 anos","Masculino","Outro",2
+"piaui","Parda","35 a 44 anos","Feminino","Bolsonaro",3
+"piaui","Parda","35 a 44 anos","Feminino","Lula",5
+"piaui","Parda","35 a 44 anos","Masculino","Bolsonaro",1
+"piaui","Parda","35 a 44 anos","Masculino","Outro",2
+"piaui","Parda","45 a 59 anos","Feminino","Bolsonaro",3
+"piaui","Parda","45 a 59 anos","Feminino","Lula",3
+"piaui","Parda","45 a 59 anos","Feminino","Outro",1
+"piaui","Parda","45 a 59 anos","Masculino","Bolsonaro",1
+"piaui","Parda","45 a 59 anos","Masculino","Lula",1
+"piaui","Parda","45 a 59 anos","Masculino","Outro",2
+"piaui","Parda","60 anos ou mais","Feminino","Lula",3
+"piaui","Parda","60 anos ou mais","Masculino","Bolsonaro",2
+"piaui","Preta","25 a 34 anos","Feminino","Lula",2
+"piaui","Preta","25 a 34 anos","Masculino","Bolsonaro",1
+"piaui","Preta","35 a 44 anos","Masculino","Lula",1
+"piaui","Preta","35 a 44 anos","Masculino","Outro",1
+"piaui","Preta","45 a 59 anos","Feminino","Lula",1
+"piaui","Preta","45 a 59 anos","Masculino","Lula",1
+"piaui","Preta","60 anos ou mais","Feminino","Lula",1
+"rio de janeiro","Branca","18 a 24 anos","Feminino","Bolsonaro",1
+"rio de janeiro","Branca","18 a 24 anos","Masculino","Bolsonaro",1
+"rio de janeiro","Branca","25 a 34 anos","Masculino","Bolsonaro",1
+"rio de janeiro","Branca","25 a 34 anos","Masculino","Lula",2
+"rio de janeiro","Branca","35 a 44 anos","Feminino","Bolsonaro",3
+"rio de janeiro","Branca","35 a 44 anos","Feminino","Lula",1
+"rio de janeiro","Branca","35 a 44 anos","Feminino","Outro",1
+"rio de janeiro","Branca","35 a 44 anos","Masculino","Bolsonaro",2
+"rio de janeiro","Branca","45 a 59 anos","Feminino","Lula",1
+"rio de janeiro","Branca","45 a 59 anos","Masculino","Bolsonaro",3
+"rio de janeiro","Branca","45 a 59 anos","Masculino","Lula",2
+"rio de janeiro","Branca","60 anos ou mais","Feminino","Bolsonaro",1
+"rio de janeiro","Branca","60 anos ou mais","Feminino","Lula",2
+"rio de janeiro","Branca","60 anos ou mais","Feminino","Outro",1
+"rio de janeiro","Branca","60 anos ou mais","Masculino","Bolsonaro",1
+"rio de janeiro","Branca","60 anos ou mais","Masculino","Lula",1
+"rio de janeiro","Outras","25 a 34 anos","Masculino","Bolsonaro",1
+"rio de janeiro","Outras","45 a 59 anos","Masculino","Outro",1
+"rio de janeiro","Parda","18 a 24 anos","Feminino","Bolsonaro",2
+"rio de janeiro","Parda","18 a 24 anos","Feminino","Lula",2
+"rio de janeiro","Parda","18 a 24 anos","Feminino","Outro",1
+"rio de janeiro","Parda","18 a 24 anos","Masculino","Bolsonaro",3
+"rio de janeiro","Parda","25 a 34 anos","Feminino","Bolsonaro",2
+"rio de janeiro","Parda","25 a 34 anos","Feminino","Lula",2
+"rio de janeiro","Parda","25 a 34 anos","Feminino","Outro",2
+"rio de janeiro","Parda","25 a 34 anos","Masculino","Bolsonaro",2
+"rio de janeiro","Parda","25 a 34 anos","Masculino","Lula",2
+"rio de janeiro","Parda","35 a 44 anos","Feminino","Bolsonaro",1
+"rio de janeiro","Parda","35 a 44 anos","Feminino","Lula",2
+"rio de janeiro","Parda","35 a 44 anos","Masculino","Bolsonaro",3
+"rio de janeiro","Parda","35 a 44 anos","Masculino","Lula",2
+"rio de janeiro","Parda","35 a 44 anos","Masculino","Outro",2
+"rio de janeiro","Parda","45 a 59 anos","Feminino","Bolsonaro",1
+"rio de janeiro","Parda","45 a 59 anos","Feminino","Lula",3
+"rio de janeiro","Parda","45 a 59 anos","Feminino","Outro",1
+"rio de janeiro","Parda","45 a 59 anos","Masculino","Bolsonaro",4
+"rio de janeiro","Parda","45 a 59 anos","Masculino","Lula",1
+"rio de janeiro","Parda","45 a 59 anos","Masculino","Outro",2
+"rio de janeiro","Parda","60 anos ou mais","Feminino","Bolsonaro",4
+"rio de janeiro","Parda","60 anos ou mais","Feminino","Lula",1
+"rio de janeiro","Parda","60 anos ou mais","Feminino","Outro",4
+"rio de janeiro","Parda","60 anos ou mais","Masculino","Bolsonaro",2
+"rio de janeiro","Parda","60 anos ou mais","Masculino","Lula",6
+"rio de janeiro","Preta","18 a 24 anos","Feminino","Bolsonaro",1
+"rio de janeiro","Preta","18 a 24 anos","Feminino","Lula",1
+"rio de janeiro","Preta","18 a 24 anos","Masculino","Outro",1
+"rio de janeiro","Preta","25 a 34 anos","Feminino","Bolsonaro",1
+"rio de janeiro","Preta","25 a 34 anos","Feminino","Lula",1
+"rio de janeiro","Preta","25 a 34 anos","Feminino","Outro",1
+"rio de janeiro","Preta","25 a 34 anos","Masculino","Bolsonaro",1
+"rio de janeiro","Preta","25 a 34 anos","Masculino","Outro",1
+"rio de janeiro","Preta","35 a 44 anos","Feminino","Outro",2
+"rio de janeiro","Preta","45 a 59 anos","Feminino","Bolsonaro",1
+"rio de janeiro","Preta","45 a 59 anos","Feminino","Lula",2
+"rio de janeiro","Preta","45 a 59 anos","Feminino","Outro",1
+"rio de janeiro","Preta","45 a 59 anos","Masculino","Lula",2
+"rio de janeiro","Preta","45 a 59 anos","Masculino","Outro",1
+"rio de janeiro","Preta","60 anos ou mais","Feminino","Lula",2
+"rio de janeiro","Preta","60 anos ou mais","Masculino","Bolsonaro",1
+"rio de janeiro","Preta","60 anos ou mais","Masculino","Lula",1
+"rio grande do norte","Branca","18 a 24 anos","Masculino","Lula",2
+"rio grande do norte","Branca","18 a 24 anos","Masculino","Outro",1
+"rio grande do norte","Branca","25 a 34 anos","Masculino","Bolsonaro",1
+"rio grande do norte","Branca","25 a 34 anos","Masculino","Lula",1
+"rio grande do norte","Branca","35 a 44 anos","Feminino","Lula",1
+"rio grande do norte","Branca","45 a 59 anos","Feminino","Bolsonaro",1
+"rio grande do norte","Branca","45 a 59 anos","Feminino","Lula",1
+"rio grande do norte","Branca","45 a 59 anos","Feminino","Outro",1
+"rio grande do norte","Branca","45 a 59 anos","Masculino","Bolsonaro",2
+"rio grande do norte","Branca","45 a 59 anos","Masculino","Outro",1
+"rio grande do norte","Branca","60 anos ou mais","Feminino","Lula",1
+"rio grande do norte","Branca","60 anos ou mais","Feminino","Outro",1
+"rio grande do norte","Branca","60 anos ou mais","Masculino","Lula",1
+"rio grande do norte","Outras","18 a 24 anos","Feminino","Lula",1
+"rio grande do norte","Outras","25 a 34 anos","Masculino","Lula",1
+"rio grande do norte","Outras","45 a 59 anos","Masculino","Lula",1
+"rio grande do norte","Parda","18 a 24 anos","Feminino","Bolsonaro",1
+"rio grande do norte","Parda","18 a 24 anos","Feminino","Lula",2
+"rio grande do norte","Parda","18 a 24 anos","Masculino","Bolsonaro",1
+"rio grande do norte","Parda","18 a 24 anos","Masculino","Lula",2
+"rio grande do norte","Parda","25 a 34 anos","Feminino","Bolsonaro",2
+"rio grande do norte","Parda","25 a 34 anos","Masculino","Lula",1
+"rio grande do norte","Parda","35 a 44 anos","Feminino","Bolsonaro",1
+"rio grande do norte","Parda","35 a 44 anos","Feminino","Lula",3
+"rio grande do norte","Parda","35 a 44 anos","Masculino","Bolsonaro",1
+"rio grande do norte","Parda","35 a 44 anos","Masculino","Lula",1
+"rio grande do norte","Parda","45 a 59 anos","Feminino","Bolsonaro",1
+"rio grande do norte","Parda","45 a 59 anos","Feminino","Lula",3
+"rio grande do norte","Parda","60 anos ou mais","Feminino","Lula",2
+"rio grande do norte","Parda","60 anos ou mais","Feminino","Outro",1
+"rio grande do norte","Preta","18 a 24 anos","Masculino","Outro",1
+"rio grande do norte","Preta","25 a 34 anos","Masculino","Bolsonaro",1
+"rio grande do norte","Preta","35 a 44 anos","Masculino","Bolsonaro",1
+"rio grande do norte","Preta","60 anos ou mais","Feminino","Lula",1
+"rio grande do sul","Branca","18 a 24 anos","Feminino","Bolsonaro",1
+"rio grande do sul","Branca","18 a 24 anos","Feminino","Lula",1
+"rio grande do sul","Branca","18 a 24 anos","Masculino","Lula",1
+"rio grande do sul","Branca","25 a 34 anos","Feminino","Bolsonaro",2
+"rio grande do sul","Branca","25 a 34 anos","Feminino","Lula",1
+"rio grande do sul","Branca","25 a 34 anos","Masculino","Bolsonaro",1
+"rio grande do sul","Branca","25 a 34 anos","Masculino","Lula",5
+"rio grande do sul","Branca","35 a 44 anos","Feminino","Bolsonaro",1
+"rio grande do sul","Branca","35 a 44 anos","Feminino","Lula",3
+"rio grande do sul","Branca","35 a 44 anos","Feminino","Outro",2
+"rio grande do sul","Branca","35 a 44 anos","Masculino","Bolsonaro",2
+"rio grande do sul","Branca","35 a 44 anos","Masculino","Lula",2
+"rio grande do sul","Branca","35 a 44 anos","Masculino","Outro",2
+"rio grande do sul","Branca","45 a 59 anos","Feminino","Bolsonaro",1
+"rio grande do sul","Branca","45 a 59 anos","Feminino","Lula",3
+"rio grande do sul","Branca","45 a 59 anos","Feminino","Outro",1
+"rio grande do sul","Branca","45 a 59 anos","Masculino","Lula",1
+"rio grande do sul","Branca","45 a 59 anos","Masculino","Outro",2
+"rio grande do sul","Branca","60 anos ou mais","Feminino","Bolsonaro",2
+"rio grande do sul","Branca","60 anos ou mais","Feminino","Lula",2
+"rio grande do sul","Branca","60 anos ou mais","Feminino","Outro",1
+"rio grande do sul","Branca","60 anos ou mais","Masculino","Bolsonaro",2
+"rio grande do sul","Branca","60 anos ou mais","Masculino","Lula",1
+"rio grande do sul","Parda","18 a 24 anos","Feminino","Outro",1
+"rio grande do sul","Parda","18 a 24 anos","Masculino","Bolsonaro",2
+"rio grande do sul","Parda","18 a 24 anos","Masculino","Outro",1
+"rio grande do sul","Parda","25 a 34 anos","Feminino","Lula",1
+"rio grande do sul","Parda","25 a 34 anos","Masculino","Outro",1
+"rio grande do sul","Parda","60 anos ou mais","Masculino","Lula",1
+"rio grande do sul","Preta","18 a 24 anos","Feminino","Lula",3
+"rio grande do sul","Preta","25 a 34 anos","Feminino","Lula",1
+"rio grande do sul","Preta","25 a 34 anos","Feminino","Outro",1
+"rio grande do sul","Preta","25 a 34 anos","Masculino","Lula",1
+"rio grande do sul","Preta","35 a 44 anos","Feminino","Outro",1
+"rio grande do sul","Preta","35 a 44 anos","Masculino","Lula",2
+"rio grande do sul","Preta","45 a 59 anos","Feminino","Bolsonaro",1
+"rio grande do sul","Preta","45 a 59 anos","Masculino","Lula",1
+"rio grande do sul","Preta","45 a 59 anos","Masculino","Outro",1
+"rio grande do sul","Preta","60 anos ou mais","Masculino","Lula",1
+"rondonia","Branca","18 a 24 anos","Feminino","Bolsonaro",1
+"rondonia","Parda","18 a 24 anos","Masculino","Bolsonaro",1
+"rondonia","Parda","25 a 34 anos","Feminino","Bolsonaro",1
+"rondonia","Parda","35 a 44 anos","Masculino","Bolsonaro",1
+"rondonia","Preta","25 a 34 anos","Masculino","Bolsonaro",1
+"roraima","Branca","25 a 34 anos","Masculino","Lula",1
+"roraima","Parda","18 a 24 anos","Masculino","Bolsonaro",1
+"roraima","Parda","25 a 34 anos","Masculino","Bolsonaro",1
+"roraima","Parda","35 a 44 anos","Masculino","Lula",1
+"roraima","Parda","45 a 59 anos","Feminino","Bolsonaro",1
+"roraima","Parda","45 a 59 anos","Feminino","Outro",1
+"roraima","Parda","60 anos ou mais","Masculino","Outro",1
+"roraima","Preta","25 a 34 anos","Feminino","Outro",1
+"roraima","Preta","35 a 44 anos","Masculino","Lula",1
+"roraima","Preta","60 anos ou mais","Feminino","Lula",1
+"santa catarina","Branca","18 a 24 anos","Feminino","Bolsonaro",1
+"santa catarina","Branca","18 a 24 anos","Masculino","Lula",1
+"santa catarina","Branca","18 a 24 anos","Masculino","Outro",2
+"santa catarina","Branca","25 a 34 anos","Feminino","Bolsonaro",1
+"santa catarina","Branca","25 a 34 anos","Feminino","Outro",2
+"santa catarina","Branca","25 a 34 anos","Masculino","Bolsonaro",1
+"santa catarina","Branca","25 a 34 anos","Masculino","Outro",1
+"santa catarina","Branca","35 a 44 anos","Feminino","Bolsonaro",2
+"santa catarina","Branca","35 a 44 anos","Feminino","Lula",1
+"santa catarina","Branca","35 a 44 anos","Masculino","Lula",2
+"santa catarina","Branca","45 a 59 anos","Feminino","Bolsonaro",3
+"santa catarina","Branca","45 a 59 anos","Feminino","Lula",1
+"santa catarina","Branca","45 a 59 anos","Feminino","Outro",3
+"santa catarina","Branca","45 a 59 anos","Masculino","Bolsonaro",4
+"santa catarina","Branca","45 a 59 anos","Masculino","Lula",3
+"santa catarina","Branca","45 a 59 anos","Masculino","Outro",1
+"santa catarina","Branca","60 anos ou mais","Feminino","Bolsonaro",3
+"santa catarina","Branca","60 anos ou mais","Feminino","Lula",3
+"santa catarina","Branca","60 anos ou mais","Feminino","Outro",3
+"santa catarina","Branca","60 anos ou mais","Masculino","Bolsonaro",4
+"santa catarina","Branca","60 anos ou mais","Masculino","Lula",3
+"santa catarina","Outras","45 a 59 anos","Feminino","Lula",1
+"santa catarina","Outras","60 anos ou mais","Masculino","Bolsonaro",1
+"santa catarina","Parda","25 a 34 anos","Feminino","Bolsonaro",1
+"santa catarina","Parda","25 a 34 anos","Feminino","Outro",2
+"santa catarina","Parda","25 a 34 anos","Masculino","Lula",2
+"santa catarina","Parda","25 a 34 anos","Masculino","Outro",2
+"santa catarina","Parda","35 a 44 anos","Feminino","Bolsonaro",1
+"santa catarina","Parda","35 a 44 anos","Feminino","Lula",2
+"santa catarina","Parda","35 a 44 anos","Feminino","Outro",1
+"santa catarina","Parda","35 a 44 anos","Masculino","Bolsonaro",2
+"santa catarina","Parda","35 a 44 anos","Masculino","Lula",2
+"santa catarina","Parda","35 a 44 anos","Masculino","Outro",1
+"santa catarina","Parda","45 a 59 anos","Feminino","Lula",3
+"santa catarina","Parda","45 a 59 anos","Feminino","Outro",1
+"santa catarina","Parda","45 a 59 anos","Masculino","Bolsonaro",1
+"santa catarina","Parda","45 a 59 anos","Masculino","Lula",2
+"santa catarina","Parda","60 anos ou mais","Feminino","Lula",1
+"santa catarina","Preta","18 a 24 anos","Feminino","Outro",2
+"santa catarina","Preta","25 a 34 anos","Feminino","Bolsonaro",1
+"santa catarina","Preta","25 a 34 anos","Feminino","Lula",1
+"santa catarina","Preta","25 a 34 anos","Masculino","Lula",1
+"santa catarina","Preta","25 a 34 anos","Masculino","Outro",1
+"santa catarina","Preta","35 a 44 anos","Feminino","Lula",1
+"santa catarina","Preta","35 a 44 anos","Masculino","Lula",2
+"santa catarina","Preta","45 a 59 anos","Feminino","Outro",1
+"santa catarina","Preta","60 anos ou mais","Feminino","Lula",1
+"sao paulo","Branca","18 a 24 anos","Feminino","Bolsonaro",3
+"sao paulo","Branca","18 a 24 anos","Feminino","Lula",5
+"sao paulo","Branca","18 a 24 anos","Feminino","Outro",4
+"sao paulo","Branca","18 a 24 anos","Masculino","Bolsonaro",5
+"sao paulo","Branca","18 a 24 anos","Masculino","Lula",4
+"sao paulo","Branca","18 a 24 anos","Masculino","Outro",5
+"sao paulo","Branca","25 a 34 anos","Feminino","Bolsonaro",11
+"sao paulo","Branca","25 a 34 anos","Feminino","Lula",7
+"sao paulo","Branca","25 a 34 anos","Feminino","Outro",7
+"sao paulo","Branca","25 a 34 anos","Masculino","Bolsonaro",12
+"sao paulo","Branca","25 a 34 anos","Masculino","Lula",9
+"sao paulo","Branca","25 a 34 anos","Masculino","Outro",5
+"sao paulo","Branca","35 a 44 anos","Feminino","Bolsonaro",9
+"sao paulo","Branca","35 a 44 anos","Feminino","Lula",8
+"sao paulo","Branca","35 a 44 anos","Feminino","Outro",7
+"sao paulo","Branca","35 a 44 anos","Masculino","Bolsonaro",14
+"sao paulo","Branca","35 a 44 anos","Masculino","Lula",8
+"sao paulo","Branca","35 a 44 anos","Masculino","Outro",4
+"sao paulo","Branca","45 a 59 anos","Feminino","Bolsonaro",6
+"sao paulo","Branca","45 a 59 anos","Feminino","Lula",10
+"sao paulo","Branca","45 a 59 anos","Feminino","Outro",8
+"sao paulo","Branca","45 a 59 anos","Masculino","Bolsonaro",15
+"sao paulo","Branca","45 a 59 anos","Masculino","Lula",9
+"sao paulo","Branca","45 a 59 anos","Masculino","Outro",3
+"sao paulo","Branca","60 anos ou mais","Feminino","Bolsonaro",7
+"sao paulo","Branca","60 anos ou mais","Feminino","Lula",8
+"sao paulo","Branca","60 anos ou mais","Feminino","Outro",3
+"sao paulo","Branca","60 anos ou mais","Masculino","Bolsonaro",7
+"sao paulo","Branca","60 anos ou mais","Masculino","Lula",11
+"sao paulo","Branca","60 anos ou mais","Masculino","Outro",4
+"sao paulo","Outras","18 a 24 anos","Masculino","Bolsonaro",1
+"sao paulo","Outras","25 a 34 anos","Feminino","Bolsonaro",1
+"sao paulo","Outras","25 a 34 anos","Feminino","Lula",2
+"sao paulo","Outras","25 a 34 anos","Masculino","Lula",2
+"sao paulo","Outras","35 a 44 anos","Feminino","Bolsonaro",1
+"sao paulo","Outras","35 a 44 anos","Feminino","Lula",1
+"sao paulo","Outras","35 a 44 anos","Masculino","Bolsonaro",1
+"sao paulo","Outras","45 a 59 anos","Masculino","Bolsonaro",1
+"sao paulo","Outras","60 anos ou mais","Feminino","Lula",1
+"sao paulo","Parda","18 a 24 anos","Feminino","Bolsonaro",2
+"sao paulo","Parda","18 a 24 anos","Feminino","Lula",5
+"sao paulo","Parda","18 a 24 anos","Feminino","Outro",7
+"sao paulo","Parda","18 a 24 anos","Masculino","Bolsonaro",5
+"sao paulo","Parda","18 a 24 anos","Masculino","Lula",5
+"sao paulo","Parda","18 a 24 anos","Masculino","Outro",3
+"sao paulo","Parda","25 a 34 anos","Feminino","Bolsonaro",11
+"sao paulo","Parda","25 a 34 anos","Feminino","Lula",7
+"sao paulo","Parda","25 a 34 anos","Feminino","Outro",4
+"sao paulo","Parda","25 a 34 anos","Masculino","Bolsonaro",7
+"sao paulo","Parda","25 a 34 anos","Masculino","Lula",2
+"sao paulo","Parda","25 a 34 anos","Masculino","Outro",7
+"sao paulo","Parda","35 a 44 anos","Feminino","Bolsonaro",6
+"sao paulo","Parda","35 a 44 anos","Feminino","Lula",9
+"sao paulo","Parda","35 a 44 anos","Feminino","Outro",7
+"sao paulo","Parda","35 a 44 anos","Masculino","Bolsonaro",9
+"sao paulo","Parda","35 a 44 anos","Masculino","Lula",5
+"sao paulo","Parda","35 a 44 anos","Masculino","Outro",9
+"sao paulo","Parda","45 a 59 anos","Feminino","Bolsonaro",7
+"sao paulo","Parda","45 a 59 anos","Feminino","Lula",6
+"sao paulo","Parda","45 a 59 anos","Feminino","Outro",6
+"sao paulo","Parda","45 a 59 anos","Masculino","Bolsonaro",14
+"sao paulo","Parda","45 a 59 anos","Masculino","Lula",6
+"sao paulo","Parda","45 a 59 anos","Masculino","Outro",3
+"sao paulo","Parda","60 anos ou mais","Feminino","Bolsonaro",4
+"sao paulo","Parda","60 anos ou mais","Feminino","Lula",1
+"sao paulo","Parda","60 anos ou mais","Feminino","Outro",4
+"sao paulo","Parda","60 anos ou mais","Masculino","Bolsonaro",4
+"sao paulo","Parda","60 anos ou mais","Masculino","Lula",3
+"sao paulo","Parda","60 anos ou mais","Masculino","Outro",2
+"sao paulo","Preta","18 a 24 anos","Feminino","Lula",2
+"sao paulo","Preta","18 a 24 anos","Feminino","Outro",1
+"sao paulo","Preta","18 a 24 anos","Masculino","Bolsonaro",1
+"sao paulo","Preta","18 a 24 anos","Masculino","Lula",1
+"sao paulo","Preta","18 a 24 anos","Masculino","Outro",3
+"sao paulo","Preta","25 a 34 anos","Feminino","Lula",3
+"sao paulo","Preta","25 a 34 anos","Feminino","Outro",2
+"sao paulo","Preta","25 a 34 anos","Masculino","Bolsonaro",4
+"sao paulo","Preta","25 a 34 anos","Masculino","Lula",4
+"sao paulo","Preta","25 a 34 anos","Masculino","Outro",4
+"sao paulo","Preta","35 a 44 anos","Feminino","Bolsonaro",1
+"sao paulo","Preta","35 a 44 anos","Feminino","Lula",2
+"sao paulo","Preta","35 a 44 anos","Masculino","Bolsonaro",3
+"sao paulo","Preta","35 a 44 anos","Masculino","Lula",1
+"sao paulo","Preta","45 a 59 anos","Feminino","Bolsonaro",1
+"sao paulo","Preta","45 a 59 anos","Feminino","Lula",3
+"sao paulo","Preta","45 a 59 anos","Feminino","Outro",1
+"sao paulo","Preta","45 a 59 anos","Masculino","Bolsonaro",3
+"sao paulo","Preta","45 a 59 anos","Masculino","Lula",9
+"sao paulo","Preta","45 a 59 anos","Masculino","Outro",1
+"sao paulo","Preta","60 anos ou mais","Feminino","Bolsonaro",2
+"sao paulo","Preta","60 anos ou mais","Feminino","Lula",3
+"sao paulo","Preta","60 anos ou mais","Feminino","Outro",1
+"sao paulo","Preta","60 anos ou mais","Masculino","Lula",1
+"sergipe","Branca","25 a 34 anos","Masculino","Bolsonaro",1
+"sergipe","Branca","35 a 44 anos","Masculino","Bolsonaro",1
+"sergipe","Outras","60 anos ou mais","Masculino","Outro",1
+"sergipe","Parda","18 a 24 anos","Masculino","Bolsonaro",1
+"sergipe","Parda","35 a 44 anos","Masculino","Outro",1
+"sergipe","Parda","45 a 59 anos","Feminino","Bolsonaro",1
+"sergipe","Parda","45 a 59 anos","Feminino","Outro",1
+"sergipe","Parda","45 a 59 anos","Masculino","Bolsonaro",1
+"sergipe","Parda","45 a 59 anos","Masculino","Outro",1
+"sergipe","Parda","60 anos ou mais","Feminino","Bolsonaro",1
+"sergipe","Parda","60 anos ou mais","Masculino","Lula",1
+"sergipe","Preta","18 a 24 anos","Feminino","Lula",1
+"sergipe","Preta","60 anos ou mais","Masculino","Outro",1
+"tocantins","Branca","18 a 24 anos","Masculino","Lula",1
+"tocantins","Branca","25 a 34 anos","Feminino","Outro",1
+"tocantins","Branca","35 a 44 anos","Feminino","Lula",1
+"tocantins","Branca","45 a 59 anos","Masculino","Lula",1
+"tocantins","Outras","45 a 59 anos","Feminino","Outro",1
+"tocantins","Parda","25 a 34 anos","Feminino","Outro",1
+"tocantins","Parda","25 a 34 anos","Masculino","Lula",1
+"tocantins","Parda","35 a 44 anos","Masculino","Lula",1
+"tocantins","Parda","45 a 59 anos","Feminino","Outro",1
+"tocantins","Preta","18 a 24 anos","Feminino","Lula",1
+"tocantins","Preta","25 a 34 anos","Masculino","Outro",1
+"tocantins","Preta","45 a 59 anos","Feminino","Lula",1
+"tocantins","Preta","45 a 59 anos","Masculino","Lula",1

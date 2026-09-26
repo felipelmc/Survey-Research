@@ -1,0 +1,358 @@
+{
+ "titulo": "Loterias formais e informais no Brasil",
+ "abertura": "Olá! Tudo bem?\n\nVocê já jogou na loteria, participou de um bolão ou apostou no bicho? Queremos saber como você se relaciona com essas e outras formas de jogo! Esta pesquisa busca entender os hábitos e opiniões das pessoas no Brasil sobre jogos e apostas – formais ou informais. Suas respostas são fundamentais para gerar conhecimento e contribuir com debates importantes no país sobre esse tema.\n\nEsse é um questionário bem rápido, e você conseguirá respondê-lo em no máximo 5 minutos. Não há respostas certas ou erradas: o importante é que você dê sua opinião sincera e fale da sua experiência pessoal. Além disso, é importante que você saiba que essa pesquisa garante total anonimato: não coletamos nome, e-mail, ou qualquer dado que te identifique. As informações são analisadas apenas de forma agregada.\n\nCaso tenha qualquer dúvida ou queira detalhes sobre a pesquisa, escreva para felipelamarca@iesp.uerj.br, o pesquisador responsável.\n\nAgradecemos a sua participação!",
+ "paginas": [
+  {
+   "id": "inicio",
+   "titulo": null,
+   "descricao": null,
+   "perguntas": [
+    {
+     "texto": "Em que cidade você mora?",
+     "opcoes": [
+      {
+       "texto": "Rio de Janeiro (RJ)",
+       "vai": "proxima"
+      },
+      {
+       "texto": "São Paulo (SP)",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Outra",
+       "vai": "fim"
+      }
+     ]
+    },
+    {
+     "texto": "Qual é a sua faixa etária?",
+     "opcoes": [
+      {
+       "texto": "Menor de 16 anos",
+       "vai": "fim"
+      },
+      {
+       "texto": "16 a 34 anos",
+       "vai": "proxima"
+      },
+      {
+       "texto": "35 a 59 anos",
+       "vai": "proxima"
+      },
+      {
+       "texto": "60 anos ou mais",
+       "vai": "proxima"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "522682871",
+   "titulo": null,
+   "descricao": null,
+   "perguntas": [
+    {
+     "texto": "Você já jogou em alguma loteria oficial (por exemplo: Sena, Loteria Esportiva, Loteria Federal/Estadual)?",
+     "opcoes": [
+      {
+       "texto": "Sim",
+       "vai": "1552011387"
+      },
+      {
+       "texto": "Não",
+       "vai": "1911157828"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1552011387",
+   "titulo": null,
+   "descricao": null,
+   "perguntas": [
+    {
+     "texto": "Pensando nos últimos 30 dias, aproximadamente quantas vezes você jogou em alguma loteria oficial?",
+     "opcoes": [
+      {
+       "texto": "Nenhuma vez",
+       "vai": "proxima"
+      },
+      {
+       "texto": "1 vez",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Entre 2 e 5 vezes",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Entre 6 e 9 vezes",
+       "vai": "proxima"
+      },
+      {
+       "texto": "10 vezes ou mais",
+       "vai": "proxima"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1911157828",
+   "titulo": null,
+   "descricao": "Lembre-se que as respostas para esse questionário são totalmente anônimas e, portanto, você não será identificado. ",
+   "perguntas": [
+    {
+     "texto": "No Brasil, é muito comum as pessoas jogarem também em loterias informais, como o jogo do bicho. Por acaso você já jogou alguma vez no jogo do bicho?",
+     "opcoes": [
+      {
+       "texto": "Sim",
+       "vai": "2023162365"
+      },
+      {
+       "texto": "Não",
+       "vai": "2132625278"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2023162365",
+   "titulo": null,
+   "descricao": null,
+   "perguntas": [
+    {
+     "texto": "Pensando nos últimos 30 dias, aproximadamente quantas vezes você jogou no jogo do bicho?",
+     "opcoes": [
+      {
+       "texto": "Nenhuma vez",
+       "vai": "2132625278"
+      },
+      {
+       "texto": "1 vez",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Entre 2 e 5 vezes",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Entre 6 e 9 vezes",
+       "vai": "proxima"
+      },
+      {
+       "texto": "10 vezes ou mais",
+       "vai": "proxima"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "984404493",
+   "titulo": null,
+   "descricao": null,
+   "perguntas": [
+    {
+     "texto": "Ainda pensando nos últimos 30 dias, quanto você gastou, mais ou menos, jogando no bicho?",
+     "opcoes": [
+      {
+       "texto": "Até R$10",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Entre R$11 e R$50",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Entre R$51 e R$100",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Mais de R$100",
+       "vai": "proxima"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2132625278",
+   "titulo": null,
+   "descricao": null,
+   "perguntas": [
+    {
+     "texto": "A respeito da frase \"O jogo do bicho deveria ser legalizado no Brasil\", você:",
+     "opcoes": [
+      {
+       "texto": "Concorda",
+       "vai": "350624417"
+      },
+      {
+       "texto": "Não concorda nem discorda",
+       "vai": "1019351423"
+      },
+      {
+       "texto": "Discorda",
+       "vai": "1939567799"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "350624417",
+   "titulo": null,
+   "descricao": null,
+   "perguntas": [
+    {
+     "texto": "O quanto você concorda com a legalização do jogo do bicho no Brasil?",
+     "opcoes": [
+      {
+       "texto": "Concordo totalmente",
+       "vai": "1019351423"
+      },
+      {
+       "texto": "Concordo parcialmente",
+       "vai": "1019351423"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1939567799",
+   "titulo": null,
+   "descricao": null,
+   "perguntas": [
+    {
+     "texto": "O quanto você concorda com a legalização do jogo do bicho no Brasil?",
+     "opcoes": [
+      {
+       "texto": "Discordo totalmente",
+       "vai": "1019351423"
+      },
+      {
+       "texto": "Discordo parcialmente",
+       "vai": "1019351423"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1019351423",
+   "titulo": null,
+   "descricao": null,
+   "perguntas": [
+    {
+     "texto": "Qual é o seu sexo?",
+     "opcoes": [
+      {
+       "texto": "Masculino",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Feminino",
+       "vai": "proxima"
+      }
+     ]
+    },
+    {
+     "texto": "Qual é o grau máximo de escolaridade que você concluiu?",
+     "opcoes": [
+      {
+       "texto": "Sem instrução",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Ensino fundamental incompleto",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Ensino fundamental completo",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Ensino médio incompleto",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Ensino médio completo",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Ensino superior incompleto",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Ensino superior completo",
+       "vai": "proxima"
+      }
+     ]
+    },
+    {
+     "texto": "Qual é a sua cor ou raça?",
+     "opcoes": [
+      {
+       "texto": "Branca",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Parda",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Preta",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Amarela",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Indígena",
+       "vai": "proxima"
+      }
+     ]
+    },
+    {
+     "texto": "Qual é a renda mensal da sua família? Leve em consideração a renda de todos os moradores do domicílio (salários, bicos, benefícios sociais, pensões e outras fontes de rendimento).",
+     "opcoes": [
+      {
+       "texto": "Até R$ 1.518",
+       "vai": "proxima"
+      },
+      {
+       "texto": "De R$ 1.519 a R$ 3.036",
+       "vai": "proxima"
+      },
+      {
+       "texto": "De R$ 3.037 a R$ 4.554",
+       "vai": "proxima"
+      },
+      {
+       "texto": "De R$ 4.555 a R$ 6.072",
+       "vai": "proxima"
+      },
+      {
+       "texto": "De R$ 6.073 a R$ 7.590",
+       "vai": "proxima"
+      },
+      {
+       "texto": "De R$ 7.591 a R$ 9.108",
+       "vai": "proxima"
+      },
+      {
+       "texto": "Mais de R$ 9.108",
+       "vai": "proxima"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

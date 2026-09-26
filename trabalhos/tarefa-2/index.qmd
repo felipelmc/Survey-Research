@@ -53,3 +53,85 @@ Algumas das perguntas também foram sensivelmente modificadas. Ao invés de perg
 [^1]: A pesquisa foi publicada pelo Cesop em setembro de 2024, na ocasião da aprovação do projeto de lei que autorizou o funcionamento de bingos e cassinos e regularizou jogos de azar, conforme [postagem](https://www.facebook.com/cesop.unicamp/posts/o-throwback-thursday-tbt-leva-nos-%C3%A0s-pesquisas-curiosas-e-antigas-que-est%C3%A3o-pres/964815842116742/) do próprio Cesop no Facebook.
 
 [^2]: Indivíduos menores de 16 anos ou residentes fora do Rio de Janeiro (RJ) e São Paulo (SP) não devem responder ao questionário, conforme as especificações do desenho do questionário original.
+
+# O questionário, navegável
+
+::: {.nota-ia collapse="false" title="Versão navegável preparada com auxílio do Claude"}
+Esta é uma reprodução do formulário do Google Forms entregue na tarefa, com as mesmas perguntas, opções e desvios. Nada do que você marcar aqui é enviado ou gravado. O fluxograma logo abaixo resume os desvios: quem mora fora de São Paulo e do Rio ou tem menos de 16 anos sai logo no início; quem nunca jogou pula as perguntas de frequência; e a opinião sobre a legalização abre um segundo passo, de intensidade, para quem concorda ou discorda.
+:::
+
+```{ojs}
+//| echo: false
+questionario = FileAttachment("interativo/questionario.json").json()
+viewof reiniciar = Inputs.button("Recomeçar", {value: 0, reduce: (v) => v + 1})
+```
+
+```{ojs}
+//| echo: false
+formulario = {
+  reiniciar;
+  const q = questionario, paginas = q.paginas;
+  const indice = new Map(paginas.map((p, i) => [p.id, i]));
+  const raiz = html`<div class="cn-form"></div>`;
+  const caminho = [];
+  let atual = 0;
+  const desenha = () => {
+    const p = paginas[atual];
+    caminho.push(atual);
+    const blocos = p.perguntas.map((pergunta, j) => {
+      const nome = `q-${atual}-${j}`;
+      return html`<fieldset class="cn-form-q"><legend>${pergunta.texto}</legend>
+        ${pergunta.opcoes.map((o, k) => html`<label><input type="radio" name=${nome} value=${k}> ${o.texto}</label>`)}
+      </fieldset>`;
+    });
+    const aviso = html`<p class="cn-form-aviso" hidden>Responda todas as perguntas desta seção.</p>`;
+    const botao = html`<button type="button">Próxima</button>`;
+    botao.onclick = () => {
+      const escolhas = p.perguntas.map((pergunta, j) => {
+        const marcado = raiz.querySelector(`input[name="q-${atual}-${j}"]:checked`);
+        return marcado ? pergunta.opcoes[+marcado.value] : null;
+      });
+      if (escolhas.some((e) => e === null)) { aviso.hidden = false; return; }
+      const destinos = escolhas.map((e) => e.vai);
+      if (destinos.includes("fim")) return encerra("O questionário se encerra aqui: o público-alvo são moradores do Rio de Janeiro ou de São Paulo com 16 anos ou mais.");
+      const salto = destinos.find((d) => d !== "proxima");
+      const proxima = salto !== undefined ? indice.get(salto) : atual + 1;
+      if (proxima >= paginas.length) return encerra("Fim do questionário. Obrigado por responder!");
+      atual = proxima;
+      desenha();
+    };
+    raiz.replaceChildren(html`<div class="cn-form-card">
+      <p class="cn-eyebrow">${q.titulo} · seção ${caminho.length}</p>
+      ${atual === 0 ? html`<div class="cn-form-intro">${q.abertura.split("\n\n").map((t) => html`<p>${t}</p>`)}</div>` : ""}
+      ${p.descricao ? html`<p class="cn-form-intro"><strong>${p.descricao}</strong></p>` : ""}
+      ${blocos}${aviso}<p class="cn-actions">${botao}</p>
+    </div>`);
+  };
+  const encerra = (msg) => {
+    raiz.replaceChildren(html`<div class="cn-form-card"><p class="cn-eyebrow">${q.titulo}</p><p>${msg}</p>
+      <p class="cn-readout">Seções percorridas: <b>${caminho.length}</b> de ${paginas.length}</p></div>`);
+  };
+  desenha();
+  return raiz;
+}
+```
+
+```{mermaid}
+%%| fig-cap: "Desvios do questionário redesenhado."
+flowchart TD
+  A["Cidade e faixa etária"] -->|"fora de SP e RJ<br>ou menos de 16 anos"| Z(["Encerra"])
+  A --> B["Já jogou em loteria oficial?"]
+  B -->|Sim| C["Quantas vezes nos<br>últimos 30 dias?"]
+  B -->|Não| D["Já jogou no bicho?"]
+  C --> D
+  D -->|Sim| E["Quantas vezes jogou no bicho<br>nos últimos 30 dias?"]
+  D -->|Não| G["O bicho deveria ser legalizado?"]
+  E -->|"Nenhuma vez"| G
+  E -->|"1 vez ou mais"| F["Quanto gastou?"]
+  F --> G
+  G -->|Concorda| H["Concorda totalmente<br>ou parcialmente?"]
+  G -->|Discorda| I["Discorda totalmente<br>ou parcialmente?"]
+  G -->|"Nem concorda<br>nem discorda"| J["Perfil: sexo, escolaridade,<br>cor ou raça, renda"]
+  H --> J
+  I --> J
+```

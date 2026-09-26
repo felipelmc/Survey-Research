@@ -285,3 +285,93 @@ No caso bayesiano, a incerteza é tranquilamente incorporada ao modelo. Afinal, 
 - MrP não ajuda muito a corrigir erros de mensuração
 
 A não-resposta não ignorável não é corrigida pelo MrP. Você passa por um bolsonarista ou um trumpista na rua e ele terminantemente se recusa a te dar uma resposta, não há correção por MrP.
+
+## Simulação
+
+::: {.nota-ia collapse="false" title="Simulação e texto preparados com auxílio do Claude"}
+Um *survey* nacional com poucos entrevistados em muitos estados dá médias estaduais ruidosas. O componente multinível do MrP resolve isso com *partial pooling*: cada estimativa estadual é puxada em direção à média nacional, e o puxão é maior onde a amostra é menor. Aqui usamos a versão mais simples (normal-normal, com a variância entre estados estimada pelos próprios dados), o bastante para ver a lógica. Cada linha vai da média bruta do estado (círculo vazio) à estimativa com *pooling* (círculo cheio); o traço marca o valor verdadeiro. Os estados estão ordenados pelo tamanho da amostra.
+:::
+
+::: {.panel-tabset}
+
+### Interativo
+
+```{ojs}
+//| echo: false
+import {scheme, palette, plotStyle, rng, mean, fmt} from "/_extensions/felipelmc/course-notes/ojs/notes.js"
+mode = scheme()
+pal = palette(mode)
+```
+
+::: cn-sim
+
+```{ojs}
+//| echo: false
+viewof N = Inputs.range([300, 10000], {value: 1500, step: 100, label: "Tamanho da amostra nacional"})
+viewof tau = Inputs.range([0.01, 0.15], {value: 0.05, step: 0.01, label: "Variação real entre estados (dp)"})
+viewof sorteio = Inputs.button("Novo sorteio", {value: 1, reduce: (v) => v + 1})
+```
+
+```{ojs}
+//| echo: false
+sim = {
+  const r = rng(13 * sorteio), J = 27;
+  const pesoPop = d3.range(J).map((j) => Math.exp(-j / 6));           // estados de tamanhos desiguais
+  const somaPop = d3.sum(pesoPop);
+  const estados = d3.range(J).map((j) => {
+    const n = Math.max(2, Math.round(N * pesoPop[j] / somaPop));
+    const verdade = Math.min(0.95, Math.max(0.05, 0.45 + tau * r.normal()));
+    let s = 0;
+    for (let i = 0; i < n; i++) s += r.bernoulli(verdade);
+    return {j, uf: `E${String(j + 1).padStart(2, "0")}`, n, verdade, bruta: s / n};
+  });
+  const pbar = d3.sum(estados, (e) => e.bruta * e.n) / d3.sum(estados, (e) => e.n);
+  estados.forEach((e) => (e.v = pbar * (1 - pbar) / e.n));
+  const tau2 = Math.max(1e-4, d3.variance(estados, (e) => e.bruta) - mean(estados.map((e) => e.v)));
+  estados.forEach((e) => { const B = e.v / (e.v + tau2); e.pooling = B * pbar + (1 - B) * e.bruta; e.B = B; });
+  const rmse = (k) => Math.sqrt(mean(estados.map((e) => (e[k] - e.verdade) ** 2)));
+  return {estados, rmseBruta: rmse("bruta"), rmsePool: rmse("pooling"), tau2};
+}
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width, height: 460, style: plotStyle, marginLeft: 80,
+  x: {label: "Proporção estimada →", domain: [0, 1], tickFormat: ".0%"},
+  y: {label: null, domain: sim.estados.map((e) => e.uf)},
+  marks: [
+    Plot.link(sim.estados, {y1: "uf", y2: "uf", x1: "bruta", x2: "pooling", stroke: pal.lineStrong}),
+    Plot.dot(sim.estados, {y: "uf", x: "bruta", r: 3.5, stroke: pal.ink3, fill: "none"}),
+    Plot.dot(sim.estados, {y: "uf", x: "pooling", r: 3.5, fill: pal.accent}),
+    Plot.tickX(sim.estados, {y: "uf", x: "verdade", stroke: pal.award, strokeWidth: 2}),
+    Plot.text(sim.estados, {y: "uf", x: 1, text: (e) => `n = ${e.n}`, textAnchor: "end", fill: pal.ink3})
+  ]
+})
+```
+
+```{ojs}
+//| echo: false
+html`<p class="cn-readout">Erro quadrático médio (raiz): médias brutas <b>${fmt(100 * sim.rmseBruta, 1)} p.p.</b> · com <i>pooling</i> <b>${fmt(100 * sim.rmsePool, 1)} p.p.</b></p>`
+```
+
+:::
+
+### Em R
+
+```{r}
+#| eval: false
+library(lme4)
+set.seed(13)
+J <- 27; N <- 1500
+n <- pmax(2, round(N * exp(-(0:(J - 1)) / 6) / sum(exp(-(0:(J - 1)) / 6))))
+verdade <- plogis(qlogis(0.45) + rnorm(J, 0, 0.2))
+dados <- data.frame(uf = rep(seq_len(J), n))
+dados$y <- rbinom(nrow(dados), 1, verdade[dados$uf])
+fit <- glmer(y ~ 1 + (1 | uf), family = binomial, data = dados)
+pooling <- plogis(fixef(fit) + ranef(fit)$uf[, 1])
+bruta <- tapply(dados$y, dados$uf, mean)
+c(bruta = sqrt(mean((bruta - verdade)^2)), pooling = sqrt(mean((pooling - verdade)^2)))
+```
+
+:::

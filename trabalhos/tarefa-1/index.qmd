@@ -414,3 +414,102 @@ Em linha com o que foi observado no gráfico de distribuições e o que já foi 
 
 Além disso, encontramos *design effects* maiores que $1$ em todos os desenhos por conglomerado, indicando que a variância amostral da média é maior nesses casos do que no desenho AAS. De fato, a discussão feita até aqui justifica esse resultado, afinal, a natureza desse desenho amostral normalmente implica maior variância. Observamos também que, quanto maior o número de conglomerados amostrados, menor é o *design effect*, embora todas as variâncias sejam maiores em relação ao desenho AAS. Trata-se de um resultado esperado na medida em que quanto mais informações novas (i.e., de conglomerados diferentes) somos capazes de inserir na amostra, menor é a variância esperada.
 
+```{r}
+#| include: false
+# Agregados por setor censitario para a simulacao interativa (nenhum dado individual)
+dir.create("interativo", showWarnings = FALSE)
+macae %>%
+  group_by(codigo_setor, distrito, subdistrito) %>%
+  summarise(n = n(), alfabetizados = sum(alfabetizada), .groups = "drop") %>%
+  transmute(setor = codigo_setor, estrato = paste(distrito, subdistrito, sep = " / "), n, alfabetizados) %>%
+  write.csv("interativo/setores.csv", row.names = FALSE)
+```
+
+# Simulação interativa
+
+::: {.nota-ia collapse="false" title="Simulação e texto preparados com auxílio do Claude"}
+A simulação repete o exercício do relatório com os agregados por setor censitário de Macaé (393 setores, 206.728 pessoas, 87,2% alfabetizadas). Cada réplica sorteia uma amostra de 1.200 pessoas em três desenhos: aleatória simples, estratificada proporcional pelos 11 distritos e subdistritos, e por conglomerados com PPS. Escolha quantos setores sortear (o número de entrevistas por setor se ajusta para manter 1.200) e compare o efeito de delineamento simulado com a aproximação de Kish, $1 + (m - 1)\rho$, em que $\rho$ é a correlação intraclasse da alfabetização entre setores. Para acelerar, as entrevistas dentro de cada setor são sorteadas com reposição.
+:::
+
+```{ojs}
+//| echo: false
+import {scheme, palette, plotStyle, rng, fmt} from "/_extensions/felipelmc/course-notes/ojs/notes.js"
+mode = scheme()
+pal = palette(mode)
+setores = FileAttachment("interativo/setores.csv").csv({typed: true})
+```
+
+::: cn-sim
+
+```{ojs}
+//| echo: false
+viewof config = Inputs.radio(["240 × 5", "120 × 10", "80 × 15", "60 × 20", "40 × 30"], {value: "80 × 15", label: "Setores × entrevistas"})
+viewof R = Inputs.range([200, 3000], {value: 2000, step: 100, label: "Réplicas"})
+viewof sorteio = Inputs.button("Novo sorteio", {value: 1, reduce: (v) => v + 1})
+```
+
+```{ojs}
+//| echo: false
+desenho = { const [k, m] = config.split(" × ").map(Number); return {k, m}; }
+base = {
+  const N = d3.sum(setores, (d) => d.n), A = d3.sum(setores, (d) => d.alfabetizados), p = A / N, K = setores.length;
+  const estratos = d3.rollups(setores, (v) => ({n: d3.sum(v, (d) => d.n), a: d3.sum(v, (d) => d.alfabetizados)}), (d) => d.estrato);
+  // correlação intraclasse (estimador ANOVA)
+  const msb = d3.sum(setores, (d) => d.n * (d.alfabetizados / d.n - p) ** 2) / (K - 1);
+  const msw = d3.sum(setores, (d) => d.alfabetizados * (1 - d.alfabetizados / d.n)) / (N - K);
+  const n0 = (N - d3.sum(setores, (d) => d.n * d.n) / N) / (K - 1);
+  const rho = (msb - msw) / (msb + (n0 - 1) * msw);
+  const cum = []; let c = 0; for (const s of setores) { c += s.n; cum.push(c); }
+  return {N, p, estratos, rho, cum, total: c};
+}
+sim = {
+  const r = rng(101 * sorteio), {k, m} = desenho;
+  const binom = (n, q) => { let s = 0; for (let i = 0; i < n; i++) if (r.unif() < q) s++; return s; };
+  const escolhe = () => {
+    const u = r.unif() * base.total; let lo = 0, hi = base.cum.length - 1;
+    while (lo < hi) { const mid = (lo + hi) >> 1; if (base.cum[mid] < u) lo = mid + 1; else hi = mid; }
+    return setores[lo];
+  };
+  const est = [];
+  const vals = {aas: [], estr: [], cong: []};
+  for (let j = 0; j < R; j++) {
+    vals.aas.push(binom(1200, base.p) / 1200);
+    let s = 0, t = 0;
+    for (const [, v] of base.estratos) { const nh = Math.round(1200 * v.n / base.N); s += binom(nh, v.a / v.n); t += nh; }
+    vals.estr.push(s / t);
+    let sc = 0;
+    for (let i = 0; i < k; i++) { const st = escolhe(); sc += binom(m, st.alfabetizados / st.n); }
+    vals.cong.push(sc / (k * m));
+  }
+  const v = (xs) => d3.variance(xs);
+  const nomes = {aas: "Aleatória simples", estr: "Estratificada", cong: `Conglomerados (${k} × ${m})`};
+  for (const [key, xs] of Object.entries(vals)) {
+    const bins = d3.bin().domain([0.82, 0.92]).thresholds(d3.range(0.82, 0.9201, 0.0025))(xs);
+    for (const b of bins) est.push({desenho: nomes[key], x: (b.x0 + b.x1) / 2, y: b.length / xs.length});
+  }
+  return {est, nomes, deffEstr: v(vals.estr) / v(vals.aas), deffCong: v(vals.cong) / v(vals.aas), kish: 1 + (m - 1) * base.rho};
+}
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width, height: 260, style: plotStyle, marginLeft: 44,
+  x: {label: "Proporção estimada de alfabetizados →", domain: [0.83, 0.915], tickFormat: ".0%"},
+  y: {label: "↑ Proporção das réplicas", grid: true},
+  color: {domain: Object.values(sim.nomes), range: [pal.ink3, pal.accent, pal.award], legend: true},
+  marks: [
+    Plot.ruleX([base.p], {stroke: pal.lineStrong, strokeDasharray: "4,3"}),
+    Plot.line(sim.est, {x: "x", y: "y", stroke: "desenho", strokeWidth: 1.6, curve: "step"})
+  ]
+})
+```
+
+```{ojs}
+//| echo: false
+html`<p class="cn-readout">Efeito de delineamento simulado: estratificada <b>${fmt(sim.deffEstr, 3)}</b> · conglomerados <b>${fmt(sim.deffCong, 3)}</b><br>
+Aproximação de Kish para os conglomerados: 1 + (${desenho.m} − 1) × ${fmt(base.rho, 4)} = <b>${fmt(sim.kish, 3)}</b><br>
+No relatório, com 2.000 réplicas e sorteio sem reposição: estratificada 0,930; conglomerados 1,059 (120 × 10), 1,219 (80 × 15) e 1,247 (60 × 20). Com o mesmo número de réplicas, o valor simulado ainda varia alguns centésimos de um sorteio para outro.</p>`
+```
+
+:::

@@ -678,3 +678,108 @@ Seria interessante acrescentar a religião às variáveis de ajuste, considerand
 Além disso, um ponto importante é que análises futuras poderiam testar utilizar a variável de região ao invés de unidade federativa, ou mesmo colapsar outras variáveis, com o objetivo de garantir que todos os estratos obtidos pelo censo apareçam na amostra. Essas abordagens potencialmente melhorariam a qualidade do ajuste por pós-estratificação.
 
 [^1]: Isso só faria sentido, é claro, em um cenário onde as eleições já ocorreram e estamos explorando a opinião da população a respeito dessas outras variáveis.
+
+```{r}
+#| include: false
+# Agregados para a simulação interativa (contagens por célula; nenhum dado individual)
+dir.create("interativo", showWarnings = FALSE)
+eseb22 %>%
+  mutate(voto = case_when(voto_2t == "Lula" ~ "Lula", voto_2t == "Bolsonaro" ~ "Bolsonaro", TRUE ~ "Outro")) %>%
+  count(uf, cor_raca, idade, sexo, voto) %>%
+  write.csv("interativo/amostra.csv", row.names = FALSE)
+censo22 %>%
+  group_by(uf, cor_raca, idade, sexo) %>%
+  summarise(pop = sum(Valor), .groups = "drop") %>%
+  write.csv("interativo/populacao.csv", row.names = FALSE)
+```
+
+# Simulação interativa
+
+::: {.nota-ia collapse="false" title="Simulação e texto preparados com auxílio do Claude"}
+Refaça a ponderação com outras escolhas. As contagens da amostra do ESEB e as margens do Censo 2022 são as mesmas do relatório, agregadas por UF, cor ou raça, faixa etária e sexo. Marque as variáveis de ajuste e o método: o raking ajusta só as margens de cada variável, alternando entre elas até convergir; a pós-estratificação ajusta a tabela cruzada das variáveis marcadas (células sem nenhum entrevistado ficam de fora, e os pesos são renormalizados). O gráfico compara as margens da amostra, sem e com pesos, às do Censo. Abaixo, a estimativa do voto em Lula entre os votos em Lula e Bolsonaro, comparada ao resultado oficial do 2º turno (50,90%), e o efeito de delineamento dos pesos pela fórmula de Kish, $1 + \text{CV}^2$.
+:::
+
+```{ojs}
+//| echo: false
+import {scheme, palette, plotStyle, fmt} from "/_extensions/felipelmc/course-notes/ojs/notes.js"
+mode = scheme()
+pal = palette(mode)
+amostra = FileAttachment("interativo/amostra.csv").csv({typed: true})
+populacao = FileAttachment("interativo/populacao.csv").csv({typed: true})
+rotulos = new Map([["uf", "UF"], ["cor_raca", "Cor ou raça"], ["idade", "Faixa etária"], ["sexo", "Sexo"]])
+```
+
+::: cn-sim
+
+```{ojs}
+//| echo: false
+viewof vars = Inputs.checkbox(["uf", "cor_raca", "idade", "sexo"], {value: ["uf", "cor_raca", "idade"], label: "Variáveis de ajuste", format: (v) => rotulos.get(v)})
+viewof metodo = Inputs.radio(["Raking", "Pós-estratificação"], {value: "Raking", label: "Método"})
+viewof mostrar = Inputs.select(["cor_raca", "idade", "sexo", "uf"], {value: "cor_raca", label: "Comparar margens de", format: (v) => rotulos.get(v)})
+```
+
+```{ojs}
+//| echo: false
+pesos = {
+  // células da amostra (sem o voto) e seus totais
+  const chave = (d, vs) => vs.map((v) => d[v]).join("|");
+  const todas = ["uf", "cor_raca", "idade", "sexo"];
+  const celulas = d3.rollups(amostra, (v) => d3.sum(v, (d) => d.n), (d) => chave(d, todas)).map(([k, n]) => {
+    const partes = k.split("|"); const c = {n, w: 1}; todas.forEach((v, i) => (c[v] = partes[i])); return c;
+  });
+  const N = d3.sum(celulas, (c) => c.n), P = d3.sum(populacao, (d) => d.pop);
+  if (vars.length === 0) return {celulas, N};
+  if (metodo === "Raking") {
+    const alvo = new Map(vars.map((v) => [v, d3.rollup(populacao, (x) => d3.sum(x, (d) => d.pop) / P, (d) => d[v])]));
+    for (let it = 0; it < 60; it++) {
+      for (const v of vars) {
+        const atual = d3.rollup(celulas, (x) => d3.sum(x, (c) => c.w * c.n) / d3.sum(celulas, (c) => c.w * c.n), (c) => c[v]);
+        for (const c of celulas) c.w *= (alvo.get(v).get(c[v]) ?? 0) / atual.get(c[v]);
+      }
+    }
+  } else {
+    const alvo = d3.rollup(populacao, (x) => d3.sum(x, (d) => d.pop) / P, (d) => chave(d, vars));
+    const atual = d3.rollup(celulas, (x) => d3.sum(x, (c) => c.n) / N, (c) => chave(c, vars));
+    for (const c of celulas) c.w = (alvo.get(chave(c, vars)) ?? 0) / atual.get(chave(c, vars));
+  }
+  return {celulas, N};
+}
+resultado = {
+  const chave = (d) => ["uf", "cor_raca", "idade", "sexo"].map((v) => d[v]).join("|");
+  const w = new Map(pesos.celulas.map((c) => [chave(c), c.w]));
+  const lula = (peso) => {
+    const l = d3.sum(amostra.filter((d) => d.voto === "Lula"), (d) => d.n * peso(d));
+    const b = d3.sum(amostra.filter((d) => d.voto === "Bolsonaro"), (d) => d.n * peso(d));
+    return l / (l + b);
+  };
+  const ws = pesos.celulas.flatMap((c) => Array(c.n).fill(c.w));
+  const media = d3.mean(ws), cv2 = d3.variance(ws) / (media * media);
+  const P = d3.sum(populacao, (d) => d.pop);
+  const margem = (fonte, valor) => d3.rollups(fonte, (x) => d3.sum(x, valor), (d) => d[mostrar]);
+  const tot = (xs) => d3.sum(xs, (d) => d[1]);
+  const bruta = margem(pesos.celulas, (c) => c.n), pond = margem(pesos.celulas, (c) => c.n * c.w), pop = margem(populacao, (d) => d.pop);
+  const linhas = [];
+  for (const [nome, xs] of [["Amostra sem pesos", bruta], ["Amostra ponderada", pond], ["Censo 2022", pop]]) {
+    const t = tot(xs); for (const [cat, v] of xs) linhas.push({fonte: nome, categoria: cat, p: v / t});
+  }
+  return {bruta: lula(() => 1), ponderada: lula((d) => w.get(chave(d)) ?? 0), deff: 1 + cv2, linhas};
+}
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width, height: Math.max(180, 26 * new Set(resultado.linhas.map((d) => d.categoria)).size + 60), style: plotStyle, marginLeft: 110,
+  x: {label: "Proporção →", tickFormat: ".0%", grid: true}, y: {label: null},
+  color: {domain: ["Amostra sem pesos", "Amostra ponderada", "Censo 2022"], range: [pal.ink3, pal.accent, pal.award], legend: true},
+  marks: [Plot.dot(resultado.linhas, {x: "p", y: "categoria", fill: "fonte", r: 4.5, fillOpacity: 0.9})]
+})
+```
+
+```{ojs}
+//| echo: false
+html`<p class="cn-readout">Lula entre os votos em Lula e Bolsonaro: sem pesos <b>${fmt(100 * resultado.bruta, 1)}%</b> · ponderado <b>${fmt(100 * resultado.ponderada, 1)}%</b> · oficial <b>50,9%</b><br>
+Efeito de delineamento dos pesos (Kish): <b>${fmt(resultado.deff, 2)}</b></p>`
+```
+
+:::
