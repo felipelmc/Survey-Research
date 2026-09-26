@@ -21,13 +21,13 @@ $$
 \text{Var}(\bar{y}) = \dfrac{ \left( 1 - \frac{n}{N} \right) S^2 }{n}
 $$
 
-where $\frac{n}{N}$ is the sampling fraction and $S^2$ is the variability of the variable $(Y)$ in the population. It gives the true variance of the estimate of the mean, but we usually cannot calculate it, because $S^2$ is not known. We then estimate $S^2$ by $s^2$, in in-sample variability:
+where $\frac{n}{N}$ is the sampling fraction and $S^2$ is the variability of the variable $(Y)$ in the population. It gives the true variance of the estimate of the mean, but we usually cannot calculate it, because $S^2$ is not known. We then estimate $S^2$ by $s^2$, the in-sample variability:
 
 $$
 s^2 = \dfrac{ \sum^n_1 (y_i - \bar{y})^2 }{n-1}
 $$
 
-$\left( 1 - \frac{n}{N} \right)$ is the _finite population correction_, which is often vary small. We can estimate the variance as:
+$\left( 1 - \frac{n}{N} \right)$ is the _finite population correction_, which is often very small. We can estimate the variance as:
 
 $$
 \text{var}(\bar{y}) = \dfrac{s^2}{n}
@@ -81,7 +81,7 @@ $$
 
 ## Anotações de aula
 
-Em amostragem, cada unidade amostral tem um peso. Lemos isso como "quantas unidades na população cada unidade amostrada representa". Se o desenho amostral tiver equiprobabilidade, cada unidade amostrada representa a mesma quantidade de unidade da população e pesos não são necessários.
+Em amostragem, cada unidade amostral tem um peso. Lemos isso como "quantas unidades na população cada unidade amostrada representa". Se o desenho amostral tiver equiprobabilidade, cada unidade amostrada representa a mesma quantidade de unidades da população e pesos não são necessários.
 
 O estimador ponderado é:
 
@@ -98,7 +98,7 @@ Considere o seguinte exemplo:
 | ZS     | 25    | 349                            |
 | ZS     | 30    | 482                            |
 
-Nesse caso, indicamos quantas pessoas cada unidade amostral representa. Esse valor é calculado a partir da probabilidade de inclusão da unidade amostral. O peso é o inverso da probabilidade de inclusão. **A ponderação pelo desenho ajusta amostras quando temos probabilidades desiguais de inclusão**: $w_i = \frac{1}{\pi_i}$, onde $\pi_i$ é a probabilidade de inclusão da unidade amostral $i$. Supondo que a probabilidade de inclusão é de 0.25, o peso da unidade amostral é 4. Isso significa que ela representa 4 unidades na população.
+Nesse caso, indicamos quantas pessoas cada unidade amostral representa. Esse valor é calculado a partir da probabilidade de inclusão da unidade amostral. O peso é o inverso da probabilidade de inclusão. A ponderação pelo desenho ajusta amostras quando temos probabilidades desiguais de inclusão: $w_i = \frac{1}{\pi_i}$, onde $\pi_i$ é a probabilidade de inclusão da unidade amostral $i$. Supondo que a probabilidade de inclusão é de 0.25, o peso da unidade amostral é 4. Isso significa que ela representa 4 unidades na população.
 
 Esse estimador também é chamado de estimador de expansão, o estimador de Horvitz-Thompson. O peso absoluto me diz quantas pessoas de perfil similar uma única pessoa da amostra representa.
 
@@ -146,7 +146,7 @@ onde $X$ é o total populacional ($U$ é a população) conhecido (e.g., total d
 
 ### Pesos e inflação da variância
 
-Pesos de desenho muito grande ou desiguais inflam estimativas. 
+Pesos de desenho muito grandes ou desiguais inflam estimativas. 
 
 > Intuição: uma unidade com peso relativo de $2$ equivale a duplicar a sua entrevista na amostra; para isso, no entanto, precisamos retirar uma unidade de outras unidades da amostra. A solução geralmente é usar tetos ou ajustes para limitar pesos extremos.
 

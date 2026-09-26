@@ -27,7 +27,7 @@ aula: 11
 
 ## Anotações de aula
 
-Atualmente, a não-resposta é o problema mais difícil de lidar em survey. É um tema quente hoje nas revistas de pesquisa de opinião pública. **O problema não é a não-resposta em si, mas sim que a gente não sabe quem são essas pessoas que não respondem.** Com isso, estamos sob um risco enorme de que essas pessoas sejam sistematicamente diferentes das pessoas que respondem, i.e., não sabemos qual é o PGD das pessoas que não respondem os surveys.
+Atualmente, a não-resposta é o problema mais difícil de lidar em survey. É um tema quente hoje nas revistas de pesquisa de opinião pública. O problema não é a não-resposta em si, mas sim que a gente não sabe quem são essas pessoas que não respondem. Com isso, estamos sob um risco enorme de que essas pessoas sejam sistematicamente diferentes das pessoas que respondem, i.e., não sabemos qual é o PGD das pessoas que não respondem aos surveys.
 
 A não-resposta não-ignorável é preocupante. Quando isso ocorre, não podemos ignorar o fato de que as pessoas optaram por não dar uma resposta ao meu instrumento e que não sabemos quem são essas pessoas.
 
@@ -43,7 +43,7 @@ $$
 
 sendo Completas (I), Parciais (P), Recusas (R), Não-contatos (NC) e Outros (O). 
 
-### Taxa de cooperação COOP1 da AAPOR:
+### Taxa de cooperação COOP1 da AAPOR
 
 $$
 \dfrac{I}{(I+P) + R + O},
@@ -64,12 +64,12 @@ $$
 - **Big five:** conscientiousness e openness to experience aumentam a taxa de resposta
 - **Motivational bias:** pessoas mais engajadas e informadas em política são mais propensas a responder
 
-O grande hot topic hoje tem a ver com esse último ponto. Há cada vez mais estudos acumulando evidência comparativa de que a não-resposta parece ter relação com atitudes polarizadas 
+O grande hot topic hoje tem a ver com esse último ponto. Há cada vez mais estudos acumulando evidência comparativa de que a não-resposta parece ter relação com atitudes polarizadas.
 
 > Cavari e Freedman (2018) comparam a taxa de resposta com o resultado obtido em eleições nos Estados Unidos.
 
 ### O que fazer?
 
-Não há mágica, mas há paliativos. Algumas possibilidades a nível de abordagem incluem utilizar diferentes formas de recrutamento, alteração de incentivos (idealmente financeiros, mas também saliência)
+Não há mágica, mas há paliativos. Algumas possibilidades a nível de abordagem incluem utilizar diferentes formas de recrutamento, alteração de incentivos (idealmente financeiros, mas também saliência).
 
 E, do ponto de vista de desenho e pós-ajuste, podemos incorporar na amostragem probabilidades de inclusão diferentes por taxa de resposta esperada, e ponderação por variáveis relacionadas à cooperação.

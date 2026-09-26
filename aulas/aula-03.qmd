@@ -23,7 +23,7 @@ aula: 3
 
 > Sometimes, the responses are provided as part of the question, and the task of the respondent is to choose from the proffered categories. Other times, only the question is presented, and the respondents must generate an answer in their own words. Sometimes, a respondent fails to provide a response to a measurement attempt. This complicates the computation of statistics involving that measure. [@groves2011survey, p. 43]
 
-O texto comenta sobre detecção de anomalias on the fly, permitindo que o respondente corrija o erro. Por exemplo, se o usuário indica que nasceu em 1890.
+O texto comenta sobre detecção de anomalias _on the fly_, permitindo que o respondente corrija o erro. Por exemplo, se o usuário indica que nasceu em 1890.
 
 > The frame population is the set of target population members that has a chance to be selected into the survey sample. In a simple case, the "sampling frame" is a list of all units (e.g., people and employers) in the target population. Sometimes, however, the sampling frame is a set of units imperfectly linked to the population members. FOr example, the SOC has as its target population the U.S. adult household population. It uses as its sampling frame a list of telephone numbers. [@groves2011survey, p. 44]
 
@@ -138,6 +138,7 @@ A coisa talvez mais importante do survey é que o resultado é proveniente de um
 Agora, do ponto de vista de um curso formal de survey, o outro lado é falar do **Total Survey Error**. As duas grandes famílias de erro são os erros de mensuração (isto é, que diz respeito ao que eu quero saber e como eu extraio a informação), e os erros de amostragem (qual é a população-alvo? Como selecionamos a amostra?).
 
 O capítulo do Groves dá os conceitos básicos de survey:
+
 - população
 - unidade de análise
 - amostra

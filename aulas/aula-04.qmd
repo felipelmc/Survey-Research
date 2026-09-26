@@ -31,7 +31,7 @@ The match of sampling frame to target population created three potential outcome
 - **Undercoverage** - when a target population element is not included in the sampling frame
 - **Ineligible (or foreign) units** - when a sampling frame element is not a target population element (e.g. business numbers in a frame of residential numbers)
 
-Outros problemas incluem "Duplication", isto é, vários elementos da framing são mapeados para um único elemento da população alvo e, nesse caso, há sobrerrepresentação de alguns elementos; além disso, há também o problema de "Clustering", quando múltiplos elementos da população alvo a um único elemento da frame.
+Outros problemas incluem "Duplication", isto é, vários elementos da framing são mapeados para um único elemento da população alvo e, nesse caso, há sobrerrepresentação de alguns elementos; além disso, há também o problema de "Clustering", quando múltiplos elementos da população alvo são mapeados para um único elemento da frame.
 
 #### Undercoverage
 
@@ -39,7 +39,7 @@ Outros problemas incluem "Duplication", isto é, vários elementos da framing s�
 
 > Another common concern about undercoverage in household surveys stems from the fact that sampling frames for households generally provide identification of the housing unit (through an address or telephone number) but not identifiers for persons within the household.
 
-#### Ineligible Units
+#### Ineligible units
 
 > Sometimes, sampling frames contain elements that are not part of the target population. For example, in telephone number frames, many of the numbers are nonworking or nonresidential numbers, complicating the use of the frame for the target population of households. In area probability surveys, sometimes the map materials contain units outside the target geographical area. [@groves2011survey, p. 76]
 
@@ -61,7 +61,7 @@ Outros problemas incluem "Duplication", isto é, vários elementos da framing s�
 
 > The problem that arises with this kind of frame problem is similar to that encountered with clustering. Target population elements with multiple frame units have higher chances of selection and will be overrepresented in the sample, relative to the population. If there is a correlation between duplication and variables of interest, survey estimates will be biased. In survey estimation, the problem is that both the presence of duplication and the correlation between duplication and survey variables are often unknown. [@groves2011survey, p. 79]
 
-#### Clustering and Duplication
+#### Clustering and duplication
 
 > It is also possible to have frame units mapped to multiple population elements. For example, in telephone household surveys of adults, one may encounter a household with several adults who have multiple entries in the directory. [@groves2011survey, p. 80]
 
@@ -143,7 +143,7 @@ where $\theta$ is the mixing parameter chosen to maximize precision." [@groves20
 >
 > 4) Whether the sample is designed to control the representation of key sub-populations in the sample (called "stratification") [@groves2011survey, p. 102]
 
-#### Simple Random Sampling (SRS)
+#### Simple random sampling (SRS)
 
 > Simple random samples assign an equal probability of selection to each frame element, equal probability to all pairs of frame elements, equal probability to all triplets of frame elements, and so son. [@groves2011survey, p. 103]
 
@@ -170,7 +170,7 @@ where $\theta$ is the mixing parameter chosen to maximize precision." [@groves20
 > $$
 >
 
-#### Cluster Sampling
+#### Cluster sampling
 
 > One way to construct frames at reasonable cost is to sample clusters of elements and then collect a list of elements only for the selected clusters. And when a sample cluster is selected and visited, it makes sense to interview or collect data from more than one element in each cluster also to save costs.
 
@@ -202,7 +202,7 @@ $$
 
 > The statistic $d^2$ is referred to as the design effect. It is a widely used tool in survey sampling in the determination of sample size, and in summarizing the effect of having sampled clusters instead of elements. **It is defined to be the ration of the sampling variance for a statistic computed under the sample design devided by the sampling variance that would have been obtained from an SRS of exactly the same size.** Every statistic in a survey has its own design effect. Different statistics in the same survey will have different magnitudes of the design effect. [@groves2011survey, p. 109]
 
-#### The Design Effect and Within-Cluster Homogeneity
+#### The design effect and within-cluster homogeneity
 
 É importante nos atentarmos para a homogeneidade ou heterogeneidade das observações dentro de cada cluster. Note: se todos os alunos em uma turma tiram a mesma nota no teste, bastaria saber a nota de um único aluno para saber a nota de todos os alunos. Nesses casos, pouca informação nova é adquirida ao entrevistar mais alunos. A medida "roh" (_rate of homogeneity_) mede a homogeneidade dos clusters. 
 
@@ -210,7 +210,7 @@ Em particular, vale notar que $d^2$ cresce à medida que roh cresce. De fato, po
 
 Podemos estimar roh como $\dfrac{(d^2 - 1)}{(b - 1)}$.
 
-#### Stratification and Stratified Sampling
+#### Stratification and stratified sampling
 
 > On a frame of population elements, assume that there is information for every element on the list that can be used to divide elements into separate groups, or "strata". Strata are mutually exclusive groups of elements on a sampling frame. Each frame element can be placed in a singular "stratum". In stratified sampling, independent selections are made from each stratum, one by one. Separate samples are drawn from each such group, using the same selection procedure (such as SRS in each stratum, when the frame lists elements) or using different selection procedures (such as SRS of elements in some strata, and cluster sampling in others). [@groves2011survey, p. 113]
 
@@ -236,11 +236,14 @@ $$
 
 Em 1936, George Gallup entrevistou 50.000 eleitores de diferentes estados americanos. Mesmo assim, é a pessoa que chega mais perto de acertar os resultados das eleições, contrastando com a revista Literary Digest, que aplicava formulários "opt-in" e entrevistou 2 milhões de eleitores.
 
-Há uma explicação ainda muito repetida de que a amostra da Literary Digest tinha uma amostra focada na classe média e, por outro lado, a amostra de Gallup chegava a pessoas mais pobres. No entanto Lusinchi (2012) mostra que, na verdade, não havia diferenças muito claras entre as amostras quando ajustadas, isto é, pobres e ricos votavam mais ou menos da mesma maneira. Daí, **a culpa que era delegada ao erro de cobertura passa a ser delegada ao erro de não-resposta**: as pessoas que não respondiam à Literary Digest votavam mais no Roosevelt, o que acaba subestimando o apoio a ele na amostra.
+Há uma explicação ainda muito repetida de que a amostra da Literary Digest tinha uma amostra focada na classe média e, por outro lado, a amostra de Gallup chegava a pessoas mais pobres. No entanto, Lusinchi (2012) mostra que, na verdade, não havia diferenças muito claras entre as amostras quando ajustadas, isto é, pobres e ricos votavam mais ou menos da mesma maneira. Daí, a culpa que era delegada ao erro de cobertura passa a ser delegada ao erro de não-resposta: as pessoas que não respondiam à Literary Digest votavam mais no Roosevelt, o que acaba subestimando o apoio a ele na amostra.
 
 A soma dos erros de survey leva a erros na estimação de uma particular estatística. Por exemplo: se eu quero estimar a renda da população, eu preciso tomar cuidado para evitar uma longa sequência de erros.
 
-> Nota: fazer uso de dados de pesquisa de survey comparando o resultado entre institutos não é uma boa ideia. Na prática, a maneira como a pergunta é feita tem um efeito grande. Por exemplo, nas pesquisas da AtlasIntel, as respostas tendem a ser mais extremas do que nas pesquisas da Quaest, por exemplo, onde a taxa de avaliações "Regulares" tende a ser mais alta.
+::: {.callout-note}
+## Nota
+Fazer uso de dados de pesquisa de survey comparando o resultado entre institutos não é uma boa ideia. Na prática, a maneira como a pergunta é feita tem um efeito grande. Por exemplo, nas pesquisas da AtlasIntel, as respostas tendem a ser mais extremas do que nas pesquisas da Quaest, por exemplo, onde a taxa de avaliações "Regulares" tende a ser mais alta.
+:::
 
 ### Amostragem aleatória simples (AAS)
 
@@ -258,7 +261,7 @@ Para uma amostra aleatória simples, o quadro amostral precisa ser uma lista de 
 - Depois, definimos o tamanho amostral (e.g., 100 estudantes).
 - E aí sorteamos sem reposição (de fato, não faz sentido sorteio com reposição, porque não faz sentido perguntar para a mesma pessoa mais de uma vez). No `R`, por exemplo, usamos `sample()` para escolher $n$ pessoas da lista usando IDs para contabilizar a seleção.
 
-Há prós e contras. Em particular, presencialmente ou pesquisa domiciliar é impossível de fazer dessa maneira. Suponha uma população de 3 pessoas: $\{ Y_1, Y_2, Y_3 \}$. Queremos uma amostra com $n=2$. Temos as seguintes combinações possíveis: $(Y_1, Y_2)$, $(Y_1, Y_3)$ e $(Y_2, Y_3)$. Se tivéssemos arranjos, teríamos $(Y_1, Y_2)$, $(Y_1, Y_3)$, $(Y_2, Y_1)$, $(Y_2, Y_3)$, $(Y_3, Y_1)$ e $(Y_3, Y_2)$. **No caso da amostragem, não importa se a amostra é $(Y_1, Y_2)$ ou $(Y_2, Y_1)$**, por exemplo. Assim, o denominador remove as duplicatas. No fundo, o denominador mostra quantas vezes cada arranjo é contado. Assim, se o denominador é $2$, significa que cada arranjo é contado duas vezes. Também chamamos isso de coeficiente binomial.
+Há prós e contras. Em particular, presencialmente ou pesquisa domiciliar é impossível de fazer dessa maneira. Suponha uma população de 3 pessoas: $\{ Y_1, Y_2, Y_3 \}$. Queremos uma amostra com $n=2$. Temos as seguintes combinações possíveis: $(Y_1, Y_2)$, $(Y_1, Y_3)$ e $(Y_2, Y_3)$. Se tivéssemos arranjos, teríamos $(Y_1, Y_2)$, $(Y_1, Y_3)$, $(Y_2, Y_1)$, $(Y_2, Y_3)$, $(Y_3, Y_1)$ e $(Y_3, Y_2)$. No caso da amostragem, não importa se a amostra é $(Y_1, Y_2)$ ou $(Y_2, Y_1)$, por exemplo. Assim, o denominador remove as duplicatas. No fundo, o denominador mostra quantas vezes cada arranjo é contado. Assim, se o denominador é $2$, significa que cada arranjo é contado duas vezes. Também chamamos isso de coeficiente binomial.
 
 Para uma AAS, no mais das vezes temos um quadro amostral como uma listagem de pessoas ou uma listagem de números de telefone. Se tivermos uma amostra com $n=50$ e registrar a idade $y_i$ de cada:
 
@@ -305,7 +308,7 @@ Uma **amostra estratificada** é uma amostra aleatória simples de cada **estrat
 
 Isso é uma ideia profundamente importante e interfere diretamente na maneira como calculamos as estatísticas amostrais.
 
-Só há vantagens: sabemos como alocar pessoas de antemão, facilita logística, etc. Mas, para além das questões logísticas, diminuímos muito o espaço amostral das respostas possíveis. **Dessa maneira, a distribuição marginal das entrevistas espelha a distribuição marginal do quadro amostral**. De fato, são amostras aleatórias dentro dos estratos, mas os estratos sempre podem ser comparados entre si. Pesquisas telefônicas, por exemplo, fazem amostras estratificadas por DDD. 
+Só há vantagens: sabemos como alocar pessoas de antemão, facilita logística, etc. Mas, para além das questões logísticas, diminuímos muito o espaço amostral das respostas possíveis. Dessa maneira, a distribuição marginal das entrevistas espelha a distribuição marginal do quadro amostral. De fato, são amostras aleatórias dentro dos estratos, mas os estratos sempre podem ser comparados entre si. Pesquisas telefônicas, por exemplo, fazem amostras estratificadas por DDD. 
 
 Quanto mais homogêneos são os estratos internamente, melhor. Se há pouca variabilidade, não importa quem a gente escolhe. A informação da homogeneidade é fundamental: escolher grupos que sejam semelhantes naquela dimensão que eu quero estudar. Assim, conseguimos diminuir a variância do meu desenho amostral, isto é, obtemos uma distribuição normal com caudas cada vez menos pesadas (isto é, mais centradas em torno da média).
 
@@ -345,6 +348,6 @@ $$
 
 Embora AAS seja geralmente confiável contra viés, há algumas situações em que o viés pode ocorrer. A mais comum delas é o problema no **quadro amostral**: se ele é bom, não há viés; se é ruim, há viés.
 
-[^1]: O efeito do denominador, aqui, é remover duplicatas de arranjos de $n$ elementos. Por exemplo, se $N = 3$ e $n = 2$, temos as seguintes combinações possíveis: $(1,2)$, $(1,3)$ e $(2,3)$. Se tivéssemos arranjos, teríamos $(1,2)$, $(1,3)$, $(2,1)$, $(2,3)$, $(3,1)$, $(3,2)$. **No caso da amostragem, não importa se a amostra é $(1,2)$ ou $(2,1)$**, por exemplo. Assim, o denominador remove as duplicatas. No fundo, o denominador mostra quantas vezes cada arranjo é contado. Assim, se o denominador é $2$, significa que cada arranjo é contado duas vezes. Também chamamos isso de coeficiente binomial.
+[^1]: O efeito do denominador, aqui, é remover duplicatas de arranjos de $n$ elementos. Por exemplo, se $N = 3$ e $n = 2$, temos as seguintes combinações possíveis: $(1,2)$, $(1,3)$ e $(2,3)$. Se tivéssemos arranjos, teríamos $(1,2)$, $(1,3)$, $(2,1)$, $(2,3)$, $(3,1)$, $(3,2)$. No caso da amostragem, não importa se a amostra é $(1,2)$ ou $(2,1)$, por exemplo. Assim, o denominador remove as duplicatas. No fundo, o denominador mostra quantas vezes cada arranjo é contado. Assim, se o denominador é $2$, significa que cada arranjo é contado duas vezes. Também chamamos isso de coeficiente binomial.
 
 [^2]: Se eu faço uma única entrevista por conglomerado, há aqui um ponto de contato com a amostragem simples.

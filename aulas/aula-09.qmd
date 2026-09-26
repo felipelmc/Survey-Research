@@ -44,7 +44,7 @@ $$
 
 > where $\alpha_0$ is the fixed baseline intercept and $\alpha_1$ is the fixed slope for Obama's fraction of the two-party vote share in the respondent's state in the last presidential election. The terms $a_{j[i]}^\text{state}, a_{j[i]}^\text{edu}, a_{j[i]}^\text{sex}$ and so on -- which we denote in general by $a_{j[i]}^\text{var}$ -- correspond to the varying coefficients associated with each categorical variable. Here, the subscript $j[i]$ indicates the cell to which the $i$th respondent belongs. For example, $a_{j[i]}^\text{age}$ takes values from $\{ a_{18-29}^\text{age}, a_{30-44}^\text{age}, a_{45-64}^\text{age}, a_{65+}^\text{age} \}$ depending on the cell membership of the $i$th respondent. [@wang2015forecasting, p. 4]
 
-As prioris dos coeficientes $a_{j[i]}^\text{var}$ são definidos como distribuições normais com média zero e variância $\sigma^2_{a_{j[i]}^\text{var}}$. A variância $\sigma^2_{a_{j[i]}^\text{var}}$ é estimada a partir de uma distribuição inversa-gama com parâmetros $(v, \sigma_0^2)$.
+As prioris dos coeficientes $a_{j[i]}^\text{var}$ são definidas como distribuições normais com média zero e variância $\sigma^2_{a_{j[i]}^\text{var}}$. A variância $\sigma^2_{a_{j[i]}^\text{var}}$ é estimada a partir de uma distribuição inversa-gama com parâmetros $(v, \sigma_0^2)$.
 
 > The benefit of using a multilevel model is that the estimates for relatively sparse cells can be improved through "borrowing strength" from demographically similar cells that have richer data. Similarly, the second model is defined by:
 
@@ -264,7 +264,7 @@ Tendo um modelo multinível ajustado para predizer respostas individuais a parti
 2. Cada predição é multiplicada pela contagem populacional de cada tipo na população (e.g., mulheres, 18-24 anos, etc.)
 3. As previsões são agrupadas por subunidade/subgrupo
 
-A segunda etapa, portanto, é a pós estratificação propriamente:
+A segunda etapa, portanto, é a pós-estratificação propriamente:
 
 $$
 \hat{\pi}_g^{\text{MrP}} = \dfrac{\sum_g \hat{\pi}_g N_g}{\sum_g N_g},
@@ -272,7 +272,7 @@ $$
 
 onde $N_g$ é o número de pessoas no grupo $g$ e $\hat{\pi}_g$ é a predição do modelo para o grupo $g$. O resultado final é uma estimativa da proporção de pessoas que responderam $1$ (seja lá o que $1$ significa na variável resposta) na população.
 
-Os dados do survey são usados unicamente para ajustar os parâmetros do modelo. Depois disso, basta fazer as predições desse modelo no banco de dados de totais populacionais, conseguida a partir de bases importantes como o Censo ou a PNAD.
+Os dados do survey são usados unicamente para ajustar os parâmetros do modelo. Depois disso, basta fazer as predições desse modelo no banco de dados de totais populacionais, conseguido a partir de bases importantes como o Censo ou a PNAD.
 
 ### Incerteza
 
@@ -281,7 +281,7 @@ No caso bayesiano, a incerteza é tranquilamente incorporada ao modelo. Afinal, 
 ### Outros pontos de atenção
 
 - MrP é _sensível_ à especificação do modelo
-- MrP **depende imensamente** dos dados de estratificação
+- MrP depende imensamente dos dados de estratificação
 - MrP não ajuda muito a corrigir erros de mensuração
 
 A não-resposta não ignorável não é corrigida pelo MrP. Você passa por um bolsonarista ou um trumpista na rua e ele terminantemente se recusa a te dar uma resposta, não há correção por MrP.

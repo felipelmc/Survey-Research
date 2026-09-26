@@ -43,11 +43,11 @@ aula: 7
 
 > Surveys with complex sample designs often also have unequal probabilities of selection, variation in response rates across important subgroups, and departures from distributions on key variables that are known from outside sources for the population. It is common within complex sample surveys to generate weights to compensate for each of these features. [@groves2011survey, p. 348]
 
-#### Weighting for Differential Selection Probabilities
+#### Weighting for differential selection probabilities
 
 > THe growing Latino population, and differences in crime victimization between Latino and non-Latino populations, raise the question whether the number of Latino persons in the NCVS, under the overall sample of $125,000$, is sufficient. Suppose that one person in eight aged 12 years and older is Latino, or a total population of just about $25$ million. If an epsem sample were selection, the sample would have $15,625$ Latinos and $109,375$ non-Latinos. That is, under proportionate allocation, one person in eight in the sample would be Latino as well. The sample results could be combined across Latino and non-Latino populations with no need for weights to compensate for overrepresentation of one group. [@groves2011survey, p. 349]
 
-Suppose we want to estimate statistics of interest with more precision for Latinos. So we increase the the number of Latinos in the sample to $62,500$. This is totally okay when our goals is to compute statistics for each group separatelly. However, ...:
+Suppose we want to estimate statistics of interest with more precision for Latinos. So we increase the number of Latinos in the sample to $62,500$. This is totally okay when our goal is to compute statistics for each group separately. However, ...:
 
 > There is a problem though, when the data need to be combined across the groups. The need for combining across groups might arise because of a call for national estimates that ignore ethnicity, or the need for data on a "crossclass" that has sample persons who are Latino as well as non-Latino, such as women. [@groves2011survey, p. 349-350]
 >
@@ -59,17 +59,17 @@ Suppose we want to estimate statistics of interest with more precision for Latin
 
 > When data are combined across groups, this weighting decreases the contribution of values for a variable for Latinos the 1/7th the contribution of non-Latinos. This adjustment allows the sample cases to contribute to estimates for the total population in a correct proportionate share. [@groves2011survey, p. 350]
 
-#### Weighting to Adjust for Unit Nonresponse
+#### Weighting to adjust for unit nonresponse
 
 > In the initial sample, there are an equal number of persons aged 12-44 and 4 years or older. Thus, the nonresponse mechanism has led to an overrepresentation of older persons among the respondents.
 >
 > To compensate for this overrepresentation, an assumption is made in survey nonresponse weighting that generates the same kind of weighting adjustments discussed for unequal probabilities of selection. If one is willing to assume that within subgroups (in this case, age groups) the respondents are a random sample of all sample persons, then the response rate in the group represents a sampling rate. This assumption is referred to as the "missing at random" assumption, and is the basis for mich nonresponse adjusted weights. **The inverse of the response rate can thus be used as a weight to restore the respondent distribution to the original sample distribution**. [@groves2011survey, p. 352]
 
-#### Putting All the Weights Together
+#### Putting all the weights together
 
 > Finally, to obtain a final weight than can be incorporate the first-stage ratio adjustment ($W_{i1}$), the unequal probability of selection adjustment ($w_{i2}$), nonresponse adjustment ($w_{i3}$), and poststratification ($W_{i4}$), a final product of all four weights is assigned to each of eight classes [...]. [@groves2011survey, p. 352]
 
-#### Sampling Variance Estimation for Complex Samples
+#### Sampling variance estimation for complex samples
 
 > Survey datasets based on stratified multistage samples with weights designed to compensate for unequal probabilities of selection or nonresponse are sometimes referred to as "complex survey data". Estimation of sampling variances for statistics from these kinds of data require widely available specialized software systems using one of three procedures: the Taylor series approximation, balanced repeated replication, or jackknife repeated replication.
 

@@ -22,7 +22,7 @@ Também podemos enfrentar problemas de ordem "não probabilística" quando utili
 Medidas indiretas para aproximar designs probabilísticos:
 
 - "Spread the non-probability sample as broadly as possible": tentar recrutar respondentes a partir de vários canais, para aumentar a diversidade da amostra. Bom exemplo: WageIndicator survey.
-- Amostragem por cotas, controlando para características socio-demográficas
+- Amostragem por cotas, controlando para características sociodemográficas
 
 Também podemos fazer aproximações adotando diretamente algumas medidas de amostragem probabilística, por exemplo, incluir algum grau de aleatoriedade na seleção de respondentes (randomização de horários de coleta de resposta; randomização de qual pessoa será entrevistada, etc).
 
@@ -64,7 +64,7 @@ Exemplos de estratégias:
 
 - **Sample matching**: the sample is matched to a known population distribution on a set of covariates. [@baker2013summary, p. 95]
 - **Network sampling**: "if a small number of eligible sample members can be identified, and sufficient trust stablished, these first respondents can connect researchers to their social contacts, who can, in turn, connect researchers to others, and so on until the desired sample size is achieved." [@baker2013summary, p. 95-96]
-- Estimation and weight adjustment methods: "[...] model-based estimation, relies on a statistical model that describes the variable being estimated in the survey (Valliant, Dorfman, and Royall 2000; Pfeffermann and Rao 2009). These models treat the outcomes rather than the sampling process as being the random variables." [@baker2013summary, p. 97]. Approaches include, propensity score adjustiment, weight calibration, and raking. [@baker2013summary, p. 98]
+- Estimation and weight adjustment methods: "[...] model-based estimation, relies on a statistical model that describes the variable being estimated in the survey (Valliant, Dorfman, and Royall 2000; Pfeffermann and Rao 2009). These models treat the outcomes rather than the sampling process as being the random variables." [@baker2013summary, p. 97]. Approaches include propensity score adjustment, weight calibration, and raking. [@baker2013summary, p. 98]
 
 Remarks:
 
@@ -114,11 +114,11 @@ $$
 
 Esse $f$ diz o peso relativo daquele estrato em relação a todos os estratos que eu defini. Se a população das pessoas da Zona Sul é de 5%, então $f_h = 0.05$. 
 
-**Esse é um desenho amplamente utilizado porque ele reduz variância**. Isso é lógico, já que estamos evitando fazer muitas entrevistas (isto é, deslocar a nossa amostra) em uma única região (ou outro elemento usado para fazer a estratificação) de maneira aleatória. Intuitivamente, cada estrato é representado na amostra exatamente em proporção ao seu tamanho na população.
+Esse é um desenho amplamente utilizado porque ele reduz variância. Isso é lógico, já que estamos evitando fazer muitas entrevistas (isto é, deslocar a nossa amostra) em uma única região (ou outro elemento usado para fazer a estratificação) de maneira aleatória. Intuitivamente, cada estrato é representado na amostra exatamente em proporção ao seu tamanho na população.
 
 O número de variáveis de estrato é, no mais das vezes, três. Afinal, se você estratifica demais, você pode gerar muitos grupos e, se há algum erro de mensuração dentro desses grupos, podemos enviesar a amostra.
 
-**Exemplo**
+#### Exemplo
 
 - Estrato A com 38 pessoas
 - Estrato B com 62 pessoas
@@ -157,7 +157,7 @@ O que é aproximadamente $f = \frac{n}{N} = \frac{20}{100} = 0.2$.
 
 **Importante:** não estamos violando o princípio de equiprobabilidade. A amostra ainda é aleatória e as pessoas têm a mesma chance de serem escolhidas. O que estamos fazendo é garantir que a amostra seja representativa em relação a um determinado estrato da população.
 
-**Estratificação ainda tem um outro efeito:** Temos amostras independentes dentro de cada estrato. Mas, se temos muitos estratos, o $n$ em cada estrato acaba sendo pequeno e, na prática, temos margem de erro muito grandes para analisar determinados segmentos. O que podemos fazer é um desenho estratificado sobreproporcionalizado, alocando mais do que o esperado para um determinado estrato, permitindo leituras dentro dos estratos. Na academia isso normalmente não se faz, mas governo e terceiro setor fazem isso com frequência.
+**Estratificação ainda tem um outro efeito:** Temos amostras independentes dentro de cada estrato. Mas, se temos muitos estratos, o $n$ em cada estrato acaba sendo pequeno e, na prática, temos margens de erro muito grandes para analisar determinados segmentos. O que podemos fazer é um desenho estratificado sobreproporcionalizado, alocando mais do que o esperado para um determinado estrato, permitindo leituras dentro dos estratos. Na academia isso normalmente não se faz, mas governo e terceiro setor fazem isso com frequência.
 
 > Pense numa situação em que o cliente quer uma leitura nacional, mas também uma leitura mais focada no Amazonas. Nesse caso, podemos ter um segundo desenho amostral aumentando o número de entrevistas naquele estado. Para a leitura nacional, juntamos as amostras provenientes de cada desenho -- mas, claro, com a necessidade de ponderar os dados para evitar que o Amazonas "apareça demais". 
 
@@ -191,7 +191,7 @@ No entanto, note que se o número de pessoas em cada bairro for diferente, essa 
 
 ### PPT
 
-**Uma maneira de resolver isso é incorporar o tamanho do bairro na amostra (em termos de número de pessoas) na hora de calcular a fração amostral. Isso é o que chamamos de Probabilidade Proporcional ao Tamanho (PPT, ou PPS, em inglês).** Damos maior probabilidade aos conglomerados maiores serem incluídos na amostra, mas a condição sine qua non é que eu saiba o tamanho da população dentro de cada conglomerado. Incorporamos **probabilidades desiguais** de inclusão para tornar ele "justo", proporcional.
+Uma maneira de resolver isso é incorporar o tamanho do bairro na amostra (em termos de número de pessoas) na hora de calcular a fração amostral. Isso é o que chamamos de **Probabilidade Proporcional ao Tamanho** (PPT, ou PPS, em inglês). Damos maior probabilidade aos conglomerados maiores serem incluídos na amostra, mas a condição sine qua non é que eu saiba o tamanho da população dentro de cada conglomerado. Incorporamos **probabilidades desiguais** de inclusão para tornar ele "justo", proporcional.
 
 - 8 bairros (conglomerados)
     - bairros 1-4: 50 pessoas cada

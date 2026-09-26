@@ -13,20 +13,23 @@ Vale ler.
 
 > Viés de desejabilidade social é um erro sistemático de mensuração que ocorre quando pessoas respondem o que _acham que as outras gostariam de ouvir_.
 
-Em outras palavras, pessoas respondem de forma a **gerenciar sua imagem social**.
+Em outras palavras, pessoas respondem de forma a gerenciar sua imagem social.
 
 O viés de desejabilidade social também pode ser um motor de não-resposta.
 
 > Um problema bastante grave é a questão do "não fui votar". Em média, as pessoas mentem e dizem que foram votar.
 
-No caso da renda: pessoas de alta renda respondem para "manter privacidade", enquanto o as pessoas de mais baixa renda tendem a responder que respondem menos do que realmente ganham para evitar perder benefícios de programas sociais.
+No caso da renda: pessoas de alta renda respondem para "manter privacidade", enquanto as pessoas de mais baixa renda tendem a responder que respondem menos do que realmente ganham para evitar perder benefícios de programas sociais.
 
 Dois pontos importantes: desejabilidade envolve não só gerenciamento da imagem, mas também autoengano inconsciente.
 
 - **Gerenciamento da imagem:** pessoa consciente altera respostas para projetar uma imagem favorável
 - **Autoengano inconsciente:** pessoa acredita que suas respostas socialmente desejáveis são verdadeiras (e.g., "Sim, eu sou uma pessoa muito religiosa")
 
-> Nota: uma das coisas mais importantes para a ciência política hoje é a ideia de que a religião, em grande medida, faz com que as pessoas não votem em termos econômicos, mas em termos de valores. Isso é uma agenda fundamental.
+::: {.callout-note}
+## Nota
+Uma das coisas mais importantes para a ciência política hoje é a ideia de que a religião, em grande medida, faz com que as pessoas não votem em termos econômicos, mas em termos de valores. Isso é uma agenda fundamental.
+:::
 
 ### Métodos experimentais
 

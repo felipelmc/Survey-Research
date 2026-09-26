@@ -71,7 +71,7 @@ aula: 2
 
 ## Anotações de aula
 
-Surveys ao longo do tempo mostram flutuações relativamente bizarras ao longo do tempo. Certo: sabemos que a população brasileira não atende telefone, pessoas não confiam em pesquisas, etc. É verdade, há uma série de problemas. Mas, no fim das contas e antes disso tudo, survey são uma maneira de interação humana. E, com isso, geram nas pessoas uma série de reações que impactam nas respostas.
+Surveys ao longo do tempo mostram flutuações relativamente bizarras ao longo do tempo. Certo: sabemos que a população brasileira não atende telefone, pessoas não confiam em pesquisas, etc. É verdade, há uma série de problemas. Mas, no fim das contas e antes disso tudo, surveys são uma maneira de interação humana. E, com isso, geram nas pessoas uma série de reações que impactam nas respostas.
 
 Converse é considerado um dos fundadores da Escola de Michigan, e um dos principais estudiosos de opinião pública. É um dos maiores cientistas políticos de todos os tempos. Num texto de 1964, ele tenta explicar sua visão de opinião pública: "a maioria das pessoas não têm estruturas latentes, ou reais e fixas, sobre a maioria dos objetos de atitude" [slide, @converse1964nature].
 
@@ -83,7 +83,7 @@ O grande mérito dos surveys foi a possibilidade de perguntar para as pessoas so
 
 ### Converse (1964)
 
-Acredita que há _constraints_ lógicos, psicológicos, sociais, heurísticos. As opiniões são amarradas de forma consistente. Mas a maior parte das pessoas não tem esse sistema de crenças estruturados, então elas respondem, mas não respondem em termos ideológicos e **introduzem um componente aleatório** 
+Acredita que há _constraints_ lógicos, psicológicos, sociais, heurísticos. As opiniões são amarradas de forma consistente. Mas a maior parte das pessoas não tem esse sistema de crenças estruturados, então elas respondem, mas não respondem em termos ideológicos e introduzem um componente aleatório.
 
 Essa questão é fundamental porque, se pensarmos segundo Converse, perguntar para a pessoa se ela "é de esquerda ou de direita" sequer faz sentido, porque as pessoas não pensam em termos ideológicos. Diferentemente de uma visão espacial da formação de preferências (i.e., Downs), **sistemas de crenças** são estáveis.
 
@@ -99,23 +99,23 @@ Essa questão é fundamental porque, se pensarmos segundo Converse, perguntar pa
 
 A maioria das pessoas têm opiniões conflitantes sobre uma mesma questão e as acessam com algum nível de aleatoriedade. Ao longo do tempo, as pessoas vão recebendo "considerações" da elite política e da mídia (principalmente), de maneira que há questões que ficam mais acessíveis na memória do respondente. Isso acaba compondo a resposta que a pessoa dá a uma pergunta de survey. Para o Zaller, é assim que as pessoas formam opiniões.
 
-Quando as pessoas são entrevistadas, são levadas a refletir sobre questões abstratas. De acordo com o processo de recepção de informações, as pessoas formam suas opiniões e acessam essas informações de maneira aleatória, sendo que o que está "mais freco" tem mais chance de ser acessado.
+Quando as pessoas são entrevistadas, são levadas a refletir sobre questões abstratas. De acordo com o processo de recepção de informações, as pessoas formam suas opiniões e acessam essas informações de maneira aleatória, sendo que o que está "mais fresco" tem mais chance de ser acessado.
 
 Pessoas que têm maior acessibilidade de informações conseguem considerar mais coisas. 
 
 **Zaller está de acordo com a ideia de que:**
 
-- Pesoas recebem informações de elites proporcionalmente à atenção
+- Pessoas recebem informações de elites proporcionalmente à atenção
 - Aceitação depende de predisposição, atenção e reflexão (e.g., _motivated reasoning_). Isso, para Zaller, é fonte de polarização que vem das elites políticas[^1]
 - Ao responder surveys, pessoas sorteiam informações disponíveis e as ponderam por saliência
 
 **Implicações:**
 
-- _Priming_ e _framing_ influencia a opinião pública porque afeta a recepção e saliência de informações que podem ser perguntadas em _surveys_
+- _Priming_ e _framing_ influenciam a opinião pública porque afetam a recepção e saliência de informações que podem ser perguntadas em _surveys_
 - Mesmo pessoas bem informadas podem ter opiniões instáveis porque a acessibilidade de informações é estocástica
 - Pessoas com maior atenção política tendem a rejeitar informações que não estão de acordo com suas preferências
 
-Uma visualização do modelo é imaginar que pessoas têm tendêndias centrais e variação aleatória em suas respostas.
+Uma visualização do modelo é imaginar que pessoas têm tendências centrais e variação aleatória em suas respostas.
 
 [^1]: Essa ideia tende a ser endossada pela literatura mais recente sobre polarização política e fake news. Além disso, as estratégias para despolarizar a sociedade passam por tentar reduzir a polarização das próprias elites políticas, que, hoje, são as principais fontes de informação (ou _motivated reasoning_) para a população.
 
@@ -123,15 +123,19 @@ Uma visualização do modelo é imaginar que pessoas têm tendêndias centrais e
 
 Para a maioria das pessoas, pertencimento a um grupo partidário é a principal fonte de informação e atitudes, o que estrutura suas identidades e oposições.
 
-Ainda que a intenção de voto, avaliação de governo, etc., sejam partialmente aleatórios, a identificação partidária é um _anchor_ para as respostas. Ou seja, as coisas "partem daqui".
+Ainda que a intenção de voto, avaliação de governo, etc., sejam parcialmente aleatórios, a identificação partidária é um _anchor_ para as respostas. Ou seja, as coisas "partem daqui".
 
 A identidade social partidária é estável e duradoura. Então, "com qual partido você se identifica mais?" faz mais sentido do que "você é de esquerda ou de direita?". É claro, apoiar $x$ ou $y$ não determina comportamentos e opiniões completamente, mas estrutura a forma como as pessoas pensam. A questão de identidade partidária costuma resumir várias outras e ser o melhor preditor de voto. E, melhor ainda, essa é uma questão nada abstrata.
 
-> **Dica:** Surveys funcionam melhor quando você pergunta coisas paupáveis, mas também coisas que vinculam pessoas a grupos. Os grupos aos quais elas pertencem já permite deduzir uma série de coisas sobre elas.
+::: {.callout-tip}
+## Dica
+Surveys funcionam melhor quando você pergunta coisas palpáveis, mas também coisas que vinculam pessoas a grupos. Os grupos aos quais elas pertencem já permitem deduzir uma série de coisas sobre elas.
+:::
 
 Livros importantes:
-- The American Voter (1960)
-- Partisan Hearts and Minds (2002)
+
+- _The American Voter_ (1960)
+- _Partisan Hearts and Minds_ (2002)
 
 ### Heurística
 
